@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="These are notes from a talk I&#8217;ve given in various forms at SCNA, CodeMash, and Magic Ruby. I&#8217;ve mirrored them here from the InfoEther &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chad.github.com/blog/page/2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">The Passionate Programmer</a></h1>
+  
+    <h2>practical self-engineering</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chad.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes/">McDonalds, Six Sigma, and Offshore Outsourcing (Notes)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-10T00:00:00-05:00" pubdate data-updated="true">Feb 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+<p>These are notes from a talk I&#8217;ve given in various forms at <a href="http://scna.softwarecraftsmanship.org/"><span class="caps">SCNA</span></a>, <a href="http://codemash.org">CodeMash</a>, and <a href="http://magic-ruby.com">Magic Ruby</a>.  I&#8217;ve mirrored them here from the <a href="http://infoether.com">InfoEther weblog</a>.</p>
+<p>
+<p><img src="http://lh4.ggpht.com/_TVhFMT7oEd0/TLvjzmOWODI/AAAAAAAAKJ8/pR4oKLszOWE/0131.jpg" style='width:300px'/><br/>Me at <span class="caps">SCNA</span><br/>Photo credit: <a href="http://picasaweb.google.com/jangdiafoto/SoftwareCraftsmanshipNorthAmerica20101016#5529263443100973106">Monty Ksycki</a><br />
+<br/>
+<p></p>
+<p>The presentation is called &#8220;McDonalds, Six Sigma, and Offshore Outsourcing &#8211; Unexpected Sources of Insight&#8221;.  Here&#8217;s the abstract:</p>
+</p>
+<blockquote>
+<p>We software developers like to think of what we do as an art form (or a craft, if you&#8217;re at this conference). I was once asked to come up with a set of guidelines for creating great software so our (huge) company could more effectively use an offshore development team that had been delivering amorphous piles of crummy, nonworking code. I was frustrated and responded with something like this: &#8220;Give me a list of guidelines for how to make a beautiful song!&#8221; The nerve! Repeatable processes? Who did she think she was talking to?! This is a creative process! This is <span class="caps">ART</span>!!!!</p>
+</blockquote>
+<blockquote>
+<p>I&#8217;ve since grown up a bit and I&#8217;d like to talk about how I was wrong and how we can all hopefully learn from my mistakes.</p>
+</blockquote>
+<p><img src="http://chadfowler.com/art-commodity-continuum.png" style='width:400px'/><br/>The Art-Craft-Commodity Continuum (from my presentation)<br />
+<br/></p>
+<p>
+<p>In it, I tell the story of my experiences with the Six Sigma quality methodology and with offshore outsourcing, urging developers not to blindly write off potentially useful software development strategies based on hearsay and misunderstanding. I also propose a customer-driven, data-driven approach to software engineering, dovetailing off of InfoEther&#8217;s Chief Scientist, <a href="http://www.vanderburg.org/blog">Glenn Vanderburg&#8217;s</a> recent ruminations on <a href="http://confreaks.net/videos/282-lsrc2010-real-software-engineering">&#8220;Real Software Engineering&#8221;</a>.</p>
+</p>
+<p><a href="http://en.wikipedia.org/wiki/File:Originalronaldmcdonald.jpg"><img  style='width:300px' src="http://upload.wikimedia.org/wikipedia/en/9/91/Originalronaldmcdonald.jpg" alt="The original, scary Ronald McDonald"/></a><br/>The original <a href="http://en.wikipedia.org/wiki/Ronald_McDonald">Ronald McDonald</a> (Willard Scott)<br />
+<p><br />
+  Videos from <span class="caps">SCNA</span> will be posted on <a href="http://www.infoq.com/">InfoQ</a> eventually, and I&#8217;ll link mine here when that happens. In the mean time, many people asked me for pointers to some of the books and resources I mentioned during my presentation.  Here&#8217;s a link dump that you might find useful:</p>
+</p>
+<ul>
+<li>
+<p><a href="http://www.amazon.com/Mustang-Sally-LP-Version/dp/B00124HFII/ref=sr_1_1?ie=UTF8&qid=1287442362&sr=8-1">Wilson Pickett&#8217;s Mustang Sally</a></p>
+</li>
+<li>
+<p><a href="http://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0061673730/ref=sr_1_1?s=books&ie=UTF8&qid=1287442054&sr=1-1">Zen and the Art of Motorcycle Maintenance: An Inquiry into Values</a></p>
+</li>
+<li>
+<p><a href="http://www.amazon.com/E-Myth-Revisited-Small-Businesses-About/dp/0887307280">The E-Myth Revisited: Why Most Small Businesses Don&#8217;t Work and What to Do About It</a></p>
+</li>
+<li>
+<p><a href="http://vmgbpo.com"><span class="caps">VMG</span> <span class="caps">BPO</span> &#8211; Offshore business outsourcing</a></p>
+</li>
+<li>
+<p><a href="http://asksunday.com">Ask Sunday &#8211; Virtual Personal Assistants</a></p>
+</li>
+<li>
+<p><a href="http://glowtouch.com">GlowTouch &#8211; Low cost offshore IT outsourcing</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Quality_function_deployment">Quality Function Deployment</a></p>
+</li>
+<li>
+<p><a href="http://isixsigma.com/">iSixSigma &#8211; Lots of six sigma info</a></p>
+</li>
+<li>
+<p><a href='http://www.sixsigmaonline.org/six-sigma-training-certification-information/articles/the-dmadv-methodology.html'><span class="caps">DMADV</span> &#8211; the six sigma design process in a nutshell</a></p>
+</li>
+<li>
+<p><a href='http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?ie=UTF8&qid=1287442512&sr=8-1'>Design Patterns: Elements of Reusable Object-Oriented Software</a></p>
+</li>
+<li>
+<p><a href="http://www.wiley.com/legacy/products/subject/business/forbes/kroc.pdf">Forbes article on Ray Kroc and the founding of the McDonalds chains</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/John_Zorn">John Zorn &#8211; Avant Garde saxophonist</a></p>
+</li>
+<li>
+<p><a href="http://www.paulsmith.co.uk/">Paul Smith &#8211; Fashion designer</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Mark_Rothko">Mark Rothko &#8211; Abstract Expressionist painter</a></p>
+</li>
+<li>
+<p><a href="http://yankov.us/rage">Rage comic generator</a></p>
+</li>
+<li>
+<p><a href="http://gist.github.com/612263">Ugly Kitty Server code by me and Anthony Burns</a></p>
+</li>
+<li>
+<p><a href="http://chadfowler.com:4567">Ugly Kitty Server in action</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/I_know_it_when_I_see_it">The &#8220;I know it when I see it&#8221; Supreme Court case</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Alhazen">Ibn Al-Haytham &#8211; inventor of the scientific method</a></p>
+</li>
+<li>
+<p><a href="http://www.zazzle.com/tdd+gifts"><span class="caps">TDD</span> T-Shirts</a></p>
+</li>
+<li>
+<p><a href="http://www.extremeprogramming.org/map/project.html">Extreme Programming flow chart</a></p>
+</li>
+<li>
+<p><a href="http://www.richdad.com/default.aspx">Rich Dad &#8211; Poor Dad</a></p>
+</li>
+<li>
+<a href="http://www.keavy.co.uk/">Keavy McMinn&#8217;s webblog on Ironman etc.</a>
+<li>
+<p><a href="http://www.pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer &#8211; My book</a></p>
+</li>
+<li>
+<p><a href="http://www.fourhourworkweek.com/">The 4-Hour Work Week</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/The_Turk">The Mechanical Turk</a></p>
+</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers/">Rails 3 Recipes Needs Tech Reviewers!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-09T00:00:00-05:00" pubdate data-updated="true">Feb 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><b><span class="caps">UPDATE</span>: We got 8 times as many volunteers for Rails 3 Recipes reviews as we need.  You people are awesome!  Closing the call for help now.</b></p>
+<p>The original <a href="http://www.pragprog.com/titles/fr_rr/rails-recipes">Rails Recipes</a> has been used by tens of thousands of Rails developers as they&#8217;ve worked toward mastering everyone&#8217;s favorite Web framework.  Five years later, and after the release of Rails 3, we&#8217;re seeing a new wave of Rails developers.  Through my work with <a href="http://infoether.com">InfoEther</a> and <a href="http://pragmaticstudio.com">The Pragmatic Studio</a> it&#8217;s clear that an updated version of this classic would help a huge group of new Rails developers.</p>
+<p>So here comes Rails 3 Recipes!</p>
+<p>I&#8217;m a little over half way done with the new edition, which is full of both substantially updated and entirely new content.  Now I need your help.</p>
+<p>Before we take the book to Beta, we need technical reviewers.  To tech review, you need to either already know Rails fairly well or be interested in trying to use the book to learn (some Rails knowledge is assumed).</p>
+<p>In return for your comments, we&#8217;ll give you a free copy of the electronic and paper versions of the book as well as a mention in the book itself.</p>
+<p>Interested?  If so, please contact us at <a href="mailto:rails3recipes@gmail.com">rails3recipes@gmail.com</a> and let us know your level of Rails expertise.  We can only handle a certain number of reviewers (probably 15), so we&#8217;ll be limited to accepting the first who get in touch.</p>
+<p>To those who are interested, <span class="caps">THANK</span> <span class="caps">YOU</span>!!!!!!</p>
+<p>If the original Rails Recipes&#8217; success is any indicator, Rails 3 Recipes is going to be <em>the</em> book every Rails developer will have sitting on his or her desk over the next couple of years. I&#8217;m very excited about it and looking forward to some feedback.</p>
+<p><img src="http://chadfowler.com/rr2.jpg" title="width 120" alt="width 120" /></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/">How Rails Developers Do Ajax (With jQuery) in 2011</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-09T00:00:00-05:00" pubdate data-updated="true">Feb 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanting to survey what the current state of the art in Rails Ajax development is, I asked this question on twitter:</p>
+<p><a href="http://twitter.com/#!/chadfowler/status/35068144976404480"><img src="http://chadfowler.com/ajax_question.png" alt="Rails developers, how are you doing Ajax with JQuery these days? .js.erb templates? Rendering partials back old-style?"/></a></p>
+<p>I got a lot of great responses!  44 last time I checked. Here&#8217;s what I found out people are doing:</p>
+<ul>
+	<li><a href="https://github.com/janl/mustache.js">mustache.js</a></li>
+	<li>Sending JavaScript back down to the client using .js.erb template files (Ryan Bates linked a couple of examples <a href="http://bit.ly/YCunh">here</a> and <a href="http://bit.ly/dHbKW5">here</a>)</li>
+	<li><a href="http://api.jquery.com/jQuery.template/">JQuery templates</a></li>
+	<li>Hitting <span class="caps">RESTFUL</span> endpoints and responding with <span class="caps">JSON</span> data to be manipulated on the client</li>
+	<li>Using <a href="http://documentcloud.github.com/backbone">backbone.js</a></li>
+	<li>Rendering partials and updating elements on the page with their raw content (the original old-school Rails way of doing it)</li>
+	<li>Use <a href="https://github.com/mrb/sammyonrails">SammyOnRails</a></li>
+</ul>
+<p>There is definitely a divide and a lot of opinion (suprise!) between those who are OK with delivering JavaScript and/or <span class="caps">HTML</span> from the server to be rendered on the client and those who prefer to deliver data and have the client process it.  I&#8217;d characterize the former as the less clean, more pragmatic approach and the latter as the idealistic cleaner approach.  It seems that tools like mustache.js, backbone, JQuery templates, and Sammy.js are tightening the gap between quick + dirty and slow + clean.</p>
+<p>What do you think?  What did we miss?</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/15/i-don%27t-know/">I Don&#8217;t Know</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-15T00:00:00-05:00" pubdate data-updated="true">Jan 15<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I had the pleasure of watching <a href="http://scottchacon.com/">Scott Chacon</a> keynote at <a href="http://codemash.org">CodeMash</a> this week. He spoke about how <a href="http://github.com">Github</a> &#8220;manages&#8221; its development team and product development.  I enjoyed the talk, and encourage you to download his <a href="https://github.com/schacon/ddd">slides</a> if you weren&#8217;t at the conference.</p>
+<p>Scott is a very energetic speaker and talks really fast, so he ended his keynote with a lot of time to spare (something I wish I would do more often). So he took questions from the audience.</p>
+<p>A lot of the questions were about trying to fit Github&#8217;s process into companies of very different profiles.  So, for example, &#8220;Would this work in blah blah blah environment that is totally different from Github?&#8221;  Scott&#8217;s answer was excellent in these several cases:</p>
+<p>&#8220;I don&#8217;t know.&#8221;</p>
+<p>He didn&#8217;t blow the questions off. He then discussed possibilities.  But it was incredibly refreshing to hear &#8220;I don&#8217;t know&#8221; from a speaker being questioned in front of an audience of almost 1000 people.</p>
+<p>I wrote in <a href="http://pragprog.com/titles/cfcar2">The Passionate Programmer</a> about the difficulty and importance of learning to say &#8220;no&#8221;. I think &#8220;I don&#8217;t know&#8221; is scarier and harder and maybe more important.</p>
+<p>When someone regularly says &#8220;I don&#8217;t know&#8221;, you trust them more when they say they DO know.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/">Dead-End Jobs: Are You Suffering From Stockholm Syndrome?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-30T00:00:00-05:00" pubdate data-updated="true">Dec 30<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Have you heard of Stockholm Syndrome? It&#8217;s a name given to the condition wherein hostages develop positive feelings toward their captors despite being held in negative, unfavorable and even life-threatening conditions.  Victims of Stockholm Syndrome will even inexplicably stay with their captors even when given the chance at freedom.</p>
+<p>Hopefully nobody reading this is literally being held hostage right now. If you are, good luck!</p>
+<p>For the rest of you, why might I suggest that you are suffering from Stockholm Syndrome? Because employment relationships can manifest themselves in this very way.</p>
+<p>In the article, <a href="http://drjoecarver.makeswebsites.com/clients/49355/File/love_and_stockholm_syndrome.html">Love and Stockholm Syndrome: The Mystery of Loving an Abuser</a>, Dr. Joseph Carver says that the following four situations serve as a foundation for the development of Stockholm Syndrome:</p>
+<p>&lt;quote&gt;</p>
+<ul>
+	<li>The presence of a perceived threat to oneâ€™s physical or psychological survival and the belief that the abuser would carry out the threat.</li>
+	<li>The presence of a perceived small kindness from the abuser to the victim</li>
+	<li>Isolation from perspectives other than those of the abuser</li>
+	<li>The perceived inability to escape the situation</li>
+</ul>
+<p>&lt;/quote&gt;</p>
+<p>Looking back at my own career (specifically some of the extremely intelligent people I&#8217;ve met who are stagnating in oppressive companies or positions) I have recognized that many of these people (and sometimes myself) have felt &#8220;stuck&#8221; for no obvious reason. Some people seem just plain crazy when you look at their skill sets, ability, and the low quality of work or environment they&#8217;re willing to put up with.</p>
+<p>So I contacted Joseph Carver to ask his opinion. Could this be Stockholm Syndrome?  He agreed. In email, he said &#8220;SS is most likely to develop when the employee feels trapped, perhaps by a high salary, fear of losing a career, or fear of humiliation.&#8221;  So let&#8217;s look at his four conditions:</p>
+<h2>Perceived threat:</h2>
+<p>Getting fired, being humiliated, not being a &#8220;top 20%&#8221; employee, not getting a raise. Employers wield a lot of perceived power over employees, especially for those in very traditional corporate jobs.  The employer <em>must</em> be willing to carry out the threat. Every business is under the right conditions. It&#8217;s how businesses work.</p>
+<h2>Small kindness</h2>
+<p>Got a Christmas bonus once when you really needed it? Make a competitive salary? Great benefits? Get to work on a technology you don&#8217;t think you&#8217;d be able to work on elsewhere?  There ya go.</p>
+<h2>Isolation from other perspectives</h2>
+<p>Again, a big corporate environment is <em>ripe</em> for this kind of isolation.  If you work for BigCo, you learn to do things The BigCo way.  The company&#8217;s organizational structure becomes a blueprint for your career progression.  You start to lose sight of what industry pay and incentives look like since you have a homogeneous population to compare with. Unfortunately, from what I&#8217;ve seen even the <em>best</em> run companies create this kind of isolation of perspective and group-think. Charismatic leaders are particularly capable of creating a culture vacuum around a cult of personality.</p>
+<h2>Perceived inability to escape</h2>
+<p>According to the Bureau of Labor statistics, American adults <a href="http://www.bls.gov/news.release/atus.htm">spend by far more time working than any other activity.</a>  That&#8217;s a <em>lot</em> of your waking time being trapped in a routine. In a Stockholm Syndrome situation, the captor chips away at the self-esteem of the captive. So for most of our waking hours, those of us trapped in dead end jobs like these are exposed to environments which systematically destroy our self-confidence.  Not only that, a persistent fear and feeling of failure makes it harder to actually explore the options for leaving the bad situation. The instinctive self-preservation reaction in this kind of situation is to work <em>harder</em> to try to avoid the perceived threat coming to fruition.</p>
+<hr />
+<p>So, what if this describes your job?  You owe it to yourself to find a way out. Hopefully recognizing the signs will show you that the <em>real</em> situation is far less grim than you might believe and that you have control over how you choose to spend the <em>majority</em> of your adult life.</p>
+<p>I&#8217;m writing this for the many people I&#8217;ve met (and the countless I haven&#8217;t) that are senselessly stuck in bad job situations. Please stop wasting your precious time.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/30/software-developers-how-do-you-know-when-it%27s-the-right-time-to-do-a-big-software-rewrite/">Software Developers: How Do You Know When It&#8217;s the Right Time to Do a Big Software Rewrite?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-30T00:00:00-04:00" pubdate data-updated="true">Sep 30<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday I asked this question on twitter:<br />
+<pre><br />
+Software developers: how do you know when it&#8217;s the right time to do a big software rewrite?<br />
+</pre></p>
+<p>I&#8217;ve written about this topic before (<a href="http://chadfowler.com/2006/12/27/the-big-rewrite">The Big Rewrite</a>). I&#8217;m revisiting it for a presentation <a href="http://infoether.com">Rich Kilmer</a> and I are doing this weekend at <a href="http://jrubyconf.com">JRubyConf</a>.</p>
+<p>I got a bunch of replies. Some serious, some sarcastic, some obviously filtered through the jading effects of a few Big Rewrites played out.  The answer ranged from &#8220;<span class="caps">NEVER</span>!&#8221; to &#8220;as soon as you feel like it&#8217;s necessary&#8221;.  The one consistent theme is that software rewrites are scary and the decision shouldn&#8217;t be taken lightly.</p>
+<p>Drivers include maintenance cost, programmer happiness, politics, and fear.</p>
+<p>Here&#8217;s what the developers on Twitter said:</p>
+<p><div><a href='http://twitter.com/insanity_rocks'><img width='40' src='http://a1.twimg.com/profile_images/1116024529/little-domo-suk128_normal.jpg'/> <br />
+Mel Riffe (@insanity_rocks)</a></div> <p>when the mud (from big ball of mud) falls into your eyes</p>
+<p></p><p><div><a href='http://twitter.com/insanity_rocks'><img width='40' src='http://a1.twimg.com/profile_images/1116024529/little-domo-suk128_normal.jpg'/> <br />
+Mel Riffe (@insanity_rocks)</a></p>
+<p></div> seriously, though, i believe when you lose confidence implementing changes it&#8217;s probably a good time to consider a rewrite</p>
+<p></p><p><div><a href='http://twitter.com/jeremywoertink'><img width='40' src='http://a3.twimg.com/profile_images/597521335/jeremywoertink_gmail.com_00d5a53c_normal.jpg'/> <br />
+Jeremy Woertink (@jeremywoertink)</a></p>
+<p></div> when you find yourself monkey patching areas that you wrote at 2am on a Saturday thinking &#8220;ugh, I just want this done with&#8221; :)</p>
+<p></p><p><div><a href='http://twitter.com/justinko'><img width='40' src='http://a2.twimg.com/profile_images/301316754/ls_7536_Photo-143_normal.jpg'/> <br />
+Justin Ko (@justinko)</a></p>
+<p></div> the right time is after reading your infamous blog post.</p>
+<p></p><p><div><a href='http://twitter.com/hooligan495'><img width='40' src='http://a1.twimg.com/profile_images/52644917/Photo_2_normal.jpg'/> <br />
+Jay McG&#8230; (@hooligan495)</a></p>
+<p></div> for us the big rewrite was: Scale fail (Can&#8217;t support more than 100000 titles) and customers want linux and not windows</p>
+<p></p><p><div><a href='http://twitter.com/mf'><img width='40' src='http://a0.twimg.com/profile_images/655187312/Screen_shot_2010-01-25_at_1.56.55_PM_normal.png'/> <br />
+Matt Freels (@mf)</a></p>
+<p></div> almost never. Incremental rewrites of specific components results in better isolation and less risky code.</p>
+<p></p><p><div><a href='http://twitter.com/razenha'><img width='40' src='http://a3.twimg.com/profile_images/969039419/23218_1084902895_5994_n_normal.jpg'/> <br />
+Rubem Azenha (@razenha)</a></p>
+<p></div> My team did it  once. The first dev team was  gone, the code, design and  database were a mess, there was no docs, no unit tests</p>
+<p></p><p><div><a href='http://twitter.com/razenha'><img width='40' src='http://a3.twimg.com/profile_images/969039419/23218_1084902895_5994_n_normal.jpg'/> <br />
+Rubem Azenha (@razenha)</a></p>
+<p></div> the bugs were all over the place, the chances were slow and risky and we needed to add tons of features.</p>
+<p></p><p><div><a href='http://twitter.com/razenha'><img width='40' src='http://a3.twimg.com/profile_images/969039419/23218_1084902895_5994_n_normal.jpg'/> <br />
+Rubem Azenha (@razenha)</a></p>
+<p></div> The <span class="caps">CIO</span> figured out that it would be more expensive to maintain the current product than to create a new one</p>
+<p></p><p><div><a href='http://twitter.com/sneakin'><img width='40' src='http://a1.twimg.com/profile_images/1122111797/Photo_84_normal.jpg'/> <br />
+Nolan (@sneakin)</a></p>
+<p></div> when you&#8217;re singing &#8220;<span class="caps">WTF</span>! <span class="caps">WTF</span>! <span class="caps">WTF</span>! Holy Christ! <span class="caps">WTF</span>!&#8221;</p>
+<p></p><p><div><a href='http://twitter.com/catatk'><img width='40' src='http://a0.twimg.com/profile_images/875107248/Capture_normal.PNG'/> <br />
+CÃ„Æ’tÃ„Æ’lin TÃ„Æ’nÃ„Æ’sescu (@catatk)</a></p>
+<p></div> when you look at a code made by you and curse the programmer behind it</p>
+<p></p><p><div><a href='http://twitter.com/JakCharlton'><img width='40' src='http://a1.twimg.com/profile_images/1128514717/jak_normal.png'/> <br />
+Jak Charlton (@JakCharlton)</a></p>
+<p></div> when the pain starts to exceed the political pain required to get that kind of authority</p>
+<p></p><p><div><a href='http://twitter.com/_krispy_'><img width='40' src='http://a2.twimg.com/profile_images/1026387650/3723113458_d7502724ac_o_normal.jpg'/> <br />
+<em>krispy</em> (@_krispy_)</a></p>
+<p></div> &#8211; when you have enough in the bank to survive its possible failure to deliver on time and within budget</p>
+<p></p><p><div><a href='http://twitter.com/tenderlove'><img width='40' src='http://a3.twimg.com/profile_images/115461903/icon_normal.jpg'/> <br />
+Aaron Patterson (@tenderlove)</a></p>
+<p></div> When the fundamental design algorithm is O(n!)</p>
+<p></p><p><div><a href='http://twitter.com/kirillrdy'><img width='40' src='http://a3.twimg.com/profile_images/95798323/kitaman_4_normal.jpg'/> <br />
+Kirill Radzikhovskyy (@kirillrdy)</a></p>
+<p></div> when you just can&#8217;t stand it anymore</p>
+<p></p><p><div><a href='http://twitter.com/Odaeus'><img width='40' src='http://a0.twimg.com/profile_images/1126169144/image_normal.jpg'/> <br />
+Andrew France (@Odaeus)</a></p>
+<p></div> About the same time you start asking that question :P</p>
+<p></p><p><div><a href='http://twitter.com/thomasfuchs'><img width='40' src='http://a3.twimg.com/profile_images/663892623/thomas_normal.png'/> <br />
+Thomas Fuchs (@thomasfuchs)</a></p>
+<p></div> By having a &#8216;feeling&#8217; about it. However, big software rewrites mostly fail. Better to start something new!</p>
+<p></p><p><div><a href='http://twitter.com/JaquezRueda'><img width='40' src='http://a2.twimg.com/profile_images/1089933634/33514_415736003259_534158259_4558477_8140541_n_normal.jpg'/> <br />
+Jesus Jaquez Rueda (@JaquezRueda)</a></p>
+<p></div> When you spend more time trying to understand code than writing code</p>
+<p></p><p><div><a href='http://twitter.com/danzon78'><img width='40' src='http://a1.twimg.com/profile_images/505127957/2_normal.jpg'/> <br />
+danzon78 (@danzon78)</a></p>
+<p></div> when only god know what are you trying to do</p>
+<p></p><p><div><a href='http://twitter.com/MarkNijhof'><img width='40' src='http://a2.twimg.com/profile_images/1114424126/MarkNijhof_Bridge_normal.JPG'/> <br />
+Mark Nijhof (@MarkNijhof)</a></p>
+<p></div> wasn&#8217;t the answer &#8220;Never&#8221;?</p>
+<p></p><p><div><a href='http://twitter.com/RobotDeathSquad'><img width='40' src='http://a1.twimg.com/profile_images/553431069/gravatar_normal.jpg'/> <br />
+BJ Clark (@RobotDeathSquad)</a></p>
+<p></div> That&#8217;s a question searching for a rule that doesn&#8217;t/shouldn&#8217;t exist.</p>
+<p></p><p><div><a href='http://twitter.com/celticwolfinc'><img width='40' src='http://a0.twimg.com/profile_images/1134144552/logo_50_x_50_normal.png'/> <br />
+Celtic Wolf (@celticwolfinc)</a></p>
+<p></div>, it&#8217;s time to do a big sw rewrite when adding small features/fixes requires a lot of time fixing/changing the existing code.</p>
+<p></p><p><div><a href='http://twitter.com/drbrain'><img width='40' src='http://a1.twimg.com/profile_images/793861173/58479f76374a3ba3c69b9804163f39f4_normal.jpeg'/> <br />
+Eric Hodel (@drbrain)</a></p>
+<p></div> I prefer never. I gradually employ targeted rewrites. The app will be eventually rewritten w/out the cost of stopping the world.</p>
+<p></p><p><div><a href='http://twitter.com/cory_foy'><img width='40' src='http://a2.twimg.com/profile_images/942527014/CoryFoy_normal.jpg'/> <br />
+Cory Foy (@cory_foy)</a></p>
+<p></div> When I sit around thinking, &#8220;Gee, how can I screw myself <strong>and</strong> bankrupt my company in one action?&#8221;</p>
+<p></p><p><div><a href='http://twitter.com/haruska'><img width='40' src='http://a2.twimg.com/profile_images/51882542/shapeimage_sm_normal.jpg'/> <br />
+Jason Haruska (@haruska)</a></p>
+<p></div> you&#8217;re netscape, you have crazy market share, your code smells, and Microsoft decides the internet is important. Oh, wait.</p>
+<p></p><p><div><a href='http://twitter.com/celticwolfinc'><img width='40' src='http://a0.twimg.com/profile_images/1134144552/logo_50_x_50_normal.png'/> <br />
+Celtic Wolf (@celticwolfinc)</a></p>
+<p></div>, or when the cruft/ick factor in your code base causes  good developers to quit.</p>
+<p></p><p><div><a href='http://twitter.com/atmos'><img width='40' src='http://a0.twimg.com/profile_images/1125383048/2464720461_5df4fd37cf_b_normal.jpeg'/> <br />
+Corey Donohoe (@atmos)</a></p>
+<p></div> it&#8217;s rarely the right thing imho.</p>
+<p></p><p><div><a href='http://twitter.com/chopmo'><img width='40' src='http://a1.twimg.com/profile_images/1053061413/forfra_normal.jpg'/> <br />
+Jacob Tjoernholm (@chopmo)</a></p>
+<p></div> I&#8217;d say when the creativity/crap ratio is about 1:10 and still declining.</p>
+<p></p><p><div><a href='http://twitter.com/haruki_zaemon'><img width='40' src='http://a2.twimg.com/profile_images/53716610/Simon_normal.png'/> <br />
+Simon Harris (@haruki_zaemon)</a></p>
+<p></div> I&#8217;ve never seen a good time to do it. Incremental change has always worked best, for me.</p>
+<p></p><p><div><a href='http://twitter.com/brianthecoder'><img width='40' src='http://a1.twimg.com/profile_images/395135469/twitterProfilePhoto_normal.jpg'/> <br />
+Brian Smith (@brianthecoder)</a></p>
+<p></div> probably when you have to ask yourself that question + 1 week</p>
+<p></p><p><div><a href='http://twitter.com/baroquebobcat'><img width='40' src='http://a3.twimg.com/profile_images/1080381595/Photo_on_2010-07-16_at_11.01-cropped_normal.jpg'/> <br />
+Nick howard (@baroquebobcat)</a></p>
+<p></div> When you haven&#8217;t written anything yet?</p>
+<p></p><p><div><a href='http://twitter.com/Seanba_'><img width='40' src='http://a3.twimg.com/profile_images/1134190047/in-utah2_normal.jpg'/> <br />
+Sean Barton (@Seanba_)</a></p>
+<p></div> When Code comments warn me that I couldn&#8217;t possibly understand what follows, and that it can&#8217;t be changed.</p>
+<p></p><p><div><a href='http://twitter.com/supaspoida'><img width='40' src='http://a0.twimg.com/profile_images/178202468/larface_normal.png'/> <br />
+Lar Van Der Jagt (@supaspoida)</a></p>
+<p></div> when the features you&#8217;d be trying to preserve by avoiding a rewrite never should have been written in the first place.</p>
+<p></p><p><div><a href='http://twitter.com/cecifernandes'><img width='40' src='http://a0.twimg.com/profile_images/1093940036/ceci-bearMountain_normal.png'/> <br />
+Cecilia Fernandes (@cecifernandes)</a></p>
+<p></div> I guess we don&#8217;t. But the turning point is usually when it gets too painful to keep it and too difficult/unstable to refactor.</p>
+<p></p><p><div><a href='http://twitter.com/priceted'><img width='40' src='http://a1.twimg.com/profile_images/626085565/pic_normal.jpg'/> <br />
+Edward (Ted) Price (@priceted)</a></p>
+<p></div> When the overly-sensitive head architect of the project leaves the co. because adding a form field becomes a herculean task.</p>
+<p></p><p><div><a href='http://twitter.com/410formula'><img width='40' src='http://a1.twimg.com/profile_images/289508653/jrubyist_normal.jpg'/> <br />
+Dan Tylenda-Emmons (@410formula)</a></p>
+<p></div> when it is painful to make even a minor change</p>
+<p></p><p><div><a href='http://twitter.com/ftroya_tech'><img width='40' src='http://a3.twimg.com/profile_images/1132711643/1rxl_normal.jpg'/> <br />
+Fernando Troya (@ftroya_tech)</a></p>
+<p></div> The more defects become stories with architectural impact the closer you are to that point!</p>
+<p></p><p><div><a href='http://twitter.com/wwkeyboard'><img width='40' src='http://a1.twimg.com/profile_images/521394081/me_normal.jpg'/> <br />
+Aaron Lee (@wwkeyboard)</a></p>
+<p></div> you should divide and conquer; unless it&#8217;s a new paradigm in a new language.</p>
+<p></p><p><div><a href='http://twitter.com/jeffbski'><img width='40' src='http://a3.twimg.com/profile_images/197314327/Jeff_050616_img_0976_normal.jpg'/> <br />
+Jeff Barczewski (@jeffbski)</a></p>
+<p></div> I would suggest it depends on how well the project works currently and whether it can be done a piece at a time RT big rewrite?</p>
+<p></p><p><div><a href='http://twitter.com/rtlechow'><img width='40' src='http://a0.twimg.com/profile_images/813392856/rtsavestransitcity__1__normal.jpg'/> <br />
+R.T. Lechow (@rtlechow)</a></p>
+<p></div> @RobotDeathSquad BigRewriteQuestion does have a useful side effect: the earnest responses tell you &#8220;where that person is at&#8221;.</p>
+<p></p><p><div><a href='http://twitter.com/rubyist'><img width='40' src='http://a1.twimg.com/profile_images/640246261/20353_768081426624_12321622_43910955_193081_n_normal.jpg'/> <br />
+Scott Barron (@rubyist)</a></p>
+<p></div> when someone ponies up the dollars for it</p>
+<p></p><p><div><a href='http://twitter.com/blowmage'><img width='40' src='http://a1.twimg.com/profile_images/1131230389/boise_state_logo_800_normal.jpg'/> <br />
+Mike Moore (@blowmage)</a></p>
+<p></div> When your velocity is very, very low because of design and architectural problems in the code. Its a big hump though.</p>
+<p></p><p><div><a href='http://twitter.com/morticed'><img width='40' src='http://a2.twimg.com/profile_images/545477290/gravatar_normal.jpeg'/> <br />
+Tom Stuart (@morticed)</a></p>
+<p></div> 90% of the time it makes more sense to refactor the existing code. Unless it&#8217;s a ColdFusion app ;)</p>
+<p></p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> <br />
+Andrew de Andrade (@andrewdeandrade)</a></p>
+<p></div> It&#8217;s time for the big rewrite when the most experienced developer has lost all faith in the code base.</p>
+<p></p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> <br />
+Andrew de Andrade (@andrewdeandrade)</a></p>
+<p></div> However, before beginning a big rewrite, you need to &#8220;fix&#8221; the management responsible for a codebase that needs a big rewrite.</p>
+<p></p><p><div><a href='http://twitter.com/slainer68'><img width='40' src='http://a0.twimg.com/profile_images/73727616/5769172_normal.jpg'/> <br />
+slainer68 (@slainer68)</a></p>
+<p></div> &gt; i do not wait for this moment, i try to refactor everytime :)</p>
+<p></p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> <br />
+Andrew de Andrade (@andrewdeandrade)</a></p>
+<p></div> Big rewrites only occur when both product and engineering management act &#8220;unprofessionally&#8221; per @unclebobmartin&#8217;s definition</p>
+<p></p><p><div><a href='http://twitter.com/gblakeman'><img width='40' src='http://a3.twimg.com/profile_images/360069475/me_glasses_normal.jpg'/> <br />
+Grant Blakeman (@gblakeman)</a></p>
+<p></div> when i realize i&#8217;m spending more time compensating for existing code than writing new code.</p>
+<p></p><p><div><a href='http://twitter.com/410formula'><img width='40' src='http://a1.twimg.com/profile_images/289508653/jrubyist_normal.jpg'/> <br />
+Dan Tylenda-Emmons (@410formula)</a></p>
+<p></div> when everyone you ask says &#8220;oh that class?  Yeah it&#8217;s garbage. Nobody wants to touch it.&#8221; Chances are, it&#8217;s not the only one.</p>
+<p></p><p><div><a href='http://twitter.com/tooky'><img width='40' src='http://a2.twimg.com/profile_images/585736694/mugshot_small_normal.jpg'/> <br />
+Steve Tooke (@tooky)</a></p>
+<p></div> if the cost of adding value now is higher than rewriting and then adding value? I usually feel a rewrite is the scary option.</p>
+<p></p><p><div><a href='http://twitter.com/jarhart'><img width='40' src='http://a2.twimg.com/profile_images/79570550/Profile_Picture_normal.jpg'/> <br />
+Jason Arhart (@jarhart)</a></p>
+<p></div> When I start to consistently feel loathing rather than excitement when I think of better designs.</p>
+<p></p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> <br />
+Andrew de Andrade (@andrewdeandrade)</a></p>
+<p></div> @thomasfuchs I am pro-&#8220;abandon ship&#8221; as well. The need for big rewrites are signs of more sinister problems.</p>
+<p></p><p><div><a href='http://twitter.com/mjkirk'><img width='40' src='http://a3.twimg.com/profile_images/514809699/03_background_lights_2_cropped_normal.jpg'/> <br />
+Matthew Kirk (@mjkirk)</a></p>
+<p></div> We rewrote our app once when the original app was unbearable to maintain.</p>
+<p></p><p><div><a href='http://twitter.com/aspleenic'><img width='40' src='http://a2.twimg.com/profile_images/150326262/pj_normal.jpg'/> <br />
+PJ Hagerty (@aspleenic)</a></p>
+<p></div> For us it&#8217;s whenever the boss tells us to :) We converted an app from <span class="caps">VFP</span> 9 to #rails in just under 2 yrs</p>
+<p></p><p><div><a href='http://twitter.com/alexvollmer'><img width='40' src='http://a0.twimg.com/profile_images/50695192/avatar-sm_normal.jpg'/> <br />
+alexvollmer (@alexvollmer)</a></p>
+<p></div> That&#8217;s the hardest question I&#8217;ve ever had to answer in this biz. You never know, you just guess and hope you&#8217;re right.</p>
+<p></p><p><div><a href='http://twitter.com/adolfosousa'><img width='40' src='http://a3.twimg.com/profile_images/1128539547/falone_normal.png'/> <br />
+Adolfo Sousa (@adolfosousa)</a></p>
+<p></div> It&#8217;s time for the big rewrite when things are screwed-up or messy <span class="caps">AND</span> nobody is bikeshedding &#8211; in other words: never</p>
+<p></p><p><div><a href='http://twitter.com/base10'><img width='40' src='http://a1.twimg.com/profile_images/70386269/avatar_normal.jpg'/> <br />
+Nathan L. Walls (@base10)</a></p>
+<p></div> Secondly, if given the opportunity, I like walling in the existing app and building new apps around it to extend function.</p>
+<p></p><p><div><a href='http://twitter.com/TaraMclean'><img width='40' src='http://a1.twimg.com/profile_images/491593957/profile_image_1256589307779_normal.jpg'/> <br />
+Tara McLean (@TaraMclean)</a></p>
+<p></div> I try to avoid big software rewrites as they tend to be a death march. Instead try to chip using a strangler application</p>
+<p></p><p><div><a href='http://twitter.com/pmanrubia'><img width='40' src='http://a0.twimg.com/profile_images/571205244/DSC00106_normal.JPG'/> <br />
+Pablo Manrubia DÃƒÂ­ez (@pmanrubia)</a></p>
+<p></div> When developers don&#8217;t look happy while coding. The less enjoyable it is for programmers the more rewrite is needed :)</p>
+<p></p><p><div><a href='http://twitter.com/coderifous'><img width='40' src='http://a2.twimg.com/profile_images/234755010/JimAvatar_normal.jpg'/> <br />
+Jim Garvin (@coderifous)</a></p>
+<p></div> Must consider context, so right answer is &#8220;it depends&#8221;.  But the raising of the question itself is probably an indicator.</p>
+<p></p><p><div><a href='http://twitter.com/f3ew'><img width='40' src='http://a0.twimg.com/profile_images/359222940/cheque_normal.jpg'/> <br />
+Devdas Bhagat (@f3ew)</a></p>
+<p></div> When maintaining the system in production gets too expensive (include running costs of hardware and admin time).</p>
+</p>
+<p>
+<div>
+<p><a href="http://twitter.com/#!/RoyDealSimon"><br />
+<img width='40' src='http://a0.twimg.com/profile_images/835973200/004_reasonably_small.JPG'/><br />
+Roy Deal Simon (@RoyDealSimon)<br />
+</a></div><br />
+a rewrite takes less time and has less risks involved than a functional conversion but results in lower quality as well.<br />
+by functional conversion I mean a rewrite-from-scratch scenario, and by &#8220;rewrite&#8221; I meant &#8220;refactoring&#8221;</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/28/imagine-you%27re-hit-by-a-car/">Imagine You&#8217;re Hit by a Car</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-28T00:00:00-04:00" pubdate data-updated="true">Sep 28<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was scrolling through articles on this site earlier, and I decided to re-read some of my own encouraging words for a shot of inspiration.  On the post called <a href="http://chadfowler.com/2009/5/2/what-would-you-rather-be-doing">What Would You Rather Be Doing?</a> I came across this comment by <a href="http://sivers.org">Derek Sivers</a> and wanted to make sure everyone saw it.</p>
+<pre>
+  Derek Sivers Says: 
+  May 13th, 2009 at 05:39 PM
+    
+  Imagine youâ€™re hit by a car today, wake up in the hospital, and the doctor is saying, â€œSorry. We canâ€™t stop the bleeding. Youâ€™ve only got an hour to live.â€
+  
+  Youâ€™re laying on what you now realize is your death bed. Oh no! No no no! All those things you wanted to do! You never went to Italy! You never started       
+  that business you knew would be a huge success! You never asked-out that gorgeous person you flirt with! You never flew ZeroG. You never lost 30 
+  pounds and got proud of your looks. You never had kids.
+  
+  
+  Make that list.
+  
+  Then make it your to-do list.
+  
+  Eliminate all those potential regrets.
+</pre>
+<p>Thanks, Derek!</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/10/23-travel-tips-to-make-long-trips-more-enjoyable/">23 Travel Tips to Make Long Trips More Enjoyable</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-10T00:00:00-04:00" pubdate data-updated="true">Sep 10<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I travel a lot. Not the most of anyone I know, but enough to have found myself inconvenienced plenty of times and to have learned ways to make life more comfortable on the road. Here are a few tips that I&#8217;ve collected over time (or most recently <a href="http://twitter.com/chadfowler/status/24098334515">via twitter</a>). Hopefully they&#8217;ll come in handy to others.</p>
+<ul>
+	<li>Always carry a power strip in your suitcase. Great for international trips to avoid having to buy multiple adapters. But even in your home country, hotels can be really bad about providing enough outlets. I have <a href="http://www.amazon.com/gp/product/B000F9YN2M?ie=UTF8&amp;tag=chadfowcom-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B000F9YN2M">one of these</a> which fits nicely in a suitcase or laptop bag without taking up too much room.</li>
+	<li>If you like coffee or tea, bring your own favorite brand of instant mix. I&#8217;m not a big Starbucks coffee fan, but their <a href="http://www.amazon.com/gp/product/B002P5LFJI?ie=UTF8&amp;tag=chadfowcom-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B002P5LFJI">Via</a> product is the best tasting instant coffee I&#8217;ve ever had and beats the coffee available in any hotel room anywhere. When you&#8217;re trying to beat jet lag, having something better than the usual hotel swill is very welcome.</li>
+	<li>Considering getting a portable <span class="caps">WIFI</span> router. Many of the hotels I stay in only provide ethernet connections, which would otherwise tether me to a desk. Given how much work I do at my computer, being able to sit where ever I like in the room is important. I also use the <span class="caps">WIFI</span> router to connect multiple devices without having to (potentially) pay multiple times for internet access. We have an old <a href="http://www.amazon.com/gp/product/B0015YJOK2?ie=UTF8&amp;tag=chadfowcom-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B0015YJOK2">airport express</a> which we use for this purpose.</li>
+	<li>Be careful about <span class="caps">SMS</span> messages. Even if your phone works overseas, you can easily amass a ridiculous cell phone bill from sending or receiving <span class="caps">SMS</span> messages. One friend accidentally ended up with a $600 bill from text messages alone after a trip overseas. It&#8217;s not unusual for each text message to cost $0.50 or more.</li>
+	<li>Rent a cell phone and/or internet access device when traveling internationally. As an example, in Japan&#8217;s Narita airport you can easily rent a portable <span class="caps">WIFI</span> access point which provides internet access via the cellular network right in the arrivals area. On my last trip, I passed the time on a bus video chatting with my wife. Another cell phone option is to bring an unlocked phone and buy a pre-paid <span class="caps">SIM</span> card for it in your destination country.</li>
+	<li>Carry your own meal replacement bars.  You never know when you&#8217;re going to find yourself stuck on a tarmac starving or inconveniently moving from flight to flight during meal times.  Keeping your eating on schedule helps significantly with jet lag, but it also just helps you not feel terrible as you travel.  <a href="http://twitter.com/objo">Joe O&#8217;Brien</a> suggests <a href="http://www.amazon.com/gp/product/B00336EXQU?ie=UTF8&amp;tag=chadfowcom-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00336EXQU">Clif Bars</a>. Personally I like the <a href="http://www.amazon.com/gp/product/B001RD38D0?ie=UTF8&amp;tag=chadfowcom-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B001RD38D0"><span class="caps">GNC</span> brand protein bars</a>.</li>
+	<li>Always keep a spare set of clothes in your carry-on luggage if you&#8217;re checking bags. I don&#8217;t do this one, but I should. I spent several days freezing in the winter in Poland a couple of years ago because not only did I not have extra clothes in my carry-on but I checked my coat to avoid having to lug it around on the flights. Big mistake. Polish Air lost my suitcase and didn&#8217;t get it to me until nearly the end of the trip.</li>
+	<li>Use something like <a href="http://tripit.com">Tripit</a> to consolidate your itinerary info then print it out.</li>
+	<li>Leave your international travel supplies packed. For example, there&#8217;s no reason to take your travel power adapter, <span class="caps">WIFI</span> router, or international power supplies out of your suitcase if you always use the same luggage. When I went to Japan recently I ended up tearing the grounding pin out of my Macbook Pro power cable so I could plug it into the Japanese outlets. <span class="caps">BTW</span>, I don&#8217;t recommend doing that.</li>
+	<li>Especially for really long flights, drink a lot of water. Air travel can dehydrate you. The effect of drinking water is subtle but magical. You&#8217;ll feel <em>much</em> better if you make yourself do it.</li>
+	<li>Spend a significant amount of time outside in the sunlight on your first and second days in a new time zone. Go for a walk, breathe a lot of fresh air, maybe even do some outside exercise. Natural light and fresh air are two of the best tools for beating jet lag.</li>
+	<li>Consider traveling light and not checking any bags. Saves time and is safer than checking luggage (see my Poland story above). I confess I still don&#8217;t usually do this but I should.</li>
+	<li>If you fly any significant amount at all, stick with one airline and record the miles. I get free upgrades on many domestic flights and some international flights simply because I fly United all the time.</li>
+	<li>Use <a href="http://seatguru.com">http://seatguru.com</a> to pick your seats. I&#8217;ve been using it since <a href="http://pragprog.com">Dave Thomas</a> told me about it several years ago and I&#8217;ve more than once saved myself from an undesirable seat that I otherwise wouldn&#8217;t have known about until I boarded.  When you&#8217;re going to be stuck in the same spot for 5 hours, you don&#8217;t want to be e.g. wedged into the wall in a seat that doesn&#8217;t recline.</li>
+	<li>Another one from Dave Thomas: Start living in the destination timezone when you get on the plane. When you arrive, no sleeping until at least 8pm local. I&#8217;m going to New York tonight and I let myself get up at 5AM <span class="caps">MDT</span> this morning since I knew it was 7AM <span class="caps">EDT</span>. I sometimes take it to the extreme, adjusting a few days early if I know I&#8217;m going to have trouble waking up for work in the new time zone. <a href="http://twitter.com/david_a_black">David Black</a> says he can&#8217;t manage to stay awake until 8PM when traveling east, so he limits himself to a 1.5 hour nap. I can&#8217;t limit myself to a 1.5 hour nap so I avoid sleeping at all.</li>
+	<li>If you have any aptitude for language learning at all, you&#8217;d be surprised how easy it is to learn a few basic phrases. Spend a short amount of time on the plane learning some key phrases in your destination country. If the country has a different alphabet than the one you&#8217;re used to, don&#8217;t assume it will be too hard to learn. I learned <a href="http://www.amazon.com/gp/product/1880656183?ie=UTF8&amp;tag=chadfowcom-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1880656183">Hiragana and much of Katakana</a> for a recent Japan trip and instantly found it useful. Even though I would misread some things, it came in handy for me. When in South India, it took me two days to learn how to phonetically read Kannada.</li>
+	<li>If you&#8217;re going to be shopping, take a bigger suitcase than you need. Don&#8217;t fill it on the way there so you can fill it on the way back. Another option is to buy a cheap duffle bag and fill it with dirty clothes for the trip back using your main suitcase for your purchased items.</li>
+	<li>Don&#8217;t fold your clothes. If you roll them, they take less room in your luggage.</li>
+	<li>Scan your travel documents and upload them to a web site somewhere that will be easy to get to while you&#8217;re traveling.</li>
+	<li><a href="http://twitter.com/imf">Ian McFarland</a> suggests: &#8220;Keeping all your key docs in a clear plastic folder helps a ton. Tripit itinerary, passport photocopies, any paper tickets&#8221;, etc. I haven&#8217;t done that before but it&#8217;s a great idea.</li>
+	<li>David Black suggests that if you wear glasses, bring an eyeglass screwdriver. I had an eyeglass malfunction in Hungary once and it took two days to find a screwdriver to fix them (busy work schedule, unfamiliar with the area, etc.). The world looked lopsided for two days. Very annoying.</li>
+	<li>Choose your flight schedules carefully. I personally like to plan to get to my destination fairly early. Even for domestic trips, I&#8217;d rather schedule myself to get in at 5PM and sit around with nothing to do than schedule an 11PM arrival, risking a delay and an unwanted late night.  <a href="http://twitter.com/copiousfreetime">Jeremy Hinegardner</a>  also suggests minimum 2 hour layovers. Delays happen and a longer layover is like an insurance policy. You pay a little every trip to avoid paying a lot when you really really don&#8217;t want to.</li>
+	<li>Also from Jeremy, in his own words: &#8220;Travel problems: don&#8217;t get pissy. There are 2 people who care about it, you, and the person helping you. One of them can stop.&#8221; Wise.</li>
+</ul>
+<p>I&#8217;ve collected travel advice from a lot of people. Most of it is common sense, but if I forgot to mention someone, my apologies. Here are the people whose ideas I took from Twitter today (thanks all!):</p>
+<ul>
+	<li><a href="http://twitter.com/gregfahy">gregfahy</a></li>
+	<li><a href="http://twitter.com/kenrickchien">kenrickchien</a></li>
+	<li><a href="http://twitter.com/dimsumthinking">dimsumthinking</a></li>
+	<li><a href="http://twitter.com/pragdave">pragdave</a></li>
+	<li><a href="http://twitter.com/glenngillen">glenngillen</a></li>
+	<li><a href="http://twitter.com/elise_huard">elise_huard</a></li>
+	<li><a href="http://twitter.com/Donoskeys1">Donoskeys1</a></li>
+	<li><a href="http://twitter.com/dan_melnick">dan_melnick</a></li>
+	<li><a href="http://twitter.com/shazNamna">shazNamna</a></li>
+	<li><a href="http://twitter.com/jlecour">jlecour</a></li>
+	<li><a href="http://twitter.com/ginnyhendry">ginnyhendry</a></li>
+	<li><a href="http://twitter.com/imf">imf</a></li>
+	<li><a href="http://twitter.com/david_a_black">david_a_black</a></li>
+	<li><a href="http://twitter.com/copiousfreetime">copiousfreetime</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/06/matz-ruby-world-keynote/">Matz Ruby World Keynote</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-06T00:00:00-04:00" pubdate data-updated="true">Sep 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">The following is my real time transcription of the translation of <a href="http://www.rubyist.net/~matz/">Matz&#8217;s</a> speech at <a href="http://www.rubyworld-conf.org">Ruby World 2010</a>.  I was typing as fast as I could while he spoke, and I probably made some mistakes. I might have left out some words or sentences. If anything doesn&#8217;t make sense, assume it&#8217;s my fault and not Matsumoto-san&#8217;s. Anyway, I enjoyed Matz&#8217;s keynote and thought other English speakers might like a chance to see what he said.
+<h2>I&#8217;m Matsumoto</h2>
+<p>I Started Ruby in 1993 at NaCL:http://www.netlab.jp/. When I joined the company after graduating from college, I didn&#8217;t have much to do at the time. I was not fired fortunately. But I had plenty of time so I started to work on Ruby as a side project.</p>
+<p>So at the time, there was <span class="caps">ONE</span> user of Ruby. Then I started to develop Ruby with some other friends.</p>
+<p>In 1995, Ruby was released and distributed over the internet for general use. At the time, people on usenet got interested in Ruby and gave me some feedback. Also we used a mailing list to distribute information on Ruby.</p>
+<p>So within days, about 200 people got involved. So in 1995, the number of people who knew something about Ruby was about 200.</p>
+<p>Even after that, Ruby was known to a relatively limited number of people.</p>
+<p>Then in 1999, I published a book called Object Oriented Scripting with Ruby. This was the first book on Ruby. It&#8217;s only natural. Who else is going to write a book on Ruby, right??</p>
+<p>At the time, this sold pretty well. Cumulatively, we sold almost 20,000 copies. I&#8217;m sure I&#8217;m allowed to discuss this number. Probably it&#8217;s only 17,000 in real numbers. This was in Japanese, so Ruby was known to the whole nation. So in 1999, Ruby was known to a lot more people. More engineers and programmers knew about the language.</p>
+<p>I started to hear from many people that they knew about Ruby.</p>
+<p>In year 2000, <a href="http://www.pragprog.com/titles/ruby/programming-ruby">a book in English</a> was published.  Many people in the world came to know about Ruby.</p>
+<p>Then in 2004, <a href="http://rubyonrails.org">Ruby on Rails</a> was released. Of course, most people know about this Web application framework. Ruby on Rails is very productive compared to competing frameworks in other languages.  There was an active discussion on the comparison of performance. It was welcomed by many people. We estimate that the number of users grew to 100,000 people in 2004.</p>
+<p>In 2008, US-based Gartner released a survey. In the report, Gartner estimated that the total number of Ruby users reached 1,000,000. This was a huge number as you can see.</p>
+<p>In the same report, the reporter predicted that in five years (2013)  the total number of users would be 4,000,000.  Ruby is open source. You don&#8217;t have to pay anything to use it. You just download it. It is therefore very difficult to know how many people are using it. I created Ruby myself and I don&#8217;t know how many people are using it, so I&#8217;m not sure how Gartner reached their conclusion.  But anyway, 4,000,000 people are predicted to be using Ruby in 2013.</p>
+<p>So in 20 years, this project which started with one person may have increased from 1 to 4,000,000 users. This is beyond the normal growth rate of a technology.</p>
+<p>This period of Ruby&#8217;s popularity was due to the popularity of Ruby on Rails.</p>
+<p>There is a ccompany called <a href="http://www.tiobe.com/">Tiobe Software</a> which is a software company in the US. Their <a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">Tiobe Index</a> rates the popularity of programming languages using Google, Yahoo, Microsoft, and other search engines to rate the popularity of languages on the internet. Back in 2009, according to Tiobe index, Ruby was ranked #10. And in 2008, it was ranked #9.</p>
+<p>In this year, 2010, it was demoted to #12.</p>
+<p>You may have a concern about the future of Ruby, but if you drill down deeper, you will see: objective-c is getting more popular, driven by iPad, iPod, etc. development. Objective-C is required.  So it jumped form 42 to 11.  And Go by Google was released in April of last year. So where it didn&#8217;t exist previously it jumped up to #15.</p>
+<p>As you can see, Ruby represents 2.221% of programming language references according to Tiobe.  That&#8217;s good.</p>
+<p>So don&#8217;t have a concern about this.</p>
+<p>But this marks a very interesting symptom. The end of the ruby &#8220;bubble&#8221;. When I joined the company, the bubble economy was still there. Then it collapsed and caused a lot of trouble. A &#8220;bubble&#8221; is not sustainable. Bubbles are therefore undesirable.</p>
+<p>There are many comedians and musicians named as &#8220;one-hit wonders&#8221;. I don&#8217;t want Ruby to become that.</p>
+<p>The life expectancy of a programming language is pretty long. Fortran was created in the 1950s. I want Ruby to be like this. That&#8217;s why this presentation is called &#8220;Sustainable Ruby&#8221;.  The question is how to maintain Ruby&#8217;s high level of quality and the high level of quality of the people.</p>
+<p>So in order to implement &#8220;sustainable ruby&#8221;, we must first discuss the benefit of Ruby.  Benefit is very important for Ruby to be sustainable.</p>
+<p>Benefit #1: Productivity. One of the reasons that Ruby is quite popular is that its productivity is quite high. An embodiment of this is Ruby on Rails. When Rails was released, it was often cited that people would say that Rails had 10x productivity over java.  Ruby developers didn&#8217;t really believe this, but a specific developer in the US wrote an article saying that he felt that <span class="caps">HIS</span> productivity over Java when switching to Rails was 10&#215;.  In 2005 and 2006, this one sentence caused a lot of arguments and discussion.</p>
+<p>After several years of discussion and usage of Ruby on Rails, it may not be 10x but there are many cases where you can enjoy the productivity of Ruby on Rails over Java.</p>
+<p>Also, another example of how Rails is productive is that it can take only 15 minutes to develop a web application. In 2004 at a Brazilian conference, David Heinemeier Hansson demonstrated web application development using Ruby on Rails. Without any preparation, no design, no database, he started to create a blog application. You could create articles, list them, etc. He created this application in 15 minutes. In 2004, creating an application in 15 minutes it was astonishing.  It was great marketing to do that.</p>
+<p>I&#8217;m a software engineer and I&#8217;m not very interested in marketing. But that video was a huge contributor to making Ruby on Rails popular. Ruby itself didn&#8217;t have any marketing, but Ruby on Rails promoted Ruby as well.</p>
+<p>Was the Rails framework the sole reason behind the productivity boost when using it? I don&#8217;t think so. Ruby itself also makes the productivity possible.</p>
+<p>Post-Rails frameworks.<br />
+  Merb<br />
+  Sinatra<br />
+  Ramaze<br />
+  Rails 3</p>
+<p>Merb was emerging as a post-Rails framework, but it was quite unique in open software. Merb and Rails jointly created a new framework in the form of Rails 3. Also, Rails 3 is inheriting some of the Merb characteristics. Totally new framework by combining/merging different frameworks.</p>
+<p>So far I&#8217;ve been talking about the benefits that Ruby can provide in order to make Ruby sustainable.</p>
+<p>The second element is the Potential the language can demonstrate. Now we have the technology and the technology is convenient and we can create some benefits. But we need to have potential in the Language for people to make investment.</p>
+<p>Around Ruby we have much new technology. Ruby on Rails, for example, introduced innovations in Web development. It wasn&#8217;t the first web framework. Not even the first Web framework in Ruby. There were already a lot of web application frameworks in Ruby when Rails was released. But under the circumstances, Ruby on Rails implemented new ideas that triggered productivity enhancements in Ruby <span class="caps">AND</span> other languages (python, etc.). So Ruby on Rails had a huge impact on the web application development arena.</p>
+<p>Whenever a new technology is created, the surrounding areas also enjoy the benefits of this technology. Not all new technologies will be successful, but some of them will really boost the entire IT industry.</p>
+<p>We do see some of that trend in the industry. To support the new technology we need to have smart engineers (hackers). The smart engineers usually come to the interesting technology. Whenever there&#8217;s new technology that&#8217;s created, it invites the smart engineers who then create new technology. This is a positive cycle. Ruby is one of these positive cycle enforcers.</p>
+<p>Benefit, Potential, and&#8230;.</p>
+<p>Passion</p>
+<p>The author of The Passionate Programmer, Chad Fowler, is here. I feel embarrassed to say something about him before his keynote. But I have to say this. He is right to emphasize passion. Many people are passionate about ruby. Engineer passion is very important.  Passion is key.</p>
+<p>In the US there is a conference called RubyConf:http://rubyconf.org. The first one was held in Tampa Florida. There were only 34 attendees at the first conference. Right now we have more than 500 people attending. If the venue could handle it we could probably fit 700 or 1000. They actually limit the number of attendees. They sell out every year. This year RubyConf will be held in <a href="http://www.city.matsue.shimane.jp/kankou/en/">Matsue&#8217;s</a> sister city, New Orleans. It will be the 10th. It is the longest running Ruby conference on the globe.</p>
+<p>Euruko. Poland, Barcelona, Berlin, Prague.  On the last day, Euruko always invites speakers to bid on where Euruko should be. Speakers make their case and the location of the next Euruko is voted on.</p>
+<p>Two weeks ago we had RubyKaigi.  It was held in Tsukuba City. Not in Tokyo. I graduated from Tsukuba univeristy. It made me feel like i was going home. We had about 700 people at RubyKaigi this year. RubyConf will have 500 (ed: actually 600 to 650). The biggest conference is held in Japan.</p>
+<p>As you can see here in this venue as well Ruby World has so many people from so many countries. I would say that the IT industry is japan is becoming truly internationalized. We have a disadvantage in Matsue because it&#8217;s so remote, but the passion of the Rubyists makes it possible.</p>
+<p>We also have regional Ruby conferences in India, China, Brazil, all over the US, etc. They also have another conference called RailsConf:http://railsconf.org, which is operated by a professional event management company (ed: and <a href="http://rubycentral.org">Ruby Central</a>). They had 1800 people. So that really boosts Ruby.</p>
+<p>Startup passion.  I&#8217;m going to talk about US companies, but there are many venture companies in Silicon valley who are very interested in Ruby. More than 60% of VCs use Ruby to provide the system.  Among the famous ones known to Japan includes Twitter. As a startup, they implemented everything using Ruby from bottom to top. Currently they have 100s of millions of users. Much of the RUby has been replaced but if you access twitter you can still see twitter driving the system.</p>
+<p>As of last year another acronym was introduced &#8220;<span class="caps">ARC</span>&#8221;. Agile, Ruby/Rails, Cloud.  I&#8217;ve heard that VCs ask startups who aren&#8217;t using Ruby, &#8220;Why not?&#8221; Investors are pressuring startups to use Ruby. &#8220;It&#8217;s faster, so if you can shorten your release by one month why not use Ruby?&#8221;, they say.</p>
+<p>A few years ago when startups were getting started, they wanted to attract smart engineers, so they used Ruby to attract them.</p>
+<p>Executives&#8217; passion: Productivity is the key.  It&#8217;s not just the engineers who are passionate about Ruby. Productivity is one of the biggest factors for businesses. Executives started to realize the importance of using a productive language. Productive languages drive profit.  Some executives are finding hope in Ruby.</p>
+<p>Differentiation can be found by using Ruby. The japanese IT industry is characterized by conservatism, so many may be reluctant to use Ruby. But by making the decision to use Ruby, they may differentiate themselves. There is also the possibility to change the entire industrial structure by switching to Ruby and other open source technologies, driving more SMBs.</p>
+<p>In Japan, major IT companies receive contracts and subcontract to others. But with Ruby and smart engineers, these can be driven to small businesses which can innovate. This drives hope.</p>
+<p>Motivation drives Hope</p>
+<p>for Food<br />
+for Money<br />
+  These are very pragmatic</p>
+<p>for Good Cause<br />
+  But some people might make a bigger attempt to change the world.</p>
+<p>Many people are finding hope in Ruby. Many found potential in Ruby.</p>
+<p>Not all have succeeded.  Some are extremely successful. Some are not.  What made the difference?</p>
+<p>In some cases, the benefit was not enough. Or people couldn&#8217;t see the potential. But the biggest factor was <span class="caps">PASSION</span>!  How passionate or decisive they were made the difference.</p>
+<p>Lots of people love Ruby. Pictured here (ed: he shows a picture in his slide) are the smiling faces of the staff of the RubyKaigi. This is not organized by professionals. 700 turnout is already beyond its technical limits. But when we ran the survey, most people were satisfied by the conference. It&#8217;s miraculous considering the tough circumstances. But these people are passionate.</p>
+<p>Many people are surrounding ruby. Hacker,s engineers, executives.  They <span class="caps">LOVE</span> Ruby.</p>
+<p>Of course I love Ruby myself. It&#8217;s my child. Every day I am expanding my affection for Ruby. There are so many people out there that love Ruby. As a Japanese, I&#8217;m reluctant to say &#8220;love&#8221;. Actually one guy said &#8220;I love you&#8221;. I am poor at English. I was very embarrassed :) For Japanese, it&#8217;s difficult to express love in a direct fashion. Of course that guy didn&#8217;t mean &#8220;love&#8221;. He just loved Ruby. Like a strong kinship.</p>
+<p>Many people love Ruby. Let me give you some examples:</p>
+<p>NaCl. When i started at NaCl, Inoue-san he actually picked me up and allowed me to work on this. Back in 1995, there was no way to know if Ruby would be used by anyone. But the president, Mr. Inoue-san had the faith and the vision to hire me and let me work on Ruby. He gave me plenty of time to work on Ruby. It&#8217;s all possible because of him.</p>
+<p>In 2006, the Matsue mayor actually visited our lab. We would like to use Ruby to revive the city. I had to reply, &#8220;Are you out of your mind?&#8221; Can you believe this person would try to revive our city using Ruby? Many people living in many places outside of Matsue, so I said maybe it&#8217;s difficult but someone from the city told me the Mayor was very serious about this. The mayor himself actually expressed his desire to use Ruby. So as a local government, Matsue city is committed to promote Ruby, which is very very exceptional on examination.  How much contribution we&#8217;re making to the city really is unknown.</p>
+<p>This is Mr. Mizoguchi the Shimane governor. I don&#8217;t know how to show my appreciation to him. I&#8217;d like to take this opportunity to thank him again. There are many other local governments who are interested in using Ruby to revive their city. But the question is how passionate are the top management or the governor or mayor? Even if the promoters work hard, unless top management is passionate about the promotion it&#8217;s not going to work.</p>
+<p>One exceptional case is the governor of <a href="http://en.wikipedia.org/wiki/Fukuoka">Fukuoka</a>.  A rival of Shimane :). For some reason he really loves Ruby. I&#8217;m living her and he&#8217;s in Fukuoka. There&#8217;s no relation. But Fukuoka is committed to using Ruby and they have organized the Fukuoka award and they have the <a href="http://rubybizcommons.jp/en/">Ruby Business Commons</a> headquarters.</p>
+<p>Here is a noodle called Ruby on Matsue Ramen. The maker of this Ramen sent me an email. The maker of this has no connection to Ruby, but he has a local businesses and wants to promote Ruby. He offered to include the Ruby logo on this noodle to contribute to sales. It&#8217;s remarkable. This person volunteered to make Ruby Ramen for us without us asking.</p>
+<p>And thanks to all the efforts of all these people, Ruby is exciting right now.</p>
+<p>I have been engaged in Ruby for 17 years and i think it&#8217;s making sense for me to be passionate about Ruby. But many others are passionate about Ruby. I don&#8217;t understand why, but Ruby is loved. Love is driving Ruby.</p>
+<p>With the support of so many people, we are able to hold this Ruby World conference for the next two days. And I hope that for these days we can fully discuss the benefits of Ruby so that it will be helpful to what you do. 17 years ago I was the only one person who used Ruby. But over 17 years, people who are using Ruby  (more than 1,000,000 people) in university Research, implemented in IT industry, etc.</p>
+<p>Some of the things Ruby users are discussing are quite inspiring. Without this conference we can&#8217;t attract all of these great people to Matsue people. We should take advantage of this opportunity.</p>
+<p>Ruby is supported by passion. And by love.</p>
+<p>One more thing: The Ruby Association which I chair provides Ruby programmer certification. We have this announcement today that we have created a new &#8220;Gold&#8221; certification for Ruby programmers. This requires a higher level of skill. If you go to the <a href="http://www.ruby-assn.org/en/">Ruby Association home page</a>, there is a press announcement which explains what you need to do to be qualified as Ruby &#8220;Gold&#8221; certified.</p>
+<p>Thank you.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/12/tweet-tweet/">Tweet Tweet!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-12T00:00:00-04:00" pubdate data-updated="true">Aug 12<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="chadfowler">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy&#8230;System</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("chadfowler", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/chadfowler" class="twitter-follow-button" data-show-count="true">Follow @chadfowler</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/115940317748827567617?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'chadfowler';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

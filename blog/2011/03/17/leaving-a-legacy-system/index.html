@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Leaving a Legacy...System - The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Ever since reading David Heinemeir Hansson&#8217;s post Enterprise Is the New Legacy over five years ago, I&#8217;ve been chewing on something. The &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chad.github.com/blog/2011/03/17/leaving-a-legacy-system/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">The Passionate Programmer</a></h1>
+  
+    <h2>practical self-engineering</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chad.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Leaving a Legacy...System</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-17T00:00:00-04:00" pubdate data-updated="true">Mar 17<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Ever since reading David Heinemeir Hansson&#8217;s post <a href="http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php">Enterprise Is the New Legacy</a> over five years ago, I&#8217;ve been chewing on something. The gist of the post was that &#8220;enterprise&#8221; is and should be a bad word, just like &#8220;legacy&#8221;.</p>
+<p>But why is &#8220;legacy&#8221; a bad word to begin with?  The word makes most software developers and IT people ill.</p>
+<p>In other fields and in life in general, the word &#8220;legacy&#8221; isn&#8217;t thusly encumbered.  It refers to an inheritance left to those behind you. Your life&#8217;s work. Your essential story.</p>
+<p>In software, that story is assumed to be a tragedy.</p>
+<p>But even in the case of software, &#8220;legacy&#8221; is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as &#8220;legacy&#8221; indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we&#8217;re &#8220;left with&#8221; and that we must either maintain or replace.</p>
+<p>That isn&#8217;t so bad, is it?  In an industry where <a href="http://www.projectsmart.co.uk/docs/chaos-report.pdf">more software projects fail or are &#8216;challenged&#8217; than succeed</a>, getting to legacy status is cause for celebration!</p>
+<p>Here&#8217;s a sad idea:  as developers, even when we <em>do</em> succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated <a href="http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf">within 10 years of its birth</a>.</p>
+<p>So, what do we developers leave as a legacy? In most cases, we don&#8217;t leave much of anything.</p>
+<p>At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom <span class="caps">TCP</span>/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.</p>
+<p>That was ten years ago. I&#8217;d be willing to bet it&#8217;s still running. If not the whole system, at least a subset.</p>
+<p>That would make it 35.</p>
+<p>Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.</p>
+<p>How <em>would</em> I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?</p>
+<p>It&#8217;s daunting, isn&#8217;t it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn&#8217;t. Even predicting next year is hard.</p>
+<p>So maybe I&#8217;d need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.</p>
+<p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
+<p>I don&#8217;t <em>know</em> how to design a system that could live a long and healthy life. I don&#8217;t <em>know</em> because I haven&#8217;t done it yet. Have you?</p>
+<p><i>Note: This wasn&#8217;t a rhetorical question.</i></p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-17T00:00:00-04:00" pubdate data-updated="true">Mar 17<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/career/'>career</a>, <a class='category' href='/blog/categories/development-/'>development,</a>, <a class='category' href='/blog/categories/software-/'>software,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/blog/2011/03/17/leaving-a-legacy-system/" data-via="chadfowler" data-counturl="http://chad.github.com/blog/2011/03/17/leaving-a-legacy-system/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/03/15/the-harajuku-moment/" title="Previous Post: The Harajuku Moment">&laquo; The Harajuku Moment</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/12/21/re-thinking-software-development-education/" title="Next Post: Re-thinking Software Development Education">Re-thinking Software Development Education &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("chadfowler", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/chadfowler" class="twitter-follow-button" data-show-count="true">Follow @chadfowler</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/115940317748827567617?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'chadfowler';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
