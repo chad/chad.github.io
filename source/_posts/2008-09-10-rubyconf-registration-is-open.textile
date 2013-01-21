@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgUmVnaXN0cmF0aW9uIGlzIE9wZW4h
+enki_id: 4658
+---
+We have just "opened registration for RubyConf 2008!":https://www.regonline.com/rubyconf2008  We have also published the "schedule":http://rubyconf.org/talks.
+
+We have a really cool lineup this year (music, hardware, _all_ of the major implementations, and much more). And, we're having the conference in a really nice venue. It's one of those places you plan to come early or stay late for. And during the conference there will be loads of space for whatever "hallway track" activities you might come up with.
+
+Past RubyConfs have sold as quickly as 4 hours after opening registration, so if you're interested in going you should "head over to registration soon":https://www.regonline.com/rubyconf2008.
+
+To keep up to date on what's happening with RubyConf, follow the "RubyConf twitter feed":http://twitter.com/rubyconf.
+
+See you in Orlando!

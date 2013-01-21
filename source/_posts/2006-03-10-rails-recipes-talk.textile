@@ -1,0 +1,55 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgUmVjaXBlcyBUYWxr
+enki_id: 4475
+---
+To celebrate another beta release of <a
+href="http://www.pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a>
+today, we&#8217;ve opened up a <a
+href="http://fora.pragprog.com/rails-recipes">discussion forum</a> (powered
+by the wonderful new <a
+href="http://home.leetsoft.com/opinion">Opinion</a>) for readers to post
+ideas, suggestions, <em>success</em> <em>stories</em> (please!) and even
+their own recipes. Thousands of people are reading and using the book to
+solve <em>real</em> <em>problems</em>, and we wanted to give them each a
+voice.
+
+<p>
+There have been so many great recipe suggestions showing up in my inbox
+every day, that I didn&#8217;t want to keep them all for myself. A lot of
+those suggestions will make it into the book. Others won&#8217;t simply due
+to the volume. But the recipe format is obviously resonating with people,
+so there&#8217;s no reason we shouldn&#8217;t turn those ideas into helpful
+documentation.
+</p>
+<p>
+From now on, instead of sending your ideas to me directly, let&#8217;s
+start a <a href="http://fora.pragprog.com/rails-recipes">discussion</a>
+that everyone can benefit from.
+</p>
+<p>
+Tell everyone:
+</p>
+<ul>
+<li>What cool stuff you did with the recipes in the book
+
+</li>
+<li>How you expanded on the ideas presented
+
+</li>
+<li>Problems you had that you need help with
+
+</li>
+<li>Problems you had that you can help others with
+
+</li>
+<li>Or just give us your ideas and suggestions for the book.
+
+</li>
+</ul>
+<p>
+The book is still in development, so this is a good chance to have an
+impact on a book that will shape how the Rails community approaches its
+problems from now into the future.
+</p>

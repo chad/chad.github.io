@@ -1,0 +1,27 @@
+---
+layout: post
+title: !binary |-
+  V2hhdCB3b3VsZCB5b3UgcmF0aGVyIGJlIGRvaW5nPw==
+enki_id: 4683
+---
+For the first several years of my career in IT, I spent a lot of time thinking about what I'd rather be doing while at work. I might be in a meeting, talking about how to improve the uptime of a billing system. Or putting together time cards for a weekly report. Or programming in a language I knew wasn't as good as the one I used at home when I was free.
+
+I was frustrated. Not extremely frustrated most of the time. Just a little frustrated. Because there was always _something_ I'd rather be doing than the job I spent the majority of my waking time on.
+
+For me, the question of what I'd rather have been doing was answered roughly as such: working with people smarter than me using the best tools available to build something that solves real problems well. In my spare time, I worked on Open Source code in Ruby and collaborated with some of the smartest developers I've met. At work, I _wished_ I was doing what I did in my spare time.
+
+Within the structure of my job, there was yet another telling question with a telling answer. What job would I have rather been doing? For me and most of my co-workers, there was always that next job we were after. Someone was doing it and doing it poorly, and we wanted a chance. That's how humans think, I guess.
+
+So with these goals in sight, I made daily choices that were usually geared toward driving me toward achieving them. I wanted to work with Ruby, so I spent my free time learning Ruby from top to bottom. I read and tinkered with the interpreter source and experimented (and failed sometimes) with different styles of Ruby development, testing, an what-not. I wanted to work in a team that understood software development processes, so I practiced XP practices when possible and immersed myself in development practices such as Test Driven Development. I wanted to work with people smarter than me, so I befriended and collaborated with as many as I could---again in free time until I could find the right opportunity to do it for work.
+
+These investments paid off. In 2005, I moved out of the upwardly mobile corporate management job I was in and into a development position on a small, talented team of Ruby developers. I've gone from that to independent consulting to training and book writing to working with the team at "InfoEther":http://infoether.com (led by Rich Kilmer, one of those smarter-than-me people I mentioned earlier).
+
+This month, as the expanded and renamed second edition of "my first book":http://www.pragprog.com/titles/mjwti/my-job-went-to-india is released, I find myself returning to the primary question that drove me to where I am today: What would I rather be doing? It's weird, but for the first time I don't know. 
+
+The title of the new book is "The Passionate Programmer: Creating a Remarkable Career in Software Development":http://www.pragprog.com/titles/cfcar2/the-passionate-programmer. The book covers the approach I and others who have inspired me have taken in creating a remarkable and satisfying career. It's an expanded version of the first edition with not only new and revised content by me but essays by software developers who have inspired me throughout my career and a foreword by "David Heinemeier Hansson":http://loudthinking.com.
+
+!http://chadfowler.com/cfcar2.jpg!
+
+I believe strongly that passion is the most important ingredient for creating a remarkable career and doing excellent work. That's easy to say and probably not too hard to agree with, but it begs the question of what you should do if you're _not_ passionate about what you're doing. How can you find your passion? What advice can I give to someone who hasn't found it but wants to?
+
+Again, I don't know. But I think a good first step is to ask yourself the question: "What would I rather be doing right now?" And then, "Why is that not what I'm doing?"

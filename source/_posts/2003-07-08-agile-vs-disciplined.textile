@@ -1,0 +1,101 @@
+---
+layout: post
+title: !binary |-
+  QWdpbGUgVnMgRGlzY2lwbGluZWQK
+enki_id: 4465
+---
+This afternoon, I was driving home listening to an audio copy of The Art of
+Happiness ( <a
+href="http://search.barnesandnoble.com/textbooks/booksearch/isbnInquiry.asp?userid=2TLSUZ2VRE&isbn=1573221112&TXT=Y&itm=1">search.barnesandnoble.com/textbooks/booksearch/isbnInquiry.asp?userid=2TLSUZ2VRE&isbn=1573221112&TXT=Y&itm=1</a>
+) by Howard C. Cutler and The Dalai Lama. Somewhere near the beginning of
+the book (I don&#8217;t know the page number offhand, since I was listening
+to it in the car), I had one of those don&#8217;t-forget-this kinds of
+thoughts. Cutler was talking about one of his first meetings with the Dalai
+Lama. Being a psychiatrist, he explained some of the problems he&#8217;s
+faced in his daily work and asked the Dalai Lama for his views on what
+might have been causing the sufferers to go through the things they were
+going through. After a brief period of deep thought, followed by laughter,
+the Dalai Lama shocked Cutler with the answer: &quot;I don&#8217;t
+know&quot;.
+
+<p>
+The Dalai Lama, who has spent his entire life in disciplined pursuit of
+happiness, doesn&#8217;t spend his time trying to figure out what makes
+people tick. Our minds are too complex, he says, to fully understand how
+they work. Instead, Buddhism advocates a simple approach to get you going
+in the right direction and a conceptual framework to help you stay on
+track. At it&#8217;s core, that is in fact all Buddhism is.
+</p>
+<p>
+The don&#8217;t-forget-this-thought was my realization that a lot of the
+power in Buddhist philosophy (for me, at least) is fueled by its
+simplicity. And, its simplicity is driven by its goal-oriented nature.
+Western science confronts complexity head-on by whipping out the
+intellectual scalpel and trying to decompose it from the top down. Buddhist
+thought, on the other hand, acknowledges complexity and focuses not on
+decomposing it but on finding a few things that work and moving forward.
+There&#8217;s a heavy focus in Buddhism on how to adapt and learn how to be
+happy versus understanding how the mind works and creating a
+one-size-fits-all recipe for happiness. This goal-orientedness is what
+drives the Dalai Lama to always speak of &quot;Happiness vs.
+Suffering&quot; and not &quot;Happiness vs. Unhappiness&quot;. It has
+always sounded strange to my western ears, like a word that rhymes with
+itself. But, &quot;suffering&quot; is something that exists that we can
+avoid. &quot;Unhappiness&quot; isn&#8217;t as actionable.
+</p>
+<p>
+Thinking of it this way, I recognized a connection that I knew existed and
+I&#8217;ve been fishing for lately. Extreme Programming, with its four core
+values and 12 core practices (<a
+href="http://c2.com/cgi/wiki?ExtremeProgrammingRoadmap">c2.com/cgi/wiki?ExtremeProgrammingRoadmap</a>)
+is in some loose ways reminiscent of Buddhism and its Four Noble Truths
+leading to the Eight-Fold Path (<a
+href="http://www.buddhanet.net/4noble.htm">www.buddhanet.net/4noble.htm</a>).
+In both cases, the four antecedents lead to a slightly longer subsequent
+list of practices. And, both present simple, adaptive approaches to dealing
+with complex problems (though comparing the complexity of software
+development and the pursuit of happiness is admittedly a bit far fetched).
+</p>
+<p>
+As I drove down the freeway listening to the Dalai Lama&#8217;s reaction to
+Cutler&#8217;s Western-centric questions, I was reminded of Kent
+Beck&#8217;s driving analogy from Extreme Programming Explained ( <a
+href="http://search.barnesandnoble.com/textbooks/booksearch/isbnInquiry.asp?userid=35062ST2KB&isbn=0201616416&TXT=Y&itm=1">search.barnesandnoble.com/textbooks/booksearch/isbnInquiry.asp?userid=35062ST2KB&isbn=0201616416&TXT=Y&itm=1</a>
+). XP, he says, is like driving a car. You don&#8217;t line up the wheel
+and step on the gas until you reach your destination. You don&#8217;t even
+do that to travel in a straight line&#8212;the roads aren&#8217;t that
+perfect. They can&#8217;t be predicted. Instead, you learn a few guiding
+principles of driving and use them to adapt your way to your destination.
+You&#8217;re always steering. This is core to both Buddhism and Extreme
+Programming.
+</p>
+<p>
+When I got home, I fired up my news aggregator and saw Keith Ray&#8217;s
+post ( <a
+href="http://homepage.mac.com/keithray/blog/2003/07/07/">homepage.mac.com/keithray/blog/2003/07/07/</a>
+), &quot;These are not opposites&quot;. Keith pulls together several
+sources discussing the meaning of &quot;agile&quot; and whether or not it
+should be considered opposite to &quot;disciplined&quot; (another example
+of the effect of the intellectual scalpel). For some reason, especially
+with XP (maybe it&#8217;s the name?), outside observers get the impression
+that agile processes advocate a loose-cannon approach to development.
+</p>
+<p>
+It just so happens that Buddhism suffers the same misconception. Buddhism
+is often dismissed as being nihilistic and self-centered. If it&#8217;s all
+about being happy, we can just do what we want, right? (If there&#8217;s no
+upfront design, then there&#8217;s <b>no</b> design, right?)
+</p>
+<p>
+Toward their end goals, Buddhism and Extreme Programming are both extremely
+rigorous disciplines. To say that either is an anti-discipline demonstrates
+a fundamental lack of understanding. They are both adaptive. They are both
+evolutionary. And, they are both more concerned with providing a loose
+framework for things we <b>know</b> will work than with decomposing the
+problem domain into a scientific formula.
+</p>
+<p>
+So, the ultimate problem isn&#8217;t &quot;discipline&quot; versus
+&quot;anarchy&quot;. It&#8217;s &quot;adaptive&quot; versus
+&quot;predictive&quot; and the misconceptions that each of these imply.
+</p>

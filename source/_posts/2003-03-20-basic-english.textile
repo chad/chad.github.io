@@ -1,0 +1,34 @@
+---
+layout: post
+title: !binary |-
+  QmFzaWMgRW5nbGlzaA==
+enki_id: 4435
+---
+Following a thread from the previous post (/<a
+href="index.cgi/Travel/Europe/Miro.rdoc,v">Travel/Europe/Miro</a>), I just
+stumbled across Basic English (<a
+href="http://ogden.basic-english.org/basiceng.html">ogden.basic-english.org/basiceng.html</a>).
+Basic English is an attempt to deobfuscate the English language, primarily
+by reducing its vocabulary from the tens of thousands present in standard
+English to 850.
+
+<p>
+Basic English is a subset of English, complete with its grammatical
+exceptions and ambiguities. I wonder how much munging it would take to make
+an easily computer-parsable English. How strange would English have to look
+(to a human) for a computer to be able to understand it as well? I would
+really like to be able to search for articles on the web that contain, for
+example, negative opinions about a specific topic. Or how about: &quot;All
+pages which contradict the statement the following assertion&#8230;&quot;
+(followed by some English text which states something as fact). I&#8217;ve
+been thinking a lot lately about how to make this sort of things possible
+with standard English, but if English were disambiguously computer
+parsable, it would be simple.
+</p>
+<p>
+The fact that Lojban (<a href="http://www.lojban.org">www.lojban.org</a>)
+is computer parsable (<a
+href="http://www.lojban.org/resources/tools.html">www.lojban.org/resources/tools.html</a>)
+has always excited me, but I&#8217;m afraid that if I wrote my web posts in
+Lojban, nobody would read them.
+</p>

@@ -1,0 +1,12 @@
+---
+layout: post
+title: !binary |-
+  Rml0
+enki_id: 4526
+---
+
+Having been out of the <a href="http://www.xprogramming.com">XP</a> fray for some time, I just stumbled across <a href="http://fit.c2.com">Fit</a>.  It has always bothered me that almost all of the XP practices are very prescriptive in nature, but nobody seems to have anything useful to say about <a href="http://www.c2.com/cgi/wiki?AcceptanceTests">Acceptance Tests</a>.  While the dogmatists argue about what to call it (<a href="http://fit.c2.com/wiki.cgi?CoachingTests">1</a>,<a href="http://www.c2.com/cgi/wiki?AcceptanceTest">2</a>,<a href="http://www.c2.com/cgi/wiki?CustomerTest">3</a>) it's nice to see that someone has also been trying to do something to come up with a generalized solution.
+<P>
+I'm not sure they're there yet, but there are some things about this that really appeal to me.  Perhaps most notably is the fact that they are using a document as the data source for a test suite.  While you document a requirement, you're also coding an automated test suite for the requirement.  I've always liked the idea of "executable requirements", though it lives in my (and others') mind as an ideal, and I have yet to see it really implemented.  Unfortunately, it looks like you still have to write actual code to accompany each set of test cases you create, but I'll consider the jury to be out until I see <a href="http://www.pragprog.com/pragdave">Dave's</a> Ruby version.  I haven't thought too much about it yet, but deep inside I want to believe that there is a way to create a framework that would enable this kind of thing with no coding required.
+<P>
+At any rate, I'm glad to see some movement in this area.  And it's got me thinking a lot about other opportunities for executable documentation.

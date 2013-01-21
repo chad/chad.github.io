@@ -1,0 +1,18 @@
+---
+layout: post
+title: !binary |-
+  QWR2YW5jZWQgUmFpbHMgU3R1ZGlv
+enki_id: 4599
+---
+Early in my career, I worked as a computer support person in the IT department of a state university.  There was a batch of us that came in at the same time.  We all started at the help desk, worked our way into doing service calls around campus, and eventually graduated to back-room system administration or programming.  
+
+After you graduated into the back room, the next step was to get a _real_ job.  I mean, the university job was fun, but the pay wasn't so great.  Especially if you started as a help desk person.  Minimum wage is a bad starting point to get increments from as a computer professional.  So, for that reason, back in the back room it was pretty common to hear colleagues on phone interviews.
+
+A close friend of mine had a particularly funny interview that a few of us heard his end of.  It went something like this:
+
+"I haven't used Windows NT _Advanced_ Server, because there's no such thing.  I've done _advanced things_ with NT Server."  He said it snottily.  Still sore from sitting at the help desk helping users with their "FTP" problems, he found it difficult to hide his distaste for ignorance.  The problem is, there actually _was_ such a thing as Windows NT Advanced Server.  He just hadn't heard of it.  Before he finished the interview, another friend went into his cubicle, retrieved a copy of Windows NT Advanced Server, and place it on his desk.
+
+This brings us to the point of this post.  Yesterday, registration for Pragmatic Studio's March "Advanced Rails Studio":http://pragmaticstudio.com/railsadvanced/index.html in Chicago has opened.  So far this year, we've only got one of these on the schedule, and they tend to sell out fast.  Mike, Dave, and I are proud of what we've put together for this class.  We did the first one back in the fall and got great reviews from the attendees.  It was a joy to teach and (we think) a joy to attend.
+
+Just to be clear, being pretty close to what's happening in the Rails world, I can confidently tell you that there's no such product or piece of software as "Advanced Rails".  But we've done _advanced things_ with Rails, and we're going to show you how. :)
+

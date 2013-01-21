@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  Q0lPcyBXYW50IEVtcGxveWVlcyBXaXRoIEJ1c2luZXNzIFNraWxscwo=
+enki_id: 4571
+---
+(via <a
+href="http://weblogs.java.net/blog/editors/archives/2005/09/why_dont_you_ge.html">java.net</a>)
+According to a new survey by the <a href="http://www.simnet.org/">Society
+for Information Management</a>, <em>business</em> leaders in IT want
+employees who have <em>business</em> skills. Shocking, I know.
+
+<pre>
+        &quot;These weren't interviews with business managers or HR, these were the
+        CIOs themselves, and so it's very interesting that they are putting
+        such a high value on skills to help their business rather than just
+        hiring the most technical person they can find&quot;, Kaiser said.
+</pre>
+<p>
+Very interesting? What is the purpose of an employee if not to help the
+business that employs them?
+</p>

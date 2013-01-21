@@ -1,0 +1,36 @@
+---
+layout: post
+title: !binary |-
+  QW5ub3VuY2luZyBSYWlsc0NvbmYgMjAwNgo=
+enki_id: 4513
+---
+We at <a href="http://www.rubycentral.org">Ruby Central, Inc.</a> are proud
+to present the <a href="http://railsconf.org/">First International Rails
+Conference</a>.
+
+<p>
+The conference will be held June 22-25, 2006 in Chicago. We&#8217;ll have
+keynotes including <a href="http://www.loudthinking.com">David Heinemeier
+Hansson</a> and <a href="http://www.pragmaticprogrammer.com">Dave
+Thomas</a>. There will be additional keynotes announced later. You
+won&#8217;t want to miss it. <a
+href="http://railsconf.org/articles/2005/11/24/announcing-railsconf-2006">Head
+on over</a> and read the full announcement for the rest of the details we
+have now. Be sure to <a
+href="http://railsconf.org/xml/rss/feed.xml">subscribe to the RSS feed</a>
+so you don&#8217;t miss anything.
+</p>
+<p>
+We&#8217;ve learned a lot over the past five years doing <a
+href="http://www.rubyconf.org">The International Ruby Conference</a>, and
+we&#8217;re expecting this conference to represent both the best of what
+RubyConf has been as well as an opportunity to try some new and potentially
+radical ideas. We&#8217;ve already got some ideas brewing, but we&#8217;d
+also like to <a
+href="http://wiki.rubyonrails.org/rails/pages/RailsConfIdeas">hear from
+you</a>!
+</p>
+<p>
+(Thanks to <a href="http://conio.net">Sam Stephenson</a> for the beautiful
+RailsConf web design!)
+</p>

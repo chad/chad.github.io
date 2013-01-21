@@ -1,0 +1,31 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFVuZXhwZWN0ZWQgQ29uc2VxdWVuY2VzIG9mIENvbnN1bWVyaXNt
+enki_id: 4687
+---
+I'm reading "Vagabonding: An Uncommon Guide to the Art of Long-Term World Travel":http://www.amazon.com/Vagabonding-Uncommon-Guide-Long-Term-Travel/dp/0812992180/ref=sr_1_1?ie=UTF8&s=books&qid=1244506800&sr=8-1 by Rolf Potts. I'm only a quarter of the way through it and it's already worth the price. In the third chapter, Rolf talks about the American reaction to the "Exxon Valdez oil spill":http://en.wikipedia.org/wiki/Exxon_Valdez_oil_spill in the late 80s. The nation suddenly became, on the average, much more environmentally minded. So what did we do? We bought "environmental" products. Recycled products, energy-efficient this-or-that, health food, etc. What did we _not_ do? Actually change our behavior.
+
+Here's a quote from page 29:
+
+  The more our life options get paraded around as consumer options, the more we forget that there's a difference between the two.
+
+When I read this I recognized a pattern in myself and many people (everyone?) I know:
+
+* You want to lose weight, get excited and buy a bunch of books, magazines, DVDs, etc. on weight loss. Join a fitness site where you can log calories and workouts. Buy a book about a diet with an enticing name.
+* Want to learn a new technology? Get a bunch of books, sign up for a mailing list.
+* Train for a triathlon? Tons of triathlon books, a bicycle, funny triathlon clothes, triathlete magazine, etc.
+* Want to learn a (human) language? Buy some software and books, music, movies.
+* Want to learn an instrument? Books, an instrument, a case for the instrument, various accessories.
+* Get more organized? Productivity books, a PDA, PIM software.
+
+
+I do this all the time. I decide I'm going to do something challenging, and my first step is to load up on _stuff_ related to whatever it is I want to do. My second step is to continue to load up on stuff related to the topic. And so on.
+
+Why do we do this? Because we know that we're staring in the face of something that's both very important and very scary. We want to feel like we're doing something about whatever goal it is we have in mind. And the easiest way to feel like we're doing something is to buy stuff.
+
+What's upsetting is to realize that in my case, simply buying the stuff is all I typically need to get enough of the feeling that I'm "dong something" to be satisfied.  The end result? I'm fat, I still can't program in Haskell worth a damn, I haven't run the triathlon, I don't know Spanish, I can't play accordion very well, and I'm totally unorganized.
+
+Experiment: next time a really important goal comes along, I'm not allowed to do  _any_ discretionary spending related to that goal. 
+
+My hypothesis is that unfunded life goals stand a better chance of being met.

@@ -1,0 +1,19 @@
+---
+layout: post
+title: !binary |-
+  VGhlIGpveXMgb2Ygdm9sdW50ZWVyaXNt
+enki_id: 4612
+---
+Running a nonprofit is hard work.  But it's all worth it when you get votes of confidence like the following email I received today from "Mark Morton":mailto:daneel.olivaw.3000@gmail.com:
+
+  Forgive me if I have contacted the wrong person...this message is for whoever is running rubycentral.org 
+  (which   is currently down).
+  
+  You say RubyCentral is a "a growing web resource for everything to do with the Ruby language", yet all I find are   
+  a few tired articles dated from 2000?  Is this the same RubyCentral that is co-sponsoring RubyConf Europe 
+  2007? (I hope not!) Nothing about the conference here?  Your FAQ link is broken, as is your feedback SEND 
+  button on the Links page.  Sheesh!
+  
+  If the above is true, it seems to me that RubyCentral is more of an _embarrassment_ to the Ruby community.    
+  Please get your act together, if only for the sake of the language.
+

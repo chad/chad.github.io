@@ -1,0 +1,14 @@
+---
+layout: post
+title: !binary |-
+  QmFjayBGcm9tIERlbGhpIGFuZCBBZ3JhDQ==
+enki_id: 4443
+---
+
+We just finished our last trip up North before we pack up and go home to Louisville.  We flew with Walter and Mary Ellen to
+Delhi, and then drove to Agra to see the Taj Mahal.  The first day in Agra, the Taj was closed.  So, we decided to
+take a walk through the neighborhoods surrounding the monument.  We made a lot of new friends.
+<p>
+<img src="/images/ChadAndKids.jpg">
+<br>
+<img src="/images/KellyMEChadWalterAtTaj.jpg">

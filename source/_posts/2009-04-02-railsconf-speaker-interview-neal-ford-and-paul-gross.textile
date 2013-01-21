@@ -1,0 +1,52 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIFNwZWFrZXIgSW50ZXJ2aWV3OiBOZWFsIEZvcmQgYW5kIFBh
+  dWwgR3Jvc3M=
+enki_id: 4680
+---
+Continuing my "series of RailsConf Speaker Interviews":http://chadfowler.com/railsconf-speaker-interviews we have "Neal Ford":http://www.nealford.com/ and "Paul Gross":http://www.pgrs.net/ of "ThoughtWorks":http://thoughtworks.com. 
+
+Neal and Paul have been working on some _huge_ Rails applications at ThoughtWorks and will be talking about how they do it in the session, "Rails in the Large:How We're Developing the Largest Rails Project in the World":http://en.oreilly.com/rails2009/public/schedule/detail/8706, at RailsConf.
+
+h2. The conventional wisdom these days among the Rails community is that for small projects, Rails beats established technologies such as Java Enterprise Edition whereas for large projects that need to scale, the established technologies scale better in most ways. How different are the problems you face on a massive project in Java versus Rails?
+
++Neal+: I think the opposite is true: Java is good for small applications and Ruby is better for large, strategic projects. For small Java projects, there are tons of libraries and frameworks available to kick-start the project. The inherent limitations of Java don't bite you as much because you're building a small, simple thing. For large projects, you need a powerful language that doesn't get in your way at every turn, and you need a framework that allows graceful extension. In fact, for large projects like this, the purposefully leaky abstraction of AciveRecord allows for smarter tuning.
+
+If you pull the string on the back of my neck, I'll say "Scaling is hard" -- no matter what technology you choose. For our current project, we would be able to get better raw execution speed from using Java, but that's only a small part of what needs to happen to build scalable systems. Lots of things go into building scalable systems, they are just different things depending on technology.
+
++Paul+: I actually think Rails is better for both small and large projects. It is incredibly easy to spin up a small Rails project and get going. We have had teams release Rails sites into production in only a couple of weeks. On the other end of the spectrum, the flexibility of Ruby and Rails means that the framework stays out of your way. When Rails is doing something that we don't want, we can easily extend to get new behavior. For example, we work around ActiveRecord to write better SQL, we work around the MVC pattern to write Presenters when the display logic is sufficiently complex, and we even wrote our test runner to distribute work to make our test suites faster.
+
+In general, however, many of the problems are the same on a massive project, regardless of Java or Rails. For example, we have to constantly strive to keep build times low, database performance high, and consistent patterns throughout the codebase with 20 developers hacking away.
+
+h2. Thoughtworks has been doing Rails consulting for just about as long as Rails consulting has been an option. How has the landscape changed? Are the sorts of companies that are interested in Rails changing from what they were back then? Are the types of projects changing?
+
++Neal+: When we first started recommending Rails to clients, we had to bring it up. Now, we have companies that ask us to do Rails projects. As for the types of companies, it's all over the map: trading firms, auction sites, insurance, even a touch-screen jukebox! I don't think that the type of company makes any difference, it's their attitude about their software development. Companies that view software as an important strategic advantage tend to be closer to the cutting edge, and are more tolerant of innovative solutions. Companies that view software as purely overhead always stick with the status quo.
+
+As an example of this, we have one client who created a "standard" Java-based stack for all their software. After spending 1.1 million dollars building a huge Portlet, EJB, Spring, Hibernate, Cocoon, XSLT, etc. application to service 5 users, they realized the unsustainability of that model. That company has since changed their "standard": all applications must be written in Rails unless suitable justification exists for a different solution.
+
++Paul+: Ditto Neal.
+
+h2. What sorts of Web projects would you not want to do in Rails?
+
++Neal+:It depends (hey, I'm a consultant!). Really crazily scalable sites (ala Amazon) would be difficult to build in Rails; a lot of attention would have to be paid to lots of things to get it right. We have chosen not to use Rails on some projects where it was on the table, but it was for sites like media sites, with huge numbers of concurrent users, streaming media, and other characteristics. We try hard to ThoughtWorks to not become religious about tools. Some tools are better suited to some jobs.
+
+However, having said this, based on my experience on multiple Rails projects, I have expanded my ideas on where it would be suitable. I'm quite impressed at how linearly Rails can scale up to large-scale projects, as long as you have technical leadership that knows that they are doing.
+
++Paul+: For me, the biggest factor against Rails would be the corporate environment. If the company has a policy that everything must be deployed on IIS and use MS SQL Server, perhaps Rails isn't the best choice. If the company has teams of Java developers who aren't willing to learn a new language, it is probably best to stick with Java.
+
+h2. How important is testing on a huge project?
+
++Neal+: Beyond measure. The only way our code base maintains sanity is through rigorous testing. In fact, this project has spawned several open source testing tools in the Rails community: dust, Selenium Grid, and deep test. Testing is ultra important, and the tech leads on this project have created a really nice workflow around tests. We want unit tests to run really fast, so we use dust and forbid database access during unit tests (we use mocks instead). For functional tests, we enforce the rule that tests do hit the database and you can't mock anything. For a long time, all the pairs on this project were using Mac Minis, which are underpowered for running lots of tests, which spawned the birth of Deep Test. Deep Test allows you to spawn multiple remote threads to run functional tests. Because our functional tests run inside of a transaction, all our tests are completely orthogonal to one another. When the functional tests start, it spawns multiple processes on several BAMs (Bad-ass Machines) to run the tests. Recently, the whole project was upgraded to 8-core Mac Pros, and we switched Deep Test to use the local processors. Instead of taxing one processor, it pegs all 8, running the entire suite of tests in about 6 minutes.
+
+You have to have testing on all code bases. Period. But it's even more important in dynamic languages, and especially as you scale up the size of the code base. Insanity would ensue if this code base had no tests; it would collapse in a matter of weeks of trying to maintain it.
+
++Paul+: In addition to what Neal said, we use tests to enforce processes that would be forgotten otherwise. For example, if someone forgets to add a translation to a set of files, we have a test that will fail. If someone accidentally creates some bad HTML, we have a test that will fail. Furthermore, on a large team with a large codebase, developers come across code on a daily basis that they know nothing about. Tests act a description of what the code should do and why. It's a living piece of documentation.
+
+h2. Rails is built on the strong foundation of Convention over Configuration. That to me is the real innovation of Rails. We know it works for small to medium sized projects. Do the opinions of Rails scale?
+
++Neal+: Convention over configuration is one of the "obvious in hindsight" features in Rails that has really impacted the whole industry. How many frameworks now brag about this feature? In the Java world, we went down kind of a bad path for a while, where we came just short of building configuration entries for what planet the code was written on. We still use convention over configuration heavily, and not just the Rails version. As much as possible, we try to create everything with sensible, overridable defaults. I don't really see any end to how much this particular aspect of Rails will scale.
+
++Paul+: The obvious answer is sometimes :). One of the great things about Rails is that when the opinions do not scale, they are easily worked around. We can use plugins and gems to radically alter the behavior of Rails, or just do it ourselves.
+
+For example, one opinion of Rails is that all tests hit the database. This opinion does not scale well to the size of our test suite, so we use gems like UnitRecord to cut off the database for unit testing. Another opinion of Rails is to split up tests by models/controllers/etc. We wanted a further split of test type (unit/functional/externals/acceptance). To accomplish this, we simply made our own test folder hierarchy and reworked the standard rake tasks. It was not difficult.

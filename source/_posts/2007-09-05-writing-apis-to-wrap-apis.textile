@@ -1,0 +1,83 @@
+---
+layout: post
+title: !binary |-
+  V3JpdGluZyBBUElzIHRvIFdyYXAgQVBJcw==
+enki_id: 4630
+---
+In the comment thread of a "previous post":http://chadfowler.com/2007/8/12/ruby-hoedowned#comments on this site, "Chris Taggart":http://pushrod.wordpress.com/ made an interesting criticism of my "Facebooker":http://facebooker.rubyforge.org Facebook API.  It seems that, on a high level review of the code, he found it to be well-craft and well-tested.  His criticism was that, unlike in "RFacebook":http://rfacebook.rubyforge.org, I chose to implement a concrete set of Ruby classes to abstract the underlying workings of the Facebook XML API away from Facebooker's users.  RFacebook, on the other hands, employs a trick using Ruby's method_missing, to catch undefined method calls and to transform those method calls into HTTP posts which conform to Facebook's HTTP/XML endpoints.  Here's what an RFacebook call might look like (from the RFacebook Web site):
+
+	
+	friendUIDs = fbsession.friends_get.uid_list
+
+
+	friendNames = []
+	friendsInfo = fbsession.users_getInfo(:uids => friendUIDs, :fields => ["first_name", "last_name"])
+	friendsInfo.user_list.each do |userInfo|
+		friendNames << userInfo.first_name + " " + userInfo.last_name
+	end
+
+This results in two Facebook XML API calls.  The two method calls on the fbsession object are undefined, so fbsession converts them to HTTP posts to the Facebook XML API methods called "facebook.friends.get" and "facebook.users.getInfo" respectively.  Furthermore, when "uid_list", "user_list", "first_name", and "last_name" are called, RFacebook again employs a method_missing trick to generate an XPath expression searching for the requested data in an HPricot DOM.
+
+Here's the equivalent Facebooker code:
+
+  friend_names = session.user.friends!(:first_name, :last_name).map do |friend|
+    "#{friend.first_name} #{friend.last_name}"
+  end
+
+In this code, the same API calls happen as in the RFacebook example, only we don't _explicitly_ invoke them.
+
+Chris's (albeit tentative) concern was that, since Facebooker implements objects and their methods as first-class Ruby constructs, the API would somehow be more brittle and less resilient to potential future Facebook XML API changes.
+
+I found it especially interesting that Chris chose this as his only point of criticism, since RFacebook's method_missing trick and return of an HPricot XML parser object from each API call were two of the key reasons we decided to scrap RFacebook after writing an application with it and implement our own Facebook wrapper library.
+
+h1. Why write concrete wrapper code?
+
+As I started to formulate a response, instead of taking my own motivations for granted, I decided to take some time to question my own assumptions.  This all led me to question (and to answer for myself) why we write this sort of wrapper library to begin with.  What follows are my answers.
+
+h2. Brittle?
+
+Perhaps the primary reason for building a concrete layer on top of a low-level API like Facebook's is to make the code which uses it _less_ brittle.  The scenario Chris was concerned with was that Facebook might change their API, requiring Facebooker to be changed to match it.  My point exactly, Chris.  If Facebooker didn't hide the implementation details of the XML API from its end-users, a change in the XML API would require every application which _uses_ Facebooker to change.  Magic missing method calls would have to be renamed or changed.  If "facebook.users.getInfo" were to be changed to "facebook.user_info", the calls to "session.users_getInfo()" would need to be changed to "session.user_info()".  
+
+Sure, you could hack the API so that "users_getInfo()" and its parameters were munged into Facebook's hypothetical new format, but then our API would _pretend_ to be low-level and direct, which would lead to some opaque application code.
+
+h2. Consistent level of abstraction
+
+When I'm writing a Rails application controller or the controller for a desktop application (both of which I have been doing with Facebooker), I want to think in terms of the domain I'm modeling.  In a Rails application, it's commonly accepted that "fat models and skinny controllers":http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model lead to well-factored, expressive, and maintainable code.
+
+This is partially because, in the controller layer of an application like this, the code's job is to (as "Marcel Molina":http://marcelmolina.com said to me recently) codify a dialogue between the domain objects in a system.  In other words, when you're developing an application about users, their friends, their affiliations, and the groups they belong to, the controller should deal with _those_ concepts.  It doesn't make sense to deal with, say, a user, a database connection, the user's friends, their XML representation, a shared photo album, and HTTP connectivity issues all in the same code.  
+
+My brain doesn't want to jumble all of that together.  When I'm trying to look at XML parsing code, domain logic gets in the way.  When I'm trying to see how users and their friends interact, XPath is line noise.
+
+Kent Beck refers to this in his "Smalltalk Best Practice Patterns":http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X as a guiding principle of good API design, specifically having to do with how to decompose your code into methods.  His rule of thumb is that one way you know it's time to create a new method is when the code in one method mixes two or more levels of abstraction.
+
+h2. Testability
+
+By abstracting the implementation details of XML and HTTP away from the high level of the API, code becomes more testable.  In this case, it's true for Facebooker itself, but more importantly, the applications that _use_ Facebooker are more testable with a layer of abstraction between them and the XML and HTTP calls which are going on under the covers.
+
+When you're trying to test a Rails action, it's much easier to create a User object and set its attributes (first_name, last_name, etc.) than to generate a DOM of sample data.  Sure, Ruby being as dynamic as it is, you could create a stub at runtime and forego dealing with the library's implementation of User altogether.  But you shouldn't have to.
+
+h2. Idiomatic consistency
+
+It may seem like a nitpick, but as a Ruby programmer I want to use APIs that look like Ruby code.  "fbsession.users_getInfo()" looks like PHP code to my eyes.  It's no surprise.  Facebook is written in PHP, and its HTTP/XML API was designed by the same PHP programmers that created Facebook.  Wrapping the Facebook API allows me to isolate and hide the PHP idioms, such that the code I _use_ reads like "normal" Ruby code.  You could argue that this is not a technical issue, and you'd be right.  But I believe in the power of both consonance and dissonance in software development.  Dissonant code stands out and alerts the reader that something strange and exceptional is taking place.  Sometimes that strange and exceptional thing is just bad code.  Sometimes it's an unusual technique that should be highlighted.
+
+When I see non-idiomatic Ruby code, it tells me one of two things.  The first assumption I make is that whoever wrote the code is not a Ruby programmer.  That's usually the case.  The second is that the programmer is employing a new or unusual technique to accomplish something which is difficult to do without that technique.
+
+Having implemented a wrapper for the Facebook API, I don't think there's a need for dissonance.  There's nothing difficult or unusual going on at any level of Facebooker, so it stands to reason that there should be no dissonant section of the library and that it should all read as idiomatic Ruby code.
+
+h2. Debugging Magical Incantations is Hard
+
+I love the tricks you can do with Ruby.  method_missing, const_missing, autoloading, and their friends make really powerful things possible.
+
+But they do so at a price.  When something goes wrong in a piece of code that relies heavily on one of these tricks, it can be much much harder to track down.  So the decision to use such a tool shouldn't be taken lightly.  These are power tools.  Used effectively, really cool things can happen. Used incorrectly, you can easily find yourself limb-less and bloody.  So when you decide to use one of these power tools, you have to ask yourself: is it worth the risk?
+
+
+h2. Concrete/Abstract Balance
+
+Where possible, especially in a library already dealing with something abstract and out of our control (e.g. someone else's XML API running on their own HTTP servers of which we have no direct visibility), explicit and concrete are much better attributes than abstract and fuzzy.  If you run into a problem or question with part of a library for which you have the source code, explicit method definitions and concrete APIs under the covers are much easier to navigate than parsed method names magically constructing arguments to HTTP posts.
+
+In general, if you're dealing with code which is out of your control, implicit and hidden from view, it's helpful if the code which surrounds it balances the abstractness with a nice concrete anchor. 
+
+h1. [115, 117, 109, 109, 97, 114, 121].map{|c| c.chr}.join
+
+This is a summary of many of the usually-abstract ideas that go through my head when I'm creating APIs that wrap other APIs.  I've been designing wrapper APIs like this for ages, so it's been helpful for me to convert intuition into a set of hints.  I hope these ideas are helpful to others.  If nothing else, if you ever have to use an API I've written, you'll at least know why it's written the way it is.
+

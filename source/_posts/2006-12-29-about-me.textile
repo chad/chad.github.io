@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  QWJvdXQgTWU=
+enki_id: 4590
+---
+<a href='http://farm1.static.flickr.com/72/173637866_78e981fa58.jpg?v=0' rel='lightbox' title='Me speaking at RailsConf 2006.  Photo by Dave Thomas' class='float-right'><img  width='200' src='http://farm1.static.flickr.com/72/173637866_78e981fa58.jpg?v=0'/></a>
+
+<p>Chad Fowler has been a software developer and manager for some of the world's largest corporations. He recently lived and worked in India, setting up and leading an offshore software development center. He is co-founder of <a href="http://rubycentral.org">Ruby Central, Inc.</a>, a non-profit corporation responsible for the annual <a href="http://rubyconf.org">International Ruby Conference</a> and <a href="http://railsconf.org">The International Rails Conference</a>, and is a leading contributor in the Ruby community.  
+</p>
+<p>
+Chad is a contributor and editor for numerous books and is author of <a href="http://pragmaticprogrammer.com/titles/mjwti/index.html">My Job Went to India (and all I got was this lousy book): 52 Ways to Save Your Job</a>, <a href="http://www.pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a> and the upcoming <a href="http://www.pragmaticprogrammer.com/titles/fr_arr/">Advanced Rails Recipes</a>.
+</p>

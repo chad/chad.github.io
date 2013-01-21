@@ -1,0 +1,92 @@
+---
+layout: post
+title: !binary |-
+  Q2VsZWJyYXRpbmcgNTAwMCBkb3dubG9hZHMgb2YgUnVieUdlbXM=
+enki_id: 4474
+---
+<h3>The Stats</h3>
+111 unique libraries <a href="http://gems.rubyforge.org/gems">available as
+gems</a>
+
+<p>
+249 unique library releases
+</p>
+<p>
+5000 plus downloads of <a href="http://rubygems.rubyforge.org">RubyGems</a>
+</p>
+<p>
+20688 <a href="http://gems.rubyforge.org/stats.html">downloads</a> of gem
+libraries
+</p>
+<hr size="2"></hr><h3>Learn about it</h3>
+<p>
+<a href="http://www.pragmaticprogrammer.com/titles/ruby/gems.pdf">RubyGems
+chapter</a> in <a
+href="http://pragmaticprogrammer.com/titles/ruby/">Programming Ruby</a> (<a
+href="http://books.slashdot.org/books/04/10/13/1843240.shtml?tid=156&tid=6">slashdotted</a>
+today)
+</p>
+<p>
+Jim Weirich&#8217;s <a
+href="http://onestepback.org/articles/rubygemsfacets/">RubyGems
+presentation</a> from <a href="http://rubycentral.org">RubyConf 2004</a>
+((<a href="http://www.chadfowler.com/12-RubyGems.mp3">Listen in mp3!</a>))
+</p>
+<hr size="2"></hr><h3>Help us celebrate!</h3>
+<p>
+Let&#8217;s make those numbers up there get bigger (especially the first
+one)!
+</p>
+<ol>
+<li><a href="http://rubyforge.org/frs/?group_id=126">Go get RubyGems 0.8.1</a>
+if you don&#8217;t already have it.
+
+</li>
+<li>Pick a library that you either created or really like
+
+</li>
+<li>Check to see if there is a gem already available for it (gem search -r
+libraryname)
+
+</li>
+<li>If yes, goto 1.
+
+</li>
+<li>Read the <a
+href="http://www.pragmaticprogrammer.com/titles/ruby/gems.pdf">RubyGems
+chapter</a> in Programming Ruby.
+
+</li>
+<li>Create a gemspec (or a <a
+href="http://rubygems.rubyforge.org/wiki/wiki.pl?CreateAGemUsingRake">Rakefile</a>)
+and build the gem.
+
+</li>
+<li>If this is not your library, send the gemspec/rakefile to the author and
+ask them to add it to their build process.
+
+</li>
+<li>If this is your library, add the gemspec/rakefile to your build process.
+
+</li>
+<li>If you have a <a href="http://rubyforge.org">RubyForge</a> project for this
+library, release the gem, and it will be automatically available via remote
+install (gem install mywonderfullibrary)
+
+</li>
+<li>If you don&#8217;t have a RubyForge project, email me (chad at
+chadfowler.com) and I&#8217;ll make sure the gem gets added for you.
+
+</li>
+</ol>
+<p>
+If you need help, email me or find me on irc (#ruby-lang,#rubyonrails on
+irc.freenode.net) or on AIM (cefogc). I may be busy when you initially
+contact me, but trust that I&#8217;ll be happy to hear from you.
+</p>
+<p>
+Imagine when the number 111 from above becomes 1111 and virtually any Ruby
+library or application you could think of is installable (with all of its
+dependencies) with a single command. How fast can we make that happen? How
+big a chunk can one person contribute to that goal?
+</p>

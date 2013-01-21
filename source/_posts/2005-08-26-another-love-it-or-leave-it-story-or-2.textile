@@ -1,0 +1,45 @@
+---
+layout: post
+title: !binary |-
+  QW5vdGhlciAiTG92ZSBpdCBvciBMZWF2ZSBJdCIgU3RvcnkgKG9yIDIp
+enki_id: 4581
+---
+As a followup to my <a
+href="http://chadfowler.com/index.cgi/Computing/Career/LoveItOrLeaveIt.rdoc,v">previous
+post</a>, Tim Case has <a
+href="http://karmacrash.com/articles/2005/08/24/love-it-or-leave-it-indeed">posted
+an inspirational story</a> about having the courage to take control of his
+own career as a software developer.
+
+<p>
+Frustrated by the software industry and the job market, Tim (like many
+software developers, I&#8217;d bet) struggled with whether to find a new
+line of work altogether. Here&#8217;s a cliffhanger for you:
+</p>
+<pre>
+  I didn't want to leave because I was learning
+  more about software and each new thing I learned made me want to keep
+  learning more but I also couldn't keep throwing myself into the winds
+  of marketplace expectations.  I gave up on trying to get lucky and find
+  that dream job.
+
+  So what did I do?
+</pre>
+<p>
+He took matters into his own hands. Give it a read.
+</p>
+<p>
+I also stumbled across Kathy Sierra&#8217;s <a
+href="http://headrush.typepad.com/creating_passionate_users/2005/01/you_20.html">You
+2.0</a> post on the always thought-provoking <a
+href="http://headrush.typepad.com/creating_passionate_users">Creating
+Passionate Users</a> weblog.
+</p>
+<p>
+The common theme is that it&#8217;s never too late to take control of your
+destiny. Most people just never realize it&#8217;s even <em>possible</em>.
+</p>
+<p>
+Do you have a similar story? I&#8217;d love to <a
+href="mailto:chad+loveitorleaveit@chadfowler.com">hear about it</a>.
+</p>

@@ -1,0 +1,53 @@
+---
+layout: post
+title: !binary |-
+  Q2hpaHVhaHVhIHdpdGggYSBtZXNzaWFoIGNvbXBsZXgK
+enki_id: 4499
+---
+<pre>
+        I like the dancing.
+        That can only be inferred.
+        Hop to it, sparky.
+</pre>
+Same <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/Ruby/HaikuInTheWild.rdoc,v">lovely
+Haiku</a>, enhanced with <a href="http://google.com">Google</a>, and <a
+href="http://www.ntecs.de/blog/Blog/WWW-Mechanize.rdoc">WWW::Mechanize</a>.
+Searches the internet for the terms you pass in as arguments, and creates a
+Haiku with that as a title. It&#8217;s deep. Really really deep:
+
+<pre>
+        $ ./find_haiku Pretentiousness for the rest of us
+        #&lt;WWW::Link:0x1650964 @href=&quot;
+        http://www.pixeldiva.co.uk/obnoxious-pretentiousness.html&quot;
+        , @node=&lt;a href='http://www.pixeldiva.co.uk/obnoxious-pretentiousness
+        .html'&gt; ... &lt;/&gt;&gt;
+        #&lt;WWW::Link:0x164d228 @href=&quot;http://writersword.com/print.php?sid=5&quot;,
+        @node=&lt;a href='http://writersword.com/print.php?sid=5'&gt; ... &lt;/&gt;&gt;
+        #&lt;WWW::Link:0x1649da8 @href=&quot;http://writersword.com/index.php&quot;,
+        @node=&lt;a href='http://writersword.com/index.php'&gt; ... &lt;/&gt;&gt;
+        #&lt;WWW::Link:0x16468b0 @href=&quot;http://www.tamingingrid.com/domstory.htm&quot;,
+        @node=&lt;ahref='http://www.tamingingrid.com/domstory.htm'&gt; ... &lt;/&gt;&gt;
+        ...
+        Got 23 docs
+        Pretentiousness for the rest of us
+                And so is Pisces.
+                It just is to Capricorn.
+                Ideas abound.
+
+                Easton and Kurt H.
+                We simply need more courage.
+                Don't edit below!
+
+                Life is a big deal.
+                has anybody won yet?
+                Don't edit below!
+</pre>
+<p>
+If you&#8217;re interested in wasting some time, have a look a the <a
+href="http://chadfowler.com/find_haiku">unpolished script</a> that
+generates this stuff.
+</p>
+<p>
+Don&#8217;t ask me why.
+</p>

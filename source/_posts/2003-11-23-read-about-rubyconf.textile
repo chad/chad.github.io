@@ -1,0 +1,19 @@
+---
+layout: post
+title: !binary |-
+  UmVhZCBBYm91dCBSdWJ5Q29uZgo=
+enki_id: 4515
+---
+Jim has posted a nice series of notes about the goings-on at RubyConf: <a
+href="http://onestepback.org/index.cgi/Tech/Conferences/RubyConf2003/">onestepback.org/index.cgi/Tech/Conferences/RubyConf2003/</a>
+
+<p>
+Ryan Davis has kindly hosted this year&#8217;s presentations (as he did
+last year): <a
+href="http://zenspider.com/Languages/Ruby/RubyConf2003.html">zenspider.com/Languages/Ruby/RubyConf2003.html</a>
+</p>
+<p>
+As usual, the worst thing about RubyConf this year was that it had to end.
+Thankfully, the coding continues: <a
+href="http://www.rubyforge.org/projects/rubygems">www.rubyforge.org/projects/rubygems</a>
+</p>

@@ -1,0 +1,53 @@
+---
+layout: post
+title: !binary |-
+  RGVhZC1FbmQgSm9iczogQXJlIFlvdSBTdWZmZXJpbmcgRnJvbSBTdG9ja2hv
+  bG0gU3luZHJvbWU/IA==
+enki_id: 4705
+categories: !binary |-
+  Y2FyZWVyLCBsaWZlLCBzdWNjZXNz
+---
+Have you heard of Stockholm Syndrome? It's a name given to the condition wherein hostages develop positive feelings toward their captors despite being held in negative, unfavorable and even life-threatening conditions.  Victims of Stockholm Syndrome will even inexplicably stay with their captors even when given the chance at freedom.
+
+Hopefully nobody reading this is literally being held hostage right now. If you are, good luck!
+
+For the rest of you, why might I suggest that you are suffering from Stockholm Syndrome? Because employment relationships can manifest themselves in this very way.
+
+In the article, "Love and Stockholm Syndrome: The Mystery of Loving an Abuser":http://drjoecarver.makeswebsites.com/clients/49355/File/love_and_stockholm_syndrome.html, Dr. Joseph Carver says that the following four situations serve as a foundation for the development of Stockholm Syndrome:
+
+&lt;quote&gt;
+
+* The presence of a perceived threat to oneâ€™s physical or psychological survival and the belief that the abuser would carry out the threat.
+* The presence of a perceived small kindness from the abuser to the victim
+* Isolation from perspectives other than those of the abuser
+* The perceived inability to escape the situation
+
+&lt;/quote&gt;
+
+Looking back at my own career (specifically some of the extremely intelligent people I've met who are stagnating in oppressive companies or positions) I have recognized that many of these people (and sometimes myself) have felt "stuck" for no obvious reason. Some people seem just plain crazy when you look at their skill sets, ability, and the low quality of work or environment they're willing to put up with.  
+
+So I contacted Joseph Carver to ask his opinion. Could this be Stockholm Syndrome?  He agreed. In email, he said "SS is most likely to develop when the employee feels trapped, perhaps by a high salary, fear of losing a career, or fear of humiliation."  So let's look at his four conditions:
+
+h2. Perceived threat: 
+
+Getting fired, being humiliated, not being a "top 20%" employee, not getting a raise. Employers wield a lot of perceived power over employees, especially for those in very traditional corporate jobs.  The employer _must_ be willing to carry out the threat. Every business is under the right conditions. It's how businesses work.
+
+h2. Small kindness
+
+Got a Christmas bonus once when you really needed it? Make a competitive salary? Great benefits? Get to work on a technology you don't think you'd be able to work on elsewhere?  There ya go.
+
+h2. Isolation from other perspectives
+
+Again, a big corporate environment is _ripe_ for this kind of isolation.  If you work for BigCo, you learn to do things The BigCo way.  The company's organizational structure becomes a blueprint for your career progression.  You start to lose sight of what industry pay and incentives look like since you have a homogeneous population to compare with. Unfortunately, from what I've seen even the _best_ run companies create this kind of isolation of perspective and group-think. Charismatic leaders are particularly capable of creating a culture vacuum around a cult of personality.
+
+h2. Perceived inability to escape
+
+According to the Bureau of Labor statistics, American adults "spend by far more time working than any other activity.":http://www.bls.gov/news.release/atus.htm  That's a _lot_ of your waking time being trapped in a routine. In a Stockholm Syndrome situation, the captor chips away at the self-esteem of the captive. So for most of our waking hours, those of us trapped in dead end jobs like these are exposed to environments which systematically destroy our self-confidence.  Not only that, a persistent fear and feeling of failure makes it harder to actually explore the options for leaving the bad situation. The instinctive self-preservation reaction in this kind of situation is to work _harder_ to try to avoid the perceived threat coming to fruition.
+
+
+----
+
+So, what if this describes your job?  You owe it to yourself to find a way out. Hopefully recognizing the signs will show you that the _real_ situation is far less grim than you might believe and that you have control over how you choose to spend the _majority_ of your adult life.
+
+I'm writing this for the many people I've met (and the countless I haven't) that are senselessly stuck in bad job situations. Please stop wasting your precious time.
+

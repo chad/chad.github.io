@@ -1,0 +1,19 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgSW5kaWE=
+enki_id: 4698
+---
+I've decided to travel less this year. Since my job involves a lot of travel, this mostly translates into going to less conferences.
+
+So for 2010 I so far have only one conference on the agenda (other than those I'm co-organizing): "RubyConf India":http://rubyconfindia.org/.
+
+I'm speaking at the event and also helping out on the proposal committee along with "Pratik Naik":http://m.onkey.org/ and "Ola Bini":http://olabini.com/blog/.  So far the program is shaping up well, and I'm excited about the conference.
+
+If you're looking for a combined technical and cultural education experience, I highly recommend going to RubyConf India.  Kelly and I "lived in Bangalore":http://chadfowler.com/2009/8/2/how-learning-a-second-language-changed-my-life several years ago and absolutely loved it there. We can't wait to get back to our second home. Bangalore was a culture shock at first, but that's another strong reason to go. For us, it went from culture shock to comfort. Bangalore certainly didn't change to make that happen -- we did.
+
+!http://rubyconfindia.org/stock/rubyconf-badges/RubyConf2010/270X185_speaking.jpg!
+
+So, while it's hectic, noisy,  and sometimes shocking, Bangalore is a beautiful place which had a profound effect on me. When I was there, I couldn't find any other Ruby programmers. It will be really exciting to go back to an entire conference devoted to Rubyists.
+
+Registration will be opening in the next couple of weeks. Follow "RubyConfIndia":http://twitter.com/rubyconfindia on twitter for announcements. Bangalore men milenge?

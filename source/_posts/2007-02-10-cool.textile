@@ -1,0 +1,10 @@
+---
+layout: post
+title: !binary |-
+  Q29vbA==
+enki_id: 4605
+---
+<p><a href="http://www.amazon.co.jp/o/ASIN/4873113121/503-3481670-9680728?SubscriptionId=1CVA98NEF1G753PFESR2"><img src='/images/japanese_rails_recipes.jpg' alt='Rails Recipes in Japanese'></a></p>
+
+<p><a href="http://www.amazon.co.jp/My-Job-Went-India-%E3%82%AA%E3%83%95%E3%82%B7%E3%83%A7%E3%82%A2%E6%99%82%E4%BB%A3%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E8%80%85%E3%82%B5%E3%83%90%E3%82%A4%E3%83%90%E3%83%AB%E3%82%AC%E3%82%A4%E3%83%89/dp/4274066592/sr=1-4/qid=1171100932/ref=sr_1_4/503-3481670-9680728?ie=UTF8&s=books">
+<img src='/images/japanese_mjwti.jpg' alt='My Job Went to India in Japanese'></a></p>

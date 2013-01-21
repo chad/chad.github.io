@@ -1,0 +1,37 @@
+---
+layout: post
+title: !binary |-
+  QmVuY2htYXJraW5nIENvbnNpZGVyZWQgSGFybWZ1bAo=
+enki_id: 4457
+---
+I&#8217;ve recently been reading <a href="http://sethgodin.com">Seth
+Godin's</a> books, and like all books that I actually finish reading, their
+message has crept into my every day thinking. I highly recommend his most
+recent, <a
+href="http://www.amazon.com/exec/obidos/dt/assoc/tg/aa/xml/assoc/-/1591840414/permissionmarket/ref%3Dac%5Fbb6%5F%2C%5Famazon/102-0400087-9791323">Free
+Prize Inside</a>.
+
+<p>
+Seth also has a <a href="http://sethgodin.typepad.com">weblog</a> which
+offers a non-stop, up-to-the-minute continuation of the material in his
+books. Today, he made his <a
+href="http://sethgodin.typepad.com/seths_blog/2004/05/the_curse_of_gr.html">best
+weblog entry yet</a>. He specifically takes aim in this post at the act of
+benchmarking, but more generally at the outdated idea of linear innovation.
+While he doesn&#8217;t specifically say so in this post, the ideas from
+this post, Free Prize Inside, and <a
+href="http://www.amazon.com/exec/obidos/tg/detail/-/159184021X/qid=1086035550/sr=8-1/ref=pd_ka_1/102-0400087-9791323?v=glance&s=books&n=507846">Purple
+Cow</a> are directly applicable in (probably any field, but specifically)
+the computer industry.
+</p>
+<p>
+Once you know what &quot;Purple Cow&quot; means, I&#8217;d be interested to
+hear what people think of as being recent technological Purple Cows (not
+from a business perspective). I&#8217;ve written about this as it relates
+to programming language evolution (<a
+href="index.cgi/Computing/Programming/LanguageEvolution.html,v">LanguageEvolution</a>
+&#8212; mostly regurgitating the thoughts of other smarter people :). A
+more concrete, actually implemented example would be <a
+href="http://www.beta4.com/seaside2/">Seaside</a>. Any recent others of
+note?
+</p>

@@ -1,0 +1,27 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgMyBSZWNpcGVzIG5lZWRzIHRlY2ggcmV2aWV3ZXJzIQ==
+enki_id: 4708
+categories: !binary |-
+  cmFpbHMsIHdyaXRpbmcsIGJvb2tzLCBydWJ5
+---
+<b>UPDATE: We got 8 times as many volunteers for Rails 3 Recipes reviews as we need.  You people are awesome!  Closing the call for help now.</b>
+
+The original "Rails Recipes":http://www.pragprog.com/titles/fr_rr/rails-recipes has been used by tens of thousands of Rails developers as they've worked toward mastering everyone's favorite Web framework.  Five years later, and after the release of Rails 3, we're seeing a new wave of Rails developers.  Through my work with "InfoEther":http://infoether.com and "The Pragmatic Studio":http://pragmaticstudio.com it's clear that an updated version of this classic would help a huge group of new Rails developers.
+
+So here comes Rails 3 Recipes!
+
+I'm a little over half way done with the new edition, which is full of both substantially updated and entirely new content.  Now I need your help.
+
+Before we take the book to Beta, we need technical reviewers.  To tech review, you need to either already know Rails fairly well or be interested in trying to use the book to learn (some Rails knowledge is assumed).  
+
+In return for your comments, we'll give you a free copy of the electronic and paper versions of the book as well as a mention in the book itself.
+
+Interested?  If so, please contact us at "rails3recipes@gmail.com":mailto:rails3recipes@gmail.com and let us know your level of Rails expertise.  We can only handle a certain number of reviewers (probably 15), so we'll be limited to accepting the first who get in touch.
+
+To those who are interested, THANK YOU!!!!!!
+
+If the original Rails Recipes' success is any indicator, Rails 3 Recipes is going to be _the_ book every Rails developer will have sitting on his or her desk over the next couple of years. I'm very excited about it and looking forward to some feedback.
+
+!http://chadfowler.com/rr2.jpg(width 120)!

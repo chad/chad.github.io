@@ -1,0 +1,71 @@
+---
+layout: post
+title: !binary |-
+  SG93IFRvIFByYWN0aWNlDQ==
+enki_id: 4467
+---
+
+<p>
+In his book "<a href="http://www.amazon.com/exec/obidos/ASIN/0743427084/qid=1061071823/sr=2-1/ref=sr_2_1/002-2305354-5948039">How to Practice: The Way to a Meaningful Life</a>", the 14th Dalai Lama of Tibet outlines the three stages of practice.
+<p>
+<ul>
+	<li>Morality
+        <li>Concentrated Meditation
+	<li>Wisdom
+</ul>
+<p>
+As is true with most of the Buddhist philosophy, these ideas are directly transferrable to almost any discipline.
+As one small piece of evidence, Bruce Lee has the following to say <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0897500482/qid=1061078179/sr=8-1/ref=sr_8_1/002-2305354-5948039?v=glance&s=books&n=507846">[link]</a> about his study of martial arts:
+<p>
+<pre>
+	"Before I started studying martial arts, a punch was just a punch; 
+	a kick was just a kick.  After I started practicing martial arts, 
+	a punch was more than a punch and a kick was more than a kick.  
+	After I understood martial arts, a punch was a punch 
+	and a kick was a kick."
+</pre>
+<p>
+This has been one of my favorite quotes for a long time.  It resonates deeply with my beliefs about epiphanic learning.  Only recently,
+I discovered that this quote is an adaptation from Zen (I've heard it's from the Diamond Sutra, but I can't confirm.  Perhaps
+it's nothing more than Chinese Whispers (<a href="http://www.chadfowler.com/index.cgi/Computing/BadMenCombine.html">a la the Burke quote</a>)):
+<p>
+<pre>
+	"Before I started practicing Zen, a mountain was a mountain 
+	and a river was a river..."
+</pre>
+<p>
+When we first consider a new discipline, we take the discipline at face value.  Computer programs are just a bunch of text
+in an editor.  To oversimplify, each line is just a command that we give to the computer, and we keep typing them until
+we've instructed the computer to do everything we want it to do.  As we get deeper into the craft, we apply Phaedrus's scalpel (<a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?userid=2TLSUZ2VRE&isbn=0060958324&itm=1">ZAMM</a>).  
+We slice the concepts mercilessly into categories, dropping the remains into buckets until we've created a complicated web of a system in our minds.
+We use this system to expand our understanding of what the practice of the discipline entails.
+<p>
+Finally, at least in my experience--but I'll continue to say "we", we reach an epiphanic moment.  The moment usually comes at a time
+when we haven't learned any new facts or been given any new special insight from a 3rd party.  Suddenly, we understand.  And, again
+the discipline becomes a set of simple steps as it started out in our minds.
+<p>
+These three stages directly correlate to the Dalai Lama's stages or practice:
+<p>
+Morality is the act of discovering that there is a need to "practice".  In programming, this is the moment we discover that it is
+"immoral" to simply type commands into an editor until we are finished asking the computer to do everything we want it to do.  We
+realize that this is not how "quality" is achieved.  For some of us, this phase comes quickly as we enter a new discipline.  For others,
+it may never come.  It all depends on perspective and motivation.
+<p>
+Next, we move into what the Dalai Lama refers to as "Concentrated Meditation".  With our new found desire to strive for quality, we start slicing and dicing, analyzing 
+our decisions and the decisions of others.  This stage is the breeding ground for complexity and, surprisingly, zealotry.  We create or adopt our taxonomies and
+make a commitment to them.  We may move from dogma to dogma, but we do so with a religious commitment and sometimes manic zeal.
+<p>
+Finally, we reach "Wisdom".  This is the epiphanic moment.  At this time, we understand that our conceptual frameworks and complex
+categorization were only a path that led to the enlightment of simplicity.  As programmers, this is the moment when we realize that 
+objects are just objects and functions are just functions.  Ultimately, it's all text in an editor.
+<p>
+The same can be applied to karate (ask Bruce), music, software methodology, and happiness itself.
+<p>
+Having experienced these epiphanic moments in multiple fields and circumstances, the most frustrating thing about them is that I find
+myself right back where I started.  The concepts are no different from when I first looked at them.  My simple minded assumptions turned out
+to be true.  But, somehow <i>I</i> had to change for it to "click".  Something like <a href="http://www.chadfowler.com/index.cgi/Computing/Programming/PairingWithYourself.rdoc">Beginner's mind</a>, I guess.
+<p>
+Is it possible to skip the second stage?  I used to think so.  But, I'm starting to have my doubts.  I don't think it's necessarily possible
+to skip it the <i>first</i> time around.  But, why couldn't my epiphanic moment as a saxophonist translate to any other discipline or craft?  After all, at this point it's not about learning facts or consciously piecing specific concepts together.  Might this be a discipline-neutral skill that can be developed through practice?
+<p>
+(<i>I'm a bit drugged as I write this.  Had a wisdom tooth removed.  So, as the buddhists would say, please be compassionate.</i>)

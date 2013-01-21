@@ -1,0 +1,20 @@
+---
+layout: post
+title: !binary |-
+  TW92aW5nIHRvIEJlcmxpbiBhbmQgYXVmIHdpZWRlcnNlaGVuIHRvIGZyaWVu
+  ZHM=
+enki_id: 4720
+---
+It's hard to believe it's been <a href="http://techcrunch.com/2011/03/14/livingsocial-gains-wealth-of-ruby-on-rails-expertise-with-infoether-acquisition/">almost two years</a> since InfoEther was acquired by LivingSocial. Since then, we've built the strongest development team I've ever known. We've set <a href="http://mashable.com/2012/09/06/livingsocial-starbucks-record/">records</a> for e-commerce transaction volume. We've grown at an incredible pace, both as a business and as <a href="http://www.youtube.com/watch?feature=player_embedded&v=14sUms68LwA">technology team</a>. We've shipped a lot of software, and made millions of people's lives more interesting in the process.  I've had the privilege to work with <a href="https://coderwall.com/team/livingsocial">some of the most admired engineers in on industry</a>. I'm proud of the team <a href="http://aaronbatalion.com/">Aaron Batalion</a> (from whom I've learned a ton about running a consumer internet product) had assembled before InfoEther arrived and of the team that ultimately grew from that foundation.
+
+<a href="http://www.chadfowler.com/2011/12/21/re-thinking-software-development-education">As I mentioned when I announced</a> our <a href="http://hungryacademy.com">Hungry Academy program</a>, for me personally the experience at LivingSocial has been intense. As I said in that post, “These last 8 months at LivingSocial have been the best 4 years of my career.” That holds true today.
+
+Playing the role of Senior Vice President of Technology and serving on the senior executive team at LivingSocial has been a rewarding learning experience.  I'm humbled by the talent and experience of every member of that team, and since my first day have been awed by <a href="http://corporate.livingsocial.com/ourteam">Tim O'Shaughnessy's</a> business sense and natural leadership ability.  I look back on my career, and a handful of teachers and mentors stand out that have had a significant impact on me. Tim is now in that very short list.
+
+All the while, though, I've known that I would eventually go back to a more hands-on role, personally building products and solving technical problems. I am, after all, a <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">Passionate Programmer</a>.
+
+<a href="http://twitter.com/kellyjeanne">Kelly </a> and I have also had  a goal to (before we get too old to fully enjoy it) live overseas again.  Our time in India, <a href="http://pragprog.com/book/mjwti/my-job-went-to-india">was a huge influence on both of us, both personally and professionally</a>, and we've long since hoped to gain a similar experience in a different part of the world, specifically Europe.
+
+So that's what we're going to do.  I'm taking a role as CTO of a technology startup in one of our favorite cities: Berlin.  I'll be working hands-on to develop cross-platform software with a small, talented team of engineers, designers, and product managers. I'll be transitioning from my role at LivingSocial for the remainder of January and will be relocated to Berlin and starting the new job in mid February.
+
+As excited as I am to move to the next adventure, it's always sad leaving a great company like LivingSocial.  I've made some friendships that will last forever, and I'll miss the team immensely. I know, however, that they're in good hands and that 2013 is going to be a fantastic year for the business. 

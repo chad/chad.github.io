@@ -1,0 +1,76 @@
+---
+layout: post
+title: !binary |-
+  UmVjb2duaXplIG5vdCBSZWd1cmdpdGF0ZQo=
+enki_id: 4463
+---
+<a
+href="http://kirk.blog-city.com/read/309742.htm">kirk.blog-city.com/read/309742.htm</a>
+
+<p>
+Kirk does a nice job of explaining what&#8217;s wrong with the way a lot of
+people approach software design patterns.
+</p>
+<p>
+His statement is hauntingly similar to the one I mentioned in <a
+href="index.cgi/Computing/ValuelessSoftware.html,v">ValuelessSoftware</a>,
+which is why it caught my eye.
+</p>
+<p>
+Interestingly, his observation applies equally to the &quot;patterns&quot;
+that jazz musicians use in their practice. Traditional jazz improvisation
+is all about trying to fit creative and spontaneous music composition on
+top of somewhat predictable chord progressions. Western music being as it
+is, you can quite easily abstract almost any &quot;chord change&quot; into
+its functional &quot;purpose&quot; (i.e. a II&#8212;2nd chord in a key,
+like D minor in the key of C major&#8212;followed by V usually function as
+the building of tension that leads to a I or the ultimate resolution).
+Because of this predictability and repetition in the chord progressions, it
+becomes easy to study the improvised solos of the masters and simply lift
+patterns of notes and apply them&#8212;properly transposed&#8212;in other
+instances of the same progression. &quot;If it worked for Charlie
+Parker.&#8230;&quot;
+</p>
+<p>
+<img src="http://www.chadfowler.com/images/Ayler.jpg"> *Albert Ayler played
+no licks*
+</p>
+<p>
+The funny thing about these patterns, is that you can listen to novice jazz
+improvisors and very easily pick out where they&#8217;re being used. This
+is largely because of the emphasis they place on use of these patterns. You
+can feel their minds working in overdrive as they get closer to the point
+where they want to insert the pattern. Then, the more natural, though
+probably limp, musical phrase that they&#8217;re playing abruptly drops off
+into an awkward silent pause. The pattern is then very mechanically crammed
+over the next one or two measures, followed by a moment of silent relief
+and pride as the improvisor recovers from the stress of trying to apply the
+pattern and then struggles to regain his or her footing as the journey
+continues.
+</p>
+<p>
+With most jazz improvisors, you see the tendency to use patterns disappear
+over time. At first, they let go of the desire and then forced attempt to
+use the pattern that I describe above. Ultimately, individual patterns
+emerge and you only recognize these individual patterns in their playing
+(for the most part), with the old forced ones staying with Charlie Parker
+where they belong.
+</p>
+<p>
+Incidentally, some of the best advice I ever received as a student of jazz
+improvisation came very unexpectedly from a teacher at the University of
+Memphis (<a
+href="http://www.vtjazz.org/bios/rush.html">www.vtjazz.org/bios/rush.html</a>)
+during a class on improvisation. &quot;Stop playing the changes,
+dammit!&quot; This was an example of a truly great improvisor (you really
+should hear Gene play) telling a student not only to not try to play these
+melodic patterns, but to stop even being hindered by the patterns of chord
+changes that underly the improvisation. Just play.
+</p>
+<p>
+In jazz, the patterns are worth studying and even practicing. But when you
+show up somewhere to play for someone else, you should allow their
+teachings to come through in your music instead of allowing the patterns
+themselves to come through. Otherwise, you&#8217;re just standing their
+playing a bunch of II-V-I licks. A computer can do that.
+</p>

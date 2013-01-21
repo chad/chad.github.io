@@ -1,0 +1,34 @@
+---
+layout: post
+title: !binary |-
+  U2l4dHkgUGVyY2VudCBvZiBBbWVyaWNhbiBXb3JrZXJzIE1lZGlvY3JlIEF0
+  IEJlc3QK
+enki_id: 4565
+---
+According to Randstad, only <a
+href="http://money.cnn.com/2005/08/24/pf/workplace_morale/index.htm?section=money_pf">40
+percent of employees feel that morale is good at their workplace</a>.
+
+<p>
+Think about the last time you were in a bad morale situation at work (for
+60% percent of you, that&#8217;s right now). How good was your performance?
+How good a job do you do when you&#8217;re not happy with what you&#8217;re
+doing or who you&#8217;re doing it for?
+</p>
+<p>
+I&#8217;ll answer for you. You do a mediocre job at best. Most likely, you
+do a poor job.
+</p>
+<p>
+If I want someone to do a mediocre job, I&#8217;m going to look for the
+cheapest available option. In programming terms, that means low hourly
+rate. In today&#8217;s environment, low hourly rate means India, China, the
+Phillipines or some other &quot;low cost country&quot;.
+</p>
+<p>
+Is our morale low because we&#8217;re being squeezed for more work at lower
+wages and because we&#8217;re constantly facing the threat of being
+offshored? Or are we constantly facing the threat of being offshored
+<em>because</em> our morale is low, and we are doing, collectively, a
+mediocre job?
+</p>

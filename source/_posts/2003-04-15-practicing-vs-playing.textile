@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  JnF1b3Q7UHJhY3RpY2luZyZxdW90OyB2cy4gJnF1b3Q7UGxheWluZyZxdW90
+  Ow==
+enki_id: 4538
+---
+
+For the past two days, I've been focusing my free time on programming "practice" (<a href="http://www.chadfowler.com/index.cgi/Computing/Programming/Bowling.html">Bowling</a>). As I predicted, I've created some truly hideous stuff.  Something I <b>hadn't</b> predicted is that in many cases, I've produced code that doesn't even work--and, I can't <i>make</i> it work.  At first, I felt bad about this, but I'm starting to think that it's not only acceptable but expected.
+<p>
+As a musician, especially after you get over the inevitably ugly sounds of first learning an instrument, it's very tempting to "practice" things that already sound good.  For example, I became quite skilled at exploiting the harmonic overtones of the saxophone.  I could play tunes almost regardless of which buttons I pressed on the horn.  Since I was so good at this--and it felt good to be so good at it--I would sometimes find myself "playing" with harmonics instead of "practicing".  It was especially easy to subconciously justify because many saxophonists *aren't* good at this technique.  So, I had the feeling I was "practicing" something difficult.  In truth, I was just playing--not practicing.
+<p>
+So, what does it mean that I have tried to write programs in my practice sessions that I've been unable to complete?  It means that I've been trying to do things that are either beyond my grasp or beyond the grasp of the language that I'm using.  That's a Good Thing.  I'm pushing my own limits, or "Finding The Box", as the <a href="http://www.pragmaticprogrammer.com">Pragmatic Programmers</a> say.
+<p>
+If you're following this programming-practice thread and trying to make something of it, beware of too many successes.  If the exercises make you "look bad", you're probably headed in the right direction.

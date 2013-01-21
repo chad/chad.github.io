@@ -1,0 +1,7 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgVHdpdHRlcg==
+enki_id: 4635
+---
+"Follow RubyConf":http://twitter.com/al3x/statuses/382105032

@@ -1,0 +1,139 @@
+---
+layout: post
+title: !binary |-
+  U21hcnQgQm9va21hcmtpbmcK
+enki_id: 4560
+---
+Last week, I read an article about Latent Semantic Indexing (<a
+href="http://javelina.cet.middlebury.edu/lsa/out/lsa_intro.htm">javelina.cet.middlebury.edu/lsa/out/lsa_intro.htm</a>)
+which has been stewing in my mind ever since. I thought I&#8217;d sit down
+and make a link to it here, and as I started the search for the article I
+realized that I should have bookmarked it. So I thought, &quot;Maybe I
+<em>did</em> bookmark it, but just forgot.&quot; I looked in my bookmarks
+list, and there were five or six unrecognizable links there. So, I headed
+back to Google and restarted the longer-than-it-needed-to-be process of
+relocating the article.
+
+<p>
+I don&#8217;t know why I&#8217;ve never taught myself to use bookmarks
+effectively. If I remember correctly, they&#8217;ve been around since the
+first version of Mosaic that I used several years ago. It&#8217;s probably
+largely a result of laziness, though I don&#8217;t think that&#8217;s the
+whole story. I think it&#8217;s mostly driven by the way I use the web.
+It&#8217;s very rare that I load up my browser with the specific intent of
+visiting one page on the internet. My typical information-addicted browsing
+scenario (I optimistically and euphemistcally refer to it as &quot;checking
+my email&quot;) starts with scanning the messages from the various mailing
+lists I&#8217;m subscribed to. Usually one or more messages will catch my
+eye. Some will contain URLs that I will follow. Some contain a subject I
+want to follow up on, which leads me to a search engine. Some just get me
+thinking about something that may or may not even be related.
+</p>
+<p>
+More often than not, the initial scan of my inbox leads to the spawning of
+multiple unrelated threads. For example, I might have several browser
+windows dedicated to a linguistics topic, a couple loading up BusinessWeek
+and Forbes, and a third set pointing to something related to Ruby
+programming. And, from here, the same behaviour that got me started comes
+into play. Each new page has the potential of forking off several new
+threads on potentially unrelated topics. It&#8217;s a potentially infinite
+recursive loop.
+</p>
+<p>
+If I tried to bookmark all this stuff, I would spend as much time
+bookmarking and organizing as I do reading the content. Interestingly, the
+topic of this post, which has led me into this explanation of why I
+don&#8217;t use bookmarks is itself a potential solution to the problem.
+</p>
+<p>
+Latent Semantic Indexing (LSI) is a technique used for indexing and
+relating information based on its semantic &quot;closeness&quot;. I&#8217;m
+certainly not an expert, having only read a few articles on it now, but
+here&#8217;s a probably-bad explanation of how it works: For each document
+in a set, it generates a vector showing the document&#8217;s inclusion or
+non-inclusion of the words in a master word list. It then uses a technique
+called Singular Value Decomposition (<a
+href="http://kwon3d.com/theory/jkinem/svd.html">kwon3d.com/theory/jkinem/svd.html</a>)
+to compress the many relationships in this &quot;term/document grid&quot;
+into fewer relationships&#8212;basically converging some of the things that
+were different into sameness. At this point, you can calculate any
+vector&#8217;s closeness (as in <b>physical</b> closeness&#8212;using Math
+I never learned in school) to another, giving you an indication of how
+semantically close the two are.
+</p>
+<p>
+For example, imagine you have a collection of documents, about computer
+programming topics. As a human, you could read an article about object
+oriented programming, another about UML, and another about Martin
+Fowler&#8217;s book &quot;UML Distilled&quot;. Even if the last article
+didn&#8217;t specifically contain the text &quot;Object Oriented
+Programming&quot;, you would be able to make the mental connection between
+Martin Fowler and object oriented programming, because you know that UML is
+related to OOP and that Martin Fowler is a UML guru. With a typical,
+keyword-based search engine, the last article I mentioned wouldn&#8217;t
+appear in a set of search results for &quot;object oriented
+programming&quot;, because it didn&#8217;t contain the text you were
+searching for. A search engine using Latent Semantic Indexing, would be
+able to determine that Martin Fowler is *semantically close* to object
+oriented programming and would still return the UML article as a match for
+the search.
+</p>
+<p>
+So what does this have to do with bookmarks? I was lucky in that one of my
+multiple browsing threads on the day I came across LSI led me to Agent
+Frank (<a
+href="http://www.decafbad.com/twiki/bin/view/Main/AgentFrank">www.decafbad.com/twiki/bin/view/Main/AgentFrank</a>).
+Agent Frank is a personal web proxy. You run it on your PC, and it tracks,
+archives, and indexes the sites you visit. It can also do things that
+I&#8217;m not as exicted about like blocking banner ads. The really
+exciting thing here is that it is a step toward *smart bookmarks*. If Agent
+Frank can track everything I look at, I don&#8217;t have to worry about
+remembering which sites I&#8217;ve seen. Now, imagine coupling this
+capability with LSI. A personal web proxy that archives the content you
+visit and <b>then</b> indexes it with LSI, could remind you of related
+pages you&#8217;ve seen as you browse. It could, of course, as Agent Frank
+already does, include a search engine so that you could find pages you had
+seen before&#8212;but without the hassle of having to remember keywords
+that appeared in the pages. It could also use the semantic closeness of the
+documents you view to build an index of what you are interested in. After a
+browsing session, it could present you with an intelligently constructed
+list of the categories of the information you have been browsing.
+</p>
+<p>
+I really like the idea of reading a new page, thinking &quot;This page
+<b>reminds</b> me of something&#8230;&quot;, and clicking a browser button
+labeled &quot;Recall Similar&quot;.
+</p>
+<p>
+I&#8217;ve been playing around with my own implementation of almost-LSI,
+inspired by a nice tutorial (<a
+href="http://www.perl.com/pub/a/2003/02/19/engine.html">www.perl.com/pub/a/2003/02/19/engine.html</a>)
+by Maciej Ceglowski (<a
+href="http://www.idlewords.com">www.idlewords.com</a>). My version is, as
+you might guess, in Ruby. And, it integrates with my weblog software (<a
+href="http://www.sourceforge.net/projects/rublog">www.sourceforge.net/projects/rublog</a>).
+As is the case with many of the Ruby projects I&#8217;ve worked on, I was
+surprised to discover that shortly after I started working on it, I had a
+functional piece of software that could calculate semantic sameness given a
+search query or an existing document. If I can find the time to clean it up
+over the next week, you might find a &quot;What&#8217;s Related&quot; link
+for each story on my website.
+</p>
+<p>
+Hopefully, though I&#8217;m still learning this stuff, it will be a little
+less braindead than Google&#8217;s &quot;What&#8217;s Related&quot; (<a
+href="http://www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=related%3Awww.chadfowler.com&btnG=Google+Search">www.google.com/search?hl=en&ie=UTF-8&oe=UTF-8&q=related%3Awww.chadfowler.com&btnG=Google+Search</a>),
+which returns a mix of pages that I have linked to, have linked to me, or
+seem to have no logical relationship whatsoever. There are at least a
+couple that I&#8217;d really not like to think of as &quot;Similar&quot;,
+as Google labels them.
+</p>
+<p>
+I also started today on my own Agent Frank replacement, with builtin LSI.
+I&#8217;ve got a stupid simple HTTP Proxy working and archiving everything
+I view. If all goes well and I don&#8217;t lose focus (<a
+href="index.cgi/AttentionSpanChallenged.html,v">AttentionSpanChallenged</a>)
+I might have something basic working in the next week or so. Exciting
+stuff. I&#8217;m glad I don&#8217;t do this for a living&#8230;it might not
+be as fun.
+</p>

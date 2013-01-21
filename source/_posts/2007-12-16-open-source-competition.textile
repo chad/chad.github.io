@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  T3BlbiBTb3VyY2UgQ29tcGV0aXRpb24=
+enki_id: 4638
+---
+It's fun to watch the rush to be first to market with a new piece of open source functionality.  You probably already know that Amazon released their "SimpleDB":http://www.amazon.com/b/ref=sc_fe_c_1_3435361_1?ie=UTF8&node=342335011&no=3435361&me=A36L942TSJ2AJA this week.  I was thinking we might whip up a Ruby wrapper but I knew if I just waited a day or so there would already be libraries available.  Tonight I checked "RubyForge":http://rubyforge.org and the three most recent projects are all SimpleDB wrappers:
+
+"aws-simpledb":http://rubyforge.org/projects/aws-simpledb/
+
+"aws-sdb":http://rubyforge.org/projects/aws-sdb/
+
+"simpledb":http://rubyforge.org/projects/simpledb/
+
+It will be fun to see which one (or more?) of these gains and keeps mind share.  Competition among open source projects is an interesting topic given the abstract nature of the stakes.

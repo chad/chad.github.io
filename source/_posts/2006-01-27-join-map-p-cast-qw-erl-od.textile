@@ -1,0 +1,42 @@
+---
+layout: post
+title: !binary |-
+  am9pbigiICIsIG1hcCB7IlAiIC4gJF8gLiAiY2FzdCJ9IHF3KGVybCBvZCkp
+  Ow==
+enki_id: 4464
+---
+Fellow Arkansan Josh McAdams was recently kind enough to <a
+href="http://perlcast.com/2006/01/27/interview-with-chad-fowler/">interview
+me</a> for <a href="http://perlcast.com/">Perlcast</a>, the Perl
+community&#8217;s equivalent to the <a
+href="http://podcast.rubyonrails.org/">Ruby on Rails Podcast</a>.
+
+<p>
+In a bizarre twist of fate, this interview places me in the company of <a
+href="http://www.wall.org/~larry/">Larry Wall</a>, Damian <a
+href="http://www.csse.monash.edu.au/~damian/">Conway</a>, <a
+href="http://www.oreillynet.com/cs/catalog/view/au/335">Randal
+Schwartz</a>, and the mononomenclad, ultra-prolific wonder, <em><a
+href="http://www.wgz.org/chromatic/">chromatic</a></em>.
+</p>
+<p>
+Here&#8217;s a fun bit of the interview, taken out of context:
+</p>
+<pre>
+  Perlcast:  This is Perlcast, so I have to ask:  Is Perl a safe language to
+  be an expert in?
+
+  Me: Absolutely not. ... If Perl was going to be your only language right
+  now, then I would be terrified.  If you identify yourself as a Perl
+  programmer, then I would be terrified.
+</pre>
+<p>
+You&#8217;ll have to listen to the whole thing to hear the
+<em>shocking</em> conclusion.
+</p>
+<p>
+The Pragmatic Programmers are also giving away some FREE COPIES of <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti/">My Job Went to
+India and All I Got Was This Lousy Book</a>, so check out the <a
+href="http://www.perlcast.com">Perlcast</a> page for details.
+</p>

@@ -1,0 +1,9 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgUmVjaXBlcyBpcyBhIEpvbHQgRmluYWxpc3Q=
+enki_id: 4601
+---
+This year's "Jolt finalists have been announced":http://joltawards.com/2007/, and I'm thrilled to say that "Rails Recipes":http://www.pragmaticprogrammer.com/titles/fr_rr/ has made the list.  It's an honor to be in the company of a ton of fantastic computer-related books.
+
+Congratulations to the "Pragmatic Bookshelf":http://pragmaticprogrammer.com/, who have made the finalists list for three years in a row (and actually "won":http://www.chadfowler.com/2004/3/18/pragmatic-starter-kit-jolt-award "twice":http://www.chadfowler.com/2006/3/16/rails-recipes-beta-kickass-readers-and-another-pragmatic-jolt.

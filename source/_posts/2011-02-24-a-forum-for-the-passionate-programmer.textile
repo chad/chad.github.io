@@ -1,0 +1,7 @@
+---
+layout: post
+title: !binary |-
+  QSBmb3J1bSBmb3IgVGhlIFBhc3Npb25hdGUgUHJvZ3JhbW1lcg==
+enki_id: 4713
+---
+I've setup a "Facebook page for The Passionate Programmer":http://www.facebook.com/pages/The-Passionate-Programmer/127357787336585.  Please Like it, Share it, and post your own questions, experiences, act-on-it reports, or doubts.

@@ -1,0 +1,161 @@
+---
+layout: post
+title: !binary |-
+  TWF0eiBSdWJ5IFdvcmxkIEtleW5vdGU=
+enki_id: 4701
+---
+
+ The following is my real time transcription of the translation of "Matz's":http://www.rubyist.net/~matz/ speech at "Ruby World 2010":http://www.rubyworld-conf.org.  I was typing as fast as I could while he spoke, and I probably made some mistakes. I might have left out some words or sentences. If anything doesn't make sense, assume it's my fault and not Matsumoto-san's. Anyway, I enjoyed Matz's keynote and thought other English speakers might like a chance to see what he said.
+
+
+h2. I'm Matsumoto
+
+I Started Ruby in 1993 at NaCL:http://www.netlab.jp/. When I joined the company after graduating from college, I didn't have much to do at the time. I was not fired fortunately. But I had plenty of time so I started to work on Ruby as a side project.
+
+So at the time, there was ONE user of Ruby. Then I started to develop Ruby with some other friends.
+
+In 1995, Ruby was released and distributed over the internet for general use. At the time, people on usenet got interested in Ruby and gave me some feedback. Also we used a mailing list to distribute information on Ruby.
+
+So within days, about 200 people got involved. So in 1995, the number of people who knew something about Ruby was about 200.
+
+Even after that, Ruby was known to a relatively limited number of people.
+
+Then in 1999, I published a book called Object Oriented Scripting with Ruby. This was the first book on Ruby. It's only natural. Who else is going to write a book on Ruby, right??
+
+At the time, this sold pretty well. Cumulatively, we sold almost 20,000 copies. I'm sure I'm allowed to discuss this number. Probably it's only 17,000 in real numbers. This was in Japanese, so Ruby was known to the whole nation. So in 1999, Ruby was known to a lot more people. More engineers and programmers knew about the language.
+
+I started to hear from many people that they knew about Ruby. 
+
+In year 2000, "a book in English":http://www.pragprog.com/titles/ruby/programming-ruby was published.  Many people in the world came to know about Ruby.
+
+Then in 2004, "Ruby on Rails":http://rubyonrails.org was released. Of course, most people know about this Web application framework. Ruby on Rails is very productive compared to competing frameworks in other languages.  There was an active discussion on the comparison of performance. It was welcomed by many people. We estimate that the number of users grew to 100,000 people in 2004.
+
+In 2008, US-based Gartner released a survey. In the report, Gartner estimated that the total number of Ruby users reached 1,000,000. This was a huge number as you can see.  
+
+In the same report, the reporter predicted that in five years (2013)  the total number of users would be 4,000,000.  Ruby is open source. You don't have to pay anything to use it. You just download it. It is therefore very difficult to know how many people are using it. I created Ruby myself and I don't know how many people are using it, so I'm not sure how Gartner reached their conclusion.  But anyway, 4,000,000 people are predicted to be using Ruby in 2013.
+
+So in 20 years, this project which started with one person may have increased from 1 to 4,000,000 users. This is beyond the normal growth rate of a technology.
+
+This period of Ruby's popularity was due to the popularity of Ruby on Rails.
+
+There is a ccompany called "Tiobe Software":http://www.tiobe.com/ which is a software company in the US. Their "Tiobe Index":http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html rates the popularity of programming languages using Google, Yahoo, Microsoft, and other search engines to rate the popularity of languages on the internet. Back in 2009, according to Tiobe index, Ruby was ranked #10. And in 2008, it was ranked #9. 
+
+In this year, 2010, it was demoted to #12. 
+
+You may have a concern about the future of Ruby, but if you drill down deeper, you will see: objective-c is getting more popular, driven by iPad, iPod, etc. development. Objective-C is required.  So it jumped form 42 to 11.  And Go by Google was released in April of last year. So where it didn't exist previously it jumped up to #15.
+
+As you can see, Ruby represents 2.221% of programming language references according to Tiobe.  That's good.
+
+So don't have a concern about this.
+
+But this marks a very interesting symptom. The end of the ruby "bubble". When I joined the company, the bubble economy was still there. Then it collapsed and caused a lot of trouble. A "bubble" is not sustainable. Bubbles are therefore undesirable.
+
+There are many comedians and musicians named as "one-hit wonders". I don't want Ruby to become that.
+
+The life expectancy of a programming language is pretty long. Fortran was created in the 1950s. I want Ruby to be like this. That's why this presentation is called "Sustainable Ruby".  The question is how to maintain Ruby's high level of quality and the high level of quality of the people.
+
+So in order to implement "sustainable ruby", we must first discuss the benefit of Ruby.  Benefit is very important for Ruby to be sustainable.
+
+Benefit #1: Productivity. One of the reasons that Ruby is quite popular is that its productivity is quite high. An embodiment of this is Ruby on Rails. When Rails was released, it was often cited that people would say that Rails had 10x productivity over java.  Ruby developers didn't really believe this, but a specific developer in the US wrote an article saying that he felt that HIS productivity over Java when switching to Rails was 10x.  In 2005 and 2006, this one sentence caused a lot of arguments and discussion.
+
+After several years of discussion and usage of Ruby on Rails, it may not be 10x but there are many cases where you can enjoy the productivity of Ruby on Rails over Java.
+
+Also, another example of how Rails is productive is that it can take only 15 minutes to develop a web application. In 2004 at a Brazilian conference, David Heinemeier Hansson demonstrated web application development using Ruby on Rails. Without any preparation, no design, no database, he started to create a blog application. You could create articles, list them, etc. He created this application in 15 minutes. In 2004, creating an application in 15 minutes it was astonishing.  It was great marketing to do that.
+
+I'm a software engineer and I'm not very interested in marketing. But that video was a huge contributor to making Ruby on Rails popular. Ruby itself didn't have any marketing, but Ruby on Rails promoted Ruby as well.
+
+Was the Rails framework the sole reason behind the productivity boost when using it? I don't think so. Ruby itself also makes the productivity possible.
+
+Post-Rails frameworks.
+  Merb
+  Sinatra
+  Ramaze
+  Rails 3
+
+Merb was emerging as a post-Rails framework, but it was quite unique in open software. Merb and Rails jointly created a new framework in the form of Rails 3. Also, Rails 3 is inheriting some of the Merb characteristics. Totally new framework by combining/merging different frameworks.
+
+So far I've been talking about the benefits that Ruby can provide in order to make Ruby sustainable.
+
+The second element is the Potential the language can demonstrate. Now we have the technology and the technology is convenient and we can create some benefits. But we need to have potential in the Language for people to make investment.
+
+Around Ruby we have much new technology. Ruby on Rails, for example, introduced innovations in Web development. It wasn't the first web framework. Not even the first Web framework in Ruby. There were already a lot of web application frameworks in Ruby when Rails was released. But under the circumstances, Ruby on Rails implemented new ideas that triggered productivity enhancements in Ruby AND other languages (python, etc.). So Ruby on Rails had a huge impact on the web application development arena.
+
+Whenever a new technology is created, the surrounding areas also enjoy the benefits of this technology. Not all new technologies will be successful, but some of them will really boost the entire IT industry.
+
+We do see some of that trend in the industry. To support the new technology we need to have smart engineers (hackers). The smart engineers usually come to the interesting technology. Whenever there's new technology that's created, it invites the smart engineers who then create new technology. This is a positive cycle. Ruby is one of these positive cycle enforcers.
+
+Benefit, Potential, and....
+
+Passion
+
+The author of The Passionate Programmer, Chad Fowler, is here. I feel embarrassed to say something about him before his keynote. But I have to say this. He is right to emphasize passion. Many people are passionate about ruby. Engineer passion is very important.  Passion is key.
+
+In the US there is a conference called RubyConf:http://rubyconf.org. The first one was held in Tampa Florida. There were only 34 attendees at the first conference. Right now we have more than 500 people attending. If the venue could handle it we could probably fit 700 or 1000. They actually limit the number of attendees. They sell out every year. This year RubyConf will be held in "Matsue's":http://www.city.matsue.shimane.jp/kankou/en/ sister city, New Orleans. It will be the 10th. It is the longest running Ruby conference on the globe.
+
+Euruko. Poland, Barcelona, Berlin, Prague.  On the last day, Euruko always invites speakers to bid on where Euruko should be. Speakers make their case and the location of the next Euruko is voted on. 
+
+Two weeks ago we had RubyKaigi.  It was held in Tsukuba City. Not in Tokyo. I graduated from Tsukuba univeristy. It made me feel like i was going home. We had about 700 people at RubyKaigi this year. RubyConf will have 500 (ed: actually 600 to 650). The biggest conference is held in Japan.
+
+As you can see here in this venue as well Ruby World has so many people from so many countries. I would say that the IT industry is japan is becoming truly internationalized. We have a disadvantage in Matsue because it's so remote, but the passion of the Rubyists makes it possible.
+
+We also have regional Ruby conferences in India, China, Brazil, all over the US, etc. They also have another conference called RailsConf:http://railsconf.org, which is operated by a professional event management company (ed: and "Ruby Central":http://rubycentral.org). They had 1800 people. So that really boosts Ruby.
+
+Startup passion.  I'm going to talk about US companies, but there are many venture companies in Silicon valley who are very interested in Ruby. More than 60% of VCs use Ruby to provide the system.  Among the famous ones known to Japan includes Twitter. As a startup, they implemented everything using Ruby from bottom to top. Currently they have 100s of millions of users. Much of the RUby has been replaced but if you access twitter you can still see twitter driving the system.
+
+As of last year another acronym was introduced "ARC". Agile, Ruby/Rails, Cloud.  I've heard that VCs ask startups who aren't using Ruby, "Why not?" Investors are pressuring startups to use Ruby. "It's faster, so if you can shorten your release by one month why not use Ruby?", they say.
+
+A few years ago when startups were getting started, they wanted to attract smart engineers, so they used Ruby to attract them. 
+
+Executives' passion: Productivity is the key.  It's not just the engineers who are passionate about Ruby. Productivity is one of the biggest factors for businesses. Executives started to realize the importance of using a productive language. Productive languages drive profit.  Some executives are finding hope in Ruby.
+
+Differentiation can be found by using Ruby. The japanese IT industry is characterized by conservatism, so many may be reluctant to use Ruby. But by making the decision to use Ruby, they may differentiate themselves. There is also the possibility to change the entire industrial structure by switching to Ruby and other open source technologies, driving more SMBs.
+
+In Japan, major IT companies receive contracts and subcontract to others. But with Ruby and smart engineers, these can be driven to small businesses which can innovate. This drives hope.
+
+Motivation drives Hope
+
+for Food
+for Money
+  These are very pragmatic
+
+for Good Cause
+  But some people might make a bigger attempt to change the world.
+
+Many people are finding hope in Ruby. Many found potential in Ruby.
+
+Not all have succeeded.  Some are extremely successful. Some are not.  What made the difference?
+
+In some cases, the benefit was not enough. Or people couldn't see the potential. But the biggest factor was PASSION!  How passionate or decisive they were made the difference.
+
+Lots of people love Ruby. Pictured here (ed: he shows a picture in his slide) are the smiling faces of the staff of the RubyKaigi. This is not organized by professionals. 700 turnout is already beyond its technical limits. But when we ran the survey, most people were satisfied by the conference. It's miraculous considering the tough circumstances. But these people are passionate.
+
+Many people are surrounding ruby. Hacker,s engineers, executives.  They LOVE Ruby.
+
+Of course I love Ruby myself. It's my child. Every day I am expanding my affection for Ruby. There are so many people out there that love Ruby. As a Japanese, I'm reluctant to say "love". Actually one guy said "I love you". I am poor at English. I was very embarrassed :) For Japanese, it's difficult to express love in a direct fashion. Of course that guy didn't mean "love". He just loved Ruby. Like a strong kinship.
+
+Many people love Ruby. Let me give you some examples:
+
+NaCl. When i started at NaCl, Inoue-san he actually picked me up and allowed me to work on this. Back in 1995, there was no way to know if Ruby would be used by anyone. But the president, Mr. Inoue-san had the faith and the vision to hire me and let me work on Ruby. He gave me plenty of time to work on Ruby. It's all possible because of him.
+
+In 2006, the Matsue mayor actually visited our lab. We would like to use Ruby to revive the city. I had to reply, "Are you out of your mind?" Can you believe this person would try to revive our city using Ruby? Many people living in many places outside of Matsue, so I said maybe it's difficult but someone from the city told me the Mayor was very serious about this. The mayor himself actually expressed his desire to use Ruby. So as a local government, Matsue city is committed to promote Ruby, which is very very exceptional on examination.  How much contribution we're making to the city really is unknown.
+
+This is Mr. Mizoguchi the Shimane governor. I don't know how to show my appreciation to him. I'd like to take this opportunity to thank him again. There are many other local governments who are interested in using Ruby to revive their city. But the question is how passionate are the top management or the governor or mayor? Even if the promoters work hard, unless top management is passionate about the promotion it's not going to work.
+
+One exceptional case is the governor of "Fukuoka":http://en.wikipedia.org/wiki/Fukuoka.  A rival of Shimane :). For some reason he really loves Ruby. I'm living her and he's in Fukuoka. There's no relation. But Fukuoka is committed to using Ruby and they have organized the Fukuoka award and they have the "Ruby Business Commons":http://rubybizcommons.jp/en/ headquarters.  
+
+Here is a noodle called Ruby on Matsue Ramen. The maker of this Ramen sent me an email. The maker of this has no connection to Ruby, but he has a local businesses and wants to promote Ruby. He offered to include the Ruby logo on this noodle to contribute to sales. It's remarkable. This person volunteered to make Ruby Ramen for us without us asking. 
+
+And thanks to all the efforts of all these people, Ruby is exciting right now.
+
+I have been engaged in Ruby for 17 years and i think it's making sense for me to be passionate about Ruby. But many others are passionate about Ruby. I don't understand why, but Ruby is loved. Love is driving Ruby. 
+
+With the support of so many people, we are able to hold this Ruby World conference for the next two days. And I hope that for these days we can fully discuss the benefits of Ruby so that it will be helpful to what you do. 17 years ago I was the only one person who used Ruby. But over 17 years, people who are using Ruby  (more than 1,000,000 people) in university Research, implemented in IT industry, etc.
+
+
+Some of the things Ruby users are discussing are quite inspiring. Without this conference we can't attract all of these great people to Matsue people. We should take advantage of this opportunity.  
+
+Ruby is supported by passion. And by love.
+
+One more thing: The Ruby Association which I chair provides Ruby programmer certification. We have this announcement today that we have created a new "Gold" certification for Ruby programmers. This requires a higher level of skill. If you go to the "Ruby Association home page":http://www.ruby-assn.org/en/, there is a press announcement which explains what you need to do to be qualified as Ruby "Gold" certified.
+
+Thank you.

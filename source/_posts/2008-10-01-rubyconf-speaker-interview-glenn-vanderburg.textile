@@ -1,0 +1,57 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgU3BlYWtlciBJbnRlcnZpZXc6IEdsZW5uIFZhbmRlcmJ1cmc=
+enki_id: 4663
+---
+"RubyConf":http://rubyconf.org is coming soon!  We're sold out but you can still get on the waiting list.
+
+I've been doing a "series of interviews with speakers":http://chadfowler.com/rubyconf-speaker-interviews leading up to the conference.
+
+This time is "Glenn Vanderburg":http://vanderburg.org/.  Glenn is a long time Rubyist and dynamic languages fan. He's also Chief Scientist  at "Relevance":http://thinkrelevance.com/. 
+
+
+h2. There was a time when Java was cool and new like Ruby is now. I remember drawing criticism for thinking it was "ready for the Enterprise".  You wrote one of the first books about Java. How does the current state of affairs with Ruby and dynamic language adoption differ from what was happening with Java back then?
+
+
+The objections to Ruby seem a bit more mature than the objections to Java were.  I remember a lot of misunderstanding about Java being "interpreted", and about GC being "inherently slow".  I also remember people who were outraged that they couldn't turn the safety features off, like array bounds checking.  Those are all rather ridiculous arguments, but many people clung to them for years.
+
+I'm pleased that almost nobody objects to Ruby being open-source.  It's also great that so many people understand that "fast enough" is fast enough, and that you get a lot more benefit from architectural choices than you do from raw language speed.  Finally, the Ruby language itself is more mature and stable than Java was then, and that helps a lot.
+
+Nevertheless, there's one big problem Ruby has now that Java had in 1997: the language implementation is too simplistic, and there's a lot of room for improvement.
+
+
+h2. What would you say are the top 2 or 3 features the Ruby world could steal from existing VMs?
+
+
+Two of them are already widely understood:  bytecode interpretation (which all the new VM projects use) and top-notch garbage collection.  But the really big win will come from dynamic optimization based on type feedback, including heavy use of method inlining.  JRuby is already getting some of that benefit from the JVM, and I suspect GemStone is using the same techniques to make MagLev fast.
+
+Saying "Ruby is slow, but it's fast enough" is true for a lot of the things we're doing today, but it's also a bit of a cop out.  There are definitely tasks for which we'd love to use Ruby, but it isn't fast enough.  The primary motivation for my talk is to spread knowledge about type feedback into the Ruby community.  It's always been a little hard to get information about how the JVM and Strongtalk work, and they have a reputation for being extremely complicated black magic.  Many of the details are quite complex, but the basic principles are actually rather simple.  My hope is that a few people with good C and assembly language skills will have their eyes opened to the possibilities and start making contributions to the Ruby VM projects.
+
+
+h2. What do you think about Google's new V8 VM?  Do you think there's much to learn from it? Will we see a serious Ruby implementation on it?
+
+
+It's fascinating technology, but (from what I've seen so far) not quite as nice a fit for Ruby as I was hoping for.  The v8 team kept a tight focus on exactly what JavaScript needed.  The result is that it will be harder to implement Ruby on it than I hoped, and the benefits will be less than I was expecting.  It's a great JavaScript VM, though.
+
+What's actually more interesting to me is that 2008 seems to be the year of JavaScript VMs.  SquirrelFish, TraceMonkey, and v8 are all making big advances in JavaScript performance, using different techniques.  And they seem to have begun a competition similar to the WebKit/Opera Acid3 race from earlier this year.  That kind of thing might seem like a sideshow, but it highlights core technical issues that are usually hidden from view, and that kind of competition ends up raising standards across the board.  JavaScript will certainly benefit from this competition, but it won't stop there.  In the process, previously obscure technical details (not least of which is the fact that a language can be as dynamic as JavaScript and still be fast) will become widely known, and new tricks may be discovered.  Ruby and other dynamic languages will certainly benefit from that.
+
+
+h2. Do you think any of the in-progress Ruby implementations is poised to be the big one that takes over the Ruby world? Why or why not?
+
+
+First of all, I don't think we have to have a "big one that takes over."  Having multiple VMs with different tradeoffs seems to me to be a tremendous advantage for our community, as long as they all pass the same, thorough spec suite.  JRuby fills a very important niche and does it really well.  There's some fantastic work in YARV.  I fully expect IronRuby to be a big success among people with an investment in the .NET platform.  And all the signs are that MagLev will be an awesome option for those who need either commercial support, lots of raw speed, and/or a terrific, scalable persistence system.
+
+That said, I'm watching Rubinius with great interest.  I was initially skeptical of the project; it seemed so risky to try to build everything from scratch, from the bottom all the way up through the core libraries.  All of the state-of-the-art dynamic language VMs in existence were done by heavily funded large teams of experts.  I'm more optimistic today.  For one thing, Rubinius has more funding than I realized.  Also, I see now that Evan Phoenix has two advantages those earlier teams didn't have: TDD (which he's using even on the C++ part of Rubinius) and LLVM, which already has code generation and optimization support for many different machine architectures.
+
+Evan likes to say that because most of Rubinius is written in Ruby, making Rubinius acceptably fast will have to be done in the low-level VM mechanisms, which will benefit all Ruby code, not just the core libraries.  That's exactly what drove the advances we see today in the Self, Java, and various Smalltalk VMs -- the core libraries (and in some cases most of the languages themselves) were written in the target language, so the VM became the only avenue for really speeding things up.
+
+But there's a third advantage Rubinius *could* have, but doesn't, at least not yet.  Most of the Rubinius contributors are working in the Ruby parts of the system, which is probably where the priority needs to be right now.  But soon, the focus will need to shift to the C++ VM.  I'm hopeful that others will chip in at that level before too long, and if my talk gets some people started on that, I'll be thrilled.
+
+
+h2. What are you passionate about outside of computer programming?
+
+
+The most truthful answer is rather common, and most people won't find it too interesting: my family and my faith.
+
+I'm constantly reading and enjoying music -- in both cases, from many genres.  I read a broad mix of science, history, theology, and literature.  My favorite author is John McPhee, because he explores topics that seem dull and mundane on the surface, and reveals the fascination within.  That's a great match for me, because I've learned that *anything* is interesting once you begin to understand it.

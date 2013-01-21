@@ -1,0 +1,66 @@
+---
+layout: post
+title: !binary |-
+  SG9zdGlsZSBFbnZpcm9ubWVudCBmb3IgVVMgUHJvZ3JhbW1lcnMK
+enki_id: 4570
+---
+Taking a break from finishing up the first draft of <a
+href="http://pragmaticprogrammer.com/titles/mjwti/index.html">my book</a>,
+I noticed today that Tim O&#8217;Reilly <a
+href="http://radar.oreilly.com/archives/2005/05/tech_a_hostile.html">posted
+a link</a> to an insightful discussion about today&#8217;s &quot;hostile
+tech environment&quot;.
+
+<p>
+I couldn&#8217;t help but chime in with a few comments of my own. What
+started as a quick paragraph turned into a small essay, so I&#8217;m cross
+posting here.
+</p>
+<p>
+I like the phrase &quot;hostile environment&quot; in this context. The
+planet Earth was a hostile environment for dinosaurs before they all died,
+too.
+</p>
+<hr size="1"></hr><p>
+These sentiments are remarkably similar to those expressed in my upcoming
+<a href="http://pragmaticprogrammer.com/titles/mjwti/index.html">book</a>.
+While predators such as <a
+href="http://www.cnn.com/CNN/Programs/lou.dobbs.tonight/">Lou Dobbs</a>
+feed on the fears of Americans, urging them to blame their companies, their
+government, and their offshore competitors&#8212;anyone but
+themselves&#8212;as an industry we&#8217;re missing the point. There is no
+&quot;bad guy&quot;. Economic forces are changing the face of the software
+industry. As programmers, if we continue to fail to hang on to our
+traditional jobs, we have no one to blame but ourselves.
+</p>
+<p>
+Jonathan Shapiro is right to doubt the viability of tariffs and other
+government intervention as a &quot;long-haul&quot; solution. His
+suggestions are powerful and relevant. However, I find it disturbing that
+his solutions center on wide sweeping political and economic change rather
+than change from the bottom up.
+</p>
+<p>
+His message implies that the changes that need to take place are not things
+that each of us can make personally. The only individual course of
+<b>action</b> proposed is the formation of unions while we lobby against
+the practices of our employers. As he said, it&#8217;s in the
+employers&#8217; best interest to hire at the lowest price. Ultimately, is
+it not also in the *economy&#8217;s* best interest?
+</p>
+<p>
+If we&#8217;re in reinvention mode, why not start with ourselves?
+&quot;Success&quot; in the software profession can&#8217;t continue to be
+defined as it has been in the past. Shapiro&#8217;s message loses
+consistency at the end. It&#8217;s as if he&#8217;s urging programmers to
+hang on for dear life while the economy sorts itself out. It&#8217;s this
+kind of lazy, &quot;Someone else will do it for me&quot; attitude that has
+put livelihoods at risk.
+</p>
+<p>
+We need to take control of our careers. And, that doesn&#8217;t mean
+fighting over pennies and trying to win our old jobs back. If the
+&quot;value isn&#8217;t in the software&quot;, then fighting for your old
+programmer job is a sure-to-be-bloody battle over an increasingly
+insigificant prize.
+</p>

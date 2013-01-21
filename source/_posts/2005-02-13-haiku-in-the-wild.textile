@@ -1,0 +1,53 @@
+---
+layout: post
+title: !binary |-
+  SGFpa3UgSW4gVGhlIFdpbGQK
+enki_id: 4486
+---
+Tonight, <a href="http://redhanded.hobix.com">Why</a> posted some lovely
+Ruby <a href="http://redhanded.hobix.com/bits/haikuRb.html">haiku</a>,
+which reminded me of a program I&#8217;ve been dreaming of writing for a
+few years now. So, I sat down and started it.
+
+<p>
+It takes a body of text, and attempts to automatically extract random haiku
+from it (&quot;haiku&quot; in this case being mis-defined as any text that
+conforms to the 5/7/5 syllable pattern).
+</p>
+<p>
+I ran it against the raw text of my weblog and generated some really heavy
+stuff, man:
+</p>
+<pre>
+  Time is running out.
+  If you own a home (or rent?)
+  The answer is &quot;no&quot;.
+
+  Climbing on my head!
+  Do you have an idea?
+  Don't do crack cocaine.
+
+  &quot;weird cryptic syntax&quot;?
+  would take a *lot* of practice.
+  Don't even
+  try it.
+
+  The answer is &quot;no&quot;.
+  Code Generation is New?
+  (A week late, I know.)
+</pre>
+<p>
+The program uses <a
+href="http://www.pressure.to/ruby/">Lingua::EN::Sentence and
+Lingua::EN::Syllable</a>, which made it completely trivial to write.
+</p>
+<p>
+I can imagine, given a sufficiently large body of input text and a <a
+href="http://www.chadfowler.com/index.cgi/Computing/LatentSemanticIndexing.rdoc">Latent
+Semantic Indexing</a> search engine, you could make some super-cheesey
+poetry with it.
+</p>
+<p>
+The code is <a href="http://www.chadfowler.com/haiku.rb.html">here</a> if
+you&#8217;re interested.
+</p>

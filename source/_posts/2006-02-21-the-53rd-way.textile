@@ -1,0 +1,17 @@
+---
+layout: post
+title: !binary |-
+  VGhlIDUzcmQgV2F5Cg==
+enki_id: 4563
+---
+From <a href="http://www.outofhanwell.com/">Out of Hanwell</a> comes <a
+href="http://www.outofhanwell.com/blog/index.php?title=amazon_promotion_the_53rd_way_to_save_yo&more=1&c=1&tb=1&pb=1">the
+53rd Way</a> to save your job.
+
+<p>
+<img
+src="http://www.chadfowler.com/images/Amazons-53rd-way-to-save-your-job-2.jpg">
+</p>
+<p>
+Why didn&#8217;t <em>I</em> think of that?!
+</p>

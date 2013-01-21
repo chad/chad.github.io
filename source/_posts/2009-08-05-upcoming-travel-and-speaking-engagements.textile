@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  VXBjb21pbmcgVHJhdmVsIGFuZCBTcGVha2luZyBFbmdhZ2VtZW50cyA=
+enki_id: 4693
+---
+I gave myself a little break this spring and early summer, but the pace is about to pick up again.  The rest of the year is looking pretty busy. Here's what the rest of this year looks like so far. If you're a reader of this weblog, consider stopping by to say hello. 
+
+* Private training, San Antonio, TX - Aug 10-13
+* "Rails Studio":http://pragmaticstudio.com/rails (with "Dave Thomas":http://pragmaticbookshelf.com) - Denver, CO - Aug 19-21 (almost sold out!)
+* Attending "iPhone Studio":http://pragmaticstudio.com/iphone (yay!) - Denver, CO - Aug 24-28 (also almost sold out!)
+* "AgileRX/RubyRX":http://www.nfjsone.com/conference/washington_dc/2009/09/rubyrx/event_about - Reston, VA - Sept 10-11
+* "Indian Summer Half Marathon":http://indiansummerhalf.com/ - Boulder, CO - Sept 13
+* "Aloha on Rails":http://www.alohaonrails.com/ - Oahu, Hawaii - Oct 4-6
+* "Rails Summit Latin America":http://www.railssummit.com.br/ - São Paulo, Brazil - Oct 13-14
+* "Advanced Ruby Studio":http://pragmaticstudio.com/ruby - Denver, CO, Oct 19-21
+* "Kungfu Rails":http://kungfurails.com/ - Shanghai, China - Oct 24
+* "RubyConf":http://rubyconf.org - San Franciso, CA - Nov 19-21
+
+
+

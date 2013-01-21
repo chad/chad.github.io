@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  RW51bWVyYWJsZSNpbmplY3Rpbmc=
+enki_id: 4625
+---
+I saw this while browsing the Merb source code, and despite the bad variable names thought it was pretty nice:
+
+  module Enumerable
+    def injecting(s)
+      inject(s) do |k, i|
+        yield(k, i); k
+      end
+    end
+  end
+
+Use like:
+
+  <pre>['o', 'hai', 'rly', 'srsly'].injecting({}) {|accumulator, value| accumulator[value] = value.size} 
+            # => {"srsly"=>5, "o"=>1, "hai"=>3, "rly"=>3}</pre>
+
+Simple pleasures.  I find it increasingly hard to live without things like this, Object#returning, and Symbol#to_proc as I start to use them.  "After all...":http://www.paulgraham.com/power.html

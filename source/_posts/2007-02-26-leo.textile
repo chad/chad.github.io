@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  TGVvIQ==
+enki_id: 4611
+---
+Everyone's favorite TV nerd, "Leo Laporte":http://leoville.vox.com/library/post/tumbl%C3%A9o.html has a "tumblelog":http://tumbleo.com.
+
+As a Leo fan myself, I was excited to see that he pointed to our humble tumblelog, "project.ioni.st":http://project.ioni.st/.  Welcome to the wonderful world of tumblelogging, Leo.
+
+What's even cooler is that Leo is doing his tumblelogging via a new service called "Tumblr":http://tumblr.com.  Tumblr is apparently "also inspired by":http://tumblr.com/faqs project.ioni.st. 
+
+Tumblr just may get a lot of people to finally get going with a tumblelog.  Just today, "Pat Eyler":http://on-ruby.blogspot.com start his own for "On Ruby":http://on-ruby.tumblr.com/, which is sure to be a source of interesting Ruby info.

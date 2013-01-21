@@ -1,0 +1,23 @@
+---
+layout: post
+title: !binary |-
+  Q29kaW5nIGluIFNvbmF0YSBBbGxlZ3JvIEZvcm0=
+enki_id: 4672
+---
+I used to think I would end up as a composer of "classical music":http://everything2.com/e2node/20th%2520Century%2520Classical%2520Music. I studied with one of my favorite composers, "Kamran Ince":http://kamranince.com. 
+
+The process of composing music is very similar to the process of writing software. In fact, my brain has trouble distinguishing between the two disciplines sometimes.  One thing that's very similar between the two is that they are both abstract and in both cases you start with a blank page (though the "page" for software is typically in an editor on your computer screen).
+
+More than once in my careers (music and software), this has led me to a dilemma: I get stuck because I'm overwhelmed by the limitless possibilities.
+
+This happened to me once as a composer. I was experiencing a sort of writer's block. So Kamran suggested something bizarre: write a short piece in "Sonata Allegro form":http://en.wikipedia.org/wiki/Sonata_form.
+
+While Sonata Allegro form is an often-used structure for compositions, there aren't many living composers who use it. It's old fashioned. So writing New Music in this form is a strange proposition.  Kamran framed it as a one-week exercise to stop the writer's block, and I figured writing _something_ would be better than writing nothing, so I went with it.
+
+What flowed from there was a  25 minute piece for violin, cello, clarinet, and piano (the same instrumentation as Messiaen's "Quartet for the End of Time":http://www-rcf.usc.edu/~echew/performances/messiaen-qtet.html, which was also an inspiration for the piece) in five movements. As a young composer, this was pretty epic. It was by far the best and most inspired piece of music I had written to date. The whole thing wasn't in Sonata Allegro, of course. Just one movement (actually just the beginning of the movement). But the constraint had seeded my creativity (how to make it interesting while working in an outdated framework) and had, best of all, removed any _fear_ I had about starting.
+
+I've done similar things with software since then. It works just as well.
+
+I was reminded of this today while chatting with Alan Francis, when he mentioned writing Java code with the rule that you can use "no braces":http://cardboardsoftware.com/2007/5/27/redefining-simple.html except where Java forces you to for class and method definitions.
+
+The interesting thing here is that not only does this constraint help to solve the "too abstract" problem but it (arguably) leads to interesting (and maybe better) design choices.

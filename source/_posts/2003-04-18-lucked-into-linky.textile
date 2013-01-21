@@ -1,0 +1,27 @@
+---
+layout: post
+title: !binary |-
+  THVja2VkIGludG8gTGlua3k=
+enki_id: 4559
+---
+I just switched to using Phoenix (<a
+href="http://www.mozilla.org/projects/phoenix">www.mozilla.org/projects/phoenix</a>)
+as my primary browser, and decided to go hunting for some extensions last
+night. I hit gold: Linky (<a
+href="http://linky.mozdev.org/">linky.mozdev.org/</a>), the Mozilla/Phoenix
+extension of my dreams.
+
+<p>
+With Linky, you can&#8212;among other things&#8212;select an area of text
+and open any selected links in separate browser tabs. And, with Phoenix,
+the default new-tab behaviour is to open each tab in the background. So,
+when I start my browsing sessions now, I can select the links down the
+right-hand side of this page and&#8212;with one command&#8212;open them all
+simultaneously in separate tabs. I couldn&#8217;t have asked for an
+extension to better match my browsing behaviour. (I actually use my own
+website as a bookmark list for sites I regularly visit).
+</p>
+<p>
+I might be the only person I know who would get excited about this feature,
+but I thought I&#8217;d share it just in case.
+</p>

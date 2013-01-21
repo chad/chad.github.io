@@ -1,0 +1,7 @@
+---
+layout: post
+title: !binary |-
+  U3BlYWtpbmc=
+enki_id: 4589
+---
+<a href='#' onclick='alert("Email chad at this domain");return false;'>Contact Me</a> if you'd like me to speak at your conference or to your user group.  I love to speak to new groups and to meet and learn from other software developers.  With my training and consulting schedule, I may even already have a trip planned to your area.

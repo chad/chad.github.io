@@ -1,0 +1,37 @@
+---
+layout: post
+title: !binary |-
+  QmlnIElzIHRoZSBOZXcgU21hbGwK
+enki_id: 4454
+---
+<a href="http://steveakers.blogspot.com">Steve Akers</a> is <a
+href="http://steveakers.blogspot.com/2005/10/we-define-web-20.html">riffing</a>
+on <a
+href="http://headrush.typepad.com/creating_passionate_users/2005/10/the_best_thing_.html">Kathy
+Sierra's "The best thing about Web 2.0" post</a>. &quot;We define Web
+2.0&quot;, he echoes. And that&#8217;s a good thing, because it makes those
+of us who want to do &quot;Web 2.0&quot; get creative in our quests to
+achieve it.
+
+<p>
+What&#8217;s much more interesting than the specific Web 2.0 discussion to
+me is that Steve draws some surprisingly hip ideas from one of the most
+corporate of corporations, General Electric. Not only are the lessons
+relevant, but they&#8217;re uniquely &quot;big&quot;. You couldn&#8217;t
+learn them in the same way from a small company.
+</p>
+<p>
+With the buzz all around <a href="http://37signals.com/svn">small teams and
+small software</a> these days, it would be easy to forget the wisdom to be
+gleaned from years of big companies. It would be easy to forget that some
+software <em>should</em> be big, and that big isn&#8217;t <em>always</em>
+bad. And though they&#8217;re easy targets for criticism, it would be easy
+to miss the fact that there is a lot to be learned from experience in a big
+company.
+</p>
+<p>
+If you&#8217;re slaving away in such a company now, try tearing down some
+of the Dilbert cartoons and looking at what the company does <em>right</em>
+for a change. You may find that some of the stagnation you perceive is a
+direct result of your own cynicism.
+</p>

@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  V2VsY29tZSB0byBCZW4gU2NvZmllbGQgLSBSYWlsc0NvbmYgQ28tQ2hhaXI=
+enki_id: 4696
+---
+Today we "opened the RailsConf Call For Proposals":http://railsconf.com. So we soon begin the several-month process of putting together the program for RailsConf 2010 (in Baltimore!).
+
+I'm particularly excited to start the process this year, because we've made a very positive change to the team. We're bringing on "Ben Scofield":http://twitter.com/bscofield as program co-chair this year. In case you don't know Ben, he's the author of "Practical REST on Rails 2 Projects":http://www.amazon.com/Practical-REST-Rails-Projects/dp/1590599942/ref=sr_1_1?ie=UTF8&s=books&qid=1256683302&sr=8-1, "Technology Director at Viget Labs":http://www.viget.com/about/team/bscofield, organizer of the roving "Developer Day":http://developer-day.com/ conferences, and a "fantastic speaker":http://speakerrate.com/speakers/44-ben-scofield (he helped created "speakerrate.com":http://speakerrate.com too).
+
+!http://assets.en.oreilly.com/1/eventprovider/1/_@user_1467.jpg!
+
+"So please join us":http://twitter.com/?status=@bscofield%20 in welcoming Ben, and start working on those RailsConf proposals! 
+
+See you in Baltimore!

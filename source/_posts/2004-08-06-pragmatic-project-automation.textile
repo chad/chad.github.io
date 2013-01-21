@@ -1,0 +1,71 @@
+---
+layout: post
+title: !binary |-
+  UHJhZ21hdGljIFByb2plY3QgQXV0b21hdGlvbgo=
+enki_id: 4539
+---
+For the past week, since I returned from <a
+href="http://conferences.oreillynet.com/os2004/">OSCON</a>, I&#8217;ve been
+reading the last book in the <a
+href="http://www.pragmaticprogrammer.com/starter_kit/index.html">Pragmatic
+Starter Kit</a> series. I&#8217;m not quite finished with it yet, but I
+thought I&#8217;d post my thoughts so far. This book finishes off the
+<em>definitive</em> guide for a team that wants to do software development
+<em>right</em>.
+
+<p>
+<img src="http://chadfowler.com/images/sk_auto_small.jpg">
+</p>
+<p>
+The first two books, <a
+href="http://www.pragmaticprogrammer.com/starter_kit/vc/index.html">Pragmatic
+Version Control</a> and <a
+href="http://www.pragmaticprogrammer.com/starter_kit/ut/index.html">Pragmatic
+Unit Testing</a>, lay the foundation for repeatable, reproducible, and
+(surprise surprise) automatable software development processes. <a
+href="http://www.clarkware.com/cgi/blosxom">Mike Clark's</a> <a
+href="http://www.pragmaticautomation.com/cgi-bin/pragauto.cgi">Pragmatic
+Project Automation</a> puts it all together in a how-to guide that should
+serve as a blueprint for any self-respecting team.
+</p>
+<p>
+The Starter Kit takes what&#8217;s inarguably right about the <a
+href="http://agilealliance.org/home">Agile</a> approach to programming and
+strips out all of the confrontational, sometimes scary,
+methodology-specific stuff, leaving readers with a step by step list of
+practices that can and should be applied to any project. The books&#8217;
+examples focus on the use of <a
+href="http://www.gnu.org/philosophy/philosophy.html">free</a> tools, mostly
+in Java, but the practices laid out transcend language and environment and
+can be applied to nearly any software development environment.
+</p>
+<p>
+I especially enjoyed the step-by-step guide on setting up CruiseControl, as
+it&#8217;s been a bit finicky for me in the past. And, I love some of the
+creative ways that Mike lays out to stay in touch with your automated
+processes (RSS, SMS, lava lamps ;).
+</p>
+<p>
+In general, if you&#8217;re an experienced and conscientious software
+developer, you&#8217;re probably not going to find a lot of surprising
+advice in the Start Kit. What&#8217;s unique is the fact that it&#8217;s
+all pulled together into one cohesive package and laid out in such a way
+that it&#8217;s a no brainer to follow (not to mention entertaining to
+read).
+</p>
+<p>
+If you&#8217;re a software developer or (especially) a manager of software
+developers, you should plan to buy every book in this series. If
+you&#8217;re using Java on your projects, you should <a
+href="http://pragmaticprogrammer.com/shopsite_sc/store/html/index.html">go
+buy them</a> right now. I&#8217;ve been pushing a lot of these ideas for
+years with geographically distributed teams, and now that this series
+exists, it (with <a
+href="http://www.pragmaticprogrammer.com/ppbook/index.shtml">The Pragmatic
+Programmer</a> and Martin Fowler&#8217;s <a
+href="http://martinfowler.com/books.html#refactoring">Refactoring</a>) will
+be the first thing I give to a new team member.
+</p>
+<p>
+&quot;<em>This</em> is the way we&#8217;re going to do it.&quot;
+</p>

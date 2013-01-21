@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIENGUA==
+enki_id: 4636
+---
+The "RailsConf 2008 Call for Presentations":http://en.oreilly.com/rails2008/public/cfp/6 is now open.  Proposals need to be in by December 13th.  
+
+This year, we want to change the flavor a bit.  In the past two years, Rails was changing so rapidly that it was hard to keep up with what the state of the art from week to week.
+
+  We’re specifically looking for a large number of advanced-level proposals the 2008 event. With so many excellent books and online resources available, we think   
+  the RailsConf audience would benefit from a larger helping of hardcore technical topics, particularly around design or coding techniques, testing tools, and 
+  deployment techniques.

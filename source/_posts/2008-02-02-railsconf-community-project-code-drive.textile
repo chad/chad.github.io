@@ -1,0 +1,17 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mOiBDb21tdW5pdHkgUHJvamVjdCBDb2RlLURyaXZl
+enki_id: 4644
+---
+<i>I'm always looking for ways to get humans together for meaningful (potentially lasting) interactions at our conferences.  So we're trying something new this year during the tutorial day.  It happens on the first (or 0th?) day of the conference on purpose: so the work can continue for the rest of the conference.  My hope is to bring project owners/committers together with aspiring contributors and bring more people into the fold of projects which need help.  Think of it as a room full of code sprints happening all at once.  Here's the description:</i>
+
++Project Owners+: Do you have a project you'd like to work with other people on?  Maybe it's an established Open Source project.  Maybe it's a new idea.  Come find like-minded developers and spend the day hacking together.
+
++Developers+: Are you looking to get involved in an Open Source project but need a bootstrapping session to get you started?  Looking for chances to meet other developers and establish collaborative working relationships? Looking to learn by collaborating with others?  Come find a project and spend the day sitting side-by-side with one or more of its developers learning the ropes and contributing code.
+
+"RailsConf":http://railsconf.org is the largest physical gathering of Ruby and Rails developers internationally.  Let's take advantage of all being in one place at the same time AND take the chance to give something back to the projects and community which we so greatly benefit from.
+
+In the morning, project leaders and representatives will have a chance to make a short pitch for their projects and the work they hope to get done.  For the rest of the day, groups will self-organize and write code!  Roll up your sleeves and prepare to learn, teach, and most importantly, contribute.
+
+Go to "this page":http://wiki.oreillynet.com/railsconf2008/index.cgi?CommunityProjectCodeDrive and add your project or idea to the list of projects likely to be active in the Code Drive.

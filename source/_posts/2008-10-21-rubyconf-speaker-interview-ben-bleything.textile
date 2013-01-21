@@ -1,0 +1,91 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgU3BlYWtlciBJbnRlcnZpZXc6IEJlbiBCbGV5dGhpbmc=
+enki_id: 4664
+---
+"RubyConf":http://rubyconf.org is only a little over 2 weeks away. Time flies!
+
+I've been doing a "series of interviews with speakers":http://chadfowler.com/rubyconf-speaker-interviews leading up to the conference.
+
+This time is "Ben Bleything":http://blog.bleything.net/.  Ben is going to be speaking at RubyConf about "Ruby and Music":http://rubyconf.org/talks/83 
+
+
+h2. What are you currently doing with Ruby and music?
+
+This is going to be a recurring theme, so I'll get it out of the way
+here.  I think of myself more as a toolsmith than an actual creator.
+I'm not doing anything with Ruby and music per se... I'm trying to
+create tools for other people to use.
+
+My creativity manifests in such a way that I'm actually pretty bad at
+creating "art".  I'm a semi-failed musician, and I don't have any
+illusions about programming being the path to making sweet, sweet music.
+I just think it's an interesting problem to solve.
+
+I have this vision of showing up at RubyConf in 2010 and having people
+using the stuff that Giles and Yossef and myself and others create to
+make some rad music.
+
+h2. You spoke about Ruby and electronics last year.  How did you get into electronics?  What got you excited about it?
+
+I've been into electronics since I was 12 or 13.  I was the kid who
+always took stuff apart.  I started frequenting my neighborhood Radio
+Shack around 14, building little lighty-uppy things and noisemakers and
+the like.  I grew bored of that pretty quickly, but I got back into it
+after college around the time that the Arduino came out.
+
+One of the things that draws me to programming in general is the feeling
+of empowerment.  It's really cool to be able to make a computer do
+your nefarious bidding.  Now apply that feeling to a physical device
+and you're talking about a whole different level of that empowerment.
+
+I've said before that I feel like I was born 40 years too late... that I
+should have been hacking in the '60s.  Programming for microcontrollers
+is, in a lot of ways, as close as I can get to that.  Starting with bare
+metal and building an application, even if it's as simple as blinking a
+light (the hello world of electronics) is deeply satisfying.
+
+h2. Being into electronics, have you ever tried to build your own electronic instrument or have the computer play a real instrument with motors?
+
+Not yet, no.  Both are interesting ideas but getting close to requiring
+actual musical knowledge, and that's where I start to get scared :)
+
+I am playing around with hooking up video game instruments (think Rock
+Band and Guitar Hero) to a computer.  This sounds pretty mundane, and I
+guess that it is... but the trick is that I'll be passing those through
+Ruby in order to provide the instruments with a bit more intelligence.
+
+I guess the bottom line is that I'm much more interested in building
+systems (hardware or software) that more experienced musicians can use
+as tools... which brings us back to the toolsmith point above.
+
+h2. Can computers generate beautiful music?  Dance beats seem easy. What about jazz improvisations?  Classical music?  Pop songs?
+
+I'm sure that a computer *can* generate beautiful music, but I think it
+would be mostly coincidental.  I'm still undecided on whether you can
+program a computer to *always* generate beautiful music.  It surely
+happens by chance sometimes, though.
+
+I suspect that there's interesting results waiting down the path of
+doing things like markov chaining with music instead of text.  Analyzing
+and chaining music is a significantly more complex problem than doing it
+with words, but my gut says with the right corpus, you could get some
+pretty interesting stuff.
+
+Fundamentally, though, I think music has to have soul to be truly great.
+I want everyone to try to prove me wrong, though!
+
+h2. Ruby, electronics, and music is a lot of ground to cover.  Are you passionate and excited about anything else in particular outside of these?
+
+I'm passionate and excited about everything that catches my interest,
+honestly.  I've just chosen not to focus any energy on anything else
+right now.  I want to find ways to share my experience with others... to
+get people excited about doing the things they thought were too hard.
+
+My electronics presentation last year is a prime example of that.  This
+stuff isn't difficult, it's just intimidating.  If I can lower the
+barrier to entry, either by educating or providing tools, then I feel
+like I've done my job.  I'm really hoping that my talk this year will do
+the same for the people interested in music.
+

@@ -1,0 +1,56 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIFNwZWFrZXIgSW50ZXJ2aWV3OiBNaWtlIFN1YmVsc2t5
+enki_id: 4681
+---
+Next up in my "series of RailsConf speaker interviews":http://chadfowler.com/railsconf-speaker-interviews is "Mike Subelsky":http://subelsky.com/, co-founder of "OtherInbox":http://otherinbox.com and avid "SproutCore":http://www.sproutcore.com/ developer. (SproutCore was used, among other things, to develop Apple's "MobileMe":http://me.com UI and presents a Cocoa-like environment for developing Rich browser-based user interfaces.)
+
+Mike will be presenting both a "tutorial on SproutCore development and a session on cloud computing gotchas":http://en.oreilly.com/rails2009/public/schedule/speaker/2233 at RailsConf in a couple of weeks.
+
+h2. How did OtherInbox get started? Was this your first startup? What were the hurdles in moving from consulting to product development?
+
+We wanted to solve our own email overload problem -- many people receive heavy volumes of "gray mail" or "bacn" and increasing volumes of more important email like receipts, social networking notifications, confirmations, etc.  The other founder of the company, "Joshua Baer":http://austinpreneur.com/, had the idea to build a product that would elegantly organize and make sense of this kind of mail, something we would use ourselves that would also help the average person.
+
+This was my first startup; I knew Josh from a project class we had taken together at Carnegie Mellon and was lucky that he invited me to be the cofounder.  I had been dabbling and freelancing as a Rails developer for the previous 18 months, and had always been hacking on side projects for my whole career.
+
+Coming from a consulting background, there have been two big hurdles:
+
+# I didn't expect product development to have such a different tempo than consulting projects. You live with your code much longer (so you end up maintaining your own legacy code, and don't have the next greenfield to look forward to), you have to deal more directly with the consequences of mistakes (there's no one to bail you out), and the risks are higher (because you don't know when or if your labors will pay off).  Thus there are many peaks and valleys of  happiness, and it's not always easy to tell if you are being successful.
+
+# When time and resources are so constrained, the development team has to become disciplined without sacrificing too much agility.  You can't rely on individual programming heroics to carry the day - otherwise you're guaranteed to burn out and get sloppy.  I haven't completely overcome this hurdle yet, but I'm reading everything about software development processes that I can get my hands on.  I've become a huge fan of Eric Ries' lean startup blog 
+"Lessons Learned":http://startuplessonslearned.blogspot.com/.
+
+h2. What makes SproutCore interesting and special to you?
+
+SproutCore lets you build real client-server applications, delegating a lot of GUI work to the client that servers currently perform (like rendering HTML views or serving up cached HTML pages).  The framework takes concepts that desktop developers have used for a long time and reimagines them for use in web applications.  For example, key-value observation and  bindings help you eliminate a lot of buggy, ugly glue code, saving a lot of time and aggravation).
+
+It's special to me because I think this technology has the potential to dramatically change application development in general.  The core team has a strong point of view about how Internet clients should be built, and how to make JavaScript and web browsers perform.  Writing SproutCore code reminds me of the feeling I got the first time I picked up a book about Rails -- "using these tools is making me a better programmer".
+
+Also, I've never liked the feel of Flash, and I love how SproutCore uses only web-native technologies to do amazing things in the browser.  "PaperCube":http://www.sproutcore.com/2009/03/25/papercube/ and "MobileMe":http://me.com/ are examples of SproutCore apps that feel like desktop apps, but don't require any plugins whatsoever.
+
+h2. Are SproutCore and Rails particularly well suited to one another? If so, how?
+
+I think so -- you can point a SproutCore client at any kind of server you want, but I think there's probably a sweet spot for these two frameworks. Rails makes it easy to write a robust, easily extensible REST API, which makes it really easy to write web clients.  SproutCore makes it easy to write robust, easily extensible web clients.
+
+In OtherInbox, our Rails app has to worry about doing is sending back JSON as quickly as possible.  The SproutCore app handles most of the user interaction (except for things like the signin page, which we're keeping server-based for now)  and focuses on making the browser experience as fast and fluid as possible.  We don't need to run as many web servers to keep up with our recent growth, because the servers aren't bogged down generating HTML or RJS updates.
+
+As a happy side-effect, since we built our app this way, someone has "reverse engineered":http://getsatisfaction.com/otherinbox/topics/android_app_coming_is_there_an_api 
+our JSON API to make an Android app.  
+
+Rails developers will also find many cultural similarities such as emphasis on unit testing and use of generators.
+
+h2. SproutCore's model marks an extreme departure from the way we traditionally do JavaScript/AJAX applications on Rails. Do you think SproutCore or its patterns will catch on generally or is it bettered toward to a specific niche?
+
+I think if you're building an app where you need to add just a little dynamic behavior here and there, SproutCore is too much.  Toolkits like Prototype and jQuery are much more appropriate.  But if you're making something like MobileMe, PaperCube, or "OtherInbox":http://oib.com/, where the users expect desktop-like fluidity or where the client software can't always rely on the server for everything, SproutCore will be a big win. 
+
+One thing that could help SproutCore catch on generally will be its support for multiple platforms.  The 1.0 release candidate includes "preliminary mobile support":http://www.sproutcore.com/2009/03/15/sproutcore-goes-mobile/, 
+so we should eventually be able to take the same code base and build it for web browsers, iPhones, Androids, etc., without having to change much.  I think that will really turn some heads.
+
+h2. SproutCore's learning curve appears to be pretty steep. What's the best way to get into it on day one?
+
+That's tough, because there aren't yet a lot of blogs or books to guide you.  One of my goals for 2009 is to start contributing more tutorials, because I was lucky to be mentored by "Erich Ocean":http://twitter.com/erichocean.  My best advice would be to get some familiarity with Cocoa because that will illuminate the parts of desktop development that are really different from web development.  If you understand 
+"key-value observation":http://developer.apple.com/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html, 
+"key-value coding":http://developer.apple.com/documentation/Cocoa/Conceptual/KeyValueCoding/KeyValueCoding.html, and bindings, it will be much easier to learn SproutCore.
+
+Also, the #sproutcore IRC channel and "Google group":http://groups.google.com/group/sproutcore are really friendly places to get guidance.
