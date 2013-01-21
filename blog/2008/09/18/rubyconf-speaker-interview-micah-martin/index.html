@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RubyConf Speaker Interview: Micah Martin - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="In preparation for this year&#8217;s RubyConf, I&#8217;m doing a series of interviews of some of the speakers.
+Today&#8217;s interview is with author &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chad.github.com/blog/2008/09/18/rubyconf-speaker-interview-micah-martin/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chad.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">RubyConf Speaker Interview: Micah Martin</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-18T00:00:00-04:00" pubdate data-updated="true">Sep 18<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In preparation for this year&#8217;s <a href="http://rubyconf.org">RubyConf</a>, I&#8217;m doing a <a href="http://chadfowler.com/rubyconf-speaker-interviews">series of interviews</a> of some of the speakers.</p>
+<p>Today&#8217;s interview is with author, speaker, and software craftsman, <a href="http://8thlight.com">Micah Martin of 8th Light</a> and formerly of <a href="http://www.objectmentor.com">Object Mentor</a>.  At RubyConf, Micah will be presenting <a href="http://rubyconf.org/talks/32">Ruby Kata and Sparring</a>.</p>
+<h2>You&#8217;re speaking about exercises to improve your coding skills.  From what I know about the ideas you will present, they are very tactical and performance-oriented in nature.  We don&#8217;t usually think of programming as a performance activity. Is it?</h2>
+<p>Sure it is.  When a novelist writes a novel, or a poet writes a poem, aren&#8217;t they performing?  Their work, their words, have to entertain.  They have to communicate ideas, and inspire their audience of readers.  When we write code, we have two audiences; the computer and our peers.  The computer is not a very demanding audience.  But our fellow programmers, they can be very harsh critics.  The code we write, if it&#8217;s good, will easily communicate ideas to our peers.  It will inspire understanding of our intent.  And if it&#8217;s really good, it will entertain.</p>
+<h2>Dave Thomas did a series of &#8220;code kata&#8221; many years ago. Is the kata portion of your talk a continuation of those same ideas?</h2>
+<p>Yeah, for the most part.  Unclebob did some as well.  It&#8217;s a great idea that hasn&#8217;t seemed to gain much traction.  It&#8217;s lack of popularity is understandable.  A skeptic might describe code kata as &#8220;writing useless code by yourself in your free time&#8221;.  Sounds fun eh?</p>
+<p>It&#8217;s the same in martial arts.  For the lower belt ranks, kata is rarely the activity of choice.  Most students would rather kick bags, break boards, and spar with other students.  Fortunately in martial arts, instructors influence students to practice kata over and over.  With time and experience, students learn to appreciate kata.  And once they catch the bug, you&#8217;ll find martial artists practicing kata outside of class whenever they get the chance.</p>
+<p>Code kata requires discipline, but it offers a deep well of knowledge about our craft.  More than most groups, I feel that Ruby programmers understand the need for good coding form, and are more likely to embrace kata.</p>
+<h2>Everyone who calls his- or herself a musician knows that practice is essential.  The same with sports and other disciplines. Why don&#8217;t many programmers practice?</h2>
+<p>I don&#8217;t know.  Maybe it&#8217;s because many programmers are programmers because it&#8217;s a good career yet they don&#8217;t really enjoy programming.  It&#8217;s hard for me to imagine any musicians who don&#8217;t enjoy music or athletes who don&#8217;t enjoy their sport.</p>
+<h2>Some call programming engineering.  Others call it art. Still others call it craft. You&#8217;re using a fighting metaphor. What&#8217;s your take on the subject?</h2>
+<p>Having devoted 5 years of my life to martial arts and more than that to software, I can&#8217;t help but to compare and contrast the two.  What I&#8217;ve found is that they&#8217;re not so unalike.  They both have a scientific foundation yet require copious practice to become proficient.  This is my definition of a craft.</p>
+<p>Sparring is one facet of martial arts that doesn&#8217;t seem to have a counterpart in software.  Sparring is great.  After all the devotion and practice you invest in your craft, you get to pit your skills against those of your peers and see who comes out on top.  It&#8217;s a tool to measure your progress and learn your weaknesses.  It&#8217;s also fun.  I hope to see more of this in software.</p>
+<h2>What are you passionate about outside of computer programming?</h2>
+<p>Besides my family and software, my passions tend to jump around.  Martial arts has been a significant passion of mine.  I really enjoy playing the guitar.  Recently I&#8217;ve been playing around with basic electronic components, building little robots.  Basketball and soccer keep me active.  And as soon as I can spare the time, I&#8217;ll learn to fly airplanes.</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-18T00:00:00-04:00" pubdate data-updated="true">Sep 18<span>th</span>, 2008</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/blog/2008/09/18/rubyconf-speaker-interview-micah-martin/" data-via="" data-counturl="http://chad.github.com/blog/2008/09/18/rubyconf-speaker-interview-micah-martin/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2008/09/16/rubyconf-speaker-interview-ben-scofield/" title="Previous Post: RubyConf Speaker Interview: Ben Scofield">&laquo; RubyConf Speaker Interview: Ben Scofield</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2008/09/23/rubyconf-speaker-interview-nathaniel-talbott/" title="Next Post: RubyConf Speaker Interview: Nathaniel Talbott">RubyConf Speaker Interview: Nathaniel Talbott &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

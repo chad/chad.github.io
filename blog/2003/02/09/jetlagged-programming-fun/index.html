@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Jetlagged Programming Fun - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="Today has been a strangely productive day considering the circumstances. You
+wouldn&#8217;t think so, but I really think it&#8217;s harder to shift 4 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chad.github.com/blog/2003/02/09/jetlagged-programming-fun/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chad.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Jetlagged Programming Fun</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-02-09T00:00:00-05:00" pubdate data-updated="true">Feb 9<span>th</span>, 2003</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Today has been a strangely productive day considering the circumstances.  You<br />
+wouldn&#8217;t think so, but I really think it&#8217;s harder to shift 4.5 hours in time<br />
+zone (<i>Budapest <del>&gt; Bangalore</i>) than 10.5 hours (<i><span class="caps">EST</span> &#8594; Bangalore</i>).  I&#8217;m entering my fourth night home, and I haven&#8217;t even gotten close to adjusting yet.  Last night, I decided to bite the bullet and pull an all-nighter.  I&#8217;m getting too old for that, so I made it until 7:30AM and then woke up at 10AM face down on the couch.  Anyway, I&#8217;m dead tired and ready to sleep at a decent hour, so <b>Mission Accomplished!</b><br />
+<P><br />
+To pass the time during the day, I&#8217;ve been working on a Ruby library that will<br />
+help me explore my infatuation with the abstract idea of &#8220;executable documentation&#8221;.  I won&#8217;t bother you with a description until it&#8217;s usable (since there&#8217;s a large chance I won&#8217;t ever finish it).<br />
+<P><br />
+I&#8217;ve read the results of some studies (which I couldn&#8217;t locate if my life<br />
+dependend on it right now) on sleep loss which say that your IQ drops <b>n%</b> when you are sleep deprived, where <b>n</b> == something signficant.  Last night and today, I&#8217;ve been living proof.  I&#8217;ve been implementing features intended for one object on an entirely different object, doing some really strange things with coupling between classes that I would never do when I&#8217;m lucid (<i>worse</i> than the old <font color="blue">names[i] = name; addresses[i] = address;</font> parrallel array type of thing), and am at something like a 50% defect rate when it comes to typos.<br />
+<P><br />
+Despite all this, with my head nodding forward and my eyes closing, I&#8217;ve got one crutch that keeps me going.  I&#8217;ve been doing test first design (or &#8220;<span class="caps">TFD</span>&#8221;, as the Russian Orthodox Church of XP prefers it to be called), so I start with a blank test case and then alternatively add assertions that fail and code that makes them work until I&#8217;m done.  This is nothing new, of course.  There&#8217;s even a <a href="">book</a> specifically about how to do this, now.  But, I&#8217;ve never tried to do it when I haven&#8217;t slept.  I&#8217;ve always enjoyed test first programming</del>-not so much because I&#8217;m supposed to or because of some idealistic notion that it&#8217;s my duty as a programmer.  But, because it&#8217;s fun and rewarding.  I mentioned in a recent post that I have an attention span deficit.  <span class="caps">TFD</span> is an ultra-iterative process built on small victory after small victory.  It&#8217;s perfect for a scattered person like me.  Now, I can happily go to bed with a sense of accomplishment:<br />
+<pre><br />
+chad@localhost htmldb]$ ruby html/test/tc_db.rb<br />
+Loaded suite html/test/tc_db<br />
+Started<br />
+&#8230;&#8230;&#8230;.<br />
+Finished in 0.117905 seconds.<br />
+19 tests, 48 assertions, 0 failures, 0 errors<br />
+</pre><br />
+&#8230;and tomorrow there will be more.  Even if it&#8217;s &#8220;49 assertions&#8221;, it&#8217;s better than the ambiguous feeling of just having worked on something that still isn&#8217;t done.  Being half asleep, you&#8217;d be surprised at how many times I thought I was finished with a feature only to run the tests and get a failure&#8212;embarrassingly, maybe 30% of the time.<br />
+<P><br />
+Also interesting, even with the sleep loss and jet lag, I haven&#8217;t been bitten by Ruby&#8217;s &#8220;duck typing&#8221;<a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/801">(you&#8217;ll have to read this thread)</a> once.  <i>&#8220;But, how can you possibly make good software when you don&#8217;t know the type of your objects at compile time?!&#8221;</i>  I suspect that, without the aggressive testing, I <i>might</i> run into problems due to the dynamic typing, but I don&#8217;t see how that&#8217;s much <a href="http://www.pragmaticprogrammer.com/cgi-local/pragprog?JavaIsUntyped">different from working in a static language like Java</a>.  In case you can&#8217;t tell, I&#8217;ve been recently irritated by the &#8220;dynamic typing is dangerous&#8221; argument.</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-02-09T00:00:00-05:00" pubdate data-updated="true">Feb 9<span>th</span>, 2003</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/blog/2003/02/09/jetlagged-programming-fun/" data-via="" data-counturl="http://chad.github.com/blog/2003/02/09/jetlagged-programming-fun/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2003/02/07/xp-dogma-zeal/" title="Previous Post: XP Dogma + Zeal">&laquo; XP Dogma + Zeal</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2003/02/16/google-blogs/" title="Next Post: Google Blogs">Google Blogs &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
