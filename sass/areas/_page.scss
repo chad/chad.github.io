@@ -1,0 +1,46 @@
+// *****************************************************************************
+// PAGE STRUCTURE
+// *****************************************************************************
+
+html body {
+  background-attachment: fixed;
+  background-image: url("#{$image-path}/background-crowd-purple.jpg");
+  background-position: top center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  span.page-name {
+    @extend %font-raleway;
+    color: $white;
+    font-weight: 900;
+    font-size: 200px;
+    opacity: .2;
+    position: fixed;
+      top: 720px;
+      left: -660px;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+  }
+
+  div#main {
+    background-color: transparentize($white, .15);
+    border-radius: 4px 0 0 4px;
+    position: absolute;
+      top: 150px;
+      right: 0;
+      bottom: 250px;
+      left: 170px;
+    width: calc(100% - 170px);
+    z-index: $z-index-base;
+    section#content {
+      display: inline-block;
+      padding: 20px 20px 20px 0;
+      position: relative;
+      margin-left: -20px;
+      overflow: scroll;
+      height: calc(100% - 10px);
+      width: 73%;
+    }
+  } // div#main
+
+} // html body

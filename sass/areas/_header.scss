@@ -1,0 +1,49 @@
+// *****************************************************************************
+// HEADER
+// *****************************************************************************
+
+html {
+  body {
+    header#page-header {
+      margin: 70px 0 50px 70px;
+      h1 {
+        color: $white;
+        float: left;
+        font-size: 70px;
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        width: 600px;
+        span {
+          color: $gray-light;
+        }
+      }
+
+      h2 {
+        @extend %visually-hidden;
+      }
+
+      nav {
+        ol {
+          li {
+            display: inline-block;
+            margin-right: 30px;
+            a {
+              color: $white;
+              font-size: 22px;
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+            &.active {
+              a {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+
+    } //header#page-header
+  } // body
+} // html

@@ -1,0 +1,100 @@
+// *****************************************************************************
+// DEFAULT/BOILERPLATE
+// *****************************************************************************
+
+
+* {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+html {
+  text-align: center;
+  body {
+    background: $site-background-color;
+    color: $text-color;
+    font-family: $body-stack;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin: auto;
+    padding: 0;
+    text-align: left;
+    &.preload * {
+      transition: none !important;
+    }
+    p {
+      font-size: $base-font-size;
+      line-height: $base-line-height;
+    }
+    h1, h2, h3 {
+      color: $headings-font-color;
+      font-family: $headings-font-family;
+      font-weight: $headings-font-weight;
+    } // h1, h2, h3
+    h4, h5, h6 {
+      color: $subheadings-font-color;
+      font-family: $subheadings-font-family;
+      font-weight: $subheadings-font-weight;
+    } // h4, h5, h6
+    a, a:link {
+        color: $link-color;
+    } // a, a:link;
+    a:hover {
+        color: $link-color-hover;
+    } // a:hover;
+    a:active {
+        color: $link-color-active;
+    } // a:active;
+    a:visited {
+        color: $link-color-visited;
+    } //  a:visited
+    nav {
+    }
+
+    ::-moz-selection {
+        background: $link-color;
+        color: $white;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $link-color;
+        color: $white;
+        text-shadow: none;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid $white;
+      border-top: 1px solid $gray-lightest;
+      margin: $base-line-height 0;
+    }
+
+    // Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+    img {
+        vertical-align: middle;
+    }
+
+    // Remove default fieldset styles.
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    // Allow only vertical resizing of textareas
+    textarea {
+        resize: vertical;
+    }
+
+  } // body
+} // html
+
+// Chrome Frame prompt
+
+.chromeframe {
+    background: #ccc;
+    color: $black;
+    margin: 0.2em 0;
+    padding: 0.2em 0;
+}
