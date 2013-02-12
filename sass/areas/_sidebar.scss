@@ -13,11 +13,15 @@ aside#page-sidebar {
     clear: both;
     height: $icon-size;
     margin: 0 20px 20px 0 ;
+    padding: 0;
     li {
       float: right;
       display: inline-block;
       margin: 0 0 0 10px;
       padding: 0;
+      &:last-child {
+        margin-left: 0;
+      }
       a {
         @extend %ir;
         background-position: center center;

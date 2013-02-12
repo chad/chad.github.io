@@ -14,7 +14,7 @@ html {
         margin: 0;
         padding: 0;
         text-transform: uppercase;
-        width: 600px;
+        width: 550px;
         span {
           color: $gray-light;
         }
@@ -28,10 +28,10 @@ html {
         ol {
           li {
             display: inline-block;
-            margin-right: 30px;
+            margin-right: 20px;
             a {
               color: $white;
-              font-size: 22px;
+              font-size: 20px;
               text-decoration: none;
               text-transform: uppercase;
             }
