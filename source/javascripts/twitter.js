@@ -8,14 +8,14 @@ function prettyDate(time) {
   }
   var say = {
     just_now:    " now",
-    minute_ago:  "1m",
-    minutes_ago: "m",
-    hour_ago:    "1h",
-    hours_ago:   "h",
-    yesterday:   "1d",
-    days_ago:    "d",
-    last_week:   "1w",
-    weeks_ago:   "w"
+    minute_ago:  "1 minute ago",
+    minutes_ago: " minutes ago",
+    hour_ago:    "1 hour ago",
+    hours_ago:   " hours ago",
+    yesterday:   "1 day ago",
+    days_ago:    " days ago",
+    last_week:   "1 week ago",
+    weeks_ago:   " weeks ago"
   };
 
   var current_date = new Date(),
@@ -62,7 +62,8 @@ function showTwitterFeed(tweets, twitter_user) {
       content = '';
 
   for (var t in tweets) {
-    content += '<li>'+'<p>'+'<a href="https://twitter.com/'+twitter_user+'/status/'+tweets[t].id_str+'">'+prettyDate(tweets[t].created_at)+'</a>'+linkifyTweet(tweets[t].text.replace(/\n/g, '<br>'), tweets[t].entities.urls)+'</p>'+'</li>';
+    content += '<li>'+linkifyTweet(tweets[t].text.replace(/\n/g, '<br>'), tweets[t].entities.urls)+'</li>';
+    $("span#tweet-time").html('<a href="https://twitter.com/'+twitter_user+'/status/'+tweets[t].id_str+'">'+prettyDate(tweets[t].created_at)+'</a>');
   }
   timeline.innerHTML = content;
 }
@@ -71,7 +72,7 @@ function getTwitterFeed(user, count, replies) {
   count = parseInt(count, 10);
   $.ajax({
       url: "https://api.twitter.com/1/statuses/user_timeline/" + user + ".json?trim_user=true&count=" + (count + 20) + "&include_entities=1&exclude_replies=" + (replies ? "0" : "1") + "&callback=?"
-    , type: 'jsonp'
+    , dataType: 'jsonp'
     , error: function (err) { $('#tweets li.loading').addClass('error').text("Twitter's busted"); }
     , success: function(data) { showTwitterFeed(data.slice(0, count), user); }
   })

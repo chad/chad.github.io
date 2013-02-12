@@ -1,0 +1,139 @@
+// *****************************************************************************
+// Sidebar
+// *****************************************************************************
+
+aside#page-sidebar {
+  display: inline-block;
+  float: right;
+  margin-top: 30px;
+  width: 25%;
+
+  ol#social-media-links {
+    $icon-size : 48px;
+    clear: both;
+    height: $icon-size;
+    margin: 0 20px 20px 0 ;
+    padding: 0;
+    li {
+      float: right;
+      display: inline-block;
+      margin: 0 0 0 10px;
+      padding: 0;
+      &:last-child {
+        margin-left: 0;
+      }
+      a {
+        @extend %ir;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: $icon-size $icon-size;
+        display: block;
+        height: $icon-size;
+        width: $icon-size;
+      } // a
+
+      $serviceList: rss, twitter, github, google-plus;
+
+      @each $service in $serviceList {
+        &.#{$service} a {
+          background-image: url("#{$image-path}/icons/#{$service}.svg");
+        }
+        &:hover {
+          &.#{$service} a {
+            background-image: url("#{$image-path}/icons/#{$service}-hover.svg");
+          }
+        }
+      } // @each ....
+
+    } // li
+  } // ol#social-media-links
+
+  .widget {
+    @extend %clearfix;
+    background-color: $gray;
+    border-radius: 4px 0 0 4px;
+    clear: both;
+    margin-top: 20px;
+    padding-top: 10px;
+
+    .widget-header {
+      background-color: $gray-dark;
+      color: $white;
+      font-size: 14px;
+      margin: 0 0 10px -10px;
+      padding: 10px 10px;
+      position: relative;
+      text-transform: uppercase;
+      width: 90%;
+      &:before {
+        border-color: darken($gray-dark, 20%) transparent transparent transparent;
+        border-style: solid;
+        border-width: 1em 0 0 .9em;
+        content: "";
+        display: block;
+        position: absolute;
+          bottom: -1em;
+          left: 0;
+      } // &:before
+    } // .widget-header
+
+    a {
+      color: $yellow !important;
+    } // a
+
+
+    ol {
+      margin: 0;
+      padding: 0;
+      li {
+        color: $gray-lighter;
+        list-style: none;
+        margin: 0  0 15px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      } // li
+    } // ol, ul
+
+  } // .widget
+
+  #upcoming-speaking {
+    .vevent {
+      background-position: 10px 0;
+      background-image: url("#{$image-path}/icons/calendar.svg");
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      font-size: 12px;
+      min-height: 24px;
+      padding: 0 10px 0 50px;
+      text-align: right;
+      a {
+        font-size: 16px;
+        display: block;
+        text-decoration: none
+      }
+    } // .vevent
+    .more-events {
+      background-color: $gray-dark;
+      color: $white;
+      display: inline-block;
+      font-size: 10px;
+      float: right;
+      line-height: 14px;
+      margin: 10px 0;
+      padding: 0 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .i-speak {
+      color: $white;
+      clear: both;
+      font-size: 10px;
+      text-align: center;
+      a {
+        color: $yellow;
+      }
+    }
+  } // #upcoming-speaking
+
+}
