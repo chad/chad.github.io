@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title> How Ruby Mixins Work With Inheritance - The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="How Ruby Mixins Work With Inheritance 2009.07.08 Yesterday I asked on Twitter whether anyone was successfully using is_paranoid in a Rails &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://chad.github.com/blog/2009/07/08/how-ruby-mixins-work-with-inheritance/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
+  <script src="/javascripts/vendor/modernizr.min.js"></script>
+  <script src="/javascripts/vendor/prefixfree.min.js"></script>
+
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  
+
+
+</head>
+
+<body  class="preload  ">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <span class="page-name">Chad Fowler</span>
+
+  <header id="page-header" role="banner">
+     <hgroup>
+      <h1>Chad <span>Fowler</span></h1>
+      
+        <h2>practical self-engineering</h2>
+      
+    </hgroup>
+    <nav id="site-navigation">
+  <ol class="main-navigation">
+    <li><a href="/">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Speaking</a></li>
+    <li><a href="#">Books</a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+  </ol>
+</nav>
+
+
+  </header><!-- /header#page-header -->
+
+
+  </header>
+
+  <div id="main" role="main">
+    <section id="content">
+      <article class="hentry" role="article">
+  
+  <header>
+    
+      <h1>How Ruby Mixins Work With Inheritance</h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-08T00:00:00+02:00" pubdate data-updated="true">2009.07.08</time>
+    
+  </header>
+
+
+<div class="article-content">
+  <p>Yesterday I <a href="http://twitter.com/chadfowler/status/2516989904">asked on Twitter</a> whether anyone was successfully using <a href="http://github.com/semanticart/is_paranoid/tree/master">is_paranoid</a> in a Rails application, because I had confused myself into thinking it couldn&#8217;t possibly work.</p>
+<p>The problem I was having wasn&#8217;t is_paranoid&#8217;s fault, but it turns out it actually can&#8217;t do what I wanted it to do in its native state. The explanation of why is something I thought a number of Rubyists might benefit from hearing, so here it is.</p>
+<p>Briefly, an explanation of is_paranoid: if you declare an ActiveRecord model to be paranoid, whenever you attempt to delete that model, is_paranoid will instead set a flag which indicates that the record is deleted. is_paranoid uses default_scope to filter out soft-deleted records in your queries. So you can act as if records are deleted without actually removing the rows. If is_paranoid is new to you but sounds familiar, you might be thinking of <a href="http://github.com/technoweenie/acts_as_paranoid/tree/master">acts_as_paranoid</a>, which is Rick Olson&#8217;s original implementation of this idea.</p>
+<p>What I wanted to do for the specific application I&#8217;m working on is to declare that <em>every</em> model should inherit the is_paranoid behavior.  Easy enough, I thought, given the way these things typically work in Rails&#8217; inheritable accessor setup:</p>
+<script src="http://gist.github.com/142479.js"></script><p>But when I tried to destroy an instance of (for example) Person, the regular ActiveRecord destroy code was invoked and the records were being actually destroyed.  Bummer.</p>
+<p>So I cracked open the code to is_paranoid and found this perfectly reasonable idiom:</p>
+<script src="http://gist.github.com/142478.js"></script><p>At this point, after pretending I was an idiot for a few minutes, I realized that this code was indeed <em>incapable</em> of doing what I wanted it to do.</p>
+<p>Some of you already know why. For the rest of you, let&#8217;s talk about how Ruby&#8217;s mixins fit into its inheritance mechanism.</p>
+<p>Maybe it&#8217;s just me, but when I think of something getting &#8220;mixed in&#8221; to something else, I imagine the two things becoming intertwined. So, the natural assumption when mixing a module into a Ruby class would be that the methods of the module get intertwined with the Ruby class. And for the HelloWorld of mixins, that indeed <em>appears</em> to be the case:</p>
+<script src="http://gist.github.com/142481.js"></script><p>But if you start mixing modules that implement methods the class also implements in, things don&#8217;t go quite as smoothly:</p>
+<script src="http://gist.github.com/142484.js"></script><p>Instead of &#8220;Overridden do_something&#8221; as some might expect, this code prints &#8220;Doing something in Thing&#8221;.</p>
+<p>Why?</p>
+<p>Because when we mix a module into a Ruby class, we&#8217;re not actually intermingling the methods of the module and the class.  Instead we&#8217;re inserting the module into the class&#8217;s inheritance hierarchy. A good way to see how this works is by using the &#8220;ancestors&#8221; method:</p>
+<script src="http://gist.github.com/142869.js"></script><p>When a method is called on an instance of SubThing, you can see that it is looked up first in SubThing&#8217;s class, then Thing&#8217;s class, <em>then</em> in IneffectiveOverride, and so on.</p>
+<p><img src="http://chadfowler.com/yuml.png" alt="" /></p>
+<p>(I used <a href="http://yuml.me">yuml</a> to generate this.  Cool site!)</p>
+<p>To further demonstrate that mixins don&#8217;t really get &#8220;mixed in&#8221;, notice what happens when you try to include a module at multiple points in the inheritance hierarchy:</p>
+<script src="http://gist.github.com/142872.js"></script><p>If a module is already present at a higher point in the hierarchy, it won&#8217;t be mixed in again.</p>
+<p>So is_paranoid was apparently built without the goal of being able to mix it into ActiveRecord::Base. Sounds reasonable to me.</p>
+  
+    <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/blog/2009/07/08/how-ruby-mixins-work-with-inheritance/" data-via="chadfowler" data-counturl="http://chad.github.com/blog/2009/07/08/how-ruby-mixins-work-with-inheritance/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+  
+</div>
+
+
+  <footer>
+    <p>
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-08T00:00:00+02:00" pubdate data-updated="true">2009.07.08</time>
+      
+
+
+    </p>
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a class="prev" href="/blog/2009/07/01/productivity-tip-let-derek-sivers-take-notes-for-you/" title="Previous Post: Productivity tip: Let Derek Sivers Take Notes for You">&laquo; Productivity tip: Let Derek Sivers Take Notes for You</a>
+  
+  
+    <a class="next" href="/blog/2009/08/02/how-learning-a-second-language-changed-my-life/" title="Next Post: How Learning a Second Language Changed My Life ">How Learning a Second Language Changed My Life  &raquo;</a>
+  
+</div>
+    </section>
+    <aside id="page-sidebar">
+      
+        <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/Chadfowlercom">RSS</a></li>
+</ol><section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+        <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference with a really really really long name</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+  </ol>
+
+  <a class="more-events" href="#">More Events »</a>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section><section class="widget">
+  <h2 class="widget-header">Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
+      </li>
+    
+  </ul>
+</section>
+
+      
+    </aside>
+  </div><!-- /div#main -->
+
+  <footer id="page-footer" role="contentinfo">
+    <section  class="hreview book"  id="passionate-programmer-book">
+  <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
+  <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
+  <h1 class="summary">Get Passionate Again</h1>
+  <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
+  </a>
+  <blockquote>
+    <p>I was blow away.</p>
+  </blockquote>
+  <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
+</section>
+
+
+
+  <section id="latest-tweet">
+    <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+      <script type="text/javascript">
+        jQuery(function($) {
+          getTwitterFeed("chadfowler", 1, false);
+        });
+      </script>>
+    <blockquote class="twitter-tweet">
+      <ul id="tweets">
+        <li class="loading">Status updating...</li>
+      </ul>
+    </blockquote>
+    <a class="user" href="https://twitter.com/chadfowler">@chadfowler</a>
+    <span id="tweet-time"></span>
+  </section>
+
+
+<p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
+  </footer>
+
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'chadfowler';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+  <script src="/javascripts/vendor/prism.min.js"></script>
+  <script src="/javascripts/plugins.js"></script>
+  <script src="/javascripts/main.js"></script>
+
+  
+
+</body>
+</html>

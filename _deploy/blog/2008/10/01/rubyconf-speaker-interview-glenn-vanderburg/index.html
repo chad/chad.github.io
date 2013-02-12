@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title> RubyConf Speaker Interview: Glenn Vanderburg - The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="RubyConf Speaker Interview: Glenn Vanderburg 2008.10.01 RubyConf is coming soon! We&#8217;re sold out but you can still get on the waiting list.
+I&# &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://chad.github.com/blog/2008/10/01/rubyconf-speaker-interview-glenn-vanderburg/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
+  <script src="/javascripts/vendor/modernizr.min.js"></script>
+  <script src="/javascripts/vendor/prefixfree.min.js"></script>
+
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  
+
+
+</head>
+
+<body  class="preload  ">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <span class="page-name">Chad Fowler</span>
+
+  <header id="page-header" role="banner">
+     <hgroup>
+      <h1>Chad <span>Fowler</span></h1>
+      
+        <h2>practical self-engineering</h2>
+      
+    </hgroup>
+    <nav id="site-navigation">
+  <ol class="main-navigation">
+    <li><a href="/">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Speaking</a></li>
+    <li><a href="#">Books</a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+  </ol>
+</nav>
+
+
+  </header><!-- /header#page-header -->
+
+
+  </header>
+
+  <div id="main" role="main">
+    <section id="content">
+      <article class="hentry" role="article">
+  
+  <header>
+    
+      <h1>RubyConf Speaker Interview: Glenn Vanderburg</h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-10-01T00:00:00+02:00" pubdate data-updated="true">2008.10.01</time>
+    
+  </header>
+
+
+<div class="article-content">
+  <p><a href="http://rubyconf.org">RubyConf</a> is coming soon!  We&#8217;re sold out but you can still get on the waiting list.</p>
+<p>I&#8217;ve been doing a <a href="http://chadfowler.com/rubyconf-speaker-interviews">series of interviews with speakers</a> leading up to the conference.</p>
+<p>This time is <a href="http://vanderburg.org/">Glenn Vanderburg</a>.  Glenn is a long time Rubyist and dynamic languages fan. He&#8217;s also Chief Scientist  at <a href="http://thinkrelevance.com/">Relevance</a>.</p>
+<h2>There was a time when Java was cool and new like Ruby is now. I remember drawing criticism for thinking it was &#8220;ready for the Enterprise&#8221;.  You wrote one of the first books about Java. How does the current state of affairs with Ruby and dynamic language adoption differ from what was happening with Java back then?</h2>
+<p>The objections to Ruby seem a bit more mature than the objections to Java were.  I remember a lot of misunderstanding about Java being &#8220;interpreted&#8221;, and about GC being &#8220;inherently slow&#8221;.  I also remember people who were outraged that they couldn&#8217;t turn the safety features off, like array bounds checking.  Those are all rather ridiculous arguments, but many people clung to them for years.</p>
+<p>I&#8217;m pleased that almost nobody objects to Ruby being open-source.  It&#8217;s also great that so many people understand that &#8220;fast enough&#8221; is fast enough, and that you get a lot more benefit from architectural choices than you do from raw language speed.  Finally, the Ruby language itself is more mature and stable than Java was then, and that helps a lot.</p>
+<p>Nevertheless, there&#8217;s one big problem Ruby has now that Java had in 1997: the language implementation is too simplistic, and there&#8217;s a lot of room for improvement.</p>
+<h2>What would you say are the top 2 or 3 features the Ruby world could steal from existing VMs?</h2>
+<p>Two of them are already widely understood:  bytecode interpretation (which all the new VM projects use) and top-notch garbage collection.  But the really big win will come from dynamic optimization based on type feedback, including heavy use of method inlining.  JRuby is already getting some of that benefit from the <span class="caps">JVM</span>, and I suspect GemStone is using the same techniques to make MagLev fast.</p>
+<p>Saying &#8220;Ruby is slow, but it&#8217;s fast enough&#8221; is true for a lot of the things we&#8217;re doing today, but it&#8217;s also a bit of a cop out.  There are definitely tasks for which we&#8217;d love to use Ruby, but it isn&#8217;t fast enough.  The primary motivation for my talk is to spread knowledge about type feedback into the Ruby community.  It&#8217;s always been a little hard to get information about how the <span class="caps">JVM</span> and Strongtalk work, and they have a reputation for being extremely complicated black magic.  Many of the details are quite complex, but the basic principles are actually rather simple.  My hope is that a few people with good C and assembly language skills will have their eyes opened to the possibilities and start making contributions to the Ruby VM projects.</p>
+<h2>What do you think about Google&#8217;s new V8 VM?  Do you think there&#8217;s much to learn from it? Will we see a serious Ruby implementation on it?</h2>
+<p>It&#8217;s fascinating technology, but (from what I&#8217;ve seen so far) not quite as nice a fit for Ruby as I was hoping for.  The v8 team kept a tight focus on exactly what JavaScript needed.  The result is that it will be harder to implement Ruby on it than I hoped, and the benefits will be less than I was expecting.  It&#8217;s a great JavaScript VM, though.</p>
+<p>What&#8217;s actually more interesting to me is that 2008 seems to be the year of JavaScript VMs.  SquirrelFish, TraceMonkey, and v8 are all making big advances in JavaScript performance, using different techniques.  And they seem to have begun a competition similar to the WebKit/Opera Acid3 race from earlier this year.  That kind of thing might seem like a sideshow, but it highlights core technical issues that are usually hidden from view, and that kind of competition ends up raising standards across the board.  JavaScript will certainly benefit from this competition, but it won&#8217;t stop there.  In the process, previously obscure technical details (not least of which is the fact that a language can be as dynamic as JavaScript and still be fast) will become widely known, and new tricks may be discovered.  Ruby and other dynamic languages will certainly benefit from that.</p>
+<h2>Do you think any of the in-progress Ruby implementations is poised to be the big one that takes over the Ruby world? Why or why not?</h2>
+<p>First of all, I don&#8217;t think we have to have a &#8220;big one that takes over.&#8221;  Having multiple VMs with different tradeoffs seems to me to be a tremendous advantage for our community, as long as they all pass the same, thorough spec suite.  JRuby fills a very important niche and does it really well.  There&#8217;s some fantastic work in <span class="caps">YARV</span>.  I fully expect IronRuby to be a big success among people with an investment in the .<span class="caps">NET</span> platform.  And all the signs are that MagLev will be an awesome option for those who need either commercial support, lots of raw speed, and/or a terrific, scalable persistence system.</p>
+<p>That said, I&#8217;m watching Rubinius with great interest.  I was initially skeptical of the project; it seemed so risky to try to build everything from scratch, from the bottom all the way up through the core libraries.  All of the state-of-the-art dynamic language VMs in existence were done by heavily funded large teams of experts.  I&#8217;m more optimistic today.  For one thing, Rubinius has more funding than I realized.  Also, I see now that Evan Phoenix has two advantages those earlier teams didn&#8217;t have: <span class="caps">TDD</span> (which he&#8217;s using even on the C++ part of Rubinius) and <span class="caps">LLVM</span>, which already has code generation and optimization support for many different machine architectures.</p>
+<p>Evan likes to say that because most of Rubinius is written in Ruby, making Rubinius acceptably fast will have to be done in the low-level VM mechanisms, which will benefit all Ruby code, not just the core libraries.  That&#8217;s exactly what drove the advances we see today in the Self, Java, and various Smalltalk VMs &#8212; the core libraries (and in some cases most of the languages themselves) were written in the target language, so the VM became the only avenue for really speeding things up.</p>
+<p>But there&#8217;s a third advantage Rubinius <strong>could</strong> have, but doesn&#8217;t, at least not yet.  Most of the Rubinius contributors are working in the Ruby parts of the system, which is probably where the priority needs to be right now.  But soon, the focus will need to shift to the C++ VM.  I&#8217;m hopeful that others will chip in at that level before too long, and if my talk gets some people started on that, I&#8217;ll be thrilled.</p>
+<h2>What are you passionate about outside of computer programming?</h2>
+<p>The most truthful answer is rather common, and most people won&#8217;t find it too interesting: my family and my faith.</p>
+<p>I&#8217;m constantly reading and enjoying music &#8212; in both cases, from many genres.  I read a broad mix of science, history, theology, and literature.  My favorite author is John McPhee, because he explores topics that seem dull and mundane on the surface, and reveals the fascination within.  That&#8217;s a great match for me, because I&#8217;ve learned that <strong>anything</strong> is interesting once you begin to understand it.</p>
+  
+    <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/blog/2008/10/01/rubyconf-speaker-interview-glenn-vanderburg/" data-via="chadfowler" data-counturl="http://chad.github.com/blog/2008/10/01/rubyconf-speaker-interview-glenn-vanderburg/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+  
+</div>
+
+
+  <footer>
+    <p>
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-10-01T00:00:00+02:00" pubdate data-updated="true">2008.10.01</time>
+      
+
+
+    </p>
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a class="prev" href="/blog/2008/09/23/rubyconf-speaker-interview-nathaniel-talbott/" title="Previous Post: RubyConf Speaker Interview: Nathaniel Talbott">&laquo; RubyConf Speaker Interview: Nathaniel Talbott</a>
+  
+  
+    <a class="next" href="/blog/2008/10/21/rubyconf-speaker-interview-ben-bleything/" title="Next Post: RubyConf Speaker Interview: Ben Bleything">RubyConf Speaker Interview: Ben Bleything &raquo;</a>
+  
+</div>
+    </section>
+    <aside id="page-sidebar">
+      
+        <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/Chadfowlercom">RSS</a></li>
+</ol><section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+        <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference with a really really really long name</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+  </ol>
+
+  <a class="more-events" href="#">More Events »</a>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section><section class="widget">
+  <h2 class="widget-header">Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
+      </li>
+    
+  </ul>
+</section>
+
+      
+    </aside>
+  </div><!-- /div#main -->
+
+  <footer id="page-footer" role="contentinfo">
+    <section  class="hreview book"  id="passionate-programmer-book">
+  <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
+  <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
+  <h1 class="summary">Get Passionate Again</h1>
+  <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
+  </a>
+  <blockquote>
+    <p>I was blow away.</p>
+  </blockquote>
+  <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
+</section>
+
+
+
+  <section id="latest-tweet">
+    <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+      <script type="text/javascript">
+        jQuery(function($) {
+          getTwitterFeed("chadfowler", 1, false);
+        });
+      </script>>
+    <blockquote class="twitter-tweet">
+      <ul id="tweets">
+        <li class="loading">Status updating...</li>
+      </ul>
+    </blockquote>
+    <a class="user" href="https://twitter.com/chadfowler">@chadfowler</a>
+    <span id="tweet-time"></span>
+  </section>
+
+
+<p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
+  </footer>
+
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'chadfowler';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+  <script src="/javascripts/vendor/prism.min.js"></script>
+  <script src="/javascripts/plugins.js"></script>
+  <script src="/javascripts/main.js"></script>
+
+  
+
+</body>
+</html>

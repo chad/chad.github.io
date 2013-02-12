@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title> Code Kata: Visualization
+ - The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Code Kata: Visualization 2003.06.08 For centuries, Buddhists have practiced a meditation technique called
+Visualization. The practice involves &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://chad.github.com/blog/2003/06/08/code-kata-visualization/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
+  <script src="/javascripts/vendor/modernizr.min.js"></script>
+  <script src="/javascripts/vendor/prefixfree.min.js"></script>
+
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  
+
+
+</head>
+
+<body  class="preload  ">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <span class="page-name">Chad Fowler</span>
+
+  <header id="page-header" role="banner">
+     <hgroup>
+      <h1>Chad <span>Fowler</span></h1>
+      
+        <h2>practical self-engineering</h2>
+      
+    </hgroup>
+    <nav id="site-navigation">
+  <ol class="main-navigation">
+    <li><a href="/">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Speaking</a></li>
+    <li><a href="#">Books</a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+  </ol>
+</nav>
+
+
+  </header><!-- /header#page-header -->
+
+
+  </header>
+
+  <div id="main" role="main">
+    <section id="content">
+      <article class="hentry" role="article">
+  
+  <header>
+    
+      <h1>Code Kata: Visualization</h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-06-08T00:00:00+02:00" pubdate data-updated="true">2003.06.08</time>
+    
+  </header>
+
+
+<div class="article-content">
+  <p>For centuries, Buddhists have practiced a meditation technique called<br />
+Visualization. The practice involves reconstructing every minute detail of<br />
+a complex Thangka painting (e.g. <a
+href="http://www.tibetshop.com/gs363.html">www.tibetshop.com/gs363.html</a>)<br />
+from memory in one&#8217;s mind. The ultimate aim is to be able to hold an<br />
+entire complex image in your mind at once, as if actually looking at the<br />
+painting.</p>
+<p>
+<p>As with many (if not all) of the Buddhist meditative practices, the goal of<br />
+this meditation is to practice focusing and controlling the mind.<br />
+Scientific studies have shown that Buddhist meditative practices such as<br />
+visualization have a signficant physical effect on where and how activity<br />
+occurs in the brain. Additionally, it has been proven that intense practice<br />
+in various disciplines signficantly increases the physical development of<br />
+the brain in areas associated with positive thought.(1) Mental practice and<br />
+development is analogous to physical exercise, with your mental<br />
+&quot;muscles&quot; getting materially stronger with practice.</p>
+</p>
+<h2>What to do</h2>
+<p>
+<p>(If you are new to the term &quot;Code Kata&quot;, visit Dave&#8217;s site:<br />
+<a
+href="http://www.pragprog.com/pragdave/Practices/Kata">www.pragprog.com/pragdave/Practices/Kata</a>.<br />
+This Kata will require more than one sitting. Start small and increase in<br />
+complexity over time. Continue with a single piece of code until<br />
+you&#8217;ve mastered it or until you see no value in continuing.)</p>
+</p>
+<p>
+<p>Pick a piece of code that you consider to be of extremely high quality.<br />
+Ideally, this should be sized somewhere between the huge (the Linux kernel<br />
+source) and the tiny (&quot;Cookbook&quot; snippets). For maximum<br />
+utilitarian benefit, find a piece of software that you would like to<br />
+enhance your understanding of. Open source programmers might choose, for<br />
+example, the standard library of their programming language of choice.</p>
+</p>
+<p>
+<p>Find a quiet place where you won&#8217;t be disturbed. Start with a<br />
+moderately small piece of your chosen code base and study it intensely for<br />
+20 to 30 minutes. You can start out with as small a chunk as you like.<br />
+After your period of study, sit back, close your eyes (if you like), relax,<br />
+and try to reconstruct the code in your mind. You might start with classes<br />
+(in an object oriented program), fill the classes out with methods and<br />
+instance variables, and eventually fill out the method bodies. Follow the<br />
+logical flow from one method to the next. Enumerate the classes, variables,<br />
+and methods in your mind.</p>
+</p>
+<p>
+<p>Alternatively, you could spend sessions trying to reconstruct a graphical<br />
+representation of the code&#8212;perhaps <span class="caps">UML</span>. Class diagrams and sequence<br />
+diagrams would probably be a good start, though converting source to <span class="caps">UML</span> in<br />
+your head might prove to be harder than remembering the code itself. A mix<br />
+of code and visual representation might be a good place to end up. Feel<br />
+free to experiment and season to taste.</p>
+</p>
+<p>
+<p>Set a time limit for the exercise. 10-15 minutes would probably be a good<br />
+start. Adjust as your experience dictates. Try not to let your mind wander<br />
+during the time that you have allotted. As other thoughts enter your mind<br />
+(e.g. &quot;Why am I doing this? This is silly. What should I have for<br />
+dinner?&quot;) push them gently away and focus on the code. (As the<br />
+Buddhist medidators would probably add, we all get distracted. Don&#8217;t<br />
+be distracted by the fact that you&#8217;re getting distracted. Don&#8217;t<br />
+punish yourself. Just go back to the code.)</p>
+</p>
+<p>
+<p>Slowly add more and more of the full code base as you practice in<br />
+subsequent days and weeks. Add code one &quot;module&quot; at a time, until<br />
+you eventually (if ever) are able to hold your entire chosen code base in<br />
+your mind.</p>
+</p>
+<h2>Goals</h2>
+<p>
+<p>There are two primary goals to this exercise, one with immediate visible<br />
+benefit&#8212;the other with a potentially longer term effect:</p>
+</p>
+<h3>Immediate/Visible</h3>
+<p>
+<p>Great conductors commit entire symphonies to memory. That might be 30<br />
+minutes worth of black dots written for potentially 100+ simultaneous<br />
+(instrumental) voices. I&#8217;ve heard some say that it greatly enhances<br />
+their ability to <b>hear</b> the piece. If these pieces happen to be the<br />
+work of a &quot;master&quot;, what better way is there to stamp a piece of<br />
+that master&#8217;s work on your mind?</p>
+</p>
+<p>
+<p>In music, this has the very pragmatic side effect that a conductor can<br />
+quickly and efficiently work with an orchestra that is playing a piece that<br />
+the conductor has committed to memory. The same is true in software. No<br />
+need to look up that function from the <span class="caps">API</span> documentation. And you&#8217;re<br />
+more likely to find the &quot;optimal&quot; solution to a problem, if you<br />
+are intimately familiar with the tools available to do the job. You can<br />
+drive a screw into a board with a hammer, but if only you knew about that<br />
+screw driver, life would be much easier.</p>
+</p>
+<h3>Longer Term/Esoteric</h3>
+<p>
+<p>Unless you have photographic memory, reconstructing large pieces of code in<br />
+your mind is an extremely difficult thing to do. If you&#8217;re like me,<br />
+you have trouble committing even small pieces to memory. This is like<br />
+weight lifting for the mind. You will develop new &quot;muscles&quot; that<br />
+you never knew you had. Your mind will find new ways to associate,<br />
+generalize, and ultimately simplify the complexities of the software for<br />
+you. Be warned that you might not see it or feel it after one<br />
+attempt&#8212;or even 10. Another analogy from music: Do you think jazz<br />
+improvisers actually think of the name and finger position of every note<br />
+they play before they play it? The answer is &quot;no&quot;. Their minds<br />
+can&#8217;t work that fast. The details get grouped into gestures and<br />
+generalizations&#8212;most of them completely subconcious.</p>
+</p>
+<p>
+<p>And, of course, if you believe the scientists and Buddhist scholars<br />
+involved with the Mind and Life Institue (<a
+href="http://www.mindandlife.org">www.mindandlife.org</a>), you may<br />
+potentially develop your mental abilities in a way that would contribute to<br />
+any activity requiring concentration, including the quest for happiness. :)</p>
+</p>
+<h2>Questions</h2>
+<ul>
+<li>Are there pieces of code or styles of design that are easier to visualize<br />
+than others?</li>
+<li>What seems to drive your ability to hold certain pieces of code in your<br />
+mind over others?</li>
+<li>Do you think these drivers are the same for everyone, or do they vary by<br />
+individual? Might this realization affect the way you write your own code?</li>
+<li>What mental tricks might you subconciously be developing to manage this<br />
+complexity?</li>
+</ul>
+<p>
+<p>(1) &quot;Destructive Emotions: A Scientific Dialogue with the Dalai<br />
+Lama&quot; &#8211; Daniel Goleman (<a
+href="http://www.amazon.com/exec/obidos/tg/detail/-/0553801716/qid=1054992768/sr=8-1/ref=sr_8_1/104-2641040-4275932?v=glance&s=books&n=507846">www.amazon.com/exec/obidos/tg/detail/-/0553801716/qid=1054992768/sr=8-1/ref=sr_8_1/104-2641040-4275932?v=glance&amp;s=books&amp;n=507846</a>)</p>
+</p>
+<h3>Sidenote</h3>
+<p>
+<p>This isn&#8217;t really a &quot;Kata&quot; (<a
+href="http://www.pragprog.com/pragdave/Practices/CodeKata.rdoc,v">www.pragprog.com/pragdave/Practices/CodeKata.rdoc,v</a>).<br />
+It doesn&#8217;t really fall into the Kumite or Koan categories (<a
+href="http://www.pragprog.com/pragdave/Practices/MoreKata.rdoc,v">www.pragprog.com/pragdave/Practices/MoreKata.rdoc,v</a>)<br />
+either. But, it&#8217;s definitely an example of Practice (<a
+href="http://www.chadfowler.com/index.cgi/Computing/Programming/Bowling.html">www.chadfowler.com/index.cgi/Computing/Programming/Bowling.html</a>),<br />
+though a somewhat strange one. And in case you&#8217;re wondering,<br />
+I&#8217;m not Buddhist.</p>
+</p>
+  
+    <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/blog/2003/06/08/code-kata-visualization/" data-via="chadfowler" data-counturl="http://chad.github.com/blog/2003/06/08/code-kata-visualization/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+  
+</div>
+
+
+  <footer>
+    <p>
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-06-08T00:00:00+02:00" pubdate data-updated="true">2003.06.08</time>
+      
+
+
+    </p>
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a class="prev" href="/blog/2003/05/23/google-to-clean-up-the-web/" title="Previous Post: Google to Clean Up The Web">&laquo; Google to Clean Up The Web</a>
+  
+  
+    <a class="next" href="/blog/2003/06/14/a-geek%27s-first-computer/" title="Next Post: A Geek's First Computer
+">A Geek's First Computer
+ &raquo;</a>
+  
+</div>
+    </section>
+    <aside id="page-sidebar">
+      
+        <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/Chadfowlercom">RSS</a></li>
+</ol><section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+        <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference with a really really really long name</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+  </ol>
+
+  <a class="more-events" href="#">More Events »</a>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section><section class="widget">
+  <h2 class="widget-header">Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
+      </li>
+    
+  </ul>
+</section>
+
+      
+    </aside>
+  </div><!-- /div#main -->
+
+  <footer id="page-footer" role="contentinfo">
+    <section  class="hreview book"  id="passionate-programmer-book">
+  <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
+  <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
+  <h1 class="summary">Get Passionate Again</h1>
+  <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
+  </a>
+  <blockquote>
+    <p>I was blow away.</p>
+  </blockquote>
+  <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
+</section>
+
+
+
+  <section id="latest-tweet">
+    <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+      <script type="text/javascript">
+        jQuery(function($) {
+          getTwitterFeed("chadfowler", 1, false);
+        });
+      </script>>
+    <blockquote class="twitter-tweet">
+      <ul id="tweets">
+        <li class="loading">Status updating...</li>
+      </ul>
+    </blockquote>
+    <a class="user" href="https://twitter.com/chadfowler">@chadfowler</a>
+    <span id="tweet-time"></span>
+  </section>
+
+
+<p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
+  </footer>
+
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'chadfowler';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+  <script src="/javascripts/vendor/prism.min.js"></script>
+  <script src="/javascripts/plugins.js"></script>
+  <script src="/javascripts/main.js"></script>
+
+  
+
+</body>
+</html>
