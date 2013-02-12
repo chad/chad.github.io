@@ -3,12 +3,14 @@
 // *****************************************************************************
 
   div.pagination {
-    margin: 0 20px 0 40px;
+    margin: 20px 20px 0 40px;
     text-align: center;
     .prev {
       float: left;
+      width: 30%;
     }
     .next {
       float: right;
+      width: 30%;
     }
   }

@@ -9,13 +9,13 @@ function prettyDate(time) {
   var say = {
     just_now:    " now",
     minute_ago:  "1 minute ago",
-    minutes_ago: "minutes ago",
+    minutes_ago: " minutes ago",
     hour_ago:    "1 hour ago",
-    hours_ago:   "hours ago",
+    hours_ago:   " hours ago",
     yesterday:   "1 day ago",
-    days_ago:    "days ago",
+    days_ago:    " days ago",
     last_week:   "1 week ago",
-    weeks_ago:   "weeks ago"
+    weeks_ago:   " weeks ago"
   };
 
   var current_date = new Date(),
