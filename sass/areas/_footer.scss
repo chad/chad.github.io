@@ -1,0 +1,122 @@
+// *****************************************************************************
+// FOOTER
+// *****************************************************************************
+
+html {
+  body {
+    footer#page-footer {
+      background-color: #222222;
+      background-image: url("#{$image-path}/footer-pattern-gray.png");
+      background-repeat: repeat;
+      border-top: 1px solid $gray-dark;
+      box-shadow: -5px 0 10px $shadow;
+      height: 200px;
+      padding: 0 70px;
+      position: absolute;
+        bottom: 0;
+        left: 0;
+      width: 100%;
+      a {
+        color: $blue;
+        text-decoration: none;
+      }
+      section.book {
+        float: left;
+        width: 600px;
+        img {
+          box-shadow: -5px 0 10px $shadow-lightest;
+          float: left;
+          height: 150px;
+          margin: -20px 20px 20px 0;
+        }
+        h1 {
+          margin: 20px 0 10px 0;
+          padding: 0;
+        }
+        p.description {
+          color: $white;
+          font-size: $base-font-size * 1.2;
+          margin: 0;
+        }
+        blockquote {
+          clear: both;
+          margin: 0;
+          padding: 0;
+          p {
+            color: $blue;
+            font-size: 18px;
+            font-style: italic;
+            float: left;
+            display: inline-block;
+            margin: 0 10px 0 0;
+            padding: 0;
+            &:before {
+              content: '"';
+            }
+            &:after {
+              content: '"';
+            }
+          }
+        }
+        cite a {
+          color: $gray-light;
+          display: inline-block;
+          font-size: 18px;
+          &:before {
+            content: '--';
+          }
+        }
+      } // section.book
+      section#latest-tweet {
+        float: right;
+        margin-top: 40px;
+        text-align: right;
+        width: 500px;
+        blockquote {
+          background-image: url("#{$image-path}/icons/twitter-footer.svg");
+          background-position: 0 center;
+          background-repeat: no-repeat;
+          background-size: 48px 100%;
+          color: $white;
+          margin: 0;
+          min-height: 48px;
+          padding: 0 0 0 70px;
+          text-align: left;
+          p, li {
+            font-size: 18px;
+            font-style: italic;
+            line-height: 22px;
+            margin: 0 0 10px 0;
+          } // p
+          ul#tweets {
+            margin: 0;
+            padding: 0;
+            li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+        .user {
+          font-style: italic;
+          &:after {
+            content: ":";
+          }
+        } // user
+        .tweet {
+          color: $white;
+          font-style: italic;
+        }
+      }
+      .copyright {
+        color: $gray;
+        font-size: 10px;
+        font-style: italic;
+        position: absolute;
+          bottom: 0;
+          right: 10px;
+      }
+    } // footer#page-footer
+  } // body
+} // html

@@ -5,6 +5,7 @@ title: !binary |-
   ZHM=
 enki_id: 4720
 ---
+
 It's hard to believe it's been <a href="http://techcrunch.com/2011/03/14/livingsocial-gains-wealth-of-ruby-on-rails-expertise-with-infoether-acquisition/">almost two years</a> since InfoEther was acquired by LivingSocial. Since then, we've built the strongest development team I've ever known. We've set <a href="http://mashable.com/2012/09/06/livingsocial-starbucks-record/">records</a> for e-commerce transaction volume. We've grown at an incredible pace, both as a business and as <a href="http://www.youtube.com/watch?feature=player_embedded&v=14sUms68LwA">technology team</a>. We've shipped a lot of software, and made millions of people's lives more interesting in the process.  I've had the privilege to work with <a href="https://coderwall.com/team/livingsocial">some of the most admired engineers in on industry</a>. I'm proud of the team <a href="http://aaronbatalion.com/">Aaron Batalion</a> (from whom I've learned a ton about running a consumer internet product) had assembled before InfoEther arrived and of the team that ultimately grew from that foundation.
 
 <a href="http://www.chadfowler.com/2011/12/21/re-thinking-software-development-education">As I mentioned when I announced</a> our <a href="http://hungryacademy.com">Hungry Academy program</a>, for me personally the experience at LivingSocial has been intense. As I said in that post, “These last 8 months at LivingSocial have been the best 4 years of my career.” That holds true today.

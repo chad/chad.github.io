@@ -1,0 +1,98 @@
+// *****************************************************************************
+// HEADER
+// *****************************************************************************
+
+html {
+  body {
+    #content article {
+      clear: both;
+      header {
+        background-color: $gray;
+        padding: 20px 50px 20px 20px;
+        position: relative;
+        h1 {
+          color: $white;
+          font-size: 20px;
+          line-height: 26px;
+          margin: 0;
+          padding: 0;
+          &:before {
+            border-color: $gray-dark transparent transparent transparent;
+            border-style: solid;
+            border-width: 1em 0 0 1em;
+            content: "";
+            display: block;
+            position: absolute;
+              bottom: -1em;
+              left: 0;
+          } //
+          a {
+            color: $white;
+            text-decoration: none;
+          }
+        } // h1
+        time {
+          color: $gray-light;
+          font-size: 10px;
+          position: absolute;
+            right: -15px;
+            bottom: 22px;
+          transform: rotate(90deg);
+        } // time
+      } // header
+
+      .article-content {
+        margin: 30px 0 30px 60px;
+        p, li {
+          font-size: 18px;
+          line-height: 20px;
+          text-align: justify;
+          text-justify: distribute;
+        }
+
+        img {
+          $margin-size: 20px;
+          clear: both;
+          float: left;
+          max-width: 100%;
+          margin: $margin-size $margin-size  $margin-size 0;
+          border-radius: 8px;
+          border: 2px solid $purple;
+          &.align-left {
+            float: left;
+            margin: $margin-size $margin-size  $margin-size 0;
+          }
+          &.align-right {
+            float: right;
+            margin: $margin-size 0  $margin-size $margin-size;
+          }
+        }
+      }
+
+      footer {
+        p {
+          background-color: $purple;
+          color: $white;
+          display: inline;
+          font-size: 10px;
+          padding: 5px;
+          position: relative;
+          &:before {
+            border-color: darken($purple, 20%) transparent transparent transparent;
+            border-style: solid;
+            border-width: 1em 0 0 2em;
+            content: "";
+            display: block;
+            position: absolute;
+              bottom: -1em;
+              left: 0;
+          } // &:before
+          a {
+            color: $white;
+          }
+        } // p
+      }// footer
+
+    }
+  } // body
+} // html
