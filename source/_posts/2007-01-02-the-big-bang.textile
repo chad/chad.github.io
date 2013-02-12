@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  VGhlIEJpZyBCYW5n
+enki_id: 4593
+---
+  (This article is part of the "Big Rewrite":http://chadfowler.com/2006/12/27/the-big-rewrite series.)
+
+When you do a technology rewrite, you want things to be clean.  That's usually a major goal in a project like this.  And at the beginning of a Big Rewrite, while you're still wide-eyed and hopeful for your application's ultra-elegant, scalable, maintainable future, you're faced with a question:  Should we deliver the Rewrite incrementally or all in one big release?  Now, imagine your existing infrastructure is a home-grown Oracle Pro*C-based CGI framework with its own cookie-based authentication mechanism which relies on carnal knowledge of an aging mainframe ERP system.  Incremental deliveries means making the new technology work within the dirty framework of the old system.  One big release would mean we could just turn off the old system, turn on the new one, and keep our new efforts isolated and pristine.
+
+In most cases, it's the Big Bang approach that wins the argument.
+
+Now picture yourself as a developer or project leader nine months into this project.  The old system, still in production, has been patched and enhanced along side the new one as you've been developing it.  You haven't had time to keep up with each and every change that took place in the old system.  As a result, on top of behavioral changes, you've got an ever-evolving database schema to port to the new platform.  And the new system's wish list has gotten so out of control, that there are major differences between the old and the new.  To top it all off, working from the old system as a specification didn't work, and you're way behind schedule due to misunderstood requirements and rework.
+
+The table has been set.  The guests are on their third course.  And now you have to come along and replace the table on which they're eating without disturbing their meal.
+
+On a big system with a lot of customers, data migration can be a huge problem.  Not only do we have to keep track of what gets migrated when, but we have to actually _perform_ the migration at some point.  The Big Bang sounds like a lovely idea until you get to the actual event, and you realize it's kind of like preparing for a world title boxing match when you know it's the first and last time you'll ever compete.  The processes and software you have to create, the attention you have to pay before you can create an event like this is often as consuming, complex, and potentially disastrous as the system development effort itself.
+
+But by making it a Big Bang release, you've maximized the chances that you'll be behind schedule when you get to the end, and you've therefore maximized the chances that you won't spend enough time preparing.  This results in a bad time for both you and your customers.  
+
+Unfortunately, perhaps due to something intrinsic in human nature, this scenario is a cliche for Big Rewrite projects.

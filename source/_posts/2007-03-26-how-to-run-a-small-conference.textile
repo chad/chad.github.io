@@ -1,0 +1,51 @@
+---
+layout: post
+title: !binary |-
+  SG93IHRvIFJ1biBhIFNtYWxsIENvbmZlcmVuY2U=
+enki_id: 4608
+---
+We at "Ruby Central":http://rubycentral.org have been sponsoring a "regional conference grant program":http://rubycentral.org/news/2006/07/28/ruby-central-announces-regional-conference-grant-program-2006/ this year.   "Several":http://rubyconfmi.org/ "little":http://mtnwestruby.org/ "ruby conferences":http://www.goruco.com/ have "popped up":http://rubyhoedown.com around the US and abroad.
+
+Having co-organized "RubyConf":http://rubyconf.org, "RailsConf":http://railsconf.org, and the "European RailsConf":http://www.railsconfeurope.com/ since their inceptions, I thought I'd throw some thoughts into my weblog for the benefit of anyone who might like to put together a small conference.  I like small conferences.
+
+This is a somewhat unstructured (though mostly chronological) brain dump.  If you have additional ideas, please do provide them in the comments or link your own weblog posts here.  I'm absolutely sure I haven't covered everything.
+
+* Guess at how many people you can attract.  Guess conservatively.  If you guess too high you're going to lose some money.
+* Decide how much you would like the conference to cost to attend (the price per ticket).
+* Pick a location (city, state, country) based on the first two things.  If you want attendees to pay as little as possible, put it in a cheap enough place. 
+* Find a venue.  Hopefully you can find one that will cost you little enough that it allows you to charge as little as you're hoping with the desired number of attendees.  Otherwise you may have to adjust.  The venue will probably require a deposit.  You might be able to save money by finding a university or somewhere similar which will sponsor and/or host you.
+* If you're planning a Ruby-related conference, apply for a Ruby Central "regional conference grant":http://rubycentral.org/news/2006/07/28/ruby-central-announces-regional-conference-grant-program-2006/.  
+* Get someone to make a nice looking web site.  An ugly web site will make a noticeable impact on registrations for a new conference.
+* Get someone to design t-shirts, name badges, and/or programs.  Budget for them.  Sites like "http://customink.com":http://customink.com are the best way to go.
+* Try to get at least one "name" to agree to attend.  Maybe you can get a sponsor to pay to fly someone well-known in.   If you keep it community-oriented you can get someone with a name without having to pay them.  If you can't get someone with a name, it's not the end of the world, but you'll probably have to keep the estimated numbers small as a result.
+* Announce the conference with the name of the well-known speaker.  Generate a little buzz and lay out a schedule (Call For Proposals (CFP) happens on this date, speakers announced on this date, registration on this date, conference on this date, etc.)
+* Write a good CFP.  Describe what you're looking for in talks, the motivation for the conference, etc. 
+* Send out the CFP.  Try to get it on Ruby web sites and all the appropriate mailing lists.  Get people you know to blog it, etc.  You'll probably need some kind of system for accepting the proposals as well.  Make sure you collect speaker bio, photos, and abstracts while the proposals are being collected.  Otherwise you'll never be able to get all of them later when you need them.
+* Get some notable community members to help you vote on the proposals.  At least one.  Announce this person or persons on your site as being in the program committee.  This'll help build credibility.  Perhaps you should actually do this before you announce the conference, so it's all part of the initial package.
+* Notify all of the accepted speakers.  Get them to confirm that they're still on for the conference, so you don't end up with last minute slots to fill due to speakers backing out.
+* Assume that, despite the efforts of the previous step, you're going to have last-minute slots to fill.  Find a volunteer or volunteers who can be ready with a talk in case you need it.  
+* Announce the program.  Make it as detailed as you can.  Don't skimp here.  It helps with registration.
+* Get someone to make some nice "Speaking at Blah" badges for the speakers to put on their web sites.
+* Get someone to make some nice "Attending Blah" badges for the attendees who've registered to put on their web sites. 
+* Figure out how you're going to accept registrations.  In my experience, accepting credit cards (and NOT checks) is a really good plan.  It's hard to deal with checks.  People end up not paying or just not showing up at all.  That costs you money if it seriously screws with your budget.  There are services you can use to do this.  Acteva, Regonline, etc.  
+* Open registration in a flurry of spam, blog posts, and public demonstrations. 
+* Plan to do something like serial interviews, articles, etc. with and/or by your speakers.  This will help get the word out while actually creating something of value for the community on the net.
+* Sell out the conference (or at least sell enough that you don't lose money from it (unless that's OK with you)).
+* Stay in touch with the venue.  For the conference, you'll need to worry about seating (classroom seating is the best), projectors, screens, sound (probably best to have a clip-on microphone as well as a wireless hand-held for audience questions), and power (attendees will want to plug their laptops in---you need power strips and extension cords).
+* You may want to audio- or video-record the conference sessions.  Plan early.  Ask speakers if it's OK.  Create and get them to sign a release, allowing you to record and post their talks.
+* Put together and mail out logistics info for both speakers and attendees.  Be explicit about where they should stay, when they should come, who pays for what, etc.  It's good to get this all done before anyone shows up. 
+* Print name badges, t-shirts, etc.  Print some blank name badges to adjust for mistakes you might have made (or at-door registration if you're allowing that).  Also print programs.  People like to have the paper.
+* Get to the conference early.  Check the screen, projector, sound, etc.
+* Get volunteers for the first day of the conference.  You'll need someone to stand at a registration desk, giving out name tags, t-shirts, programs, etc.  Someone else (probably you) will need to be available for fire fighting.  This is everything from getting the venue to refill the coffee to dealing with attendees who have erroneously been given parking tickets. 
+* Before the talks start, establish a protocol for helping your speakers stay on time.  In general, speakers think they don't have enough material to fill the available time.  In general, speakers have way too much material to fill the available time.  Make sure they know how much time they have for their slot, bring a large digital clock to place on the podium or table so they can see it, and establish a person whose job is to communicate the remaining time to the speaker.
+* Schedule slack in between the talks.  Plan for short breaks between every talk.  You may need to eat some of this time if the program runs over schedule (which is likely to happen).  
+* Make meal breaks longer than you think they need to be.
+* Plan some gap times for attendees to chat.  They really like that.  Don't feel like you have to fill every hour of the day with speakers lecturing. 
+* Plan an introduction during which you go through logistics (restating the schedule, pointing out restrooms, instructions for how to use the network if there is one, how to find out where to eat, etc.).
+* Have the bios of your speakers during the event.  Introduce each speaker, so the speaker doesn't have to wrestle post-break attention from the audience.  When trying to focus on the real topic of a presentation, the speakers should not have to think about asking people to sit down and be quiet.  Ideally, every talk starts with a welcoming round of applause from the audience.  It's your job as organizer to make this happen.
+* Have someone coordinate with the speakers to collect and post their presentation files (if they agree).  When these materials (and perhaps audio and/or video) are posted, announce them publicly.  If you're going to do the conference again, you'll want people who _weren't_ there to read about what happened and wish they had gone.
+* During the event, take lots of photos and ask attendees to do the same.  Establish a flickr tag to use when posting pictures as well as weblog entries.  Before the conference, set up a way to syndicate these things onto your conference web site (or at least link to them).  Highlight live weblogging during the conference both online (your web site) and via announcing highlights and encouraging it during the conference.
+* Create some mechanism for collecting feedback.  A simple paper survey works or you could build a small Web app.  Collect feedback _at_ the event.  Afterward is too late.  People won't give feedback if you wait too long, and their impressions will be fuzzier after they've gone home and gone back to work.  After the conference, analyze the feedback, summarize it and file away a plan for what you're going to change next time.  If you don't file it away, you'll forget.
+* After the conference, link to any and all conference reviews or writeups that you can find.  
+
+Thanks to "Pat Eyler":http://on-ruby.blogspot.com/ and "David Black":http://www.rubypal.com/ for their input on this list.

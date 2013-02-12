@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  U2NvdGxhbmQgb24gUmFpbHMgQ2FsbCBmb3IgUHJvcG9zYWxz
+enki_id: 4665
+---
+Being an organizers of Ruby conferences myself, I always enjoy going to the regional conferences.  I've been to the "Mountain West RubyConf":http://mtnwestrubyconf.org/, "Ruby Hoedown":http://www.rubyhoedown.com/ and "Rails Summit Latin America":http://site.locaweb.com.br/railssummit/default.asp?language=7.  Each was excellent in its own unique way. It's also a great pleasure for me to attend a conference I'm not organizing.
+
+So I'm looking forward to the upcoming "Scotland on Rails":http://scotlandonrails.com/ in March.  "Marcel":http://marcelmolina.com and I will be presenting a tutorial for charity at this year's conference.
+
+I've heard great things about last year's Scotland on Rails, and I trust my friends in Scotland to put on an excellent show.  If you haven't been to Edinburgh, you owe yourself a trip.  It's an incredibly beautiful city.
+
+What better way to explore new lands than to do it by invitation as a speaker?  Scotland on Rails has opened its "Call for Proposals":http://scotlandonrails.com/proposals.html (it's been open for a while, but I'm slow).  The CFP closes in 2 weeks (December 1st), so if you're interested in speaking don't be late.  From what "Alan":http://www.cardboardsoftware.com/ tells me, they are especially interested in hearing how to do BIG projects with Ruby and Rails.
+
+Hope to see you there.

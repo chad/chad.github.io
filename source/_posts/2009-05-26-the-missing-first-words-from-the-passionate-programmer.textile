@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  VGhlIG1pc3NpbmcgZmlyc3Qgd29yZHMgZnJvbSBUaGUgUGFzc2lvbmF0ZSBQ
+  cm9ncmFtbWVy
+enki_id: 4686
+---
+While I was working on "The Passionate Programmer":http://pragprog.com/titles/cfcar2/the-passionate-programmer I had the following Kurt Vonnegut quote (from "A Man Without A Country":http://www.amazon.com/Man-Without-Country-Kurt-Vonnegut/dp/158322713X) at the top of the introduction. Right before we published it, my editor reminded me that we had to get permission to print it. I was unable to reach anyone from Kurt Vonnegut's estate on time, so I commented the quote out in the book's source.
+
+This is how The Passionate Programmer was supposed to begin:
+
+  "I urge you to please notice when you are happy, and exclaim or murmur or think at some point, 'If this isn't nice, I don't know what is.'" -- Kurt Vonnegut, Jr.
+

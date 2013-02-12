@@ -1,0 +1,25 @@
+---
+layout: post
+title: !binary |-
+  TG9uZG9uIFJhaWxzIFRyYWluaW5n
+enki_id: 4490
+---
+
+I've been remiss in not mentioning this, but I want to give regular readers a chance before it's too late:  On April 10, I'll be conducting a <a href="http://skillsmatter.com/ruby-on-rails-course?PHPSESSID=2f48bcd3554fd02b0689858f3ef05e37">4 day Ruby on Rails</a> training session for <a href="http://skillsmatter.com/">Skill Matter</a>, a UK-based training firm.
+<br/>
+<a href="http://skillsmatter.com/ruby-on-rails-course"><img src="http://skillsmatter.com/images/misc/ruby-rails-01-04_minibanner.gif"/></a>
+
+<br/>
+We're limiting the class to <i>twelve</i> total seats, so it won't feel like a big class where nobody knows each other and nobody gets personal attention.  We're aiming for a heavily hands-on session, and we'll be digging into some of the darker corners that you would normally have to first face on your own.  With only twelve students in the class, you won't be just another face in the crowd.  So come with your questions and your own problems to solve.
+
+<br/>
+<br/>
+The down side of having twelve seats available is that they're going to go fast.  With <a href="http://www.railsconf.org">RailsConf</a> <a href="http://railsconf.org/articles/2006/02/08/railsconf-is-sold-out">selling out 400 seats</a> in <b>under a week</b>, it's no secret that people are hungry to learn about Rails.  Spaces are already going, so if you have to get managerial approvals or fight with your human resources department, you should get started as soon as you can.
+
+<br/>
+<br/>
+Along with the basics of Ruby and Rails, I'll be covering Rails 1.1 features and many tips and tricks that I've been collecting as I write <a href="http://www.pragmaticprogrammer.com">Rails Recipes</a>.
+
+<br/>
+<br/>
+I hope to see you in London!

@@ -1,0 +1,31 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFJhaWxzIEVkZ2UgaXMgQ29taW5nIHRvIENoaWNhZ28=
+enki_id: 4621
+---
+It seems like a long way away, but "The Rails Edge":http://pragmaticstudio.com/therailsedge/ is coming to Chicago on August 23-25.
+
+The Rails Edge content continually changes, which makes this a favorite for speakers as well as attendees.  Looking at the fresh lineup of talks, this is going to be the best one yet.  When you get a group like this together:
+
+"Dave Thomas":http://pragmagmaticprogrammer.com
+
+"Mike Clark":http://clarkware.com/cgi/blosxom
+
+"Justin Gehtland":http://relevancellc.com
+
+"Stuart Halloway":http://relevancellc.com
+
+"Marcel Molina Jr.":http://project.ioni.st
+
+"Jim Weirich":http://onestepback.org
+
+"Ezra Zygmuntowicz":http://brainspl.at/
+
+"me":http://chadfowler.com ;)
+
+...it's bound to be both education _and_ entertaining.
+
+Anyway, the early bird registration ends July 1.  People tend to get distracted during the summer and miss this kind of thing.  "Here's registration":http://pragmaticstudio.com/therailsedge/register.html if you're interested.
+
+Seeya there!

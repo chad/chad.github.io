@@ -1,0 +1,55 @@
+---
+layout: post
+title: !binary |-
+  SG93IFJ1YnkgTWl4aW5zIFdvcmsgV2l0aCBJbmhlcml0YW5jZQ==
+enki_id: 4691
+---
+Yesterday I "asked on Twitter":http://twitter.com/chadfowler/status/2516989904 whether anyone was successfully using "is_paranoid":http://github.com/semanticart/is_paranoid/tree/master in a Rails application, because I had confused myself into thinking it couldn't possibly work.
+
+The problem I was having wasn't is_paranoid's fault, but it turns out it actually can't do what I wanted it to do in its native state. The explanation of why is something I thought a number of Rubyists might benefit from hearing, so here it is.
+
+Briefly, an explanation of is_paranoid: if you declare an ActiveRecord model to be paranoid, whenever you attempt to delete that model, is_paranoid will instead set a flag which indicates that the record is deleted. is_paranoid uses default_scope to filter out soft-deleted records in your queries. So you can act as if records are deleted without actually removing the rows. If is_paranoid is new to you but sounds familiar, you might be thinking of "acts_as_paranoid":http://github.com/technoweenie/acts_as_paranoid/tree/master, which is Rick Olson's original implementation of this idea.
+
+What I wanted to do for the specific application I'm working on is to declare that _every_ model should inherit the is_paranoid behavior.  Easy enough, I thought, given the way these things typically work in Rails' inheritable accessor setup:
+
+<script src="http://gist.github.com/142479.js"></script>
+
+But when I tried to destroy an instance of (for example) Person, the regular ActiveRecord destroy code was invoked and the records were being actually destroyed.  Bummer.
+
+So I cracked open the code to is_paranoid and found this perfectly reasonable idiom:
+
+<script src="http://gist.github.com/142478.js"></script>
+
+At this point, after pretending I was an idiot for a few minutes, I realized that this code was indeed _incapable_ of doing what I wanted it to do.
+
+Some of you already know why. For the rest of you, let's talk about how Ruby's mixins fit into its inheritance mechanism.
+
+Maybe it's just me, but when I think of something getting "mixed in" to something else, I imagine the two things becoming intertwined. So, the natural assumption when mixing a module into a Ruby class would be that the methods of the module get intertwined with the Ruby class. And for the HelloWorld of mixins, that indeed _appears_ to be the case:
+
+<script src="http://gist.github.com/142481.js"></script>
+
+But if you start mixing modules that implement methods the class also implements in, things don't go quite as smoothly:
+
+<script src="http://gist.github.com/142484.js"></script>
+
+Instead of "Overridden do_something" as some might expect, this code prints "Doing something in Thing". 
+
+Why?
+
+Because when we mix a module into a Ruby class, we're not actually intermingling the methods of the module and the class.  Instead we're inserting the module into the class's inheritance hierarchy. A good way to see how this works is by using the "ancestors" method:
+
+<script src="http://gist.github.com/142869.js"></script>
+
+When a method is called on an instance of SubThing, you can see that it is looked up first in SubThing's class, then Thing's class, _then_ in IneffectiveOverride, and so on.
+
+!http://chadfowler.com/yuml.png!
+
+(I used "yuml":http://yuml.me to generate this.  Cool site!)
+
+To further demonstrate that mixins don't really get "mixed in", notice what happens when you try to include a module at multiple points in the inheritance hierarchy:
+
+<script src="http://gist.github.com/142872.js"></script>
+
+If a module is already present at a higher point in the hierarchy, it won't be mixed in again. 
+
+So is_paranoid was apparently built without the goal of being able to mix it into ActiveRecord::Base. Sounds reasonable to me.

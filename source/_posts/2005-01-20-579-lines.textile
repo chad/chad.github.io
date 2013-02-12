@@ -1,0 +1,16 @@
+---
+layout: post
+title: !binary |-
+  NTc5IExpbmVz
+enki_id: 4543
+---
+After one day, <a href="http://www.tadalist.com/">this application</a> has
+already become a part of how I work.
+
+<p>
+<a href="http://www.loudthinking.com/arc/000396.html">579 lines of
+code.</a> It probably takes <a
+href="http://www.clarkware.com/cgi/blosxom/2003/11/17">more lines of
+configuration</a> to get &quot;Hello World&quot; running in a J2EE
+environment.
+</p>

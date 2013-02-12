@@ -1,0 +1,7 @@
+---
+layout: post
+title: !binary |-
+  VHdlZXQgVHdlZXQh
+enki_id: 4700
+---
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="chadfowler">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

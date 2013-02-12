@@ -1,0 +1,29 @@
+---
+layout: post
+title: !binary |-
+  SmV0bGFnZ2VkIFByb2dyYW1taW5nIEZ1bg==
+enki_id: 4466
+---
+
+Today has been a strangely productive day considering the circumstances.  You
+wouldn't think so, but I really think it's harder to shift 4.5 hours in time
+zone (<i>Budapest -> Bangalore</i>) than 10.5 hours (<i>EST -> Bangalore</i>).  I'm entering my fourth night home, and I haven't even gotten close to adjusting yet.  Last night, I decided to bite the bullet and pull an all-nighter.  I'm getting too old for that, so I made it until 7:30AM and then woke up at 10AM face down on the couch.  Anyway, I'm dead tired and ready to sleep at a decent hour, so <b>Mission Accomplished!</b>
+<P>
+To pass the time during the day, I've been working on a Ruby library that will
+help me explore my infatuation with the abstract idea of "executable documentation".  I won't bother you with a description until it's usable (since there's a large chance I won't ever finish it).
+<P>
+I've read the results of some studies (which I couldn't locate if my life
+dependend on it right now) on sleep loss which say that your IQ drops <b>n%</b> when you are sleep deprived, where <b>n</b> == something signficant.  Last night and today, I've been living proof.  I've been implementing features intended for one object on an entirely different object, doing some really strange things with coupling between classes that I would never do when I'm lucid (<i>worse</i> than the old <font color="blue">names[i] = name; addresses[i] = address;</font> parrallel array type of thing), and am at something like a 50% defect rate when it comes to typos.
+<P>
+Despite all this, with my head nodding forward and my eyes closing, I've got one crutch that keeps me going.  I've been doing test first design (or "TFD", as the Russian Orthodox Church of XP prefers it to be called), so I start with a blank test case and then alternatively add assertions that fail and code that makes them work until I'm done.  This is nothing new, of course.  There's even a <a href="">book</a> specifically about how to do this, now.  But, I've never tried to do it when I haven't slept.  I've always enjoyed test first programming--not so much because I'm supposed to or because of some idealistic notion that it's my duty as a programmer.  But, because it's fun and rewarding.  I mentioned in a recent post that I have an attention span deficit.  TFD is an ultra-iterative process built on small victory after small victory.  It's perfect for a scattered person like me.  Now, I can happily go to bed with a sense of accomplishment:
+<pre>
+chad@localhost htmldb]$ ruby html/test/tc_db.rb
+Loaded suite html/test/tc_db
+Started
+..........
+Finished in 0.117905 seconds.
+19 tests, 48 assertions, 0 failures, 0 errors
+</pre>
+...and tomorrow there will be more.  Even if it's "49 assertions", it's better than the ambiguous feeling of just having worked on something that still isn't done.  Being half asleep, you'd be surprised at how many times I thought I was finished with a feature only to run the tests and get a failure--embarrassingly, maybe 30% of the time.
+<P>
+Also interesting, even with the sleep loss and jet lag, I haven't been bitten by Ruby's "duck typing"<a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/801">(you'll have to read this thread)</a> once.  <i>"But, how can you possibly make good software when you don't know the type of your objects at compile time?!"</i>  I suspect that, without the aggressive testing, I <i>might</i> run into problems due to the dynamic typing, but I don't see how that's much <a href="http://www.pragmaticprogrammer.com/cgi-local/pragprog?JavaIsUntyped">different from working in a static language like Java</a>.  In case you can't tell, I've been recently irritated by the "dynamic typing is dangerous" argument.

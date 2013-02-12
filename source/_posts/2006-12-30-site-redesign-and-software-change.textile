@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  U2l0ZSByZWRlc2lnbiBhbmQgc29mdHdhcmUgY2hhbmdl
+enki_id: 4591
+---
+In the not-so-interesting-for-you department, I'm changing quite a few things around here this week:
+
+"Bruce Williams":http://codefluency.com has done a stunningly great redesign of this site.  Bruce is the designer for "Ruby Central":http://rubycentral.org, so if you've been to our recent conferences, you probably have one of his t-shirts.
+
+Also, after nearly four years of faithful service, I've retired Dave Thomas's "Rublog":http://rubyforge.org/projects/rublog/ in favor of Rick Olson's "Mephisto":http://mephistoblog.com/.  If you suddenly see a bunch of my old posts in your news reader, that's probably why.  
+
+I worked to try to map old URLs to new URLs, but there are bound to be some things broken.  Let me know (my first name @ my domain) if you encounter anything wacky you don't think I know about.  Also, I haven't yet moved the comments over, so apologies to those who've posted comments lately.  I'll try to get them ported over next week.

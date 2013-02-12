@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  V2hvJ3MgVGVuZGluZyB0aGUgU3RvcmU/
+enki_id: 4595
+---
+  (This article is part of the "Big Rewrite":http://chadfowler.com/2006/12/27/the-big-rewrite series.)
+
+While we're all in the back creating the next revision of a product, who's tending to the day to day issues of the existing product?  Typically, it's the domain experts and the original implementers of the product.
+
+Regardless of our intentions, day to day life and in-your-face time-sensitive issues can very easily steal all of the attention from a Big Rewrite.  Screaming customers need their problems solved.  Outages and serious bugs need to be fixed.  Enhancements have to keep rolling in if your project takes as long as projects tend to take.  Somebody has to do these things.  Training new people is hard and doesn't seem to make sense.  If we're getting rid of a system, why would we train someone how to maintain it?
+
+So, the experts keep the old system running while the new system is being built.  So, who builds the new system?  Not the experts, that's who.  Usually, it's people like me:  technology experts.  And while we're banging away at the existing system's UI, trying to figure out what needs to be coded, the domain experts are doing their jobs.  Unfortunately, this means the domain experts aren't watching the Big Rewrite very closely.  Regardless of how good the team, if communication is impaired between the domain experts and the technology experts, things are going to move slowly, and wrong software is going to be created.

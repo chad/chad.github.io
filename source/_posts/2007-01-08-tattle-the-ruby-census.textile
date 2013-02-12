@@ -1,0 +1,37 @@
+---
+layout: post
+title: !binary |-
+  VGF0dGxlOiBUaGUgUnVieSBDZW5zdXM=
+enki_id: 4598
+---
+At the first "Rails Edge conference":http://therailsedge.com, "Jim
+Weirich":http://onestepback.org, "Bruce Williams":http://codefluency.com, and I were chatting about how to improve the
+"RubyGems":http://rubygems.org/ platform-specific behavior, when we realized that it would be
+really helpful to have more info about the install footprint of the
+Ruby community at large.
+
+So instead of going right into hacking RubyGems as was our plan, we
+created a little census tool and an accompanying web site to help us
+collect information.  Most of the info we collect is from
+Config::CONFIG, with the addition of the RubyGems version.
+
+We know this information will help the implementers of RubyGems, and
+we hope it will also help Ruby implementers and library developers as
+well.
+
+To install:
+
+$ sudo gem install tattle
+
+To submit your info:
+
+$ tattle
+
+If you want to see what would be posted before posting, you can do:
+
+$ tattle report
+
+The information gets posted to "http://tattle.rubygarden.org":http://tattle.rubygarden.org.  You can
+view the posted data with your web browser at that URL.
+
+As a side note, Eric posted the "latest RubyGems beta":http://blog.segment7.net/articles/2007/01/07/rubygems-beta-0-9-0-9 this weekend.  Please do give it a go if you're so inclined.

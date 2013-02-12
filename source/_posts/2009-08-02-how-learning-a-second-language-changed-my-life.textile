@@ -1,0 +1,111 @@
+---
+layout: post
+title: !binary |-
+  SG93IExlYXJuaW5nIGEgU2Vjb25kIExhbmd1YWdlIENoYW5nZWQgTXkgTGlm
+  ZSA=
+enki_id: 4692
+---
+	<p>There&#8217;s an old joke I heard in India which goes something like this:</p>
+
+
+	<p>What do you call a person who speaks many languages? <em>Multilingual</em></p>
+
+
+	<p>What do you call a person who speaks two languages? <em>Bilingual</em></p>
+
+
+	<p>What do you call a person who speaks one language? <em>American</em></p>
+
+
+	<p>Sad, but usually true. I got fairly deep into my adult life without having learned anymore
+than the bare minimum Spanish I was required to study in the Arkansas public school system.
+As you might imagine, I wasn&#8217;t all that conversational in Spanish by the time I graduated.
+My father&#8217;s mother was German and my mother&#8217;s mother is Japanese. I grew up hearing many 
+languages spoken but somehow never learned another one. As a German-Japanese-American, by my 
+mid-20s I started to feel like I was missing something serious.</p>
+
+
+	<p>I was sitting at work in a big company lunch room one day talking
+to an Indian friend. I asked how many languages he spoke and he said six.
+I told him I was envious and that I guessed I would need to just
+eventually move to another country so I could be immersed enough to
+learn a language. I was tired of being the typical monolingual American.
+ He said, &#8220;Look around. Anything significant about
+the people you see?&#8221; I looked around and it turned out I was the only
+person in the lunch room who wasn&#8217;t Indian. He said &#8220;Learn an Indian
+language&#8221;.</p>
+
+
+	<p>So I bought every Hindi book, <span class="caps">CD ROM</span>, and video I could find and
+started watching Bollywood movies for fun. Within a year or so I was
+pretty conversational. I started teaching my wife, Kelly, Hindi as well, and we
+used it as a secret language when we were out in public.</p>
+
+
+	<p style="float:right"><img src="http://chadfowler.com/images/kannada.jpg" alt="Kannada Script" /><br/>
+Photo by <a href="http://www.flickr.com/people/ashasusan/">Asha Susan</a></p>
+
+
+	<p>Based on my self-driven Indian cultural immersion, when an opportunity
+came up at the big company I worked for to have someone expatriate to India to help set up a
+software development center, I was the first choice. My wife and I
+spent a year and a half living in Bangalore  trying to
+blend in like real Indians (except for the physical appearance thing of
+course).</p>
+
+
+	<p style="float:left"><img src="http://chadfowler.com/images/veena.jpg" alt="Veena" /><br/>
+Photo by <a href="http://www.flickr.com/people/dalbera/">J.P. Dalbï¿½ra</a></p>
+
+
+	<p>We took two private Hindi classes per week plus I took
+<a href="http://en.wikipedia.org/wiki/Kannada_language">Kannada</a> and studied the <a href="http://en.wikipedia.org/wiki/Veena">Veena</a>
+twice a week each as well.  The Veena lessons were particularly cool
+because the teacher didn&#8217;t speak very much English at all and wrote
+all the music in Kannada script, which I had
+taught myself over a long weekend after we moved to Bangalore (I discovered that after learning to read
+Hindi, it was relatively easy to learn any Indian language&#8217;s writing system). Knowing that I couldn&#8217;t have succeeded in these Veena lessons had I been limited to English was extremely empowering.</p>
+
+
+	<p>While in India, we were fearless. We walked the back streets of Bangalore where westerners don&#8217;t go. We weren&#8217;t afraid to find our own transportation or do our own business anywhere, despite the huge cultural differences and language barriers. And when we went up North where everyone spoke Hindi, we didn&#8217;t have to worry about trying to find cab drivers who spoke English. We were able to go to small villages and talk to anyone we encountered. We got to see what India was really like and to experience the immense warmth of its people, which we&#8217;ve discovered is multiplied when you even try to say &#8220;Hello&#8221; or &#8220;Thank you&#8221; in their language.</p>
+
+
+	<p style="float:right"><img src="http://chadfowler.com/images/old/ChadAndKids.jpg" width="300" alt="Me and some children around Agra" /></p>
+
+
+	<p>The benefit of learning Hindi didn&#8217;t stop at the Indian border. All of this led to another of the best experiences of my life.  When
+we were about to head home from India, my wife got an email from a
+non-profit group in Louisville, Kentucky (our home/destination) that
+supported Tibetan monastic refugees: &#8220;Help! Does anyone speak Tibetan
+or Hindi?&#8221;. The director of the non-profit
+(<a href="http://www.drepunggomang.com/">http://www.drepunggomang.com</a>) was desperate and half-joking when she
+sent the request. They had just moved a senior monk from an monastery
+in India to Kentucky to lead a dharma center when the local
+Tibetan translator had immigration problems and was suddenly no longer allowed to stay 
+in the US. The monk didn&#8217;t speak <em>any</em> English, so the dharma center was basically
+stuck there with him without anyone who could help communicate. We didn&#8217;t know a whole lot about Tibetan Buddhists at the time but decided it wouldn&#8217;t hurt to help, so we responded saying we spoke Hindi and were due back in Kentucky in a week.</p>
+
+
+	<p style="float:left"><img src="http://chadfowler.com/images/geshesangye.jpg" width="200" alt="Geshe Sangay Gyatso" /></p>
+
+
+	<p>This started a long relationship with the institute which included a
+stint with both of us serving as directors. We also became very close friends
+with <a href="http://www.drepunggomang.com/the_monks_of_dgi">Geshe Sangay Gyatso</a> from whom we learned a
+<em>lot</em> about Tibetan culture and <a href="http://en.wikipedia.org/wiki/Mahayana">Mahayana Buddhism</a>. He even lived with us
+for a while. The center was in between lodging arrangments for him, so it made perfect sense for him to stay
+with us since we could all communicate. We had developed a family-like relationship. He stayed with us for about a month. I remember the smell of incense and the sound of chanting coming out of his room every morning as he
+ practiced his faith. It was a seriously humbling and life-changing experience to let
+the pressures of corporate life reflect from his perspective after
+work each day.</p>
+
+
+	<p>Being Geshe Sangay&#8217;s translator led us to amazing
+experiences, including a lot of dialog with the spiritual leaders of
+Louisville when we attended and participated in interfaith events. One of the highlights of these experiences was when I 
+had the opportunity to tour the gardens of <a href="http://www.monks.org/">The Abbey of Gethsemani</a> while translating
+for the recently retired abbot of the <a href="http://www.gomang.org/">Drepung Gomang Monastery</a> in India. I believe I&#8217;m one
+of very few non-monks to see the full beauty of the Abbey, and it&#8217;s an experience I&#8217;ll never forget.</p>
+
+
+	<p>As the direct result of learning Hindi (and now a little Tibetan and Kannada), I&#8217;ve had some of the greatest career, cultural, social, and spiritual experiences of my life. I&#8217;ve made dear friends I could never have met or communicated with, and I&#8217;ve learned things that would have been much harder to learn without the language skills. Is learning a language a good use of your time? Absolutely.</p>

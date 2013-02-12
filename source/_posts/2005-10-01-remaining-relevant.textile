@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  UmVtYWluaW5nIFJlbGV2YW50Cg==
+enki_id: 4426
+---
+While you wait for your copy of <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti/index.html">My Job
+Went to India</a> to arrive, you may want to warm up by reading <a
+href="http://chadfowler.com/RemainingRelevant.pdf">Remaining Relevant</a>,
+an article I wrote for the May/June issue of <a
+href="http://www.bettersoftware.com">Better Software Magazine</a>. It
+touches the same issues but from just above the 50,000 foot mark.
+
+<p>
+I recommend reading it Monday morning before you go to work. Download it
+and save it for breakfast reading. A good way to start the week.
+</p>
+<p>
+Thanks to <a href="http://testing.com/cgi-bin/blog">Brian Marick</a> for
+reminding me that the article wasn&#8217;t linked yet.
+</p>

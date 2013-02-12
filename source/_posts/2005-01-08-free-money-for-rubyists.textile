@@ -1,0 +1,50 @@
+---
+layout: post
+title: !binary |-
+  RnJlZSBNb25leSBmb3IgUnVieWlzdHMh
+enki_id: 4496
+---
+We (<a href="http://rubycentral.org">RubyCentral</a>) are <a
+href="http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/125566">giving
+away</a> FREE MONEY to Rubyists who have a good idea for a piece of
+software and want to get together with like-minded Rubyists to see the idea
+through.
+
+<p>
+The core of <a href="http://rubygems.rubyforge.org">RubyGems</a> was
+created over a weekend, accelerated by the fact that several of us were
+programming together. <a href="http://dnssd.rubyforge.org">Ruby DNSSD</a>
+and Ruby&#8217;s <a
+href="http://www.ruby-lang.org/cgi-bin/cvsweb.cgi/ruby/lib/scanf.rb">scanf</a>
+were created during similar gatherings.
+</p>
+<p>
+So, now we&#8217;re formalizing the previously informal and giving you FREE
+MONEY to help make it easier.
+</p>
+<p>
+Are you a Rubyist? Do you have an idea?
+</p>
+<p>
+Well, then shame on you for not applying. Time is running out.
+</p>
+<hr size="1"></hr><p>
+If you don&#8217;t have an idea, here are some things on my own personal
+wishlist:
+</p>
+<ul>
+<li>Ruby Subversion bindings
+
+</li>
+<li>A nice bug tracker in <a href="http://rubyonrails.org">Rails</a>
+
+</li>
+<li>Something that simplifies the open source ruby library release process,
+integrating <a href="http://raa.ruby-lang.org">RAA</a>, <a
+href="http://rubyforge.org">RubyForge</a>, <a
+href="http://ruby-talk.org">ruby-talk</a>, <a
+href="http://freshmeat.net">Freshmeat</a>, and <a
+href="http://rubygems.rubyforge.org">RubyGems</a>.
+
+</li>
+</ul>

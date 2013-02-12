@@ -1,0 +1,30 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmZbOjIwMDVdICZndDsgKFJ1YnlDb25mWzoyMDA0XSAqIDIpCg==
+enki_id: 4510
+---
+Registration for the <a href="http://www.rubyconf.org">Fifth International
+Ruby Conference</a> is up to greater than <a
+href="http://rubycentral.org/conference/reg/main/stats">two times the
+number</a> of the largest conference to-date. And that&#8217;s not counting
+the usual last-minute surge in registration before the conference.
+
+<p>
+Check out <a href="http://www.rubycentral.org/conference/agenda.html">the
+agenda</a>, <a
+href="http://www.rubycentral.org/conference/register/">register</a>, and
+(if you or your company have the means) consider <a
+href="http://www.rubycentral.org/pledge/">sponsoring</a> the conference. <a
+href="http://www.oreilly.com/">O'Reilly</a> is already signed up to sponsor
+(thank you!) with a couple more companies lined up.
+</p>
+<p>
+This is a great chance to meet Matz and many of the leaders of the Ruby
+community and the software development industry in general.
+</p>
+<p>
+Even if you&#8217;re not speaking, bring your ideas. Some big ideas (and
+code) have come out of conferences past. You&#8217;d be surprised what can
+be accomplished in between the sessions of a 3-day conference.
+</p>

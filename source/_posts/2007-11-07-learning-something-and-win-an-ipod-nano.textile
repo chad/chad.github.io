@@ -1,0 +1,9 @@
+---
+layout: post
+title: !binary |-
+  TGVhcm5pbmcgc29tZXRoaW5nIGFuZCB3aW4gYW4gaVBvZCBOYW5v
+enki_id: 4637
+---
+"Sam Larbi":http://www.codeodor.com/index.cfm/2007/11/5/Win-an-iPod-Nano-For-Learning-Something-New/1693 is running a "cool little contest":http://www.codeodor.com/index.cfm/2007/11/5/Win-an-iPod-Nano-For-Learning-Something-New/1693 over on his weblog.  The idea is to try to create a competition on learning new programming language paradigms.  This is obviously a topic that's dear to me (he's referencing "my book":http://www.pragprog.com/titles/mjwti), and I think it's cool that Sam has turned it into a contest.
+
+I also generally like the idea of taking some potentially valuable item that you haven't used and throwing it onto the internet to promote learning, good will, fun, or whatever.  When I get home I may go out into the garage and see what I can find :)

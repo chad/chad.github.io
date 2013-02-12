@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  QmFiYmxpbmcgaW4gUG9ydHVnZXNl
+enki_id: 4616
+---
+Brazilian Rails expert and author, "Fabio Akita":http://www.akitaonrails.com I recently did an "interview":http://www.akitaonrails.com/articles/2007/05/07/conversando-com-chad-fowler with me for his Portuguese Rails weblog.
+
+I bet you didn't know I was fluent in Portuguese, did you?!
+
+If, for some reason, _you_ don't read Portuguese, he's been kind of enough to translate the interview into English "here":http://www.akitaonrails.com/pages/chadfowler.
+
+Fabio has an excellent interview style.  I really enjoyed it and I think it came out really well.  Fabio has been doing a ton of other interview lately in an effort to shine a light on Rails in Brazil.  If you read Portuguese, keep an eye on his "interview category":http://www.akitaonrails.com/articles/category/entrevistas.  

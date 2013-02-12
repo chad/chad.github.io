@@ -1,0 +1,36 @@
+---
+layout: post
+title: !binary |-
+  V2hvIFdpbGwgQ3JlYXRlIFRoZSAzMDB0aCBHZW0/Cg==
+enki_id: 4493
+---
+Daniel Berger just released <a
+href="http://raa.ruby-lang.org/project/pathname2/">pathname2</a>, a file
+path manipulation library that works well on UNIX or Windows systems
+(including UNC paths).
+
+<p>
+Most notable about this from my perspective is that it is 299th unique <a
+href="http://rubygems.rubyforge.org">RubyGem</a>. That means there are 299
+different pieces of software (not counting their many different versions)
+available for installation via the RubyGems system.
+</p>
+<pre>
+        ~/svn/MJWTI/Book chadfowler$ gem list -r|grep &quot;^[a-zA-Z].*)$&quot;|wc -l
+        299
+        ~/svn/MJWTI/Book chadfowler$
+</pre>
+<p>
+As of this week, not counting downloads of the <a
+href="http://rubyforge.org/projects/rubyinstaller/">Ruby Windows
+Installer</a>, the RubyGems framework has been downloaded more than 50,000
+times. Within a week, it will have served up <a
+href="http://gems.rubyforge.org/stats.html">half a million gems</a>.
+</p>
+<p>
+So, who&#8217;s going to create the 300th gem?
+</p>
+<p>
+Be sure to watch the <a href="http://onestepback.org/gemwatch.rss">rss
+feed</a> if you want to find out which gem pulled across the 300 mark.
+</p>

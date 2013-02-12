@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgMjAwNy4uLnRoZSB3aGVuIGFuZCB0aGUgd2hlcmU=
+enki_id: 4614
+---
+Hey guess what?  "RubyConf 2007":http://rubycentral.org/news/2007/05/01/rubyconf-2007/ is going to be in Charlotte, NC this year.  November 2-4.
+
+We'll have a new page up at "http://rubyconf.org":http://rubyconf.org soon on which  you can focus all of your obsessive energies as you wait for registration to open.
+
+We're going to be able to fit a few more people in this year, but it's impossible to know how Ruby's continued growth will affect attendance.
+
+Ruby hackers, start getting those talk ideas ready.  We'll open up a call for proposals soonish as well.

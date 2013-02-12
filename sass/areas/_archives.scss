@@ -1,0 +1,27 @@
+// *****************************************************************************
+// ARCHIVES
+// *****************************************************************************
+
+#blog-archives {
+  > h2 {
+    clear: both;
+  }
+  div.sharing {
+    display: none;
+  }
+  article {
+    h1 {
+      font-size: 14px;
+      display: inline-block;
+    }
+    footer {
+      margin-left: 30px;
+      span {
+        font-size: 11px;
+      }
+    }
+  }
+  & ~ .sharing {
+    display: none;
+  }
+}

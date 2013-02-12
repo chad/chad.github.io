@@ -1,0 +1,28 @@
+---
+layout: post
+title: !binary |-
+  U3dpdGNoaW5nIHRvIEFuZHJvaWQ=
+enki_id: 4699
+---
+Instead of upgrading to the iPhone 4, I decided to get a Nexus One from Google. I've had it about a week so far and I'm happy with it.. Some friends and colleagues have asked for my impressions, so here is a brain-dump of the highlights so far:
+
+* Speech recognition is actually useful. Big surprise here. I can tweet, search the web etc. with minor edits to my dictated text
+* I can write applications and put them on my own phone easily at no cost
+* The API is (for my brain) much more straightforward than working with Cocoa. Maybe it's the years of experience but I also strongly prefer working with Java over Objective-C
+* I don't miss the iTunes store. I was worried about that, but Amazon's mp3 purchasing service is just as convenient (and you get mp3s instead of DRM'd media by default)
+* The UI is clunkier and uglier than even the first iPhone
+* I'm not finding myself missing any significant apps. There are some minor ones I wish I had but I don't but it's no big deal
+* Wifi tethering (Android 2.2) is a good thing
+* I've never met an on-screen keyboard I didn't hate. Android is no exception.
+* Kelly has an iPhone 4. We are traveling together. Everyone, everywhere asks her "Is that the new iPhone?". Nobody anywhere asks me about my phone. (Actually one person did yesterday but I think she felt sorry for me not having a phone as fancy as Kelly's)
+* I thought the idea of widgets on the home screens would be faddy and lame (like it is in most cases on desktop OSes). It's actually pretty useful.
+* The Android message bus architecture makes some really neat system-level things possible from 3rd party apps. For example, I have a little app called Handcent SMS which improves on the built-in SMS functionality of the phone. As far as I know this sort of thing isn't possible on the iPhone and i appreciate it as a user and as a developer.
+* I had a Google IO phone a year ago and the Android ecosystem was barren in contrast to what I'm seeing today. That's a huge change in only one year
+* I can now differentiate my ring tone from that of everyone else around me in a public place :)
+* I don't know of a good way to download video to the phone. I like to watch television shows and movies on my phone while traveling on airplanes. iTunes makes that trivial for the iPhone. Fortunately I have an iPad, but it's always nice to have a backup.
+* The Kindle app is a wonderful thing. Just like it is everywhere else. Now to sell my actual Kindle. Anyone want to buy a first generation Kindle?
+* I see Java exceptions more often than I would expect (java.net.UnknownHostException, for example). It's kind of embarrassing when it happens, but being  a Java developer myself I've actually found it to be much more useful than the app just crashing. Sometimes the exception class thrown gives me a clue to help diagnose the problem. That makes me feel smart. I don't think my parents would appreciate this feature.
+* The background/multitasking stuff is nice.
+* It reminds me of switching to desktop Linux.  Linux is usually uglier and less usable than its commercial rivals. Android is similarly ugly and slightly less usable. I also find Linux more exciting. You can get deep into its guts. You can customize it to your heart's content. You can program it to the limit of your capabilities (as opposed to the limit of its EULA). And it's weird, in both a good and a bad way. Unlike switching to desktop Linux, I'm often finding myself saying: "Oh, nice. I wish the iPhone had that."
+
+All that being said, I love my iPad and if I didn't have it I might not have been able to so easily let go of the last remaining Apple mobile device I had available to me. If anyone wants to send me an Android tablet I'd gladly evaluate and review it.

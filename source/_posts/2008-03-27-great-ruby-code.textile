@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  R3JlYXQgUnVieSBDb2RlPw==
+enki_id: 4645
+---
+Tonight, "Rich":http://richkilmer.blogs.com/, "Marcel":http://project.ioni.st and I spoke at the "DC Ruby Users Group":http://www.dcrug.org/.  Instead of choosing a topic, preparing a set of slides, and droning on about something for an hour we decided to involve the group to help us answer a question.  It's a question I get a lot when I do training with "The Pragmatic Studio":http://www.pragmaticstudio.com:  "Which Ruby projects should I look at to see examples of great Ruby code?"
+
+I have my standard answers (I'm sure we all do), but two things occur to me about answering such a question.  The first is that when asked a question like this, I have a gut reaction.  There are names that spring immediately to mind.  If I scrutinize these reflex reactions I realize that I haven't _really_ examined the code I'm thinking of in enough detail to call it _great_.  So though I have some cursory knowledge that makes me pretty sure when I give my recommendations (I'm holding off on naming specifics so as to not influence _your_ answer to this question), I'm not 100% sure which projects contain _great_ Ruby code.
+
+The second realization about this is that some of the names that spring to mind are based on potentially the wrong criteria.  I, like all humans, am more likely to mention something popular than something obscure.  There is also a Ruby community folklore.  Some names are synonymous with "great".  But it's just folklore.  So the knee-jerk reactions are at risk of being heavily influenced by the Ruby popular culture.  Looking at how successful popular culture is at picking great music, visual art, fiction, and other artistic mediums, it's pretty clear that we shouldn't trust pop culture when making decisions about which projects are composed of "great" code.
+
+So we asked the DC RUG: "Who are the greatest Ruby programmers in the world?"
+
+Then, all together, we looked at code written by the people they came up with.
+
+Some of it was beautiful.  Some of it was ugly.
+
+We talked about what made some of it beautiful and some of it ugly.  We talked about the importance of writing beautiful code.  It was fun.
+
+Anyway, I still don't have a satisfactory list of _great_ Ruby code.  I'd like to build such a list.  So, please leave a comment saying the name of an open source Ruby project you feel represents truly great Ruby code.  
+

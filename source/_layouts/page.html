@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article role="article">
+  {% if page.title %}
+  <header>
+    <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+    {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
+  </header>
+  {% endif %}
+  <div class="article-content">
+    {{ content }}
+
+    {% unless page.sharing == false %}
+      {% include post/sharing.html %}
+    {% endunless %}
+
+    {% unless page.footer == false %}
+      <footer>
+        <p>
+          {% if page.date or page.author %}
+            {% if page.author %}{% include post/author.html %}{% endif %}
+            {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+            {% if page.categories %}{% include post/categories.html %}{% endif %}
+            {% endif %}
+        </p>
+      </footer>
+    {% endunless %}
+
+     {% if site.disqus_short_name and page.comments == true %}
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+      </section>
+    {% endif %}
+
+  </div>
+
+</article>

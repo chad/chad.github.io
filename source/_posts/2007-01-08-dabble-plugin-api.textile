@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  RGFiYmxlIFBsdWdpbiBBUEk=
+enki_id: 4596
+---
+I recently had the privilege of writing a tutorial for "Dabble DB's":http://dabbledb.com new "plugin API":http://dabbledb.com/blog/?p=69.  If you haven't heard of Dabble DB yet, it's one of the few really innovative applications you'll find with the "web 2.0" label.  For a quick look at what it's all about, check out the "popular":http://dabbledb.com/blog/?p=66 "7 minute demo movie":http://dabbledb.com/explore/7minutedemo/ that "Avi":http://smallthought.com/avi/ made.
+
+Even if you're not planning to use Dabble DB, I think it's worth reading "the tutorial":http://dabbledb.com/help/guides/pluginapi/ to see how they've implemented plugins.  It may have been done before, but I haven't seen it done like this.  When you host an application on the open internet, how do you allow users to safely "plug" their own code into your application?  You could go to a lot of trouble and create a sandboxed interpreted environment inside your application, exposing an API.  But that's really really hard to do.
+
+What Smallthought did might be more aptly called "plugouts".  Instead of just exposing services that you can consume into your own mashup, they allow Dabble DB to call out to custom, internet-accessible services.  And, rather than clutter things up with an ugly XML API, they deal in simple CSV in and out, kind of like UNIX pipes.
+
+It'll be interesting to see what happens with this both in Dabble DB and other applications that start to adopt this approach.  Immediately after the plugin API's release, there are already "a couple of publicly available plugins":http://timcraft.com/2007/7 (from an apparent Rubyist.  Hi Tim!)
+
+What other interesting approaches have you seen to accomplish this same goal?

@@ -1,0 +1,67 @@
+---
+layout: post
+title: !binary |-
+  UnVieSBIb2Vkb3duZWQ=
+enki_id: 4626
+---
+Friday and Saturday, I attended the first "Ruby Hoedown":http://rubyhoedown.com at RedHat HQ in Raleigh, NC.  The Hoedown was one of many regional Ruby conferences popping up all over the place driven in small part by "Ruby Central's":http://rubycentral.org conference grant.  "Nathaniel":http://terralien.com/ and "Jeremy":http://www.jeremymcanally.com/ did an excellent job putting the conference together.  It was flawlessly executed with an exciting program and a good dose of southern charm.  
+
+Here's a braindump:
+
+h2. Testing Workshop for Charity - $3200
+
+The conference pre-started with me, "Bruce Tate":http://blog.rapidred.com/, and "Marcel Molina":http://marcelmolina.com giving a two and a half hour testing workshop for "charity":http://changingthepresent.org/drives/show/241.  Taking a queue from the "Dave":http://pragmaticprogrammer.com and "Mike's":http://pragmaticstudio.com Rails Guidebook, participants gave a donation ($50 recommended) to attend the workshop.  We ultimately raised roughly $3200 for the "Food Bank of Central and Eastern North Carolina":http://www.foodbankcenc.org/.  A large portion of the workshop consisted of me and Marcel interactively improvising the development of an application in test-first style while drawing the questions, comments, and criticism of the audience.  The format worked well (from our perspective), and we covered a lot of great material.  We're really looking forward to our "FULL DAY testing workshop for charity":http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736 at "RailsConf Europe":http://railsconfeurope.com in Berlin next month.  (Next month's workshop goes to support Habitat for Humanity.  "We're happily accepting donations regardless of whether you attend.":http://www.justgive.org/basket?donorId=91403&listTypeId=1&acton=viewList&sess=1)
+
+h2. Merb
+
+The main conference kicked off with a talk from Ezra Zygmuntowicz about "Merb":http://merb.rubyforge.org.  Merb started out as a complement to Rails---something you whip out when you need multi-threaded request processing, such as big file uploads and long-running application logic.  Rails isn't always well suited to this sort of thing, because Rails is single threaded.  To scale, you have to add more processes, which adds a potentially unhealthy amount of memory overhead.  Merb is a multithreaded, lighter weight Mongrel-bound (for now) framework.  
+
+Now, however, Merb is turning into a full-blown Rails clone (Actionpack clone really).  I remain fully skeptical.  I understand Ezra's stated reasons for doing it (along with a few implicit ones I think), but I think we already have a Rails, and incremental improvements are, well, incremental.  It would be nice to see someone taking a leap as opposed to a step.  Even before Rails came out, I think the industry had seen enough MVC.  I am hopeful that some of Ezra's improvements make it back into Rails.  His desire to keep things lean and unmagical is commendable.
+
+h2. Adhearsion
+
+Next up was "Jay Phillips":http://jicksta.com/, whose "Adhearsion":http://adhearsion.com/ framework for VOIP applications completely blew me away.  Adhearsion is a perfect example of someone taking a powerful domain with a historically ridiculous development model and taking a full evolutionary step forward.  Jay's framework takes developers from what literally looks like the dark ages (have you _seen_ an Asterisk dial plan?) to a beautiful and powerful API with modern automation wrapped around it.  
+
+We Rubyists have been looking for another killer app following Rails.  Adhearsion might be it.  Seeing Jay speak made me realize that we have that same combination of disdain with the current state of affairs, courage to slap the (telecom development) industry in the face, intelligence to innovate a solution which brings "programmer joy":http://en.wikipedia.org/wiki/Yukihiro_Matsumoto and the people skills and marketing sensibility to push it over the edge.  If you care about Ruby, watch Adhearsion closely.
+
+h2. The Journey - Bruce Tate
+
+The day closed with Bruce Tate giving a keynote on the direction of Ruby.  He drew some interesting parallels to past technologies and also led us through a series of scenarios about where Ruby and its community might be headed.  The most convincing one can be summarized as using Ruby to build elegant APIs on top of existing problems which do for those problems what Rails did for web development.  See Adhearsion.
+
+h2. Building Games With Ruby
+
+"Andrea O. K. Wright from Chariot Solutions":http://www.chariotsolutions.com/home/index.jsp gave a surprisingly thorough and engaging talk which ended up being a survey of the various game libraries available for Ruby.  I'm an avid gamer and got interested in computer programming because I wanted to be a game developer, so I've taken this tour myself a few times.  But it's been a while and I was simply _amazed_ at how far things have come.  As Andrea spoke, I downloaded literally every library she was discussing and tried them out.  I had some problems with the SDL bindings on my Mac, but I had instant success with both "Gosu":http://code.google.com/p/gosu/ and "Shattered Ruby":http://www.shatteredruby.com/.  I'm not sure if we're ready for Unreal Tournament-style games in Ruby but simple games are finally, well...simple to create.  Definitely check out Gosu if you even have a passing interest.  Really fun.
+
+h2. Lightning Talks
+
+There were a series of quick lightning talks.  They were good, but there were too many to enumerate.  I'm liking this format more and more every time I experience it.
+
+h2. Ruby For Change
+
+During lunch "Jeff Casimir":http://www.casimircreative.com/ and I organized a "BoF" (I hate that term) on Ruby for Social Change.  Jeff booked the smallest spot, thinking we were going to be a tiny crowd, but we ended up cramming a large group into the room.  The discussion was lively and loud and the people were passionate.  With only 45 minutes to talk, we came out of the meeting with some ideas about organizing volunteers to give their time to produce real applications for non-profits/charities who could use the projects to make impactful change.  More on this soon I hope.  We have a RubyForge project "set up for the group":http://rubyforge.org/projects/rubyforchange.  
+
+If you're interested in this topic and interested in helping to shape what we do, please do drop in and sign up for the mailing list once it's activated.  The first order of business (in parallel to doing things like setting up a web site) is to find a project with a real customer to rally around.  If you have ideas, we'd love to hear them.
+
+h2. Does Ruby Have a Chasm to Cross?
+
+I was skeptical because of the title of this talk, but I trusted that "Ken Auer":http://www.rolemodelsoft.com/ken_auer was going to deliver something interesting, and my skepticism turned out to be ill-founded.  Ken is an old Smalltalker and one of the leaders in both the patterns and agile movements.  His talk was a well-thought-out history of Smalltalk and ultimately a comparison to Ruby's adoption curve.  I won't do this one justice with a summary, but I recommend watching it when the conference videos go live on the "Confreaks":http://confreaks.com web site.
+
+h2. Using C to Tune Your Ruby (or Rails) Application
+
+"Jared Richardson":http://www.agileartisans.com/main gave a really engaging and fun talk on extending Ruby with C.  It was review for me, but the audience was totally into it, and 2 out of 6 people who Nathaniel asked to tell one thing they were excited about learning at the end of the conferenced cited material from Jared's talk.  It's easy to forget how elegant and human-friendly Ruby's C API is.  If you're the kind of person who has a natural aversion to that kind of thing and have been avoiding it, you really should take a Saturday morning to crack open the "Pick Axe":http://pragmaticprogrammer.com/titles/ruby/index.html and go through some of the C extension examples.  I think you'll be pleasantly surprised.  Lots of potential gain for not much pain.
+
+h2. What Makes Beautiful Code?
+
+I'm not going to say much about this, because I hope to take this topic into a separate post, but Marcel's ideas from this talk have already changed the way I think about my own code as I write it.  Those that know Marcel and have worked with him know that he is obsessed with keeping code beautiful.  Whether it's a shell script, a systems programming task, or a high level API, he creates some of the most consistently beautiful code you'll see in Ruby-land.  In this talk, Marcel decided to take this passion for beauty and try to more clearly define the elements that make code beautiful.  The result is a small but useful framework for measuring trade-offs when developing software.  I'm looking forward to seeing these ideas develop.  The keynote itself was short but the Q&A and discussion about it expanded such that Nathaniel ultimately had to cut it off.  Obviously a topic that inspired much passion.
+
+h2. I Am Not A Werewolf
+
+This time literally.  We took a group to a nearby hotel and played <a href="http://en.wikipedia.org/wiki/Mafia_(game)">Werewolf</a> until around midnight.  If you don't know Werewolf, you owe it to yourself to try it.  We played 5 nights straight at "RailsConf":http://railsconf.org this year, and I feel like some lasting bonds were made with people who I might not have even met otherwise.  I think our community is too cliquey and fragmented sometimes, and Werewolf is a powerful tool (yes I'm talking about a game and saying "powerful") for changing that.
+
+We'll be trying to put together a game again in a couple of weeks at "The Rails Edge":http://pragmaticstudio.com/therailsedge/ in Chicago.  If you're coming to the Rails Edge, read up on the rules before-hand and join in.  If you're not yet signed up it's not too late.  
+
+Thanks to last night's players and my (some-of-them) new friends Lyle Johnson, Tony Devlin, Jim Meyers, Chris Redinger, Evan Light, Devin Mullins, Carl Youngblood, Coby Randquist, Joe Martinez, Rick DeNatale, Ted Behling, Ryan Daigle, and Marcel.  I hope to see you guys around soon.
+
+!http://farm2.static.flickr.com/1132/1088483927_4cfa82bd61.jpg?v=0!
+
+If you're in the South, I highly recommend watching for an announce of the second Ruby Hoedown.  Until then, keep your eyes glued to "RubyConf":http://rubyconf.org.

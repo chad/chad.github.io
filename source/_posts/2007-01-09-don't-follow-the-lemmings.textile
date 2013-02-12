@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  RG9uJ3QgRm9sbG93IHRoZSBMZW1taW5ncw==
+enki_id: 4597
+---
+Back in November, I did a presentation for the "XP West Michigan":http://xpwestmichigan.org/ at the "Atomic Object":http://atomicobject.com office in Grand Rapids.  They've recently posted the talk to "Google Video":http://video.google.com/videoplay?docid=-8984753198261505541.
+
+The talk was titled "Don't Follow the Lemmings" and is a continuation of the thoughts laid out in my book, "My Job Went to India":http://pragmaticprogrammer.com/titles/mjwti.
+
+It being on Google Video, you can watch it online (embedded here, in fact) or download it to your computer or iPod for off-line viewing (a discovery I've recently made which makes plane trips much more enjoyable).
+
+Watching on an iPod should be fine, because there are no slides to squint at.
+
+<embed style="width:400px; height:326px;" id="VideoPlayback" align="middle" type="application/x-shockwave-flash" src="http://video.google.com/googleplayer.swf?docId=-8984753198261505541&hl=en" quality="best" bgcolor="#ffffff" scale="noScale" salign="TL"  FlashVars="playerMode=embedded"> </embed>

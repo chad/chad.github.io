@@ -1,0 +1,92 @@
+---
+layout: post
+title: !binary |-
+  UnVieSBUeXBlcyBhbmQgQ2xhc3Nlcw==
+enki_id: 4477
+---
+<a
+href="http://www.ruby-talk.org/cgi-bin/vframe.rb/ruby/ruby-talk/84735?84661-84811+split-mode-vertical">www.ruby-talk.org/cgi-bin/vframe.rb/ruby/ruby-talk/84735?84661-84811+split-mode-vertical</a>
+
+<p>
+A near flame-war has broken out on ruby-talk (<a
+href="http://www.ruby-talk.org">www.ruby-talk.org</a>). But, amidst the
+smoldering remains lie some of the most clarifying statements I&#8217;ve
+seen about Ruby&#8217;s class/type system.
+</p>
+<p>
+I have to admit that this thread struck one of my most sensitive nerves in
+the Ruby programming world these days: people coming from statically typed
+languages trying to force-fit dynamically typed languages into behaving
+like their previous languages (e.g. Java, C++, C#). Specifically, new Ruby
+programmers are constantly looking for how to &quot;document
+interfaces&quot; in some strict, contractual way. That&#8217;s fine with
+Java and C#, where it really means something, but in Ruby it&#8217;s
+meaningless to check the class of an object on method invocations. What
+makes it worse is that they show up crusading to save the &quot;loose
+typing&quot; heathens from the damnation that only strict, static typing
+can prevent. I probably sparked the initial flame of the near-war, with a
+post containing:
+</p>
+<pre>
+  As you can see, any code that that relies on this kind of &quot;type checking&quot;
+  in Ruby is naive.  Worse than that, the desire to shoe-horn
+  Ruby into Java-like &quot;strictness&quot; can blind the user into missing the
+  point, and therefore the full benefit, of what Ruby has to offer.
+</pre>
+<p>
+Rich Kilmer (<a
+href="http://richkilmer.blogs.com/ether/">richkilmer.blogs.com/ether/</a>)
+had the following to say about this static-ish type checking:
+</p>
+<pre>
+  The question is whether you write your methods to expect a certain
+  &quot;namespace&quot; (Class/Module), or just simply a set of behaviors.
+</pre>
+<p>
+This is the first time I can remember someone referring to a class or
+module in Ruby as a &quot;namespace&quot; for collecting and grouping
+behaviors. That one sentence really cuts to the core of the matter. Great
+way to look at it.
+</p>
+<p>
+Austin Ziegler (<a href="http://halostatue.ca">halostatue.ca</a>) and David
+Black (<a
+href="http://rubygarden.org/ruby?DavidBlack">rubygarden.org/ruby?DavidBlack</a>)
+joined in with a deluge of great points, with David (who is quickly
+becoming the defacto authority on this issue), specifically focusing on the
+type != class issue:
+</p>
+<p>
+(excuse this being a little out of context)
+</p>
+<pre>
+  But I will want anonymous types, like:
+
+     c = CGI.new
+     c.extend(MyCGIModule)
+     def c.another_method; ...; end
+
+  The *class* of c is CGI, and the module/class *ancestry* of c is
+  [MyCGIModule,CGI,Object,Kernel] (or something), but the *type* of c,
+  Ruby being Ruby, is &quot;the type which is the type of objects which have
+  c's type&quot;.  And that's just fine; there's no need for me to have a
+  name for the type (since it's not encapsulated anywhere except in the
+  interface of c anyway), as long as I design, test, and use c in a
+  sensible manner.  I only needed the name of a class to bootstrap the
+  object, and the name of a module to modify it.  Then type takes over.
+</pre>
+<p>
+So, to distill all this, Ruby has objects which have behaviors (in the form
+of methods). Methods are called via messages sent to objects. As a
+convenience, Ruby provides classes and modules as ways of grouping and
+categorizing semantically related behaviors.
+</p>
+<p>
+I understood this topic before today, but as a result of this discussion, I
+feel like I understand it in a different and deeper way now.
+</p>
+<p>
+If you&#8217;re interested in object oriented programming, whether
+you&#8217;re using a dynamically typed language or not, the thread is
+definitely worth a read.
+</p>

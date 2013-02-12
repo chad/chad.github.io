@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  VGhlIEZlYXIgb2YgUG9pbnQgQw==
+enki_id: 4566
+---
+Seth Godin has posted a <a
+href="http://sethgodin.typepad.com/seths_blog/2005/11/understanding_l.html">great
+angle</a> on optimization vs. radical innovation (or reinvention).
+
+<p>
+I know a lot of people whose careers are stuck at the local max he
+describes. In fact, I&#8217;d say <em>most</em> people I know are stuck at
+the local max.
+</p>

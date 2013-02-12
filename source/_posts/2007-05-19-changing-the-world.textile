@@ -1,0 +1,40 @@
+---
+layout: post
+title: !binary |-
+  Q2hhbmdpbmcgdGhlIFdvcmxk
+enki_id: 4618
+---
+<p>Within the first couple of days that Kelly and I were in India,  I became painfully aware of the fact that my little job managing a team in India doing IT stuff for back end business processing at a large corporation was relatively meaningless.  Insignificant.</p>
+<p>
+That was an interesting conclusion to reach.  I'd gone from being a poor kid who made a meager musician's living in Memphis to being a powerful (by Indian standards) executive, running a software center for a fortune 10 company.  I was leader to eventually over two hundred people and had regular dealings with Indian government officials and CEOs of neighboring companies.  Kelly and I lived in a palatial house on a street lined with government leaders for the state of Karnataka.
+</p>
+<p>
+But every single day, on the way to the office where I would play another game of business Monopoly, we would stop at one of the many beggar-lined red lights in the city where a young girl carrying a dusty, naked baby would come tap on the windows of the car and motion to her mouth.  We would hear the moaning of the lepers on the corners---people too sick to stand at the car, so they had to moan to make up for the lack of an attention-getting tapping sound.  People whose limbs were amputated or mutilated and usually covered with bandages.
+</p><p>
+It's pretty easy to let yourself go numb to this kind of thing.  Especially when you're not in a car, and they're chasing you down the street and---God forbid---<em>touching you. </em>You just want to get away.  You just want to go about your business.  The people become pests to you.  An annoying part of the scenery.  An obstacle.
+</p><p>
+Kelly and I now live in Colorado.  Near Boulder.  We're right at the base of the mountains.  When we moved here (a year and a half ago) we said something like this:  "Do you think people who live here ever get tired of looking at that view?  Do they ever forget how amazing this place is?  I hope we don't.  Let's not.  Let's vow to not get numb to it."
+</p><p>
+That's the same thing you have to do in India with the poverty and the sickness.  You have to resolve not to go numb to it.  Even if you're a compassionate person.  Like the mountains in Boulder, the constant landscape on a daily commute in India is decorated with images of poverty and sickness.
+</p><p>
+The amazing thing about each one of these beggars you see on the street---and there are a <em>lot</em> of them---is that I have enough money that, without too much effort I could completely change one of these people's lives.  I'm not saying I'm rich.  But in Indian terms I am.  And at this level of the Indian economy, I'm like a king.  So knowing that, it becomes difficult to buy a computer or a car or a house or a really nice piece of clothing or a big meal without thinking about the difference that money could make in a family's life somewhere else in the world.  Even in the US, as it turns out.
+</p><p>
+Since leaving India, I've changed my focus a bit.  Instead of working within the confines of a single company, I've turned my attention outward.  I've written a couple of books, spoken at quite a few conferences.  Written some open source software.  That kind of thing.  I believe that at least one of my books has had a somewhat profound impact on many of its readers.  This is nice.
+</p><p>
+I'm sure that this change was at least partially inspired by the epiphany of insignificance which came over me on the Indian streets.   But now, several years later, I can look back and see that if I were to idle at one of those street lights now, sitting low in the back seat listening to the tapping, I would realize that my accomplishments still pale in the harsh light of reality.  What I'm doing now matters more than what I was doing then in the same way that eating 95% of a cheeseburger will make you less fat than eating the whole thing.
+</p><p>
+We in the Ruby on Rails community like to get gung ho about being on the leading edge of change.  We even like to say the phrase <a href="http://www.google.co.uk/search?q=ruby+on+rails+%22changing+the+world%22&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a">"change the world"</a>  in reference to the things we're doing with the framework and the applications we're building with it.  It's not just us tooting our own horns either.  Business 2.0 named David Heinemeier Hansson one of their top 50 people "who matter now" last spring, citing world-changing ideas as a major criterion for inclusion.
+</p><p>
+It's fun and feels good to think of yourself as a world changer.  But every time I hear the phrase, I think about those street corners and back alleys, and I feel a little cheap.
+</p><p>
+The easiest way to really change the world is to find a charity you believe in and start sending some money.  We Americans have a lot of extra money, so it's not too hard.  In fact, I think it's too easy.  I'm not saying we shouldn't do it, but that at least for me, financial contributions are so easy and faceless that I will forget about them.  They also have very limited impact.  Even if I were to donate 10% of my annual income, the net possible impact is limited to that amount of money.  That'll help an organization toward its goals, but I think I have a lot more to offer.
+</p><p>
+The real treasure I have to offer is my passion.  I almost said "my time", but I'm not talking about picking up garbage on the side of the road for an hour a week.  I'm talking about "flow time".  Passion-infused time that grows into the evenings and early mornings because I'm on a roll and I just can't stop.  I've been known to do some really smart stuff when I'm in that kind of mode.  And, of course, when I say "I", I mean me and my friends and family.  The people I know.  You too (if you're not already in that group).  We're all capable of actually changing things if we dedicate ourselves to really changing things.
+</p><p>
+Back to this Rails thing again.  If you really can develop applications ten times faster with Rails than with other technologies, and you really can develop them so fast that throw-away applications are even OK (you can), Rails itself makes for an excellent tool to facilitate real change.  The scope is limited, but where people have brilliant ideas that involve making a positive difference to the world using web applications, passionate Rails developers can get them to their goals faster than ever before.
+</p><p>
+I have some specific ideas about how I can start at least trying to make a real difference using my skill set (programming---these days in Ruby/Rails).  They're half-baked so I'll go into them a different day.  But...
+</p><p>
+Instead of being a community known for being arrogant and self-congratulatory, imagine if we took this energy, passion, and (at the risk of sounding arrogant) <em>raw badassedness</em> and <em>actually started changing the world?</em>   <a href="http://clarkware.com/cgi/blosxom/2007/02/02">The Rails Guidebook</a> was an excellent start, but it wasn't as infectious as we might have hoped.  If we can manage to easily raise <a href="http://blog.caboo.se/articles/2006/8/4/the-caboose-rails-documentation-project">thousands of dollars</a> to write documentation for Rails or to have a designer create a logo, surely we can turn this machine toward some tangibly world-beneficial cause.
+</p><p>
+What next?</p>

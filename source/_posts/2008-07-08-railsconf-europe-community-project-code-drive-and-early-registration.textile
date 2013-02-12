@@ -1,0 +1,12 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIEV1cm9wZTogQ29tbXVuaXR5IFByb2plY3QgQ29kZS1Ecml2
+  ZSBhbmQgRWFybHkgUmVnaXN0cmF0aW9u
+enki_id: 4653
+---
+We had a great time this year at the RailsConf "Community Project Code-Drive":http://en.oreilly.com/rails2008/public/schedule/detail/2562.  Among other things that happened, "Evan":http://blog.fallingsnow.net/, "Rich":http://richkilmer.blogs.com/, and I created and released "gitjour":http://github.com/chad/gitjour/tree/master, which is steadily becoming standard Ruby conference must-have software.
+
+So we thought we'd do it again in Europe.  If you have an idea for something you'd like to work on, "visit the signup page":http://wiki.oreillynet.com/railsconfeurope08/index.cgi?CommunityProjectCodeDrive and list it there.  If you don't have an idea, just show up on the tutorial day with a laptop and an open mind.
+
+Also, don't miss "Early Registration":https://en.oreilly.com/railseurope2008/public/register, which ends on July 15 and saves you up to €150.

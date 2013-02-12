@@ -1,0 +1,61 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgUmVjaXBlcyBpcyBEb25l
+enki_id: 4505
+---
+<a href="http://pragmaticprogrammer.com">Dave</a> tells me <a
+href="http://pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a> is <a
+href="http://weblog.rubyonrails.org/articles/2006/05/15/rails-recipes-is-out-of-beta">out
+of beta</a> and on the way to the printers.
+
+<p>
+It&#8217;s been a short (but seemingly long) and intense ride, and
+I&#8217;m looking forward to a little rest and relaxation. I owe a huge
+thanks to everyone who contributed ideas, content, and bug reports.
+</p>
+<p>
+For those of you who have been trying to decide whether to grab a copy,
+here&#8217;s the first part of the book&#8217;s introduction, which will
+hopefully give you a better sense of what I was trying to accomplish in the
+book:
+</p>
+<h2>What Makes a Good Recipe Book?</h2>
+<pre>
+  If I were to buy a real recipe book---you know, a book about cooking
+  food---I wouldn't be looking for a book that tells me how to dice vegetables
+  or how to use a skillet. I can find that kind of information in an
+  overview about cooking.
+
+  A recipe book is about how to make food you might not be able to easily
+  figure out how to make on your own. It's about skipping the trial and
+  error and jumping straight to a solution that works. Sometimes it's
+  even about making food you never imagined you could make.
+
+  If you want to learn how to make great Indian food, you buy a recipe
+  book by a great Indian chef and follow his or her directions. You're not
+  just buying any old solution. You're buying a solution you can trust to
+  be good. That's why famous chefs sell lots and lots of books. People
+  want to make food that tastes good, and these chefs know how to make
+  (and teach you how to make) food that tastes good.
+
+  Good recipe books do teach you techniques. Sometimes they even teach
+  you about new tools. But they teach these skills within the context and
+  with the end goal of making something---not just to teach them.
+
+  My goal for Rails Recipes is to teach you how to make great stuff with
+  Rails and to do it right on your first try. These recipes and the tech-
+  niques herein are extractions from my own work and from the &quot;great
+  chefs&quot; of Rails: the Rails core developer team, the leading trainers and
+  authors, and the earliest of early adopters.
+
+  I also hope to show you not only how to do things but to explain why
+  they work the way they do. After reading through the recipes, you
+  should walk away with a new level of Rails understanding to go with a
+  huge list of successfully implemented hot new application features.
+
+  Not all of these recipes are long and involved. To spice things up, I've
+  included a number of smaller offerings, which I've called snacks. Typically
+  one or two pages long, these snacks will help satisfy those cravings
+  we all get between meals.
+</pre>

@@ -1,0 +1,14 @@
+---
+layout: post
+title: !binary |-
+  R2VtIFdhdGNoCg==
+enki_id: 4506
+---
+Jim Weirich announces an RSS feed for <a
+href="http://onestepback.org/index.cgi/Tech/Ruby/Gems/GemWatchRss.rdoc">GemWatch</a>.
+Jim is one of the creators of <a
+href="http://rubygems.rubyforge.org">RubyGems</a>. Sign up for the RSS feed
+and keep your finger on the pulse of the repository for what is destined to
+become Ruby&#8217;s One True Package Management System. I&#8217;m signed
+up, and I hope to see your packages pop up in my aggregator real soon now.
+

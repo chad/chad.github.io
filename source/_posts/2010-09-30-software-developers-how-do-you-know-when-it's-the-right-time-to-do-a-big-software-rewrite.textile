@@ -1,0 +1,214 @@
+---
+layout: post
+title: !binary |-
+  U29mdHdhcmUgZGV2ZWxvcGVyczogaG93IGRvIHlvdSBrbm93IHdoZW4gaXQn
+  cyB0aGUgcmlnaHQgdGltZSB0byBkbyBhIGJpZyBzb2Z0d2FyZSByZXdyaXRl
+  Pw==
+enki_id: 4704
+---
+Yesterday I asked this question on twitter:
+<pre>
+Software developers: how do you know when it's the right time to do a big software rewrite?
+</pre>
+
+I've written about this topic before ("The Big Rewrite":http://chadfowler.com/2006/12/27/the-big-rewrite). I'm revisiting it for a presentation "Rich Kilmer":http://infoether.com and I are doing this weekend at "JRubyConf":http://jrubyconf.com.
+
+I got a bunch of replies. Some serious, some sarcastic, some obviously filtered through the jading effects of a few Big Rewrites played out.  The answer ranged from "NEVER!" to "as soon as you feel like it's necessary".  The one consistent theme is that software rewrites are scary and the decision shouldn't be taken lightly.
+
+Drivers include maintenance cost, programmer happiness, politics, and fear.
+
+Here's what the developers on Twitter said:
+
+<p><div><a href='http://twitter.com/insanity_rocks'><img width='40' src='http://a1.twimg.com/profile_images/1116024529/little-domo-suk128_normal.jpg'/> 
+Mel Riffe (@insanity_rocks)</a> 
+</div> when the mud (from big ball of mud) falls into your eyes
+</p><p><div><a href='http://twitter.com/insanity_rocks'><img width='40' src='http://a1.twimg.com/profile_images/1116024529/little-domo-suk128_normal.jpg'/> 
+Mel Riffe (@insanity_rocks)</a> 
+</div> seriously, though, i believe when you lose confidence implementing changes it's probably a good time to consider a rewrite
+</p><p><div><a href='http://twitter.com/jeremywoertink'><img width='40' src='http://a3.twimg.com/profile_images/597521335/jeremywoertink_gmail.com_00d5a53c_normal.jpg'/> 
+Jeremy Woertink (@jeremywoertink)</a> 
+</div> when you find yourself monkey patching areas that you wrote at 2am on a Saturday thinking "ugh, I just want this done with" :)
+</p><p><div><a href='http://twitter.com/justinko'><img width='40' src='http://a2.twimg.com/profile_images/301316754/ls_7536_Photo-143_normal.jpg'/> 
+Justin Ko (@justinko)</a> 
+</div> the right time is after reading your infamous blog post.
+</p><p><div><a href='http://twitter.com/hooligan495'><img width='40' src='http://a1.twimg.com/profile_images/52644917/Photo_2_normal.jpg'/> 
+Jay McG... (@hooligan495)</a> 
+</div> for us the big rewrite was: Scale fail (Can't support more than 100000 titles) and customers want linux and not windows
+</p><p><div><a href='http://twitter.com/mf'><img width='40' src='http://a0.twimg.com/profile_images/655187312/Screen_shot_2010-01-25_at_1.56.55_PM_normal.png'/> 
+Matt Freels (@mf)</a> 
+</div> almost never. Incremental rewrites of specific components results in better isolation and less risky code.
+</p><p><div><a href='http://twitter.com/razenha'><img width='40' src='http://a3.twimg.com/profile_images/969039419/23218_1084902895_5994_n_normal.jpg'/> 
+Rubem Azenha (@razenha)</a> 
+</div> My team did it  once. The first dev team was  gone, the code, design and  database were a mess, there was no docs, no unit tests
+</p><p><div><a href='http://twitter.com/razenha'><img width='40' src='http://a3.twimg.com/profile_images/969039419/23218_1084902895_5994_n_normal.jpg'/> 
+Rubem Azenha (@razenha)</a> 
+</div> the bugs were all over the place, the chances were slow and risky and we needed to add tons of features.
+</p><p><div><a href='http://twitter.com/razenha'><img width='40' src='http://a3.twimg.com/profile_images/969039419/23218_1084902895_5994_n_normal.jpg'/> 
+Rubem Azenha (@razenha)</a> 
+</div> The CIO figured out that it would be more expensive to maintain the current product than to create a new one
+</p><p><div><a href='http://twitter.com/sneakin'><img width='40' src='http://a1.twimg.com/profile_images/1122111797/Photo_84_normal.jpg'/> 
+Nolan (@sneakin)</a> 
+</div> when you're singing "WTF! WTF! WTF! Holy Christ! WTF!"
+</p><p><div><a href='http://twitter.com/catatk'><img width='40' src='http://a0.twimg.com/profile_images/875107248/Capture_normal.PNG'/> 
+CÃ„Æ’tÃ„Æ’lin TÃ„Æ’nÃ„Æ’sescu (@catatk)</a> 
+</div> when you look at a code made by you and curse the programmer behind it
+</p><p><div><a href='http://twitter.com/JakCharlton'><img width='40' src='http://a1.twimg.com/profile_images/1128514717/jak_normal.png'/> 
+Jak Charlton (@JakCharlton)</a> 
+</div> when the pain starts to exceed the political pain required to get that kind of authority
+</p><p><div><a href='http://twitter.com/_krispy_'><img width='40' src='http://a2.twimg.com/profile_images/1026387650/3723113458_d7502724ac_o_normal.jpg'/> 
+_krispy_ (@_krispy_)</a> 
+</div> - when you have enough in the bank to survive its possible failure to deliver on time and within budget
+</p><p><div><a href='http://twitter.com/tenderlove'><img width='40' src='http://a3.twimg.com/profile_images/115461903/icon_normal.jpg'/> 
+Aaron Patterson (@tenderlove)</a> 
+</div> When the fundamental design algorithm is O(n!)
+</p><p><div><a href='http://twitter.com/kirillrdy'><img width='40' src='http://a3.twimg.com/profile_images/95798323/kitaman_4_normal.jpg'/> 
+Kirill Radzikhovskyy (@kirillrdy)</a> 
+</div> when you just can't stand it anymore
+</p><p><div><a href='http://twitter.com/Odaeus'><img width='40' src='http://a0.twimg.com/profile_images/1126169144/image_normal.jpg'/> 
+Andrew France (@Odaeus)</a> 
+</div> About the same time you start asking that question :P
+</p><p><div><a href='http://twitter.com/thomasfuchs'><img width='40' src='http://a3.twimg.com/profile_images/663892623/thomas_normal.png'/> 
+Thomas Fuchs (@thomasfuchs)</a> 
+</div> By having a 'feeling' about it. However, big software rewrites mostly fail. Better to start something new!
+</p><p><div><a href='http://twitter.com/JaquezRueda'><img width='40' src='http://a2.twimg.com/profile_images/1089933634/33514_415736003259_534158259_4558477_8140541_n_normal.jpg'/> 
+Jesus Jaquez Rueda (@JaquezRueda)</a> 
+</div> When you spend more time trying to understand code than writing code
+</p><p><div><a href='http://twitter.com/danzon78'><img width='40' src='http://a1.twimg.com/profile_images/505127957/2_normal.jpg'/> 
+danzon78 (@danzon78)</a> 
+</div> when only god know what are you trying to do
+</p><p><div><a href='http://twitter.com/MarkNijhof'><img width='40' src='http://a2.twimg.com/profile_images/1114424126/MarkNijhof_Bridge_normal.JPG'/> 
+Mark Nijhof (@MarkNijhof)</a> 
+</div> wasn't the answer "Never"?
+</p><p><div><a href='http://twitter.com/RobotDeathSquad'><img width='40' src='http://a1.twimg.com/profile_images/553431069/gravatar_normal.jpg'/> 
+BJ Clark (@RobotDeathSquad)</a> 
+</div> That's a question searching for a rule that doesn't/shouldn't exist.
+</p><p><div><a href='http://twitter.com/celticwolfinc'><img width='40' src='http://a0.twimg.com/profile_images/1134144552/logo_50_x_50_normal.png'/> 
+Celtic Wolf (@celticwolfinc)</a> 
+</div>, it's time to do a big sw rewrite when adding small features/fixes requires a lot of time fixing/changing the existing code.
+</p><p><div><a href='http://twitter.com/drbrain'><img width='40' src='http://a1.twimg.com/profile_images/793861173/58479f76374a3ba3c69b9804163f39f4_normal.jpeg'/> 
+Eric Hodel (@drbrain)</a> 
+</div> I prefer never. I gradually employ targeted rewrites. The app will be eventually rewritten w/out the cost of stopping the world.
+</p><p><div><a href='http://twitter.com/cory_foy'><img width='40' src='http://a2.twimg.com/profile_images/942527014/CoryFoy_normal.jpg'/> 
+Cory Foy (@cory_foy)</a> 
+</div> When I sit around thinking, "Gee, how can I screw myself *and* bankrupt my company in one action?"
+</p><p><div><a href='http://twitter.com/haruska'><img width='40' src='http://a2.twimg.com/profile_images/51882542/shapeimage_sm_normal.jpg'/> 
+Jason Haruska (@haruska)</a> 
+</div> you're netscape, you have crazy market share, your code smells, and Microsoft decides the internet is important. Oh, wait.
+</p><p><div><a href='http://twitter.com/celticwolfinc'><img width='40' src='http://a0.twimg.com/profile_images/1134144552/logo_50_x_50_normal.png'/> 
+Celtic Wolf (@celticwolfinc)</a> 
+</div>, or when the cruft/ick factor in your code base causes  good developers to quit.
+</p><p><div><a href='http://twitter.com/atmos'><img width='40' src='http://a0.twimg.com/profile_images/1125383048/2464720461_5df4fd37cf_b_normal.jpeg'/> 
+Corey Donohoe (@atmos)</a> 
+</div> it's rarely the right thing imho.
+</p><p><div><a href='http://twitter.com/chopmo'><img width='40' src='http://a1.twimg.com/profile_images/1053061413/forfra_normal.jpg'/> 
+Jacob Tjoernholm (@chopmo)</a> 
+</div> I'd say when the creativity/crap ratio is about 1:10 and still declining.
+</p><p><div><a href='http://twitter.com/haruki_zaemon'><img width='40' src='http://a2.twimg.com/profile_images/53716610/Simon_normal.png'/> 
+Simon Harris (@haruki_zaemon)</a> 
+</div> I've never seen a good time to do it. Incremental change has always worked best, for me.
+</p><p><div><a href='http://twitter.com/brianthecoder'><img width='40' src='http://a1.twimg.com/profile_images/395135469/twitterProfilePhoto_normal.jpg'/> 
+Brian Smith (@brianthecoder)</a> 
+</div> probably when you have to ask yourself that question + 1 week
+</p><p><div><a href='http://twitter.com/baroquebobcat'><img width='40' src='http://a3.twimg.com/profile_images/1080381595/Photo_on_2010-07-16_at_11.01-cropped_normal.jpg'/> 
+Nick howard (@baroquebobcat)</a> 
+</div> When you haven't written anything yet?
+</p><p><div><a href='http://twitter.com/Seanba_'><img width='40' src='http://a3.twimg.com/profile_images/1134190047/in-utah2_normal.jpg'/> 
+Sean Barton (@Seanba_)</a> 
+</div> When Code comments warn me that I couldn't possibly understand what follows, and that it can't be changed.
+</p><p><div><a href='http://twitter.com/supaspoida'><img width='40' src='http://a0.twimg.com/profile_images/178202468/larface_normal.png'/> 
+Lar Van Der Jagt (@supaspoida)</a> 
+</div> when the features you'd be trying to preserve by avoiding a rewrite never should have been written in the first place.
+</p><p><div><a href='http://twitter.com/cecifernandes'><img width='40' src='http://a0.twimg.com/profile_images/1093940036/ceci-bearMountain_normal.png'/> 
+Cecilia Fernandes (@cecifernandes)</a> 
+</div> I guess we don't. But the turning point is usually when it gets too painful to keep it and too difficult/unstable to refactor.
+</p><p><div><a href='http://twitter.com/priceted'><img width='40' src='http://a1.twimg.com/profile_images/626085565/pic_normal.jpg'/> 
+Edward (Ted) Price (@priceted)</a> 
+</div> When the overly-sensitive head architect of the project leaves the co. because adding a form field becomes a herculean task.
+</p><p><div><a href='http://twitter.com/410formula'><img width='40' src='http://a1.twimg.com/profile_images/289508653/jrubyist_normal.jpg'/> 
+Dan Tylenda-Emmons (@410formula)</a> 
+</div> when it is painful to make even a minor change
+</p><p><div><a href='http://twitter.com/ftroya_tech'><img width='40' src='http://a3.twimg.com/profile_images/1132711643/1rxl_normal.jpg'/> 
+Fernando Troya (@ftroya_tech)</a> 
+</div> The more defects become stories with architectural impact the closer you are to that point!
+</p><p><div><a href='http://twitter.com/wwkeyboard'><img width='40' src='http://a1.twimg.com/profile_images/521394081/me_normal.jpg'/> 
+Aaron Lee (@wwkeyboard)</a> 
+</div> you should divide and conquer; unless it's a new paradigm in a new language.
+</p><p><div><a href='http://twitter.com/jeffbski'><img width='40' src='http://a3.twimg.com/profile_images/197314327/Jeff_050616_img_0976_normal.jpg'/> 
+Jeff Barczewski (@jeffbski)</a> 
+</div> I would suggest it depends on how well the project works currently and whether it can be done a piece at a time RT big rewrite?
+</p><p><div><a href='http://twitter.com/rtlechow'><img width='40' src='http://a0.twimg.com/profile_images/813392856/rtsavestransitcity__1__normal.jpg'/> 
+R.T. Lechow (@rtlechow)</a> 
+</div> @RobotDeathSquad BigRewriteQuestion does have a useful side effect: the earnest responses tell you "where that person is at".
+</p><p><div><a href='http://twitter.com/rubyist'><img width='40' src='http://a1.twimg.com/profile_images/640246261/20353_768081426624_12321622_43910955_193081_n_normal.jpg'/> 
+Scott Barron (@rubyist)</a> 
+</div> when someone ponies up the dollars for it
+</p><p><div><a href='http://twitter.com/blowmage'><img width='40' src='http://a1.twimg.com/profile_images/1131230389/boise_state_logo_800_normal.jpg'/> 
+Mike Moore (@blowmage)</a> 
+</div> When your velocity is very, very low because of design and architectural problems in the code. Its a big hump though.
+</p><p><div><a href='http://twitter.com/morticed'><img width='40' src='http://a2.twimg.com/profile_images/545477290/gravatar_normal.jpeg'/> 
+Tom Stuart (@morticed)</a> 
+</div> 90% of the time it makes more sense to refactor the existing code. Unless it's a ColdFusion app ;)
+</p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> 
+Andrew de Andrade (@andrewdeandrade)</a> 
+</div> It's time for the big rewrite when the most experienced developer has lost all faith in the code base.
+</p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> 
+Andrew de Andrade (@andrewdeandrade)</a> 
+</div> However, before beginning a big rewrite, you need to "fix" the management responsible for a codebase that needs a big rewrite.
+</p><p><div><a href='http://twitter.com/slainer68'><img width='40' src='http://a0.twimg.com/profile_images/73727616/5769172_normal.jpg'/> 
+slainer68 (@slainer68)</a> 
+</div> &gt; i do not wait for this moment, i try to refactor everytime :)
+</p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> 
+Andrew de Andrade (@andrewdeandrade)</a> 
+</div> Big rewrites only occur when both product and engineering management act "unprofessionally" per @unclebobmartin's definition
+</p><p><div><a href='http://twitter.com/gblakeman'><img width='40' src='http://a3.twimg.com/profile_images/360069475/me_glasses_normal.jpg'/> 
+Grant Blakeman (@gblakeman)</a> 
+</div> when i realize i'm spending more time compensating for existing code than writing new code.
+</p><p><div><a href='http://twitter.com/410formula'><img width='40' src='http://a1.twimg.com/profile_images/289508653/jrubyist_normal.jpg'/> 
+Dan Tylenda-Emmons (@410formula)</a> 
+</div> when everyone you ask says "oh that class?  Yeah it's garbage. Nobody wants to touch it." Chances are, it's not the only one.
+</p><p><div><a href='http://twitter.com/tooky'><img width='40' src='http://a2.twimg.com/profile_images/585736694/mugshot_small_normal.jpg'/> 
+Steve Tooke (@tooky)</a> 
+</div> if the cost of adding value now is higher than rewriting and then adding value? I usually feel a rewrite is the scary option.
+</p><p><div><a href='http://twitter.com/jarhart'><img width='40' src='http://a2.twimg.com/profile_images/79570550/Profile_Picture_normal.jpg'/> 
+Jason Arhart (@jarhart)</a> 
+</div> When I start to consistently feel loathing rather than excitement when I think of better designs.
+</p><p><div><a href='http://twitter.com/andrewdeandrade'><img width='40' src='http://a1.twimg.com/profile_images/671921389/n670270691_6175_normal.jpg'/> 
+Andrew de Andrade (@andrewdeandrade)</a> 
+</div> @thomasfuchs I am pro-"abandon ship" as well. The need for big rewrites are signs of more sinister problems.
+</p><p><div><a href='http://twitter.com/mjkirk'><img width='40' src='http://a3.twimg.com/profile_images/514809699/03_background_lights_2_cropped_normal.jpg'/> 
+Matthew Kirk (@mjkirk)</a> 
+</div> We rewrote our app once when the original app was unbearable to maintain.
+</p><p><div><a href='http://twitter.com/aspleenic'><img width='40' src='http://a2.twimg.com/profile_images/150326262/pj_normal.jpg'/> 
+PJ Hagerty (@aspleenic)</a> 
+</div> For us it's whenever the boss tells us to :) We converted an app from VFP 9 to #rails in just under 2 yrs
+</p><p><div><a href='http://twitter.com/alexvollmer'><img width='40' src='http://a0.twimg.com/profile_images/50695192/avatar-sm_normal.jpg'/> 
+alexvollmer (@alexvollmer)</a> 
+</div> That's the hardest question I've ever had to answer in this biz. You never know, you just guess and hope you're right.
+</p><p><div><a href='http://twitter.com/adolfosousa'><img width='40' src='http://a3.twimg.com/profile_images/1128539547/falone_normal.png'/> 
+Adolfo Sousa (@adolfosousa)</a> 
+</div> It's time for the big rewrite when things are screwed-up or messy AND nobody is bikeshedding - in other words: never
+</p><p><div><a href='http://twitter.com/base10'><img width='40' src='http://a1.twimg.com/profile_images/70386269/avatar_normal.jpg'/> 
+Nathan L. Walls (@base10)</a> 
+</div> Secondly, if given the opportunity, I like walling in the existing app and building new apps around it to extend function.
+</p><p><div><a href='http://twitter.com/TaraMclean'><img width='40' src='http://a1.twimg.com/profile_images/491593957/profile_image_1256589307779_normal.jpg'/> 
+Tara McLean (@TaraMclean)</a> 
+</div> I try to avoid big software rewrites as they tend to be a death march. Instead try to chip using a strangler application
+</p><p><div><a href='http://twitter.com/pmanrubia'><img width='40' src='http://a0.twimg.com/profile_images/571205244/DSC00106_normal.JPG'/> 
+Pablo Manrubia DÃƒÂ­ez (@pmanrubia)</a> 
+</div> When developers don't look happy while coding. The less enjoyable it is for programmers the more rewrite is needed :)
+</p><p><div><a href='http://twitter.com/coderifous'><img width='40' src='http://a2.twimg.com/profile_images/234755010/JimAvatar_normal.jpg'/> 
+Jim Garvin (@coderifous)</a> 
+</div> Must consider context, so right answer is "it depends".  But the raising of the question itself is probably an indicator.
+</p><p><div><a href='http://twitter.com/f3ew'><img width='40' src='http://a0.twimg.com/profile_images/359222940/cheque_normal.jpg'/> 
+Devdas Bhagat (@f3ew)</a> 
+</div> When maintaining the system in production gets too expensive (include running costs of hardware and admin time).
+</p>
+<p>
+<div>
+<a href="http://twitter.com/#!/RoyDealSimon">
+<img width='40' src='http://a0.twimg.com/profile_images/835973200/004_reasonably_small.JPG'/>
+Roy Deal Simon (@RoyDealSimon)
+</a></div>
+a rewrite takes less time and has less risks involved than a functional conversion but results in lower quality as well.
+by functional conversion I mean a rewrite-from-scratch scenario, and by "rewrite" I meant "refactoring"
+</p>

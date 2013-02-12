@@ -1,0 +1,31 @@
+---
+layout: post
+title: !binary |-
+  TWljcm9zb2Z0IFNlYXJjaCBCb3ljb3R0Cg==
+enki_id: 4460
+---
+Apparently, Microsoft is brewing up their own new search engine technology,
+which has got some people thinking they&#8217;re about to try to
+Netscape-ize Google (<a
+href="http://scriptingnews.userland.com/stories/storyReader$2071">scriptingnews.userland.com/stories/storyReader$2071</a>).
+I don&#8217;t really buy into the idea that any company is evil (<a
+href="http://search.msn.com/results.aspx?q=%22microsoft+is+evil%22&FORM=SMCRT">search.msn.com/results.aspx?q=%22microsoft+is+evil%22&FORM=SMCRT</a>),
+but I still like this idea: <a
+href="http://www.idlewords.com/boycott.pl">www.idlewords.com/boycott.pl</a>.
+
+<p>
+The idea is that, if enough people setup their robots.txt to disallow
+Microsoft&#8217;s bot, it will create holes in MS&#8217;s relevance
+ranking, rendering the search engine ineffective. I don&#8217;t want to
+ruin Microsoft. But, it would be extremely interesting if a simple,
+distributed idea like this actually had an effect on a seemingly inevitable
+outcome.
+</p>
+<p>
+So, what are you waiting for? Join in! The numbers are small now.
+</p>
+<p>
+The disadvantage here is that when Microsoft <b>does</b> kill the
+competition, your site won&#8217;t be indexed. I think can live with that
+for at least as long as it takes to `rm robots.txt` and get crawled.
+</p>

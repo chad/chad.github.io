@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIFJlZ2lzdHJhdGlvbiBpcyBPcGVuIA==
+enki_id: 4604
+---
+"RailsConf":http://railsconf.org registration is open.
+
+And, as they did last year, the "Pragmatic Studio":http://pragmaticstudio.com are donating their time to produce "The Rails Guidebook":http://clarkware.com/cgi/blosxom/2007/02/02#RailsGuidebook07 to help those new to Ruby and/or Rails with a full day tutorial to help them get more out of the conference.  This year, while entrance is technically free, Dave, Mike, and Nicole are requiring a $75 charitable contribution.
+
+Last year, the Rails community raised around $8,000 for charities through the Guidebook.  With the conference doubling in size this year, it would be great to see us hit upwards of $20,000.   You don't have to attend the session to donate.  See Mike's post for details.
+
+Seeya in Portland.

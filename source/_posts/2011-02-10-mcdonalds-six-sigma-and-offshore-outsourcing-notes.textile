@@ -1,0 +1,121 @@
+---
+layout: post
+title: !binary |-
+  TWNEb25hbGRzLCBTaXggU2lnbWEsIGFuZCBPZmZzaG9yZSBPdXRzb3VyY2lu
+  ZyAobm90ZXMp
+enki_id: 4710
+categories: !binary |-
+  cHJvZ3JhbW1pbmcsIHNvZnR3YXJlLCBjYXJlZXIsIGFydCwgcXVhbGl0eSwg
+  bWV0cmljcw==
+---
+<p>
+These are notes from a talk I've given in various forms at "SCNA":http://scna.softwarecraftsmanship.org/, "CodeMash":http://codemash.org, and "Magic Ruby":http://magic-ruby.com.  I've mirrored them here from the "InfoEther weblog":http://infoether.com.
+
+<p>
+
+<img src="http://lh4.ggpht.com/_TVhFMT7oEd0/TLvjzmOWODI/AAAAAAAAKJ8/pR4oKLszOWE/0131.jpg" style='width:300px'/><br/>Me at SCNA<br/>Photo credit: <a href="http://picasaweb.google.com/jangdiafoto/SoftwareCraftsmanshipNorthAmerica20101016#5529263443100973106">Monty Ksycki</a>
+<br/>
+<p>
+	
+The presentation is called "McDonalds, Six Sigma, and Offshore Outsourcing - Unexpected Sources of Insight".  Here's the abstract:
+</p>
+
+<blockquote>
+	We software developers like to think of what we do as an art form (or a craft, if you're at this conference). I was once asked to come up with a set of guidelines for creating great software so our (huge) company could more effectively use an offshore development team that had been delivering amorphous piles of crummy, nonworking code. I was frustrated and responded with something like this: "Give me a list of guidelines for how to make a beautiful song!" The nerve! Repeatable processes? Who did she think she was talking to?! This is a creative process! This is ART!!!! 
+</blockquote>
+<blockquote>
+	
+	I've since grown up a bit and I'd like to talk about how I was wrong and how we can all hopefully learn from my mistakes.
+</blockquote>
+<img src="http://chadfowler.com/art-commodity-continuum.png" style='width:400px'/><br/>The Art-Craft-Commodity Continuum (from my presentation)
+<br/>
+
+<p>
+	
+  In it, I tell the story of my experiences with the Six Sigma quality methodology and with offshore outsourcing, urging developers not to blindly write off potentially useful software development strategies based on hearsay and misunderstanding. I also propose a customer-driven, data-driven approach to software engineering, dovetailing off of InfoEther's Chief Scientist, <a href="http://www.vanderburg.org/blog">Glenn Vanderburg's</a> recent ruminations on <a href="http://confreaks.net/videos/282-lsrc2010-real-software-engineering">"Real Software Engineering"</a>.
+</p>
+	<a href="http://en.wikipedia.org/wiki/File:Originalronaldmcdonald.jpg"><img  style='width:300px' src="http://upload.wikimedia.org/wikipedia/en/9/91/Originalronaldmcdonald.jpg" alt="The original, scary Ronald McDonald"/></a><br/>The original <a href="http://en.wikipedia.org/wiki/Ronald_McDonald">Ronald McDonald</a> (Willard Scott)
+<p>
+  Videos from SCNA will be posted on <a href="http://www.infoq.com/">InfoQ</a> eventually, and I'll link mine here when that happens. In the mean time, many people asked me for pointers to some of the books and resources I mentioned during my presentation.  Here's a link dump that you might find useful:
+</p>
+
+<ul>
+  <li>
+	<a href="http://www.amazon.com/Mustang-Sally-LP-Version/dp/B00124HFII/ref=sr_1_1?ie=UTF8&qid=1287442362&sr=8-1">Wilson Pickett's Mustang Sally</a>
+  </li>
+  <li>
+	<a href="http://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0061673730/ref=sr_1_1?s=books&ie=UTF8&qid=1287442054&sr=1-1">Zen and the Art of Motorcycle Maintenance: An Inquiry into Values</a>
+  </li>	
+  <li>
+	<a href="http://www.amazon.com/E-Myth-Revisited-Small-Businesses-About/dp/0887307280">The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It</a>
+  </li>
+  <li>
+	<a href="http://vmgbpo.com">VMG BPO - Offshore business outsourcing</a>
+  </li>
+  <li>
+	<a href="http://asksunday.com">Ask Sunday - Virtual Personal Assistants</a>
+  </li>
+  <li>
+	<a href="http://glowtouch.com">GlowTouch - Low cost offshore IT outsourcing</a>
+  </li>
+  <li>
+	<a href="http://en.wikipedia.org/wiki/Quality_function_deployment">Quality Function Deployment</a>
+  </li>
+  <li>
+	<a href="http://isixsigma.com/">iSixSigma - Lots of six sigma info</a>
+  </li>
+  <li>
+	<a href='http://www.sixsigmaonline.org/six-sigma-training-certification-information/articles/the-dmadv-methodology.html'>DMADV - the six sigma design process in a nutshell</a>
+  </li>
+  <li>
+	<a href='http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?ie=UTF8&qid=1287442512&sr=8-1'>Design Patterns: Elements of Reusable Object-Oriented Software</a>
+  </li>
+  <li>
+	<a href="http://www.wiley.com/legacy/products/subject/business/forbes/kroc.pdf">Forbes article on Ray Kroc and the founding of the McDonalds chains</a>
+  </li>
+  <li>
+	<a href="http://en.wikipedia.org/wiki/John_Zorn">John Zorn - Avant Garde saxophonist</a>
+  </li>
+  <li>
+	<a href="http://www.paulsmith.co.uk/">Paul Smith - Fashion designer</a>
+  </li>
+  <li>
+	<a href="http://en.wikipedia.org/wiki/Mark_Rothko">Mark Rothko - Abstract Expressionist painter</a>
+  </li>
+  <li>
+	<a href="http://yankov.us/rage">Rage comic generator</a>
+  </li>
+
+  <li>
+	<a href="http://gist.github.com/612263">Ugly Kitty Server code by me and Anthony Burns</a>
+  </li>
+  <li>
+	<a href="http://chadfowler.com:4567">Ugly Kitty Server in action</a>
+  </li>
+  <li>
+	<a href="http://en.wikipedia.org/wiki/I_know_it_when_I_see_it">The "I know it when I see it" Supreme Court case</a>
+  </li>
+  <li>
+	<a href="http://en.wikipedia.org/wiki/Alhazen">Ibn Al-Haytham - inventor of the scientific method</a>
+  </li>
+  <li>
+	<a href="http://www.zazzle.com/tdd+gifts">TDD T-Shirts</a>
+  </li>
+  <li>
+	<a href="http://www.extremeprogramming.org/map/project.html">Extreme Programming flow chart</a>
+  </li>
+  <li>
+	<a href="http://www.richdad.com/default.aspx">Rich Dad - Poor Dad</a>
+  </li>
+  <li>
+      <a href="http://www.keavy.co.uk/">Keavy McMinn's webblog on Ironman etc.</a>
+  <li>
+	<a href="http://www.pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer - My book</a>
+	</li>
+  <li>
+	<a href="http://www.fourhourworkweek.com/">The 4-Hour Work Week</a>
+  </li>
+  <li>
+	<a href="http://en.wikipedia.org/wiki/The_Turk">The Mechanical Turk</a>
+  </li>
+</ul>

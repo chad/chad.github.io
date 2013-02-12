@@ -1,0 +1,11 @@
+---
+layout: post
+title: !binary |-
+  UnVieSBTdHVkaW8=
+enki_id: 4643
+---
+I'm out in not-so-sunny Cupertino, CA with "Dave":http://pragdave.pragprog.com/ teaching an introduction to Ruby course for a big company this week.  Though I'd always rather be back home with Kelly, we're having a great time out here.  In addition to a lovely dinner with "Laurent":http://chopine.be/lrz/diary/, "Jordan":http://people.freebsd.org/~jkh/, and Luke from Apple last night, I've been having a blast introducing a 15-person group to Ruby for the first time.
+
+I do a lot of advanced level courses and Rails courses, but this one is rewarding in a different way:  I'm reminded of how absolutely _beautiful_ the Ruby language is.  When you use a language every day it's easy to forget the things about it that originally roped you in.  I'm finding this experience to be an excellent way to relive that through the delighted looks on the faces of the students in this class.
+
+Dave and I are doing this course together for the Pragmatic Studio "later this month in Denver":http://pragmaticstudio.com/ruby-intro/.  If you or someone you know have been meaning to dig into Ruby, I invite you to come share the joy with us

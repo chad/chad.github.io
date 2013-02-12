@@ -1,0 +1,126 @@
+// *****************************************************************************
+// VARIABLES
+// *****************************************************************************
+
+// ------------------------------------------------------------------
+//  PATHS
+// ------------------------------------------------------------------
+
+$root-assets: "/";
+$font-path: $root-assets+"/fonts";
+$image-path: "/images/";
+
+// ------------------------------------------------------------------
+//  Z-INDEX VARIABLES
+// ------------------------------------------------------------------
+
+$z-index-base:  1000 !default;
+$z-index-dropdown: ($z-index-base + 10) !default;
+$z-index-popover: ($z-index-base + 20) !default;
+$z-index-tooltip: ($z-index-base + 30) !default;
+
+// ------------------------------------------------------------------
+//  COLORS
+// ------------------------------------------------------------------
+
+$black: #000;
+$white: #fff;
+$red: red;
+$orange: orange;
+$yellow: #d3d1aa;
+$green: green;
+$blue: #55a7df;
+$purple: #604c5b;
+$brown: brown;
+
+// The Grays
+// -------------------------------------------------------------------
+
+$gray: #6f6e6e;
+$gray-light: lighten($gray, 20%);
+$gray-lighter: lighten($gray, 50%);
+$gray-lightest: lighten($gray, 90%);
+$gray-dark: darken($gray, 20%);
+$gray-darker: darken($gray, 50%);
+$gray-darkest: darken($gray, 80%);
+
+// Transparent Colors
+// -------------------------------------------------------------------
+
+$transparent-white: hsla(100,100%,100%,0) !default;
+$transparent-black: hsla(0,0%,0%,0) !default;
+
+$shadow-lightest: hsla(0, 0%, 0%, 0.1) !default;
+$shadow-lighter: hsla(0, 0%, 0%, 0.25) !default;
+$shadow-light: hsla(0, 0%, 0%, 0.5) !default;
+$shadow: hsla(0, 0%, 0%, 0.75) !default;
+
+$glow-lightest: hsla(100,100%,100%,0.1) !default;
+$glow-lighter: hsla(100,100%,100%,0.25) !default;
+$glow-light: hsla(100,100%,100%,0.5) !default;
+$glow: hsla(100,100%,100%,0.75) !default;
+
+$highlight: transparentize($yellow, .7);
+
+// ------------------------------------------------------------------
+//  COLORS 2 THINGS
+// ------------------------------------------------------------------
+
+$app-color-primary: $blue; // The main highlight color of the app
+$app-color-secondary: $red; // Secondary color used
+
+$site-background-color: $purple;
+
+// Text Color
+$text-color: #222;
+$text-color-light: $gray-light;
+
+// Input placeholder text color
+$placeholder-text-color: $gray-light;
+
+// Links
+$link-color: $blue;
+$link-color-hover: lighten($link-color, 20%);
+$link-color-active: lighten($link-color, 30%);
+$link-color-visited: darken($link-color, 20%);
+
+// ------------------------------------------------------------------
+//  FONT STACKS
+// ------------------------------------------------------------------
+
+$body-stack: Avenir, Helvetica, Arial, sans-serif;
+$alt-stack:  Helvetica, Arial, sans-serif;
+$legal-stack: Georgia, "Times New Roman", Times, serif;
+$base-font-size: 14px;
+$base-line-height: 20px;
+
+//  Headings
+// ------------------------------------------------------------------
+$headings-font-family: $body-stack !default;
+$headings-font-weight: normal; // instead of browser default, bold
+$headings-font-color: ''; // empty to use BS default, $text-color
+
+$subheadings-font-family: $body-stack;
+$subheadings-font-weight: normal; // instead of browser default, bold
+$subheadings-font-color: ''; // empty to use BS default, $text-color
+
+//  Body
+// ------------------------------------------------------------------
+$base-font-family: $body-stack;
+$alt-font-family: $alt-stack;
+
+///  Special Case
+// ------------------------------------------------------------------
+$legal-font-family: $legal-stack;
+
+// ------------------------------------------------------------------
+//  TypeKit - Use via @extend
+// ------------------------------------------------------------------
+
+@import url("http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100");
+
+%font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+$headings-font-family: 'Raleway', sans-serif;

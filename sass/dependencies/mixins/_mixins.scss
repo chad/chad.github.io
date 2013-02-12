@@ -1,0 +1,83 @@
+// *****************************************************************************
+// MIXINS
+// *****************************************************************************
+
+// Custom Functions
+@import "functions/modular-scale";
+
+// CSS3 Mixins
+@import "css3/animation";
+@import "css3/background-image";
+@import "css3/flex-box";
+@import "css3/linear-gradient";
+@import "css3/radial-gradient";
+
+// Addons & other mixins
+@import "addons/button";
+@import "addons/html5-input-types";
+@import "addons/non-semantic-helpers";
+@import "addons/position";
+@import "addons/timing-functions";
+
+// Hacks
+@import "hacks/ie";
+
+
+
+// Sizing shortcuts
+// -------------------------
+@mixin size($height: 5px, $width: 5px) {
+  width: $width;
+  height: $height;
+}
+@mixin square($size: 5px) {
+  @include size($size, $size);
+}
+
+// Placeholder text
+// -------------------------
+@mixin placeholder($color: $placeholderText) {
+  :-moz-placeholder {
+    color: $color;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+// Resize anything
+@mixin resizable($direction: both) {
+  resize: $direction; // Options: horizontal, vertical, both
+  overflow: auto; // Safari fix
+}
+
+// CSS3 Content Columns
+@mixin content-columns($columnCount, $columnGap: $gridColumnGutter) {
+  -webkit-column-count: $columnCount;
+     -moz-column-count: $columnCount;
+          column-count: $columnCount;
+  -webkit-column-gap: $columnGap;
+     -moz-column-gap: $columnGap;
+          column-gap: $columnGap;
+}
+
+// Opacity
+@mixin opacity($opacity: 100) {
+  opacity: $opacity / 100;
+   filter: alpha(opacity=$opacity);
+}
+
+
+
+// BACKGROUNDS
+// --------------------------------------------------
+
+// Add an alphatransparency value to any background or border color (via Elyse Holladay)
+@mixin translucent-background($color: $white, $alpha: 1) {
+    background-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+}
+@mixin translucent-border($color: $white, $alpha: 1) {
+  border-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+  @include background-clip(padding-box);
+}
+

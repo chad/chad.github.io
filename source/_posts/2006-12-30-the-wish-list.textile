@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFdpc2ggTGlzdA==
+enki_id: 4592
+---
+  (This article is part of the "Big Rewrite":http://chadfowler.com/2006/12/27/the-big-rewrite series.)
+
+Imagine going to the hospital for a kidney transplant, and before and during the surgery saying to the surgeon: "Oh, and while you're already in there digging around, I've had some problems with my lungs that could use a little attention.  And, yes, I've been overeating terribly---could you do one of those stomach reduction things I hear about?  And on that note, how about a little plastic surgery since we've got the knives out?"
+
+This is effectively what happens on "The Big Rewrite":http://chadfowler.com/2006/12/27/the-big-rewrite.  An existing product, no matter how successful, always has a few warts.  The rewrite is seen by many people as the perfect opportunity to shave off the warts.  If we're going to do it over again, we might as well do it _right_ this time.
+
+Under the veil of a rewrite, the assumption is that the personality and capabilities of the software aren't changing.  So, what might start as just a few little tweaks will usually turn into an unbridled reinvention, with none of the usual checks and balances that go into new product development.  With potentially many stake-holders involved and an uncontrolled process, I've seen little tweaks end up increasing the total effort and feature-set of a Big Rewrite by as much as 100%.

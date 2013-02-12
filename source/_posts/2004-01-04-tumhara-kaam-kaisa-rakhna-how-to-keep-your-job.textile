@@ -1,0 +1,16 @@
+---
+layout: post
+title: !binary |-
+  VHVtaGFyYSBLYWFtIEthaXNhIFJha2huYT8gKEhvdyB0byBrZWVwIHlvdXIg
+  am9iKQo=
+enki_id: 4522
+---
+James Robertson links to a link to a link: <a
+href="http://www.cincomsmalltalk.com/blog/blogView?showComments=true&entry=3250451779">www.cincomsmalltalk.com/blog/blogView?showComments=true&entry=3250451779</a>
+
+<p>
+I&#8217;ve been waiting for this to happen (and warning my Indian friends).
+As silly as it seems (with the huge boom going on over there), it might be
+time to start thinking about things like this: <a
+href="http://www.pragmaticprogrammer.com/talks/HowToKeepYourJob/index.html">www.pragmaticprogrammer.com/talks/HowToKeepYourJob/index.html</a>.
+</p>

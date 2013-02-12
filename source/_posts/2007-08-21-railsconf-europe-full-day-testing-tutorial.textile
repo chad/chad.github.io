@@ -1,0 +1,11 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIEV1cm9wZTogRnVsbCBEYXkgVGVzdGluZyBUdXRvcmlhbA==
+enki_id: 4628
+---
+"RailsConf Europe":http://railsconfeurope.com is right around the corner, and on the first day "Marcel Molina":http://marcelmolina.com/ and I will be doing a "full day tutorial on advanced Ruby and Rails testing techniques":http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736.  And, in the tradition of Dave and Mike's "Rails Guidebook":http://clarkware.com/cgi/blosxom/2006/06/26#RailsGuidebook, we'll be requesting a minimum $75 tax deductible "donation to charity":http://www.justgive.org/basket?donorId=91403&listTypeId=1&acton=viewList&sess=1  of all those who attend.  At "RailsConf":http://railsconf.org this year we raised $33,000 for charities, and we hope the spirit of giving continues.
+
+I travel a lot and meet a ton of Ruby and Rails developers in the process, and I'm always surprised at the seemingly unquenchable desire for testing information.  So we're hoping that an entire day with a couple of developers who have been seriously passionate about testing will help at least plant a few seeds and satisfy some of the demand.  The fun part is that we've both learned new tricks ourselves as we've prepared.  That's one of the selfish joys of being a speaker, trainer, and author.  No matter how well you know a topic, you always learn things when you go to prepare a tutorial, talk, article, or book on that topic.  And, as we all know, testing and test-driven development is a _deep_ topic.
+
+As always, even if you're not planning to attend, feel free to "give to the cause":http://www.justgive.org/basket?donorId=91403&listTypeId=1&acton=viewList&sess=1.

@@ -1,0 +1,54 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFNlY29uZCBDb21pbmcgb2YgdGhlIFBpY2theGUK
+enki_id: 4482
+---
+One of the most anticipated features of this year&#8217;s <a
+href="http://rubyconf.org">Ruby Conference</a>, has unquestionably been the
+first viewing of Dave Thomas&#8217;s <a
+href="http://www.pragmaticprogrammer.com/titles/ruby/index.html">Programming
+Ruby</a>. <a href="http://pragmaticprogrammer.com">Dave and Andy</a> were
+kind enough to donate the first (signed!) copies to early-registered
+RubyConf attendees.
+
+<p>
+Before I explain what a fantastic book this is, I should disclose that my
+name appears on the cover, and then explain what this really means. I was
+honored to be asked to write <a
+href="http://www.pragmaticprogrammer.com/titles/ruby/gems.pdf">one
+chapter</a> for the new book on the topic of the <a
+href="http://rubygems.rubyforge.org">RubyGems</a> package manager. My
+praise for the book stands regardless of my (very minor) contribution. So,
+don&#8217;t take any of these comments as self-praise or self-promotion. I
+am humbled by what Dave and Andy have done for Ruby and am flattered to
+have been mentioned on the cover for my somewhat trivial involvement.
+</p>
+<p>
+If you&#8217;ve read the first edition of &quot;The Pickaxe&quot;, you
+already know that it&#8217;s one of the most readable and informative
+programming language introductions you&#8217;ll find&#8212;for <b>any</b>
+language. Don&#8217;t be fooled by the fact that the second edition is also
+called &quot;Programming Ruby&quot;. This is a new and <em>better</em>
+book. Dave has updated the book to cover Ruby 1.8, added an
+<em>excellent</em> chapter on unit testing, and single-handedly documented
+the entire standard library (which has grown immensely since Ruby 1.6).
+</p>
+<p>
+If you&#8217;ve been thinking about learning a new language, now&#8217;s
+the time.
+</p>
+<p>
+<a
+href="http://pragmaticprogrammer.com/shopsite_sc/shopping_cart/order.cgi?storeid=*160503f78eb201b817d3af1fee&dbname=products&itemnum=14&function=add">Paper
+Book</a>
+</p>
+<p>
+<a
+href="http://pragmaticprogrammer.com/shopsite_sc/shopping_cart/order.cgi?storeid=*160503f78eb201b817d3af1fee&dbname=products&itemnum=15&function=add">PDF</a>
+</p>
+<p>
+<a
+href="http://pragmaticprogrammer.com/shopsite_sc/shopping_cart/order.cgi?storeid=*160503f78eb201b817d3af1fee&dbname=products&itemnum=16&function=add">Book
+and PDF</a>
+</p>
