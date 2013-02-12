@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title> RailsConf Speaker Interview: Mike Subelsky - The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="RailsConf Speaker Interview: Mike Subelsky 2009.04.22 Next up in my series of RailsConf speaker interviews is Mike Subelsky, co-founder of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://chad.github.com/blog/2009/04/22/railsconf-speaker-interview-mike-subelsky/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
+  <script src="/javascripts/vendor/modernizr.min.js"></script>
+  <script src="/javascripts/vendor/prefixfree.min.js"></script>
+
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  
+
+
+</head>
+
+<body  class="preload  ">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <span class="page-name">Chad Fowler</span>
+
+  <header id="page-header" role="banner">
+     <hgroup>
+      <h1>Chad <span>Fowler</span></h1>
+      
+        <h2>practical self-engineering</h2>
+      
+    </hgroup>
+    <nav id="site-navigation">
+  <ol class="main-navigation">
+    <li><a href="/">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Speaking</a></li>
+    <li><a href="#">Books</a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+  </ol>
+</nav>
+
+
+  </header><!-- /header#page-header -->
+
+
+  </header>
+
+  <div id="main" role="main">
+    <section id="content">
+      <article class="hentry" role="article">
+  
+  <header>
+    
+      <h1>RailsConf Speaker Interview: Mike Subelsky</h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-22T00:00:00+02:00" pubdate data-updated="true">2009.04.22</time>
+    
+  </header>
+
+
+<div class="article-content">
+  <p>Next up in my <a href="http://chadfowler.com/railsconf-speaker-interviews">series of RailsConf speaker interviews</a> is <a href="http://subelsky.com/">Mike Subelsky</a>, co-founder of <a href="http://otherinbox.com">OtherInbox</a> and avid <a href="http://www.sproutcore.com/">SproutCore</a> developer. (SproutCore was used, among other things, to develop Apple&#8217;s <a href="http://me.com">MobileMe</a> UI and presents a Cocoa-like environment for developing Rich browser-based user interfaces.)</p>
+<p>Mike will be presenting both a <a href="http://en.oreilly.com/rails2009/public/schedule/speaker/2233">tutorial on SproutCore development and a session on cloud computing gotchas</a> at RailsConf in a couple of weeks.</p>
+<h2>How did OtherInbox get started? Was this your first startup? What were the hurdles in moving from consulting to product development?</h2>
+<p>We wanted to solve our own email overload problem &#8212; many people receive heavy volumes of &#8220;gray mail&#8221; or &#8220;bacn&#8221; and increasing volumes of more important email like receipts, social networking notifications, confirmations, etc.  The other founder of the company, <a href="http://austinpreneur.com/">Joshua Baer</a>, had the idea to build a product that would elegantly organize and make sense of this kind of mail, something we would use ourselves that would also help the average person.</p>
+<p>This was my first startup; I knew Josh from a project class we had taken together at Carnegie Mellon and was lucky that he invited me to be the cofounder.  I had been dabbling and freelancing as a Rails developer for the previous 18 months, and had always been hacking on side projects for my whole career.</p>
+<p>Coming from a consulting background, there have been two big hurdles:</p>
+<ol>
+	<li>I didn&#8217;t expect product development to have such a different tempo than consulting projects. You live with your code much longer (so you end up maintaining your own legacy code, and don&#8217;t have the next greenfield to look forward to), you have to deal more directly with the consequences of mistakes (there&#8217;s no one to bail you out), and the risks are higher (because you don&#8217;t know when or if your labors will pay off).  Thus there are many peaks and valleys of  happiness, and it&#8217;s not always easy to tell if you are being successful.</li>
+</ol>
+<ol>
+	<li>When time and resources are so constrained, the development team has to become disciplined without sacrificing too much agility.  You can&#8217;t rely on individual programming heroics to carry the day &#8211; otherwise you&#8217;re guaranteed to burn out and get sloppy.  I haven&#8217;t completely overcome this hurdle yet, but I&#8217;m reading everything about software development processes that I can get my hands on.  I&#8217;ve become a huge fan of Eric Ries&#8217; lean startup blog <br />
+<a href="http://startuplessonslearned.blogspot.com/">Lessons Learned</a>.</li>
+</ol>
+<h2>What makes SproutCore interesting and special to you?</h2>
+<p>SproutCore lets you build real client-server applications, delegating a lot of <span class="caps">GUI</span> work to the client that servers currently perform (like rendering <span class="caps">HTML</span> views or serving up cached <span class="caps">HTML</span> pages).  The framework takes concepts that desktop developers have used for a long time and reimagines them for use in web applications.  For example, key-value observation and  bindings help you eliminate a lot of buggy, ugly glue code, saving a lot of time and aggravation).</p>
+<p>It&#8217;s special to me because I think this technology has the potential to dramatically change application development in general.  The core team has a strong point of view about how Internet clients should be built, and how to make JavaScript and web browsers perform.  Writing SproutCore code reminds me of the feeling I got the first time I picked up a book about Rails &#8212; &#8220;using these tools is making me a better programmer&#8221;.</p>
+<p>Also, I&#8217;ve never liked the feel of Flash, and I love how SproutCore uses only web-native technologies to do amazing things in the browser.  <a href="http://www.sproutcore.com/2009/03/25/papercube/">PaperCube</a> and <a href="http://me.com/">MobileMe</a> are examples of SproutCore apps that feel like desktop apps, but don&#8217;t require any plugins whatsoever.</p>
+<h2>Are SproutCore and Rails particularly well suited to one another? If so, how?</h2>
+<p>I think so &#8212; you can point a SproutCore client at any kind of server you want, but I think there&#8217;s probably a sweet spot for these two frameworks. Rails makes it easy to write a robust, easily extensible <span class="caps">REST</span> <span class="caps">API</span>, which makes it really easy to write web clients.  SproutCore makes it easy to write robust, easily extensible web clients.</p>
+<p>In OtherInbox, our Rails app has to worry about doing is sending back <span class="caps">JSON</span> as quickly as possible.  The SproutCore app handles most of the user interaction (except for things like the signin page, which we&#8217;re keeping server-based for now)  and focuses on making the browser experience as fast and fluid as possible.  We don&#8217;t need to run as many web servers to keep up with our recent growth, because the servers aren&#8217;t bogged down generating <span class="caps">HTML</span> or <span class="caps">RJS</span> updates.</p>
+<p>As a happy side-effect, since we built our app this way, someone has <a href="http://getsatisfaction.com/otherinbox/topics/android_app_coming_is_there_an_api">reverse engineered</a> <br />
+our <span class="caps">JSON</span> <span class="caps">API</span> to make an Android app.</p>
+<p>Rails developers will also find many cultural similarities such as emphasis on unit testing and use of generators.</p>
+<h2>SproutCore&#8217;s model marks an extreme departure from the way we traditionally do JavaScript/<span class="caps">AJAX</span> applications on Rails. Do you think SproutCore or its patterns will catch on generally or is it bettered toward to a specific niche?</h2>
+<p>I think if you&#8217;re building an app where you need to add just a little dynamic behavior here and there, SproutCore is too much.  Toolkits like Prototype and jQuery are much more appropriate.  But if you&#8217;re making something like MobileMe, PaperCube, or <a href="http://oib.com/">OtherInbox</a>, where the users expect desktop-like fluidity or where the client software can&#8217;t always rely on the server for everything, SproutCore will be a big win.</p>
+<p>One thing that could help SproutCore catch on generally will be its support for multiple platforms.  The 1.0 release candidate includes <a href="http://www.sproutcore.com/2009/03/15/sproutcore-goes-mobile/">preliminary mobile support</a>, <br />
+so we should eventually be able to take the same code base and build it for web browsers, iPhones, Androids, etc., without having to change much.  I think that will really turn some heads.</p>
+<h2>SproutCore&#8217;s learning curve appears to be pretty steep. What&#8217;s the best way to get into it on day one?</h2>
+<p>That&#8217;s tough, because there aren&#8217;t yet a lot of blogs or books to guide you.  One of my goals for 2009 is to start contributing more tutorials, because I was lucky to be mentored by <a href="http://twitter.com/erichocean">Erich Ocean</a>.  My best advice would be to get some familiarity with Cocoa because that will illuminate the parts of desktop development that are really different from web development.  If you understand <br />
+<a href="http://developer.apple.com/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">key-value observation</a>, <br />
+<a href="http://developer.apple.com/documentation/Cocoa/Conceptual/KeyValueCoding/KeyValueCoding.html">key-value coding</a>, and bindings, it will be much easier to learn SproutCore.</p>
+<p>Also, the #sproutcore <span class="caps">IRC</span> channel and <a href="http://groups.google.com/group/sproutcore">Google group</a> are really friendly places to get guidance.</p>
+  
+    <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/blog/2009/04/22/railsconf-speaker-interview-mike-subelsky/" data-via="chadfowler" data-counturl="http://chad.github.com/blog/2009/04/22/railsconf-speaker-interview-mike-subelsky/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+  
+</div>
+
+
+  <footer>
+    <p>
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-04-22T00:00:00+02:00" pubdate data-updated="true">2009.04.22</time>
+      
+
+
+    </p>
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a class="prev" href="/blog/2009/04/02/railsconf-speaker-interview-neal-ford-and-paul-gross/" title="Previous Post: RailsConf Speaker Interview: Neal Ford and Paul Gross">&laquo; RailsConf Speaker Interview: Neal Ford and Paul Gross</a>
+  
+  
+    <a class="next" href="/blog/2009/04/23/the-passionate-programmer-creating-a-remarkable-career-in-software-development/" title="Next Post: The Passionate Programmer: Creating a Remarkable Career in Software Development">The Passionate Programmer: Creating a Remarkable Career in Software Development &raquo;</a>
+  
+</div>
+    </section>
+    <aside id="page-sidebar">
+      
+        <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/Chadfowlercom">RSS</a></li>
+</ol><section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+        <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference with a really really really long name</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="#">Some Awesome Conference</a></span>
+        <span class="location">Berlin :(</span>
+        <span class="the-date">March 28, 2012</span>
+      </li>
+  </ol>
+
+  <a class="more-events" href="#">More Events »</a>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section><section class="widget">
+  <h2 class="widget-header">Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
+      </li>
+    
+  </ul>
+</section>
+
+      
+    </aside>
+  </div><!-- /div#main -->
+
+  <footer id="page-footer" role="contentinfo">
+    <section  class="hreview book"  id="passionate-programmer-book">
+  <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
+  <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
+  <h1 class="summary">Get Passionate Again</h1>
+  <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
+  </a>
+  <blockquote>
+    <p>I was blow away.</p>
+  </blockquote>
+  <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
+</section>
+
+
+
+  <section id="latest-tweet">
+    <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+      <script type="text/javascript">
+        jQuery(function($) {
+          getTwitterFeed("chadfowler", 1, false);
+        });
+      </script>>
+    <blockquote class="twitter-tweet">
+      <ul id="tweets">
+        <li class="loading">Status updating...</li>
+      </ul>
+    </blockquote>
+    <a class="user" href="https://twitter.com/chadfowler">@chadfowler</a>
+    <span id="tweet-time"></span>
+  </section>
+
+
+<p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
+  </footer>
+
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'chadfowler';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+  <script src="/javascripts/vendor/prism.min.js"></script>
+  <script src="/javascripts/plugins.js"></script>
+  <script src="/javascripts/main.js"></script>
+
+  
+
+</body>
+</html>
