@@ -30,6 +30,7 @@ html body {
       right: 0;
       bottom: 250px;
       left: 170px;
+    width: -webkit-calc(100% - 170px);
     width: calc(100% - 170px);
     z-index: $z-index-base;
     section#content {
@@ -38,6 +39,7 @@ html body {
       position: relative;
       margin-left: -20px;
       overflow-y: auto;
+      height: -webkit-calc(100% - 10px);
       height: calc(100% - 10px);
       width: 73%;
     }
