@@ -27,7 +27,7 @@ h1. Radical Career Success in a Down Economy, O'Reilly Webcast with Andy Lester
 
 <iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/YsB0ZluMYCc" frameborder="0" allowfullscreen></iframe>
 
-h1. ...then what?, Mountain West RubyConf 2007
+h1. then what?, Mountain West RubyConf 2007
 Salt Lake City, Utah
 
 <a href="http://mtnwestrubyconf2007.confreaks.com/videos/keynote_300kbps_xvid_32kbps_mono_audio_480x360.avi"><img src="/images/speaking/mwrc.png"/></a>
