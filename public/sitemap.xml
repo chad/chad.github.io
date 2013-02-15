@@ -1271,12 +1271,16 @@
         <lastmod>2013-02-13T17:45:53+01:00</lastmod>
     </url>
     <url>
+        <loc>http://chad.github.com/blog/2013/02/15/switched-to-github/</loc>
+        <lastmod>2013-02-15T17:55:15+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://chad.github.com/about/</loc>
         <lastmod>2013-02-15T11:25:01+01:00</lastmod>
     </url>
     <url>
         <loc>http://chad.github.com/blog/archives/</loc>
-        <lastmod>2013-02-13T17:45:53+01:00</lastmod>
+        <lastmod>2013-02-15T17:55:15+01:00</lastmod>
     </url>
     <url>
         <loc>http://chad.github.com/books/</loc>
@@ -1288,7 +1292,7 @@
     </url>
     <url>
         <loc>http://chad.github.com/</loc>
-        <lastmod>2013-02-13T17:45:53+01:00</lastmod>
+        <lastmod>2013-02-15T17:55:15+01:00</lastmod>
     </url>
     <url>
         <loc>http://chad.github.com/interviews/</loc>

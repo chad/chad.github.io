@@ -11,8 +11,7 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Ruby on Rails on Rubinius 2008.05.17 Congratulations to Evan and the Rubinius team. Rubinius runs Rails!
-By this time next year, we&#8217;ll see &hellip;">
+  <meta name="description" content="Maglev 2008.06.05 We just wrapped up RailsConf 2008. A lot has been said about RailsConf elsewhere, so as the program chair I&#8217;ll just say &# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +73,110 @@ By this time next year, we&#8217;ll see &hellip;">
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2008/06/05/maglev/">Maglev</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-06-05T00:00:00+02:00" pubdate data-updated="true">2008.06.05</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>We just wrapped up <a href="http://railsconf.org">RailsConf 2008</a>.  A lot has been said about RailsConf elsewhere, so <br />
+as the program chair I&#8217;ll just say &#8220;thank you&#8221; to the speakers, attendees, co-organizers, sponsors, and <br />
+everyone else for making it the best conference I&#8217;ve ever been to.</p>
+<p>A lot of exciting things happened.  Among the most exciting to me was the public unveiling of <br />
+<a href="http://ruby.gemstone.com">Maglev</a>.  I&#8217;ve had a version of Maglev on my computer for about a month now, but <br />
+I haven&#8217;t been able to talk about it. Now that it has been announced, most things I know are fair game.</p>
+<p><a href="http://avibryant.com">Avi Bryant</a> and I met at the first RubyConf.  He&#8217;s been a fan and friend of Ruby ever <br />
+since.  He happens to be doing mostly Smalltalk these days, but he&#8217;s been following the Ruby and (more <br />
+recently) Rails communities closely.  After that first RubyConf, we reconnected while both attending <a href="http://dreamsongs.com">Dick <br />
+Gabriel&#8217;s</a> pilot <span class="caps">MFA</span> in Software Development program at <a href="http://www.uiuc.edu/"><span class="caps">UIUC</span></a> in <br />
+early 2003.  Avi&#8217;s been talking since then about running Ruby on a Smalltalk VM.<br />
+I&#8217;ve even started my own attempt once or twice, based on Avi&#8217;s ideas of how it could be done.</p>
+<p>Given Avi&#8217;s interest in Ruby on Smalltalk and that he also created the mind-bending <br />
+<a href="http://seaside.st">Seaside</a> web application framework, we invited him to keynote at last year&#8217;s RailsConf.  It was there, in his <a href="http://railsconf.blip.tv/#574286">message from the future</a> keynote, that he made public<br />
+his belief that Ruby could benefit from being hosted on a mature, dynamic (Smalltalk) VM.</p>
+<p>It was also, as I understand it, from that talk that <a href="http://gemstone.com">Gemstone</a> got the idea to run Rails.</p>
+<p>The conversations started just after RailsConf last year, but it was only a few short months ago that Avi started work on <a href="http://maglev.gemstone.com">Maglev</a>.  That&#8217;s part of what makes it so amazing.  He and the<br />
+engineers at Gemstone have gotten a huge subset of the Ruby language running on the Gemstone VM in just three months.</p>
+<h1><span class="caps">RDBMS</span> R.I.P.</h1>
+<p>Well, not really, but it&#8217;s fun to say.</p>
+<p>There are a lot of things to like about what Maglev promises.  By far the most interesting to me is <br />
+Gemstone&#8217;s persistence engine.</p>
+<p>What&#8217;s coolest about how Gemstone&#8217;s persistence engine works within the context of Maglev is that it doesn&#8217;t<br />
+feel like a persistence engine.  It&#8217;s just objects.  Everything&#8217;s just objects.</p>
+<p>If you think about it, the average Rails application is a styled set of <span class="caps">CRUD</span> operations on top of an <br />
+<em>object graph</em>.  That&#8217;s right, an object graph.  The fact that most Rails applications are backed<br />
+by a relational database is a somewhat-necessary annoyance.</p>
+<p>So in circumstances where you don&#8217;t <span class="caps">NEED</span> an <span class="caps">RDBMS</span>, why would you want to litter your pristine Ruby objects with <span class="caps">SQL</span> and other <span class="caps">RDBMS</span>-related work-arounds?  If it were possible to simply instantiate objects and not have to think about the underlying storage implementation at all, wouldn&#8217;t that be better?</p>
+<p>That&#8217;s what Gemstone (and, therefore, Maglev) gives you.</p>
+<p>There were questions during the demo about ActiveRecord compatibility.  To me, building in ActiveRecord <br />
+compatibility is worse than a waste of time.  Sure, there are things in ActiveRecord which would be useful <br />
+regardless of the storage mechanism.  Declarative relationships and validations are examples.  But, when <br />
+you&#8217;re dealing with objects in memory, the idea of a :conditions clause with <span class="caps">SQL</span> in it is absolutely <br />
+unnecessary and unappealing.</p>
+<h1>Fast as hell</h1>
+<p>Avi and the Gemstone people knew from their understanding of how the VM works that a Ruby implementation<br />
+on Gemstone would be really fast.  They were right.  But as I said, the speed of the implementation is <br />
+secondary to the persistence engine.</p>
+<p>That being said, it&#8217;s really really fast.  On micro-benchmarks, it&#8217;s up to 100 times faster than <span class="caps">MRI</span>.</p>
+<p>As has already been whined about ad nauseam, micro-benchmarks can be misleading.  They test very specific <br />
+parts of the implementation and don&#8217;t always give you a picture of what real-world application performance <br />
+will be like. So, let&#8217;s take this approach with the Maglev benchmarks: it&#8217;s fast enough.  It&#8217;s probably a<br />
+lot faster than <span class="caps">MRI</span>.  And, we&#8217;ve been using <span class="caps">MRI</span> for years for real applications.</p>
+<p>Good enough.  Probably awesome.  But at least good enough.</p>
+<p>Now is it going to slow down as they start implementing more of the libraries and language features? That&#8217;s<br />
+the conventional wisdom.  I say <em>no</em>.</p>
+<p>Smalltalk and Ruby are, as Avi has said numerous times, essentially the same language.  So the Gemstone VM<br />
+has been tailor-made for running dynamic language code with closures, continuations, etc. and has been<br />
+doing it for years.  Imagine the process, then, of converting Ruby to Smalltalk.  It&#8217;s in most cases<br />
+a fairly straightforward language to language translation.</p>
+<p>Where it <em>isn&#8217;t</em> as simple as that, Gemstone have a pretty big advantage:  they own the VM and they can <br />
+change it to fit what Ruby needs.</p>
+<p>I expect Maglev to get <em>faster</em> as the team starts to spend time on optimization.  So far, they&#8217;re in the<br />
+&#8220;make it run&#8221; phase of the process.  Remember, three months in.</p>
+<p>Antonio Cangiano <a href="http://antoniocangiano.com/2008/06/05/maglev-handles-trees-like-a-monkey/">also had a look at Maglev recently</a> and has a bit more to say about the specifics of Maglev performance</p>
+<h1>Ruby Compliance (or &#8220;it runs WEBRick!&#8221;)</h1>
+<p>So what&#8217;s next for Maglev?  As the Gemstone team has said, their next goal is to start running and passing<br />
+the Ruby specs created by the other Ruby implementers.  They hadn&#8217;t prioritized this leading up to RailsConf,<br />
+because, RailsConf being a web development conference, they wanted us all to see WEBRick running.</p>
+<p>But, hey, they have WEBRick running!  Have you looked at the code for WEBRick?  That&#8217;s a lot of Ruby.</p>
+<p>I&#8217;m looking forward to a report on how well the Ruby specs run at this moment.  I think everyone will be<br />
+pleasantly surprised.  And the specs will give the team a clear goal to work toward.</p>
+<h1>So Will I Use This Thing?!</h1>
+<p>When you don&#8217;t <span class="caps">NEED</span> an <span class="caps">RDBMS</span> (more often than you think) or you need scalable Ruby servers, I think<br />
+Maglev is going to be an enticing alternative.  It&#8217;s not going to kill the other implementations.  Each<br />
+implementation has its place. This isn&#8217;t a war, after all.</p>
+<p>Macruby, JRuby, and IronRuby are for integration.  <span class="caps">MRI</span>/<span class="caps">YARV</span> and Rubinius will compete for the &#8220;standard&#8221; use <br />
+cases. Maglev is for big, distributed object stores inside of fast, scalable servers.  Think Rails, <br />
+Adhearsion, or various coordination services running custom protocols on sockets.  Don&#8217;t run scripts in <br />
+Maglev.  Don&#8217;t write desktop apps in Maglev.  Just use Maglev to serve tons of requests against billions of <br />
+objects.</p>
+<p>Maglev is good for the Ruby ecosystem just as <span class="caps">MRI</span>/<span class="caps">YARV</span>, Macruby, JRuby, and IronRuby are good for the <br />
+Ruby ecosystem.  The fact that we (will) have so many alternatives is a good thing.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -393,41 +496,6 @@ Macintosh-2:~ chad$ gem -v
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2007/12/17/advanced-rails-recipes/">Advanced Rails Recipes</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-12-17T00:00:00+01:00" pubdate data-updated="true">2007.12.17</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>You may remember that I was working on <a href="http://pragprog.com/titles/fr_arr">Advanced Rails Recipes</a> earlier this year.  I&#8217;m not anymore.  I&#8217;ve been over-committed and I finally decided to face facts and withdraw myself from the authoring process.</p>
-<p>That&#8217;s OK though.  Someone has pressed the &#8220;Kick Ass&#8221; button on the <a href="http://clarkware.com/">Mike Clark</a> book-writing machine, and <a href="http://pragprog.com/titles/fr_arr">Advanced Rails Recipes</a> has appeared in beta.</p>
-<p>The book is a collection of recipes by Mike and top members of the Rails community.  There is literally no one I trust more to put together timely, trustworthy advice on how to develop Rails applications right more than Mike.  This one is a must-read, and beta is a great time to get in on the action in that it gives you a chance to make an impact on the final product.</p>
-<p>The book is not yet complete, but it&#8217;s already worth the price.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -480,6 +548,10 @@ Macintosh-2:~ chad$ gem -v
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/15/switched-to-github/">Switched to github</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
       </li>
     
@@ -493,10 +565,6 @@ Macintosh-2:~ chad$ gem -v
     
       <li class="post">
         <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
       </li>
     
   </ul>
@@ -514,7 +582,7 @@ Macintosh-2:~ chad$ gem -v
   <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
   </a>
   <blockquote>
-    <p>I was blow away.</p>
+    <p>I was blown away.</p>
   </blockquote>
   <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
 </section>
@@ -539,6 +607,7 @@ Macintosh-2:~ chad$ gem -v
 
 
 <p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
 
   </footer>
 

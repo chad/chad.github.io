@@ -11,7 +11,7 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="RubyConf Speaker Interview: Greg Borenstein 2008.09.12 RubyConf registration is open, and I am so excited by the program this year that I thought it &hellip;">
+  <meta name="description" content="RubyConf Speaker Interview: Ben Scofield 2008.09.16 RubyConf registration is open (and nearly sold out), and I am so excited by the program this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +73,54 @@
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2008/09/16/rubyconf-speaker-interview-ben-scofield/">RubyConf Speaker Interview: Ben Scofield</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-16T00:00:00+02:00" pubdate data-updated="true">2008.09.16</time>
+    
+  </header>
+
+
+  <div class="article-content"><p><a href="http://rubyconf.org">RubyConf registration is open</a> (and nearly sold out), and I am so excited by the program this year that I thought it would be fun to ask some of the speakers some questions before the conference. So I&#8217;m starting a series of informal interviews with RubyConf speakers.</p>
+<p>The first one was <a href="http://www.urbanhonking.com/ideasfordozens/">Greg Borenstein</a>, creator of <a href="http://rad.rubyforge.org/"><span class="caps">RAD</span></a>.</p>
+<p>Next up is <a href="http://www.culann.com/">Ben Scofield</a>, author of <a href="http://www.amazon.com/Practical-REST-Rails-2-Projects/dp/B001DA2BXU/ref=sr_1_3?ie=UTF8&amp;s=books&amp;qid=1221533963&amp;sr=8-3">Practical <span class="caps">REST</span> on Rails 2 Projects</a> and developer at <a href="http://viget.com">Viget Labs</a>.</p>
+<p>At RubyConf, Ben will be presenting <a href="http://rubyconf.org/talks/25">All I Really Need to Know* I Learned by Writing My Own Web Framework</a>.</p>
+<h2>So first you do Hello World, then you write your own framework?  Is this why there are so many Ruby web frameworks popping up?</h2>
+<p>Obviously, there are at least a couple steps between Hello World and writing your own web framework. For me, though, these two practices are (like creating a blog in a new web framework) learning experiences. Hello World introduces the basic syntax of a language; blogs demonstrate how <span class="caps">ORM</span> and other techniques are implemented in a given framework. Similarly, custom web frameworks provide a path into still more complicated functionality (network requests and responses, templating, etc.). Building a framework requires a certain level of knowledge of both the programming language and of how the web works, and that knowledge makes other tasks on the web and/or in that language easier.</p>
+<p>I do not think that this general point explains the plethora of Ruby web frameworks, however. That, instead, is due to two factors: Rack and Rails. Rack has made it astoundingly easy to try out a new idea for handling web requests (as I&#8217;ll talk about in my session), lowering the barrier to entry dramatically. Rails, on the other hand, has motivated the development of new frameworks by both its success and its opinionated nature. Merb was originally developed as a very lightweight alternative to RoR and has since grown into a much less opinionated framework. Waves, on the other hand, is a reaction to a perceived lack of focus on resources in Rails. Most of the new frameworks are reactions to Rails, and to the specific opinions it internalizes. That&#8217;s not to say that any of these frameworks are intrinsically worse (or better) than Rails—their genesis is entirely separate from their value, and I think that each of the frameworks out there has lessons to provide.</p>
+<h2>You seem to spend most of your working time in Rails. Has writing your own framework affected how you understand Rails? Has it made you more appreciative?  Or critical?</h2>
+<p>Definitely; I think that building any software in a given domain is bound to affect how you perceive others&#8217; software written for that same domain, and web frameworks are no exception. Decisions that seem unfathomable at first glance take on an entirely new aspect when you&#8217;ve struggled with and addressed the same problems on your own.</p>
+<p>The immediate cause of my setting out to write Athena was a disagreement with Rails&#8217; implementation of <span class="caps">REST</span> (over collection and singleton resource being handled together, more specifically). That said, I wouldn&#8217;t say that I&#8217;m terribly critical of Rails; I love using it, and I don&#8217;t foresee abandoning it soon. Of course, I think of Athena first as a learning experience, not a viable competitor to Rails (unlike Merb or Ramaze, for instance); if that were not the case, I might have a differerent opinion. For now, however, I&#8217;m content to continue to learn from my experiences and hopefully bring them back to Rails when I can (through patches, plugins, and gems).</p>
+<h2>Why do you think we&#8217;re still stuck doing faux <span class="caps">MVC</span> web development? Is it time for something new?</h2>
+<p>I think the main reason we&#8217;re still building sites this way is that it works pretty darn well. Right now, we can build effective sites quickly, and we&#8217;re happy doing it—at the various least, we&#8217;re on a peak in the web framework landscape, and there&#8217;s a real risk in moving from a satisfactory (if potentially suboptimal) approach to an alternative, in that if you don&#8217;t know precisely where that next, higher peak is, you end up trudging through enormous valleys of unpleasant and unproductive work. Many of us made the move from frameworkless <span class="caps">PHP</span> or configuration-heavy Java because we used DHH&#8217;s fifteen minute blog video as a roadmap to the better place, already well-defined and waiting for us. For the next move, we&#8217;ll need something at least as comparable, and until then we&#8217;ll stay in this general region (which, all things considered, still has a lot of room for improvement, as Rails gets better and other frameworks adopt these lessons).</p>
+<p>With that in mind, however, I do sometimes fear that we&#8217;re building our local maximum of joy and productivity to height such that the next thing will have to be even <strong>more</strong> amazing before it pulls in an audience large enough to really compete with Rails. Of course, that makes the existing alternatives (with their communities) even more important, even if none of them are currently at the point of being the Coming Thing.</p>
+<h2>You have a degree in Linguistics or something, right? Is this why you like to deconstruct things and put them back together?  How has your nontraditional training and education affected the way you learn and approach your job?</h2>
+<p>Yep—philosophy, actually. I don&#8217;t know that I&#8217;d describe myself as breaking things down and reconstructing them, though given that my training was in analytical philosophy that does make sense. I prefer to look at my graduate work for inspriation; it was all about integrating distinct fields (cognitive science, philosophy of mind, animal behavior, biological psychology, evolutionary theory) into a cohesive whole. All of that has given me a perspective that&#8217;s somewhat different from the standard computer science point of view, I think, and while that can cause problems (since I&#8217;m missing some of the fundamental education a CS course of study provides), it more often than not helps me to see and make use of the underlying patterns.</p>
+<h2>What are you passionate about outside of computer programming?</h2>
+<p>That&#8217;s a question that gets a different answer depending on when you ask. At various times over the past few years, I&#8217;ve been passionate about dogs, analytic philosophy, comic books, squash, MMORPGs, mythology, cooking, politics, young adult literature, writing, various musical genres, Chinese martial arts, anime, volleyball&#8230;. I&#8217;m both obsessive and mercurial, which means I get powerfully drawn into subjects for a time, then move on to another fascination. At the moment, I&#8217;m holding steady with a few topics: comics and speculative fiction, with a dash of volleyball and philosophy, and I&#8217;m continually surprised and enchanted by what my six-month-old daughter does from day to day.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -422,110 +470,6 @@ Self’ll broaden the mind he how on route to amplify tall idea-experienced prog
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2008/06/05/maglev/">Maglev</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-06-05T00:00:00+02:00" pubdate data-updated="true">2008.06.05</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>We just wrapped up <a href="http://railsconf.org">RailsConf 2008</a>.  A lot has been said about RailsConf elsewhere, so <br />
-as the program chair I&#8217;ll just say &#8220;thank you&#8221; to the speakers, attendees, co-organizers, sponsors, and <br />
-everyone else for making it the best conference I&#8217;ve ever been to.</p>
-<p>A lot of exciting things happened.  Among the most exciting to me was the public unveiling of <br />
-<a href="http://ruby.gemstone.com">Maglev</a>.  I&#8217;ve had a version of Maglev on my computer for about a month now, but <br />
-I haven&#8217;t been able to talk about it. Now that it has been announced, most things I know are fair game.</p>
-<p><a href="http://avibryant.com">Avi Bryant</a> and I met at the first RubyConf.  He&#8217;s been a fan and friend of Ruby ever <br />
-since.  He happens to be doing mostly Smalltalk these days, but he&#8217;s been following the Ruby and (more <br />
-recently) Rails communities closely.  After that first RubyConf, we reconnected while both attending <a href="http://dreamsongs.com">Dick <br />
-Gabriel&#8217;s</a> pilot <span class="caps">MFA</span> in Software Development program at <a href="http://www.uiuc.edu/"><span class="caps">UIUC</span></a> in <br />
-early 2003.  Avi&#8217;s been talking since then about running Ruby on a Smalltalk VM.<br />
-I&#8217;ve even started my own attempt once or twice, based on Avi&#8217;s ideas of how it could be done.</p>
-<p>Given Avi&#8217;s interest in Ruby on Smalltalk and that he also created the mind-bending <br />
-<a href="http://seaside.st">Seaside</a> web application framework, we invited him to keynote at last year&#8217;s RailsConf.  It was there, in his <a href="http://railsconf.blip.tv/#574286">message from the future</a> keynote, that he made public<br />
-his belief that Ruby could benefit from being hosted on a mature, dynamic (Smalltalk) VM.</p>
-<p>It was also, as I understand it, from that talk that <a href="http://gemstone.com">Gemstone</a> got the idea to run Rails.</p>
-<p>The conversations started just after RailsConf last year, but it was only a few short months ago that Avi started work on <a href="http://maglev.gemstone.com">Maglev</a>.  That&#8217;s part of what makes it so amazing.  He and the<br />
-engineers at Gemstone have gotten a huge subset of the Ruby language running on the Gemstone VM in just three months.</p>
-<h1><span class="caps">RDBMS</span> R.I.P.</h1>
-<p>Well, not really, but it&#8217;s fun to say.</p>
-<p>There are a lot of things to like about what Maglev promises.  By far the most interesting to me is <br />
-Gemstone&#8217;s persistence engine.</p>
-<p>What&#8217;s coolest about how Gemstone&#8217;s persistence engine works within the context of Maglev is that it doesn&#8217;t<br />
-feel like a persistence engine.  It&#8217;s just objects.  Everything&#8217;s just objects.</p>
-<p>If you think about it, the average Rails application is a styled set of <span class="caps">CRUD</span> operations on top of an <br />
-<em>object graph</em>.  That&#8217;s right, an object graph.  The fact that most Rails applications are backed<br />
-by a relational database is a somewhat-necessary annoyance.</p>
-<p>So in circumstances where you don&#8217;t <span class="caps">NEED</span> an <span class="caps">RDBMS</span>, why would you want to litter your pristine Ruby objects with <span class="caps">SQL</span> and other <span class="caps">RDBMS</span>-related work-arounds?  If it were possible to simply instantiate objects and not have to think about the underlying storage implementation at all, wouldn&#8217;t that be better?</p>
-<p>That&#8217;s what Gemstone (and, therefore, Maglev) gives you.</p>
-<p>There were questions during the demo about ActiveRecord compatibility.  To me, building in ActiveRecord <br />
-compatibility is worse than a waste of time.  Sure, there are things in ActiveRecord which would be useful <br />
-regardless of the storage mechanism.  Declarative relationships and validations are examples.  But, when <br />
-you&#8217;re dealing with objects in memory, the idea of a :conditions clause with <span class="caps">SQL</span> in it is absolutely <br />
-unnecessary and unappealing.</p>
-<h1>Fast as hell</h1>
-<p>Avi and the Gemstone people knew from their understanding of how the VM works that a Ruby implementation<br />
-on Gemstone would be really fast.  They were right.  But as I said, the speed of the implementation is <br />
-secondary to the persistence engine.</p>
-<p>That being said, it&#8217;s really really fast.  On micro-benchmarks, it&#8217;s up to 100 times faster than <span class="caps">MRI</span>.</p>
-<p>As has already been whined about ad nauseam, micro-benchmarks can be misleading.  They test very specific <br />
-parts of the implementation and don&#8217;t always give you a picture of what real-world application performance <br />
-will be like. So, let&#8217;s take this approach with the Maglev benchmarks: it&#8217;s fast enough.  It&#8217;s probably a<br />
-lot faster than <span class="caps">MRI</span>.  And, we&#8217;ve been using <span class="caps">MRI</span> for years for real applications.</p>
-<p>Good enough.  Probably awesome.  But at least good enough.</p>
-<p>Now is it going to slow down as they start implementing more of the libraries and language features? That&#8217;s<br />
-the conventional wisdom.  I say <em>no</em>.</p>
-<p>Smalltalk and Ruby are, as Avi has said numerous times, essentially the same language.  So the Gemstone VM<br />
-has been tailor-made for running dynamic language code with closures, continuations, etc. and has been<br />
-doing it for years.  Imagine the process, then, of converting Ruby to Smalltalk.  It&#8217;s in most cases<br />
-a fairly straightforward language to language translation.</p>
-<p>Where it <em>isn&#8217;t</em> as simple as that, Gemstone have a pretty big advantage:  they own the VM and they can <br />
-change it to fit what Ruby needs.</p>
-<p>I expect Maglev to get <em>faster</em> as the team starts to spend time on optimization.  So far, they&#8217;re in the<br />
-&#8220;make it run&#8221; phase of the process.  Remember, three months in.</p>
-<p>Antonio Cangiano <a href="http://antoniocangiano.com/2008/06/05/maglev-handles-trees-like-a-monkey/">also had a look at Maglev recently</a> and has a bit more to say about the specifics of Maglev performance</p>
-<h1>Ruby Compliance (or &#8220;it runs WEBRick!&#8221;)</h1>
-<p>So what&#8217;s next for Maglev?  As the Gemstone team has said, their next goal is to start running and passing<br />
-the Ruby specs created by the other Ruby implementers.  They hadn&#8217;t prioritized this leading up to RailsConf,<br />
-because, RailsConf being a web development conference, they wanted us all to see WEBRick running.</p>
-<p>But, hey, they have WEBRick running!  Have you looked at the code for WEBRick?  That&#8217;s a lot of Ruby.</p>
-<p>I&#8217;m looking forward to a report on how well the Ruby specs run at this moment.  I think everyone will be<br />
-pleasantly surprised.  And the specs will give the team a clear goal to work toward.</p>
-<h1>So Will I Use This Thing?!</h1>
-<p>When you don&#8217;t <span class="caps">NEED</span> an <span class="caps">RDBMS</span> (more often than you think) or you need scalable Ruby servers, I think<br />
-Maglev is going to be an enticing alternative.  It&#8217;s not going to kill the other implementations.  Each<br />
-implementation has its place. This isn&#8217;t a war, after all.</p>
-<p>Macruby, JRuby, and IronRuby are for integration.  <span class="caps">MRI</span>/<span class="caps">YARV</span> and Rubinius will compete for the &#8220;standard&#8221; use <br />
-cases. Maglev is for big, distributed object stores inside of fast, scalable servers.  Think Rails, <br />
-Adhearsion, or various coordination services running custom protocols on sockets.  Don&#8217;t run scripts in <br />
-Maglev.  Don&#8217;t write desktop apps in Maglev.  Just use Maglev to serve tons of requests against billions of <br />
-objects.</p>
-<p>Maglev is good for the Ruby ecosystem just as <span class="caps">MRI</span>/<span class="caps">YARV</span>, Macruby, JRuby, and IronRuby are good for the <br />
-Ruby ecosystem.  The fact that we (will) have so many alternatives is a good thing.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -578,6 +522,10 @@ Ruby ecosystem.  The fact that we (will) have so many alternatives is a good thi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/15/switched-to-github/">Switched to github</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
       </li>
     
@@ -591,10 +539,6 @@ Ruby ecosystem.  The fact that we (will) have so many alternatives is a good thi
     
       <li class="post">
         <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
       </li>
     
   </ul>
@@ -612,7 +556,7 @@ Ruby ecosystem.  The fact that we (will) have so many alternatives is a good thi
   <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
   </a>
   <blockquote>
-    <p>I was blow away.</p>
+    <p>I was blown away.</p>
   </blockquote>
   <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
 </section>
@@ -637,6 +581,7 @@ Ruby ecosystem.  The fact that we (will) have so many alternatives is a good thi
 
 
 <p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
 
   </footer>
 

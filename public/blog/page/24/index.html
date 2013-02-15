@@ -11,8 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Seaside Dissonance 2004.03.28 Avi and I were talking about <a
-href="http://www.cincomsmalltalk.com/userblogs/avi/blogView?showComments=true&entry= &hellip;">
+  <meta name="description" content="Hidden Ruby Language Features 2004.04.13 Brian Marick writes about a <a
+href="http://www.testing.com/cgi-bin/blog/2004/04/12#automock">little-known &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,71 @@ href="http://www.cincomsmalltalk.com/userblogs/avi/blogView?showComments=true&en
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/04/13/hidden-ruby-language-features/">Hidden Ruby Language Features</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-04-13T00:00:00+02:00" pubdate data-updated="true">2004.04.13</time>
+    
+  </header>
+
+
+  <div class="article-content"><p><a href="http://www.testing.com">Brian Marick</a> writes about a <a
+href="http://www.testing.com/cgi-bin/blog/2004/04/12#automock">little-known<br />
+feature</a> of the Ruby language: the ability to automatically mock classes<br />
+for testing at runtime. There is a keyword called &quot;mock&quot; that you<br />
+can use to do it. For example, if you want to temporarily replace the<br />
+behavior of a class called <tt>MyDatabaseConnector</tt> for a test, you<br />
+would use the following code:</p>
+<pre>
+  mock MyDatabaseConnector
+  class ClassToMockWith
+    ..code...
+  end
+</pre>
+<p>
+<p>Whatever class definition directly succeeds the invocation of<br />
+&quot;<tt>mock</tt>&quot; will be temporarily substituted for the class<br />
+specified as an argument to &quot;<tt>mock</tt>&quot;. Specifically, in<br />
+this case, any references to MyDatabaseConnector will be replaced with<br />
+references to ClassToMockWith, so instantiating MyDatabaseConnector<br />
+actually instantiates ClassToMockWith, and so on.</p>
+</p>
+<p>
+<p>Rubyists reading this are probably thinking I&#8217;ve lost my mind,<br />
+because this isn&#8217;t really a feature of the Ruby language. It&#8217;s<br />
+just a simple (albeit powerful) extension that Brian has written. But, to<br />
+someone coming from a history of work exclusively done in in one or more of<br />
+the more static languages (Java, C#, etc.), it looks like a first-class<br />
+part of the language.</p>
+</p>
+<p>
+<p>This is what Guy Steele was talking about in his <a
+href="http://homepages.inf.ed.ac.uk/wadler/gj/Documents/steele-oopsla98.pdf">Growing<br />
+a Language <span class="caps">OOPSLA</span> talk</a>.</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -780,110 +845,6 @@ href="http://www.rubyforge.org/projects/rubygems">www.rubyforge.org/projects/rub
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2003/11/21/leaving-rubyconf/">Leaving RubyConf</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2003-11-21T00:00:00+01:00" pubdate data-updated="true">2003.11.21</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>Rich (<a
-href="http://richkilmer.blogs.com/ether">richkilmer.blogs.com/ether</a>),<br />
-Jim (<a href="http://onestepback.org">onestepback.org</a>), and I are<br />
-decompressing in the Austin airport, taking advantage of some Wi-fi access<br />
-and waiting for our flights. As I warned in a previous post, my posting<br />
-during the conference would require some very special planetary alignment.<br />
-It didn&#8217;t happen.</p>
-<p>
-<p>However, I was able to login to irc from Matz&#8217;s keynote to braindump<br />
-into the #ruby-lang channel (on freenode.net) about upcoming Ruby language<br />
-changes. I won&#8217;t go too much into detail here, but Horacio Lopez (<a
-href="http://ruby-es.org">ruby-es.org</a>) reformatted and posted it all on<br />
-the Wiki (<a
-href="http://rubygarden.org/ruby?Rite">rubygarden.org/ruby?Rite</a>). There<br />
-are some fairly major incompatabilities on the way, but overall<br />
-they&#8217;re going to make the language just that much better.</p>
-</p>
-<p>
-<p>The conference, as usual, as a great experience. It&#8217;s great to get<br />
-together with that many smart and creative people all at once. This year,<br />
-we&#8217;ve done something I&#8217;ve been wanting to do since 2001: We<br />
-wrote code. Friday night, during the round table with Matz, David Black (<a
-href="http://wobblini.net">wobblini.net</a>) brought up the age-old<br />
-question of standardizing ruby package installation procedures. After the<br />
-round table, he, Rich, Jim, Paul (<a
-href="http://rubystuff.org">rubystuff.org</a>), and I spent the rest of the<br />
-weekend crash-coding in whatever free time we could find and creating that<br />
-standardized distribution system. It is based on an idea that was<br />
-introduced at the first Ruby Conference, and has also adopted that<br />
-idea&#8217;s name: RubyGems (<a
-href="http://rubyforge.org/projects/rubygems">rubyforge.org/projects/rubygems</a>).</p>
-</p>
-<p>
-<p>We must have been quite a spectacle to the hipsters in the hotel bar, with<br />
-our laptops and ad-hoc network. We coded long into the night. The end<br />
-result is that during today&#8217;s talks, Jim showed how you can create<br />
-working Rake (<a href="http://rake.rubyforge.org">rake.rubyforge.org</a>)<br />
-tasks for creating and installing gems, and Rich actually installed<br />
-RubyJDWP as a gem &quot;live on stage&quot; for his RubyJDWP (<a
-href="http://rubyforge.org/projects/rubyjdwp">rubyforge.org/projects/rubyjdwp</a>)<br />
-talk. We were also able to get remote installation and dependency<br />
-management working (though not perfectly) before we left, including a<br />
-&quot;gem server&quot; which you can use to serve ruby packages to others<br />
-who have the right client-side tools.</p>
-</p>
-<p>
-<p>The Ruby community has been talking about this for years. It was nice to<br />
-just say, &quot;Let&#8217;s do it <b>now</b>&quot; while we had Matz and a<br />
-great core group of Ruby programmers handy to give us requirements, answer<br />
-questions, etc. For example, it was really nice when Paul and I had a<br />
-problem with Test::Unit to say, &quot;Nathaniel, what does this message<br />
-mean?&quot; (Nathaniel wrote Test::Unit).</p>
-</p>
-<p>
-<p>The only regret I have about RubyConf this year is that it can&#8217;t be<br />
-what I do every day.</p>
-</p>
-<p>
-<p>I&#8217;ll post some more details on the conference highlights after I get<br />
-some real rest (which unfortunately might not be until Wednesday or<br />
-Thursday). Excuse any typos and/or incoherencies until then&#8230; ;)</p>
-</p>
-<p>
-<p>Update: Ryan Davis pointed out that I mispoke (I mentioned I was tired,<br />
-right?) when I said that Matz&#8217;s presentation was on future language<br />
-changes. He was really looking for feedback on a bunch of high level ideas.<br />
-It was more of a brainstorming session than a presentation. This is<br />
-important for two reasons. The first is that I don&#8217;t want to mislead<br />
-anyone into thinking that Matz&#8217;s presentation represented fully baked<br />
-ideas. The second, and more important, is just the very fact that Matz came<br />
-to the community and asked for help. That&#8217;s really great if ya ask<br />
-me.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/25/">&larr; Older</a>
@@ -936,6 +897,10 @@ me.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/15/switched-to-github/">Switched to github</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
       </li>
     
@@ -949,10 +914,6 @@ me.</p>
     
       <li class="post">
         <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
       </li>
     
   </ul>
@@ -970,7 +931,7 @@ me.</p>
   <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
   </a>
   <blockquote>
-    <p>I was blow away.</p>
+    <p>I was blown away.</p>
   </blockquote>
   <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
 </section>
@@ -995,6 +956,7 @@ me.</p>
 
 
 <p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
 
   </footer>
 

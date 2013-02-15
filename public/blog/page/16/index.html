@@ -11,8 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Rails Recipes Beta, Kickass Readers, and Another Pragmatic Jolt 2006.03.16 We&#8217;ve just released another <a
-href="http://pragmaticprogrammer.com &hellip;">
+  <meta name="description" content="Rails 1.1: Selective Fixture Loading 2006.03.28 Rails 1.1 introduces greater than <a
+href="http://weblog.rubyonrails.org/articles/2006/03/28/rails-1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,57 @@ href="http://pragmaticprogrammer.com &hellip;">
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2006/03/28/rails-1-1-selective-fixture-loading/">Rails 1.1: Selective Fixture Loading</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-03-28T00:00:00+02:00" pubdate data-updated="true">2006.03.28</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Rails 1.1 introduces greater than <a
+href="http://weblog.rubyonrails.org/articles/2006/03/28/rails-1-1-rjs-active-record-respond_to-integration-tests-and-500-other-things">500<br />
+enhancements and fixes</a>. Here&#8217;s one of the more obscure ones that<br />
+you may not hear about otherwise. I was able to slip a trivial (one line)<br />
+patch in just under the wire for Rails 1.1 before it went out yesterday.<br />
+Now you can do this:</p>
+<pre>
+  rake db:fixtures:load FIXTURES=people
+</pre>
+<p>
+<p>or multiple:</p>
+</p>
+<pre>
+  rake db:fixtures:load FIXTURES=people,surveys
+</pre>
+<p>
+<p>Not a big deal for the average Rails developer, but when you&#8217;ve got<br />
+150+ models and 6.5MB of fixtures like <a href="http://naviance.com">we<br />
+do</a> it makes a big difference.</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -704,86 +755,6 @@ permission&#8212;thanks Ian!):</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2006/01/25/fight-the-traffic-keynote-presentation/">Fight the Traffic Keynote Presentation</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-01-25T00:00:00+01:00" pubdate data-updated="true">2006.01.25</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>Last week I flew to Montreal to keynote at <a
-href="http://cusec.soen.info/"><span class="caps">CUSEC</span></a>. Mine was the opening keynote,<br />
-titled <a
-href="http://www.chadfowler.com/index.cgi/Computing/Career/FightTheTraffic.rdoc,v">Fight<br />
-The Traffic</a>. Other keynotes were to include <a
-href="http://headrush.typepad.com/">Kathy Sierra</a> and <a
-href="http://www.loudthinking.com/">David Heinemeier Hansson</a>.<br />
-Unfortunately David ended up getting snowed in, so I also gave the closing<br />
-keynote, which I called &quot;Rails is Boring, and Ruby is a Toy&quot;, and<br />
-in which I described some of the salient philosophical features of Ruby and<br />
-Rails and encouraged their application in other (less fortunate?) software<br />
-environments.</p>
-<p>
-<p><span class="caps">CUSEC</span> is a wonderful conference. It&#8217;s arranged by Canadian software<br />
-engineering students <em>for</em> software engineering students. The talks<br />
-were engaging, and like most conferences, the in-between-session<br />
-discussions were especially inspirational. The <span class="caps">CUSEC</span> organizers wooed me<br />
-with the promise of speaking to the future of software development in<br />
-Canada, and I wasn&#8217;t disappointed. These were some smart,<br />
-<em>passionate</em> kids.</p>
-</p>
-<p>
-<p>It was my first chance to see Kathy&#8217;s <a
-href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/7077">Creating<br />
-Passionate Users</a> talk, which I can&#8217;t recommend more strongly. It<br />
-will affect the way <a
-href="http://www.pragmaticprogrammer.com/titles/fr_rr/">I write</a>, work,<br />
-and <em>consume</em> from now on. She&#8217;s got a book coming out in the<br />
-not-too-distant future on the topic. I&#8217;m convinced that it will<br />
-become and remain a classic.</p>
-</p>
-<p>
-<p>I was particularly fond of my slides for the talk. I can say that without<br />
-fear of sounding conceited, because I didn&#8217;t make them myself. My<br />
-friend and cothinker, <a href="http://steveakers.blogspot.com/">Steve<br />
-Akers</a> worked with me to <em>draw</em> the slides for my talk by<br />
-<em>hand</em>. What follows is the title slide, but the rest are available<br />
-on his site, <a href="http://www.moebot.com">Moe Bot</a>. Check &#8216;em<br />
-out. You can also <a href="http://feeds.feedburner.com/MoeBot">subscribe to<br />
-his pictures via <span class="caps">RSS</span></a>.</p>
-</p>
-<p>
-<p><img src="http://www.chadfowler.com/images/fight-the-traffic.png"></p>
-</p>
-<p>
-<p>The sessions were recorded, so I&#8217;ll post a link when they&#8217;re<br />
-available. On the mp3, you&#8217;ll be able to hear me make wretched noises<br />
-on my soprano saxophone. Stay tuned. You won&#8217;t want to miss that.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/17/">&larr; Older</a>
@@ -836,6 +807,10 @@ on my soprano saxophone. Stay tuned. You won&#8217;t want to miss that.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/15/switched-to-github/">Switched to github</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
       </li>
     
@@ -849,10 +824,6 @@ on my soprano saxophone. Stay tuned. You won&#8217;t want to miss that.</p>
     
       <li class="post">
         <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
       </li>
     
   </ul>
@@ -870,7 +841,7 @@ on my soprano saxophone. Stay tuned. You won&#8217;t want to miss that.</p>
   <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
   </a>
   <blockquote>
-    <p>I was blow away.</p>
+    <p>I was blown away.</p>
   </blockquote>
   <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
 </section>
@@ -895,6 +866,7 @@ on my soprano saxophone. Stay tuned. You won&#8217;t want to miss that.</p>
 
 
 <p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
 
   </footer>
 

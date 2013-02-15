@@ -11,8 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Not Dumb Enough 2004.06.30 Lesson learned: Even when you try to <a
-href="http://chadfowler.com/index.cgi/Computing/Programming/Languages/GroovyJSR. &hellip;">
+  <meta name="description" content="Pragmatic Project Automation 2004.08.06 For the past week, since I returned from <a
+href="http://conferences.oreillynet.com/os2004/">OSCON, I&#8217; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,101 @@ href="http://chadfowler.com/index.cgi/Computing/Programming/Languages/GroovyJSR.
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/08/06/pragmatic-project-automation/">Pragmatic Project Automation</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-08-06T00:00:00+02:00" pubdate data-updated="true">2004.08.06</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>For the past week, since I returned from <a
+href="http://conferences.oreillynet.com/os2004/"><span class="caps">OSCON</span></a>, I&#8217;ve been<br />
+reading the last book in the <a
+href="http://www.pragmaticprogrammer.com/starter_kit/index.html">Pragmatic<br />
+Starter Kit</a> series. I&#8217;m not quite finished with it yet, but I<br />
+thought I&#8217;d post my thoughts so far. This book finishes off the<br />
+<em>definitive</em> guide for a team that wants to do software development<br />
+<em>right</em>.</p>
+<p>
+<p><img src="http://chadfowler.com/images/sk_auto_small.jpg"></p>
+</p>
+<p>
+<p>The first two books, <a
+href="http://www.pragmaticprogrammer.com/starter_kit/vc/index.html">Pragmatic<br />
+Version Control</a> and <a
+href="http://www.pragmaticprogrammer.com/starter_kit/ut/index.html">Pragmatic<br />
+Unit Testing</a>, lay the foundation for repeatable, reproducible, and<br />
+(surprise surprise) automatable software development processes. <a
+href="http://www.clarkware.com/cgi/blosxom">Mike Clark&#8217;s</a> <a
+href="http://www.pragmaticautomation.com/cgi-bin/pragauto.cgi">Pragmatic<br />
+Project Automation</a> puts it all together in a how-to guide that should<br />
+serve as a blueprint for any self-respecting team.</p>
+</p>
+<p>
+<p>The Starter Kit takes what&#8217;s inarguably right about the <a
+href="http://agilealliance.org/home">Agile</a> approach to programming and<br />
+strips out all of the confrontational, sometimes scary,<br />
+methodology-specific stuff, leaving readers with a step by step list of<br />
+practices that can and should be applied to any project. The books&#8217;<br />
+examples focus on the use of <a
+href="http://www.gnu.org/philosophy/philosophy.html">free</a> tools, mostly<br />
+in Java, but the practices laid out transcend language and environment and<br />
+can be applied to nearly any software development environment.</p>
+</p>
+<p>
+<p>I especially enjoyed the step-by-step guide on setting up CruiseControl, as<br />
+it&#8217;s been a bit finicky for me in the past. And, I love some of the<br />
+creative ways that Mike lays out to stay in touch with your automated<br />
+processes (<span class="caps">RSS</span>, <span class="caps">SMS</span>, lava lamps ;).</p>
+</p>
+<p>
+<p>In general, if you&#8217;re an experienced and conscientious software<br />
+developer, you&#8217;re probably not going to find a lot of surprising<br />
+advice in the Start Kit. What&#8217;s unique is the fact that it&#8217;s<br />
+all pulled together into one cohesive package and laid out in such a way<br />
+that it&#8217;s a no brainer to follow (not to mention entertaining to<br />
+read).</p>
+</p>
+<p>
+<p>If you&#8217;re a software developer or (especially) a manager of software<br />
+developers, you should plan to buy every book in this series. If<br />
+you&#8217;re using Java on your projects, you should <a
+href="http://pragmaticprogrammer.com/shopsite_sc/store/html/index.html">go<br />
+buy them</a> right now. I&#8217;ve been pushing a lot of these ideas for<br />
+years with geographically distributed teams, and now that this series<br />
+exists, it (with <a
+href="http://www.pragmaticprogrammer.com/ppbook/index.shtml">The Pragmatic<br />
+Programmer</a> and Martin Fowler&#8217;s <a
+href="http://martinfowler.com/books.html#refactoring">Refactoring</a>) will<br />
+be the first thing I give to a new team member.</p>
+</p>
+<p>
+<p>&quot;<em>This</em> is the way we&#8217;re going to do it.&quot;</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -874,71 +969,6 @@ planning some pre-conference hacking in Portland.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2004/04/13/hidden-ruby-language-features/">Hidden Ruby Language Features</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-04-13T00:00:00+02:00" pubdate data-updated="true">2004.04.13</time>
-    
-  </header>
-
-
-  <div class="article-content"><p><a href="http://www.testing.com">Brian Marick</a> writes about a <a
-href="http://www.testing.com/cgi-bin/blog/2004/04/12#automock">little-known<br />
-feature</a> of the Ruby language: the ability to automatically mock classes<br />
-for testing at runtime. There is a keyword called &quot;mock&quot; that you<br />
-can use to do it. For example, if you want to temporarily replace the<br />
-behavior of a class called <tt>MyDatabaseConnector</tt> for a test, you<br />
-would use the following code:</p>
-<pre>
-  mock MyDatabaseConnector
-  class ClassToMockWith
-    ..code...
-  end
-</pre>
-<p>
-<p>Whatever class definition directly succeeds the invocation of<br />
-&quot;<tt>mock</tt>&quot; will be temporarily substituted for the class<br />
-specified as an argument to &quot;<tt>mock</tt>&quot;. Specifically, in<br />
-this case, any references to MyDatabaseConnector will be replaced with<br />
-references to ClassToMockWith, so instantiating MyDatabaseConnector<br />
-actually instantiates ClassToMockWith, and so on.</p>
-</p>
-<p>
-<p>Rubyists reading this are probably thinking I&#8217;ve lost my mind,<br />
-because this isn&#8217;t really a feature of the Ruby language. It&#8217;s<br />
-just a simple (albeit powerful) extension that Brian has written. But, to<br />
-someone coming from a history of work exclusively done in in one or more of<br />
-the more static languages (Java, C#, etc.), it looks like a first-class<br />
-part of the language.</p>
-</p>
-<p>
-<p>This is what Guy Steele was talking about in his <a
-href="http://homepages.inf.ed.ac.uk/wadler/gj/Documents/steele-oopsla98.pdf">Growing<br />
-a Language <span class="caps">OOPSLA</span> talk</a>.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/24/">&larr; Older</a>
@@ -991,6 +1021,10 @@ a Language <span class="caps">OOPSLA</span> talk</a>.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/15/switched-to-github/">Switched to github</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
       </li>
     
@@ -1004,10 +1038,6 @@ a Language <span class="caps">OOPSLA</span> talk</a>.</p>
     
       <li class="post">
         <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy...System</a>
       </li>
     
   </ul>
@@ -1025,7 +1055,7 @@ a Language <span class="caps">OOPSLA</span> talk</a>.</p>
   <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
   </a>
   <blockquote>
-    <p>I was blow away.</p>
+    <p>I was blown away.</p>
   </blockquote>
   <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
 </section>
@@ -1050,6 +1080,7 @@ a Language <span class="caps">OOPSLA</span> talk</a>.</p>
 
 
 <p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
 
   </footer>
 

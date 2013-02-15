@@ -4,7 +4,7 @@
   <title><![CDATA[The Passionate Programmer]]></title>
   <link href="http://chad.github.com/atom.xml" rel="self"/>
   <link href="http://chad.github.com/"/>
-  <updated>2013-02-15T12:19:49+01:00</updated>
+  <updated>2013-02-15T17:55:33+01:00</updated>
   <id>http://chad.github.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Switched to github]]></title>
+    <link href="http://chad.github.com/blog/2013/02/15/switched-to-github/"/>
+    <updated>2013-02-15T17:35:00+01:00</updated>
+    <id>http://chad.github.com/blog/2013/02/15/switched-to-github</id>
+    <content type="html"><![CDATA[<p>Thanks to <a href="http://lynn.io/">Lynn Wallenstein</a>, I have a new web site design.</p>
+
+<p>I have also used this as a chance to move from my own server (which I&#8217;ve been screwing with for over a decade) to Octopress hosted on Github Pages. I&#8217;m glad to be done with that phase of my life.</p>
+
+<p>Anyway, with Octopress I feel like I&#8217;m stepping back to the simple, productive environment I had ten years ago with <a href="http://rubyforge.org/projects/rublog/">Rublog</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Moving to Berlin and auf wiedersehen to friends]]></title>
@@ -783,14 +796,6 @@ for Money<br />
 <p>Ruby is supported by passion. And by love.</p>
 <p>One more thing: The Ruby Association which I chair provides Ruby programmer certification. We have this announcement today that we have created a new &#8220;Gold&#8221; certification for Ruby programmers. This requires a higher level of skill. If you go to the <a href="http://www.ruby-assn.org/en/">Ruby Association home page</a>, there is a press announcement which explains what you need to do to be qualified as Ruby &#8220;Gold&#8221; certified.</p>
 <p>Thank you.</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Tweet Tweet!]]></title>
-    <link href="http://chad.github.com/blog/2010/08/12/tweet-tweet/"/>
-    <updated>2010-08-12T00:00:00+02:00</updated>
-    <id>http://chad.github.com/blog/2010/08/12/tweet-tweet</id>
-    <content type="html"><![CDATA[<p><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="chadfowler">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></p>]]></content>
   </entry>
   
 </feed>
