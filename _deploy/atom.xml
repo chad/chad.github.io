@@ -4,7 +4,7 @@
   <title><![CDATA[The Passionate Programmer]]></title>
   <link href="http://chad.github.com/atom.xml" rel="self"/>
   <link href="http://chad.github.com/"/>
-  <updated>2013-02-15T17:59:07+01:00</updated>
+  <updated>2013-02-15T18:25:23+01:00</updated>
   <id>http://chad.github.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -18,7 +18,7 @@
     <link href="http://chad.github.com/blog/2013/02/15/switched-to-github/"/>
     <updated>2013-02-15T17:35:00+01:00</updated>
     <id>http://chad.github.com/blog/2013/02/15/switched-to-github</id>
-    <content type="html"><![CDATA[<p>Thanks to <a href="http://lynn.io/">Lynn Wallenstein</a>, I have a new web site design.</p>
+    <content type="html"><![CDATA[<p>Thanks to <a href="http://lynn.io/">Lynn Wallenstein</a>, I have a new web site design. If you see problems with the layout, it&#8217;s almost definitely because I screwed something up after Lynn gave me the code. Sorry, Lynn. :(</p>
 
 <p>I have also used this as a chance to move from my own server (which I&#8217;ve been screwing with for over a decade) to Octopress hosted on Github Pages. I&#8217;m glad to be done with that phase of my life.</p>
 
