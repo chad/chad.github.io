@@ -2,9 +2,9 @@
 layout: page
 title: "about"
 date: 2013-02-15 10:45
-comments: true
-sharing: true
-footer: true
+comments: false
+sharing: false
+footer: false
 ---
 
 I'm Chad Fowler.  I write books, write and play music, write software, speak, teach, learn, organize conferences, etc.
