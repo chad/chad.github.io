@@ -16,8 +16,3 @@ This is what I look like:
 <img src="http://29.media.tumblr.com/tumblr_l8vbm28zsp1qzvno4o1_500.jpg" width="200"/><br />
 (Photo by <a href="http://duncandavidson.com/">James Duncan Davidson</a>)
 
-It's possible you&#8217;ve seen me look like this instead:
-<img src="http://farm1.static.flickr.com/231/503592977_8e374bc61d.jpg" width="200"/><br />
-(Photo by <a href="http://duncandavidson.com/">James Duncan Davidson</a>)
-They're both me, but the first one is a happier (and more recent) version.
-
