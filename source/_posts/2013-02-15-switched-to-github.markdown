@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Switched to github"
+title: "Switched to github page, octopress, and a new design"
 date: 2013-02-15 17:35
 comments: false
 categories:
