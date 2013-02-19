@@ -11,8 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Tivo for Your Mind 2003.06.22 Howard Rheingold (<a
-href="http://www.smartmobs.com/archives/001184.html">www.smartmobs.com/archives/001184.html) &hellip;">
+  <meta name="description" content="TestDox 2003.06.23 Thoughtworks&#8217; Joe Walnes has posted a link (<a
+href="http://joe.truemesh.com/blog/archives/agile/000047.html">joe.truemesh. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,101 @@ href="http://www.smartmobs.com/archives/001184.html">www.smartmobs.com/archives/
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2003/06/23/testdox/">TestDox</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-06-23T00:00:00+02:00" pubdate data-updated="true">2003.06.23</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Thoughtworks&#8217; Joe Walnes has posted a link (<a
+href="http://joe.truemesh.com/blog/archives/agile/000047.html">joe.truemesh.com/blog/archives/agile/000047.html</a>)<br />
+to an interesting project called <b>TestDox</b> (<a
+href="http://agiledox.sourceforge.net/">agiledox.sourceforge.net/</a>).<br />
+Given a suite of JUnit (<a href="http://www.junit.org">www.junit.org</a>)<br />
+tests, it generates documentation.</p>
+<p>
+<p>Like <span class="caps">FIT</span> (<a href="http://fit.c2.com">fit.c2.com</a>), this is an<br />
+interesting bridge between executable code and documentation. TestDox<br />
+converts camelCasedTestMethodNames into separate words, so this code</p>
+</p>
+<pre>
+  public class DogTest extends TestCase
+  {
+    public void testBarksAtCats() {}
+    public void testEatsALot() {}
+    public void testSleepsWhenNotBarkingOrEating() {}
+  }
+</pre>
+<p>
+<p>&#8230;would produce the documentation that looks basically like<br />
+(untested):</p>
+</p>
+<p>
+<p><b>Dog</b></p>
+</p>
+<ul>
+<li>Barks at cats</li>
+<li>Eats a lot</li>
+<li>Sleeps when not barking or eating</li>
+</ul>
+<p>
+<p>This has arguably limited usefulness, and it depends trickily on class and<br />
+method naming conventions. But, it starts the ideas flowing, and<br />
+TestDox&#8217;s parent project (<b>Agiledox</b>) will hopefully expand and<br />
+explore these much further. It may sound like heresy to the XP world, but<br />
+I&#8217;d be interested in being able to do this sort of thing round-trip<br />
+(documentation -&gt; test -&gt; documentation -&gt; test -&gt;<br />
+documentation -&gt; &#8230;)</p>
+</p>
+<p>
+<p>In my own unit testing, I haven&#8217;t always been so methodical about<br />
+using method names that describe a characteristic of the entity being<br />
+tested. It&#8217;s not that I don&#8217;t use descriptive names, but I may<br />
+include tests with names like &quot;testEatBadTastingFood()&quot;, which<br />
+describes a specific scenario but not an ongoing behaviour of dogs. Running<br />
+my tests through TestDox might generate misleading documentation.<br />
+It&#8217;s not that dogs generally eat food they don&#8217;t like. I just<br />
+wanted to test what a dog would/should do in the eventuality that they<br />
+<b>did</b> eat bad food. I&#8217;m not sure if my current behaviour is bad<br />
+or good, but it will definitely be something I think about next time I sit<br />
+down to do some coding.</p>
+</p>
+<p>
+<p>A fear I have is that, with this tool in place, I may be tempted to think<br />
+about what the generated documentation will look like as I write my tests.<br />
+This would create a new and potentially conflicting objective in my test<br />
+writing. And, since I tend to do test driven design, it would ultimately<br />
+impact my design and coding decisions.</p>
+</p>
+<p>
+<p>I&#8217;m not ruling out the possibility that this change in thinking would<br />
+<b>improve</b> my code. I guess I&#8217;ll just have to try and find out.</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -700,44 +795,6 @@ but I thought I&#8217;d share it just in case.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2003/04/15/practicing-vs-playing/">&quot;Practicing&quot; vs. &quot;Playing&quot;</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2003-04-15T00:00:00+02:00" pubdate data-updated="true">2003.04.15</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>For the past two days, I&#8217;ve been focusing my free time on programming &#8220;practice&#8221; (<a href="http://www.chadfowler.com/index.cgi/Computing/Programming/Bowling.html">Bowling</a>). As I predicted, I&#8217;ve created some truly hideous stuff.  Something I <b>hadn&#8217;t</b> predicted is that in many cases, I&#8217;ve produced code that doesn&#8217;t even work&#8212;and, I can&#8217;t <i>make</i> it work.  At first, I felt bad about this, but I&#8217;m starting to think that it&#8217;s not only acceptable but expected.<br />
-<p><br />
-As a musician, especially after you get over the inevitably ugly sounds of first learning an instrument, it&#8217;s very tempting to &#8220;practice&#8221; things that already sound good.  For example, I became quite skilled at exploiting the harmonic overtones of the saxophone.  I could play tunes almost regardless of which buttons I pressed on the horn.  Since I was so good at this&#8212;and it felt good to be so good at it&#8212;I would sometimes find myself &#8220;playing&#8221; with harmonics instead of &#8220;practicing&#8221;.  It was especially easy to subconciously justify because many saxophonists <strong>aren&#8217;t</strong> good at this technique.  So, I had the feeling I was &#8220;practicing&#8221; something difficult.  In truth, I was just playing&#8212;not practicing.<br />
-<p><br />
-So, what does it mean that I have tried to write programs in my practice sessions that I&#8217;ve been unable to complete?  It means that I&#8217;ve been trying to do things that are either beyond my grasp or beyond the grasp of the language that I&#8217;m using.  That&#8217;s a Good Thing.  I&#8217;m pushing my own limits, or &#8220;Finding The Box&#8221;, as the <a href="http://www.pragmaticprogrammer.com">Pragmatic Programmers</a> say.<br />
-<p><br />
-If you&#8217;re following this programming-practice thread and trying to make something of it, beware of too many successes.  If the exercises make you &#8220;look bad&#8221;, you&#8217;re probably headed in the right direction.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/28/">&larr; Older</a>
@@ -791,6 +848,10 @@ If you&#8217;re following this programming-practice thread and trying to make so
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/15/switched-to-github/">Switched to github page, octopress, and a new design</a>
       </li>
     
@@ -804,10 +865,6 @@ If you&#8217;re following this programming-practice thread and trying to make so
     
       <li class="post">
         <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
       </li>
     
   </ul>

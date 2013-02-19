@@ -11,8 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Rails 1.1: Selective Fixture Loading 2006.03.28 Rails 1.1 introduces greater than <a
-href="http://weblog.rubyonrails.org/articles/2006/03/28/rails-1 &hellip;">
+  <meta name="description" content="Rails Recipes: Face to Face 2006.05.04 Tonight, I&#8217;m just starting to put the final copy-edits into <a
+href="http://pragmaticprogrammer.com/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,95 @@ href="http://weblog.rubyonrails.org/articles/2006/03/28/rails-1 &hellip;">
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2006/05/04/rails-recipes-face-to-face/">Rails Recipes: Face to Face</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-05-04T00:00:00+02:00" pubdate data-updated="true">2006.05.04</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Tonight, I&#8217;m just starting to put the final copy-edits into <a
+href="http://pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a>. This<br />
+means that we&#8217;re only days away from printing and not long from a<br />
+real, dead-tree book.</p>
+<p>
+<p>As I sat in my offices, hotel rooms, living room, and basement cranking out<br />
+recipes for the past few months, it never occurred to me that the book<br />
+might take on a life of its own. Even before it hit the shelves, as<br />
+I&#8217;ve <a
+href="http://www.sdforum.org/SDForum/Templates/Level1.aspx?pid=10218&sid=3">traveled</a><br />
+<a href="http://skillsmatter.com/ruby-on-rails-course">around</a> the <a
+href="http://www.scotlandonrails.com/">world</a> I&#8217;ve had the<br />
+pleasure of meeting a surprising number of people who have read the book in<br />
+<a
+href="http://pragmaticprogrammer.com/starter_kit/faqs/beta_faq.html">beta</a><br />
+form and are already using it daily.</p>
+</p>
+<p>
+<p>It&#8217;s incredibly rewarding to see these things transferred from long<br />
+Sundays in the basement to a real developer&#8217;s project in the UK or<br />
+China.</p>
+</p>
+<p>
+<p>What I really didn&#8217;t anticipate, though, was something I ran into<br />
+this week. Next week, Peter Marklund is holding a <a
+href="http://marklunds.com/articles/one/302">Rails Recipes Meetup</a> in<br />
+<em>Stockholm</em>, featuring presentations and discussion based in part on<br />
+the book. What a <em>cool</em> idea! It looks like participants will be<br />
+presenting either discussions of the recipes from the book or their own<br />
+recipes.</p>
+</p>
+<p>
+<p>Judging by the activity on the <a
+href="http://fora.pragprog.com/rails-recipes">Rails Recipes forum</a>, this<br />
+session is bound to turn out some valuable tips. Here&#8217;s hoping<br />
+they&#8217;re documented and shared with the rest of us.</p>
+</p>
+<p>
+<p>As if that wasn&#8217;t cool enough, today <a
+href="http://relevancellc.com/">Relevance</a> announced a <a
+href="http://blogs.relevancellc.com/articles/2006/05/03/rails-recipes-training">training<br />
+course</a> based on Rails Recipes. Relevance are Stu Halloway and Justin<br />
+Gehtland, two top-notch veteran trainers and speakers, both of whom are<br />
+speaking at the <a href="http://railsconf.org">First International Rails<br />
+Conference</a> in June and are part of the touring <a
+href="http://pragmaticstudio.com/ajax/index.html">Pragmatic Studio</a>,<br />
+delivering a course on Ajax.</p>
+</p>
+<p>
+<p>I consider it an honor to have guys like this <em>read</em> the book much<br />
+less base a class around it.</p>
+</p>
+<p>
+<p>So, before I go back to the copy edits, I wanted to say &quot;thanks<br />
+again&quot; to the ever-growing population of super-smart readers that make<br />
+staying up late fixing grammar and punctuation mistakes a worthwhile<br />
+activity.</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -635,126 +724,6 @@ href="http://www.perlcast.com">Perlcast</a> page for details.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2006/01/26/the-virtues-of-monkey-patching/">The Virtues of Monkey Patching</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-01-26T00:00:00+01:00" pubdate data-updated="true">2006.01.26</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>From a semi-recent <a
-href="http://blog.ianbicking.org/theres-so-much-more-than-rails.html">post</a><br />
-by Python programmer Ian Bicking:</p>
-<pre>
-  You can monkeypatch code in Python pretty easily, but we look down
-  on it enough that we call it &amp;quot;monkeypatching&amp;quot;. In Ruby they call it
-  &amp;quot;opening a class&amp;quot; and think it's a cool feature.
-  I will assert: we are right, they are wrong.
-</pre>
-<p>
-<p>Today, I was frustrated by a Rails bug affecting pagination with joins. In<br />
-short, it doesn&#8217;t work. At all.</p>
-</p>
-<p>
-<p>Miraculously, (no, it wasn&#8217;t a coincidence&#8212;it was an actual<br />
-miracle) <a href="http://glu.ttono.us/">Kevin Clark</a> posted a message to<br />
-the Rails Core list <em>right</em> in the middle of this episode<br />
-complaining about the exact same problem. He said he was working on a fix.<br />
-<a href="http://jthopple.com/">Jeremy Hopple</a> responded a little over an hour later saying that he had<br />
-already submitted a <a
-href="http://dev.rubyonrails.org/ticket/2597">patch</a> for the bug.</p>
-</p>
-<p>
-<p>Visions of the nasty download/patch process started trudging through my<br />
-mind, but I was desperate for a fix so I would have dealt with the<br />
-ugliness. I hate hacking my local Rails (I&#8217;m running off of trunk<br />
-using svn:externals) because I don&#8217;t like dealing with what happens<br />
-when the change actually gets applied to trunk or dealing with merges for<br />
-other changes to the same files. It&#8217;s not rocket science to get<br />
-working but it&#8217;s also not fun.</p>
-</p>
-<p>
-<p>Looking more closely at Jeremy&#8217;s email, he&#8217;s also distributing<br />
-his patch as a Rails plugin. So:</p>
-</p>
-<pre>
-  $ ruby script/plugin install count_limit_assocations
-</pre>
-<p>
-<p>Now my code works. The bug is fixed. The plugin contains essentially<br />
-nothing but a file that &quot;monkey patches&quot; some of the Rails core<br />
-classes, implementing the changed version of the code.</p>
-</p>
-<p>
-<p>When the change is merged into the Rails trunk, I&#8217;ll just<br />
-&#8216;script/plugin remove&#8217; Jeremy&#8217;s plugin.</p>
-</p>
-<p>
-<p>The Rails team is already using plugins like this as a way to get new<br />
-functionality into circulation as a kind of proving ground before things<br />
-make it into Rails core. And as we see today, it&#8217;s also a simple,<br />
-painless way to get fixes distributed before they&#8217;re reviewed and<br />
-committed. Sure, you can do the more obvious thing with plugins and<br />
-distribute code that implements new functionality altogether. But this<br />
-&quot;monkey patching&quot; thing is seriously powerful and, as an end-usre<br />
-in this case, I can say that it makes things better for the <em>users</em><br />
-of Ruby.</p>
-</p>
-<p>
-<p>So Ian, with respect, no&#8230;you&#8217;re not right.</p>
-</p>
-<p>
-<p><span class="caps">UPDATE</span>: Ian sent me the following clarification by email (reprinted with<br />
-permission&#8212;thanks Ian!):</p>
-</p>
-<pre>
-  Hi Chad.  Saw your post on monkeypatching.  Just thought I'd clarify
-  that I don't think that kind of use is wrong, and I do that frequently
-  -- applying a patch at runtime to the objects in memory, instead of the
-  source code on disk.  It can be expedient, and certainly a whole lot
-  better than trading patches around.  The use I object to that I see in
-  lots of Ruby examples (and maybe isn't indicative of most real Ruby
-  code) is when people add methods to other classes that aren't meant to
-  fix anything, but just because they don't have an object of their own to
-  hang the method off of.  I've seen several examples where people add
-  methods to Array to implement some recursive algorithm, instead of using
-  a function.  Or Rails adding methods to numbers to create time delta
-  objects (well, it would be good if they *were* time delta objects, but I
-  understand they actually just return seconds as ints, but that's another
-  issue entirely).
-
-  The term &amp;quot;monkeypatch&amp;quot; is really meant to denote that.  It's a patch, a
-  fix, an adjustment to the code.  The monkey part has a history (that
-  someone left on my post) that I think more-or-less is meant to indicate
-  a certain subversive intent, or at least playfully but maybe mischievous
-  manipulation.  We do it often in Python, but everytime we do it we know
-  we are working around the system and not with it.  Which is fine too,
-  but it's not the sort of thing you want as a foundation.
-</pre></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/17/">&larr; Older</a>
@@ -808,6 +777,10 @@ permission&#8212;thanks Ian!):</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/15/switched-to-github/">Switched to github page, octopress, and a new design</a>
       </li>
     
@@ -821,10 +794,6 @@ permission&#8212;thanks Ian!):</p>
     
       <li class="post">
         <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
       </li>
     
   </ul>
