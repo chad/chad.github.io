@@ -11,7 +11,7 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Productivity Tip: Let Derek Sivers Take Notes for You 2009.07.01 I just finished reading the inspiring The E-Myth Revisited, which like my own first &hellip;">
+  <meta name="description" content="How Ruby Mixins Work With Inheritance 2009.07.08 Yesterday I asked on Twitter whether anyone was successfully using is_paranoid in a Rails &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +73,56 @@
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2009/07/08/how-ruby-mixins-work-with-inheritance/">How Ruby Mixins Work With Inheritance</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-07-08T00:00:00+02:00" pubdate data-updated="true">2009.07.08</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Yesterday I <a href="http://twitter.com/chadfowler/status/2516989904">asked on Twitter</a> whether anyone was successfully using <a href="http://github.com/semanticart/is_paranoid/tree/master">is_paranoid</a> in a Rails application, because I had confused myself into thinking it couldn&#8217;t possibly work.</p>
+<p>The problem I was having wasn&#8217;t is_paranoid&#8217;s fault, but it turns out it actually can&#8217;t do what I wanted it to do in its native state. The explanation of why is something I thought a number of Rubyists might benefit from hearing, so here it is.</p>
+<p>Briefly, an explanation of is_paranoid: if you declare an ActiveRecord model to be paranoid, whenever you attempt to delete that model, is_paranoid will instead set a flag which indicates that the record is deleted. is_paranoid uses default_scope to filter out soft-deleted records in your queries. So you can act as if records are deleted without actually removing the rows. If is_paranoid is new to you but sounds familiar, you might be thinking of <a href="http://github.com/technoweenie/acts_as_paranoid/tree/master">acts_as_paranoid</a>, which is Rick Olson&#8217;s original implementation of this idea.</p>
+<p>What I wanted to do for the specific application I&#8217;m working on is to declare that <em>every</em> model should inherit the is_paranoid behavior.  Easy enough, I thought, given the way these things typically work in Rails&#8217; inheritable accessor setup:</p>
+<script src="http://gist.github.com/142479.js"></script><p>But when I tried to destroy an instance of (for example) Person, the regular ActiveRecord destroy code was invoked and the records were being actually destroyed.  Bummer.</p>
+<p>So I cracked open the code to is_paranoid and found this perfectly reasonable idiom:</p>
+<script src="http://gist.github.com/142478.js"></script><p>At this point, after pretending I was an idiot for a few minutes, I realized that this code was indeed <em>incapable</em> of doing what I wanted it to do.</p>
+<p>Some of you already know why. For the rest of you, let&#8217;s talk about how Ruby&#8217;s mixins fit into its inheritance mechanism.</p>
+<p>Maybe it&#8217;s just me, but when I think of something getting &#8220;mixed in&#8221; to something else, I imagine the two things becoming intertwined. So, the natural assumption when mixing a module into a Ruby class would be that the methods of the module get intertwined with the Ruby class. And for the HelloWorld of mixins, that indeed <em>appears</em> to be the case:</p>
+<script src="http://gist.github.com/142481.js"></script><p>But if you start mixing modules that implement methods the class also implements in, things don&#8217;t go quite as smoothly:</p>
+<script src="http://gist.github.com/142484.js"></script><p>Instead of &#8220;Overridden do_something&#8221; as some might expect, this code prints &#8220;Doing something in Thing&#8221;.</p>
+<p>Why?</p>
+<p>Because when we mix a module into a Ruby class, we&#8217;re not actually intermingling the methods of the module and the class.  Instead we&#8217;re inserting the module into the class&#8217;s inheritance hierarchy. A good way to see how this works is by using the &#8220;ancestors&#8221; method:</p>
+<script src="http://gist.github.com/142869.js"></script><p>When a method is called on an instance of SubThing, you can see that it is looked up first in SubThing&#8217;s class, then Thing&#8217;s class, <em>then</em> in IneffectiveOverride, and so on.</p>
+<p><img src="http://chadfowler.com/yuml.png" alt="" /></p>
+<p>(I used <a href="http://yuml.me">yuml</a> to generate this.  Cool site!)</p>
+<p>To further demonstrate that mixins don&#8217;t really get &#8220;mixed in&#8221;, notice what happens when you try to include a module at multiple points in the inheritance hierarchy:</p>
+<script src="http://gist.github.com/142872.js"></script><p>If a module is already present at a higher point in the hierarchy, it won&#8217;t be mixed in again.</p>
+<p>So is_paranoid was apparently built without the goal of being able to mix it into ActiveRecord::Base. Sounds reasonable to me.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -439,69 +489,6 @@ presentation, we will have laid out a structured framework for radically succeed
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2009/04/22/railsconf-speaker-interview-mike-subelsky/">RailsConf Speaker Interview: Mike Subelsky</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-04-22T00:00:00+02:00" pubdate data-updated="true">2009.04.22</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>Next up in my <a href="http://chadfowler.com/railsconf-speaker-interviews">series of RailsConf speaker interviews</a> is <a href="http://subelsky.com/">Mike Subelsky</a>, co-founder of <a href="http://otherinbox.com">OtherInbox</a> and avid <a href="http://www.sproutcore.com/">SproutCore</a> developer. (SproutCore was used, among other things, to develop Apple&#8217;s <a href="http://me.com">MobileMe</a> UI and presents a Cocoa-like environment for developing Rich browser-based user interfaces.)</p>
-<p>Mike will be presenting both a <a href="http://en.oreilly.com/rails2009/public/schedule/speaker/2233">tutorial on SproutCore development and a session on cloud computing gotchas</a> at RailsConf in a couple of weeks.</p>
-<h2>How did OtherInbox get started? Was this your first startup? What were the hurdles in moving from consulting to product development?</h2>
-<p>We wanted to solve our own email overload problem &#8212; many people receive heavy volumes of &#8220;gray mail&#8221; or &#8220;bacn&#8221; and increasing volumes of more important email like receipts, social networking notifications, confirmations, etc.  The other founder of the company, <a href="http://austinpreneur.com/">Joshua Baer</a>, had the idea to build a product that would elegantly organize and make sense of this kind of mail, something we would use ourselves that would also help the average person.</p>
-<p>This was my first startup; I knew Josh from a project class we had taken together at Carnegie Mellon and was lucky that he invited me to be the cofounder.  I had been dabbling and freelancing as a Rails developer for the previous 18 months, and had always been hacking on side projects for my whole career.</p>
-<p>Coming from a consulting background, there have been two big hurdles:</p>
-<ol>
-	<li>I didn&#8217;t expect product development to have such a different tempo than consulting projects. You live with your code much longer (so you end up maintaining your own legacy code, and don&#8217;t have the next greenfield to look forward to), you have to deal more directly with the consequences of mistakes (there&#8217;s no one to bail you out), and the risks are higher (because you don&#8217;t know when or if your labors will pay off).  Thus there are many peaks and valleys of  happiness, and it&#8217;s not always easy to tell if you are being successful.</li>
-</ol>
-<ol>
-	<li>When time and resources are so constrained, the development team has to become disciplined without sacrificing too much agility.  You can&#8217;t rely on individual programming heroics to carry the day &#8211; otherwise you&#8217;re guaranteed to burn out and get sloppy.  I haven&#8217;t completely overcome this hurdle yet, but I&#8217;m reading everything about software development processes that I can get my hands on.  I&#8217;ve become a huge fan of Eric Ries&#8217; lean startup blog <br />
-<a href="http://startuplessonslearned.blogspot.com/">Lessons Learned</a>.</li>
-</ol>
-<h2>What makes SproutCore interesting and special to you?</h2>
-<p>SproutCore lets you build real client-server applications, delegating a lot of <span class="caps">GUI</span> work to the client that servers currently perform (like rendering <span class="caps">HTML</span> views or serving up cached <span class="caps">HTML</span> pages).  The framework takes concepts that desktop developers have used for a long time and reimagines them for use in web applications.  For example, key-value observation and  bindings help you eliminate a lot of buggy, ugly glue code, saving a lot of time and aggravation).</p>
-<p>It&#8217;s special to me because I think this technology has the potential to dramatically change application development in general.  The core team has a strong point of view about how Internet clients should be built, and how to make JavaScript and web browsers perform.  Writing SproutCore code reminds me of the feeling I got the first time I picked up a book about Rails &#8212; &#8220;using these tools is making me a better programmer&#8221;.</p>
-<p>Also, I&#8217;ve never liked the feel of Flash, and I love how SproutCore uses only web-native technologies to do amazing things in the browser.  <a href="http://www.sproutcore.com/2009/03/25/papercube/">PaperCube</a> and <a href="http://me.com/">MobileMe</a> are examples of SproutCore apps that feel like desktop apps, but don&#8217;t require any plugins whatsoever.</p>
-<h2>Are SproutCore and Rails particularly well suited to one another? If so, how?</h2>
-<p>I think so &#8212; you can point a SproutCore client at any kind of server you want, but I think there&#8217;s probably a sweet spot for these two frameworks. Rails makes it easy to write a robust, easily extensible <span class="caps">REST</span> <span class="caps">API</span>, which makes it really easy to write web clients.  SproutCore makes it easy to write robust, easily extensible web clients.</p>
-<p>In OtherInbox, our Rails app has to worry about doing is sending back <span class="caps">JSON</span> as quickly as possible.  The SproutCore app handles most of the user interaction (except for things like the signin page, which we&#8217;re keeping server-based for now)  and focuses on making the browser experience as fast and fluid as possible.  We don&#8217;t need to run as many web servers to keep up with our recent growth, because the servers aren&#8217;t bogged down generating <span class="caps">HTML</span> or <span class="caps">RJS</span> updates.</p>
-<p>As a happy side-effect, since we built our app this way, someone has <a href="http://getsatisfaction.com/otherinbox/topics/android_app_coming_is_there_an_api">reverse engineered</a> <br />
-our <span class="caps">JSON</span> <span class="caps">API</span> to make an Android app.</p>
-<p>Rails developers will also find many cultural similarities such as emphasis on unit testing and use of generators.</p>
-<h2>SproutCore&#8217;s model marks an extreme departure from the way we traditionally do JavaScript/<span class="caps">AJAX</span> applications on Rails. Do you think SproutCore or its patterns will catch on generally or is it bettered toward to a specific niche?</h2>
-<p>I think if you&#8217;re building an app where you need to add just a little dynamic behavior here and there, SproutCore is too much.  Toolkits like Prototype and jQuery are much more appropriate.  But if you&#8217;re making something like MobileMe, PaperCube, or <a href="http://oib.com/">OtherInbox</a>, where the users expect desktop-like fluidity or where the client software can&#8217;t always rely on the server for everything, SproutCore will be a big win.</p>
-<p>One thing that could help SproutCore catch on generally will be its support for multiple platforms.  The 1.0 release candidate includes <a href="http://www.sproutcore.com/2009/03/15/sproutcore-goes-mobile/">preliminary mobile support</a>, <br />
-so we should eventually be able to take the same code base and build it for web browsers, iPhones, Androids, etc., without having to change much.  I think that will really turn some heads.</p>
-<h2>SproutCore&#8217;s learning curve appears to be pretty steep. What&#8217;s the best way to get into it on day one?</h2>
-<p>That&#8217;s tough, because there aren&#8217;t yet a lot of blogs or books to guide you.  One of my goals for 2009 is to start contributing more tutorials, because I was lucky to be mentored by <a href="http://twitter.com/erichocean">Erich Ocean</a>.  My best advice would be to get some familiarity with Cocoa because that will illuminate the parts of desktop development that are really different from web development.  If you understand <br />
-<a href="http://developer.apple.com/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">key-value observation</a>, <br />
-<a href="http://developer.apple.com/documentation/Cocoa/Conceptual/KeyValueCoding/KeyValueCoding.html">key-value coding</a>, and bindings, it will be much easier to learn SproutCore.</p>
-<p>Also, the #sproutcore <span class="caps">IRC</span> channel and <a href="http://groups.google.com/group/sproutcore">Google group</a> are really friendly places to get guidance.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -555,6 +542,10 @@ so we should eventually be able to take the same code base and build it for web 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/15/switched-to-github/">Switched to github page, octopress, and a new design</a>
       </li>
     
@@ -568,10 +559,6 @@ so we should eventually be able to take the same code base and build it for web 
     
       <li class="post">
         <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a>
       </li>
     
   </ul>
