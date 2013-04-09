@@ -39,4 +39,4 @@ I don't care if you know everything about the technologies I'm deploying.
 I don't want a "rock star". I definitely don't want a ninja.
 I don't care if you write books, contribute to Open Source software, or speak at conferences. I do those things, and I know how little they predict how well I do my job.
 
-If this describes you, I definitely want to know you. If you are interested in building scalable APIs and automated infrastructures for those APIs and would like to work with me in Berlin making [beautiful productivity software]http://6wunderkinder.com, I _definitely_ want to know you. Please get in touch.
+If this describes you, I definitely want to know you. If you are interested in building scalable APIs and automated infrastructures for those APIs and would like to work with me in Berlin making beautiful productivity software, I _definitely_ want to know you. Please get in touch.
