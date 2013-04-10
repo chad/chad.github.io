@@ -11,9 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Haiku in the Wild 2005.02.13 Tonight, Why posted some lovely
-Ruby haiku,
-which reminded me of a program I&#8217;ve been dreaming of writing for a &hellip;">
+  <meta name="description" content="Seattle Ruby Brigade 2005.04.01 Tonight, I had the pleasure of attending my first Ruby Users&#8217; Group
+meeting. I&#8217;ve, of course, been to <a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -75,6 +74,218 @@ which reminded me of a program I&#8217;ve been dreaming of writing for a &hellip
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2005/04/01/seattle-ruby-brigade/">Seattle Ruby Brigade</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-01T00:00:00+02:00" pubdate data-updated="true">2005.04.01</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Tonight, I had the pleasure of attending my first Ruby Users&#8217; Group<br />
+meeting. I&#8217;ve, of course, been to <a
+href="http://www.rubyconf.org">RubyConf</a> and <a
+href="http://conferences.oreillynet.com/os2005/"><span class="caps">OSCON</span></a> (the Ruby track<br />
+will blow you away this year), but Louisville has had a Ruby Users&#8217;<br />
+Group with population 1 since I created <a
+href="http://rubygarden.org/ruby?LouisvilleGroup">this sad page</a> on the<br />
+Wiki several years ago.</p>
+<p>
+<p>So, I&#8217;m out in Seattle for work, and <a
+href="http://www.zenspider.com">Ryan</a> and <a
+href="http://segment7.net/">Eric</a> reminded me that their <a
+href="http://www.zenspider.com/seattle.rb">Seattle.rb</a> meeting was going<br />
+on. Eric was nice enough to pick me up in his lovely 1978 <a
+href="http://segment7.net/images/mercury/passenger-full.jpg">hoss</a> of a<br />
+station wagon and take me out to the meeting.</p>
+</p>
+<p>
+<p>The meeting takes place at <a href="http://www.omnigroup.com/">The Omni<br />
+Group</a>, which has probably the most interesting office I&#8217;ve ever<br />
+been to. It looked like a fraternity house for Macintosh programmer geeks.<br />
+They apparently have someone that cooks lunch and dinner for them every<br />
+day. I&#8217;m probably not supposed to mention that I ate the food there.<br />
+It turns out that, despite its horrid appearance, split pea soup<br />
+isn&#8217;t bad when served with a biscuit.</p>
+</p>
+<p>
+<p>We started with introductions. There was a surprisingly large number of <a
+href="http://www.amazon.com">Amazonians</a> present. Apparently, there is<br />
+an internal Amazon Ruby mailing list with more members than there are<br />
+Rubyists in Louisville.</p>
+</p>
+<p>
+<p>Topics of discussion were:</p>
+</p>
+<ul>
+<li><a href="http://zenspider.com/Languages/Ruby/MetaRuby.html">MetaRuby</a></li>
+<li>Seattle.rb&#8217;s Ruby <a
+href="http://www.ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/133197">CodeFest</a><br />
+grant (to improve <a href="http://rubygems.rubyforge.org">RubyGems</a>!)</li>
+<li>Pat Eyler&#8217;s new <a href="http://rubyforge.org/projects/r43">r43</a><br />
+library, which provides access to <a
+href="http://www.43things.com/people/view/chadfowler">43things&#8217;</a> web<br />
+services <span class="caps">API</span></li>
+<li>&quot;Advanced Rails&quot; by Eric Hodel (who works on 43Things).</li>
+</ul>
+<p>
+<p>After the MetaRuby presentation, Ryan set me up with access to their<br />
+Perforce repository. MetaRuby is starting to become &quot;real&quot;, with<br />
+some really great and <a
+href="http://rubyforge.org/projects/ruby2c/">usable stuff</a> already<br />
+coming out of the effort. Maybe I can find time to hack up a pure Ruby<br />
+implementation of the <tt>Hash</tt> class to help out. The overall effort<br />
+is beyond my depth, but it would be fun to contribute to.</p>
+</p>
+<p>
+<p>R43 is simple and fun to play with:</p>
+</p>
+<pre>
+        require 'r43'
+        connection = R43.new(&amp;quot;yourapikeyfrom43things&amp;quot;)
+        chad = connection.get_person(&amp;quot;chadfowler&amp;quot;)
+        chad.goals.each do |goal|
+                puts &amp;quot;Chad wants to #{goal}&amp;quot;
+        end
+</pre>
+<p>
+<p>It was the first time I had met long-time Rubyist, <a
+href="http://eldersjournal.blogspot.com/">Pat Eyler</a>, who seems to be<br />
+one of the genuinely nicest guys I&#8217;ve met in computer land.</p>
+</p>
+<p>
+<p>Eric&#8217;s presentation made me realize that I&#8217;ve let many of <a
+href="http://rubyonrails.com">Rails&#8217;s</a> new features slip by, and<br />
+it&#8217;s probably time for a Saturday catch-up session. Maybe after this<br />
+month&#8217;s <a
+href="http://www.37signals.com/workshop-basecamp.php">Building of<br />
+Basecamp</a> workshop in Chicago, I&#8217;ll be inspired to <a
+href="http://www.43things.com/things/view/35612">get moving</a> on one of<br />
+those long-neglected web projects I&#8217;ve been putting off.</p>
+</p>
+<p>
+<p>At some point during the last presentation, Ryan recognized the jet lag<br />
+kickin&#8217; in and took me down for a white mocha something-or-other that<br />
+he made using the Omni Group&#8217;s espresso machine. Unfortunately,<br />
+I&#8217;m still awake at 12:40AM as a result. It was tasty but ineffective<br />
+in wiping the zombie-like expression from my face.</p>
+</p>
+<p>
+<p>Finally, Eric showed me some really cool <a
+href="http://povray.org/">Povray</a> stuff he has been doing. Maybe<br />
+I&#8217;ll try Povray out again (I&#8217;ve tried and failed to learn how<br />
+to use it at least 3 times in the past several years) now that I have an<br />
+irc buddy to bounce my ignorance against.</p>
+</p>
+<p>
+<p>My ulterior motive for writing this post is to match &quot;Louisville&quot;<br />
+and &quot;Ruby&quot; in Google searches. If you&#8217;re in Louisville and<br />
+interested in doing some Ruby hacking (or even learning about<br />
+Ruby&#8212;I&#8217;ll teach!), <a href="http://ruby.meetup.com/62/">look me<br />
+up</a>. The 18-person turn-out at Seattle.rb was inspirational, and it<br />
+occurred to me more than it has recently that having a local community of<br />
+like-minded developers is a very important part of the learning process.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2005/03/12/chihuahua-with-a-messiah-complex/">Chihuahua With a Messiah Complex</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-03-12T00:00:00+01:00" pubdate data-updated="true">2005.03.12</time>
+    
+  </header>
+
+
+  <div class="article-content"><pre>
+        I like the dancing.
+        That can only be inferred.
+        Hop to it, sparky.
+</pre>
+<p>Same <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/Ruby/HaikuInTheWild.rdoc,v">lovely<br />
+Haiku</a>, enhanced with <a href="http://google.com">Google</a>, and <a
+href="http://www.ntecs.de/blog/Blog/WWW-Mechanize.rdoc"><span class="caps">WWW</span>::Mechanize</a>.<br />
+Searches the internet for the terms you pass in as arguments, and creates a<br />
+Haiku with that as a title. It&#8217;s deep. Really really deep:</p>
+<pre>
+        $ ./find_haiku Pretentiousness for the rest of us
+        #&amp;lt;WWW::Link:0x1650964 @href=&amp;quot;
+        http://www.pixeldiva.co.uk/obnoxious-pretentiousness.html&amp;quot;
+        , @node=&amp;lt;a href='http://www.pixeldiva.co.uk/obnoxious-pretentiousness
+        .html'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
+        #&amp;lt;WWW::Link:0x164d228 @href=&amp;quot;http://writersword.com/print.php?sid=5&amp;quot;,
+        @node=&amp;lt;a href='http://writersword.com/print.php?sid=5'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
+        #&amp;lt;WWW::Link:0x1649da8 @href=&amp;quot;http://writersword.com/index.php&amp;quot;,
+        @node=&amp;lt;a href='http://writersword.com/index.php'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
+        #&amp;lt;WWW::Link:0x16468b0 @href=&amp;quot;http://www.tamingingrid.com/domstory.htm&amp;quot;,
+        @node=&amp;lt;ahref='http://www.tamingingrid.com/domstory.htm'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
+        ...
+        Got 23 docs
+        Pretentiousness for the rest of us
+                And so is Pisces.
+                It just is to Capricorn.
+                Ideas abound.
+
+                Easton and Kurt H.
+                We simply need more courage.
+                Don't edit below!
+
+                Life is a big deal.
+                has anybody won yet?
+                Don't edit below!
+</pre>
+<p>
+<p>If you&#8217;re interested in wasting some time, have a look a the <a
+href="http://chadfowler.com/find_haiku">unpolished script</a> that<br />
+generates this stuff.</p>
+</p>
+<p>
+<p>Don&#8217;t ask me why.</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -563,179 +774,6 @@ up, and I hope to see your packages pop up in my aggregator real soon now.</p></
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2004/08/17/rubygem-of-the-month-rails/">RubyGem of the Month - Rails</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-08-17T00:00:00+02:00" pubdate data-updated="true">2004.08.17</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>I&#8217;ve decided to highlight <a
-href="http://www.rubyonrails.org">Rails</a> this month, because it&#8217;s<br />
-remarkably <em>boring</em>.</p>
-<p>
-<p>That&#8217;s right: Boring. Even David Heinemeier Hansson (its author) <a
-href="http://www.loudthinking.com/arc/000255.html">agrees</a>.</p>
-</p>
-<p>
-<p>I started writing a little web application for my <a
-href="http://gomanginstitute.org">other non-profit</a> to put Rails through<br />
-its paces. Armed with experience, let me step you slowly through its<br />
-ever-so-boring pieces:</p>
-</p>
-<ul>
-<li><b>Installation</b> is a total snoozer.<br />
-<br />
-<pre><br />
-      [chad@mymachine]$ sudo gem install rails<br />
-      Attempting local installation of &#8216;rails&#8217;<br />
-      Local gem file not found: rails.gem<br />
-      Attempting remote installation of &#8216;rails&#8217;<br />
-      Install required dependency rake? [Yn]   y<br />
-      Install required dependency activerecord? [Yn]   y<br />
-      Install required dependency actionpack? [Yn]   y<br />
-      Successfully installed rails, version 0.6.0<br />
-<br />
-      [chad@mymachine]$ mkdir -p ~/code/ruby<br />
-      [chad@mymachine]$ rails ~/code/ruby/mynewsite<br />
-      [chad@mymachine]$ cd ~/code/ruby/mynewsite<br />
-      [chad@mymachine]$ public/dispatch.servlet<br />
-      [2004-08-16 22:34:15] <span class="caps">INFO</span>  WEBrick 1.3.1<br />
-      [2004-08-16 22:34:15] <span class="caps">INFO</span>  ruby 1.8.1 (2003-12-25) [i686-linux]<br />
-      [2004-08-16 22:34:15] <span class="caps">WARN</span>  TCPServer Error: Address family not supported by protocol &#8211; socket(2)<br />
-      [2004-08-16 22:34:15] <span class="caps">INFO</span>  WEBrick::HTTPServer#start: pid=21242 port=3000<br />
-</pre></li>
-</ul>
-<p>
-<p>Not only did this install Rails and all of its dependencies (using <a
-href="http://rubygems.rubyforge.org">RubyGems</a>, of course), but the last<br />
-little bit setup a new Rails workspace with everything I needed to actually<br />
-run a Rails application and then started it up with Webrick. Where are all<br />
-of the <span class="caps">XML</span> config files that I love so much to squint at?</p>
-</p>
-<ul>
-<li>Writing <b>database</b> code is even worse. For the basics, you don&#8217;t<br />
-have to do <em>any</em> coding. What kind of <em>sick</em> mind was behind<br />
-<a href="http://activerecord.rubyonrails.org/">ActiveRecord</a> anyway? How<br />
-are we programmers supposed to stay employed if there&#8217;s no work for<br />
-us to do?</li>
-<li><b>Gluing</b> this all together to get an end-to-end web application<br />
-working is the biggest non-event yet. Roughly:<br />
-<br />
-<pre><br />
-      scaffold :tablename<br />
-</pre></li>
-</ul>
-<p>
-<p>That sets up &quot;scaffolding&quot; which creates (in the runtime<br />
-environment) controller, view, and model code to fully manipulate the table<br />
-that you point to. In case you missed it (it was quick), here it is again:</p>
-</p>
-<pre>
-        scaffold :tablename
-</pre>
-<ul>
-<li>The most frustratingly boring part of all of this is the<br />
-<b>documentation</b>. David&#8217;s got videos, wikis, tutorials and demo<br />
-apps (all on <a href="http://www.rubyonrails.org">www.rubyonrails.org</a>),<br />
-which means I didn&#8217;t get the fun of having to wade through<br />
-Rails&#8217; source code every time I wanted to implement a new feature for<br />
-my web application.</li>
-</ul>
-<p>
-<p>Despite being arguably the most boring web framework I&#8217;ve ever seen,<br />
-a lot of people seem to be coming to Rails from all over the place. <a
-href="http://www.loudthinking.com/arc/000276.html">Even the DotNet and Java<br />
-guys</a>, who <em>definitely</em> don&#8217;t seem to like being bored with<br />
-nothing to do (All that Static Typing leads to lots of Typing) seem to be<br />
-coming around to Ruby-land as a result of Rails.</p>
-</p>
-<p>
-<p>I hear there are talks about porting this thing to languages like Python<br />
-and <span class="caps">TCL</span> (Java, too? Is it possible in Java?).</p>
-</p>
-<p>
-<p>Thankfully, though Rails itself is boring, it stays out of the way, and you<br />
-can do really interesting things <em>with</em> it.</p>
-</p>
-<p>
-<p>I hear that <a href="http://rubygems.org">this</a> is destined to be one of<br />
-the more interesting examples&#8230;</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2004/08/17/is-ruby-readable/">Is Ruby Readable?</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-08-17T00:00:00+02:00" pubdate data-updated="true">2004.08.17</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>A <a
-href="http://www.ntecs.de/blog/Blog/HumanUnderstandabilityRuby.rdoc">very<br />
-interesting post</a> by Michael Neumann (who also maintains a <a
-href="http://www.ntecs.de/old-hp/uu9r/lang/html/lang.en.html">fabulous site<br />
-with hundreds of programming language examples</a>), where he walks through<br />
-various aspects of the <a href="http://ruby-lang.org">Ruby</a> programming<br />
-language with his (not-a-programmer) girlfriend and asks her to explain<br />
-what different pieces of sample code mean.</p>
-<p>
-<p>She (and Ruby) do remarkably well. Kind of a neat idea.</p>
-</p>
-<p>
-<p>I&#8217;ve said for years that (in the Java world) at a certain layer of<br />
-your application&#8217;s design, an interesting test of its<br />
-readability/maintainability is whether or not your (not-a-programmer)<br />
-customer(s) can read and understand it. I would hate to see how some of the<br />
-projects I&#8217;ve worked on would stand up to such a<br />
-test&#8212;especially the Java ones.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/23/">&larr; Older</a>
@@ -760,9 +798,9 @@ test&#8212;especially the Java ones.</p>
   <h2 class="widget-header">See Me Speak</h2>
   <ol>
       <li class="vevent">
-        <span class="summary"><a href="http://joyofcoding.org">Joy of Coding</a></span>
-        <span class="location">Rotterdam</span>
-        <span class="the-date">March 1, 2013</span>
+        <span class="summary"><a href="http://aws.amazon.com/de/aws-summit-2013/berlin/">AWS Summit Berlin</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">May 2, 2013</span>
       </li>
         <li class="vevent">
         <span class="summary"><a href="http://railsberry.com">Railsberry</a></span>
@@ -779,14 +817,27 @@ test&#8212;especially the Java ones.</p>
         <span class="location">Stockholm</span>
         <span class="the-date">June 6-9, 2013</span>
       </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
   </ol>
 
-  <a class="more-events" href="#">More Events »</a>
+  <!--<a class="more-events" href="#">More Events »</a>-->
   <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
 </section>
 <section class="widget">
   <h2 class="widget-header">Recent Posts</h2>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it's not your job</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
@@ -798,14 +849,6 @@ test&#8212;especially the Java ones.</p>
     
       <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
       </li>
     
   </ul>
@@ -820,7 +863,7 @@ test&#8212;especially the Java ones.</p>
   <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
   <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
   <h1 class="summary">Get Passionate Again</h1>
-  <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
+  <p class="description" >Remarkable careers don't come by chance.</p>
   </a>
   <blockquote>
     <p>I was blown away.</p>

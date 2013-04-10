@@ -11,8 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="RubLog 2003.02.07 I&#8217;ve just switched to what I think is the 5th piece of software that
-I&#8217;ve used to power this site since its inception &hellip;">
+  <meta name="description" content="Jetlagged Programming Fun 2003.02.09 Today has been a strangely productive day considering the circumstances. You
+wouldn&#8217;t think so, but I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +74,99 @@ I&#8217;ve used to power this site since its inception &hellip;">
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2003/02/09/jetlagged-programming-fun/">Jetlagged Programming Fun</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-02-09T00:00:00+01:00" pubdate data-updated="true">2003.02.09</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Today has been a strangely productive day considering the circumstances.  You<br />
+wouldn&#8217;t think so, but I really think it&#8217;s harder to shift 4.5 hours in time<br />
+zone (<i>Budapest <del>&gt; Bangalore</i>) than 10.5 hours (<i><span class="caps">EST</span> &#8594; Bangalore</i>).  I&#8217;m entering my fourth night home, and I haven&#8217;t even gotten close to adjusting yet.  Last night, I decided to bite the bullet and pull an all-nighter.  I&#8217;m getting too old for that, so I made it until 7:30AM and then woke up at 10AM face down on the couch.  Anyway, I&#8217;m dead tired and ready to sleep at a decent hour, so <b>Mission Accomplished!</b><br />
+<P><br />
+To pass the time during the day, I&#8217;ve been working on a Ruby library that will<br />
+help me explore my infatuation with the abstract idea of &#8220;executable documentation&#8221;.  I won&#8217;t bother you with a description until it&#8217;s usable (since there&#8217;s a large chance I won&#8217;t ever finish it).<br />
+<P><br />
+I&#8217;ve read the results of some studies (which I couldn&#8217;t locate if my life<br />
+dependend on it right now) on sleep loss which say that your IQ drops <b>n%</b> when you are sleep deprived, where <b>n</b> == something signficant.  Last night and today, I&#8217;ve been living proof.  I&#8217;ve been implementing features intended for one object on an entirely different object, doing some really strange things with coupling between classes that I would never do when I&#8217;m lucid (<i>worse</i> than the old <font color="blue">names[i] = name; addresses[i] = address;</font> parrallel array type of thing), and am at something like a 50% defect rate when it comes to typos.<br />
+<P><br />
+Despite all this, with my head nodding forward and my eyes closing, I&#8217;ve got one crutch that keeps me going.  I&#8217;ve been doing test first design (or &#8220;<span class="caps">TFD</span>&#8221;, as the Russian Orthodox Church of XP prefers it to be called), so I start with a blank test case and then alternatively add assertions that fail and code that makes them work until I&#8217;m done.  This is nothing new, of course.  There&#8217;s even a <a href="">book</a> specifically about how to do this, now.  But, I&#8217;ve never tried to do it when I haven&#8217;t slept.  I&#8217;ve always enjoyed test first programming</del>-not so much because I&#8217;m supposed to or because of some idealistic notion that it&#8217;s my duty as a programmer.  But, because it&#8217;s fun and rewarding.  I mentioned in a recent post that I have an attention span deficit.  <span class="caps">TFD</span> is an ultra-iterative process built on small victory after small victory.  It&#8217;s perfect for a scattered person like me.  Now, I can happily go to bed with a sense of accomplishment:<br />
+<pre><br />
+chad@localhost htmldb]$ ruby html/test/tc_db.rb<br />
+Loaded suite html/test/tc_db<br />
+Started<br />
+&#8230;&#8230;&#8230;.<br />
+Finished in 0.117905 seconds.<br />
+19 tests, 48 assertions, 0 failures, 0 errors<br />
+</pre><br />
+&#8230;and tomorrow there will be more.  Even if it&#8217;s &#8220;49 assertions&#8221;, it&#8217;s better than the ambiguous feeling of just having worked on something that still isn&#8217;t done.  Being half asleep, you&#8217;d be surprised at how many times I thought I was finished with a feature only to run the tests and get a failure&#8212;embarrassingly, maybe 30% of the time.<br />
+<P><br />
+Also interesting, even with the sleep loss and jet lag, I haven&#8217;t been bitten by Ruby&#8217;s &#8220;duck typing&#8221;<a href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/801">(you&#8217;ll have to read this thread)</a> once.  <i>&#8220;But, how can you possibly make good software when you don&#8217;t know the type of your objects at compile time?!&#8221;</i>  I suspect that, without the aggressive testing, I <i>might</i> run into problems due to the dynamic typing, but I don&#8217;t see how that&#8217;s much <a href="http://www.pragmaticprogrammer.com/cgi-local/pragprog?JavaIsUntyped">different from working in a static language like Java</a>.  In case you can&#8217;t tell, I&#8217;ve been recently irritated by the &#8220;dynamic typing is dangerous&#8221; argument.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2003/02/07/xp-dogma-zeal/">XP Dogma + Zeal</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-02-07T00:00:00+01:00" pubdate data-updated="true">2003.02.07</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Over the past couple of years, I&#8217;ve gone from being an <a href="http://www.extremeprogramming.org">Extreme Programming</a> fanatic to a casual bystander.  I haven&#8217;t really changed my mind about its applicability or power.  I haven&#8217;t become a skeptic.  I&#8217;m just sick of the dogmatic zealotry associated with it.  (And, yes, I&#8217;ve been guilty of this myself.  I hope I&#8217;ve grown out of it.)<br />
+<P><br />
+I can&#8217;t remember if I was reading a book that talks about this or I just thought it, but have you noticed that nobody gets this dogmatic and zealous over things that aren&#8217;t in some way questionable?  Outside of grade school, you won&#8217;t find a &#8220;Toothbrushers Advocacy Group&#8221;.  There isn&#8217;t a club for people who think we should eat balanced meals.  If there were, I might wonder whether or not it <strong>is</strong> a good idea to eat balanced meals.  At least for a second.<br />
+<P><br />
+That brings me to my point.  Extreme Programming has a silly enough name as it is.  The dogma and zeal just make it seem even more like a fad.  Otherwise, why are these people <strong>fighting</strong> so hard for it?<br />
+<P><br />
+I recently attended a technical conference about XP with a well known speaker from the XP community.  I told him that I was working in a software group doing geographically distributed development, and that while we weren&#8217;t going to necessarily do full-blown XP, we would probably be taking the parts that make sense and augmenting it with processes that would make sense given our distributed situation.  Sadly, he belched out a retort to the tune of &#8220;Oh, you suck because you&#8217;re not doing it 100%!&#8221;  <code>$respect--</code>.  I guess when you get paid to travel around the world and talk about something, you don&#8217;t like it when people only drink half of your koolaide.<br />
+<P><br />
+I suggest we leave the zealotry to the people who are trying to legalize Marijuana or some other questionable cause.  If you actually care about something and believe that it&#8217;s good, (use it|do it) and let your successes do the speaking.  No bumper sticker required.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -405,9 +498,9 @@ href="http://c">t[p]=<span class="caps">STDIN</span>.getc||0;&quot;}</a>||&quot;
   <h2 class="widget-header">See Me Speak</h2>
   <ol>
       <li class="vevent">
-        <span class="summary"><a href="http://joyofcoding.org">Joy of Coding</a></span>
-        <span class="location">Rotterdam</span>
-        <span class="the-date">March 1, 2013</span>
+        <span class="summary"><a href="http://aws.amazon.com/de/aws-summit-2013/berlin/">AWS Summit Berlin</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">May 2, 2013</span>
       </li>
         <li class="vevent">
         <span class="summary"><a href="http://railsberry.com">Railsberry</a></span>
@@ -424,14 +517,27 @@ href="http://c">t[p]=<span class="caps">STDIN</span>.getc||0;&quot;}</a>||&quot;
         <span class="location">Stockholm</span>
         <span class="the-date">June 6-9, 2013</span>
       </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
   </ol>
 
-  <a class="more-events" href="#">More Events »</a>
+  <!--<a class="more-events" href="#">More Events »</a>-->
   <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
 </section>
 <section class="widget">
   <h2 class="widget-header">Recent Posts</h2>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it's not your job</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
@@ -443,14 +549,6 @@ href="http://c">t[p]=<span class="caps">STDIN</span>.getc||0;&quot;}</a>||&quot;
     
       <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
       </li>
     
   </ul>
@@ -465,7 +563,7 @@ href="http://c">t[p]=<span class="caps">STDIN</span>.getc||0;&quot;}</a>||&quot;
   <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
   <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
   <h1 class="summary">Get Passionate Again</h1>
-  <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
+  <p class="description" >Remarkable careers don't come by chance.</p>
   </a>
   <blockquote>
     <p>I was blown away.</p>

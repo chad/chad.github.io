@@ -11,7 +11,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="RubyConf Speaker Interview: Micah Martin 2008.09.18 In preparation for this year&#8217;s RubyConf, I&#8217;m doing a series of interviews of some of &hellip;">
+  <meta name="description" content="RubyConf Speaker Interview: Glenn Vanderburg 2008.10.01 RubyConf is coming soon! We&#8217;re sold out but you can still get on the waiting list.
+I&# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +74,165 @@
     <section id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2008/10/01/rubyconf-speaker-interview-glenn-vanderburg/">RubyConf Speaker Interview: Glenn Vanderburg</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-10-01T00:00:00+02:00" pubdate data-updated="true">2008.10.01</time>
+    
+  </header>
+
+
+  <div class="article-content"><p><a href="http://rubyconf.org">RubyConf</a> is coming soon!  We&#8217;re sold out but you can still get on the waiting list.</p>
+<p>I&#8217;ve been doing a <a href="http://chadfowler.com/rubyconf-speaker-interviews">series of interviews with speakers</a> leading up to the conference.</p>
+<p>This time is <a href="http://vanderburg.org/">Glenn Vanderburg</a>.  Glenn is a long time Rubyist and dynamic languages fan. He&#8217;s also Chief Scientist  at <a href="http://thinkrelevance.com/">Relevance</a>.</p>
+<h2>There was a time when Java was cool and new like Ruby is now. I remember drawing criticism for thinking it was &#8220;ready for the Enterprise&#8221;.  You wrote one of the first books about Java. How does the current state of affairs with Ruby and dynamic language adoption differ from what was happening with Java back then?</h2>
+<p>The objections to Ruby seem a bit more mature than the objections to Java were.  I remember a lot of misunderstanding about Java being &#8220;interpreted&#8221;, and about GC being &#8220;inherently slow&#8221;.  I also remember people who were outraged that they couldn&#8217;t turn the safety features off, like array bounds checking.  Those are all rather ridiculous arguments, but many people clung to them for years.</p>
+<p>I&#8217;m pleased that almost nobody objects to Ruby being open-source.  It&#8217;s also great that so many people understand that &#8220;fast enough&#8221; is fast enough, and that you get a lot more benefit from architectural choices than you do from raw language speed.  Finally, the Ruby language itself is more mature and stable than Java was then, and that helps a lot.</p>
+<p>Nevertheless, there&#8217;s one big problem Ruby has now that Java had in 1997: the language implementation is too simplistic, and there&#8217;s a lot of room for improvement.</p>
+<h2>What would you say are the top 2 or 3 features the Ruby world could steal from existing VMs?</h2>
+<p>Two of them are already widely understood:  bytecode interpretation (which all the new VM projects use) and top-notch garbage collection.  But the really big win will come from dynamic optimization based on type feedback, including heavy use of method inlining.  JRuby is already getting some of that benefit from the <span class="caps">JVM</span>, and I suspect GemStone is using the same techniques to make MagLev fast.</p>
+<p>Saying &#8220;Ruby is slow, but it&#8217;s fast enough&#8221; is true for a lot of the things we&#8217;re doing today, but it&#8217;s also a bit of a cop out.  There are definitely tasks for which we&#8217;d love to use Ruby, but it isn&#8217;t fast enough.  The primary motivation for my talk is to spread knowledge about type feedback into the Ruby community.  It&#8217;s always been a little hard to get information about how the <span class="caps">JVM</span> and Strongtalk work, and they have a reputation for being extremely complicated black magic.  Many of the details are quite complex, but the basic principles are actually rather simple.  My hope is that a few people with good C and assembly language skills will have their eyes opened to the possibilities and start making contributions to the Ruby VM projects.</p>
+<h2>What do you think about Google&#8217;s new V8 VM?  Do you think there&#8217;s much to learn from it? Will we see a serious Ruby implementation on it?</h2>
+<p>It&#8217;s fascinating technology, but (from what I&#8217;ve seen so far) not quite as nice a fit for Ruby as I was hoping for.  The v8 team kept a tight focus on exactly what JavaScript needed.  The result is that it will be harder to implement Ruby on it than I hoped, and the benefits will be less than I was expecting.  It&#8217;s a great JavaScript VM, though.</p>
+<p>What&#8217;s actually more interesting to me is that 2008 seems to be the year of JavaScript VMs.  SquirrelFish, TraceMonkey, and v8 are all making big advances in JavaScript performance, using different techniques.  And they seem to have begun a competition similar to the WebKit/Opera Acid3 race from earlier this year.  That kind of thing might seem like a sideshow, but it highlights core technical issues that are usually hidden from view, and that kind of competition ends up raising standards across the board.  JavaScript will certainly benefit from this competition, but it won&#8217;t stop there.  In the process, previously obscure technical details (not least of which is the fact that a language can be as dynamic as JavaScript and still be fast) will become widely known, and new tricks may be discovered.  Ruby and other dynamic languages will certainly benefit from that.</p>
+<h2>Do you think any of the in-progress Ruby implementations is poised to be the big one that takes over the Ruby world? Why or why not?</h2>
+<p>First of all, I don&#8217;t think we have to have a &#8220;big one that takes over.&#8221;  Having multiple VMs with different tradeoffs seems to me to be a tremendous advantage for our community, as long as they all pass the same, thorough spec suite.  JRuby fills a very important niche and does it really well.  There&#8217;s some fantastic work in <span class="caps">YARV</span>.  I fully expect IronRuby to be a big success among people with an investment in the .<span class="caps">NET</span> platform.  And all the signs are that MagLev will be an awesome option for those who need either commercial support, lots of raw speed, and/or a terrific, scalable persistence system.</p>
+<p>That said, I&#8217;m watching Rubinius with great interest.  I was initially skeptical of the project; it seemed so risky to try to build everything from scratch, from the bottom all the way up through the core libraries.  All of the state-of-the-art dynamic language VMs in existence were done by heavily funded large teams of experts.  I&#8217;m more optimistic today.  For one thing, Rubinius has more funding than I realized.  Also, I see now that Evan Phoenix has two advantages those earlier teams didn&#8217;t have: <span class="caps">TDD</span> (which he&#8217;s using even on the C++ part of Rubinius) and <span class="caps">LLVM</span>, which already has code generation and optimization support for many different machine architectures.</p>
+<p>Evan likes to say that because most of Rubinius is written in Ruby, making Rubinius acceptably fast will have to be done in the low-level VM mechanisms, which will benefit all Ruby code, not just the core libraries.  That&#8217;s exactly what drove the advances we see today in the Self, Java, and various Smalltalk VMs &#8212; the core libraries (and in some cases most of the languages themselves) were written in the target language, so the VM became the only avenue for really speeding things up.</p>
+<p>But there&#8217;s a third advantage Rubinius <strong>could</strong> have, but doesn&#8217;t, at least not yet.  Most of the Rubinius contributors are working in the Ruby parts of the system, which is probably where the priority needs to be right now.  But soon, the focus will need to shift to the C++ VM.  I&#8217;m hopeful that others will chip in at that level before too long, and if my talk gets some people started on that, I&#8217;ll be thrilled.</p>
+<h2>What are you passionate about outside of computer programming?</h2>
+<p>The most truthful answer is rather common, and most people won&#8217;t find it too interesting: my family and my faith.</p>
+<p>I&#8217;m constantly reading and enjoying music &#8212; in both cases, from many genres.  I read a broad mix of science, history, theology, and literature.  My favorite author is John McPhee, because he explores topics that seem dull and mundane on the surface, and reveals the fascination within.  That&#8217;s a great match for me, because I&#8217;ve learned that <strong>anything</strong> is interesting once you begin to understand it.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2008/09/23/rubyconf-speaker-interview-nathaniel-talbott/">RubyConf Speaker Interview: Nathaniel Talbott</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-23T00:00:00+02:00" pubdate data-updated="true">2008.09.23</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>In preparation for this year&#8217;s <a href="http://rubyconf.org">RubyConf</a>, I&#8217;m doing a <a href="http://chadfowler.com/rubyconf-speaker-interviews">series of interviews</a> of some of the speakers.</p>
+<p>Today&#8217;s interview is with <a href="http://terralien.com">Nathaniel Talbott</a>, creator of Ruby&#8217;s built-in Test::Unit framework and long time Rubyist.  At RubyConf, Nathaniel will be presenting <a href="http://rubyconf.org/talks/24">Fear of Programming</a>.</p>
+<h2>You&#8217;ve spoken at 7 out of 7 RubyConfs and you&#8217;re about to speak at your 8th. I&#8217;ve noticed your topics are veering farther and farther away from programming in Ruby. Is this because you&#8217;re afraid?</h2>
+<p>The primary impetus behind my talk this year is my discovery of two things:</p>
+<ul>
+	<li>I get lethargic/depressed/unproductive/unhappy when I&#8217;m not spending<br />
+a significant portion of my time creating.</li>
+	<li>I often don&#8217;t create because I&#8217;m afraid to start.</li>
+</ul>
+<p>These realizations grew out of my being the &#8220;business guy&#8221; for<br />
+<a href="http://terralien.com/">Terralien</a> for going on three years now, and thus not billing myself<br />
+out for development work. While doing sales, marketing, project<br />
+management, etc., is creating in some sense, I&#8217;m still a developer at<br />
+heart and to create I need to <strong>code</strong>. When I don&#8217;t, everything in my<br />
+life (including all the business stuff) suffers. And the primary<br />
+hurdle to writing code has been fear.</p>
+<p>So to answer your question, yes and no. Yes, a large part of the<br />
+reason I&#8217;ve trended away from talking about code has been because fear<br />
+kept me from writing code to talk about. No for this year, because<br />
+I&#8217;ve written more Ruby in the past year than I have in a while, and<br />
+have more to talk about, but I think talking about the fear is more<br />
+important this year.</p>
+<p>And if one made the assumption there won&#8217;t be any code in my talk,<br />
+they might be in for a surprise&#8230;</p>
+<h2>At the first Ruby conference, you spoke about Lapidary, which became Test::Unit.  Are you as zealous about testing as you were when you created Lapidary? Why or why not?</h2>
+<p>This is actually a big part of my talk, so I don&#8217;t want to give away<br />
+too much. Suffice it to say that my perspective on testing has changed<br />
+significantly over the past six years, and a lot of that change has to<br />
+do with fighting fear.</p>
+<h2>How does it feel having your first Ruby project in ruby&#8217;s standard library? As one of the creators of RubyGems, I&#8217;m no stranger to harsh criticism of my Open Source code. Have you encountered a lot of this?  Is it worth it?</h2>
+<p>To answer the last question first, it is <strong>very</strong> worth it. I don&#8217;t<br />
+think test/unit has drawn the ire that RubyGems has, since a testing<br />
+framework doesn&#8217;t have quite the entrenchment that a packaging system<br />
+does. This has allowed various competitors and add-ons to spring up,<br />
+giving would-be critics an outlet for their &#8220;I could do it better&#8221;<br />
+ideas, and the cool thing is that they often <strong>can</strong> do it better and we<br />
+all benefit.</p>
+<p>As far as getting test/unit in to the standard library, it was great<br />
+for me but mostly bad for test/unit. It&#8217;s a big plus to tell potential<br />
+clients that you wrote something in the Ruby stdlib, and it does great<br />
+things for your Google juice. At the same time, I was already<br />
+struggling with motivation and productivity when working on test/unit<br />
+at the time, and what I discovered is that getting a library in the<br />
+stdlib is a huge demotivator for working on it, at least for me. It<br />
+becomes <strong>much</strong> easier to stick with the status quo than to change it.</p>
+<p>So if getting &#8220;standardized&#8221; was good for me and bad for test/unit,<br />
+how was it for the Ruby community? I think in general it was a good<br />
+thing. We needed a testing library in the stdlib, and test/unit might<br />
+not be brilliant but it is solid and fairly simple. Having it there<br />
+really helped the testing culture in Ruby, and that continues through<br />
+today. I like to think that Ruby shipping with testing built-in<br />
+influenced David to ship Rails with testing built-in, and I think<br />
+that&#8217;s fantastic.</p>
+<h2>How can I be more productive? I would love to be one of these people who churns out useful libraries once every few weeks and keeps them maintained.</h2>
+<p>I&#8217;ll have lots to say about this in my talk, but for now I&#8217;ll give two<br />
+conflicting points of advice: first, you have to <em>defocus</em>. There&#8217;s a<br />
+real tendency to get tunnel vision about the things we &#8220;need&#8221; and to<br />
+stop playing with the things we <strong>want</strong>. Stop worrying about useful and<br />
+instead explore fun and interesting.</p>
+<p>The second piece of advice is to <em>focus</em>. There are so many projects<br />
+and activities that we can spend time on, we have to choose. Review<br />
+your list of projects: are they all things you&#8217;re excited about<br />
+working on and that you&#8217;re one of the best people to work on? I handed<br />
+off maintainer-ship of test/unit for exactly this reason: it was<br />
+distracting me from other things I was more passionate about.</p>
+<p>Confused and intrigued? Great, now you&#8217;re motivated to come listen to<br />
+<a href="http://rubyconf.org/talks/24">Fear of Programming</a> at <a href="http://rubyconf.org">RubyConf</a>!</p>
+<h2>What are you passionate about outside of computer programming?</h2>
+<p>Well, I have four amazing kids (ages 5, 3, 2 and 1) who I love<br />
+watching grow and learn. We&#8217;ll be homeschooling all of them when the<br />
+times comes, so I have lots of years of learning with them to look<br />
+forward to. I&#8217;m also really passionate about entrepreneurship, and<br />
+have a few things cooking in that sphere, not the least of which is<br />
+<a href="http://spreedly.com">http://spreedly.com</a>. I also enjoy studying the Bible, and enjoy<br />
+teaching at our church every few months. So, life is pretty busy, but<br />
+I&#8217;m loving every minute of it!</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -412,75 +572,6 @@ Self’ll broaden the mind he how on route to amplify tall idea-experienced prog
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2008/07/08/railsconf-europe-community-project-code-drive-and-early-registration/">RailsConf Europe: Community Project Code-Drive and Early Registration</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-07-08T00:00:00+02:00" pubdate data-updated="true">2008.07.08</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>We had a great time this year at the RailsConf <a href="http://en.oreilly.com/rails2008/public/schedule/detail/2562">Community Project Code-Drive</a>.  Among other things that happened, <a href="http://blog.fallingsnow.net/">Evan</a>, <a href="http://richkilmer.blogs.com/">Rich</a>, and I created and released <a href="http://github.com/chad/gitjour/tree/master">gitjour</a>, which is steadily becoming standard Ruby conference must-have software.</p>
-<p>So we thought we&#8217;d do it again in Europe.  If you have an idea for something you&#8217;d like to work on, <a href="http://wiki.oreillynet.com/railsconfeurope08/index.cgi?CommunityProjectCodeDrive">visit the signup page</a> and list it there.  If you don&#8217;t have an idea, just show up on the tutorial day with a laptop and an open mind.</p>
-<p>Also, don&#8217;t miss <a href="https://en.oreilly.com/railseurope2008/public/register">Early Registration</a>, which ends on July 15 and saves you up to €150.</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1><a href="/blog/2008/06/23/programming-as-performance-art/">Programming as Performance (Art)?</a></h1>
-    
-    
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-06-23T00:00:00+02:00" pubdate data-updated="true">2008.06.23</time>
-    
-  </header>
-
-
-  <div class="article-content"><p>Much of what we do in software development is focused on residual artifacts of the process.  But software development is itself a process, and the best development happens not when programmers are keying in the code to implement a design but when great programmers are improvising within constraints and iterating toward a goal.</p>
-<p>Programming is something you do (as opposed to something that is just <em>done</em>).  Why isn&#8217;t there much focus on programming as a performance activity?</p>
-<p>I&#8217;ve heard interesting tales of programmers performing on stage either during conference presentations (the developer of Ruby Cocoa at Ruby Kaigi last year) or driving live computer-music.</p>
-<p>I&#8217;d like to see more examples.  Anyone have any to link?</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -505,9 +596,9 @@ Self’ll broaden the mind he how on route to amplify tall idea-experienced prog
   <h2 class="widget-header">See Me Speak</h2>
   <ol>
       <li class="vevent">
-        <span class="summary"><a href="http://joyofcoding.org">Joy of Coding</a></span>
-        <span class="location">Rotterdam</span>
-        <span class="the-date">March 1, 2013</span>
+        <span class="summary"><a href="http://aws.amazon.com/de/aws-summit-2013/berlin/">AWS Summit Berlin</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">May 2, 2013</span>
       </li>
         <li class="vevent">
         <span class="summary"><a href="http://railsberry.com">Railsberry</a></span>
@@ -524,14 +615,27 @@ Self’ll broaden the mind he how on route to amplify tall idea-experienced prog
         <span class="location">Stockholm</span>
         <span class="the-date">June 6-9, 2013</span>
       </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
   </ol>
 
-  <a class="more-events" href="#">More Events »</a>
+  <!--<a class="more-events" href="#">More Events »</a>-->
   <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
 </section>
 <section class="widget">
   <h2 class="widget-header">Recent Posts</h2>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it's not your job</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
@@ -543,14 +647,6 @@ Self’ll broaden the mind he how on route to amplify tall idea-experienced prog
     
       <li class="post">
         <a href="/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">Moving to Berlin and auf wiedersehen to friends</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/10/29/leaving-a-legacy-system-revisited/">Leaving a Legacy System revisited</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The art/craft/commodity continuum</a>
       </li>
     
   </ul>
@@ -565,7 +661,7 @@ Self’ll broaden the mind he how on route to amplify tall idea-experienced prog
   <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
   <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
   <h1 class="summary">Get Passionate Again</h1>
-  <p class="description" >Remarkable careers don't come by change. Some other stuff you want to say about your book, but not to much cause people click before they read anyway.</p>
+  <p class="description" >Remarkable careers don't come by chance.</p>
   </a>
   <blockquote>
     <p>I was blown away.</p>
