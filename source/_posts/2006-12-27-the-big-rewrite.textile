@@ -73,7 +73,7 @@ or Implementation?</a>
 <li><a href="http://chadfowler.com/blog/2007/01/03/justifications-and-lies">Justification and Lies</a>
 
 </li>
-<li><a href="http://chadfowler.com/blog/2007/01/04/who-s-tending-the-store">Who&#8217;s Tending the Store?</a>
+<li><a href="http://chadfowler.com/blog/2007/01/04/who's-tending-the-store">Who&#8217;s Tending the Store?</a>
 
 </li>
 </ul>
