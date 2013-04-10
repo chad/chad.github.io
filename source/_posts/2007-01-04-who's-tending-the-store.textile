@@ -4,7 +4,7 @@ title: !binary |-
   V2hvJ3MgVGVuZGluZyB0aGUgU3RvcmU/
 enki_id: 4595
 ---
-  (This article is part of the "Big Rewrite":http://chadfowler.com/2006/12/27/the-big-rewrite series.)
+  (This article is part of the "Big Rewrite":http://chadfowler.com/blog/2006/12/27/the-big-rewrite series.)
 
 While we're all in the back creating the next revision of a product, who's tending to the day to day issues of the existing product?  Typically, it's the domain experts and the original implementers of the product.
 
