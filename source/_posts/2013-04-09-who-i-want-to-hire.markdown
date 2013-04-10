@@ -24,7 +24,7 @@ in hopes that this person (you?) is out there:
 * You focus on shipping software that matters to your users and that matters to the company you're building it for.
 * You've experimented with and survived many different types of development and project methodologies, which has left you with a healthy appreciation for what works from the so-called "agile" methodologies and those that came before (and after) them.
 * You have no time for ceremony. Maybe you even hate it, but "hate" is too dogmatic a term.
-* You are humble enough to bend to the will of the frameworks, technologies, constraints, and _people_ aren't you when doing so won't have a materially negative impact. In other words, you can play by someone else's rules when that's the easiest and/or best thing to do.
+* You are humble enough to bend to the will of the frameworks, technologies, constraints, and _people_ you work with when doing so won't have a materially negative impact. In other words, you can play by someone else's rules when that's the easiest and/or best thing to do.
 * You make pragmatic (often boring) technology choices at work and you play in your free time. You don't build science projects just because you are smart enough to build them.
 * You are confident enough that you don't have to prove to anyone what a great developer you are, and therefore...
 * You don't mind being the one that looks bad when you deserve it. You make mistakes sometimes, because you're human, but rather than dwell on them you choose to fix and then learn from them.
