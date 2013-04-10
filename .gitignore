@@ -9,3 +9,4 @@ source.old
 source/_stash
 source/stylesheets/screen.css
 node_modules
+_deploy
