@@ -23,13 +23,8 @@ $laptop-width: 1280px;
 $laptop-mac-air-width: 1366px;
 $laptop-mac-15-width: 1680px;
 
-$desktop-hd-monitor: 1920px; // Also MBP 17"
+$desktop-hd-monitor: 1920px;
 $desktop-apple-monitor: 2300px;
-
-// Additional Android sizes
-// If you need to target specific Android devices for your user base,
-// please refer to the size specs on the Wiki pedia page:￿
-// http://en.wikipedia.org/wiki/Comparison_of_Android_devices
 
 // ------------------------------------------------------------------
 //  MIXIN
@@ -94,6 +89,12 @@ $desktop-apple-monitor: 2300px;
       only screen and ( min-device-pixel-ratio: 2)  and (min-device-width : $tablet-width-min) and (max-device-width : $tablet-width-max),
       only screen and ( min-resolution: 192dpi) and (min-device-width : $tablet-width-min) and (max-device-width : $tablet-width-max),
       only screen and ( min-resolution: 2dppx) and (min-device-width : $tablet-width-min) and (max-device-width : $tablet-width-max)
+      { @content; }
+  }
+
+  @if $breakpoint == desktop {
+    @media
+      only screen and (min-width : ($tablet-width-min + 1))
       { @content; }
   }
 }
