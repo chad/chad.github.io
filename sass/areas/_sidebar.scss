@@ -12,12 +12,31 @@ aside#page-sidebar {
   overflow-y: auto;
   width: 25%;
 
+  @include respond-to(smartphone) {
+    float: none;
+    height: auto;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
   ol#social-media-links {
     $icon-size : 48px;
+    $icon-size-tablet: $icon-size * .75;
+    $icon-size-tablet-portrait: $icon-size * .5;
     clear: both;
     height: $icon-size;
     margin: 0 20px 20px 0 ;
     padding: 0;
+
+    @include respond-to(tablet) {
+      height: $icon-size-tablet;
+    }
+
+    @include respond-to(tablet-portrait) {
+      height: $icon-size-tablet-portrait;
+    }
+
+
     li {
       float: right;
       display: inline-block;
@@ -34,6 +53,19 @@ aside#page-sidebar {
         display: block;
         height: $icon-size;
         width: $icon-size;
+
+        @include respond-to(tablet) {
+          background-size: $icon-size-tablet $icon-size-tablet;
+          height: $icon-size-tablet;
+          width: $icon-size-tablet;
+        }
+
+        @include respond-to(tablet-portrait) {
+          background-size: $icon-size-tablet-portrait $icon-size-tablet-portrait;
+          height: $icon-size-tablet-portrait;
+          width: $icon-size-tablet-portrait;
+        }
+
       } // a
 
       $serviceList: rss, twitter, github, google-plus;

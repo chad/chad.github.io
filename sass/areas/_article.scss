@@ -43,6 +43,9 @@ html {
 
       .article-content {
         margin: 30px 0 30px 60px;
+        @include respond-to(smartphone) {
+          margin: 30px 10px 30px 40px;
+        }
         p, li {
           font-size: 18px;
           line-height: 20px;
@@ -65,6 +68,9 @@ html {
           &.align-right {
             float: right;
             margin: $margin-size 0  $margin-size $margin-size;
+          }
+          @include respond-to(smartphone) {
+            float: none;
           }
         }
       }
