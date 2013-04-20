@@ -6,6 +6,14 @@ html {
   body {
     header#page-header {
       margin: 70px 0 50px 70px;
+
+      @include respond-to(tablet) {
+        margin-top: 30px;
+      }
+      @include respond-to(smartphone) {
+        margin: 20px 0 0 10px;
+      }
+
       h1 {
         color: $white;
         float: left;
@@ -15,6 +23,14 @@ html {
         padding: 0;
         text-transform: uppercase;
         width: 500px;
+
+        @include respond-to(tablet) {
+          float: none;
+        }
+        @include respond-to(smartphone) {
+          height: 40px;
+        }
+
         span {
           color: $gray-light;
         }
@@ -26,14 +42,34 @@ html {
 
       nav {
         ol {
+
+          @include respond-to(tablet) {
+            margin: 25px 0 0 0;
+            padding: 0;
+          }
+
+          @include respond-to(smartphone) {
+            margin: 0;
+            padding: 20px 0 0 15px;
+          }
+
           li {
             display: inline-block;
             margin-right: 20px;
+            @include respond-to(smartphone) {
+              margin-right: 12px;
+            }
             a {
               color: $white;
               font-size: 18px;
               text-decoration: none;
               text-transform: uppercase;
+              @include respond-to(tablet-portrait) {
+                font-size: 14px;
+              }
+              @include respond-to(smartphone) {
+                font-size: 11px;
+              }
             }
             &.active {
               a {

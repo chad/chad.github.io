@@ -5,16 +5,20 @@
 
 * {
   background-repeat: no-repeat;
+  box-sizing: -moz-border-box;
   box-sizing: border-box;
 }
 
 html {
+  height: 100%;
+  padding: 0;
   text-align: center;
   body {
     background: $site-background-color;
     color: $text-color;
     font-family: $body-stack;
     font-size: $base-font-size;
+    height: 100%;
     line-height: $base-line-height;
     margin: auto;
     padding: 0;

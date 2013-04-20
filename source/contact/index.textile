@@ -9,24 +9,24 @@ footer: false
 
 Here's how to reach me:
 
-h1.  Want me to speak at your event?
+h2.  Want me to speak at your event?
 "Email me here":mailto:chad+speaking@chadfowler.com
 
 
 
-h1.  Want to ask me about something in a book I wrote?
+h2.  Want to ask me about something in a book I wrote?
 "Email me here":mailto:chad+author@chadfowler.com
 
 
 
 
-h1. Want to interview me for a podcast, television show, magazine, or web site?
+h2. Want to interview me for a podcast, television show, magazine, or web site?
 "Email me here":mailto:chad+interview@chadfowler.com
 
 
 
 
-h1.  Just want to say hi?
+h2.  Just want to say hi?
  "MAKE CLICK":mailto:chad+ohai@chadfowler.com
 
 
