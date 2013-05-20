@@ -17,3 +17,7 @@ Whenever you have a cynical thought, keep it to yourself. Analyze it. Scrutinize
 fully. Be thankful to the negative emotion for giving you the opportunity to understand your own weaknesses.
 
 Cynicism is born of laziness and fear: It's easy to complain about something. It's harder to fix it. It's both scary and liberating to trust other people to try to be their best.
+
+## Update
+
+As <a href="https://twitter.com/dhh">@dhh</a> pointed out on Twitter after I posted this, I worded this more absolutely than intended. I meant this to be an "exercise" (see the first sentence). Skepticism is healthy. Sometimes, cynicism is the right reaction. I believe most of us could use a lot less of it.
