@@ -20,4 +20,4 @@ Cynicism is born of laziness and fear: It's easy to complain about something. It
 
 ## Update
 
-As <a href="https://twitter.com/dhh">@dhh</a> pointed out on Twitter after I posted this, I worded this more absolutely than intended. I meant this to be an "exercise" (see the first sentence). Skepticism is healthy. Sometimes, cynicism is the right reaction. I believe most of us could use a lot less of it.
+As <a href="https://twitter.com/dhh">@dhh</a> pointed out on Twitter after I posted this, I worded this more absolutely than intended. I meant this to be an "exercise" (see the first sentence). Skepticism is healthy. Sometimes, cynicism is the right reaction. But, I believe most of us could use a lot less of it.
