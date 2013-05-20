@@ -8,6 +8,7 @@ footer: false
 ---
 Over the years, I've been interviewed many times in text, audio, and video form.  Here are some of those interviews:
 
+* "I feel the opposite of burnt out - Giant Robots Podcast":http://learn.thoughtbot.com/podcast/44
 * "Chad Fowler usesthis":http://chad.fowler.usesthis.com
 * "Chad Fowler on Ruby - PragPub":http://pragprog.com/magazines/2010-12/chad-fowler-on-ruby
  * "This Developers Life":http://thisdeveloperslife.com/post/1-1-1-scars Scars episode
