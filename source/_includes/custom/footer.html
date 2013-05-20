@@ -1,32 +1,4 @@
-<section  class="hreview book"  id="passionate-programmer-book">
-  <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
-  <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
-  <h1 class="summary">Get Passionate Again</h1>
-  <p class="description" >Remarkable careers don't come by chance.</p>
-  </a>
-  <blockquote>
-    <p>I was blown away.</p>
-  </blockquote>
-  <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
-</section>
-
-
-{% if site.twitter_user %}
-  <section id="latest-tweet">
-    <script src="{{ root_url }}/javascripts/twitter.js" type="text/javascript"> </script>
-      <script type="text/javascript">
-        jQuery(function($) {
-          getTwitterFeed("{{site.twitter_user}}", {{site.twitter_tweet_count}}, {{site.twitter_show_replies}});
-        });
-      </script>>
-    <blockquote class="twitter-tweet">
-      <ul id="tweets">
-        <li class="loading">Status updating...</li>
-      </ul>
-    </blockquote>
-    <a class="user" href="https://twitter.com/{{ site.twitter_user }}">@{{ site.twitter_user }}</a>
-    <span id="tweet-time"></span>
-  </section>
-{% endif %}
-
-<p class="copyright">{{ site.title }} © {{ site.time | date: "%Y" }}  {{ site.author }} .</p>
+<p>
+  Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>

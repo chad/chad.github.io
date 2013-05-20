@@ -1,40 +1,14 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
 {% include head.html %}
-<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} class="preload {% if page.sidebar == false %} no-sidebar {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} collapse-sidebar sidebar-footer {% endif %}">
-  <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-  <![endif]-->
-
-  <span class="page-name">{{ site.author }}</span>
-
-  <header id="page-header" role="banner">
-    {% include header.html %}
-  </header>
-
-  <div id="main" role="main">
-    <section id="content">
+<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
+  <header role="banner">{% include header.html %}</header>
+  <nav role="navigation">{% include navigation.html %}</nav>
+  <div id="main">
+    <div id="content">
       {{ content | expand_urls: root_url }}
-    </section>
-    <aside id="page-sidebar">
-      {% if site.blog_index_asides.size %}
-        {% include_array blog_index_asides %}
-      {% else %}
-        {% include_array default_asides %}
-      {% endif %}
-    </aside>
-  </div><!-- /div#main -->
-
-  <footer id="page-footer" role="contentinfo">
-    {% include footer.html %}
-  </footer>
-
+    </div>
+  </div>
+  <footer role="contentinfo">{% include footer.html %}</footer>
   {% include after_footer.html %}
-
-  <script src="{{ root_url }}/javascripts/vendor/prism.min.js"></script>
-  <script src="{{ root_url }}/javascripts/plugins.js"></script>
-  <script src="{{ root_url }}/javascripts/main.js"></script>
-
-  {% include google_analytics.html %}
-
 </body>
 </html>

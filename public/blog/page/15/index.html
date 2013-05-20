@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title> The Passionate Programmer</title>
+  <title>The Passionate Programmer</title>
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="The Big Rewrite 2006.12.27 This is the first in a series of articles, discussing why many software rewrite projects end badly and what to do to &hellip;">
+  <meta name="description" content="This is the first in a series of articles, discussing why many software rewrite projects end badly and what to do to avoid some of the ways I've &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,57 +18,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-
-  <link rel="canonical" href="http://chadfowler.com/blog/page/15/">
+  <link rel="canonical" href="http://chad.github.com/chad/blog/page/15/">
   <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
-  <script src="/javascripts/vendor/modernizr.min.js"></script>
-  <script src="/javascripts/vendor/prefixfree.min.js"></script>
-
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
-  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+  
 
 </head>
 
-<body  class="preload  ">
-  <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-  <![endif]-->
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">The Passionate Programmer</a></h1>
+  
+    <h2>practical self-engineering</h2>
+  
+</hgroup>
 
-  <span class="page-name">Chad Fowler</span>
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chad.github.com/chad" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
 
-  <header id="page-header" role="banner">
-     <hgroup>
-      <h1>Chad <span>Fowler</span></h1>
-      
-        <h2>practical self-engineering</h2>
-      
-    </hgroup>
-    <nav id="site-navigation">
-  <ol class="main-navigation">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/speaking">Speaking</a></li>
-    <li><a href="/books">Books</a></li>
-    <li><a href="/interviews">Interviews</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/blog/archives">Archives</a></li>
-  </ol>
 </nav>
-
-
-
-  </header><!-- /header#page-header -->
-
-
-  </header>
-
-  <div id="main" role="main">
-    <section id="content">
+  <div id="main">
+    <div id="content">
       <div class="blog-index">
   
   
@@ -79,9 +70,10 @@
       
   <header>
     
-      <h1><a href="/blog/2006/12/27/the-big-rewrite/">The Big Rewrite</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/12/27/the-big-rewrite/">The Big Rewrite</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -95,11 +87,13 @@
 
 
 <time datetime="2006-12-27T00:00:00+01:00" pubdate data-updated="true">2006.12.27</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><pre>
+  <div class="entry-content"><pre>
   This is the first in a series of articles, discussing why
   many software rewrite projects end badly and what
   to do to avoid some of the ways I've seen them go astray.
@@ -173,9 +167,10 @@ or Implementation?</a></li>
       
   <header>
     
-      <h1><a href="/blog/2006/12/24/it%27s-starting-to-happen/">It&#8217;s Starting to Happen</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/12/24/it%27s-starting-to-happen/">It&#8217;s Starting to Happen</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -189,11 +184,13 @@ or Implementation?</a></li>
 
 
 <time datetime="2006-12-24T00:00:00+01:00" pubdate data-updated="true">2006.12.24</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p>Over the coming year, we&#8217;re going to see <a
+  <div class="entry-content"><p>Over the coming year, we&#8217;re going to see <a
 href="http://gilesbowkett.blogspot.com/2006/12/seaside-owns.html">more and<br />
 more of this</a>. Rails is a gateway drug to both Ruby and the rest of the<br />
 world of dynamic and previously-fringe programming languages.</p></div>
@@ -208,9 +205,10 @@ world of dynamic and previously-fringe programming languages.</p></div>
       
   <header>
     
-      <h1><a href="/blog/2006/12/20/nova-rug-tonight/">NOVA RUG Tonight</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/12/20/nova-rug-tonight/">NOVA RUG Tonight</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -224,11 +222,13 @@ world of dynamic and previously-fringe programming languages.</p></div>
 
 
 <time datetime="2006-12-20T00:00:00+01:00" pubdate data-updated="true">2006.12.20</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p>There&#8217;s a blizzard in Denver, so I&#8217;m stuck in the DC area on a<br />
+  <div class="entry-content"><p>There&#8217;s a blizzard in Denver, so I&#8217;m stuck in the DC area on a<br />
 business trip instead of flying home this evening. Serendipitously, Rich is<br />
 speaking at the <a href="http://novarug.org"><span class="caps">NOVA</span> <span class="caps">RUG</span></a> tonight. If<br />
 you&#8217;re a Rubyist in the area, hopefully I&#8217;ll see you there.</p></div>
@@ -243,9 +243,10 @@ you&#8217;re a Rubyist in the area, hopefully I&#8217;ll see you there.</p></div
       
   <header>
     
-      <h1><a href="/blog/2006/12/18/2007-technology-predictions/">2007 Technology Predictions</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/12/18/2007-technology-predictions/">2007 Technology Predictions</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -259,11 +260,13 @@ you&#8217;re a Rubyist in the area, hopefully I&#8217;ll see you there.</p></div
 
 
 <time datetime="2006-12-18T00:00:00+01:00" pubdate data-updated="true">2006.12.18</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p>So, it looks like I missed the submission deadline for sys-con&#8217;s now<br />
+  <div class="entry-content"><p>So, it looks like I missed the submission deadline for sys-con&#8217;s now<br />
 annual <a href="http://java.sys-con.com/read/313594.htm">i-Technology<br />
 predictions</a> (sorry Jeremy!). I was just browsing the submissions that<br />
 made it in, and the following separate post caught my eye: Yakov<br />
@@ -302,9 +305,10 @@ his readers will continue to not get it.</p>
       
   <header>
     
-      <h1><a href="/blog/2006/12/17/locks-of-love/">Locks of Love</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/12/17/locks-of-love/">Locks of Love</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -318,11 +322,13 @@ his readers will continue to not get it.</p>
 
 
 <time datetime="2006-12-17T00:00:00+01:00" pubdate data-updated="true">2006.12.17</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p><a
+  <div class="entry-content"><p><a
 href="http://spin.atomicobject.com/2006/12/13/professional-development-as-product-development/">This<br />
 post</a> on the <a href="http://atomicobject.com/">Atomic Object</a> web<br />
 site (super cool company, by the way&#8212;check them out if you&#8217;re<br />
@@ -358,9 +364,10 @@ why.</a> It&#8217;s an (almost) effortless way to give. Give it a try?</p>
       
   <header>
     
-      <h1><a href="/blog/2006/11/29/rubygems-rails-plugins/">RubyGems Rails Plugins</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/11/29/rubygems-rails-plugins/">RubyGems Rails Plugins</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -374,11 +381,13 @@ why.</a> It&#8217;s an (almost) effortless way to give. Give it a try?</p>
 
 
 <time datetime="2006-11-29T00:00:00+01:00" pubdate data-updated="true">2006.11.29</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p>Inspired by a dinner conversation at <a
+  <div class="entry-content"><p>Inspired by a dinner conversation at <a
 href="http://pragmaticstudio.com/therailsedge/">The Rails Edge</a>, Bruce<br />
 Williams has <a
 href="http://codefluency.com/2006/11/29/rubygem-based-rails-plugins">created</a><br />
@@ -406,9 +415,10 @@ href="http://rubyforge.org/pipermail/rubygems-developers/2006-November/002224.ht
       
   <header>
     
-      <h1><a href="/blog/2006/11/20/one-week-for-railsconf-2007-cfp/">One Week for RailsConf 2007 CFP</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/11/20/one-week-for-railsconf-2007-cfp/">One Week for RailsConf 2007 CFP</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -422,11 +432,13 @@ href="http://rubyforge.org/pipermail/rubygems-developers/2006-November/002224.ht
 
 
 <time datetime="2006-11-20T00:00:00+01:00" pubdate data-updated="true">2006.11.20</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p>Just a reminder: <a
+  <div class="entry-content"><p>Just a reminder: <a
 href="http://conferences.oreillynet.com/rails/">RailsConf 2007</a> CFPs are<br />
 due on November 2007. If you&#8217;ve got something exciting to talk about<br />
 or valuable experience to share, don&#8217;t let the date slip by. This<br />
@@ -446,9 +458,10 @@ framework itself.</p></div>
       
   <header>
     
-      <h1><a href="/blog/2006/11/20/first-time-on-the-rails-edge/">First Time on the Rails Edge</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/11/20/first-time-on-the-rails-edge/">First Time on the Rails Edge</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -462,11 +475,13 @@ framework itself.</p></div>
 
 
 <time datetime="2006-11-20T00:00:00+01:00" pubdate data-updated="true">2006.11.20</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p>This past weekend, I had the privilege of participating in Pragmatic<br />
+  <div class="entry-content"><p>This past weekend, I had the privilege of participating in Pragmatic<br />
 Studio&#8217;s <a href="http://therailsedge.com">Rails Edge</a> conference.<br />
 I haven&#8217;t had this much fun in a <em>long</em> time. It was a<br />
 single-track event with a definite who&#8217;s-who <a
@@ -521,9 +536,10 @@ holidays (in between driving, eating too much turkey, etc.)</p>
       
   <header>
     
-      <h1><a href="/blog/2006/10/27/not-so-fast-ruby-continuations/">Not So Fast (Ruby Continuations)</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/10/27/not-so-fast-ruby-continuations/">Not So Fast (Ruby Continuations)</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -537,11 +553,13 @@ holidays (in between driving, eating too much turkey, etc.)</p>
 
 
 <time datetime="2006-10-27T00:00:00+02:00" pubdate data-updated="true">2006.10.27</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p>Some people are <a
+  <div class="entry-content"><p>Some people are <a
 href="http://pluralsight.com/blogs/dbox/archive/2006/10/25/41184.aspx">happy</a>,<br />
 and some people are <a
 href="http://patricklogan.blogspot.com/2006/10/ruby-sucks.html">sad</a>.<br />
@@ -571,9 +589,10 @@ on how to do them on .<span class="caps">NET</span>. My money&#8217;s on Koichi 
       
   <header>
     
-      <h1><a href="/blog/2006/09/16/a-big-global-circle/">A Big Global Circle</a></h1>
+      <h1 class="entry-title"><a href="/blog/2006/09/16/a-big-global-circle/">A Big Global Circle</a></h1>
     
     
+      <p class="meta">
         
 
 
@@ -587,11 +606,13 @@ on how to do them on .<span class="caps">NET</span>. My money&#8217;s on Koichi 
 
 
 <time datetime="2006-09-16T00:00:00+02:00" pubdate data-updated="true">2006.09.16</time>
+        
+      </p>
     
   </header>
 
 
-  <div class="article-content"><p><a
+  <div class="entry-content"><p><a
 href="http://paulwilson.blogspot.com/2006/09/making-hang-or-maybe-not.html">This</a><br />
 was just too wonderful not to post. Be sure to click on the link to<br />
 Alan&#8217;s blog to get the full story.</p></div>
@@ -611,11 +632,9 @@ Alan&#8217;s blog to get the full story.</p></div>
     
   </div>
 </div>
-
-    </section>
-    <aside id="page-sidebar">
-      
-        <ol id="social-media-links">
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
   <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
   <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
   <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
@@ -636,11 +655,11 @@ Alan&#8217;s blog to get the full story.</p></div>
       </li>
   </ol>
 
-  <!--<a class="more-events" href="#">More Events »</a>-->
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
   <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
 </section>
-<section class="widget">
-  <h2 class="widget-header">Recent Posts</h2>
+<section>
+  <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
@@ -652,11 +671,11 @@ Alan&#8217;s blog to get the full story.</p></div>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it's not your job</a>
+        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it&#8217;s not your job</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
+        <a href="/blog/2013/02/19/im-a-wunderkind/">I&#8217;m a Wunderkind!</a>
       </li>
     
       <li class="post">
@@ -666,47 +685,17 @@ Alan&#8217;s blog to get the full story.</p></div>
   </ul>
 </section>
 
-      
-    </aside>
-  </div><!-- /div#main -->
+  
+</aside>
 
-  <footer id="page-footer" role="contentinfo">
-    <section  class="hreview book"  id="passionate-programmer-book">
-  <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
-  <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
-  <h1 class="summary">Get Passionate Again</h1>
-  <p class="description" >Remarkable careers don't come by chance.</p>
-  </a>
-  <blockquote>
-    <p>I was blown away.</p>
-  </blockquote>
-  <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
-</section>
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
 
-
-
-  <section id="latest-tweet">
-    <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-      <script type="text/javascript">
-        jQuery(function($) {
-          getTwitterFeed("chadfowler", 1, false);
-        });
-      </script>>
-    <blockquote class="twitter-tweet">
-      <ul id="tweets">
-        <li class="loading">Status updating...</li>
-      </ul>
-    </blockquote>
-    <a class="user" href="https://twitter.com/chadfowler">@chadfowler</a>
-    <span id="tweet-time"></span>
-  </section>
-
-
-<p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
-
-
-  </footer>
-
+</footer>
   
 
 <script type="text/javascript">
@@ -758,13 +747,6 @@ Alan&#8217;s blog to get the full story.</p></div>
 
 
 
-
-
-  <script src="/javascripts/vendor/prism.min.js"></script>
-  <script src="/javascripts/plugins.js"></script>
-  <script src="/javascripts/main.js"></script>
-
-  
 
 </body>
 </html>
