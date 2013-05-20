@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> 
+
+<HTML>
+<HEAD>
+
+<!---------------------------------------------------pop
+//  Produced by Phoenix-Pop Productions, January 2000
+//  www.phoenix-pop.com
+//---------------------------------------------------pop -->
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+<TITLE>WebCam</TITLE>
+
+<!-- Made with Logitech Quickcam client version 5.3.0.3191 -->
+
+<SCRIPT language="JavaScript">
+	<!--
+
+	var klugedWidth = 320 + 150
+	var klugedHeight = 240 + 150
+	
+	function remote()
+	{
+
+RemoteWin=window.open("webcamremote.html","","resizable=yes,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=auto,copyhistory=0,width=" + klugedWidth + ",height=" + klugedHeight + "")
+	   RemoteWin.creator=self
+	}
+
+var Interv = 60
+
+function startClock2() {
+	Interv = Interv - 1
+	
+	var now = new Date()
+	var dummystr = parseInt(now.getTime() / 1000)
+	delete now
+
+	if (Interv < 0) {
+		if (document.images) {
+			document.refrimage.src = "pic/image.jpg" + "?" + dummystr
+		} else {
+			window.location.reload()
+		}
+		Interv = 60
+	}
+	document.clock.time.value = Interv
+	timrID = setTimeout("startClock2()", 1000)
+}
+
+	//-->
+</SCRIPT>
+
+
+</HEAD>
+
+<BODY bgcolor="#000000" text="#FFFFFF" link="#FF9933" vlink="#FF9933" alink="#FF9933" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" onLoad="startClock2()">
+
+<FORM name="clock">
+
+<table width="740" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width=45 bgcolor="#999999"><img src="img/clear.gif" width=45 height=1 border=0></td>
+		<td width=280 height=20 bgcolor="#999999"><font face="arial,helvetica,sans-serif" size="2" color="#FFFFFF"><b>WebCam</b></font></td>
+		<td width="365" bgcolor="#666666" align="right"><font face="arial,helvetica,sans-serif" size="1" color="#999999">CAPTURED BY A </font><a href="http://www.logitech.com/quickcam" target="_new"><img src="img/text_logitech.gif" height="6" width="63" border="0" vspace="1" alt="Go to QuickCam website."></a><a href="http://www.logitech.com/quickcam" target="_new"><img src="img/text_quickcam.gif" height="6" width="70" border="0" vspace="1" alt="Go to QuickCam website."></a></TD>
+
+<td rowspan="2" width="50" bgcolor="#666666" valign="top" align="center">
+<a href="http://www.logitech.com/quickcam" target="_new"><img src="img/webcam_icon.gif" height="40" width="40" border="0" vspace="5"></a></td>
+	</tr>
+	<tr>
+		<td width=45 height=20 bgcolor="#666666">&nbsp;</td>
+		<td width=280 height=20 bgcolor="#666666">&nbsp;</td>
+		<td width="365" height="20" bgcolor="#666666"><img src="img/icon_arrow.gif" width="6" height="10" hspace="18" border="0"><font face="arial,helvetica,sans-serif" size="1" color="#FFFFFF">&nbsp;</font><font face="arial,helvetica,sans-serif" size="1"><a href="mailto:"></a></font></td>
+	</tr>
+</table>
+
+<table width="740" height="300" border="0" cellpadding="0" cellspacing="10">
+	<tr>
+		<td width="250" height="300" valign="top" align="left">
+
+		<table cellpadding="2" cellspacing="0" border="0">
+		<tr>
+		<td width="234" align="right">
+		<img src="img/line.gif" width="234" height="1" border="0" vspace="10" align="right">
+		</td>
+		</tr>
+		<tr>
+		<td width="234" align="right">
+		<img src="img/icon_arrow.gif" width="6" height="10" border="0" hspace="14">&nbsp;
+		<A href="javascript:remote()"><font face="arial,helvetica,sans-serif" size="1">launch a remote window</font></A>
+		</td>
+		</tr>
+		<tr>
+		<td width="234" align="right">
+		<img src="img/line.gif" width="234" height="1" border="0" vspace="10" align="right">
+		</td>
+		</tr>
+		<tr>
+		<td width="234" align="right"><font face="arial,helvetica,sans-serif" size="1"></font>
+		</td>
+		</tr>
+		<tr>
+		<td width="234" align="right">
+		<font face="arial,helvetica,sans-serif" size="1">image will update in </font><input TYPE="text" NAME="time" SIZE="3" value=""><font face="arial,helvetica,sans-serif" size="1">  seconds</font>
+		</td>
+		</tr>
+		<tr>
+		<td width="234" align="right">
+		<img src="img/line.gif" width="234" height="1" border="0" vspace="10" align="right">
+		</td>
+		</tr>
+		</table>
+		
+		</td>
+				
+		<td width="506" height="300" valign="top" align="left">
+		<IMG src="pic/image.jpg" name="refrimage" width="320" height="240" border="0">
+        </td>
+	</tr>
+</table>
+
+</FORM>
+
+</BODY>
+
+</HTML>

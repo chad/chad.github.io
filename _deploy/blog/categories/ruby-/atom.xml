@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby, | The Passionate Programmer]]></title>
+  <link href="http://chadfowler.com/blog/categories/ruby-/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2013-05-20T11:55:33+02:00</updated>
+  <id>http://chadfowler.com/</id>
+  <author>
+    <name><![CDATA[Chad Fowler]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How Rails Developers do Ajax (with jQuery) in 2011]]></title>
+    <link href="http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/"/>
+    <updated>2011-02-09T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011</id>
+    <content type="html"><![CDATA[<p>Wanting to survey what the current state of the art in Rails Ajax development is, I asked this question on twitter:</p>
+
+<p><a href="http://twitter.com/#!/chadfowler/status/35068144976404480"><img src="http://chadfowler.com/ajax_question.png" alt="Rails developers, how are you doing Ajax with JQuery these days? .js.erb templates? Rendering partials back old-style?"/></a></p>
+
+<p>I got a lot of great responses!  44 last time I checked. Here's what I found out people are doing:</p>
+
+<ul>
+<li>"mustache.js":https://github.com/janl/mustache.js</li>
+<li>Sending JavaScript back down to the client using .js.erb template files (Ryan Bates linked a couple of examples "here":http://bit.ly/YCunh and "here":http://bit.ly/dHbKW5)</li>
+<li>"JQuery templates":http://api.jquery.com/jQuery.template/</li>
+<li>Hitting RESTFUL endpoints and responding with JSON data to be manipulated on the client</li>
+<li>Using "backbone.js":http://documentcloud.github.com/backbone</li>
+<li>Rendering partials and updating elements on the page with their raw content (the original old-school Rails way of doing it)</li>
+<li>Use "SammyOnRails":https://github.com/mrb/sammyonrails</li>
+</ul>
+
+
+<p>There is definitely a divide and a lot of opinion (suprise!) between those who are OK with delivering JavaScript and/or HTML from the server to be rendered on the client and those who prefer to deliver data and have the client process it.  I'd characterize the former as the less clean, more pragmatic approach and the latter as the idealistic cleaner approach.  It seems that tools like mustache.js, backbone, JQuery templates, and Sammy.js are tightening the gap between quick + dirty and slow + clean.</p>
+
+<p>What do you think?  What did we miss?</p>
+]]></content>
+  </entry>
+  
+</feed>

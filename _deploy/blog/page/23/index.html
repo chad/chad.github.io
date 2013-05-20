@@ -1,0 +1,959 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title> The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Gem Watch 2004.08.22 Jim Weirich announces an RSS feed for <a
+href="http://onestepback.org/index.cgi/Tech/Ruby/Gems/GemWatchRss.rdoc">GemWatch.
+Jim &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <link rel="canonical" href="http://chadfowler.com/blog/page/23/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/javascripts/jquery.min.js"><\/script>')</script>
+  <script src="/javascripts/vendor/modernizr.min.js"></script>
+  <script src="/javascripts/vendor/prefixfree.min.js"></script>
+
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  
+
+
+</head>
+
+<body  class="preload  ">
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <span class="page-name">Chad Fowler</span>
+
+  <header id="page-header" role="banner">
+     <hgroup>
+      <h1>Chad <span>Fowler</span></h1>
+      
+        <h2>practical self-engineering</h2>
+      
+    </hgroup>
+    <nav id="site-navigation">
+  <ol class="main-navigation">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/speaking">Speaking</a></li>
+    <li><a href="/books">Books</a></li>
+    <li><a href="/interviews">Interviews</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/blog/archives">Archives</a></li>
+  </ol>
+</nav>
+
+
+
+  </header><!-- /header#page-header -->
+
+
+  </header>
+
+  <div id="main" role="main">
+    <section id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/08/22/gem-watch/">Gem Watch</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-08-22T00:00:00+02:00" pubdate data-updated="true">2004.08.22</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Jim Weirich announces an <span class="caps">RSS</span> feed for <a
+href="http://onestepback.org/index.cgi/Tech/Ruby/Gems/GemWatchRss.rdoc">GemWatch</a>.<br />
+Jim is one of the creators of <a
+href="http://rubygems.rubyforge.org">RubyGems</a>. Sign up for the <span class="caps">RSS</span> feed<br />
+and keep your finger on the pulse of the repository for what is destined to<br />
+become Ruby&#8217;s One True Package Management System. I&#8217;m signed<br />
+up, and I hope to see your packages pop up in my aggregator real soon now.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/08/17/rubygem-of-the-month-rails/">RubyGem of the Month - Rails</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-08-17T00:00:00+02:00" pubdate data-updated="true">2004.08.17</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>I&#8217;ve decided to highlight <a
+href="http://www.rubyonrails.org">Rails</a> this month, because it&#8217;s<br />
+remarkably <em>boring</em>.</p>
+<p>
+<p>That&#8217;s right: Boring. Even David Heinemeier Hansson (its author) <a
+href="http://www.loudthinking.com/arc/000255.html">agrees</a>.</p>
+</p>
+<p>
+<p>I started writing a little web application for my <a
+href="http://gomanginstitute.org">other non-profit</a> to put Rails through<br />
+its paces. Armed with experience, let me step you slowly through its<br />
+ever-so-boring pieces:</p>
+</p>
+<ul>
+<li><b>Installation</b> is a total snoozer.<br />
+<br />
+<pre><br />
+      [chad@mymachine]$ sudo gem install rails<br />
+      Attempting local installation of &#8216;rails&#8217;<br />
+      Local gem file not found: rails.gem<br />
+      Attempting remote installation of &#8216;rails&#8217;<br />
+      Install required dependency rake? [Yn]   y<br />
+      Install required dependency activerecord? [Yn]   y<br />
+      Install required dependency actionpack? [Yn]   y<br />
+      Successfully installed rails, version 0.6.0<br />
+<br />
+      [chad@mymachine]$ mkdir -p ~/code/ruby<br />
+      [chad@mymachine]$ rails ~/code/ruby/mynewsite<br />
+      [chad@mymachine]$ cd ~/code/ruby/mynewsite<br />
+      [chad@mymachine]$ public/dispatch.servlet<br />
+      [2004-08-16 22:34:15] <span class="caps">INFO</span>  WEBrick 1.3.1<br />
+      [2004-08-16 22:34:15] <span class="caps">INFO</span>  ruby 1.8.1 (2003-12-25) [i686-linux]<br />
+      [2004-08-16 22:34:15] <span class="caps">WARN</span>  TCPServer Error: Address family not supported by protocol &#8211; socket(2)<br />
+      [2004-08-16 22:34:15] <span class="caps">INFO</span>  WEBrick::HTTPServer#start: pid=21242 port=3000<br />
+</pre></li>
+</ul>
+<p>
+<p>Not only did this install Rails and all of its dependencies (using <a
+href="http://rubygems.rubyforge.org">RubyGems</a>, of course), but the last<br />
+little bit setup a new Rails workspace with everything I needed to actually<br />
+run a Rails application and then started it up with Webrick. Where are all<br />
+of the <span class="caps">XML</span> config files that I love so much to squint at?</p>
+</p>
+<ul>
+<li>Writing <b>database</b> code is even worse. For the basics, you don&#8217;t<br />
+have to do <em>any</em> coding. What kind of <em>sick</em> mind was behind<br />
+<a href="http://activerecord.rubyonrails.org/">ActiveRecord</a> anyway? How<br />
+are we programmers supposed to stay employed if there&#8217;s no work for<br />
+us to do?</li>
+<li><b>Gluing</b> this all together to get an end-to-end web application<br />
+working is the biggest non-event yet. Roughly:<br />
+<br />
+<pre><br />
+      scaffold :tablename<br />
+</pre></li>
+</ul>
+<p>
+<p>That sets up &quot;scaffolding&quot; which creates (in the runtime<br />
+environment) controller, view, and model code to fully manipulate the table<br />
+that you point to. In case you missed it (it was quick), here it is again:</p>
+</p>
+<pre>
+        scaffold :tablename
+</pre>
+<ul>
+<li>The most frustratingly boring part of all of this is the<br />
+<b>documentation</b>. David&#8217;s got videos, wikis, tutorials and demo<br />
+apps (all on <a href="http://www.rubyonrails.org">www.rubyonrails.org</a>),<br />
+which means I didn&#8217;t get the fun of having to wade through<br />
+Rails&#8217; source code every time I wanted to implement a new feature for<br />
+my web application.</li>
+</ul>
+<p>
+<p>Despite being arguably the most boring web framework I&#8217;ve ever seen,<br />
+a lot of people seem to be coming to Rails from all over the place. <a
+href="http://www.loudthinking.com/arc/000276.html">Even the DotNet and Java<br />
+guys</a>, who <em>definitely</em> don&#8217;t seem to like being bored with<br />
+nothing to do (All that Static Typing leads to lots of Typing) seem to be<br />
+coming around to Ruby-land as a result of Rails.</p>
+</p>
+<p>
+<p>I hear there are talks about porting this thing to languages like Python<br />
+and <span class="caps">TCL</span> (Java, too? Is it possible in Java?).</p>
+</p>
+<p>
+<p>Thankfully, though Rails itself is boring, it stays out of the way, and you<br />
+can do really interesting things <em>with</em> it.</p>
+</p>
+<p>
+<p>I hear that <a href="http://rubygems.org">this</a> is destined to be one of<br />
+the more interesting examples&#8230;</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/08/17/is-ruby-readable/">Is Ruby Readable?</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-08-17T00:00:00+02:00" pubdate data-updated="true">2004.08.17</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>A <a
+href="http://www.ntecs.de/blog/Blog/HumanUnderstandabilityRuby.rdoc">very<br />
+interesting post</a> by Michael Neumann (who also maintains a <a
+href="http://www.ntecs.de/old-hp/uu9r/lang/html/lang.en.html">fabulous site<br />
+with hundreds of programming language examples</a>), where he walks through<br />
+various aspects of the <a href="http://ruby-lang.org">Ruby</a> programming<br />
+language with his (not-a-programmer) girlfriend and asks her to explain<br />
+what different pieces of sample code mean.</p>
+<p>
+<p>She (and Ruby) do remarkably well. Kind of a neat idea.</p>
+</p>
+<p>
+<p>I&#8217;ve said for years that (in the Java world) at a certain layer of<br />
+your application&#8217;s design, an interesting test of its<br />
+readability/maintainability is whether or not your (not-a-programmer)<br />
+customer(s) can read and understand it. I would hate to see how some of the<br />
+projects I&#8217;ve worked on would stand up to such a<br />
+test&#8212;especially the Java ones.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/08/06/the-case-of-the-stolen-powerbook/">The Case of the Stolen Powerbook</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-08-06T00:00:00+02:00" pubdate data-updated="true">2004.08.06</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>It&#8217;s been a while since I&#8217;ve posted here. This is mostly<br />
+because I&#8217;ve been busy but at least partially because I&#8217;ve been<br />
+a little demotivated to sit in front of a computer for much time. My<br />
+friends and family are tired of hearing me whine about it, but my Powerbook<br />
+was stolen while traveling on a train in Brussels about a month ago.</p>
+<p>
+<p>I&#8217;m not going to whine any further here; The story has a happy<br />
+ending. There may be some useful information for laptop owners to take with<br />
+them:</p>
+</p>
+<ul>
+<li>When you&#8217;re traveling with your computer, keep it closer to you than<br />
+you think you have to. I had mine in an inconspicuous backpack case and had<br />
+it right near me. If someone&#8217;s targeting travelers, they&#8217;re<br />
+going to look for people who are <em>almost</em> keeping a good enough eye<br />
+on their possessions. Those are the people who think everything is going to<br />
+be OK and won&#8217;t notice that something has happened until it&#8217;s<br />
+too late.</li>
+<li>Ultimately, my homeowner&#8217;s insurance paid for the <em>full price</em> to<br />
+replace my laptop! I&#8217;m kind of ignorant about these things and had no<br />
+idea that homeowner&#8217;s insurance would cover a loss while I was<br />
+traveling. If you own a home (or rent?) and have some kind of insurance, I<br />
+would recommend finding out if you&#8217;re covered before something like<br />
+this happens to you. Some credit card companies offer similar coverage on<br />
+purchases made with their cards. The card I used does not, so if you have a<br />
+choice of which one to use, use the one that will cover potential losses.</li>
+<li>An obvious one: I had spotty network connectivity while traveling, so I was<br />
+backing up things I was working on onto a <span class="caps">USB</span> drive in case of hardware<br />
+failure on my laptop. Guess where I stored the <span class="caps">USB</span> drive? I lost hours of<br />
+work, some of which I&#8217;ll probably never get around to redoing.</li>
+<li>Don&#8217;t get a Mac. It&#8217;s just too hard to go back to the<br />
+alternatives once you&#8217;ve gone there. Save yourself some suffering and<br />
+stick with the <a href="http://www.microsoft.com">least common<br />
+denominator</a>.</li>
+</ul>
+<p>
+<p><a href="http://www.kellyjeanne.org">Kelly</a> <span class="caps">SMS</span>&#8217;d me earlier to<br />
+tell me that my new Powerbook is sitting at home in the box waiting for me<br />
+to spend way too much time setting up and playing with this weekend. :)</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/08/06/pragmatic-project-automation/">Pragmatic Project Automation</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-08-06T00:00:00+02:00" pubdate data-updated="true">2004.08.06</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>For the past week, since I returned from <a
+href="http://conferences.oreillynet.com/os2004/"><span class="caps">OSCON</span></a>, I&#8217;ve been<br />
+reading the last book in the <a
+href="http://www.pragmaticprogrammer.com/starter_kit/index.html">Pragmatic<br />
+Starter Kit</a> series. I&#8217;m not quite finished with it yet, but I<br />
+thought I&#8217;d post my thoughts so far. This book finishes off the<br />
+<em>definitive</em> guide for a team that wants to do software development<br />
+<em>right</em>.</p>
+<p>
+<p><img src="http://chadfowler.com/images/sk_auto_small.jpg"></p>
+</p>
+<p>
+<p>The first two books, <a
+href="http://www.pragmaticprogrammer.com/starter_kit/vc/index.html">Pragmatic<br />
+Version Control</a> and <a
+href="http://www.pragmaticprogrammer.com/starter_kit/ut/index.html">Pragmatic<br />
+Unit Testing</a>, lay the foundation for repeatable, reproducible, and<br />
+(surprise surprise) automatable software development processes. <a
+href="http://www.clarkware.com/cgi/blosxom">Mike Clark&#8217;s</a> <a
+href="http://www.pragmaticautomation.com/cgi-bin/pragauto.cgi">Pragmatic<br />
+Project Automation</a> puts it all together in a how-to guide that should<br />
+serve as a blueprint for any self-respecting team.</p>
+</p>
+<p>
+<p>The Starter Kit takes what&#8217;s inarguably right about the <a
+href="http://agilealliance.org/home">Agile</a> approach to programming and<br />
+strips out all of the confrontational, sometimes scary,<br />
+methodology-specific stuff, leaving readers with a step by step list of<br />
+practices that can and should be applied to any project. The books&#8217;<br />
+examples focus on the use of <a
+href="http://www.gnu.org/philosophy/philosophy.html">free</a> tools, mostly<br />
+in Java, but the practices laid out transcend language and environment and<br />
+can be applied to nearly any software development environment.</p>
+</p>
+<p>
+<p>I especially enjoyed the step-by-step guide on setting up CruiseControl, as<br />
+it&#8217;s been a bit finicky for me in the past. And, I love some of the<br />
+creative ways that Mike lays out to stay in touch with your automated<br />
+processes (<span class="caps">RSS</span>, <span class="caps">SMS</span>, lava lamps ;).</p>
+</p>
+<p>
+<p>In general, if you&#8217;re an experienced and conscientious software<br />
+developer, you&#8217;re probably not going to find a lot of surprising<br />
+advice in the Start Kit. What&#8217;s unique is the fact that it&#8217;s<br />
+all pulled together into one cohesive package and laid out in such a way<br />
+that it&#8217;s a no brainer to follow (not to mention entertaining to<br />
+read).</p>
+</p>
+<p>
+<p>If you&#8217;re a software developer or (especially) a manager of software<br />
+developers, you should plan to buy every book in this series. If<br />
+you&#8217;re using Java on your projects, you should <a
+href="http://pragmaticprogrammer.com/shopsite_sc/store/html/index.html">go<br />
+buy them</a> right now. I&#8217;ve been pushing a lot of these ideas for<br />
+years with geographically distributed teams, and now that this series<br />
+exists, it (with <a
+href="http://www.pragmaticprogrammer.com/ppbook/index.shtml">The Pragmatic<br />
+Programmer</a> and Martin Fowler&#8217;s <a
+href="http://martinfowler.com/books.html#refactoring">Refactoring</a>) will<br />
+be the first thing I give to a new team member.</p>
+</p>
+<p>
+<p>&quot;<em>This</em> is the way we&#8217;re going to do it.&quot;</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/06/30/not-dumb-enough/">Not Dumb Enough</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-06-30T00:00:00+02:00" pubdate data-updated="true">2004.06.30</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Lesson learned: Even when you try to <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/Languages/GroovyJSR.rdoc,v">dumb<br />
+down the syntax of a language</a>, there are some people for whom you <a
+href="http://weblogs.java.net/pub/wlg/1572">can&#8217;t make it dumb enough</a>.</p>
+<p>
+<p>Which &quot;obscuring lesson&quot; did we learn from C? Was C more<br />
+obfuscated than the languages available at the time of its creation?</p>
+</p>
+<p>
+<p>&quot;weird cryptic syntax&quot;? I&#8217;m not a huge Groovy proponent,<br />
+but <a
+href="http://www.sauria.com/presentations/Groovy%20SeaJUG%202004-03.ppt.pdf.zip">look<br />
+here</a> and contrast pages 2 and 7 in this <span class="caps">PDF</span> presentation. The Groovy<br />
+example is more cryptic than the Java example?</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/06/16/oscon-early-bird-registration-is-ending/">OSCON Early Bird Registration Is Ending!</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-06-16T00:00:00+02:00" pubdate data-updated="true">2004.06.16</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>As Ted <a href="http://www.sauria.com/blog/2004/06/16#971">points out</a>,<br />
+<span class="caps">OSCON</span> <a
+href="http://conferences.oreillynet.com/pub/w/29/register.html">early<br />
+registration</a> is ending on Friday. You can save a fairly decent amount<br />
+of money by signing up early.</p>
+<p>
+<p>Not only that, but if you sign up for <b>Ruby</b> <a
+href="http://conferences.oreillynet.com/pub/w/29/track_ruby.html">sessions</a><br />
+early, you also gain &quot;prestige points&quot;, which are redeemable for<br />
+the respect and admiration of your peers. :)</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/06/09/rubygem-of-the-week-ruvi-was-rvsh/">RubyGem of the Week - Ruvi (Was RVSH)</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-06-09T00:00:00+02:00" pubdate data-updated="true">2004.06.09</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>Update: Being the King of Good Timing, I posted this entry the day before<br />
+Alex renamed rvsh to &quot;ruvi&quot; (nice name!) and broke all of the<br />
+links in this post. The links should now work.</p>
+<p>
+<p>I&#8217;m not sure this will become a weekly habit, but I&#8217;ve been<br />
+enjoying <a href="http://onestepback.org">Jim&#8217;s</a> &quot;Module<br />
+Spotlights&quot;, and thought I&#8217;d do something similar to give a<br />
+little exposure to some of the nice <a
+href="http://rubyforge.org/projects/rubygems">RubyGems packages</a> that<br />
+are now out there for the taking.</p>
+</p>
+<p>
+<p>This week&#8217;s featured gem is &quot;ruvi&quot; [<a
+href="http://www.lypanov.net/xml/development/ruvi.xml">www.lypanov.net/xml/development/ruvi.xml</a>].<br />
+It was created by <a href="http://www.lypanov.net">Alexander Kellett</a>,<br />
+and is a <a href="http://vim.sf.net">vim</a> clone written in <em>pure Ruby</em>!</p>
+</p>
+<p>
+<p>So, if you&#8217;ve got the latest <a
+href="http://rubyforge.org/frs/?group_id=126">RubyGems</a> distribution (go<br />
+get it!), you can do this:</p>
+</p>
+<pre>
+        $ sudo gem -Ri ruvi --install-stub
+        Attempting remote installation of 'ruvi'
+        Successfully installed ruvi version 0.4.5
+
+        $ ruvi RvshGem.rdoc
+</pre>
+<p>
+<p>You&#8217;ll see something that looks like this:</p>
+</p>
+<p>
+<p><img src="http://chadfowler.com/images/rvsh.jpg"></p>
+</p>
+<p>
+<p>(though if you&#8217;ve got your terminal configured properly, it will look<br />
+a lot better that this).</p>
+</p>
+<p>
+<p>It&#8217;s still early in development, but it has a surprising number of<br />
+features implemented. I actually used it to create this weblog entry. I<br />
+think I could waste a few hours having fun hacking in features that I never<br />
+had the energy to do in vim script or Emacs Lisp.</p>
+</p>
+<p>
+<p>Now that you&#8217;ve got the latest RubyGems distribution, try:</p>
+</p>
+<pre>
+      $ gem -R --list
+</pre>
+<p>
+<p>There are a lot of lovely gems already out there. And, of course, armed<br />
+with the RubyGems distribution, you are now equipped to create more.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/06/01/code-generation-is-new/">Code Generation Is New?</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-06-01T00:00:00+02:00" pubdate data-updated="true">2004.06.01</time>
+    
+  </header>
+
+
+  <div class="article-content"><p><a href="http://www.codegeneration.net/lth/">Jack Herrington</a>, who wrote<br />
+the excellent <a href="http://www.manning.com/herrington/index.html">Code<br />
+Generation In Action</a>, has a couple of <a
+href="http://today.java.net/pub/a/today/2004/05/12/generation1.html">newish</a><br />
+<a
+href="http://today.java.net/pub/a/today/2004/05/31/generation-pt2.html">articles</a><br />
+up on <a href="http://java.net">java.net</a>.</p>
+<p>
+<p>I&#8217;ve linked to them here both because they&#8217;re well worth<br />
+reading and learning from, and because there is something that has been<br />
+bothering me since I read a draft of Code Generation in Action. The first<br />
+line of Jack&#8217;s java.net article captures it. Here&#8217;s the full<br />
+first paragraph for context:</p>
+</p>
+<pre>
+  Code generation is a key new trend in engineering, one that you need to
+  understand well.  The reason is simple: today's modern frameworks are
+  extremely code-intensive. Using a code generator to build the code for
+  you can save you a lot of time, both in writing the code and fixing the
+  inevitable bugs that spring from swathes of hand-written code.
+</pre>
+<p>
+<p>And, later in the article, Jack&#8217;s definition of code generation:</p>
+</p>
+<pre>
+  Code generation is using one application to build code for
+  another application.
+</pre>
+<p>
+<p>So, code generation is the automation of code creation for the purpose of<br />
+reducing defects and increasing developer productivity. Defect reduction is<br />
+largely what inspired John Mauchly in 1949 to create <a
+href="http://www.programcpp.com/Chapter02/2_2_1.html">&#8220;Short Code&#8221;</a>,<br />
+which had to be hand-compiled to machine code. Its purpose was to allow<br />
+developers to think at a higher level and to avoid the 1s and 0s of machine<br />
+code while programming. Afterward, <a
+href="http://members.fortunecity.com/jonhays/Hopper.html">Grace Hopper</a><br />
+took this to the next logical level, and in 1951, created the first<br />
+compiler. Developers could think and write code at a higher level and the<br />
+computer would generate machine code for them. I&#8217;m no historian, but<br />
+this appears to be the first concrete example of code generation. And, even<br />
+in 1951, its goals were the same as today: faster, less defect-ridden<br />
+coding.</p>
+</p>
+<p>
+<p>This is not all to say that there isn&#8217;t really something<br />
+&#8216;new&#8217; going on now. I think what feels &#8216;new&#8217; to<br />
+Jack is that he and others have recognized that it&#8217;s time to shift a<br />
+little further up the value chain (again). Java and .<span class="caps">NET</span> provide suitable<br />
+plumbing, but there&#8217;s no need to think at that low a level for many<br />
+of today&#8217;s application development needs. <a
+href="http://nakedobjects.org">Naked Objects</a> solves the problem in a<br />
+different way. Smalltalk and Ruby solve it in yet another way (you<br />
+don&#8217;t see much code generation going on in the high-level, dynamic<br />
+language world&#8212;incidentally, Jack&#8217;s book uses Ruby to generate<br />
+Java code. Ruby is the high level language and Java is the &quot;machine<br />
+code&quot;).</p>
+</p>
+<p>
+<p>I&#8217;d say this new trend in engineering is really just the natural<br />
+progression of an ever-present trend in our industry&#8217;s evolution.<br />
+Today&#8217;s high level, cutting-edge language, environment, or paradigm<br />
+is tomorrow&#8217;s machine code. Jack&#8217;s right: code generation is<br />
+important and you <tt>do</tt> need to understand it&#8230;unless you like<br />
+being a plumber.</p>
+</p>
+<p>
+<p>Update: <a
+href="http://www.codegeneration.net/lth_archives/000229.html">Thanks,<br />
+Jack</a></p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1><a href="/blog/2004/05/31/benchmarking-considered-harmful/">Benchmarking Considered Harmful</a></h1>
+    
+    
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-05-31T00:00:00+02:00" pubdate data-updated="true">2004.05.31</time>
+    
+  </header>
+
+
+  <div class="article-content"><p>I&#8217;ve recently been reading <a href="http://sethgodin.com">Seth<br />
+Godin&#8217;s</a> books, and like all books that I actually finish reading, their<br />
+message has crept into my every day thinking. I highly recommend his most<br />
+recent, <a
+href="http://www.amazon.com/exec/obidos/dt/assoc/tg/aa/xml/assoc/-/1591840414/permissionmarket/ref%3Dac%5Fbb6%5F%2C%5Famazon/102-0400087-9791323">Free<br />
+Prize Inside</a>.</p>
+<p>
+<p>Seth also has a <a href="http://sethgodin.typepad.com">weblog</a> which<br />
+offers a non-stop, up-to-the-minute continuation of the material in his<br />
+books. Today, he made his <a
+href="http://sethgodin.typepad.com/seths_blog/2004/05/the_curse_of_gr.html">best<br />
+weblog entry yet</a>. He specifically takes aim in this post at the act of<br />
+benchmarking, but more generally at the outdated idea of linear innovation.<br />
+While he doesn&#8217;t specifically say so in this post, the ideas from<br />
+this post, Free Prize Inside, and <a
+href="http://www.amazon.com/exec/obidos/tg/detail/-/159184021X/qid=1086035550/sr=8-1/ref=pd_ka_1/102-0400087-9791323?v=glance&s=books&n=507846">Purple<br />
+Cow</a> are directly applicable in (probably any field, but specifically)<br />
+the computer industry.</p>
+</p>
+<p>
+<p>Once you know what &quot;Purple Cow&quot; means, I&#8217;d be interested to<br />
+hear what people think of as being recent technological Purple Cows (not<br />
+from a business perspective). I&#8217;ve written about this as it relates<br />
+to programming language evolution (<a
+href="index.cgi/Computing/Programming/LanguageEvolution.html,v">LanguageEvolution</a><br />
+&#8212; mostly regurgitating the thoughts of other smarter people :). A<br />
+more concrete, actually implemented example would be <a
+href="http://www.beta4.com/seaside2/">Seaside</a>. Any recent others of<br />
+note?</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/24/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/22/">Newer &rarr;</a>
+    
+  </div>
+</div>
+
+    </section>
+    <aside id="page-sidebar">
+      
+        <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://www.nordicruby.org/">Nordic Ruby</a></span>
+        <span class="location">Stockholm</span>
+        <span class="the-date">June 6-9, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>-->
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section class="widget">
+  <h2 class="widget-header">Recent Posts</h2>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/05/20/discipline-stomp-out-cynicism/">Discipline: Stomp Out Cynicism</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it's not your job</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/19/im-a-wunderkind/">I'm a Wunderkind!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/02/15/switched-to-github/">Switched to github page, octopress, and a new design</a>
+      </li>
+    
+  </ul>
+</section>
+
+      
+    </aside>
+  </div><!-- /div#main -->
+
+  <footer id="page-footer" role="contentinfo">
+    <section  class="hreview book"  id="passionate-programmer-book">
+  <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
+  <img src="/images/passionate-programmer-book.jpg" alt="The Passionate Programmer">
+  <h1 class="summary">Get Passionate Again</h1>
+  <p class="description" >Remarkable careers don't come by chance.</p>
+  </a>
+  <blockquote>
+    <p>I was blown away.</p>
+  </blockquote>
+  <cite><a href="http://pragdave.pragprog.com/">Dave Thomas, Pragmatic Programmers</a></cite>
+</section>
+
+
+
+  <section id="latest-tweet">
+    <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+      <script type="text/javascript">
+        jQuery(function($) {
+          getTwitterFeed("chadfowler", 1, false);
+        });
+      </script>>
+    <blockquote class="twitter-tweet">
+      <ul id="tweets">
+        <li class="loading">Status updating...</li>
+      </ul>
+    </blockquote>
+    <a class="user" href="https://twitter.com/chadfowler">@chadfowler</a>
+    <span id="tweet-time"></span>
+  </section>
+
+
+<p class="copyright">The Passionate Programmer © 2013  Chad Fowler .</p>
+
+
+  </footer>
+
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'chadfowler';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+
+  <script src="/javascripts/vendor/prism.min.js"></script>
+  <script src="/javascripts/plugins.js"></script>
+  <script src="/javascripts/main.js"></script>
+
+  
+
+</body>
+</html>
