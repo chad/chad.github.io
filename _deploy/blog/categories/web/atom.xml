@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: web | The Passionate Programmer]]></title>
-  <link href="http://chadfowler.com/blog/categories/web/atom.xml" rel="self"/>
-  <link href="http://chadfowler.com/"/>
-  <updated>2013-05-20T13:25:07+02:00</updated>
-  <id>http://chadfowler.com/</id>
+  <link href="http://chad.github.com/chad/blog/categories/web/atom.xml" rel="self"/>
+  <link href="http://chad.github.com/chad/"/>
+  <updated>2013-05-20T16:07:41+02:00</updated>
+  <id>http://chad.github.com/chad/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How Rails Developers do Ajax (with jQuery) in 2011]]></title>
-    <link href="http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/"/>
+    <link href="http://chad.github.com/chad/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/"/>
     <updated>2011-02-09T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011</id>
+    <id>http://chad.github.com/chad/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011</id>
     <content type="html"><![CDATA[<p>Wanting to survey what the current state of the art in Rails Ajax development is, I asked this question on twitter:</p>
 
 <p><a href="http://twitter.com/#!/chadfowler/status/35068144976404480"><img src="http://chadfowler.com/ajax_question.png" alt="Rails developers, how are you doing Ajax with JQuery these days? .js.erb templates? Rendering partials back old-style?"/></a></p>

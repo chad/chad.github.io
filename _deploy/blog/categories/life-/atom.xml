@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: life, | The Passionate Programmer]]></title>
-  <link href="http://chadfowler.com/blog/categories/life-/atom.xml" rel="self"/>
-  <link href="http://chadfowler.com/"/>
-  <updated>2013-05-20T13:25:07+02:00</updated>
-  <id>http://chadfowler.com/</id>
+  <link href="http://chad.github.com/chad/blog/categories/life-/atom.xml" rel="self"/>
+  <link href="http://chad.github.com/chad/"/>
+  <updated>2013-05-20T16:07:41+02:00</updated>
+  <id>http://chad.github.com/chad/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Harajuku Moment]]></title>
-    <link href="http://chadfowler.com/blog/2011/03/15/the-harajuku-moment/"/>
+    <link href="http://chad.github.com/chad/blog/2011/03/15/the-harajuku-moment/"/>
     <updated>2011-03-15T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/03/15/the-harajuku-moment</id>
+    <id>http://chad.github.com/chad/blog/2011/03/15/the-harajuku-moment</id>
     <content type="html"><![CDATA[<p>A few years ago, sitting in the July heat on a wall in the Harajuku district of Tokyo, I came to a conclusion: I had let myself be a loser. At least, I had let myself become a partial loser. I was fat and unhappy. My skin looked grey. I was slowly killing myself. I was obese. I made excuses to myself and others. I used my success in other areas as a justification: I just wasn't a fitness guy.</p>
 
 <p><strong>It was bullshit.</strong></p>
@@ -73,9 +73,9 @@ Note: I wrote a more detailed account of my weight loss story in "Tim Ferriss's"
   
   <entry>
     <title type="html"><![CDATA[Automation and Outsourcing]]></title>
-    <link href="http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing/"/>
+    <link href="http://chad.github.com/chad/blog/2011/02/18/automation-and-outsourcing/"/>
     <updated>2011-02-18T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing</id>
+    <id>http://chad.github.com/chad/blog/2011/02/18/automation-and-outsourcing</id>
     <content type="html"><![CDATA[<p>What's the difference between automation and outsourcing?</p>
 
 <p>I don't know if it's the same everywhere, but here in the USA we're deluged with fear-driven "news" reporting, decrying the theft or export of our jobs to low cost, less skilled, offshore labor.  Or even onshore "illegal" labor.  It might be Mexico. Or China. Or India.  In the 80s it was the Japanese. And it was robots and computers.</p>
@@ -115,9 +115,9 @@ http://www.flickr.com/photos/dancoulter/21042744/</p>
   
   <entry>
     <title type="html"><![CDATA[I Don't Know]]></title>
-    <link href="http://chadfowler.com/blog/2011/01/15/i-don%27t-know/"/>
+    <link href="http://chad.github.com/chad/blog/2011/01/15/i-don%27t-know/"/>
     <updated>2011-01-15T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/01/15/i-don't-know</id>
+    <id>http://chad.github.com/chad/blog/2011/01/15/i-don't-know</id>
     <content type="html"><![CDATA[<p>I had the pleasure of watching "Scott Chacon":http://scottchacon.com/ keynote at "CodeMash":http://codemash.org this week. He spoke about how "Github":http://github.com "manages" its development team and product development.  I enjoyed the talk, and encourage you to download his "slides":https://github.com/schacon/ddd if you weren't at the conference.</p>
 
 <p>Scott is a very energetic speaker and talks really fast, so he ended his keynote with a lot of time to spare (something I wish I would do more often). So he took questions from the audience.</p>
@@ -136,9 +136,9 @@ http://www.flickr.com/photos/dancoulter/21042744/</p>
   
   <entry>
     <title type="html"><![CDATA[Dead-End Jobs: Are You Suffering From Stockholm Syndrome? ]]></title>
-    <link href="http://chadfowler.com/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/"/>
+    <link href="http://chad.github.com/chad/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/"/>
     <updated>2010-12-30T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome</id>
+    <id>http://chad.github.com/chad/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome</id>
     <content type="html"><![CDATA[<p>Have you heard of Stockholm Syndrome? It's a name given to the condition wherein hostages develop positive feelings toward their captors despite being held in negative, unfavorable and even life-threatening conditions.  Victims of Stockholm Syndrome will even inexplicably stay with their captors even when given the chance at freedom.</p>
 
 <p>Hopefully nobody reading this is literally being held hostage right now. If you are, good luck!</p>

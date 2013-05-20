@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: management, | The Passionate Programmer]]></title>
-  <link href="http://chadfowler.com/blog/categories/management-/atom.xml" rel="self"/>
-  <link href="http://chadfowler.com/"/>
-  <updated>2013-05-20T13:25:07+02:00</updated>
-  <id>http://chadfowler.com/</id>
+  <link href="http://chad.github.com/chad/blog/categories/management-/atom.xml" rel="self"/>
+  <link href="http://chad.github.com/chad/"/>
+  <updated>2013-05-20T16:07:41+02:00</updated>
+  <id>http://chad.github.com/chad/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Automation and Outsourcing]]></title>
-    <link href="http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing/"/>
+    <link href="http://chad.github.com/chad/blog/2011/02/18/automation-and-outsourcing/"/>
     <updated>2011-02-18T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing</id>
+    <id>http://chad.github.com/chad/blog/2011/02/18/automation-and-outsourcing</id>
     <content type="html"><![CDATA[<p>What's the difference between automation and outsourcing?</p>
 
 <p>I don't know if it's the same everywhere, but here in the USA we're deluged with fear-driven "news" reporting, decrying the theft or export of our jobs to low cost, less skilled, offshore labor.  Or even onshore "illegal" labor.  It might be Mexico. Or China. Or India.  In the 80s it was the Japanese. And it was robots and computers.</p>

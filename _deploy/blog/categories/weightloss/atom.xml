@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: weightloss | The Passionate Programmer]]></title>
-  <link href="http://chadfowler.com/blog/categories/weightloss/atom.xml" rel="self"/>
-  <link href="http://chadfowler.com/"/>
-  <updated>2013-05-20T13:25:07+02:00</updated>
-  <id>http://chadfowler.com/</id>
+  <link href="http://chad.github.com/chad/blog/categories/weightloss/atom.xml" rel="self"/>
+  <link href="http://chad.github.com/chad/"/>
+  <updated>2013-05-20T16:07:41+02:00</updated>
+  <id>http://chad.github.com/chad/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Harajuku Moment]]></title>
-    <link href="http://chadfowler.com/blog/2011/03/15/the-harajuku-moment/"/>
+    <link href="http://chad.github.com/chad/blog/2011/03/15/the-harajuku-moment/"/>
     <updated>2011-03-15T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/03/15/the-harajuku-moment</id>
+    <id>http://chad.github.com/chad/blog/2011/03/15/the-harajuku-moment</id>
     <content type="html"><![CDATA[<p>A few years ago, sitting in the July heat on a wall in the Harajuku district of Tokyo, I came to a conclusion: I had let myself be a loser. At least, I had let myself become a partial loser. I was fat and unhappy. My skin looked grey. I was slowly killing myself. I was obese. I made excuses to myself and others. I used my success in other areas as a justification: I just wasn't a fitness guy.</p>
 
 <p><strong>It was bullshit.</strong></p>
