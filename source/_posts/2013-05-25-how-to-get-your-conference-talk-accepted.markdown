@@ -30,4 +30,4 @@ And his response:
 
 This is surely only one way to get a talk accepted, but as a new presenter, it's a good example to consider.
 
-(You can hear a conversation between me and Ben about this proposal and more at the <a href="http://robots.thoughtbot.com/post/48040191074/episode-44-i-feel-the-opposite-of-burnt-out">Giant Robots Podcast</a>.)
+(You can hear a conversation between me and Ben about this proposal and more at the <a href="http://learn.thoughtbot.com/podcast/44">Giant Robots Podcast</a>.)
