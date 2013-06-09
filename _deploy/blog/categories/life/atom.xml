@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: life | The Passionate Programmer]]></title>
-  <link href="http://chad.github.com/chad/blog/categories/life/atom.xml" rel="self"/>
-  <link href="http://chad.github.com/chad/"/>
-  <updated>2013-05-20T16:07:41+02:00</updated>
-  <id>http://chad.github.com/chad/</id>
+  <link href="http://chadfowler.com/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2013-06-09T13:44:31+02:00</updated>
+  <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Be Careful Of Who You Work With]]></title>
-    <link href="http://chad.github.com/chad/blog/2011/02/24/be-careful-of-who-you-work-with/"/>
+    <link href="http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with/"/>
     <updated>2011-02-24T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2011/02/24/be-careful-of-who-you-work-with</id>
+    <id>http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with</id>
     <content type="html"><![CDATA[<p>You instinctively know that who you associate with matters a lot.  Our parents bring us up steering away and toward others who influence us.</p>
 
 <p>But most of us don't realize just how much those around us influence us.</p>

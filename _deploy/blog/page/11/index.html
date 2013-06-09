@@ -9,7 +9,9 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Now that my domain is alive again (sorry if you tried to send me email within the last week and a half), I wante to quickly mention that Bruce Tate, &hellip;">
+  <meta name="description" content="I saw this while browsing the Merb source code, and despite the bad variable names thought it was pretty nice:
+module Enumerable
+def injecting(s) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chad.github.com/chad/blog/page/11/">
+  <link rel="canonical" href="http://chadfowler.com/blog/page/11/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -49,13 +51,18 @@
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:chad.github.com/chad" />
+    <input type="hidden" name="q" value="site:chadfowler.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
@@ -64,6 +71,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/08/03/enumerable-injecting/">Enumerable#injecting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-03T00:00:00+02:00" pubdate data-updated="true">2007.08.03</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I saw this while browsing the Merb source code, and despite the bad variable names thought it was pretty nice:</p>
+module Enumerable
+def injecting(s)
+inject(s) do |k, i|
+yield(k, i); k
+end
+end
+end
+<p>Use like:</p>
+<pre>[&#8216;o&#8217;, &#8216;hai&#8217;, &#8216;rly&#8217;, &#8216;srsly&#8217;].injecting({}) {|accumulator, value| accumulator[value] = value.size}
+<ol>
+	<li>=&gt; {&quot;srsly&quot;=&gt;5, &#8220;o&#8221;=&gt;1, &#8220;hai&#8221;=&gt;3, &#8220;rly&#8221;=&gt;3}</pre></li>
+</ol>
+<p>Simple pleasures.  I find it increasingly hard to live without things like this, Object#returning, and Symbol#to_proc as I start to use them.  <a href="http://www.paulgraham.com/power.html">After all&#8230;</a></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -446,44 +501,6 @@ What next?</p></p></div>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/05/02/rubyconf-2007-the-when-and-the-where/">RubyConf 2007&#8230; The When and the Where</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-05-02T00:00:00+02:00" pubdate data-updated="true">2007.05.02</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hey guess what?  <a href="http://rubycentral.org/news/2007/05/01/rubyconf-2007/">RubyConf 2007</a> is going to be in Charlotte, NC this year.  November 2-4.</p>
-<p>We&#8217;ll have a new page up at <a href="http://rubyconf.org">http://rubyconf.org</a> soon on which  you can focus all of your obsessive energies as you wait for registration to open.</p>
-<p>We&#8217;re going to be able to fit a few more people in this year, but it&#8217;s impossible to know how Ruby&#8217;s continued growth will affect attendance.</p>
-<p>Ruby hackers, start getting those talk ideas ready.  We&#8217;ll open up a call for proposals soonish as well.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/12/">&larr; Older</a>
@@ -525,6 +542,10 @@ What next?</p></p></div>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/25/how-to-get-your-conference-talk-accepted/">How to get your conference talk accepted</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/20/discipline-stomp-out-cynicism/">Discipline: Stomp Out Cynicism</a>
       </li>
     
@@ -538,10 +559,6 @@ What next?</p></p></div>
     
       <li class="post">
         <a href="/blog/2013/02/19/im-a-wunderkind/">I&#8217;m a Wunderkind!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/15/switched-to-github/">Switched to github page, octopress, and a new design</a>
       </li>
     
   </ul>
@@ -559,19 +576,6 @@ What next?</p></p></div>
 
 </footer>
   
-
-<script type="text/javascript">
-      var disqus_shortname = 'chadfowler';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
 
 
 

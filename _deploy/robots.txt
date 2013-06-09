@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://chad.github.com/chad/sitemap.xml 
+Sitemap: http://chadfowler.com/sitemap.xml 
