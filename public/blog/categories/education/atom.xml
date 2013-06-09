@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: education | The Passionate Programmer]]></title>
-  <link href="http://chad.github.com/chad/blog/categories/education/atom.xml" rel="self"/>
-  <link href="http://chad.github.com/chad/"/>
-  <updated>2013-05-20T16:07:41+02:00</updated>
-  <id>http://chad.github.com/chad/</id>
+  <link href="http://chadfowler.com/blog/categories/education/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2013-06-09T13:48:10+02:00</updated>
+  <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Re-thinking Software Development Education]]></title>
-    <link href="http://chad.github.com/chad/blog/2011/12/21/re-thinking-software-development-education/"/>
+    <link href="http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education/"/>
     <updated>2011-12-21T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2011/12/21/re-thinking-software-development-education</id>
+    <id>http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education</id>
     <content type="html"><![CDATA[<p>Where have I been lately?  Good question. When asked over these past months, I jokingly say something like, "These last 8 months at LivingSocial have been the best 4 years of my career."</p>
 
 <p>But I don't just mean I've been busy. I've been focused on building the best software development team I can to do what I think is some important and industry-changing work in the world of local commerce.</p>

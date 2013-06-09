@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: career, | The Passionate Programmer]]></title>
-  <link href="http://chad.github.com/chad/blog/categories/career-/atom.xml" rel="self"/>
-  <link href="http://chad.github.com/chad/"/>
-  <updated>2013-05-20T16:07:41+02:00</updated>
-  <id>http://chad.github.com/chad/</id>
+  <link href="http://chadfowler.com/blog/categories/career-/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2013-06-09T13:48:10+02:00</updated>
+  <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Re-thinking Software Development Education]]></title>
-    <link href="http://chad.github.com/chad/blog/2011/12/21/re-thinking-software-development-education/"/>
+    <link href="http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education/"/>
     <updated>2011-12-21T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2011/12/21/re-thinking-software-development-education</id>
+    <id>http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education</id>
     <content type="html"><![CDATA[<p>Where have I been lately?  Good question. When asked over these past months, I jokingly say something like, "These last 8 months at LivingSocial have been the best 4 years of my career."</p>
 
 <p>But I don't just mean I've been busy. I've been focused on building the best software development team I can to do what I think is some important and industry-changing work in the world of local commerce.</p>
@@ -50,9 +50,9 @@
   
   <entry>
     <title type="html"><![CDATA[Be Careful Of Who You Work With]]></title>
-    <link href="http://chad.github.com/chad/blog/2011/02/24/be-careful-of-who-you-work-with/"/>
+    <link href="http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with/"/>
     <updated>2011-02-24T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2011/02/24/be-careful-of-who-you-work-with</id>
+    <id>http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with</id>
     <content type="html"><![CDATA[<p>You instinctively know that who you associate with matters a lot.  Our parents bring us up steering away and toward others who influence us.</p>
 
 <p>But most of us don't realize just how much those around us influence us.</p>
@@ -81,9 +81,9 @@ http://www.flickr.com/photos/saintbob/165829023/</p>
   
   <entry>
     <title type="html"><![CDATA[Automation and Outsourcing]]></title>
-    <link href="http://chad.github.com/chad/blog/2011/02/18/automation-and-outsourcing/"/>
+    <link href="http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing/"/>
     <updated>2011-02-18T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2011/02/18/automation-and-outsourcing</id>
+    <id>http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing</id>
     <content type="html"><![CDATA[<p>What's the difference between automation and outsourcing?</p>
 
 <p>I don't know if it's the same everywhere, but here in the USA we're deluged with fear-driven "news" reporting, decrying the theft or export of our jobs to low cost, less skilled, offshore labor.  Or even onshore "illegal" labor.  It might be Mexico. Or China. Or India.  In the 80s it was the Japanese. And it was robots and computers.</p>
@@ -123,9 +123,9 @@ http://www.flickr.com/photos/dancoulter/21042744/</p>
   
   <entry>
     <title type="html"><![CDATA[McDonalds, Six Sigma, and Offshore Outsourcing (notes)]]></title>
-    <link href="http://chad.github.com/chad/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes/"/>
+    <link href="http://chadfowler.com/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes/"/>
     <updated>2011-02-10T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes</id>
+    <id>http://chadfowler.com/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes</id>
     <content type="html"><![CDATA[<p>
 These are notes from a talk I've given in various forms at "SCNA":http://scna.softwarecraftsmanship.org/, "CodeMash":http://codemash.org, and "Magic Ruby":http://magic-ruby.com.  I've mirrored them here from the "InfoEther weblog":http://infoether.com.
 
@@ -243,9 +243,9 @@ The presentation is called "McDonalds, Six Sigma, and Offshore Outsourcing - Une
   
   <entry>
     <title type="html"><![CDATA[Dead-End Jobs: Are You Suffering From Stockholm Syndrome? ]]></title>
-    <link href="http://chad.github.com/chad/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/"/>
+    <link href="http://chadfowler.com/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/"/>
     <updated>2010-12-30T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome</id>
+    <id>http://chadfowler.com/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome</id>
     <content type="html"><![CDATA[<p>Have you heard of Stockholm Syndrome? It's a name given to the condition wherein hostages develop positive feelings toward their captors despite being held in negative, unfavorable and even life-threatening conditions.  Victims of Stockholm Syndrome will even inexplicably stay with their captors even when given the chance at freedom.</p>
 
 <p>Hopefully nobody reading this is literally being held hostage right now. If you are, good luck!</p>
