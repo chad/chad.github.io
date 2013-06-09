@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: success | The Passionate Programmer]]></title>
-  <link href="http://chad.github.com/chad/blog/categories/success/atom.xml" rel="self"/>
-  <link href="http://chad.github.com/chad/"/>
-  <updated>2013-06-09T14:13:57+02:00</updated>
-  <id>http://chad.github.com/chad/</id>
+  <link href="http://chadfowler.com/blog/categories/success/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2013-06-09T14:58:19+02:00</updated>
+  <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Dead-End Jobs: Are You Suffering From Stockholm Syndrome? ]]></title>
-    <link href="http://chad.github.com/chad/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/"/>
+    <link href="http://chadfowler.com/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/"/>
     <updated>2010-12-30T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome</id>
+    <id>http://chadfowler.com/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome</id>
     <content type="html"><![CDATA[<p>Have you heard of Stockholm Syndrome? It's a name given to the condition wherein hostages develop positive feelings toward their captors despite being held in negative, unfavorable and even life-threatening conditions.  Victims of Stockholm Syndrome will even inexplicably stay with their captors even when given the chance at freedom.</p>
 
 <p>Hopefully nobody reading this is literally being held hostage right now. If you are, good luck!</p>

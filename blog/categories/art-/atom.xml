@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: art, | The Passionate Programmer]]></title>
-  <link href="http://chad.github.com/chad/blog/categories/art-/atom.xml" rel="self"/>
-  <link href="http://chad.github.com/chad/"/>
-  <updated>2013-06-09T14:13:57+02:00</updated>
-  <id>http://chad.github.com/chad/</id>
+  <link href="http://chadfowler.com/blog/categories/art-/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2013-06-09T14:58:19+02:00</updated>
+  <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[McDonalds, Six Sigma, and Offshore Outsourcing (notes)]]></title>
-    <link href="http://chad.github.com/chad/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes/"/>
+    <link href="http://chadfowler.com/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes/"/>
     <updated>2011-02-10T00:00:00+01:00</updated>
-    <id>http://chad.github.com/chad/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes</id>
+    <id>http://chadfowler.com/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes</id>
     <content type="html"><![CDATA[<p>
 These are notes from a talk I've given in various forms at "SCNA":http://scna.softwarecraftsmanship.org/, "CodeMash":http://codemash.org, and "Magic Ruby":http://magic-ruby.com.  I've mirrored them here from the "InfoEther weblog":http://infoether.com.
 
