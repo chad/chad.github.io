@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: rails, | The Passionate Programmer]]></title>
-  <link href="http://chadfowler.com/blog/categories/rails-/atom.xml" rel="self"/>
-  <link href="http://chadfowler.com/"/>
-  <updated>2013-06-09T13:48:10+02:00</updated>
-  <id>http://chadfowler.com/</id>
+  <link href="http://chad.github.com/chad/blog/categories/rails-/atom.xml" rel="self"/>
+  <link href="http://chad.github.com/chad/"/>
+  <updated>2013-06-09T13:54:46+02:00</updated>
+  <id>http://chad.github.com/chad/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Rails 3 Recipes needs tech reviewers!]]></title>
-    <link href="http://chadfowler.com/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers/"/>
+    <link href="http://chad.github.com/chad/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers/"/>
     <updated>2011-02-09T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers</id>
+    <id>http://chad.github.com/chad/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers</id>
     <content type="html"><![CDATA[<p><b>UPDATE: We got 8 times as many volunteers for Rails 3 Recipes reviews as we need.  You people are awesome!  Closing the call for help now.</b></p>
 
 <p>The original "Rails Recipes":http://www.pragprog.com/titles/fr_rr/rails-recipes has been used by tens of thousands of Rails developers as they've worked toward mastering everyone's favorite Web framework.  Five years later, and after the release of Rails 3, we're seeing a new wave of Rails developers.  Through my work with "InfoEther":http://infoether.com and "The Pragmatic Studio":http://pragmaticstudio.com it's clear that an updated version of this classic would help a huge group of new Rails developers.</p>
@@ -42,9 +42,9 @@
   
   <entry>
     <title type="html"><![CDATA[How Rails Developers do Ajax (with jQuery) in 2011]]></title>
-    <link href="http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/"/>
+    <link href="http://chad.github.com/chad/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/"/>
     <updated>2011-02-09T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011</id>
+    <id>http://chad.github.com/chad/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011</id>
     <content type="html"><![CDATA[<p>Wanting to survey what the current state of the art in Rails Ajax development is, I asked this question on twitter:</p>
 
 <p><a href="http://twitter.com/#!/chadfowler/status/35068144976404480"><img src="http://chadfowler.com/ajax_question.png" alt="Rails developers, how are you doing Ajax with JQuery these days? .js.erb templates? Rendering partials back old-style?"/></a></p>
