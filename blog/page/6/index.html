@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The Passionate Programmer</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="As I did for last year&#8217;s RubyConf, I&#8217;m starting a series of interviews of speakers at this year&#8217;s RailsConf to be held May 4-7 in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/page/6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="The Passionate Programmer" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">The Passionate Programmer</a></h1>
+  
+    <h2>practical self-engineering</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/10/railsconf-speaker-interview-charlie-nutter-and-evan-phoenix/">RailsConf Speaker Interview: Charlie Nutter and Evan Phoenix</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-10T00:00:00+01:00" pubdate data-updated="true">2009.03.10</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As I did for last year&#8217;s <a href="http://chadfowler.com/rubyconf-speaker-interviews">RubyConf</a>, I&#8217;m starting a series of interviews of speakers at this year&#8217;s <a href="http://railsconf.org">RailsConf</a> to be held May 4-7 in Las Vegas.</p>
+<p>First up are two of my Ruby heroes: <a href="http://blog.headius.com/">Charlie Nutter</a> and <a href="http://blog.fallingsnow.net/">Evan Phoenix</a>, leaders of the <a href="http://jruby.org">JRuby</a> and <a href="http://rubini.us">Rubinius</a> projects respectively. Whenever two people with the brains and determination to create a working Ruby implementation get together and want to impart some hard-earned wisdom, it&#8217;s well worth listening.</p>
+<p>Charlie and Evan will be jointly presenting a session called <a href="http://en.oreilly.com/rails2009/public/schedule/detail/8680">What Makes Ruby Go: An Implementation Primer</a> at RailsConf.  Probably one of the nerdier sessions at the conference, but as you&#8217;ll see there are big practical benefits to learning how Ruby implementations work, even for those of us who don&#8217;t have the time, skill, or interest to create our own.</p>
+<h2>This being a Rails conference, what&#8217;s the benefit for the average attendee in learning how to make a Ruby implementation? How can learning how to program Ruby itself help us become better Ruby (and Rails) programmers?</h2>
+<p><em>Evan</em>: One thing we&#8217;re going to focus is not just how to build a ruby implementation, but rather helping people understand how certain things have to be implemented and how they effect you. A great example is the method cache and how Object#extend effects it. This helps educate people on how using Object#extend in their code effects their application.</p>
+<p><em>Charlie</em>: Ruby does a really good job of hiding implementation details and hardware details and platform details. Unfortunately sometimes those are the details that mean the difference between a good application and a great one. My hope with this talk is that Ruby and Rails developers will not only learn how their favorite language is implemented, but how to make better use of its features.</p>
+<p>I think it will also be important for Rubyists to understand Ruby implementation details in the future, since there are very real limitations on how many features and how much performance you can squeeze out of Ruby. It&#8217;s often too easy for Ruby users to say &#8220;just make it faster&#8221; when they don&#8217;t understand how difficult it may be to do so.</p>
+<h2>Did you both get into this language/vm implementation thing as a hobby? How do you go from zero to leading a dynamic language implementation?</h2>
+<p><em>Evan</em>: Yep, just something fun to work on in my spare time. Following in others footsteps certainly helped the project along. Reading a lot of papers and such on early Smalltalk systems helped give me a good perspective.</p>
+<p><em>Charlie</em>: I got into JRuby after attending RubyConf 2004, where I was amazed that without knowing Ruby I understood every presentation. Since I was firmly rooted in the Java world, and since the JRuby project existed and was being managed by an old friend, I thought I&#8217;d try to help out.</p>
+<p>Since then, we&#8217;ve almost completely rewritten JRuby. We&#8217;ve taken it from being the slowest Ruby impl to one of the fastest. Where we could barely run any 1.8 code before, we now have dozens of production users. And we&#8217;re not even done yet; we have a great start on 1.9 support, and we have plans that could double performance again over the next couple months. It&#8217;s been a wild ride; Ruby and JRuby have changed my life.</p>
+<h2>How long do you think it will be before we start seeing Ruby 1.9 as the mainstream version everyone (developers and language implementors) is targeting?</h2>
+<p><em>Evan</em>: Honestly, I&#8217;ve got no idea. Implementors will likely not put too much energy into 1.9 compatibility until a lot of developers start calling for it. Because of all the changes to the APIs, my guess is that people will only start using 1.9 on new projects. So once 1.9 has been established as &#8216;stable enough&#8217;, people will consider using it when they&#8217;re getting started on something new.</p>
+<p>I think the biggest issue is not new applications, but rather libraries. Today&#8217;s rails apps probably use at least 10 gems. Those 10 developers that have to be aware of 1.9 compatibility. If they&#8217;re not, it&#8217;s likely that those gems will have issues under 1.9. How gem users and gem authors decided to sort out 1.9 compatibility will be something interesting to watch for.</p>
+<p><em>Charlie</em>: Ruby 1.9 is a great step forward for the C implementation, both in its improved performance and and its new features. But Ruby has reached a point in its lifecycle Java reached some years ago: getting people to move to a new version is like pulling teeth. We deal with people on a regular basis still running Java 1.4, even though it&#8217;s no longer a supported platform and was first released over six years ago. I don&#8217;t think it will be that bad for Ruby 1.9, but it&#8217;s a very similar situation.</p>
+<p>Ruby has matured, and is being used for mission-critical applications around the world. And along with that maturity comes a need for stability, not just stability in the implementations but stability of features and stability of development processes. Ruby 1.9.1, by most measures the first reasonably &#8220;stable&#8221; 1.9 release, has been out for less than two months, and it&#8217;s unclear how much more its features will change in 1.9.2 and beyond. It&#8217;s not battle-tested. It&#8217;s unfamiliar. And it will take time for people to start depending on 1.9 to help pay their bills&#8230;certainly more than a couple months.</p>
+<h2>If you had to quit using and developing for Ruby today, what do you think you would focus on?</h2>
+<p><em>Evan</em>: Hm. Lately I&#8217;ve been interested in Cocoa programming, both desktop and iPhone, so it&#8217;s likely I&#8217;d play with that to a certain extent.</p>
+<p>Knowing me, I&#8217;d probably start work on a brand new language and VM for fun. :)</p>
+<p><em>Charlie</em>: I don&#8217;t intend to work on JRuby forever, so this is a question often on my mind.</p>
+<p>In general, I hope to spend the rest of my life helping open platforms like the <span class="caps">JVM</span> &#8220;win&#8221; against closed, proprietary alternatives. My work on JRuby has been a lot of fun, but I&#8217;ve also been trying to prove a point: that the <span class="caps">JVM</span> is the best hope for language implementations in the future. Yes, it has its warts, and there&#8217;s some work needed to better support dynamic and functional languages. But it&#8217;s an amazing piece of technology, already one of the fastest (if not the fastest) managed runtimes in existence. With implementations like JRuby stretching it and nudging it forward, we&#8217;ll all benefit&#8230;and we&#8217;ll be able to use any language we choose.</p>
+<p>So if I didn&#8217;t work on or with Ruby anymore&#8230;I&#8217;d probably be doing the same thing for other languages on the <span class="caps">JVM</span>. But I like Ruby best so far :)</p>
+<h2>Creating an implementation of Ruby takes countless hours of work. How do you avoid burning out, and what are you passionate about outside of programming?</h2>
+<p><em>Evan</em>: This takes work for me, to avoid burnout. I&#8217;ve grown good at telling when I&#8217;m starting to go down that road and take action. One of the first things I do is a change of scenery, typically this means working in a coffee shop for the day. I also head up to San Francisco usually once a month to work in the EY office, which helps.</p>
+<p>Getting outside for some exercise helps clear my head and reduce stress levels, which also stave off burnout.</p>
+<p>I also try and switch gears within Rubinius. Usually my burnout is associated with frustration with one particular aspect of the project, for instance debugging a garbage collector. The project is big enough that I can set that aside for a bit and switch to something more exciting. This helps me keep my brain engaged in the project as a whole, but avoid that frustration.</p>
+<p><em>Charlie</em>: For me, programming is not what leads to burnout. I&#8217;ve done this stuff my whole life, and it&#8217;s hard for me to <strong>not</strong> be hacking at any hour of the day. It&#8217;s more than my job, it&#8217;s my vocation. My risk of burnout comes from the constant arms race with other Ruby implementations, other <span class="caps">JVM</span> language implementations, other managed platforms, and so on.</p>
+<p>While I&#8217;m proud of what we&#8217;ve accomplished with JRuby, I feel like I need to keep working at a breakneck pace to continue proving my point. Whenever someone posts a benchmark showing we&#8217;re slower, I feel obligated to fix the problem. Whenever someone talks about a new <span class="caps">JVM</span> dynamic language or Ruby implementation performing better, I feel like I am personally under attack. I&#8217;ve poured my heart and soul into JRuby, and there&#8217;s a lot of my spirit in there. If JRuby fails, I fail, so I work hard (maybe too hard) to ensure that doesn&#8217;t happen.</p>
+<p>Of course, it could be I need to get out more. :)</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/02/08/one-more-week-for-railsconf-proposals/">One More Week for RailsConf Proposals</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-08T00:00:00+01:00" pubdate data-updated="true">2009.02.08</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&#8217;re closing the <a href="http://en.oreilly.com/rails2009/public/cfp/46">RailsConf call for proposals</a> in just over a week, so if you&#8217;ve been procrastinating (certainly my M.O.), now&#8217;s the time to start putting something together.</p>
+<p>We&#8217;re keeping the <span class="caps">CFP</span> open longer this year than we have in years past, which is great for the content (Rails 3!!) and hard for the logistics. I think it&#8217;s a good trade-off.</p>
+<p>If you&#8217;re tracking and/or working on Rails 3, we&#8217;d especially love to see a proposal. If you don&#8217;t have anything <em>solid</em> yet but have a good idea you&#8217;d like to try to slot in later, I&#8217;d love to hear from you.</p>
+<p>We already have a number of <a href="http://en.oreilly.com/rails2009/public/schedule/presentations/General">talks</a> and <a href="http://en.oreilly.com/rails2009/public/schedule/topic/Tutorial">tutorials</a> selected, as well as keynotes by <a href="http://objectmentor.com" class="Uncle">Bob Martin</a>, <a href="http://rubyonrails.org/core">the Rails Core team</a>, and of course <a href="http://loudthinking.com"><span class="caps">DHH</span></a>.</p>
+<p>Both <a href="http://conference.caboose.org/">CabooseConf</a> and our <a href="http://chadfowler.com/2008/2/2/railsconf-community-project-code-drive">code drive</a> were popular hacking sessions last year, so we&#8217;re excited about the fact that this year CabooseConf will be run in conjunction with RailsConf this year, providing a <em>free</em> group hacking area (but you have to contribute to an open source project for admission). With the economy sucking the way it is now, hopefully this will give some people an affordable way to join the fun without spending as much money. Thanks to Courtenay and the caboosers for making that happen.</p>
+<p><a href="http://deadprogrammersociety.blogspot.com/">Ron Evans</a> will be organizing a music session this year. If all goes well, we&#8217;ll have more equipment than last year (sound system&#8212;maybe drums?), so if you&#8217;re a musician watch for it and come by to make some noise.</p>
+<p>I&#8217;m looking forward to holding RailsConf in Vegas this year. The venue is awesome, and Vegas is an easy location to get in and out of. All in all, things are shaping up for this to be yet another in a string of better-than-last-year RailsConfs.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/30/rails-studio-in-january/">Rails Studio in January</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-30T00:00:00+01:00" pubdate data-updated="true">2008.12.30</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://clarkware.com">Mike</a> just reminded me that the Early Bird discount is soon to expire for our January <a href="http://pragmaticstudio.com/rails/">Rails Studio</a> in Denver. If you&#8217;ve been thinking about attending a Rails Studio and work for a big company, here&#8217;s a tip I learned the hard way: corporations usually budget for training and then when it&#8217;s time to &#8220;save some dollars&#8221; in later quarters, they cut the training budget first. In my big corporate days, that bit me more than once, stopping me from going to conferences (<span class="caps">OOPSLA</span>) and training (XP Immersion, which I later eventually made it to).</p>
+<p>So if you&#8217;re interested in doing <em>any</em> training this year, I&#8217;d recommend that you do it in the first quarter before the budget is pulled out from under you. Unless you work for an enlightened company with a healthy revenue stream.</p>
+<p>The Rails Studio has the added advantage (for me) of being held at a beautiful, resort-like hotel with a bunch of really nice fitness facilities and excellent food. Last time we taught there, I was actually sad to go back to our full service gym at home.</p>
+<p>If you&#8217;re coming and either into getting in shape or music, let me know. Maybe we can arrange some after-hours activities.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/17/go-ahead-and-complain/">Go Ahead and Complain</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-17T00:00:00+01:00" pubdate data-updated="true">2008.12.17</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://twitter.com">Twitter</a> is an excellent service for allowing people to vent. I&#8217;d guess a large percentage of the messages that pump through the site are complaints about something (technology, airlines, restaurants, etc.). I know I&#8217;ve posted my share of complaints.</p>
+<p>A couple of days ago, <a href="http://ozmm.org/">Chris Wanstrath</a> linked to <a href="http://twitter.com/defunkt/status/112575642">one of his Twitter complaints</a> from a year and a half ago:</p>
+failed at setting up a public git repo with working push. giving up for tonight, working on something else.
+<p>This was probably the first seed that led to the birth of the extremely popular <a href="http://github.com">GitHub</a>.</p>
+<p>I&#8217;m hoping to remember this every time I type in a whiny tweet about something I have the power to fix. Complaining and being critical is great as long as you&#8217;re willing to do something about the problem when you can. And, maybe if it&#8217;s annoying enough for you to type it into Twitter to share with your followers, it&#8217;s annoying enough that a solution could be your next big thing.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/16/coding-in-sonata-allegro-form/">Coding in Sonata Allegro Form</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-16T00:00:00+01:00" pubdate data-updated="true">2008.12.16</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I used to think I would end up as a composer of <a href="http://everything2.com/e2node/20th%2520Century%2520Classical%2520Music">classical music</a>. I studied with one of my favorite composers, <a href="http://kamranince.com">Kamran Ince</a>.</p>
+<p>The process of composing music is very similar to the process of writing software. In fact, my brain has trouble distinguishing between the two disciplines sometimes.  One thing that&#8217;s very similar between the two is that they are both abstract and in both cases you start with a blank page (though the &#8220;page&#8221; for software is typically in an editor on your computer screen).</p>
+<p>More than once in my careers (music and software), this has led me to a dilemma: I get stuck because I&#8217;m overwhelmed by the limitless possibilities.</p>
+<p>This happened to me once as a composer. I was experiencing a sort of writer&#8217;s block. So Kamran suggested something bizarre: write a short piece in <a href="http://en.wikipedia.org/wiki/Sonata_form">Sonata Allegro form</a>.</p>
+<p>While Sonata Allegro form is an often-used structure for compositions, there aren&#8217;t many living composers who use it. It&#8217;s old fashioned. So writing New Music in this form is a strange proposition.  Kamran framed it as a one-week exercise to stop the writer&#8217;s block, and I figured writing <em>something</em> would be better than writing nothing, so I went with it.</p>
+<p>What flowed from there was a  25 minute piece for violin, cello, clarinet, and piano (the same instrumentation as Messiaen&#8217;s <a href="http://www-rcf.usc.edu/~echew/performances/messiaen-qtet.html">Quartet for the End of Time</a>, which was also an inspiration for the piece) in five movements. As a young composer, this was pretty epic. It was by far the best and most inspired piece of music I had written to date. The whole thing wasn&#8217;t in Sonata Allegro, of course. Just one movement (actually just the beginning of the movement). But the constraint had seeded my creativity (how to make it interesting while working in an outdated framework) and had, best of all, removed any <em>fear</em> I had about starting.</p>
+<p>I&#8217;ve done similar things with software since then. It works just as well.</p>
+<p>I was reminded of this today while chatting with Alan Francis, when he mentioned writing Java code with the rule that you can use <a href="http://cardboardsoftware.com/2007/5/27/redefining-simple.html">no braces</a> except where Java forces you to for class and method definitions.</p>
+<p>The interesting thing here is that not only does this constraint help to solve the &#8220;too abstract&#8221; problem but it (arguably) leads to interesting (and maybe better) design choices.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/12/twenty-more-days-in-2008/">Twenty More Days in 2008</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-12T00:00:00+01:00" pubdate data-updated="true">2008.12.12</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As I <a href="http://chadfowler.com/2008/12/4/develop-a-good-habit-in-20-days">said recently</a>, 20 days is the right length for me to develop beneficial habits.  It just so happens that, counting today, there are 20 days left in 2008.</p>
+<p>So what should we do? I&#8217;m thinking about trying to write fiction every day for the rest of the year. Or practice the saxophone.  Or write short pieces of &#8220;classical&#8221; music.  I&#8217;m not sure yet, but I have the rest of the day to decide and put the plan into action.</p>
+<p>My friend <a href="http://metaatem.net/">Erik Kastner</a>  showed me recently that Steve Pavlina posted something <a href="http://www.stevepavlina.com/blog/2005/04/30-days-to-success/">similar</a> a few years ago. At the bottom of the article he includes a bunch of ideas of things you could try to do for 30 days. So if you&#8217;re interested but don&#8217;t know what you want to do yet, have a look at his suggestions. They might trigger an inspiration.</p>
+<p>Good luck!</p>
+<p>Update: I chose fiction writing. Time will tell.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/07/all-developers-should-be-system-administrators/">All Developers Should Be System Administrators</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-07T00:00:00+01:00" pubdate data-updated="true">2008.12.07</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>All developers should, for at least one period in their careers, serve as system administrators.</p>
+<p>Be the person developers blame when their applications are slow, unresponsive, or crashing.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/04/your-customers-aren%27t-idiots/">Your Customers Aren&#8217;t Idiots</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-04T00:00:00+01:00" pubdate data-updated="true">2008.12.04</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was in a customer conference call with <a href="http://boboroshi.com/">John Athayde</a> recently, and he did something really smart. He was talking about his in-progress design for the customer&#8217;s product and he wanted to explain that we would have reusable snippets of the design which would allow us to consistently provide the same view of an important part of the system whenever it would show up. This being a Rails project, we would do this using ERb partials.</p>
+<p>So, John said, &#8220;We will extract this out into little snippets that I&#8217;ll call&#8230;partials&#8221;.  And so on.</p>
+<p>He could have made up a metaphor and used a new customer-friendly term for this.  Or he could have explained that we&#8217;re using Rails, and Rails supports this thing called &#8220;partials&#8221; which is&#8230;blah blah blah. But the former requires us to learn a dumb new word just for this project, and the latter is too much information. The term &#8220;partial&#8221; is a pretty good one to describe what it does. In fact, in most well-designed systems, the terms the <em>system</em> uses to describe concepts are pretty good.  Pretty easy to understand.</p>
+<p>For some reason we developers feel compelled to hide these terms and concepts from our customers as if they&#8217;re children that can&#8217;t be trusted with sharp tools. They&#8217;re not idiots. They just know different things than we do. Imagine if they tried to hide <em>their</em> terms and concepts from you because they assumed you were unable to understand them.</p>
+<p>I saw <a href="http://martinfowler.com">Martin Fowler</a> speak at an XP users&#8217; meeting several years ago, and when he got to the practice called &#8220;system metaphor&#8221;, he said he didn&#8217;t really do that practice so much anymore because (paraphrased from iffy memory), &#8220;Sometimes the best metaphor for a system is the system itself&#8221;. Note to self: keep that in mind more often.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/04/develop-a-good-habit-in-20-days/">Develop a Good Habit in 20 Days</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-04T00:00:00+01:00" pubdate data-updated="true">2008.12.04</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is nothing revolutionary, but the number 20 has held special significance for me since I was a young teenager.  I learned that if I started something and was still doing it 20 days later, it <em>stuck</em>.</p>
+<p>Since good habits seemed to stick after 20 days, I started to set 20 days as a goal whenever I wanted to get into the habit of doing a good, responsible thing.  Turns out, it works.</p>
+<p>I think there are two reasons it works. The obvious is that, for me, 20 days is the right amount of time to internalize behavior or get used to a new feeling, thing, taste, activity or what-not.  The less obvious but more important reason is that 20 days is short. It&#8217;s easy to commit to doing something for 20 days. It&#8217;s hard to commit to doing something forever. So, because I have this short duration which I believe to be like a magic spell, I&#8217;m able to convince myself to actually <em>try</em> to do something hard.  Even if something sucks, I can do it for 20 days.</p>
+<p>The number 20 probably won&#8217;t work for everyone, but I highly recommend trying it out and fine tuning the duration. Want to eat better?  Exercise? Learn Japanese? Practice a musical instrument more responsibly? Try to do it <em>well</em> for 20 days. That&#8217;s it. Don&#8217;t worry about whether it&#8217;s going to stick. Just promise yourself the 20 days.</p>
+<p>Even if the magic spell doesn&#8217;t work for you, the worst case is that you do something good for you for 20 days.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/02/the-awkward-structure-of-a-jazz-band-set/">The Awkward Structure of a Jazz Band Set</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-02T00:00:00+01:00" pubdate data-updated="true">2008.12.02</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Kelly and I went to <a href="http://www.afterthoughtbar.com/">The Afterthought</a> in Little Rock last night for the Monday night jazz show.  They&#8217;ve been running Monday night jazz at The Afterthought for 14 years now.  Before that it was at a place called The Oyster Bar (that was when I lived in Little Rock and briefly played jazz music here).</p>
+<p>The same people were there that were there last time.  They had more gray in their hair, but it was a familiar scene.</p>
+<p>The striking familiarity wasn&#8217;t the people, though.  It was the structure of the event.  I never noticed it before (maybe a case of not seeing the forest for the trees), but jazz gigs typically follow a common structure and share a set of common traits:</p>
+<ul>
+	<li>It was scheduled to start at 8. Nobody was there at 8.  It started at 8:30.</li>
+	<li>The band had obviously rehearsed 0 times for the gig. They didn&#8217;t know what songs they were going to play until right before each song started. Improvisation to the max.</li>
+	<li>Without rehearsal or a set list, they picked songs that everyone knew. This means they picked the same songs we&#8217;ve all played a million times.</li>
+	<li>They started with a bossa nova. They followed that with a waltz. Then (as I felt the same internal strife they apparently did) I heard the band leader say to the drummer, &#8220;I&#8217;m not sure what we should play next, but it should be a swing tune. We&#8217;ve already done a bossa and a waltz.&#8221;  Jazz people have an unwritten rule that you have to play a blues, something with a beat, a waltz, a ballad, and a swing tune in a set. It&#8217;s as if the set is not properly balanced otherwise and the jazz police will arrest them for producing an unbalanced set.</li>
+	<li>They had someone sit in and played a song nobody else knew, so they all got the fakebooks out and read along.</li>
+	<li>In every song, every band member played a solo in the same order.  In every song at the end of the solos, the saxophone played &#8220;traded fours&#8221; with the drummer.  Trading fours is when an instrumentalist improvises for four measures and then the band drops out for the drummer to improvise for four measures, until they get once or twice through the form of the tune. I can count the number of instances of trading fours I&#8217;ve enjoyed as a listener on the fingers of one hand.</li>
+	<li>After the &#8220;last song&#8221; before the break, they played the standard set break tune, which is a song originally done by Miles Davis that sounds like the closing tag of a circus show. I can&#8217;t remember the name of it, and they probably can&#8217;t either. It&#8217;s meant to be transitional music over which the band says &#8220;thank you and we&#8217;ll be right back&#8221; but it usually lasts 5 minutes or more. It lasted 5 minutes or more.</li>
+	<li>The entire band ran immediately outside to smoke.</li>
+	<li>We left, but they probably took a break that lasted nearly as long as they had played.</li>
+</ul>
+<p>That&#8217;s a whole lot of ritual. And the funny thing is that I bet none of the band members enjoy most of it and I know the audience doesn&#8217;t care about any of it. The whole routine is constrained by a set of rules that aren&#8217;t done in the name of either the customer (audience) or the supplier (musician). They&#8217;re done for no one.</p>
+<p>I have done all of these things countless times and I have not ever enjoyed the constraints. It&#8217;s only now that I&#8217;ve been away from it that I realize the constraints even exist.</p>
+<p>I wonder what sort of things I do now that hindsight will reveal to be pointless ritual.</p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/7/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://www.nordicruby.org/">Nordic Ruby</a></span>
+        <span class="location">Stockholm</span>
+        <span class="the-date">June 6-9, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/08/how-to-give-a-keynote/">How to Give a Keynote</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/25/how-to-get-your-conference-talk-accepted/">How to get your conference talk accepted</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/20/discipline-stomp-out-cynicism/">Discipline: Stomp Out Cynicism</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it&#8217;s not your job</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

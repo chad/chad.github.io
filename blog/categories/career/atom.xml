@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: career | The Passionate Programmer]]></title>
+  <link href="http://chadfowler.com/blog/categories/career/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2013-06-09T13:48:10+02:00</updated>
+  <id>http://chadfowler.com/</id>
+  <author>
+    <name><![CDATA[Chad Fowler]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Leaving a Legacy...System]]></title>
+    <link href="http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system/"/>
+    <updated>2011-03-17T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system</id>
+    <content type="html"><![CDATA[<p>Ever since reading David Heinemeir Hansson's post "Enterprise Is the New Legacy":http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php over five years ago, I've been chewing on something. The gist of the post was that "enterprise" is and should be a bad word, just like "legacy".</p>
+
+<p>But why is "legacy" a bad word to begin with?  The word makes most software developers and IT people ill.</p>
+
+<p>In other fields and in life in general, the word "legacy" isn't thusly encumbered.  It refers to an inheritance left to those behind you. Your life's work. Your essential story.</p>
+
+<p>In software, that story is assumed to be a tragedy.</p>
+
+<p>But even in the case of software, "legacy" is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as "legacy" indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we're "left with" and that we must either maintain or replace.</p>
+
+<p>That isn't so bad, is it?  In an industry where "more software projects fail or are 'challenged' than succeed":http://www.projectsmart.co.uk/docs/chaos-report.pdf, getting to legacy status is cause for celebration!</p>
+
+<p>Here's a sad idea:  as developers, even when we <em>do</em> succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated "within 10 years of its birth":http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf.</p>
+
+<p>So, what do we developers leave as a legacy? In most cases, we don't leave much of anything.</p>
+
+<p>At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom TCP/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.</p>
+
+<p>That was ten years ago. I'd be willing to bet it's still running. If not the whole system, at least a subset.</p>
+
+<p>That would make it 35.</p>
+
+<p>Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.</p>
+
+<p>How <em>would</em> I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?</p>
+
+<p>It's daunting, isn't it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn't. Even predicting next year is hard.</p>
+
+<p>So maybe I'd need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.</p>
+
+<p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
+
+<p>I don't <em>know</em> how to design a system that could live a long and healthy life. I don't <em>know</em> because I haven't done it yet. Have you?</p>
+
+<p><i>Note: This wasn't a rhetorical question.</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I Don't Know]]></title>
+    <link href="http://chadfowler.com/blog/2011/01/15/i-don%27t-know/"/>
+    <updated>2011-01-15T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/01/15/i-don't-know</id>
+    <content type="html"><![CDATA[<p>I had the pleasure of watching "Scott Chacon":http://scottchacon.com/ keynote at "CodeMash":http://codemash.org this week. He spoke about how "Github":http://github.com "manages" its development team and product development.  I enjoyed the talk, and encourage you to download his "slides":https://github.com/schacon/ddd if you weren't at the conference.</p>
+
+<p>Scott is a very energetic speaker and talks really fast, so he ended his keynote with a lot of time to spare (something I wish I would do more often). So he took questions from the audience.</p>
+
+<p>A lot of the questions were about trying to fit Github's process into companies of very different profiles.  So, for example, "Would this work in blah blah blah environment that is totally different from Github?"  Scott's answer was excellent in these several cases:</p>
+
+<p>"I don't know."</p>
+
+<p>He didn't blow the questions off. He then discussed possibilities.  But it was incredibly refreshing to hear "I don't know" from a speaker being questioned in front of an audience of almost 1000 people.</p>
+
+<p>I wrote in "The Passionate Programmer":http://pragprog.com/titles/cfcar2 about the difficulty and importance of learning to say "no". I think "I don't know" is scarier and harder and maybe more important.</p>
+
+<p>When someone regularly says "I don't know", you trust them more when they say they DO know.</p>
+]]></content>
+  </entry>
+  
+</feed>
