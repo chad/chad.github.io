@@ -9,9 +9,10 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="I&#8217;ve recently been reading Seth
-Godin&#8217;s books, and like all books that I actually finish reading, their
-message has crept into my every &hellip;">
+  <meta name="description" content="Jack Herrington, who wrote
+the excellent Code
+Generation In Action, has a couple of <a
+href="http://today.java.net/pub/a/today/2004/05/12/generation1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +72,111 @@ message has crept into my every &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/06/01/code-generation-is-new/">Code Generation Is New?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-06-01T00:00:00+02:00" pubdate data-updated="true">2004.06.01</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.codegeneration.net/lth/">Jack Herrington</a>, who wrote<br />
+the excellent <a href="http://www.manning.com/herrington/index.html">Code<br />
+Generation In Action</a>, has a couple of <a
+href="http://today.java.net/pub/a/today/2004/05/12/generation1.html">newish</a><br />
+<a
+href="http://today.java.net/pub/a/today/2004/05/31/generation-pt2.html">articles</a><br />
+up on <a href="http://java.net">java.net</a>.</p>
+<p>
+<p>I&#8217;ve linked to them here both because they&#8217;re well worth<br />
+reading and learning from, and because there is something that has been<br />
+bothering me since I read a draft of Code Generation in Action. The first<br />
+line of Jack&#8217;s java.net article captures it. Here&#8217;s the full<br />
+first paragraph for context:</p>
+</p>
+<pre>
+  Code generation is a key new trend in engineering, one that you need to
+  understand well.  The reason is simple: today's modern frameworks are
+  extremely code-intensive. Using a code generator to build the code for
+  you can save you a lot of time, both in writing the code and fixing the
+  inevitable bugs that spring from swathes of hand-written code.
+</pre>
+<p>
+<p>And, later in the article, Jack&#8217;s definition of code generation:</p>
+</p>
+<pre>
+  Code generation is using one application to build code for
+  another application.
+</pre>
+<p>
+<p>So, code generation is the automation of code creation for the purpose of<br />
+reducing defects and increasing developer productivity. Defect reduction is<br />
+largely what inspired John Mauchly in 1949 to create <a
+href="http://www.programcpp.com/Chapter02/2_2_1.html">&#8220;Short Code&#8221;</a>,<br />
+which had to be hand-compiled to machine code. Its purpose was to allow<br />
+developers to think at a higher level and to avoid the 1s and 0s of machine<br />
+code while programming. Afterward, <a
+href="http://members.fortunecity.com/jonhays/Hopper.html">Grace Hopper</a><br />
+took this to the next logical level, and in 1951, created the first<br />
+compiler. Developers could think and write code at a higher level and the<br />
+computer would generate machine code for them. I&#8217;m no historian, but<br />
+this appears to be the first concrete example of code generation. And, even<br />
+in 1951, its goals were the same as today: faster, less defect-ridden<br />
+coding.</p>
+</p>
+<p>
+<p>This is not all to say that there isn&#8217;t really something<br />
+&#8216;new&#8217; going on now. I think what feels &#8216;new&#8217; to<br />
+Jack is that he and others have recognized that it&#8217;s time to shift a<br />
+little further up the value chain (again). Java and .<span class="caps">NET</span> provide suitable<br />
+plumbing, but there&#8217;s no need to think at that low a level for many<br />
+of today&#8217;s application development needs. <a
+href="http://nakedobjects.org">Naked Objects</a> solves the problem in a<br />
+different way. Smalltalk and Ruby solve it in yet another way (you<br />
+don&#8217;t see much code generation going on in the high-level, dynamic<br />
+language world&#8212;incidentally, Jack&#8217;s book uses Ruby to generate<br />
+Java code. Ruby is the high level language and Java is the &quot;machine<br />
+code&quot;).</p>
+</p>
+<p>
+<p>I&#8217;d say this new trend in engineering is really just the natural<br />
+progression of an ever-present trend in our industry&#8217;s evolution.<br />
+Today&#8217;s high level, cutting-edge language, environment, or paradigm<br />
+is tomorrow&#8217;s machine code. Jack&#8217;s right: code generation is<br />
+important and you <tt>do</tt> need to understand it&#8230;unless you like<br />
+being a plumber.</p>
+</p>
+<p>
+<p>Update: <a
+href="http://www.codegeneration.net/lth_archives/000229.html">Thanks,<br />
+Jack</a></p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -869,164 +975,6 @@ you&#8217;re growing.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/02/28/in-c/">In C</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-02-28T00:00:00+01:00" pubdate data-updated="true">2004.02.28</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Since coming back from the MFASoftware program, I&#8217;ve been trying to<br />
-stay focused on my remote assignments. I&#8217;ve been doing a<br />
-particularily bad job of actually finishing anything, but I <b>have</b><br />
-been learning a lot.</p>
-<p>
-<p>One of my assignments was to read and annotate Guy Steele&#8217;s Lambda<br />
-The Ultimate Imperative (<a
-href="http://library.readscheme.org/page1.html">library.readscheme.org/page1.html</a>).<br />
-I&#8217;ve read the paper twice and opened up an editor to write about it<br />
-five or six times. As I read the paper, I knew it was teaching me something<br />
-that was going to have a lasting effect, but somehow when I sat to write<br />
-about it, the only memories I could summon were the mechanics of Scheme<br />
-(which the paper is written in/using).</p>
-</p>
-<p>
-<p>I&#8217;ve been learning Scheme in parallel to reading this paper, and<br />
-I&#8217;ve definitely felt a lot of &quot;schemisms&quot; snap into place<br />
-as I read. But I know that simply learning the language isn&#8217;t what<br />
-this paper is about. It&#8217;s just so hard to separate learning the<br />
-language from discovering the purity and simplicity of what Steele is<br />
-demonstrating. The beauty of Scheme is that there&#8217;s hardly anything<br />
-to it. To see Steele effortlessly implement programming constructs on top<br />
-of this near-nothingness drives home the power of minimalism.</p>
-</p>
-<p>
-<p>So, now I realise that, above all else, it&#8217;s a fascination with<br />
-minimalism that I&#8217;ve brought home from Illinois. <a
-href="http://www.cincomsmalltalk.com/userblogs/avi/blogView?showComments=true&entry=3254253382">Apparently</a>,<br />
-I&#8217;m not the only one.</p>
-</p>
-<p>
-<p>If minimalism is good, then what&#8217;s the opposite of minimalism?</p>
-</p>
-<p>
-<p>When I studied music composition with <a
-href="http://www.kamranince.com">Kamran_Ince</a>, there was one thing I<br />
-always knew he was going to say when I walked into his office with a new<br />
-composition. He was going to tell me something like, &quot;You&#8217;ve got<br />
-such a great idea here. Why do you have to run away from it so quickly? You<br />
-didn&#8217;t develop it. We didn&#8217;t even know it happened!&quot; I<br />
-would literally walk in to the beginning of a lesson <tt>knowing</tt> this<br />
-was going to happen, and yet it would happen every time. It felt a little<br />
-like not being able to spell &quot;<span class="caps">FBI</span>&quot; or like being given the<br />
-answers to a test and then failing it anyway.</p>
-</p>
-<p>
-<p>Though he wasn&#8217;t necessarily trying to encourage me to write music in<br />
-the style of a minimalist, the lesson was in fact about minimalism as a<br />
-craft element. And, if minimalism is good, then what I was bringing to<br />
-Kamran each week was its opposite. Lots of good ideas, jammed into a very<br />
-tiny temporal space. The end result was a jumble of intelligent thoughts,<br />
-stepping all over each other so that none were ultimately recognizable.<br />
-Have you tried to use <a
-href="http://java.sun.com/products/jndi/tutorial/"><span class="caps">JDNI</span></a>? It was<br />
-probably the musical equivalent. In the software world, this has the effect<br />
-of both muddying up what is already there, and creating an environment that<br />
-is unfriendly to extension and change.</p>
-</p>
-<p>
-<p>I don&#8217;t know much about the thing called &quot;minimalism&quot; in<br />
-art-forms other than music. But, in music, one of minimalism&#8217;s key<br />
-features is that of emergence. When players are making repetitive and<br />
-rhythmic sounds, a la <a href="http://terryriley.com">Terry</a> <a
-href="http://terryriley.com/">Reilly</a>, it&#8217;s almost never the<br />
-<b>written</b> notes and rhythms that are interesting. It&#8217;s what<br />
-happens when they&#8217;re all played together by imperfect humans.<br />
-It&#8217;s the slow and subtle phase shifting, and then the<br />
-musicians&#8217; subtle reactions to the phase shifting.</p>
-</p>
-<p>
-<p>Scheme obviously creates an environment that encourages emergent behaviors.<br />
-In fact, the whole point of Lambda the Ultimate Imperative (LtUI) is to<br />
-show that Scheme can be an imperative language, without changing Scheme and<br />
-without &quot;shoe-horning&quot; Scheme to awkwardly meet the imperative<br />
-critera. LtUI happens to be written by one of Scheme&#8217;s designers, but<br />
-there&#8217;s no reason you or I couldn&#8217;t have written that paper<br />
-(other than my age at its time of publication).</p>
-</p>
-<p>
-<p>So, back to Kamran Ince. He was trying to teach me not just to keep my<br />
-music simple so I could develop ideas. He was also trying to teach me to<br />
-create powerful ideas. You can&#8217;t write music the &quot;Kamran<br />
-Way&quot; while making timid gestures. If you&#8217;re going to let it all<br />
-hang out with an idea, it better be strong.</p>
-</p>
-<p>
-<p>And, with music, I think it&#8217;s a lot more apparent (than in<br />
-programming) that you can&#8217;t start with an idea that doesn&#8217;t<br />
-provide a platform on which to build a piece. For a patently contrived<br />
-example, listen to <a
-href="http://chadfowler.com/music/ThatsAllFolks.mp3">this</a>. It would be<br />
-possible to build a piece of music on something that sounds so final, but<br />
-it would sound strange and intentional. While the temporal element is<br />
-missing, an extremely rigid language or an <span class="caps">API</span> that is too large and<br />
-complex can produce the same effect of stunted idea growth in software. For<br />
-(potentially inflamatory) example, if a method of an object can only accept<br />
-parameters of a certain class, my freedoms are extremely and intentionally<br />
-limited when using that object.</p>
-</p>
-<p>
-<p>So, &quot;good minimalism&quot; doesn&#8217;t require simply that we<br />
-&quot;be minimal&quot;. It requires that we correctly balance substance and<br />
-space in a way that encourages evolutionary growth. It is possible to be<br />
-minimal and rigid, which will lead to small ideas that can&#8217;t be<br />
-developed any further. This is rarely what we want. Minimalism is one of<br />
-these words (like &quot;simple&quot;) that sound easy to do but actually<br />
-require a lot of practice to get them right.</p>
-</p>
-<p>
-<p>I see now that Lisp and Scheme aren&#8217;t different because of their<br />
-minimal syntax or their dynamism. It&#8217;s the fact that they &quot;get<br />
-out of the way&quot;, providing the right balance of mechanism and policy<br />
-to allow their users to continue to evolve in the direction that nature<br />
-selects, while not being so austere that wheels are necessariliy being<br />
-reinvented every day. This is what has drawn me to Ruby (and Smalltalk and<br />
-Scheme) and away from the likes of Java and C#. Not dynamic vs. static<br />
-typing or compiled vs. interpreted environments.</p>
-</p>
-<p>
-<p>Many of the arguments for and against these minimal environments seem to<br />
-boil down to the Mechanism vs. Policy <a
-href="http://pragprog.com/pragdave/Practices/MechPolicy.rdoc">tradeoff</a>.<br />
-But, I&#8217;ll leave that for a later post.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/25/">&larr; Older</a>
@@ -1068,6 +1016,10 @@ But, I&#8217;ll leave that for a later post.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/08/how-to-give-a-keynote/">How to Give a Keynote</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/25/how-to-get-your-conference-talk-accepted/">How to get your conference talk accepted</a>
       </li>
     
@@ -1081,10 +1033,6 @@ But, I&#8217;ll leave that for a later post.</p>
     
       <li class="post">
         <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it&#8217;s not your job</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/02/19/im-a-wunderkind/">I&#8217;m a Wunderkind!</a>
       </li>
     
   </ul>
