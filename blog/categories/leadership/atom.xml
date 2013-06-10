@@ -4,7 +4,7 @@
   <title><![CDATA[Category: leadership | The Passionate Programmer]]></title>
   <link href="http://chadfowler.com/blog/categories/leadership/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2013-06-09T14:59:35+02:00</updated>
+  <updated>2013-06-10T10:38:12+02:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Teams Are Systems]]></title>
+    <link href="http://chadfowler.com/blog/2013/06/09/teams-are-systems/"/>
+    <updated>2013-06-09T16:25:00+02:00</updated>
+    <id>http://chadfowler.com/blog/2013/06/09/teams-are-systems</id>
+    <content type="html"><![CDATA[<p>The most challenging legacy systems I've ever maintained over the years are the teams I have managed.</p>
+
+<p>I don't mean to be crass or to imply th</p>
+
+<blockquote>
+Skill can be developed systematically.
+A SYSTEM is *awesome*. A system, you can understand.
+A system you can HACK.
+</blockquote>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[If it stresses you out, it's not your job]]></title>

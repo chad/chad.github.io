@@ -9,10 +9,7 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Cool idea, Mike.
-Heres what I&#8217;ve got installed:
-$ gem list|grep &#8216;^[a-zA-Z]&#8217; action_profiler (1.0.0)
-actionmailer (1.3.2, 1.3.1, 1.2 &hellip;">
+  <meta name="description" content="One of the first thing you learn when you write your own weblog software and get a decent number of subscribers, is that you need to provide a way &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +69,92 @@ actionmailer (1.3.2, 1.3.1, 1.2 &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/02/17/edge-rails-goody-automatic-304-for-views-not-modified/">Edge Rails Goody: Automatic 304 for Views Not Modified</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-02-17T00:00:00+01:00" pubdate data-updated="true">2007.02.17</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of the first thing you learn when you write your own weblog software and get a decent number of subscribers, is that you need to provide a way for aggregators to tell you which version of a feed they have, so your server can respond by telling the aggregator that it already has the latest version.  Otherwise, you waste a lot of bandwidth sending the same polling client the same data over and over again.</p>
+<p>This is commonly handled in the weblog software world with a combination of the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19">ETag header</a>, which allows clients and servers to communicate in terms of a <em>variant</em> of a specific resource and the &#8220;304 Not Modified&#8221; <span class="caps">HTTP</span> response and an empty response body.</p>
+<p>This technique isn&#8217;t limited in usefulness to <span class="caps">RSS</span> and Atom feeds.  You could use the same thing with <span class="caps">HTML</span>, <span class="caps">PDF</span>, anything you like.  If the client sends you an ETag and it matches the version you already have, you give it a 304 with an empty response body.</p>
+<p>It turns out that if you use a Web framework with a consistent rendering system, you can bake this kind of behavior right into the framework.</p>
+<p>A few hours ago, David Heinemeier Hansson <a href="http://dev.rubyonrails.org/changeset/6158">did just that</a>.</p>
+<h3>&#8220;Cool, how do I use it?&#8221;</h3>
+<p>If you&#8217;re using Edge Rails, it just happens automatically.</p>
+<p>Who knows if this will still be there in a month, but it&#8217;s at worst a cool experiment and at best a nice optimization for all future Rails applications.</p>
+<p><span class="caps">UPDATE</span>: <a href="http://techno-weenie.net/">Rick Olson</a> just pointed out to me that a weblog is not a good Rails-specific example of when this new feature would be useful, since weblogs can usually be cached at the page level (after which real Web servers can just do their thing with the static content).  He is, of course, right.  I didn&#8217;t mean for the weblog example to carry through into what you would use this feature for.  It <em>would</em> be very useful for situations where content is dynamically generated on, say, a per-user or per-account basis&#8212;-like most of the applications most of us make with Rails.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/02/12/airline-english/">Airline English</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-02-12T00:00:00+01:00" pubdate data-updated="true">2007.02.12</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m spending an almost uninterrupted month on the road this February.  I&#8217;ve just come from London to Seattle, after which I&#8217;ll be in Reston, VA.</p>
+<p>With all this moving about naturally comes a whole lot of air travel.  I&#8217;ve started to notice what has become, to me at least, a disturbing pattern in the speech of the employees of the airline industry.  I&#8217;ve been interested in the way speech evolves in tight social groups for a while now, so this is awakening the armchair linguist in me.</p>
+<p>If you&#8217;ve done much air travel, the sound of this may be familiar to you:</p>
+<p>&#8220;Welcome to Seattle, Washington.  The current time is 7:05PM.  We <em>do</em> hope you had an enjoyable flight with us and that if you <em>do</em> have airline needs in the future that you <em>do</em> choose ****Air again.  We <em>do</em> know that you have a choice when choosing an airline, and we <em>do</em> thank you for your business.  <em>Do</em> be careful when opening the overhead compartments as contents <em>do</em> shift during travel and <em>do</em> sometimes fall on the heads of unsuspecting passengers.  We <em>do</em> hope you <em>do</em> have a nice day.&#8221;</p>
+<p>(Emphasis <span class="caps">NOT</span> mine).</p>
+<p>It&#8217;s as if the airlines have evolved their own little English, which favors the verb &#8220;do&#8221;.  It seems that, somehow, the airline employees have been taught that inefficient over-use of the word &#8220;do&#8221; makes for more &#8220;official&#8221; sounding language.</p>
+<p>Or maybe there&#8217;s actually a game being played by the pilots and flight attendants.  Every time you say &#8220;do&#8221; you get a point.  You collect them like air miles and get awarded &#8220;elite&#8221;, &#8220;silver&#8221;, &#8220;gold&#8221;, or &#8220;platinum&#8221; flight attendant status at the end of the year, which you can cash in for the right to serve the first class cabins instead of having to deal with us riff-raff back in coach.</p>
+<p>Maybe it&#8217;s not an accident at all.  Maybe some brilliant scientist somewhere has determined that using speech like this helps people who don&#8217;t speak English as their native language.  I hope that&#8217;s not the case, though.  It&#8217;s more fun to think of it as an accident.  Given the fact that it happens even in the more casual speech of the pilots, in between talking about how we&#8217;ll enjoy the weather on the ground in Cancun and filling us in on the latest football scores, I&#8217;d bet it&#8217;s not intentional.</p>
+<p>Can you think of any other industry groups (other than us IT people) who have evolved their own language quirks?</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -533,101 +616,6 @@ ZenTest (3.4.3, 3.2.0)
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/01/09/advanced-rails-studio/">Advanced Rails Studio</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-01-09T00:00:00+01:00" pubdate data-updated="true">2007.01.09</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Early in my career, I worked as a computer support person in the IT department of a state university.  There was a batch of us that came in at the same time.  We all started at the help desk, worked our way into doing service calls around campus, and eventually graduated to back-room system administration or programming.</p>
-<p>After you graduated into the back room, the next step was to get a <em>real</em> job.  I mean, the university job was fun, but the pay wasn&#8217;t so great.  Especially if you started as a help desk person.  Minimum wage is a bad starting point to get increments from as a computer professional.  So, for that reason, back in the back room it was pretty common to hear colleagues on phone interviews.</p>
-<p>A close friend of mine had a particularly funny interview that a few of us heard his end of.  It went something like this:</p>
-<p>&#8220;I haven&#8217;t used Windows NT <em>Advanced</em> Server, because there&#8217;s no such thing.  I&#8217;ve done <em>advanced things</em> with NT Server.&#8221;  He said it snottily.  Still sore from sitting at the help desk helping users with their &#8220;<span class="caps">FTP</span>&#8221; problems, he found it difficult to hide his distaste for ignorance.  The problem is, there actually <em>was</em> such a thing as Windows NT Advanced Server.  He just hadn&#8217;t heard of it.  Before he finished the interview, another friend went into his cubicle, retrieved a copy of Windows NT Advanced Server, and place it on his desk.</p>
-<p>This brings us to the point of this post.  Yesterday, registration for Pragmatic Studio&#8217;s March <a href="http://pragmaticstudio.com/railsadvanced/index.html">Advanced Rails Studio</a> in Chicago has opened.  So far this year, we&#8217;ve only got one of these on the schedule, and they tend to sell out fast.  Mike, Dave, and I are proud of what we&#8217;ve put together for this class.  We did the first one back in the fall and got great reviews from the attendees.  It was a joy to teach and (we think) a joy to attend.</p>
-<p>Just to be clear, being pretty close to what&#8217;s happening in the Rails world, I can confidently tell you that there&#8217;s no such product or piece of software as &#8220;Advanced Rails&#8221;.  But we&#8217;ve done <em>advanced things</em> with Rails, and we&#8217;re going to show you how. :)</p></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/01/08/tattle-the-ruby-census/">Tattle: The Ruby Census</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-01-08T00:00:00+01:00" pubdate data-updated="true">2007.01.08</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>At the first <a href="http://therailsedge.com">Rails Edge conference</a>, <a href="http://onestepback.org">Jim<br />
-Weirich</a>, <a href="http://codefluency.com">Bruce Williams</a>, and I were chatting about how to improve the<br />
-<a href="http://rubygems.org/">RubyGems</a> platform-specific behavior, when we realized that it would be<br />
-really helpful to have more info about the install footprint of the<br />
-Ruby community at large.</p>
-<p>So instead of going right into hacking RubyGems as was our plan, we<br />
-created a little census tool and an accompanying web site to help us<br />
-collect information.  Most of the info we collect is from<br />
-Config::<span class="caps">CONFIG</span>, with the addition of the RubyGems version.</p>
-<p>We know this information will help the implementers of RubyGems, and<br />
-we hope it will also help Ruby implementers and library developers as<br />
-well.</p>
-<p>To install:</p>
-<p>$ sudo gem install tattle</p>
-<p>To submit your info:</p>
-<p>$ tattle</p>
-<p>If you want to see what would be posted before posting, you can do:</p>
-<p>$ tattle report</p>
-<p>The information gets posted to <a href="http://tattle.rubygarden.org">http://tattle.rubygarden.org</a>.  You can<br />
-view the posted data with your web browser at that <span class="caps">URL</span>.</p>
-<p>As a side note, Eric posted the <a href="http://blog.segment7.net/articles/2007/01/07/rubygems-beta-0-9-0-9">latest RubyGems beta</a> this weekend.  Please do give it a go if you&#8217;re so inclined.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/14/">&larr; Older</a>
@@ -679,6 +667,14 @@ view the posted data with your web browser at that <span class="caps">URL</span>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/09/how-to-become-a-cto/">How to Become a CTO</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/09/teams-are-systems/">Teams Are Systems</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/08/how-to-give-a-keynote/">How to Give a Keynote</a>
       </li>
     
@@ -688,14 +684,6 @@ view the posted data with your web browser at that <span class="caps">URL</span>
     
       <li class="post">
         <a href="/blog/2013/05/20/discipline-stomp-out-cynicism/">Discipline: Stomp Out Cynicism</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it&#8217;s not your job</a>
       </li>
     
   </ul>

@@ -9,9 +9,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Ruby on Rails has got to be the
-most hyped non-commercial web programming tool in history. A lot of Java
-and .NET people are skeptical. Some are even &hellip;">
+  <meta name="description" content="The Ruby that ships with Mac OS X 10.4 (Tiger) is pleasantly current but
+has an issue that prevents C extensions from compiling and installing &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +70,138 @@ and .NET people are skeptical. Some are even &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/04/30/fixing-tiger%27s-default-ruby-install/">Fixing Tiger&#8217;s Default Ruby Install</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-30T00:00:00+02:00" pubdate data-updated="true">2005.04.30</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The Ruby that ships with Mac OS X 10.4 (Tiger) is pleasantly current but<br />
+has an issue that prevents C extensions from compiling and installing<br />
+properly. In case you&#8217;ve just upgraded and want to use the<br />
+Apple-supplied Ruby, go install <a
+href="http://rubygems.rubyforge.org">RubyGems</a> (as if you haven&#8217;t<br />
+already!) and do:</p>
+<pre>
+        sudo gem install fixrbconfig
+        sudo fixrbconfig
+</pre>
+<p>
+<p>This will fix some settings in rbconfig.rb that you probably don&#8217;t<br />
+care to fix by hand.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/04/26/the-wrong-story/">The Wrong Story</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-04-26T00:00:00+02:00" pubdate data-updated="true">2005.04.26</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://sethgodin.com">Seth Godin</a>, on the weblog for his new<br />
+book, <a
+href="http://www.amazon.com/exec/obidos/tg/detail/-/1591841003/002-2313251-5595221">All<br />
+Marketers Are Liars</a>, tells a <a
+href="http://blog.sethgodin.silkblogs.com/Do-you-have-a-Home-Depot-problem.4222.entry">story</a><br />
+that is heavily relevant to software developers today. He talks about how<br />
+Home Depot, having conquered the mom and pop hardware shops, has been<br />
+struggling to grow.</p>
+<p>
+<p>The problem, says Seth, is that Home Depot continues to sell a story that<br />
+appeals to only a specific worldview: that of Home Depot geeks.</p>
+</p>
+<pre>
+        Many people, though, see nothing but dread here. They see a store
+        with no helpful salespeople, a jumble of product, none just quite
+        right, a very very long checkout line and fear.
+</pre>
+<p>
+<p>Home Depot, with its tall, garage-like appearance, and its endless piles of<br />
+screws and bolts&#8212;all alike, is a nightmarish place for someone like<br />
+me. To confirm Seth&#8217;s assertion, when I&#8217;m looking for a light<br />
+bulb, there&#8217;s no way in <em>hell</em> I&#8217;m going to go to a Home<br />
+Depot for it. I only go there when I absolutely have to.</p>
+</p>
+<p>
+<p>So how is this relevant for software developers? If you are a software<br />
+developer, think about this concept of customer &quot;worldview&quot; and<br />
+how it applies to you and your career. Which worldview are you<br />
+<em>really</em> selling your story for?</p>
+</p>
+<p>
+<p>For most of us, it&#8217;s the worldview of a fellow software developer.<br />
+But, software developers aren&#8217;t the ones that need our services.<br />
+<em>Scared</em> business people do. It&#8217;s the Home Depot problem! We<br />
+<a href="http://pragmaticprogrammer.com/titles/mjwti/index.html">lose our<br />
+jobs to offshoring</a> or experience salary deflation, and we blame the<br />
+<em>customers</em>. How can they send <em>our</em> jobs overseas? Why<br />
+don&#8217;t they <em>understand</em> what we&#8217;re worth?</p>
+</p>
+<p>
+<p>Perhaps they don&#8217;t understand, because you&#8217;re telling them a<br />
+story that was meant for other <em>programmers</em> to hear. It may even be<br />
+a story, as is the case with me and Home Depot, that is <em>scaring</em><br />
+them. This one may have &quot;worked&quot; for years, but you see where<br />
+it&#8217;s getting us now. And, as Seth says, yelling the same story louder<br />
+isn&#8217;t going to make it stick.</p>
+</p>
+<p>
+<p>In fact, it&#8217;s probably just going to get annoying.</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -738,176 +869,6 @@ environment.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/01/08/free-money-for-rubyists/">Free Money for Rubyists!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-01-08T00:00:00+01:00" pubdate data-updated="true">2005.01.08</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We (<a href="http://rubycentral.org">RubyCentral</a>) are <a
-href="http://ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/125566">giving<br />
-away</a> <span class="caps">FREE</span> <span class="caps">MONEY</span> to Rubyists who have a good idea for a piece of<br />
-software and want to get together with like-minded Rubyists to see the idea<br />
-through.</p>
-<p>
-<p>The core of <a href="http://rubygems.rubyforge.org">RubyGems</a> was<br />
-created over a weekend, accelerated by the fact that several of us were<br />
-programming together. <a href="http://dnssd.rubyforge.org">Ruby <span class="caps">DNSSD</span></a><br />
-and Ruby&#8217;s <a
-href="http://www.ruby-lang.org/cgi-bin/cvsweb.cgi/ruby/lib/scanf.rb">scanf</a><br />
-were created during similar gatherings.</p>
-</p>
-<p>
-<p>So, now we&#8217;re formalizing the previously informal and giving you <span class="caps">FREE</span><br />
-<span class="caps">MONEY</span> to help make it easier.</p>
-</p>
-<p>
-<p>Are you a Rubyist? Do you have an idea?</p>
-</p>
-<p>
-<p>Well, then shame on you for not applying. Time is running out.</p>
-</p>
-<hr size="1"></hr><p>
-<p>If you don&#8217;t have an idea, here are some things on my own personal<br />
-wishlist:</p>
-</p>
-<ul>
-<li>Ruby Subversion bindings</li>
-<li>A nice bug tracker in <a href="http://rubyonrails.org">Rails</a></li>
-<li>Something that simplifies the open source ruby library release process,<br />
-integrating <a href="http://raa.ruby-lang.org"><span class="caps">RAA</span></a>, <a
-href="http://rubyforge.org">RubyForge</a>, <a
-href="http://ruby-talk.org">ruby-talk</a>, <a
-href="http://freshmeat.net">Freshmeat</a>, and <a
-href="http://rubygems.rubyforge.org">RubyGems</a>.</li>
-</ul></div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/10/20/celebrating-5000-downloads-of-rubygems/">Celebrating 5000 Downloads of RubyGems</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-10-20T00:00:00+02:00" pubdate data-updated="true">2004.10.20</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>The Stats</h3>
-<p>111 unique libraries <a href="http://gems.rubyforge.org/gems">available as<br />
-gems</a></p>
-<p>
-<p>249 unique library releases</p>
-</p>
-<p>
-<p>5000 plus downloads of <a href="http://rubygems.rubyforge.org">RubyGems</a></p>
-</p>
-<p>
-<p>20688 <a href="http://gems.rubyforge.org/stats.html">downloads</a> of gem<br />
-libraries</p>
-</p>
-<hr size="2"></hr><h3>Learn about it</h3>
-<p>
-<p><a href="http://www.pragmaticprogrammer.com/titles/ruby/gems.pdf">RubyGems<br />
-chapter</a> in <a
-href="http://pragmaticprogrammer.com/titles/ruby/">Programming Ruby</a> (<a
-href="http://books.slashdot.org/books/04/10/13/1843240.shtml?tid=156&tid=6">slashdotted</a><br />
-today)</p>
-</p>
-<p>
-<p>Jim Weirich&#8217;s <a
-href="http://onestepback.org/articles/rubygemsfacets/">RubyGems<br />
-presentation</a> from <a href="http://rubycentral.org">RubyConf 2004</a><br />
-((<a href="http://www.chadfowler.com/12-RubyGems.mp3">Listen in mp3!</a>))</p>
-</p>
-<hr size="2"></hr><h3>Help us celebrate!</h3>
-<p>
-<p>Let&#8217;s make those numbers up there get bigger (especially the first<br />
-one)!</p>
-</p>
-<ol>
-<li><a href="http://rubyforge.org/frs/?group_id=126">Go get RubyGems 0.8.1</a><br />
-if you don&#8217;t already have it.</li>
-<li>Pick a library that you either created or really like</li>
-<li>Check to see if there is a gem already available for it (gem search -r<br />
-libraryname)</li>
-<li>If yes, goto 1.</li>
-<li>Read the <a
-href="http://www.pragmaticprogrammer.com/titles/ruby/gems.pdf">RubyGems<br />
-chapter</a> in Programming Ruby.</li>
-<li>Create a gemspec (or a <a
-href="http://rubygems.rubyforge.org/wiki/wiki.pl?CreateAGemUsingRake">Rakefile</a>)<br />
-and build the gem.</li>
-<li>If this is not your library, send the gemspec/rakefile to the author and<br />
-ask them to add it to their build process.</li>
-<li>If this is your library, add the gemspec/rakefile to your build process.</li>
-<li>If you have a <a href="http://rubyforge.org">RubyForge</a> project for this<br />
-library, release the gem, and it will be automatically available via remote<br />
-install (gem install mywonderfullibrary)</li>
-<li>If you don&#8217;t have a RubyForge project, email me (chad at<br />
-chadfowler.com) and I&#8217;ll make sure the gem gets added for you.</li>
-</ol>
-<p>
-<p>If you need help, email me or find me on irc (#ruby-lang,#rubyonrails on<br />
-irc.freenode.net) or on <span class="caps">AIM</span> (cefogc). I may be busy when you initially<br />
-contact me, but trust that I&#8217;ll be happy to hear from you.</p>
-</p>
-<p>
-<p>Imagine when the number 111 from above becomes 1111 and virtually any Ruby<br />
-library or application you could think of is installable (with all of its<br />
-dependencies) with a single command. How fast can we make that happen? How<br />
-big a chunk can one person contribute to that goal?</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/23/">&larr; Older</a>
@@ -959,6 +920,14 @@ big a chunk can one person contribute to that goal?</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/09/how-to-become-a-cto/">How to Become a CTO</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/09/teams-are-systems/">Teams Are Systems</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/08/how-to-give-a-keynote/">How to Give a Keynote</a>
       </li>
     
@@ -968,14 +937,6 @@ big a chunk can one person contribute to that goal?</p>
     
       <li class="post">
         <a href="/blog/2013/05/20/discipline-stomp-out-cynicism/">Discipline: Stomp Out Cynicism</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it&#8217;s not your job</a>
       </li>
     
   </ul>
