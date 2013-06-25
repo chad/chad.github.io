@@ -9,8 +9,7 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="I&#8217;m not sure how it happened, but out of the many conferences in which I&#8217;ve spoken, I&#8217;ve only submitted two talk proposals.
-Both &hellip;">
+  <meta name="description" content="As a developer and sometimes system adminstrator, one of the scariest things I ever encounter is a server that&#8217;s been running for ages which &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +69,66 @@ Both &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/23/immutable-deployments/">Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-23T18:57:00+02:00" pubdate data-updated="true">2013.06.23</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As a developer and sometimes system adminstrator, one of the scariest things I ever encounter is a server that&#8217;s been running for ages which has seen multiple upgrades of system and application software.</p>
+
+<p>Why? Because an old system inevitably grows warts. They start as one-time hacks during outages. A quick edit to a config file saves the day. &#8220;We&#8217;ll put it back into Chef later,&#8221; we say, as we finally head off to sleep after a marathon fire fighting session.</p>
+
+<p>Cron jobs spring up in unexpected places, running obscure but critical functions that only one person knows about. Application code is deployed outside of the normal straight-from-source-control process.</p>
+
+<p>The system becomes finicky. It only accepts deploys in a certain manual way. The init scripts no longer work unless you do something special and unexpected.</p>
+
+<p>And, of course the operating system has been patched again and again (in the best case) in line with the standard operating procedures, and the inevitable entropy sets in.  Or, worse, it has never been patched and now you&#8217;re too afraid of what would happen if you try.</p>
+
+<p>The system becomes a house of cards. You fear any change and you fear replacing it since you don&#8217;t know everything about how it works.</p>
+
+<p>We&#8217;ve tried lots of ways to avoid this problem over the years from team policy to automation.  We&#8217;re trying a new one now <a href="http://wunderlist.com">at work</a>: Immutable Deployments.</p>
+
+<p>Many of us in the software industry are starting to take notice of the benefits of immutability in software architecture.  We&#8217;ve seen an increased interest over the past few years in functional programming techniques with rising popularity of languages such as Erlang, Scala, Haskell, and Clojure.  Functional languages offer immutable data structures and single assignment variables. The claim (which many of us believe based on informal empirical evidence) is that immutability leads to programs tat are easier to reason about and harder to screw up.</p>
+
+<p>So why not take this approach (where possible) with infrastructure? If you absolutely know a system has been created via automation and never changed since the moment of creation, most of the problems I describe above disappear. Need to upgrade? No problem. Build a new, upgraded system and throw the old one away.  New app revision? Same thing. Build a server (or image) with a new revision and throw away the old ones.</p>
+
+<p>At <a href="http://6wunderkinder.com">6Wunderkinder</a>, we have been moving in this direction over the past 4 months.  It&#8217;s giving us the confidence we need to rapidly iterate on our backend infrastructure as we continue to make things faster, more scalable and dependable for our customers and flexible to move our applications forward more freely.</p>
+
+<p>Maybe more remarkable, though, is that like a new programming paradigm, thinking of infrastructure this way changes how I view our systems pretty fundamentally. New patterns and anti-patterns emerge. It is changing how I think not just about deployments but about application code (and even team structure).</p>
+
+<p>This idea is a work in progress for me. We&#8217;re obviously not the first ones to think of it, so there is a lot to learn.  It also implies some kind of &#8220;cloud&#8221; infrastructure, though I think modern software architecture generally does.</p>
+
+<p>Expect to hear more about the tactical details of this from me here and <a href="http://railsisrael2013.events.co.il/presentations/852-disposable-components">at various conferences this year</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -541,59 +600,6 @@ lovingly completed.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/12/27/the-art-craft-commodity-continuum/">The Art/craft/commodity Continuum</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-27T00:00:00+01:00" pubdate data-updated="true">2011.12.27</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When you create art, the purpose is self-expression.</p>
-<p>When you create software, the purpose is rarely self-expression.</p>
-<p>When you create software, someone somewhere wants it to perform a set of functions and has a stake in how well those functions are implemented. The definition of &#8220;well&#8221; is up to the stakeholder.</p>
-<p>When you create art, you want it to be beautiful, or beautifully ugly, or ornate, or plain. You, the creator, are the stakeholder. You may hope that others find it beautiful, but if they don&#8217;t, it&#8217;s art&#8212;who&#8217;s to say what&#8217;s good and bad?</p>
-<p>When you attempt to judge the quality of a commodity good solely in terms of its aesthetic appeal, you ignore the objective evaluation of how well that product meets the needs of its stakeholders.</p>
-<p>When you attempt to judge the quality of a piece of art solely on some objective measure, you miss the point of the object as an expression of art.</p>
-<p>Craft falls somewhere between commodity and art. Craft items have both subjective, aesthetic appeal and objective function.</p>
-<p>This is a beautiful Christian Dior dress:</p>
-<p><img src="http://chadfowler.com/images/falf/dior.jpg" alt="" /></p>
-<p>Beautiful but largely impractical.  Try to wear this on the subway or even in your car. Try to fit it through a standard door. It&#8217;s a beautiful piece of art, but it fails as a useful article of clothing for most people.</p>
-<p>This is a <a href="http://paulsmith.co.uk">Paul Smith</a> suit. It&#8217;s practical, extremely well made, creatively designed, and probably very expensive:</p>
-<p><img src="http://chadfowler.com/images/falf/paul-smith.jpg" alt="" /></p>
-<p>This is a pair of pants on sale at <a href="http://walmart.com">Wal-Mart</a>:</p>
-<p><img src="http://chadfowler.com/images/falf/walmart.jpg" alt="" /></p>
-<p>Beautiful?  I don&#8217;t know many people who would call this beautiful. Completely unremarkable.</p>
-<p>And so it goes&#8230;from art to craft to commodity.</p>
-<p>Now consider yourself as the customer here. My guess is that most of my readers, even with an appreciation of the quality of the Paul Smith suit, would be much more comfortable in the Wal-Mart pants.</p>
-<p>When we create an item for another person, we have to consider whether that person is looking for art, craft, or commodity. We may wish to always be creating art. Or craft. But sometimes our customers want commodity. Not only is commodity cheaper but it&#8217;s what they <em>prefer</em>.</p>
-<p><img src="http://chadfowler.com/art-commodity-continuum.png" alt="" /></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -643,6 +649,10 @@ lovingly completed.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/23/immutable-deployments/">Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/08/how-to-give-a-keynote/">How to Give a Keynote</a>
       </li>
     
@@ -656,10 +666,6 @@ lovingly completed.</p>
     
       <li class="post">
         <a href="/blog/2013/04/09/who-i-want-to-hire/">Who I Want to Hire</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/">If it stresses you out, it&#8217;s not your job</a>
       </li>
     
   </ul>

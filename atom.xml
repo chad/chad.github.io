@@ -4,7 +4,7 @@
   <title><![CDATA[The Passionate Programmer]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2013-06-10T10:50:35+02:00</updated>
+  <updated>2013-06-25T09:03:29+02:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components]]></title>
+    <link href="http://chadfowler.com/blog/2013/06/23/immutable-deployments/"/>
+    <updated>2013-06-23T18:57:00+02:00</updated>
+    <id>http://chadfowler.com/blog/2013/06/23/immutable-deployments</id>
+    <content type="html"><![CDATA[<p>As a developer and sometimes system adminstrator, one of the scariest things I ever encounter is a server that&#8217;s been running for ages which has seen multiple upgrades of system and application software.</p>
+
+<p>Why? Because an old system inevitably grows warts. They start as one-time hacks during outages. A quick edit to a config file saves the day. &#8220;We&#8217;ll put it back into Chef later,&#8221; we say, as we finally head off to sleep after a marathon fire fighting session.</p>
+
+<p>Cron jobs spring up in unexpected places, running obscure but critical functions that only one person knows about. Application code is deployed outside of the normal straight-from-source-control process.</p>
+
+<p>The system becomes finicky. It only accepts deploys in a certain manual way. The init scripts no longer work unless you do something special and unexpected.</p>
+
+<p>And, of course the operating system has been patched again and again (in the best case) in line with the standard operating procedures, and the inevitable entropy sets in.  Or, worse, it has never been patched and now you&#8217;re too afraid of what would happen if you try.</p>
+
+<p>The system becomes a house of cards. You fear any change and you fear replacing it since you don&#8217;t know everything about how it works.</p>
+
+<p>We&#8217;ve tried lots of ways to avoid this problem over the years from team policy to automation.  We&#8217;re trying a new one now <a href="http://wunderlist.com">at work</a>: Immutable Deployments.</p>
+
+<p>Many of us in the software industry are starting to take notice of the benefits of immutability in software architecture.  We&#8217;ve seen an increased interest over the past few years in functional programming techniques with rising popularity of languages such as Erlang, Scala, Haskell, and Clojure.  Functional languages offer immutable data structures and single assignment variables. The claim (which many of us believe based on informal empirical evidence) is that immutability leads to programs tat are easier to reason about and harder to screw up.</p>
+
+<p>So why not take this approach (where possible) with infrastructure? If you absolutely know a system has been created via automation and never changed since the moment of creation, most of the problems I describe above disappear. Need to upgrade? No problem. Build a new, upgraded system and throw the old one away.  New app revision? Same thing. Build a server (or image) with a new revision and throw away the old ones.</p>
+
+<p>At <a href="http://6wunderkinder.com">6Wunderkinder</a>, we have been moving in this direction over the past 4 months.  It&#8217;s giving us the confidence we need to rapidly iterate on our backend infrastructure as we continue to make things faster, more scalable and dependable for our customers and flexible to move our applications forward more freely.</p>
+
+<p>Maybe more remarkable, though, is that like a new programming paradigm, thinking of infrastructure this way changes how I view our systems pretty fundamentally. New patterns and anti-patterns emerge. It is changing how I think not just about deployments but about application code (and even team structure).</p>
+
+<p>This idea is a work in progress for me. We&#8217;re obviously not the first ones to think of it, so there is a lot to learn.  It also implies some kind of &#8220;cloud&#8221; infrastructure, though I think modern software architecture generally does.</p>
+
+<p>Expect to hear more about the tactical details of this from me here and <a href="http://railsisrael2013.events.co.il/presentations/852-disposable-components">at various conferences this year</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Give a Keynote]]></title>
@@ -550,27 +583,6 @@ http://www.flickr.com/photos/dancoulter/21042744/</p>
 <p>To those who are interested, <span class="caps">THANK</span> <span class="caps">YOU</span>!!!!!!</p>
 <p>If the original Rails Recipes&#8217; success is any indicator, Rails 3 Recipes is going to be <em>the</em> book every Rails developer will have sitting on his or her desk over the next couple of years. I&#8217;m very excited about it and looking forward to some feedback.</p>
 <p><img src="http://chadfowler.com/rr2.jpg" title="width 120" alt="width 120" /></p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How Rails Developers do Ajax (with jQuery) in 2011]]></title>
-    <link href="http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/"/>
-    <updated>2011-02-09T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011</id>
-    <content type="html"><![CDATA[<p>Wanting to survey what the current state of the art in Rails Ajax development is, I asked this question on twitter:</p>
-<p><a href="http://twitter.com/#!/chadfowler/status/35068144976404480"><img src="http://chadfowler.com/ajax_question.png" alt="Rails developers, how are you doing Ajax with JQuery these days? .js.erb templates? Rendering partials back old-style?"/></a></p>
-<p>I got a lot of great responses!  44 last time I checked. Here&#8217;s what I found out people are doing:</p>
-<ul>
-	<li><a href="https://github.com/janl/mustache.js">mustache.js</a></li>
-	<li>Sending JavaScript back down to the client using .js.erb template files (Ryan Bates linked a couple of examples <a href="http://bit.ly/YCunh">here</a> and <a href="http://bit.ly/dHbKW5">here</a>)</li>
-	<li><a href="http://api.jquery.com/jQuery.template/">JQuery templates</a></li>
-	<li>Hitting <span class="caps">RESTFUL</span> endpoints and responding with <span class="caps">JSON</span> data to be manipulated on the client</li>
-	<li>Using <a href="http://documentcloud.github.com/backbone">backbone.js</a></li>
-	<li>Rendering partials and updating elements on the page with their raw content (the original old-school Rails way of doing it)</li>
-	<li>Use <a href="https://github.com/mrb/sammyonrails">SammyOnRails</a></li>
-</ul>
-<p>There is definitely a divide and a lot of opinion (suprise!) between those who are OK with delivering JavaScript and/or <span class="caps">HTML</span> from the server to be rendered on the client and those who prefer to deliver data and have the client process it.  I&#8217;d characterize the former as the less clean, more pragmatic approach and the latter as the idealistic cleaner approach.  It seems that tools like mustache.js, backbone, JQuery templates, and Sammy.js are tightening the gap between quick + dirty and slow + clean.</p>
-<p>What do you think?  What did we miss?</p>]]></content>
   </entry>
   
 </feed>
