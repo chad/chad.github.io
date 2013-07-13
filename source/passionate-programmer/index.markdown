@@ -7,7 +7,7 @@ sharing: true
 <table>
 <td class="arr-recipe-name pp-use-as-title-2">
 <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
-<img  width="180" src="http://localhost:4000/images/books/passionate-programmer.jpg">
+<img  width="180" src="http://chadfowler.com/images/books/passionate-programmer.jpg">
 </a>
 <p>
 <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
