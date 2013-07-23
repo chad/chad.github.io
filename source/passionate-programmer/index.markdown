@@ -51,7 +51,7 @@ sharing: true
       let go of it. They’ll grip that rice until either it comes out
       of the ground or they die trying to pull it out. It was typically
       the latter that happened first. </p>
-<p id="N115E6"> Pirisig tells this story to illustrate a concept he calls
+<p id="N115E6"> Pirsig tells this story to illustrate a concept he calls
       <span class="emph">value rigidity</span>. Value rigidity is what happens
       when you believe in the value of something so strongly that you
       can no longer objectively question it. The monkeys valued the
