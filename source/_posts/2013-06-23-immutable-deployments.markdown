@@ -5,7 +5,7 @@ date: 2013-06-23 18:57
 comments: true
 categories:
 ---
-As a developer and sometimes system adminstrator, one of the scariest things I ever encounter is a server that's been running for ages which has seen multiple upgrades of system and application software.
+As a developer and sometimes system administrator, one of the scariest things I ever encounter is a server that's been running for ages which has seen multiple upgrades of system and application software.
 
 Why? Because an old system inevitably grows warts. They start as one-time hacks during outages. A quick edit to a config file saves the day. "We'll put it back into Chef later," we say, as we finally head off to sleep after a marathon fire fighting session.
 
@@ -19,7 +19,7 @@ The system becomes a house of cards. You fear any change and you fear replacing 
 
 We've tried lots of ways to avoid this problem over the years from team policy to automation.  We're trying a new one now <a href="http://wunderlist.com">at work</a>: Immutable Deployments.
 
-Many of us in the software industry are starting to take notice of the benefits of immutability in software architecture.  We've seen an increased interest over the past few years in functional programming techniques with rising popularity of languages such as Erlang, Scala, Haskell, and Clojure.  Functional languages offer immutable data structures and single assignment variables. The claim (which many of us believe based on informal empirical evidence) is that immutability leads to programs tat are easier to reason about and harder to screw up.
+Many of us in the software industry are starting to take notice of the benefits of immutability in software architecture.  We've seen an increased interest over the past few years in functional programming techniques with rising popularity of languages such as Erlang, Scala, Haskell, and Clojure.  Functional languages offer immutable data structures and single assignment variables. The claim (which many of us believe based on informal empirical evidence) is that immutability leads to programs that are easier to reason about and harder to screw up.
 
 So why not take this approach (where possible) with infrastructure? If you absolutely know a system has been created via automation and never changed since the moment of creation, most of the problems I describe above disappear. Need to upgrade? No problem. Build a new, upgraded system and throw the old one away.  New app revision? Same thing. Build a server (or image) with a new revision and throw away the old ones.
 
