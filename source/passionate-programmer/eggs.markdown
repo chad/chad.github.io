@@ -37,9 +37,6 @@ sharing: true
       such as an unexpected improvement in Microsoft’s browser security (or Microsoft deciding to enter the spyware
       removal market), whereas an individual doesn’t have the bandwidth or the surplus cash to suddenly change career
       direction or focus. </p>
-<div class="highlight">
-<p id="N10529"> Vendor-centric views are typically myopic. </p>
-</div>
 <p id="N1052C"> The sad thing about a vendor-centric view of the world is that, usually, the details of a vendor’s software
       implementation are a secret. You can really learn only so much about a piece of proprietary software until you
       reach the <span class="emph">professional services barrier</span>. The professional services barrier is the artificial barrier
