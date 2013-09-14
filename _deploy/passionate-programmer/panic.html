@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Don't Panic - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Don't Panic 2013.07.09 (Excerpt from The Passionate Programmer: Creating a Remarkable Career in Software Development) I started my career as a &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/passionate-programmer/panic.html">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Don't Panic</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-09T17:05:00-07:00" pubdate data-updated="true">2013.07.09</time></p>
+  </header>
+  
+  <table>
+<td class="arr-recipe-name pp-use-as-title-2">
+<a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
+<img  width="180" src="http://chadfowler.com/images/books/passionate-programmer.jpg">
+</a>
+<p>
+<a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">
+(Excerpt from The Passionate Programmer: Creating a Remarkable Career in Software Development)
+</a>
+</p>
+
+</td>
+</tr>
+</table>
+
+
+<hr />
+
+<p id="N10E65">
+  I started my career as a computer programmer because of video games. Since the days of loading games from tape
+  on my Commodore 64, I’ve been hooked by their immersive, interactive experiences. I used to be embarrassed to admit it, but I realize
+  now that it’s nothing to be ashamed of. For me, computer games turned
+  the on-screen environment (the operating system, I guess) into an
+  environment I was comfortable and excited about.</p>
+
+
+<p id="N10E68">
+  My favorite game ever was id Software’s Doom. I was specifically
+  in love with the one-on-one, player-vs.-player, death-match part of the
+  game. Players would connect via modem or serial connection and battle
+  each other in small, fast-paced environments. I got really good at
+  the Doom death match. I often joke that it might be the thing in my life
+  so far that I’m best at. The game of death match is surprisingly complex.
+  It’s both technical and psychological—like a frenetic mix of chess
+  and fencing on fast-forward.</p>
+
+
+<p id="N10E6B">
+  Like most skills, a great way to get good at it is to watch masters at work.
+  Back in my Doom days, there was one such master who went by the ironic online
+   handle “Noskill.”  Noskill was the de facto reigning Doom champion. People
+  from around North America would pay the long-distance telephone fees to try
+  their luck against him. These matches would all be recorded with Doom’s built-in
+  game-recording facility.  I watched every one.
+    </p>
+
+
+<p id="N10E6E">
+  It didn’t take me long to learn his secret. Sure, he was generally good at the game,
+  but there was one obvious key to his success: he never panicked. Doom was the
+  kind of game in which a round could be over literally seconds after it started.
+  It was really fast. I remember my first death-match game. Spawn, die, spawn, die,
+  spawn, die.  When I finally managed to stay alive more than a couple of seconds
+  I found myself running around aimlessly, barely able to keep track of where I was.
+    </p>
+
+
+<p id="N10E71">
+  But Noskill never acted that way. No matter how difficult the situation, you could
+  tell by watching the recordings that he was always relaxed and always thinking
+  about what to do next. He was always seemingly aware of how his current context
+  fit into the overall shape of the match.
+    </p>
+
+
+<p id="N10E78">
+  Now if you think about other games, particularly sports, you’ll recognize that
+  the best players all share this quality. In fact, even the characters we admire
+  in books, television, and movies share this quality. Heroes never panic. They’re
+  always the people who can have a nuclear bomb dropped on their city or crash
+  in an airplane and manage to organize a group, help the survivors, outsmart the
+  enemy, or at least just not break down in tears.
+    </p>
+
+
+<p id="N10E7B">
+  This extends to real life, too. Despite my best planning, my professional life
+  has been a string of emergencies and disasters. Projects run really really late.
+  Software applications crash, costing my employers money and credibility. I say
+  the wrong thing to the wrong vice president and gain a political enemy. Most of
+  the time, these things come in waves all together, never one at a time.
+    </p>
+
+
+<p id="N10E7E">
+  In my worst moments, I panic. I lock up and can think tactically at best. I react
+  to each small input without the clarity to consider the big picture.
+    </p>
+
+
+<p id="N10E81">
+  But looking back on literally <span class="emph">every</span> such disaster, not a single
+  one has made a lasting, noticeable impact on me or my career. So, as panicked or
+  depressed or upset as I’ve gotten over these seemingly disastrous situations,
+  not one has been a <span class="emph">true</span> disaster.
+    </p>
+
+
+<p id="N10E8A">
+  What did the panicking give me? What was the advantage of reacting negatively
+  to each of these situations? Nothing. What panicking really gave me was an inability
+  to perform at my best at the times I really <span class="emph">needed</span> to be performing
+  at my best.
+    </p>
+
+
+<p id="N10E90">
+    Now I have to admit that not panicking in stressful situations is easier said than done.
+    It’s kind of like telling someone “just be happy.”  Sure, it’s good advice, but how
+      do you do it? How do you avoid panicking when things seem to be falling apart?  To answer this question, it
+      helps to think a little about why we <span class="emph">do</span> panic.
+  </p>
+
+
+<p id="N10E96">
+    We panic because we lose perspective. When something is going wrong, it’s hard not to focus
+    all attention on the problem. To some extent, that’s a good way to solve problems. Unfortunately,
+    it also makes the problem, no matter how small, seem more important than it is. And with the
+    problem inflated and stress levels running high, our brains turn themselves off.
+  </p>
+
+
+<p id="N10E99">
+    Who is the worst computer user you know? For me, it’s probably one of my parents or in-laws (I know who,
+      but I’m smart enough not to name any names here). Imagine that person sitting at their computer
+      trying to finish a project when an error message start popping up with everything they try to do.
+      We’ve all seen this happen. Inexperienced computer users get quickly frustrated and freaked out.
+      They start hectically clicking and dragging things around on the screen, ignoring the potentially
+      helpful error message text as it pops up over and over again. They eventually get so flustered
+      that they have to call for help, but usually not before messing up one or two additional things
+      on the computer before doing so.
+    </p>
+
+
+<p id="N10E9C">
+    Don’t think I’m mean, but I want you to picture this situation with someone appropriate you know
+    as the main character, and I want you to laugh to yourself about it. This kind of behavior really
+    is ridiculous, isn’t it? It’s laughable.
+  </p>
+
+
+<p id="N10E9F">
+    But, as genuinely funny as this is, what we just imagined was a real-life scenario in which a person
+    working outside their comfort zone encountered a problem and panicked. It’s no different from the way
+      I’ve reacted when projects have run late or I’ve accidentally crashed a system or I’ve dissatisfied a
+    customer on the job.  It’s just a different context.
+  </p>
+
+
+<p id="N10EA2">
+    So, here’s how I’m learning to not panic. When something bad happens and I start to feel that sinking, stressed-out
+    feeling that leads to panic, I compare myself to the frustrated computer-illiterate, and I laugh at myself.
+    I analyze the situation from the third-person perspective, as if I’m helping that frustrated family member
+    with their word processing disaster. Seemingly hard problems are suddenly easier. Seemingly bad situations are suddenly
+    not so bad. And, I often find that the solution simple and staring me in the face in the same way that
+    an error dialog often tells you exactly what to do next.  If you’d just have the presence of mind to read
+    the error message, the problem might be solved.
+  </p>
+
+
+<h3>Act on It!</h3>
+
+
+<ol>
+<li>
+<p id="N10EAB">Keep a panic journal. The key to catching panic before it happens is to develop a heightened real-time awareness of your perception and emotions as they happen. I’ve had my best luck learning to do this by analyzing my reactions to situations after the fact. I’m not smart enough to naturally keep a background thread running and analyzing my thoughts as they happen, but I’ve discovered that if I practice the analysis “offline,” I get better and better at doing the analysis in real time.</p>
+<p id="N10EAE">
+          Saying you’re going to do a better job of analyzing your reactions and actually doing it are two different things. Keeping a journal will help add structure to the process. Each day at a specific time (use a calendar with a reminder!), open up a text file and record any situation that caused you to panic, even if only a little bit. Once a week, look back on the past week’s list and take stock of the lasting impact of each panic-inducing situation.  Was the situation panic-worthy?  What would have been the most productive reaction to the situation? What would the hero in a dramatized movie about your life have done instead of panicking?
+          </p>
+<p id="N10EB1">
+          After some practice, you’ll find the analysis to start happening <span class="emph">while</span> the panic sets in. As you rationally explore the reasons for your panic in real time, you’ll find that the panic itself takes a backseat and eventually dissipates.
+        </p>
+</li>
+</ol>
+
+
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-09T17:05:00-07:00" pubdate data-updated="true">2013.07.09</time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chadfowler.com/passionate-programmer/panic.html" data-via="chadfowler" data-counturl="http://chadfowler.com/passionate-programmer/panic.html" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://www.nordicruby.org/">Nordic Ruby</a></span>
+        <span class="location">Stockholm</span>
+        <span class="the-date">June 6-9, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/berlin-2013/upcomingevents/">GOTO Night</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">June 17, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/aarhus-2013/">GOTO</a></span>
+        <span class="location">Aarhus</span>
+        <span class="the-date">September 30, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>-->
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
