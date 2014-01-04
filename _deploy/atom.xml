@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-04T14:08:11+05:30</updated>
+  <updated>2014-01-04T14:15:53+05:30</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA['My hovercraft is full of eels']]></title>
+    <link href="http://chadfowler.com/blog/2014/01/04/my-hovercraft-is-full-of-eels/"/>
+    <updated>2014-01-04T14:15:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2014/01/04/my-hovercraft-is-full-of-eels</id>
+    <content type="html"><![CDATA[<p>It truly is.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[About Eggs]]></title>
@@ -471,26 +480,6 @@ Note: I wrote a more detailed account of my weight loss story in <a href="http:/
 <p>If you <span class="caps">REALLY</span> care and you&#8217;re capable, I don&#8217;t care much how smart you are for most work that needs to be done. Give me someone passionate over an apathetic genius any day of the week.</p>
 <p><img src="http://ecx.images-amazon.com/images/I/41HCiSFoi0L.jpg" alt="" /></p>
 <p>So this is my takeaway from The Thank You Economy.  Care like crazy. Whether you&#8217;re running a company or just running your career.  It&#8217;s sound obvious, but it&#8217;s oh too easy to forget and let it slide. Let a little apathy in, and it makes a mess. A cyncical remark, or a posted Dilbert cartoon are all it takes to start the wrong kind of culture of apathy. Care like crazy.</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Be Careful Of Who You Work With]]></title>
-    <link href="http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with/"/>
-    <updated>2011-02-24T00:00:00+05:30</updated>
-    <id>http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with</id>
-    <content type="html"><![CDATA[<p>You instinctively know that who you associate with matters a lot.  Our parents bring us up steering away and toward others who influence us.</p>
-<p>But most of us don&#8217;t realize just how much those around us influence us.</p>
-<p>As I recall in the introduction to <a href="http://pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer</a>, there was one specific event that turned the tide for me.  I had been chugging along in my slightly-above-average corporate job and experiencing what I considered to be the height of success.  Then I had an intense period during which, for a few months, I had the opportunity to collaborate with a whole new level of software developers.  It all came to a head when I went to the eXtreme Programming Immersion that Object Mentor taught.  After a week surrounded by brilliant developers and leaders in the field, I knew I had to do something different.</p>
-<p>I had to be as much like them as I could.</p>
-<p>In The Passionate Programmer, I quote Pat Metheny&#8217;s advice to young musicians: always be the worst musician in every band you&#8217;re in.  As a musician and as a programmer, I&#8217;ve tried Pat&#8217;s advice.  You play with a group of people better than you, and you&#8217;ll almost always play better.</p>
-<p><img src="http://farm4.static.flickr.com/3315/3613370192_30635de1cb_m.jpg" alt="" /><br />
-http://www.flickr.com/photos/jazzuality/3613370192/</p>
-<p>That&#8217;s good anecdotal advice.  If you don&#8217;t trust Pat, how about <a href="http://christakis.med.harvard.edu/">Nicholas Christakis</a>?  Nicholas is a social scientist at Harvard University.  Together with James Fowler of UC San Diego, his research focuses on how behavior and then even <span class="caps">EMOTION</span> spread through social networks.  Can behavior be epidemic?</p>
-<p>Here are some things their research has shown to spread through social networks ilke disease:  <a href="http://www.nytimes.com/2007/07/25/health/25cnd-fat.html?_r=1&amp;scp=4&amp;sq=nicholas%20christakis&amp;st=cse">Obesity</a>), <a href="http://www.nejm.org/doi/full/10.1056/NEJMsa0706154">Smoking</a>, <a href="http://www.annals.org/content/152/7/426.abstract">Alcohol Consumption</a>, and….<a href="http://www.bmj.com/content/337/bmj.a2338.full"><span class="caps">HAPPINESS</span></a>!  Yes, emotional state is contagious.</p>
-<p><img src="http://farm1.static.flickr.com/48/165829023_8e97572f07_o.jpg" alt="" /><br />
-http://www.flickr.com/photos/saintbob/165829023/</p>
-<p>These aren&#8217;t insignificant numbers, either.  For example, obesity chances increase 57% if you have a friend who is or becomes obese.  And, more disturbing than that, this is an effect that is conducted through more than one node in the social graph.  If your friends&#8217; friends&#8217; friends are obese, <a href="http://bit.ly/eOY1LP">you are 10% more likely to be obese</a></p>
-<p>If behavior spreads through social networks, then working in a toxic or slow-moving corporate environment is really really bad for you.  If you&#8217;re a consultant, you <span class="caps">MUST</span> fire the clients that bring you down a notch and seek out clients that pull you up.  If you&#8217;re a teacher, go where the students care about what they&#8217;re learning.</p>]]></content>
   </entry>
   
 </feed>
