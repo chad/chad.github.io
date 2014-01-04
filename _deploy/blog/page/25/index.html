@@ -1,0 +1,1008 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="O&#8217;Reilly has very recently posted their schedule of events for the <a
+href="http://conferences.oreillynet.com/os2004/">O&#8217;Reilly Open &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/page/25/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/04/15/oscon-schedule-posted/">OSCON Schedule Posted</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-04-15T00:00:00+05:30" pubdate data-updated="true">2004.04.15</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>O&#8217;Reilly has very recently posted their schedule of events for the <a
+href="http://conferences.oreillynet.com/os2004/">O&#8217;Reilly Open Source<br />
+Convention</a>.</p>
+<p>
+<p><img
+src="http://conferences.oreillynet.com/images/os2004/banners/speakers/oscon_speaker_125x125.gif"></p>
+</p>
+<p>
+<p>They&#8217;ve got a <a
+href="http://conferences.oreillynet.com/pub/w/29/track_ruby.html">Ruby<br />
+track</a> again this year, including <a
+href="http://conferences.oreillynet.com/cs/os2004/view/e_sess/5303">two</a><br />
+<a
+href="http://conferences.oreillynet.com/cs/os2004/view/e_sess/5322">sessions</a><br />
+featuring yours truly.</p>
+</p>
+<p>
+<p>If I know you (electronically or in person) and you&#8217;ll be in Portland<br />
+for this, let me know. <a
+href="http://richkilmer.blogs.com/ether/">Rich</a> and I are already<br />
+planning some pre-conference hacking in Portland.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/04/13/hidden-ruby-language-features/">Hidden Ruby Language Features</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-04-13T00:00:00+05:30" pubdate data-updated="true">2004.04.13</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.testing.com">Brian Marick</a> writes about a <a
+href="http://www.testing.com/cgi-bin/blog/2004/04/12#automock">little-known<br />
+feature</a> of the Ruby language: the ability to automatically mock classes<br />
+for testing at runtime. There is a keyword called &quot;mock&quot; that you<br />
+can use to do it. For example, if you want to temporarily replace the<br />
+behavior of a class called <tt>MyDatabaseConnector</tt> for a test, you<br />
+would use the following code:</p>
+<pre>
+  mock MyDatabaseConnector
+  class ClassToMockWith
+    ..code...
+  end
+</pre>
+<p>
+<p>Whatever class definition directly succeeds the invocation of<br />
+&quot;<tt>mock</tt>&quot; will be temporarily substituted for the class<br />
+specified as an argument to &quot;<tt>mock</tt>&quot;. Specifically, in<br />
+this case, any references to MyDatabaseConnector will be replaced with<br />
+references to ClassToMockWith, so instantiating MyDatabaseConnector<br />
+actually instantiates ClassToMockWith, and so on.</p>
+</p>
+<p>
+<p>Rubyists reading this are probably thinking I&#8217;ve lost my mind,<br />
+because this isn&#8217;t really a feature of the Ruby language. It&#8217;s<br />
+just a simple (albeit powerful) extension that Brian has written. But, to<br />
+someone coming from a history of work exclusively done in in one or more of<br />
+the more static languages (Java, C#, etc.), it looks like a first-class<br />
+part of the language.</p>
+</p>
+<p>
+<p>This is what Guy Steele was talking about in his <a
+href="http://homepages.inf.ed.ac.uk/wadler/gj/Documents/steele-oopsla98.pdf">Growing<br />
+a Language <span class="caps">OOPSLA</span> talk</a>.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/03/28/seaside-dissonance/">Seaside Dissonance</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-03-28T00:00:00+05:30" pubdate data-updated="true">2004.03.28</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Avi and I were talking about <a
+href="http://www.cincomsmalltalk.com/userblogs/avi/blogView?showComments=true&entry=3257728961">this<br />
+post</a> &#8212;specifically <a
+href="http://www.cincomsmalltalk.com/blog/blogView">James&#8217;s</a> comment,<br />
+which says that Avi should consider including a templating engine in <a
+href="http://www.beta4.com/seaside2/">Seaside</a> to avoid making newcomers<br />
+feel uncomfortable.</p>
+<p>
+<p>I had the following to say (&quot;lusers&quot; refers to the Dick Gabriel<br />
+saying that Avi quotes in his post):</p>
+</p>
+<p>
+<p><img src="http://www.chadfowler.com/images/SeasideConversation.jpg"></p>
+</p>
+<p>
+<p>(The ultimate in weblogging laziness.)</p>
+</p>
+<p>
+<p>The qmail reference might elude some of you. <a
+href="http://st-www.cs.uiuc.edu/users/johnson/">Ralph</a> walked us through<br />
+qmail&#8217;s code at the <a href="http://wiki.cs.uiuc.edu/MFA">Software<br />
+<span class="caps">MFA</span> Program</a> in January. qmail does some really unorthodox things with<br />
+IO streams, quickly alerting the reader (of the code) to the fact they<br />
+aren&#8217;t in Kansas anymore.</p>
+</p>
+<p>
+<p>My <a href="http://wiki.cs.uiuc.edu/MFA/Craft+Elements">&#8220;craft element&#8221;</a><br />
+remark refers to the possibility that this kind of forced discomfort<br />
+(dissonance) may be a trick-of-the-trade that developers can deliberately<br />
+take advantage of.</p>
+</p>
+<p>
+<p>From this perspective, throwing templates into Seaside would be something<br />
+like Gyorgy Ligeti ending <a
+href="http://www.amazon.com/exec/obidos/clipserve/B00005Y34N001002/0/104-2481148-3195168">Atmospheres</a><br />
+(scroll down and listen to the clip) on a C major triad.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/03/18/pragmatic-starter-kit-jolt-award/">Pragmatic Starter Kit Jolt Award</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-03-18T00:00:00+05:30" pubdate data-updated="true">2004.03.18</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Congratulations, <a
+href="http://www.pragprog.com/pragdave/Random/JoltAward.rdoc">Dave</a>, and<br />
+<a href="http://www.toolshed.com/blog/News/Jolt2004.html,v">Andy</a>. Nice<br />
+to see someone make a courageous move and have it pay off.</p>
+<p>
+<p>If you haven&#8217;t read these books yet (and you&#8217;re a software<br />
+developer), you really should do yourself a favor and make the time.<br />
+Don&#8217;t let &quot;Starter&quot; in the title fool you. Sure, the books<br />
+are about fundamental and could be used as a &quot;starter kit&quot; (as<br />
+the name suggests). But, greatness is (almost always) built on strong<br />
+fundamentals, and you&#8217;re never too good to need more practice.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/03/17/java-programmers-to-syntax-familiar-is/">Java Programmers to Syntax Familiar Is</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-03-17T00:00:00+05:30" pubdate data-updated="true">2004.03.17</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Richard Monson-Haefel <a
+href="http://weblogs.java.net/pub/wlg/1125">writes</a> about how <a
+href="http://groovy.codehaus.org/">Groovy</a> is being proposed as an<br />
+&quot;official&quot; language for the <span class="caps">JVM</span>. It would definitely be nice to<br />
+have a dynamic language &quot;officially&quot; supported on the <span class="caps">JVM</span> by Sun.<br />
+I might even sneak it into a project or two while nobody&#8217;s looking.</p>
+<p>
+<p>But the thing that really caught my attention was this excerpt from the<br />
+&quot;Why Groovy?&quot; rationale, defending its choice over <a
+href="http://www.jython.org">Jython</a> or <a
+href="http://jruby.sf.net">JRuby</a>:</p>
+</p>
+<pre>
+  ..is the best choice because it was built from the ground up for
+  the Java Platform and uses syntax that is familiar to Java developers..
+</pre>
+<p>
+<p><a href="http://www.vanderburg.org/Blog">Glenn</a> and I were chatting a<br />
+couple of mornings ago about AppleScript and how it&#8217;s said to be<br />
+&quot;easy to use&quot;, because it&#8217;s so much like English. The<br />
+problem, though, is that it looks like English and feels like English (sort<br />
+of), but it&#8217;s <b>not</b> English. My brain wants it to be English and<br />
+I end up typing English phrases into the editor that don&#8217;t parse.<br />
+Incidentally, as someone who is very familiar with Java, I have the same<br />
+problem on occasion with JavaScript (<a
+href="http://wiki.codehaus.org/groovy/WhatsWrongWithJavaScript">here&#8217;s<br />
+why</a> you should use Groovy instead of JavaScript). It confused me<br />
+because it looked like Java, but it wasn&#8217;t Java.</p>
+</p>
+<p>
+<p>The point of adding Groovy as an &quot;officially&quot; supported language<br />
+for the <span class="caps">JVM</span> would be to allow programmers to think and do things<br />
+differently than they can with the Java language. If the language is so<br />
+semantically different, why struggle to make it syntactically similar? Why<br />
+not let a different thing actually <b>look</b> different?</p>
+</p>
+<p>
+<p>It&#8217;s good to be uncomfortable on occasion. It shows you that<br />
+you&#8217;re growing.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/02/28/in-c/">In C</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-02-28T00:00:00+05:30" pubdate data-updated="true">2004.02.28</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since coming back from the MFASoftware program, I&#8217;ve been trying to<br />
+stay focused on my remote assignments. I&#8217;ve been doing a<br />
+particularily bad job of actually finishing anything, but I <b>have</b><br />
+been learning a lot.</p>
+<p>
+<p>One of my assignments was to read and annotate Guy Steele&#8217;s Lambda<br />
+The Ultimate Imperative (<a
+href="http://library.readscheme.org/page1.html">library.readscheme.org/page1.html</a>).<br />
+I&#8217;ve read the paper twice and opened up an editor to write about it<br />
+five or six times. As I read the paper, I knew it was teaching me something<br />
+that was going to have a lasting effect, but somehow when I sat to write<br />
+about it, the only memories I could summon were the mechanics of Scheme<br />
+(which the paper is written in/using).</p>
+</p>
+<p>
+<p>I&#8217;ve been learning Scheme in parallel to reading this paper, and<br />
+I&#8217;ve definitely felt a lot of &quot;schemisms&quot; snap into place<br />
+as I read. But I know that simply learning the language isn&#8217;t what<br />
+this paper is about. It&#8217;s just so hard to separate learning the<br />
+language from discovering the purity and simplicity of what Steele is<br />
+demonstrating. The beauty of Scheme is that there&#8217;s hardly anything<br />
+to it. To see Steele effortlessly implement programming constructs on top<br />
+of this near-nothingness drives home the power of minimalism.</p>
+</p>
+<p>
+<p>So, now I realise that, above all else, it&#8217;s a fascination with<br />
+minimalism that I&#8217;ve brought home from Illinois. <a
+href="http://www.cincomsmalltalk.com/userblogs/avi/blogView?showComments=true&entry=3254253382">Apparently</a>,<br />
+I&#8217;m not the only one.</p>
+</p>
+<p>
+<p>If minimalism is good, then what&#8217;s the opposite of minimalism?</p>
+</p>
+<p>
+<p>When I studied music composition with <a
+href="http://www.kamranince.com">Kamran_Ince</a>, there was one thing I<br />
+always knew he was going to say when I walked into his office with a new<br />
+composition. He was going to tell me something like, &quot;You&#8217;ve got<br />
+such a great idea here. Why do you have to run away from it so quickly? You<br />
+didn&#8217;t develop it. We didn&#8217;t even know it happened!&quot; I<br />
+would literally walk in to the beginning of a lesson <tt>knowing</tt> this<br />
+was going to happen, and yet it would happen every time. It felt a little<br />
+like not being able to spell &quot;<span class="caps">FBI</span>&quot; or like being given the<br />
+answers to a test and then failing it anyway.</p>
+</p>
+<p>
+<p>Though he wasn&#8217;t necessarily trying to encourage me to write music in<br />
+the style of a minimalist, the lesson was in fact about minimalism as a<br />
+craft element. And, if minimalism is good, then what I was bringing to<br />
+Kamran each week was its opposite. Lots of good ideas, jammed into a very<br />
+tiny temporal space. The end result was a jumble of intelligent thoughts,<br />
+stepping all over each other so that none were ultimately recognizable.<br />
+Have you tried to use <a
+href="http://java.sun.com/products/jndi/tutorial/"><span class="caps">JDNI</span></a>? It was<br />
+probably the musical equivalent. In the software world, this has the effect<br />
+of both muddying up what is already there, and creating an environment that<br />
+is unfriendly to extension and change.</p>
+</p>
+<p>
+<p>I don&#8217;t know much about the thing called &quot;minimalism&quot; in<br />
+art-forms other than music. But, in music, one of minimalism&#8217;s key<br />
+features is that of emergence. When players are making repetitive and<br />
+rhythmic sounds, a la <a href="http://terryriley.com">Terry</a> <a
+href="http://terryriley.com/">Reilly</a>, it&#8217;s almost never the<br />
+<b>written</b> notes and rhythms that are interesting. It&#8217;s what<br />
+happens when they&#8217;re all played together by imperfect humans.<br />
+It&#8217;s the slow and subtle phase shifting, and then the<br />
+musicians&#8217; subtle reactions to the phase shifting.</p>
+</p>
+<p>
+<p>Scheme obviously creates an environment that encourages emergent behaviors.<br />
+In fact, the whole point of Lambda the Ultimate Imperative (LtUI) is to<br />
+show that Scheme can be an imperative language, without changing Scheme and<br />
+without &quot;shoe-horning&quot; Scheme to awkwardly meet the imperative<br />
+critera. LtUI happens to be written by one of Scheme&#8217;s designers, but<br />
+there&#8217;s no reason you or I couldn&#8217;t have written that paper<br />
+(other than my age at its time of publication).</p>
+</p>
+<p>
+<p>So, back to Kamran Ince. He was trying to teach me not just to keep my<br />
+music simple so I could develop ideas. He was also trying to teach me to<br />
+create powerful ideas. You can&#8217;t write music the &quot;Kamran<br />
+Way&quot; while making timid gestures. If you&#8217;re going to let it all<br />
+hang out with an idea, it better be strong.</p>
+</p>
+<p>
+<p>And, with music, I think it&#8217;s a lot more apparent (than in<br />
+programming) that you can&#8217;t start with an idea that doesn&#8217;t<br />
+provide a platform on which to build a piece. For a patently contrived<br />
+example, listen to <a
+href="http://chadfowler.com/music/ThatsAllFolks.mp3">this</a>. It would be<br />
+possible to build a piece of music on something that sounds so final, but<br />
+it would sound strange and intentional. While the temporal element is<br />
+missing, an extremely rigid language or an <span class="caps">API</span> that is too large and<br />
+complex can produce the same effect of stunted idea growth in software. For<br />
+(potentially inflamatory) example, if a method of an object can only accept<br />
+parameters of a certain class, my freedoms are extremely and intentionally<br />
+limited when using that object.</p>
+</p>
+<p>
+<p>So, &quot;good minimalism&quot; doesn&#8217;t require simply that we<br />
+&quot;be minimal&quot;. It requires that we correctly balance substance and<br />
+space in a way that encourages evolutionary growth. It is possible to be<br />
+minimal and rigid, which will lead to small ideas that can&#8217;t be<br />
+developed any further. This is rarely what we want. Minimalism is one of<br />
+these words (like &quot;simple&quot;) that sound easy to do but actually<br />
+require a lot of practice to get them right.</p>
+</p>
+<p>
+<p>I see now that Lisp and Scheme aren&#8217;t different because of their<br />
+minimal syntax or their dynamism. It&#8217;s the fact that they &quot;get<br />
+out of the way&quot;, providing the right balance of mechanism and policy<br />
+to allow their users to continue to evolve in the direction that nature<br />
+selects, while not being so austere that wheels are necessariliy being<br />
+reinvented every day. This is what has drawn me to Ruby (and Smalltalk and<br />
+Scheme) and away from the likes of Java and C#. Not dynamic vs. static<br />
+typing or compiled vs. interpreted environments.</p>
+</p>
+<p>
+<p>Many of the arguments for and against these minimal environments seem to<br />
+boil down to the Mechanism vs. Policy <a
+href="http://pragprog.com/pragdave/Practices/MechPolicy.rdoc">tradeoff</a>.<br />
+But, I&#8217;ll leave that for a later post.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/02/22/type-watching/">Type Watching</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-02-22T00:00:00+05:30" pubdate data-updated="true">2004.02.22</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Dave has posted a clever piece of <a
+href="http://pragprog.com/pragdave/Tech/Ruby/LazyType.rdoc">code</a>,<br />
+showing how you could do runtime class checking in Ruby (or a Ruby-like<br />
+language) by simply wrapping methods and recording the first class that is<br />
+used for each method parameter. In his example, he uses it to throw an<br />
+error if any subsequent invocation has a parameter of a class different<br />
+from the first usage of that parameter. So, the following would fail:</p>
+<pre>
+  bob.age = 32
+  bob.age = Duck.new
+</pre>
+<p>
+<p>Though he warns that this is just a &quot;coffee-break<br />
+implementation&quot;, the actual code is remarkably simple as well. I<br />
+consider this to be a hallmark of Dave&#8217;s.</p>
+</p>
+<p>
+<p>As anyone in the dynamic programming languages world knows, &quot;type<br />
+checking&quot;(1) is a touchy and usually unproductive subject (<a
+href="index.cgi/Computing/Programming/Ruby/RubyTypesAndClasses.rdoc,v">RubyTypesAndClasses</a>).<br />
+The common complaint is that, without &quot;type&quot; information for<br />
+method parameters, code is hard to understand and maintain. I don&#8217;t<br />
+generally find this to be true for myself, but I can see and understand<br />
+that sometimes it would be helpful to have some hints as to what kinds of<br />
+objects a library author passes into certain method calls.</p>
+</p>
+<p>
+<p>The simplest solution to this&#8212;which wouldn&#8217;t require a<br />
+compromise of the design philosophy of the language&#8212;would be for all<br />
+library authors to simply document their code, giving their users a hint as<br />
+to what each method expects. We&#8217;ve all heard that one before. Even<br />
+those of us with the best intentions do, on average, a poor job documenting<br />
+our own code. Additionally, what&#8217;s obvious to me may not be obvious<br />
+to you. So as a library author, I will probably either overdocument (waste<br />
+my own time and clutter the code) or underdocument.</p>
+</p>
+<p>
+<p>Taking a cue from Dave, I did my own coffee-break implementation(2) of a<br />
+hack that would auto-document the class of parameters for a given set of<br />
+methods. It&#8217;s implemented as a modification to <a
+href="http://rdoc.sf.net">rdoc</a>. The idea is that you can<br />
+&quot;instrument&quot; your code temporarily, run through a typical usage<br />
+of it, and have Ruby keep track of&#8212;and save&#8212;class information<br />
+for the method parameters of specified classes.</p>
+</p>
+<h2>An example</h2>
+<p>
+<p>I&#8217;ve written a servlet (which I&#8217;ll talk about in more detail in<br />
+a later post) that I would like to document via rdoc. Assuming the servlet<br />
+is called &quot;ContinuationServlet&quot;, I can auto-generate parameter<br />
+class hints for this servlet by adding the following to my code:</p>
+</p>
+<pre>
+  require 'class_hints'
+  wrap_methods(ContinuationServlet)
+  ...
+  (invoke webrick normally here)
+  ...
+  File.open(&amp;quot;seasidehints.out&amp;quot;, &amp;quot;w&amp;quot;) do |file|
+    file.write(Marshal::dump(Kernel::METHOD_PARAM_HINTS))
+  end
+</pre>
+<p>
+<p>This will install a wrapper around every method of ContinuationServlet,<br />
+which will save class information for each parameter in the nested hash,<br />
+Kernel::METHOD_PARAM_HINTS. After having clicked around through the<br />
+application with a web browser, we just dump this to disk as a marshalled<br />
+Ruby object.</p>
+</p>
+<p>
+<p>Next, we feed this hash to rdoc when we document:</p>
+</p>
+<pre>
+  rdoc --param-hint-file=seasidehints.out pm_seaside.rb
+</pre>
+<p>
+<p>You can see the output <a
+href="http://chadfowler.com/lazyseaside/doc/">here</a>. For the lazy,<br />
+documented methods now look something like this:</p>
+</p>
+<pre>
+  call_cont([Continuation]cont, [WEBrick::HTTPUtils::FormData]answer)
+</pre>
+<p>
+<p>Full code listing:</p>
+</p>
+<p>
+<p><a
+href="http://www.chadfowler.com/lazyseaside/class_hint.html">class_hint.rb</a></p>
+</p>
+<p>
+<p><a
+href="http://chadfowler.com/lazyseaside/pm_seaside.html">pm_seaside.rb</a></p>
+</p>
+<p>
+<p><a
+href="http://chadfowler.com/lazyseaside/rdoc-class-hints.diff">rdoc.diff</a></p>
+</p>
+<p>
+<p>Like Dave, I&#8217;m just throwing this up here for comment. I&#8217;m not<br />
+sure anyone will find it useful, and the implementation is definitely a<br />
+hack. But, it seems like something <ins>like this</ins> might help to quiet some of<br />
+the complaints that half the population seems to have about dynamically<br />
+typed languages. And, for example, could <a
+href="http://freeride.rubyforge.org">FreeRIDE</a> use a trick like this to<br />
+provide intellisense-like hints in the <span class="caps">IDE</span>?</p>
+</p>
+<hr size="2"></hr><p>
+<p>(1) The word &quot;type&quot; is frequently misused in the Ruby world to<br />
+mean &quot;class&quot;. Matz actually deprecated the #type message on<br />
+Object to clarify that a Ruby object&#8217;s &quot;type&quot; is more<br />
+focused on its capabilities than its class. Class is little more than a<br />
+convenience mechanism.</p>
+</p>
+<p>
+<p>(2) It was a pretty long coffee break :)</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/01/11/software-mfa-returned-from-the-residency/">Software MFA - Returned From the Residency</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-01-11T00:00:00+05:30" pubdate data-updated="true">2004.01.11</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve just returned from the <a
+href="http://wiki.cs.uiuc.edu/MFA">trial</a> of the Software <span class="caps">MFA</span> <a
+href="http://www.chadfowler.com/index.cgi/Computing/Programming/MFASoftware.rdoc">program</a><br />
+that Dick Gabriel (<a href="http://dreamsongs.com">dreamsongs.com</a>) <a
+href="http://dreamsongs.com/MFASoftware.html">proposed</a>.</p>
+<p>
+<p>I&#8217;m exhausted and will say more about this later, but I do want to<br />
+say that thanks to Dick Gabriel, Ralph Johnson, and Brian Marick, this<br />
+event was one of the most rewarding experiences of my career. I can&#8217;t<br />
+wait until the program &quot;officially&quot; starts at <span class="caps">UIUC</span>. I&#8217;ll be<br />
+there.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/01/04/tumhara-kaam-kaisa-rakhna-how-to-keep-your-job/">Tumhara Kaam Kaisa Rakhna? (How to Keep Your Job)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-01-04T00:00:00+05:30" pubdate data-updated="true">2004.01.04</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>James Robertson links to a link to a link: <a
+href="http://www.cincomsmalltalk.com/blog/blogView?showComments=true&entry=3250451779">www.cincomsmalltalk.com/blog/blogView?showComments=true&amp;entry=3250451779</a></p>
+<p>
+<p>I&#8217;ve been waiting for this to happen (and warning my Indian friends).<br />
+As silly as it seems (with the huge boom going on over there), it might be<br />
+time to start thinking about things like this: <a
+href="http://www.pragmaticprogrammer.com/talks/HowToKeepYourJob/index.html">www.pragmaticprogrammer.com/talks/HowToKeepYourJob/index.html</a>.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2003/12/31/del-icio-us/">Del.icio.us</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2003-12-31T00:00:00+05:30" pubdate data-updated="true">2003.12.31</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://del.icio.us">del.icio.us</a></p>
+<pre>
+  Delicious is a social bookmarks manager.
+</pre>
+<p>
+<p>You can subscribe to my bookmarks and I can subscribe to yours. These are<br />
+available via <span class="caps">RSS</span> or <span class="caps">HTML</span>.</p>
+</p>
+<p>
+<p>I&#8217;ve been meaning to mention this for a while, but it hasn&#8217;t<br />
+been &quot;officially&quot; public until sometime fairly recently. Joshua<br />
+(<a href="http://burri.to/~joshua/">burri.to/~joshua/</a>), who developed<br />
+del.icio.us, is also the creator of memepool (<a
+href="http://memepool.com/">memepool.com/</a>) and GeoURL (<a
+href="http://geourl.org/">geourl.org/</a>).</p>
+</p>
+<p>
+<p>I&#8217;ve had a similar idea for some time but with some extended<br />
+statistical analysis features which Joshua insists would be too difficult<br />
+to actually implement if I tried. So, instead I&#8217;ll just start using<br />
+his and see where it leads.</p>
+</p>
+<p>
+<p>It&#8217;s really convenient, in that you can create bookmarks using a<br />
+simple del.icio.us bookmarklet.</p>
+</p>
+<p>
+<p>What&#8217;s going to be more interesting than the basic<br />
+functionality&#8212;it&#8217;s a very simple idea really&#8212;is the<br />
+network effect of how people, links, and categories&#8217; interactions<br />
+emerge into clusters and metatopics.</p>
+</p>
+<p>
+<p>Also, wouldn&#8217;t you love to have a running list of the stuff your<br />
+&quot;heroes&quot; are reading and finding intersting enough to bookmark? I<br />
+can think of a handful of software developers whose moves I would love to<br />
+track. What are the seeds that are going to grow the next big innovations<br />
+or the New Thinking about software development? Perhaps some of them might<br />
+show up in these lists.</p>
+</p>
+<p>
+<p>Of course, as this grows it may become too eclectic for anyone to find<br />
+interesting as a flat, running, aggregated list. Somehow this needs to<br />
+become &quot;social&quot; at a different level and evolve into communities<br />
+(to be fair, Joshua warns on the site, &quot;This system is pre-pre-alpha;<br />
+many features have yet to be added. Additionally, many, many bugs remain.<br />
+Please be careful.&quot;). Artima (<a
+href="http://www.artima.com/buzz/index.jsp">www.artima.com/buzz/index.jsp</a>)<br />
+attempts to do this in a very limited way with its &quot;Buzz&quot;<br />
+feature. But, with Artima&#8217;s application, you have to choose a single<br />
+category that your posts will fit into, and it&#8217;s obviously hard to<br />
+find a category that <b>always</b> works.</p>
+</p>
+<p>
+<p>I wonder if you could apply Vector Space Search (<a
+href="http://www.perl.com/pub/a/2003/02/19/engine.html">www.perl.com/pub/a/2003/02/19/engine.html</a>)<br />
+to this problem to auto-clump bookmarks or people into categories.</p>
+</p>
+<p>
+<p>OK. Now go sign up (<a
+href="http://del.icio.us/register">del.icio.us/register</a>) at del.icio.us<br />
+so I can subscribe to your bookmarks. You can see mine here (<a
+href="http://del.icio.us/chad">del.icio.us/chad</a>).</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/26/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/24/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://www.nordicruby.org/">Nordic Ruby</a></span>
+        <span class="location">Stockholm</span>
+        <span class="the-date">June 6-9, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/berlin-2013/upcomingevents/">GOTO Night</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">June 17, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/aarhus-2013/">GOTO</a></span>
+        <span class="location">Aarhus</span>
+        <span class="the-date">September 30, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/my-six-years-of-ignorance/">My Six Years of Ignorance</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/">Passionate Programmer - A free chapter (almost) every week until it&#8217;s done</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/23/immutable-deployments/">Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

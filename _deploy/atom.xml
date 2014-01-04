@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-01T19:38:59+01:00</updated>
+  <updated>2014-01-04T14:08:11+05:30</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,5 +12,485 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[About Eggs]]></title>
+    <link href="http://chadfowler.com/blog/2013/08/13/about-eggs/"/>
+    <updated>2013-08-13T08:27:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/08/13/about-eggs</id>
+    <content type="html"><![CDATA[<p>This week&#8217;s Passionate Programmer excerpt is a warning against placing too strong a bet on technology you don&#8217;t control. It&#8217;s funny how dated it sounds. Case in point, I guess.</p>
+
+<p><a href="http://chadfowler.com/passionate-programmer/eggs.html">Don&#8217;t Put All Your Eggs in Someone Else&#8217;s Basket</a>.</p>
+
+<p>As a side note, it was in <a href="http://pragdave.pragprog.com">Dave Thomas&#8217;s</a> original edits for the book in 2005 that, through his pull-quote &#8220;Vendor-centric views are typically myopic&#8221;, I learned the word &#8220;myopic&#8221;. I&#8217;ve learned two other words from Dave in my life: &#8220;anodyne&#8221; and &#8220;octothorpe&#8221;. Thanks, Dave!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Not to Panic - Passionate Programmer Excerpt]]></title>
+    <link href="http://chadfowler.com/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/"/>
+    <updated>2013-07-23T07:46:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt</id>
+    <content type="html"><![CDATA[<p><a href="http://chadfowler.com/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/">As I mentioned last week,</a> I&#8217;m releasing chapters of <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">The Passionate Programmer</a> every(ish) week until they&#8217;ve all been posted.</p>
+
+<p>This week&#8217;s chapter is one I actually re-read myself sometimes as a reminder. It&#8217;s about how to stay calm  and focused in the face of stress. It&#8217;s one of the most important lessons I&#8217;ve learned (and continue to learn) throughout my career and applies to every job I&#8217;ve had. Too often, our reaction to stress is to freak out and <em>just</em> <em>start</em> <em>trying</em> <em>shit</em>.</p>
+
+<p>In the chapter, I mention a Doom deathmatch player who went by the name &#8220;Noskill&#8221;.  I learned after the release of the book that Noskill aka Chris Crosby had <a href="http://doomwiki.org/wiki/Chris_Crosby_(NoSkill)">died in a car accident at the age of 23</a>. As weird as it is, I hope Chris&#8217;s family discovers that he somehow influenced my career and appeared in a book for software developers, perhaps some of whom will go on to work on the games he loved so much.</p>
+
+<p>Anyway, here it is.  <a href="http://chadfowler.com/passionate-programmer/panic.html">Don&#8217;t Panic</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Six Years of Ignorance]]></title>
+    <link href="http://chadfowler.com/blog/2013/07/22/my-six-years-of-ignorance/"/>
+    <updated>2013-07-22T10:09:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/07/22/my-six-years-of-ignorance</id>
+    <content type="html"><![CDATA[<p>Six years ago, I gave up a bad habit.  Since 1999 I had been using RSS then Atom as my interesting-stuff changelog.  I eventually amassed a subscription collection of hundreds of feeds with subjects ranging from the obvious (tech news and software development) to religion, philosophy, language, and music. Every day, all day, new items
+came into my feed reader. I had gotten pretty good at culling uninteresting feeds, so <em>lots</em> of it was relevant and exciting to me. If a tech company was rumored to be in acquisition talks, I knew it. If Rubyists started favoring a new library for accessing relational databases or creating parsers, I knew that.</p>
+
+<p>And the unread items count kept growing. Along with it so did my anxiety over not being &#8220;in the know&#8221;.</p>
+
+<p>So six years ago, I deleted the feed reader from my computer and removed every trace of my RSS + Atom collection from the internet so it could not tempt me. What started as a month-long experiment while traveling through Europe ended as the new norm.</p>
+
+<p>But how do I keep in touch with what&#8217;s happening? How do I avoid being completely ignorant?</p>
+
+<p>I guess I don&#8217;t. I am ignorant of most of what&#8217;s changing day to day in the software industry. So far that&#8217;s working out fine for me. When something becomes more than just a community- or industry-wide distraction, I learn about it. And because I&#8217;m not so distracted trying to keep up with <em>everything</em>, I have time to catch up on the things that matter.</p>
+
+<hr />
+
+<p>I was reminded of this today when I read MG Siegler&#8217;s <a href="https://medium.com/tech-blogging/43d78a82e103">assertion that very little of what you read on the internet is actually true</a>, which was sent to me via email by a colleague.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Passionate Programmer - A free chapter (almost) every week until it's done]]></title>
+    <link href="http://chadfowler.com/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/"/>
+    <updated>2013-07-16T09:15:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week</id>
+    <content type="html"><![CDATA[<p>Starting today I&#8217;m going to post a free excerpt from <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">The Passionate Programmer</a> every week (time permitting) until I&#8217;ve posted them all. (Thanks to <a href="http://pragprog.com">my generous publisher</a> for allowing this!)</p>
+
+<p>If you have read it and wished you could share sections with friends and co-workers that don&#8217;t own the book, now&#8217;s your chance. If you haven&#8217;t read it and really don&#8217;t want to spend money on it, you can read it for free (out of order) over the course of the next year.</p>
+
+<p>I&#8217;d love to hear your reactions (via twitter, blog posts, hacker news comments, etc.) to each chapter as I post them. I released the first edition of the book eight years ago, and I always hear bits and pieces of feedback on the book in general. I&#8217;m hoping this gives me and the book&#8217;s readers a chance to focus discussion on each concept.</p>
+
+<p>The first post is one of my favorites and one that gets little attention. It&#8217;s about &#8220;value rigidity&#8221; and the human tendency to hold on to things that are important to them so tightly that they can&#8217;t detect a change in context. I talk about this concept somewhat narrowly in the book, but I constantly see its application in daily life.  For me it&#8217;s a very useful mirror in which to inspect my behaviors.</p>
+
+<p>Here it is: <a href="http://chadfowler.com/passionate-programmer/">The South Indian Monkey Trap</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components]]></title>
+    <link href="http://chadfowler.com/blog/2013/06/23/immutable-deployments/"/>
+    <updated>2013-06-23T18:57:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/06/23/immutable-deployments</id>
+    <content type="html"><![CDATA[<p>As a developer and sometimes system administrator, one of the scariest things I ever encounter is a server that&#8217;s been running for ages which has seen multiple upgrades of system and application software.</p>
+
+<p>Why? Because an old system inevitably grows warts. They start as one-time hacks during outages. A quick edit to a config file saves the day. &#8220;We&#8217;ll put it back into Chef later,&#8221; we say, as we finally head off to sleep after a marathon fire fighting session.</p>
+
+<p>Cron jobs spring up in unexpected places, running obscure but critical functions that only one person knows about. Application code is deployed outside of the normal straight-from-source-control process.</p>
+
+<p>The system becomes finicky. It only accepts deploys in a certain manual way. The init scripts no longer work unless you do something special and unexpected.</p>
+
+<p>And, of course the operating system has been patched again and again (in the best case) in line with the standard operating procedures, and the inevitable entropy sets in.  Or, worse, it has never been patched and now you&#8217;re too afraid of what would happen if you try.</p>
+
+<p>The system becomes a house of cards. You fear any change and you fear replacing it since you don&#8217;t know everything about how it works.</p>
+
+<p>We&#8217;ve tried lots of ways to avoid this problem over the years from team policy to automation.  We&#8217;re trying a new one now <a href="http://wunderlist.com">at work</a>: Immutable Deployments.</p>
+
+<p>Many of us in the software industry are starting to take notice of the benefits of immutability in software architecture.  We&#8217;ve seen an increased interest over the past few years in functional programming techniques with rising popularity of languages such as Erlang, Scala, Haskell, and Clojure.  Functional languages offer immutable data structures and single assignment variables. The claim (which many of us believe based on informal empirical evidence) is that immutability leads to programs that are easier to reason about and harder to screw up.</p>
+
+<p>So why not take this approach (where possible) with infrastructure? If you absolutely know a system has been created via automation and never changed since the moment of creation, most of the problems I describe above disappear. Need to upgrade? No problem. Build a new, upgraded system and throw the old one away.  New app revision? Same thing. Build a server (or image) with a new revision and throw away the old ones.</p>
+
+<p>At <a href="http://6wunderkinder.com">6Wunderkinder</a>, we have been moving in this direction over the past 4 months.  It&#8217;s giving us the confidence we need to rapidly iterate on our backend infrastructure as we continue to make things faster, more scalable and dependable for our customers and flexible to move our applications forward more freely.</p>
+
+<p>Maybe more remarkable, though, is that like a new programming paradigm, thinking of infrastructure this way changes how I view our systems pretty fundamentally. New patterns and anti-patterns emerge. It is changing how I think not just about deployments but about application code (and even team structure).</p>
+
+<p>This idea is a work in progress for me. We&#8217;re obviously not the first ones to think of it, so there is a lot to learn.  It also implies some kind of &#8220;cloud&#8221; infrastructure, though I think modern software architecture generally does.</p>
+
+<p>Expect to hear more about the tactical details of this from me here and <a href="http://railsisrael2013.events.co.il/presentations/852-disposable-components">at various conferences this year</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Give a Keynote]]></title>
+    <link href="http://chadfowler.com/blog/2013/06/08/how-to-give-a-keynote/"/>
+    <updated>2013-06-08T17:05:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/06/08/how-to-give-a-keynote</id>
+    <content type="html"><![CDATA[<p>I&#8217;m not sure how it happened, but out of the many conferences in which I&#8217;ve spoken, I&#8217;ve only submitted two talk proposals.
+Both were to O&#8217;Reilly&#8217;s OSCON. One was in 2003. It was not accepted. Too bad; It would have been really good. The next was in 2004.
+It was accepted. It wasn&#8217;t all that great.</p>
+
+<p>Every other time, I&#8217;ve been asked to speak&#8211;usually to give a keynote.</p>
+
+<p>So before my first keynote speech, I had only delivered one conference talk. And I didn&#8217;t think it wasn&#8217;t any good (sorry OSCON 2004!). When the organizers of this conference contacted me,
+I responded and said the following, &#8220;I&#8217;d love to do this and I&#8217;m thrilled to be asked. Just to avoid embarrassment, though, are you sure you didn&#8217;t mean to
+email <a href="http://martinfowler.com">Martin Fowler</a>?&#8221; Apparently they had a nice laugh and then responded
+saying they really meant me.</p>
+
+<p>My next feeling was not relief. It was terror. It was a great honor to be asked to keynote at <em>anything</em>. But, why me? What would I speak about? What the hell is a keynote anyway?</p>
+
+<p>As I did with many new challenges back then, I turned to my friend <a href="http://pragprog.com">Dave Thomas</a>. &#8220;Dave, they asked me to keynote and they didn&#8217;t mean Martin. What do I do?!&#8221;
+Dave was kind enough to give me the single most useful piece of advice I&#8217;ve ever gotten as a keynote speaker.</p>
+
+<p>He said something like &#8220;Keynotes are after-dinner entertainment. Don&#8217;t try to teach them. Just keep them entertained and leave them with something to think about.&#8221;</p>
+
+<p>So I did that and I think it went well.  In fact, at this particular conference, <a href="http://david.heinemeierhansson.com/">one of the other keynote speakers</a> got snowed in at home in Chicago and couldn&#8217;t make it.
+So for my first keynote appearance, I actually gave two. One planned and one that I wrote while at the conference. Pretty good practice!</p>
+
+<p>Since then I&#8217;ve done enough of them in enough different circumstances (conference types, countries, with and without live translation, remotely via video, etc.) that I&#8217;ve had the chance to fail and succeed in a number of different ways. Occasionally, a friend or colleague encountering their first keynote calls or writes and says &#8220;Chad, they asked me to keynote. What do I do?!&#8221;</p>
+
+<p>Here are some answers:</p>
+
+<ul>
+<li>Dave was absolutely right. Entertain and provoke thought.</li>
+<li>Do not introduce yourself. If you&#8217;re a keynote speaker, they probably already know who you are anyway. If they don&#8217;t, they won&#8217;t care while you introduce yourself.</li>
+<li>Tell a personal story. Among other reasons, it will loosen you up and allow you to communicate better with your audience. A personal story is easier to deliver unrobotically than the programmed content you might be crafting. So use it to connect with the audience and to motivate the message of your talk.</li>
+<li>Be vulnerable. Subtly admitting that you&#8217;re imperfect and not completely certain about everything puts you in the right frame of mind to engage with the people listening to you and to avoid the trap of trying to appear to be right about everything.</li>
+<li>Don&#8217;t try to prove yourself. You&#8217;ve already been asked to keynote. If you get insecure and spend time proving why you&#8217;re the right person to be speaking on your topic it will sound like you&#8217;re arrogant, which you probably aren&#8217;t.</li>
+<li>Converse with the audience. I personally look into the eyes of the people listening to me in exactly the same way I would if I were having a conversation over coffee. I go on a tangent and I can see that they&#8217;re bored so I change my approach. They might not be directly speaking to you, but they communicate with their reactions, and letting the communication happen in two directions is extremely important for both you and the listener.</li>
+<li>Say significantly less than you think you need to. Don&#8217;t fall into the trap of trying to cram in as much as you can. Kent says this better than I will:</li>
+<li>Read and apply Kent Beck&#8217;s <a href="https://www.facebook.com/note.php?note_id=536820369684165">three focusing questions</a></li>
+<li>Create a story arc and apply a little drama if you can. There are many devices you can use for this. Watch your favorite speakers, and see how they use foreshadowing, repetition, rhythm, etc. Dave Thomas is amazingly gifted at this.  <a href="http://www.confreaks.com/presenters/137-dave-thomas">Find some of his keynotes and watch for how he does it.</a></li>
+<li>Express your opinions unapologetically. You&#8217;re a human&#8211;not an information dispenser. People can look up facts on the internet.  They&#8217;re at the conference to listen to your perspective on things.</li>
+<li>Leave your audience with something to wonder about. Unanswered questions are OK in a keynote.</li>
+</ul>
+
+
+<p>I&#8217;m not the greatest keynote speaker to have ever lived, but I try to do them well and constantly aspire to be better. As with everything I write or speak about, I hope these tips are meaningfully helpful to at least one person.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to get your conference talk accepted]]></title>
+    <link href="http://chadfowler.com/blog/2013/05/25/how-to-get-your-conference-talk-accepted/"/>
+    <updated>2013-05-25T16:33:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/05/25/how-to-get-your-conference-talk-accepted</id>
+    <content type="html"><![CDATA[<p>I am one of the original organizers of both <a href="http://rubyconf.org">RubyConf</a> and <a href="http://railsconf.com">RailsConf</a>.  Combined, I&#8217;ve organized or been on the program committee for around 25 conferences.  I&#8217;ve read hundreds of proposals and seen hundreds of conference talks.</p>
+
+<p>Occasionally, a proposal or a talk stands out. Here&#8217;s one that I still think of when new would-be speakers ask how to get their first talk accepted. When preparing for RailsConf 2010 in Baltimore, we received this email from <a href="https://twitter.com/r00k">Ben Orenstein</a>:</p>
+
+<p><img src="https://www.evernote.com/shard/s10/sh/f55ad33d-1d6b-4b65-a99f-101cbbb0102f/e65102090bed40292d838dbea4519ed4/deep/0/Screenshot%205/25/13%204:37%20PM.png"></p>
+
+<p>Ben had never spoken at a conference before, and he knew we had a lot of proposals to consider.  Here&#8217;s what I like about his email (and <a href="http://www.youtube.com/watch?v=pg33EQCdMxw">video</a>):</p>
+
+<ul>
+<li>Most important, he showed us how enthustiastic he to give the talk. Enthusiasm is one of the most sorely lacking features of technical conference talks. When someone is excited, I am more engaged.</li>
+<li>He reassured us that, though we might not have heard of him before, he was qualified to give the subject a good treatment.</li>
+<li>He told us he was going to be prepared when the conference rolled around. It&#8217;s rare that a conference presenter explicitly says &#8220;I am going to be ready&#8221;.</li>
+<li>He went to the trouble to make a video which showed us both what his style might be like in person and again that he really wanted this opportunity to speak.</li>
+</ul>
+
+
+<p>I immediately looked up his proposal, and as you might guess it was as thoughtful and energetic as the email and video.</p>
+
+<p>I then sent my <a href="http://benscofield.com/">conference co-chair, Ben Scofield</a>, the following email:</p>
+
+<p><img src="https://www.evernote.com/shard/s10/sh/c94adab6-544d-42a0-8dc8-8a0204a2f7c4/adf24b4fa91301619dbdd76a0c0bd6d2/deep/0/Screenshot%205/25/13%204:55%20PM.png"></p>
+
+<p>And his response:</p>
+
+<p><img src="https://www.evernote.com/shard/s10/sh/c5578176-2ce1-4df1-ba3d-9bd381702981/3b61f42fb63bbeda938dbb35d8cd0dec/deep/0/Screenshot%205/25/13%205:00%20PM.png"></p>
+
+<p>This is surely only one way to get a talk accepted, but as a new presenter, it&#8217;s a good example to consider.</p>
+
+<p>(You can hear a conversation between me and Ben about this proposal and more at the <a href="http://learn.thoughtbot.com/podcast/44">Giant Robots Podcast</a>.)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Discipline: Stomp Out Cynicism]]></title>
+    <link href="http://chadfowler.com/blog/2013/05/20/discipline-stomp-out-cynicism/"/>
+    <updated>2013-05-20T11:36:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/05/20/discipline-stomp-out-cynicism</id>
+    <content type="html"><![CDATA[<p>Here&#8217;s an exercise you can put into place right now which will have a lasting, significant, positive effect on your life
+and the lives of those you work, live, collaborate, and play with. There are two versions: an easy version and a harder version. Start with the easy
+version unless you&#8217;re the kind of person who has to do things the hard way.</p>
+
+<h2>The easy version</h2>
+
+<p>Whenever you have a cynical thought, keep it to yourself. Never utter, write, or otherwise convey it. Put it away. Think it to yourself all day if you have to, but never express it.</p>
+
+<h2>The harder version</h2>
+
+<p>Whenever you have a cynical thought, keep it to yourself. Analyze it. Scrutinize it. Prove it to be wrong. Discover the personal fear within you from which it grew, and make a plan to address that fear
+fully. Be thankful to the negative emotion for giving you the opportunity to understand your own weaknesses.</p>
+
+<p>Cynicism is born of laziness and fear: It&#8217;s easy to complain about something. It&#8217;s harder to fix it. It&#8217;s both scary and liberating to trust other people to try to be their best.</p>
+
+<h2>Update</h2>
+
+<p>As <a href="https://twitter.com/dhh">@dhh</a> pointed out on Twitter after I posted this, I worded this more absolutely than intended. I meant this to be an &#8220;exercise&#8221; (see the first sentence). Skepticism is healthy. Sometimes, cynicism is the right reaction. But, I believe most of us could use a lot less of it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Who I Want to Hire]]></title>
+    <link href="http://chadfowler.com/blog/2013/04/09/who-i-want-to-hire/"/>
+    <updated>2013-04-09T09:44:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/04/09/who-i-want-to-hire</id>
+    <content type="html"><![CDATA[<p>There&#8217;s a person I want to work with. I can&#8217;t find this person. I&#8217;ve literally searched the world,
+and I can hardly find a trace.</p>
+
+<p>I&#8217;m not talking about someone specific. In fact, that&#8217;s the problem.  I&#8217;m talking about a set of traits
+and an attitude which is more scarce than I realized until recently.  I know a small handful of people who
+fit what I&#8217;m looking for, but they&#8217;re busy and unavailable right now.</p>
+
+<p>I was talking to one of these people recently about my desire to, as I put it, &#8220;hire someone like you&#8221;, and we
+both realized how hard it is to name really <em>anyone</em> <em>else</em> who fits the description. Given this and the fact that
+there are so many <em>bad</em> job descriptions for developers in the world, I&#8217;m writing down what I&#8217;m looking for
+in hopes that this person (you?) is out there:</p>
+
+<ul>
+<li>Everyone knows that when you take on a task whether it&#8217;s huge and scary or tiny and boring, you&#8217;re going to see it through to the best of your ability.</li>
+<li>It&#8217;s <em>obvious</em> to everyone around you that you have fun with your work and with your co-workers.</li>
+<li>You care about how your work and attitude affects those around you. I mean <em>really</em> care. If you hurt someone, it hurts you. Everything you do runs through this filter.</li>
+<li>You understand that communication is the <em>biggest</em> responsibility of your job as a developer and the one you&#8217;re least likely to get right unless you focus on it.</li>
+<li>You focus on shipping software that matters to your users and that matters to the company you&#8217;re building it for.</li>
+<li>You&#8217;ve experimented with and survived many different types of development and project methodologies, which has left you with a healthy appreciation for what works from the so-called &#8220;agile&#8221; methodologies and those that came before (and after) them.</li>
+<li>You have no time for ceremony. Maybe you even hate it, but &#8220;hate&#8221; is too dogmatic a term.</li>
+<li>You are humble enough to bend to the will of the frameworks, technologies, constraints, and <em>people</em> you work with when doing so won&#8217;t have a materially negative impact. In other words, you can play by someone else&#8217;s rules when that&#8217;s the easiest and/or best thing to do.</li>
+<li>You make pragmatic (often boring) technology choices at work and you play in your free time. You don&#8217;t build science projects just because you are smart enough to build them.</li>
+<li>You are confident enough that you don&#8217;t have to prove to anyone what a great developer you are, and therefore&#8230;</li>
+<li>You don&#8217;t mind being the one that looks bad when you deserve it. You make mistakes sometimes, because you&#8217;re human, but rather than dwell on them you choose to fix and then learn from them.</li>
+<li>You love to teach and learn from your co-workers.</li>
+<li>You are confident with a number of programming languages, operating systems, and architectures. You probably have one of each you prefer right now, but you&#8217;re neither dogmatic nor myopic in your focus on it.</li>
+</ul>
+
+
+<p>From my perspective, these are the things that matter.</p>
+
+<p>I don&#8217;t care if you&#8217;re the smartest person I&#8217;ve ever met.
+I don&#8217;t care if you know everything about the technologies I&#8217;m deploying.
+I don&#8217;t want a &#8220;rock star&#8221;. I definitely don&#8217;t want a ninja.
+I don&#8217;t care if you write books, contribute to Open Source software, or speak at conferences. I do those things, and I know how little they predict how well I do my job.</p>
+
+<p>If this describes you, I definitely want to know you. If you are interested in building scalable APIs and automated infrastructures for those APIs and would like to work with me in Berlin making beautiful productivity software, I <em>definitely</em> want to know you. Please get in touch.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[If it stresses you out, it's not your job]]></title>
+    <link href="http://chadfowler.com/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/"/>
+    <updated>2013-03-25T19:11:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job</id>
+    <content type="html"><![CDATA[<p>I keep learning this lesson over and over again, so I&#8217;m writing it here in an effort to never forget again. As a manager, if some task constantly stresses me out or makes me feel uneasy,
+it&#8217;s probably because I&#8217;m doing someone else&#8217;s job.</p>
+
+<p>I don&#8217;t mean someone&#8217;s being lazy and I&#8217;m picking up their slack. I&#8217;m talking about those nagging little annoying things you find yourself doing as infrequently as you can
+and do a half-assed job at every time. So you not only stress because they&#8217;re in the way of your <i>real</i> work but you stress because you suck at them.</p>
+
+<p>Every time I allow myself to notice this feeling&#8211;every time I  analyze what&#8217;s causing it, it&#8217;s because I should be delegating this work to someone else. Usually, in a
+mature organization, it&#8217;s even obvious <i>who</i> the work should go to.</p>
+
+<p>The beautiful thing about being a manager of people is that your core job includes uncluttering your and everyone else&#8217;s work days by putting the work, moving tasks to a home  where they can be
+lovingly completed.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I'm a Wunderkind!]]></title>
+    <link href="http://chadfowler.com/blog/2013/02/19/im-a-wunderkind/"/>
+    <updated>2013-02-19T15:58:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/02/19/im-a-wunderkind</id>
+    <content type="html"><![CDATA[<p>As I mentioned recently, <a href="http://chadfowler.com/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">we&#8217;ve moved to Berlin!</a>.  We got to spend a week of down time exploring the city.  We are definitely in love with Berlin so far!</p>
+
+<p>I&#8217;m excited today to finally announce that I&#8217;ve joined <a href="http://www.6wunderkinder.com/blog/willkommen-chad">6Wunderkinder</a> as CTO. In case you don&#8217;t know them by the company name, 6Wunderkinder are the creators of the extremely popular <a href="http://www.wunderlist.com">Wunderlist</a>, which is a cross-platform, simple, and beautiful productivity application.  I&#8217;m a user, and as I&#8217;ve told friends and family about my move, I&#8217;ve discovered that many of you are too.</p>
+
+<p><a href="http://www.bizjournals.com/washington/blog/techflash/2013/02/former-svp-chad-fowler-on-the-state-of.html">As I&#8217;ve said previously,</a>, I&#8217;ll miss my LivingSocial team and look forward to watching them from here in Berlin, but I&#8217;m extremely excited to get back to hands-on software development with the small, focused, team of brilliant product engineers here at 6Wunderkinder.</p>
+
+<p>For those in the Berlin tech scene, if you happen to see me around at <a href="http://www.sanktoberholz.de/">Sankt Oberholz</a>, please do stop by and say hi :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Switched to github page, octopress, and a new design]]></title>
+    <link href="http://chadfowler.com/blog/2013/02/15/switched-to-github/"/>
+    <updated>2013-02-15T17:35:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/02/15/switched-to-github</id>
+    <content type="html"><![CDATA[<p>Thanks to <a href="http://lynn.io/">Lynn Wallenstein</a>, I have a new web site design. If you see problems with the layout, it&#8217;s almost definitely because I screwed something up after Lynn gave me the code. Sorry, Lynn. :(</p>
+
+<p>I have also used this as a chance to move from my own server (which I&#8217;ve been screwing with for over a decade) to Octopress hosted on Github Pages. I&#8217;m glad to be done with that phase of my life.</p>
+
+<p>Anyway, with Octopress I feel like I&#8217;m stepping back to the simple, productive environment I had ten years ago with <a href="http://rubyforge.org/projects/rublog/">Rublog</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Moving to Berlin and auf wiedersehen to friends]]></title>
+    <link href="http://chadfowler.com/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/"/>
+    <updated>2013-01-08T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends</id>
+    <content type="html"><![CDATA[<p>It&#8217;s hard to believe it&#8217;s been <a href="http://techcrunch.com/2011/03/14/livingsocial-gains-wealth-of-ruby-on-rails-expertise-with-infoether-acquisition/">almost two years</a> since InfoEther was acquired by LivingSocial. Since then, we&#8217;ve built the strongest development team I&#8217;ve ever known. We&#8217;ve set <a href="http://mashable.com/2012/09/06/livingsocial-starbucks-record/">records</a> for e-commerce transaction volume. We&#8217;ve grown at an incredible pace, both as a business and as <a href="http://www.youtube.com/watch?feature=player_embedded&v=14sUms68LwA">technology team</a>. We&#8217;ve shipped a lot of software, and made millions of people&#8217;s lives more interesting in the process.  I&#8217;ve had the privilege to work with <a href="https://coderwall.com/team/livingsocial">some of the most admired engineers in on industry</a>. I&#8217;m proud of the team <a href="http://aaronbatalion.com/">Aaron Batalion</a> (from whom I&#8217;ve learned a ton about running a consumer internet product) had assembled before InfoEther arrived and of the team that ultimately grew from that foundation.</p>
+<p><a href="http://www.chadfowler.com/2011/12/21/re-thinking-software-development-education">As I mentioned when I announced</a> our <a href="http://hungryacademy.com">Hungry Academy program</a>, for me personally the experience at LivingSocial has been intense. As I said in that post, “These last 8 months at LivingSocial have been the best 4 years of my career.” That holds true today.</p>
+<p>Playing the role of Senior Vice President of Technology and serving on the senior executive team at LivingSocial has been a rewarding learning experience.  I&#8217;m humbled by the talent and experience of every member of that team, and since my first day have been awed by <a href="http://corporate.livingsocial.com/ourteam">Tim O&#8217;Shaughnessy&#8217;s</a> business sense and natural leadership ability.  I look back on my career, and a handful of teachers and mentors stand out that have had a significant impact on me. Tim is now in that very short list.</p>
+<p>All the while, though, I&#8217;ve known that I would eventually go back to a more hands-on role, personally building products and solving technical problems. I am, after all, a <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">Passionate Programmer</a>.</p>
+<p><a href="http://twitter.com/kellyjeanne">Kelly </a> and I have also had  a goal to (before we get too old to fully enjoy it) live overseas again.  Our time in India, <a href="http://pragprog.com/book/mjwti/my-job-went-to-india">was a huge influence on both of us, both personally and professionally</a>, and we&#8217;ve long since hoped to gain a similar experience in a different part of the world, specifically Europe.</p>
+<p>So that&#8217;s what we&#8217;re going to do.  I&#8217;m taking a role as <span class="caps">CTO</span> of a technology startup in one of our favorite cities: Berlin.  I&#8217;ll be working hands-on to develop cross-platform software with a small, talented team of engineers, designers, and product managers. I&#8217;ll be transitioning from my role at LivingSocial for the remainder of January and will be relocated to Berlin and starting the new job in mid February.</p>
+<p>As excited as I am to move to the next adventure, it&#8217;s always sad leaving a great company like LivingSocial.  I&#8217;ve made some friendships that will last forever, and I&#8217;ll miss the team immensely. I know, however, that they&#8217;re in good hands and that 2013 is going to be a fantastic year for the business. </p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Leaving a Legacy System revisited]]></title>
+    <link href="http://chadfowler.com/blog/2012/10/29/leaving-a-legacy-system-revisited/"/>
+    <updated>2012-10-29T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2012/10/29/leaving-a-legacy-system-revisited</id>
+    <content type="html"><![CDATA[<p>Early last year, <a href="http://chadfowler.com/2011/03/17/leaving-a-legacy-system">I posted</a> about how we&#8217;ve unfortunately turned the word &#8220;legacy&#8221; into a bad word in the software industry.</p>
+<p>At Nordic Ruby and again at Aloha Ruby Conf this year I <a href="http://confreaks.com/videos/1240-aloharuby2012-legacy">turned this idea into an exploratory presentation</a>.  I think it turned out pretty well and is an important topic.  Watch it and let me know what you think!</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The art/craft/commodity continuum]]></title>
+    <link href="http://chadfowler.com/blog/2011/12/27/the-art-craft-commodity-continuum/"/>
+    <updated>2011-12-27T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2011/12/27/the-art-craft-commodity-continuum</id>
+    <content type="html"><![CDATA[<p>When you create art, the purpose is self-expression.</p>
+<p>When you create software, the purpose is rarely self-expression.</p>
+<p>When you create software, someone somewhere wants it to perform a set of functions and has a stake in how well those functions are implemented. The definition of &#8220;well&#8221; is up to the stakeholder.</p>
+<p>When you create art, you want it to be beautiful, or beautifully ugly, or ornate, or plain. You, the creator, are the stakeholder. You may hope that others find it beautiful, but if they don&#8217;t, it&#8217;s art&#8212;who&#8217;s to say what&#8217;s good and bad?</p>
+<p>When you attempt to judge the quality of a commodity good solely in terms of its aesthetic appeal, you ignore the objective evaluation of how well that product meets the needs of its stakeholders.</p>
+<p>When you attempt to judge the quality of a piece of art solely on some objective measure, you miss the point of the object as an expression of art.</p>
+<p>Craft falls somewhere between commodity and art. Craft items have both subjective, aesthetic appeal and objective function.</p>
+<p>This is a beautiful Christian Dior dress:</p>
+<p><img src="http://chadfowler.com/images/falf/dior.jpg" alt="" /></p>
+<p>Beautiful but largely impractical.  Try to wear this on the subway or even in your car. Try to fit it through a standard door. It&#8217;s a beautiful piece of art, but it fails as a useful article of clothing for most people.</p>
+<p>This is a <a href="http://paulsmith.co.uk">Paul Smith</a> suit. It&#8217;s practical, extremely well made, creatively designed, and probably very expensive:</p>
+<p><img src="http://chadfowler.com/images/falf/paul-smith.jpg" alt="" /></p>
+<p>This is a pair of pants on sale at <a href="http://walmart.com">Wal-Mart</a>:</p>
+<p><img src="http://chadfowler.com/images/falf/walmart.jpg" alt="" /></p>
+<p>Beautiful?  I don&#8217;t know many people who would call this beautiful. Completely unremarkable.</p>
+<p>And so it goes&#8230;from art to craft to commodity.</p>
+<p>Now consider yourself as the customer here. My guess is that most of my readers, even with an appreciation of the quality of the Paul Smith suit, would be much more comfortable in the Wal-Mart pants.</p>
+<p>When we create an item for another person, we have to consider whether that person is looking for art, craft, or commodity. We may wish to always be creating art. Or craft. But sometimes our customers want commodity. Not only is commodity cheaper but it&#8217;s what they <em>prefer</em>.</p>
+<p><img src="http://chadfowler.com/art-commodity-continuum.png" alt="" /></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Re-thinking Software Development Education]]></title>
+    <link href="http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education/"/>
+    <updated>2011-12-21T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education</id>
+    <content type="html"><![CDATA[<p>Where have I been lately?  Good question. When asked over these past months, I jokingly say something like, &#8220;These last 8 months at LivingSocial have been the best 4 years of my career.&#8221;</p>
+<p>But I don&#8217;t just mean I&#8217;ve been busy. I&#8217;ve been focused on building the best software development team I can to do what I think is some important and industry-changing work in the world of local commerce.</p>
+<p>And when I joke about these 8 months being the best 4 years of my career, what I really mean is that I feel like I&#8217;ve learned 4 years worth of lessons and gained 4 years worth of experience. What we&#8217;re doing isn&#8217;t easy. It&#8217;s the kind of work I&#8217;ve always sought out.</p>
+<p>I am a self-taught software developer. To date, my formal education consists of two 3-day training classes on specific programming languages (Java many years ago and Erlang in 2008). During my first work experiences in IT, I remember the shock of discovering that a Masters degree in software development doesn&#8217;t necessarily translate to knowing how to effectively use a computer. I was a saxophonist and system administrator and would regularly <em>teach</em> the computer scientists I worked with about things I would have assumed they learned in college.</p>
+<p>As I headed further into the workforce I noticed another odd thing: people with tens of years of experience as software developers weren&#8217;t necessarily very good at it. My assumptions were based on what I had previously learned as a jazz musician.  Jazz musicians polish and hone their skills throughout their careers. The longer a jazz musician has been playing, the more likely he or she is to be an excellent jazz musician.</p>
+<p>Programmers, though. As far as I could tell the average programmer spent his day complaining about his co-workers and waiting for 5pm.</p>
+<p>So what&#8217;s the disconnect? Some of it, of course, is just the people. Some <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">programmers are passionate</a> and some aren&#8217;t. Those that aren&#8217;t, aren&#8217;t going to be radically successful. Assuming this is the case in all fields, what&#8217;s really frustrating to me is that I continue to run into passionate developers who just don&#8217;t know the right stuff.</p>
+<p>When I started out in this field, I was lucky enough to stumble onto a mentor. That too was probably informed by my experience as an aspiring jazz musician. Jazz musicians take the idea of musical lineage seriously and look for someone from whom to receive direction on how to parse the potentially overwhelming task of going from novice to master jazz improviser. My mentor in the software field did the same. He told me: first learn these three things. He picked topics that were diverse but complementary. He picked skills that set a foundation on which it was easy to build the next set. Most new developers don&#8217;t get so lucky.</p>
+<p>And It&#8217;s not just technology skills. The developers I work with are entrepreneurs at heart.  We aren&#8217;t sitting around polishing our tools and conducting thought experiments.  We&#8217;re delivering stuff that matters and we hate working on projects that drag on or don&#8217;t deliver value.  Becoming a great developer involves not just learning the ins and outs of software development but understanding how businesses work and exactly how software systems fit into that picture. It&#8217;s about delivering value quickly and iteratively. Great developers understand what Kent Beck and the rest of the authors of the <a href="http://agilemanifesto.org/">agile manifesto</a>  were getting at a decade ago. And what people like <a href="http://www.startuplessonslearned.com/">Eric Ries</a> are teaching today.</p>
+<p>I&#8217;ve often thought &#8220;just give me 3 months with a smart person and I can have them running circles around the average developer.&#8221; Have you thought that too? I know a lot of my colleagues have.</p>
+<p>It&#8217;s time to rethink how we educate software developers. Computers used to be huge scary machines in big white rooms that very few people touched. Today you probably have at least one computer ON <span class="caps">YOUR</span> <span class="caps">BODY</span> most of the time. They&#8217;re ubiquitous and friendly and just <span class="caps">NOT</span> that hard to work with. The technology landscape has changed. The system of educating developers should change along with it.</p>
+<p>My colleagues are clearly thinking along the same lines. I&#8217;ve seen speakers such as <a href="http://rubyhoedown.com/">Joe O&#8217;Brien</a> talking about it this year.  And we see programs popping up all over.  Software Craftsman Ken Auer is launching the <a href="http://craftsmanshipacademy.com/">Craftsmanship Academy</a> to teach apprentices the art and craft of software development in an intense hands-on residency-oriented program.  <a href="http://codeacademy.org/">Code Academy</a> is a part-time 12 week course to accelerate the path to web development or design.</p>
+<p>Today we&#8217;re launching a new program at <a href="http://livingsocial.com">LivingSocial</a> called <a href="http://hungryacademy.com">Hungry Academy</a>.  Hungry Academy is a five month intense entrepreneurial immersion that will take raw, hungry talented programmers (and aspiring programmers!) and develop them into ultra-productive software engineers. Those that make it through to the end will be offered a position on our development team and paired with a mentor from LivingSocial&#8217;s growing list of some of the <a href="http://twitter.com/#!/merbist/livingsocial">industry&#8217;s most talented software engineers</a>.  Best of all, we will <em>pay</em> you to attend.  Your <em>job</em> for five months is to take your craft and career to the next level.</p>
+<p>This isn&#8217;t going to be easy. Some people will get in but won&#8217;t make it to the end. Those that do will spend five months gaining the best 4 years of experience of their careers.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Leaving a Legacy...System]]></title>
+    <link href="http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system/"/>
+    <updated>2011-03-17T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system</id>
+    <content type="html"><![CDATA[<p>Ever since reading David Heinemeir Hansson&#8217;s post <a href="http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php">Enterprise Is the New Legacy</a> over five years ago, I&#8217;ve been chewing on something. The gist of the post was that &#8220;enterprise&#8221; is and should be a bad word, just like &#8220;legacy&#8221;.</p>
+<p>But why is &#8220;legacy&#8221; a bad word to begin with?  The word makes most software developers and IT people ill.</p>
+<p>In other fields and in life in general, the word &#8220;legacy&#8221; isn&#8217;t thusly encumbered.  It refers to an inheritance left to those behind you. Your life&#8217;s work. Your essential story.</p>
+<p>In software, that story is assumed to be a tragedy.</p>
+<p>But even in the case of software, &#8220;legacy&#8221; is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as &#8220;legacy&#8221; indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we&#8217;re &#8220;left with&#8221; and that we must either maintain or replace.</p>
+<p>That isn&#8217;t so bad, is it?  In an industry where <a href="http://www.projectsmart.co.uk/docs/chaos-report.pdf">more software projects fail or are &#8216;challenged&#8217; than succeed</a>, getting to legacy status is cause for celebration!</p>
+<p>Here&#8217;s a sad idea:  as developers, even when we <em>do</em> succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated <a href="http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf">within 10 years of its birth</a>.</p>
+<p>So, what do we developers leave as a legacy? In most cases, we don&#8217;t leave much of anything.</p>
+<p>At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom <span class="caps">TCP</span>/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.</p>
+<p>That was ten years ago. I&#8217;d be willing to bet it&#8217;s still running. If not the whole system, at least a subset.</p>
+<p>That would make it 35.</p>
+<p>Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.</p>
+<p>How <em>would</em> I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?</p>
+<p>It&#8217;s daunting, isn&#8217;t it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn&#8217;t. Even predicting next year is hard.</p>
+<p>So maybe I&#8217;d need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.</p>
+<p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
+<p>I don&#8217;t <em>know</em> how to design a system that could live a long and healthy life. I don&#8217;t <em>know</em> because I haven&#8217;t done it yet. Have you?</p>
+<p><i>Note: This wasn&#8217;t a rhetorical question.</i></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Harajuku Moment]]></title>
+    <link href="http://chadfowler.com/blog/2011/03/15/the-harajuku-moment/"/>
+    <updated>2011-03-15T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2011/03/15/the-harajuku-moment</id>
+    <content type="html"><![CDATA[<p>A few years ago, sitting in the July heat on a wall in the Harajuku district of Tokyo, I came to a conclusion: I had let myself be a loser. At least, I had let myself become a partial loser. I was fat and unhappy. My skin looked grey. I was slowly killing myself. I was obese. I made excuses to myself and others. I used my success in other areas as a justification: I just wasn&#8217;t a fitness guy.</p>
+<p><strong>It was bullshit.</strong></p>
+<p>
+<p><img src="http://www.voidspace.org.uk/python/weblog/images/chad_fowler.jpg" alt="" /><br />
+Me (on the right) and Michael Foord</p>
+</p>
+<p>These days I&#8217;m still not an elite athlete, but I&#8217;ve turned things around. I&#8217;ve lost nearly 100 pounds, gone from a max ability to run 45 seconds at a time to running a half marathon, and lost 10 inches around my waist.</p>
+<p>
+<p><img src="http://c.photoshelter.com/img-get/I0000ZHyRDf0HBX4/s" alt="" /><br />
+Me after losing 70 pounds (photo by Duncan Davidson)</p>
+</p>
+<p>Before, I was incomplete. I allowed myself to believe in a partial picture of myself.  Now, I&#8217;m closer to the real me. I&#8217;m still a smart, creative guy. But I can also do more pushups in a row than the average American male, and can run longer and faster than most guys my age. And I feel great. I feel noticeably better almost all the time.</p>
+<p>I&#8217;m often asked by other obese and overweight people how I did it. People see me at conferences and other venues and literally don&#8217;t recognize me. How did I make such an incredible transformation?</p>
+<p>If you&#8217;ve asked me this question, this post is for you.</p>
+<p>It&#8217;s a long story. But I&#8217;m going to give you the very very short version:  it was easy.</p>
+<p>I could tell you exactly which system I devised and exactly what worked for me. But that would be missing the major point. The most important element of making a change like this is that it is <em>easy</em>.</p>
+<p><strong>If you could trade your body for one that is 50-100% better in a year, what would you give? </strong> If you had asked me in early 2008, I wouldn&#8217;t have even believed it possible. I would have given a lot. What about 6 months? Obese or overweight people, what if I told you that in 6 months you could be in almost unrecognizably better shape? Would you jump on whatever I was selling?</p>
+<p>The secret? I&#8217;m not selling anything. It&#8217;s just true. Choose <em>any</em> non-bullshit system and actually stick with it for 6 months and you can and will experience life-changing results. You can extend your life span significantly.</p>
+<h2>If you&#8217;re reading this and you want to change, here&#8217;s what I want you to do:</h2>
+<p>1. Recognize how deep in denial you&#8217;ve been<br />
+2. Measure yourself now. If it&#8217;s weight that&#8217;s your issue, get on the scale immediately. Stand on it and cry. You probably haven&#8217;t been measuring it, and it&#8217;s probably worse than you think. Embrace how far you&#8217;ve gone in the wrong direction.  This is the end of that long, drawn out series of lies you&#8217;ve been telling yourself.<br />
+3. Find any program that doesn&#8217;t look like snake oil and try it for 20 days. Measure your progress. If you don&#8217;t know what to try, start with 45 minute light cardiovascular exercise sessions 4 times per week (find a TV series to watch on a treadmill&#8230;a one hour show without commercials is about 42 minutes), forcing yourself to eat a protein-heavy breakfast within 30 minutes of waking, cutting out empty calories and sugars (coke, sugar-heavy &#8220;coffee&#8221; drinks, beer, etc.), and eating 5 small meals per day.<br />
+4. After 20 days, you&#8217;re almost 1/6 of the way through a major transformation.  You have probably gone down one clothing size or are close to it. How far do you want to go? Pick something you didn&#8217;t previously think you were capable of and commit to it. Maybe it&#8217;s a bike race or a triathlon or doing Cross Fit.</p>
+<p>The funny thing about huge change is that making it happen isn&#8217;t usually as huge an effort as we think. We just get stuck. All you have to do to go <span class="caps">ALL</span> of the way is to go <span class="caps">SOME</span> of the way.</p>
+<p><i><br />
+Note: I wrote a more detailed account of my weight loss story in <a href="http://fourhourworkweek.com">Tim Ferriss&#8217;s</a> best selling book, <a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X">The Four Hour Body</a>. I have no financial interest in the book, but having re-read my own chapter when Tim sent me a copy of the book last December, I was inspired enough to double down on my efforts to go from OK to awesome. I&#8217;ve lost 20 more pounds since January 1.  Tim&#8217;s advice for weight loss is solid, and (if I do say so myself) my chapter alone is worth the cost of the book.</p>
+<p><a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X"><img src="http://thefourhourbody.org/wp-content/uploads/2010/12/thefourhourbody.jpg" alt="" /></a><br />
+</i></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Caring Like Crazy ]]></title>
+    <link href="http://chadfowler.com/blog/2011/03/13/caring-like-crazy/"/>
+    <updated>2011-03-13T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2011/03/13/caring-like-crazy</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve just finished reading Gary Vaynerchuk&#8217;s <a href="http://www.amazon.com/Thank-You-Economy-Gary-Vaynerchuk/dp/0061914185">The Thank You Economy</a>.  From the outside it looks like a book about marketing. It looks like a book for companies who need a &#8220;social media strategy&#8221;.  On the inside, it&#8217;s much more.</p>
+<p>Everyone doing business of any sort has an important lesson to learn from The Thank You Economy.  Here&#8217;s that lesson in Gary&#8217;s own words (from last year&#8217;s <a href="http://railsconf.org">RailsConf</a> keynote):</p>
+<pre>
+  "Giving a Fuck is comin' on strong!"
+</pre>
+<p>
+<div class="video_embed"><object width="500" height="411"><param name="movie" value="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="500" height="411" allowFullScreen="true" wmode="transparent"></embed></object></div>
+</p>
+<p>Gary uses this phrase over and over in the book: &#8220;caring like crazy&#8221;.  What does that mean?</p>
+<p>Joel Spolsky wrote <a href="http://www.joelonsoftware.com/items/2007/06/05.html">a whole book</a> about how what you need out of people you work with is for them to be smart and to get things done. Having hired a ton of people myself (hundreds) and worked with a fair number of others, I have to disagree. Smart and gets things done are both excellent, important qualities.  But ultimately I don&#8217;t care if you&#8217;re smart. I&#8217;ve worked with my share of brilliant people who just don&#8217;t care.</p>
+<p>Look at this exchange between <a href="http://twitter.com/coreyhaines">Corey Haines</a> and <a href="http://twitter.com/jgehtland">Justin Gehtland</a> from a few days ago:</p>
+<p><img src="http://chadfowler.com/giving_a_shit.png" alt="" /></p>
+<p>I worked with a <span class="caps">CEO</span> in India who embodied this idea I remember the first time I noticed it.  We walked in the front of the building and he noticed some trash on the lawn next to the security guard who was stoicly standing there staring at nothing.  Trash in India.  It&#8217;s everywhere.  I certainly didn&#8217;t notice. It seems like an impossibly uncontrollable problem.</p>
+<p>In mid-sentence, he stops and runs over, picks up the trash and hurries back over to the guard who learns that we&#8217;re <i>not</i> going to have trash in our lawn and if the guard doesn&#8217;t care about his workplace he can go somewhere else. He wasn&#8217;t mean about it.  He was matter-of-fact. The guard tried to take the trash from him, but he wouldn&#8217;t have it.  He took it himself and threw it away.  He did this constantly.  Eventually, all of the guards started doing it. Then the programmers started doing it. In fact, anything broken, or dirty, or at all not right got fixed by whoever saw it. We were a culture of caring and it was going to be both superficially and deeply ingrained.</p>
+<p>One of our people got severely injured a few months later in a motorcycle accident. He wasn&#8217;t wearing a helmet, as is very very common in India. From that day on, our <span class="caps">CEO</span> or I stood at the drive into the building refusing to allow employees in unless they were wearing helmets.  A couple of the employees couldn&#8217;t afford them, so our <span class="caps">CEO</span> personally bought them the best helmets he could buy.</p>
+<p>He cared about the business (even the building it took place in) and he cared about the people. And you can be damned sure he cared about the work.  It was infectious.  It was viral.</p>
+<p>If you <span class="caps">REALLY</span> care and you&#8217;re capable, I don&#8217;t care much how smart you are for most work that needs to be done. Give me someone passionate over an apathetic genius any day of the week.</p>
+<p><img src="http://ecx.images-amazon.com/images/I/41HCiSFoi0L.jpg" alt="" /></p>
+<p>So this is my takeaway from The Thank You Economy.  Care like crazy. Whether you&#8217;re running a company or just running your career.  It&#8217;s sound obvious, but it&#8217;s oh too easy to forget and let it slide. Let a little apathy in, and it makes a mess. A cyncical remark, or a posted Dilbert cartoon are all it takes to start the wrong kind of culture of apathy. Care like crazy.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Be Careful Of Who You Work With]]></title>
+    <link href="http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with/"/>
+    <updated>2011-02-24T00:00:00+05:30</updated>
+    <id>http://chadfowler.com/blog/2011/02/24/be-careful-of-who-you-work-with</id>
+    <content type="html"><![CDATA[<p>You instinctively know that who you associate with matters a lot.  Our parents bring us up steering away and toward others who influence us.</p>
+<p>But most of us don&#8217;t realize just how much those around us influence us.</p>
+<p>As I recall in the introduction to <a href="http://pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer</a>, there was one specific event that turned the tide for me.  I had been chugging along in my slightly-above-average corporate job and experiencing what I considered to be the height of success.  Then I had an intense period during which, for a few months, I had the opportunity to collaborate with a whole new level of software developers.  It all came to a head when I went to the eXtreme Programming Immersion that Object Mentor taught.  After a week surrounded by brilliant developers and leaders in the field, I knew I had to do something different.</p>
+<p>I had to be as much like them as I could.</p>
+<p>In The Passionate Programmer, I quote Pat Metheny&#8217;s advice to young musicians: always be the worst musician in every band you&#8217;re in.  As a musician and as a programmer, I&#8217;ve tried Pat&#8217;s advice.  You play with a group of people better than you, and you&#8217;ll almost always play better.</p>
+<p><img src="http://farm4.static.flickr.com/3315/3613370192_30635de1cb_m.jpg" alt="" /><br />
+http://www.flickr.com/photos/jazzuality/3613370192/</p>
+<p>That&#8217;s good anecdotal advice.  If you don&#8217;t trust Pat, how about <a href="http://christakis.med.harvard.edu/">Nicholas Christakis</a>?  Nicholas is a social scientist at Harvard University.  Together with James Fowler of UC San Diego, his research focuses on how behavior and then even <span class="caps">EMOTION</span> spread through social networks.  Can behavior be epidemic?</p>
+<p>Here are some things their research has shown to spread through social networks ilke disease:  <a href="http://www.nytimes.com/2007/07/25/health/25cnd-fat.html?_r=1&amp;scp=4&amp;sq=nicholas%20christakis&amp;st=cse">Obesity</a>), <a href="http://www.nejm.org/doi/full/10.1056/NEJMsa0706154">Smoking</a>, <a href="http://www.annals.org/content/152/7/426.abstract">Alcohol Consumption</a>, and….<a href="http://www.bmj.com/content/337/bmj.a2338.full"><span class="caps">HAPPINESS</span></a>!  Yes, emotional state is contagious.</p>
+<p><img src="http://farm1.static.flickr.com/48/165829023_8e97572f07_o.jpg" alt="" /><br />
+http://www.flickr.com/photos/saintbob/165829023/</p>
+<p>These aren&#8217;t insignificant numbers, either.  For example, obesity chances increase 57% if you have a friend who is or becomes obese.  And, more disturbing than that, this is an effect that is conducted through more than one node in the social graph.  If your friends&#8217; friends&#8217; friends are obese, <a href="http://bit.ly/eOY1LP">you are 10% more likely to be obese</a></p>
+<p>If behavior spreads through social networks, then working in a toxic or slow-moving corporate environment is really really bad for you.  If you&#8217;re a consultant, you <span class="caps">MUST</span> fire the clients that bring you down a notch and seek out clients that pull you up.  If you&#8217;re a teacher, go where the students care about what they&#8217;re learning.</p>]]></content>
+  </entry>
   
 </feed>
