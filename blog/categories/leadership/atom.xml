@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: leadership | Chad Fowler]]></title>
-  <link href="http://chad.github.com/chad/blog/categories/leadership/atom.xml" rel="self"/>
-  <link href="http://chad.github.com/chad/"/>
-  <updated>2014-01-04T14:41:53+05:30</updated>
-  <id>http://chad.github.com/chad/</id>
+  <link href="http://chad.github.io/blog/categories/leadership/atom.xml" rel="self"/>
+  <link href="http://chad.github.io/"/>
+  <updated>2014-01-04T14:52:36+05:30</updated>
+  <id>http://chad.github.io/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[If it stresses you out, it's not your job]]></title>
-    <link href="http://chad.github.com/chad/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/"/>
+    <link href="http://chad.github.io/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/"/>
     <updated>2013-03-25T19:11:00+05:30</updated>
-    <id>http://chad.github.com/chad/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job</id>
+    <id>http://chad.github.io/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job</id>
     <content type="html"><![CDATA[<p>I keep learning this lesson over and over again, so I'm writing it here in an effort to never forget again. As a manager, if some task constantly stresses me out or makes me feel uneasy,
 it's probably because I'm doing someone else's job.</p>
 

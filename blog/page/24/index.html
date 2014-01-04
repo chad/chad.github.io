@@ -9,10 +9,9 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="A <a
-href="http://www.ntecs.de/blog/Blog/HumanUnderstandabilityRuby.rdoc">very
-interesting post by Michael Neumann (who also maintains a <a
-href=" &hellip;">
+  <meta name="description" content="It&#8217;s been a while since I&#8217;ve posted here. This is mostly
+because I&#8217;ve been busy but at least partially because I&#8217;ve been
+a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +20,7 @@ href=" &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chad.github.com/chad/blog/page/24/">
+  <link rel="canonical" href="http://chad.github.io/blog/page/24/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -52,7 +51,7 @@ href=" &hellip;">
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:chad.github.com/chad" />
+    <input type="hidden" name="q" value="site:chad.github.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -72,59 +71,6 @@ href=" &hellip;">
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2004/08/17/is-ruby-readable/">Is Ruby Readable?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2004-08-17T00:00:00+05:30" pubdate data-updated="true">2004.08.17</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A <a
-href="http://www.ntecs.de/blog/Blog/HumanUnderstandabilityRuby.rdoc">very<br />
-interesting post</a> by Michael Neumann (who also maintains a <a
-href="http://www.ntecs.de/old-hp/uu9r/lang/html/lang.en.html">fabulous site<br />
-with hundreds of programming language examples</a>), where he walks through<br />
-various aspects of the <a href="http://ruby-lang.org">Ruby</a> programming<br />
-language with his (not-a-programmer) girlfriend and asks her to explain<br />
-what different pieces of sample code mean.</p>
-<p>
-<p>She (and Ruby) do remarkably well. Kind of a neat idea.</p>
-</p>
-<p>
-<p>I&#8217;ve said for years that (in the Java world) at a certain layer of<br />
-your application&#8217;s design, an interesting test of its<br />
-readability/maintainability is whether or not your (not-a-programmer)<br />
-customer(s) can read and understand it. I would hate to see how some of the<br />
-projects I&#8217;ve worked on would stand up to such a<br />
-test&#8212;especially the Java ones.</p>
-</p></div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -954,6 +900,120 @@ standardized package management system. This problem is 20% technical and<br />
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2004/05/02/don%27t-want-don%27t-want-climbing-on-my-head/">Don&#8217;t Want&#8211;Don&#8217;t Want&#8211;Climbing on My Head!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2004-05-02T00:00:00+05:30" pubdate data-updated="true">2004.05.02</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a
+href="http://www.anomaly.org/wade/archives/programming_philosophy/000050.html">G.<br />
+Wade Johnson on programming idioms.</a></p>
+<p>
+<p>A lot of what he says relates very clearly to the motivation behind <a
+href="http://conferences.oreillynet.com/cs/os2004/view/e_sess/5303">this<br />
+talk</a> that David Black and I are giving at <a
+href="http://conferences.oreillynet.com/os2004/"><span class="caps">OSCON</span></a> in July. New<br />
+speakers of Ruby-as-a-second-language often feverishly attempt to force-fit<br />
+Ruby into being a syntactically different copy of whatever their<br />
+&quot;native&quot; language is. An oft-cited example from the Ruby world is<br />
+static vs. dynamic typing (<a
+href="index.cgi/Computing/Programming/Ruby/RubyTypesAndClasses.rdoc,v">RubyTypesAndClasses</a>),<br />
+but it definitely doesn&#8217;t end there.</p>
+</p>
+<p>
+<p>It&#8217;s a lot easier to learn a new programming language than it is to<br />
+learn a new spoken/written language. It may be for this reason that, when<br />
+learning a new spoken language, we tend to come with humility, but when<br />
+learning a new programming language, the attitude of the learner is usually<br />
+a lot less humble. So, new users of a language assume that they already<br />
+know the one true way to express programming constructs, and the only task<br />
+at hand is to learn how to syntactictally convert their thoughts into the<br />
+new language.</p>
+</p>
+<p>
+<p>There are exceptions in each camp, of course. An Indian friend of mine<br />
+described a college professor who refused to learn idiomatic English and<br />
+would constantly use direct translations of colloquial Malayalam phrases in<br />
+class. His favorite, used when students were bugging him about something,<br />
+was (emphatically) &quot;Don&#8217;t want&#8212;Don&#8217;t want. Climbing<br />
+on my head!&quot; In Malayalam, this phrase means something and has<br />
+probably evolved based on a combination of factors, including how easily it<br />
+flows from the tongue. In English, it&#8217;s just strange sounding<br />
+nonsense. Since programs actually have to work (i.e. there is a<br />
+fast-feedback validation that happens when we write a program), programmers<br />
+will sometimes go to great lengths, building elaborate frameworks to<br />
+attempt to make a new language behave like their &quot;native&quot;<br />
+language.</p>
+</p>
+<p>
+<p>Wade (is it &quot;Wade&quot;?) talks about idioms as being singular items<br />
+that can be learned, like patterns or tricks. You learn one, you over-use<br />
+it, you start to use it correctly, and then you learn another. I know<br />
+he&#8217;s presenting a simplified look at the process, but I think<br />
+it&#8217;s important to separate the learning of a language&#8217;s idioms<br />
+from learning what is idiomatic in that language. Learning of idioms is<br />
+about knowledge transfer whereas learning about &quot;idiomatic&quot;<br />
+requires a thought process change. I think of the former as being a step<br />
+toward the latter.</p>
+</p>
+<hr size="2"></hr><p>
+<p>On an unrelated note, Wade makes an interesting point about what I would<br />
+call &quot;dissonance&quot; (see <a
+href="index.cgi/Computing/Programming/SeasideDissonance.rdoc,v">SeasideDissonance</a><br />
+and <a href="http://wiki.cs.uiuc.edu/MFA/Tension"><span class="caps">MFA</span>:Tension</a>).</p>
+</p>
+<pre>
+   Idiom can also serve as a warning. An unusual or advanced idiom
+   should tell the reader that he is entering dangerous territory. This
+   is a message that it's time to pay close attention.
+</pre>
+<hr size="2"></hr><p>
+<p>On another unrelated note, I think we must define both &quot;simple&quot;<br />
+and &quot;expressive&quot; differently:</p>
+</p>
+<pre>
+  The simpler the language, the quicker you get to the end of this cycle.
+  But, a simpler language is not as expressive. So, you find yourself doing
+  more work than should be necessary. A more expressive language takes
+  longer to learn, but it's easier to pass on subtle shades of meaning to
+  the maintenance programmer (possibly yourself).
+</pre>
+<p>
+<p>I think of Scheme as being both extremely simple and extremely expressive,<br />
+while I think of a language like Java as being very complex but not very<br />
+expressive. I would be more likely to say: &quot;But, a more rigid language<br />
+is not as expressive.&quot; And to me, rigidity is much more likely to<br />
+result from complexity than simplicity.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/25/">&larr; Older</a>
@@ -1005,10 +1065,6 @@ standardized package management system. This problem is 20% technical and<br />
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/01/04/my-hovercraft-is-full-of-eels/">&#8216;My hovercraft is full of eels&#8217;</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
       </li>
     
@@ -1022,6 +1078,10 @@ standardized package management system. This problem is 20% technical and<br />
     
       <li class="post">
         <a href="/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/">Passionate Programmer - A free chapter (almost) every week until it&#8217;s done</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/23/immutable-deployments/">Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components</a>
       </li>
     
   </ul>
