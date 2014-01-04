@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Is the Long Tail wagging the dog? - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="At the Fifth International Ruby
+Conference, like others I sat engrossed by <a
+href="http://blog.talbott.ws/pages/the_railroad_then_and_now.html"> &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chad.github.com/chad/blog/2005/10/24/is-the-long-tail-wagging-the-dog/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chad.github.com/chad" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Is the Long Tail Wagging the Dog?</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-24T00:00:00+05:30" pubdate data-updated="true">2005.10.24</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>At the <a href="http://rubyconf.org">Fifth International Ruby<br />
+Conference</a>, like others I sat engrossed by <a
+href="http://blog.talbott.ws/pages/the_railroad_then_and_now.html">Nathaniel<br />
+Talbott&#8217;s talk</a> on the &quot;long tail&quot; of software development.<br />
+There we were, an audience full of geeks who like to write code, hearing<br />
+how our favorite technology (Ruby) was enabling geeks who like to write<br />
+code to make money doing so. It was an exciting and tempting idea.</p>
+<p>
+<p>Nathaniel talked about his wife&#8217;s co-op&#8217;s Excel spreadsheets,<br />
+and how many small (often local) organizations across the country have<br />
+similar, ineffective spreadsheets. There&#8217;s money to be made in<br />
+writing small, focused applications to cater to the very specific needs of<br />
+these little groups, says Nathaniel. And according to the bigger ongoing<br />
+&quot;long tail&quot; discussion on the &#8216;net, there is an opportunity<br />
+to provide previously underserved fringe groups with a product that will<br />
+delight them like no general-purpose product has or can.</p>
+</p>
+<p>
+<p>Tempting, as I said. And true sometimes, I would guess. But&#8230;</p>
+</p>
+<p>
+<p><a href="http://www.intertwingly.net/blog/">Sam Ruby</a>, who was also at<br />
+the conference, <a
+href="http://www.intertwingly.net/blog/2005/10/20/Homesteaders-of-the-21st-Century">picked<br />
+the long tail presentation as a favorite</a>. But while the conference<br />
+brought up a lot of discussion of <a href="http://nakedobjects.org">Naked<br />
+Objects</a> in Ruby and various <span class="caps">RAD</span> tools, I think Sam hit on something<br />
+more relevant that a lot of us are likely to miss:</p>
+</p>
+<pre>
+        Those are the long tailer developers of today.  Nathaniel asks:
+        what happens when t approaches zero?  Nathaniel's answer was that
+        people who aren't currently developers wont suddenly want to become
+        ones even if the cost were essentially zero.  IMHO, the answer is
+        that you will see a lot more applications like that financial
+        application that was written in Excel.
+</pre>
+<p>
+<p>It&#8217;s not just about <em>who</em> will be doing this development.<br />
+It&#8217;s about <em>why</em>. Hint: These people aren&#8217;t going to be<br />
+developing apps themselves because it&#8217;s cheaper than before.</p>
+</p>
+<p>
+<p>We developers are quick to dismiss the little Excel and Access applications<br />
+that &quot;lusers&quot; tend to write. We assume that they would do them in<br />
+a &quot;better&quot; technology if only they knew how. But they<br />
+don&#8217;t, so they either have to wait around for a software developer to<br />
+come around and save the day, or they have to settle for this ugly<br />
+spreadsheet stuff.</p>
+</p>
+<p>
+<p>Techno-elitist myopia. This is the tail-wagging-the-dog part of the post.</p>
+</p>
+<p>
+<p>Users don&#8217;t make spreadsheets just because they don&#8217;t know<br />
+Java. They make them because they <em>like</em> them, and because they<br />
+<em>want</em> to make them. I can think of at least two reasons why.</p>
+</p>
+<p>
+<p>First, the spreadsheets often fill an empty hole. They are created, not<br />
+because the end users desperately needed them, but because one member of<br />
+the group had the ability to create them and <em>enjoyed</em> filling the<br />
+gap for the group. It&#8217;s one part self-expression, one part learning,<br />
+and two parts showing off.</p>
+</p>
+<p>
+<p>Second, spreadsheets are inherently controllable by the end user. Sure, a<br />
+small, user-focused development shop with a simple app can turn changes<br />
+around really quickly. But, if a user wants, say, a new column added to a<br />
+report view, it takes longer to email and ask the developers to add it than<br />
+it would to just select and insert a column in Excel. I know we&#8217;re<br />
+not talking about big companies here, but something I witnessed in<br />
+Corporate America is that end users would guard their little Excel/Access<br />
+&quot;applications&quot; from their IT departments as if hording treasure.<br />
+As soon as they lost control, and their apps were &quot;upgraded&quot; to<br />
+some kind of super-scalable J2EE monstrosity (custom-developed<br />
+<em>just</em> for them&#8212;the long tail in action), their applications<br />
+would become (maybe) more generally useful and (definitely) less<br />
+specifically useful. Changes took a long time. They apps didn&#8217;t act<br />
+exactly as they liked. The secret spreadsheets would often see an<br />
+underground revival after the spotlight moved on.</p>
+</p>
+<p>
+<p>We developers are getting excited over the opportunity to develop small<br />
+apps for small bases of users. But we might be attempting to apply a <a
+href="http://en.wikipedia.org/wiki/Disruptive_technology">sustaining<br />
+technology solution where there is a disruptive technology</a> waiting to<br />
+shake things up.</p>
+</p>
+<p>
+<p>As developers, we see problems in terms of the potential applications we<br />
+could write. We even tend to see the spreadsheet itself as a problem. So we<br />
+naturally want to save users from themselves and give them a <em>real</em><br />
+application.</p>
+</p>
+<p>
+<p>But what these &quot;long tail&quot; users often really want is a<br />
+spreadsheet. So why aren&#8217;t we solving the <em>real</em> problems with<br />
+spreadsheets instead of trying to get rid of them?</p>
+</p>
+<p>
+<p>I&#8217;ve had the privilege to test and experiment with an early version<br />
+of a piece of software that <em>is</em> trying to solve this problem. <a
+href="http://www.cincomsmalltalk.com/userblogs/avi/blogView">Avi Bryant</a><br />
+(the brains behind the incredibly innovative <a
+href="http://seaside.st/">Seaside</a> web framework) and Andrew<br />
+Catton&#8217;s company, <a href="http://smallthought.com/">Smallthought</a><br />
+have created a product called <a
+href="http://www.dabbledb.com/">Dabble</a>. From Dabble&#8217;s web page,</p>
+</p>
+<pre>
+        Dabble combines the best of group spreadsheets, custom databases,
+        and intranet web applications into a new way to manage and share your
+        information online.
+</pre>
+<p>
+<p>Or, you can just think of it as the application that solves the problem<br />
+that Nathaniel, Sam Ruby, and I are talking about in these posts. And it<br />
+does a fantastic job of it.</p>
+</p>
+<p>
+<p>I built two of my own not-an-applications with it while I was testing it.<br />
+One was a fairly simple contact manager for my <a
+href="http://www.gomanginstitute.org">other nonprofit</a> (We&#8217;ve been<br />
+using Yahoo &quot;databases&quot; and text files).</p>
+</p>
+<p>
+<p>The other was a re-implementation of the Rails-based project management<br />
+tool, <a href="http://explainpmt.com/">eXplain Project Management Tool<br />
+(<span class="caps">PMT</span>)</a> (nice simple app, by the way&#8212;try it out). In Dabble, with<br />
+absolutely no programming, I incrementally created a project management<br />
+tool with all of the functionality of <span class="caps">PMT</span> in about 30 minutes. That 30<br />
+minutes included submitting bug reports and feature suggestions.</p>
+</p>
+<p>
+<p>I&#8217;ve been sitting silently on Dabble for a few months now as<br />
+Smallthought has been working on it. Every time I see one of these<br />
+&quot;Web 2.0&quot; posts pop up in my <span class="caps">RSS</span> aggregator, I bite my tongue. I<br />
+don&#8217;t know what &quot;Web 2.0&quot; is, but I hope it&#8217;s like<br />
+<em>this</em>. I&#8217;m really excited about Dabble, and I can&#8217;t<br />
+wait to see what people do with it. As of today, you can <a
+href="http://dabbledb.com">sign up</a> to be notified of Dabble&#8217;s<br />
+impending release. If you&#8217;re really lucky (unofficial word), you may<br />
+even get a beta invitation out of it.</p>
+</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-10-24T00:00:00+05:30" pubdate data-updated="true">2005.10.24</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/chad/blog/2005/10/24/is-the-long-tail-wagging-the-dog/" data-via="chadfowler" data-counturl="http://chad.github.com/chad/blog/2005/10/24/is-the-long-tail-wagging-the-dog/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2005/10/13/big-is-the-new-small/" title="Previous Post: Big Is the New Small
+">&laquo; Big Is the New Small
+</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2005/10/24/it%27s-been-a-very-good-year/" title="Next Post: It's been a very good year
+">It's been a very good year
+ &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://www.nordicruby.org/">Nordic Ruby</a></span>
+        <span class="location">Stockholm</span>
+        <span class="the-date">June 6-9, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/berlin-2013/upcomingevents/">GOTO Night</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">June 17, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/aarhus-2013/">GOTO</a></span>
+        <span class="location">Aarhus</span>
+        <span class="the-date">September 30, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>-->
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/04/my-hovercraft-is-full-of-eels/">'My hovercraft is full of eels'</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/my-six-years-of-ignorance/">My Six Years of Ignorance</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/">Passionate Programmer - A free chapter (almost) every week until it's done</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

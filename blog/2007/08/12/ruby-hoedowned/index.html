@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Hoedowned - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Friday and Saturday, I attended the first Ruby Hoedown at RedHat HQ in Raleigh, NC. The Hoedown was one of many regional Ruby conferences popping up &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chad.github.com/chad/blog/2007/08/12/ruby-hoedowned/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chad.github.com/chad" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ruby Hoedowned</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-12T00:00:00+05:30" pubdate data-updated="true">2007.08.12</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Friday and Saturday, I attended the first <a href="http://rubyhoedown.com">Ruby Hoedown</a> at RedHat HQ in Raleigh, NC.  The Hoedown was one of many regional Ruby conferences popping up all over the place driven in small part by <a href="http://rubycentral.org">Ruby Central&#8217;s</a> conference grant.  <a href="http://terralien.com/">Nathaniel</a> and <a href="http://www.jeremymcanally.com/">Jeremy</a> did an excellent job putting the conference together.  It was flawlessly executed with an exciting program and a good dose of southern charm.</p>
+<p>Here&#8217;s a braindump:</p>
+<h2>Testing Workshop for Charity &#8211; $3200</h2>
+<p>The conference pre-started with me, <a href="http://blog.rapidred.com/">Bruce Tate</a>, and <a href="http://marcelmolina.com">Marcel Molina</a> giving a two and a half hour testing workshop for <a href="http://changingthepresent.org/drives/show/241">charity</a>.  Taking a queue from the <a href="http://pragmaticprogrammer.com">Dave</a> and <a href="http://pragmaticstudio.com">Mike&#8217;s</a> Rails Guidebook, participants gave a donation ($50 recommended) to attend the workshop.  We ultimately raised roughly $3200 for the <a href="http://www.foodbankcenc.org/">Food Bank of Central and Eastern North Carolina</a>.  A large portion of the workshop consisted of me and Marcel interactively improvising the development of an application in test-first style while drawing the questions, comments, and criticism of the audience.  The format worked well (from our perspective), and we covered a lot of great material.  We&#8217;re really looking forward to our <a href="http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736"><span class="caps">FULL</span> <span class="caps">DAY</span> testing workshop for charity</a> at <a href="http://railsconfeurope.com">RailsConf Europe</a> in Berlin next month.  (Next month&#8217;s workshop goes to support Habitat for Humanity.  <a href="http://www.justgive.org/basket?donorId=91403&amp;listTypeId=1&amp;acton=viewList&amp;sess=1">We&#8217;re happily accepting donations regardless of whether you attend.</a>)</p>
+<h2>Merb</h2>
+<p>The main conference kicked off with a talk from Ezra Zygmuntowicz about <a href="http://merb.rubyforge.org">Merb</a>.  Merb started out as a complement to Rails&#8212;-something you whip out when you need multi-threaded request processing, such as big file uploads and long-running application logic.  Rails isn&#8217;t always well suited to this sort of thing, because Rails is single threaded.  To scale, you have to add more processes, which adds a potentially unhealthy amount of memory overhead.  Merb is a multithreaded, lighter weight Mongrel-bound (for now) framework.</p>
+<p>Now, however, Merb is turning into a full-blown Rails clone (Actionpack clone really).  I remain fully skeptical.  I understand Ezra&#8217;s stated reasons for doing it (along with a few implicit ones I think), but I think we already have a Rails, and incremental improvements are, well, incremental.  It would be nice to see someone taking a leap as opposed to a step.  Even before Rails came out, I think the industry had seen enough <span class="caps">MVC</span>.  I am hopeful that some of Ezra&#8217;s improvements make it back into Rails.  His desire to keep things lean and unmagical is commendable.</p>
+<h2>Adhearsion</h2>
+<p>Next up was <a href="http://jicksta.com/">Jay Phillips</a>, whose <a href="http://adhearsion.com/">Adhearsion</a> framework for <span class="caps">VOIP</span> applications completely blew me away.  Adhearsion is a perfect example of someone taking a powerful domain with a historically ridiculous development model and taking a full evolutionary step forward.  Jay&#8217;s framework takes developers from what literally looks like the dark ages (have you <em>seen</em> an Asterisk dial plan?) to a beautiful and powerful <span class="caps">API</span> with modern automation wrapped around it.</p>
+<p>We Rubyists have been looking for another killer app following Rails.  Adhearsion might be it.  Seeing Jay speak made me realize that we have that same combination of disdain with the current state of affairs, courage to slap the (telecom development) industry in the face, intelligence to innovate a solution which brings <a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">programmer joy</a> and the people skills and marketing sensibility to push it over the edge.  If you care about Ruby, watch Adhearsion closely.</p>
+<h2>The Journey &#8211; Bruce Tate</h2>
+<p>The day closed with Bruce Tate giving a keynote on the direction of Ruby.  He drew some interesting parallels to past technologies and also led us through a series of scenarios about where Ruby and its community might be headed.  The most convincing one can be summarized as using Ruby to build elegant APIs on top of existing problems which do for those problems what Rails did for web development.  See Adhearsion.</p>
+<h2>Building Games With Ruby</h2>
+<p><a href="http://www.chariotsolutions.com/home/index.jsp">Andrea O. K. Wright from Chariot Solutions</a> gave a surprisingly thorough and engaging talk which ended up being a survey of the various game libraries available for Ruby.  I&#8217;m an avid gamer and got interested in computer programming because I wanted to be a game developer, so I&#8217;ve taken this tour myself a few times.  But it&#8217;s been a while and I was simply <em>amazed</em> at how far things have come.  As Andrea spoke, I downloaded literally every library she was discussing and tried them out.  I had some problems with the <span class="caps">SDL</span> bindings on my Mac, but I had instant success with both <a href="http://code.google.com/p/gosu/">Gosu</a> and <a href="http://www.shatteredruby.com/">Shattered Ruby</a>.  I&#8217;m not sure if we&#8217;re ready for Unreal Tournament-style games in Ruby but simple games are finally, well&#8230;simple to create.  Definitely check out Gosu if you even have a passing interest.  Really fun.</p>
+<h2>Lightning Talks</h2>
+<p>There were a series of quick lightning talks.  They were good, but there were too many to enumerate.  I&#8217;m liking this format more and more every time I experience it.</p>
+<h2>Ruby For Change</h2>
+<p>During lunch <a href="http://www.casimircreative.com/">Jeff Casimir</a> and I organized a &#8220;BoF&#8221; (I hate that term) on Ruby for Social Change.  Jeff booked the smallest spot, thinking we were going to be a tiny crowd, but we ended up cramming a large group into the room.  The discussion was lively and loud and the people were passionate.  With only 45 minutes to talk, we came out of the meeting with some ideas about organizing volunteers to give their time to produce real applications for non-profits/charities who could use the projects to make impactful change.  More on this soon I hope.  We have a RubyForge project <a href="http://rubyforge.org/projects/rubyforchange">set up for the group</a>.</p>
+<p>If you&#8217;re interested in this topic and interested in helping to shape what we do, please do drop in and sign up for the mailing list once it&#8217;s activated.  The first order of business (in parallel to doing things like setting up a web site) is to find a project with a real customer to rally around.  If you have ideas, we&#8217;d love to hear them.</p>
+<h2>Does Ruby Have a Chasm to Cross?</h2>
+<p>I was skeptical because of the title of this talk, but I trusted that <a href="http://www.rolemodelsoft.com/ken_auer">Ken Auer</a> was going to deliver something interesting, and my skepticism turned out to be ill-founded.  Ken is an old Smalltalker and one of the leaders in both the patterns and agile movements.  His talk was a well-thought-out history of Smalltalk and ultimately a comparison to Ruby&#8217;s adoption curve.  I won&#8217;t do this one justice with a summary, but I recommend watching it when the conference videos go live on the <a href="http://confreaks.com">Confreaks</a> web site.</p>
+<h2>Using C to Tune Your Ruby (or Rails) Application</h2>
+<p><a href="http://www.agileartisans.com/main">Jared Richardson</a> gave a really engaging and fun talk on extending Ruby with C.  It was review for me, but the audience was totally into it, and 2 out of 6 people who Nathaniel asked to tell one thing they were excited about learning at the end of the conferenced cited material from Jared&#8217;s talk.  It&#8217;s easy to forget how elegant and human-friendly Ruby&#8217;s C <span class="caps">API</span> is.  If you&#8217;re the kind of person who has a natural aversion to that kind of thing and have been avoiding it, you really should take a Saturday morning to crack open the <a href="http://pragmaticprogrammer.com/titles/ruby/index.html">Pick Axe</a> and go through some of the C extension examples.  I think you&#8217;ll be pleasantly surprised.  Lots of potential gain for not much pain.</p>
+<h2>What Makes Beautiful Code?</h2>
+<p>I&#8217;m not going to say much about this, because I hope to take this topic into a separate post, but Marcel&#8217;s ideas from this talk have already changed the way I think about my own code as I write it.  Those that know Marcel and have worked with him know that he is obsessed with keeping code beautiful.  Whether it&#8217;s a shell script, a systems programming task, or a high level <span class="caps">API</span>, he creates some of the most consistently beautiful code you&#8217;ll see in Ruby-land.  In this talk, Marcel decided to take this passion for beauty and try to more clearly define the elements that make code beautiful.  The result is a small but useful framework for measuring trade-offs when developing software.  I&#8217;m looking forward to seeing these ideas develop.  The keynote itself was short but the Q&amp;A and discussion about it expanded such that Nathaniel ultimately had to cut it off.  Obviously a topic that inspired much passion.</p>
+<h2>I Am Not A Werewolf</h2>
+<p>This time literally.  We took a group to a nearby hotel and played <a href="http://en.wikipedia.org/wiki/Mafia_(game)">Werewolf</a> until around midnight.  If you don&#8217;t know Werewolf, you owe it to yourself to try it.  We played 5 nights straight at <a href="http://railsconf.org">RailsConf</a> this year, and I feel like some lasting bonds were made with people who I might not have even met otherwise.  I think our community is too cliquey and fragmented sometimes, and Werewolf is a powerful tool (yes I&#8217;m talking about a game and saying &#8220;powerful&#8221;) for changing that.</p>
+<p>We&#8217;ll be trying to put together a game again in a couple of weeks at <a href="http://pragmaticstudio.com/therailsedge/">The Rails Edge</a> in Chicago.  If you&#8217;re coming to the Rails Edge, read up on the rules before-hand and join in.  If you&#8217;re not yet signed up it&#8217;s not too late.</p>
+<p>Thanks to last night&#8217;s players and my (some-of-them) new friends Lyle Johnson, Tony Devlin, Jim Meyers, Chris Redinger, Evan Light, Devin Mullins, Carl Youngblood, Coby Randquist, Joe Martinez, Rick DeNatale, Ted Behling, Ryan Daigle, and Marcel.  I hope to see you guys around soon.</p>
+<p><img src="http://farm2.static.flickr.com/1132/1088483927_4cfa82bd61.jpg?v=0" alt="" /></p>
+<p>If you&#8217;re in the South, I highly recommend watching for an announce of the second Ruby Hoedown.  Until then, keep your eyes glued to <a href="http://rubyconf.org">RubyConf</a>.</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-12T00:00:00+05:30" pubdate data-updated="true">2007.08.12</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chad.github.com/chad/blog/2007/08/12/ruby-hoedowned/" data-via="chadfowler" data-counturl="http://chad.github.com/chad/blog/2007/08/12/ruby-hoedowned/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2007/08/03/enumerable-injecting/" title="Previous Post: Enumerable#injecting">&laquo; Enumerable#injecting</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2007/08/17/the-rubyconf-proposal-deadline-is-looming/" title="Next Post: The RubyConf proposal deadline is looming...">The RubyConf proposal deadline is looming... &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://www.nordicruby.org/">Nordic Ruby</a></span>
+        <span class="location">Stockholm</span>
+        <span class="the-date">June 6-9, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/berlin-2013/upcomingevents/">GOTO Night</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">June 17, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/aarhus-2013/">GOTO</a></span>
+        <span class="location">Aarhus</span>
+        <span class="the-date">September 30, 2013</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://railsisrael.events.co.il">Rails Israel</a></span>
+        <span class="location">Tel Aviv</span>
+        <span class="the-date">October 9, 2013</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>-->
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/04/my-hovercraft-is-full-of-eels/">'My hovercraft is full of eels'</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/22/my-six-years-of-ignorance/">My Six Years of Ignorance</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/">Passionate Programmer - A free chapter (almost) every week until it's done</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
