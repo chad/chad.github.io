@@ -4,7 +4,7 @@
   <title><![CDATA[Category: career | Chad Fowler]]></title>
   <link href="http://chad.github.io/blog/categories/career/atom.xml" rel="self"/>
   <link href="http://chad.github.io/"/>
-  <updated>2014-01-04T14:52:36+05:30</updated>
+  <updated>2014-01-19T13:52:19+01:00</updated>
   <id>http://chad.github.io/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Leaving a Legacy...System]]></title>
     <link href="http://chad.github.io/blog/2011/03/17/leaving-a-legacy-system/"/>
-    <updated>2011-03-17T00:00:00+05:30</updated>
+    <updated>2011-03-17T00:00:00+01:00</updated>
     <id>http://chad.github.io/blog/2011/03/17/leaving-a-legacy-system</id>
     <content type="html"><![CDATA[<p>Ever since reading David Heinemeir Hansson's post "Enterprise Is the New Legacy":http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php over five years ago, I've been chewing on something. The gist of the post was that "enterprise" is and should be a bad word, just like "legacy".</p>
 
@@ -59,7 +59,7 @@
   <entry>
     <title type="html"><![CDATA[I Don't Know]]></title>
     <link href="http://chad.github.io/blog/2011/01/15/i-don%27t-know/"/>
-    <updated>2011-01-15T00:00:00+05:30</updated>
+    <updated>2011-01-15T00:00:00+01:00</updated>
     <id>http://chad.github.io/blog/2011/01/15/i-don't-know</id>
     <content type="html"><![CDATA[<p>I had the pleasure of watching "Scott Chacon":http://scottchacon.com/ keynote at "CodeMash":http://codemash.org this week. He spoke about how "Github":http://github.com "manages" its development team and product development.  I enjoyed the talk, and encourage you to download his "slides":https://github.com/schacon/ddd if you weren't at the conference.</p>
 
