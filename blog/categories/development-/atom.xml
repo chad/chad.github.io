@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: development, | Chad Fowler]]></title>
-  <link href="http://chad.github.io/blog/categories/development-/atom.xml" rel="self"/>
-  <link href="http://chad.github.io/"/>
-  <updated>2014-01-19T13:56:52+01:00</updated>
-  <id>http://chad.github.io/</id>
+  <link href="http://chadfowler.com/blog/categories/development-/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2014-01-19T14:12:05+01:00</updated>
+  <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Leaving a Legacy...System]]></title>
-    <link href="http://chad.github.io/blog/2011/03/17/leaving-a-legacy-system/"/>
+    <link href="http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system/"/>
     <updated>2011-03-17T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2011/03/17/leaving-a-legacy-system</id>
+    <id>http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system</id>
     <content type="html"><![CDATA[<p>Ever since reading David Heinemeir Hansson's post "Enterprise Is the New Legacy":http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php over five years ago, I've been chewing on something. The gist of the post was that "enterprise" is and should be a bad word, just like "legacy".</p>
 
 <p>But why is "legacy" a bad word to begin with?  The word makes most software developers and IT people ill.</p>

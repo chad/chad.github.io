@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Chad Fowler]]></title>
-  <link href="http://chad.github.io/atom.xml" rel="self"/>
-  <link href="http://chad.github.io/"/>
-  <updated>2014-01-19T13:56:52+01:00</updated>
-  <id>http://chad.github.io/</id>
+  <link href="http://chadfowler.com/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2014-01-19T14:12:05+01:00</updated>
+  <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Your most important skill: Empathy]]></title>
-    <link href="http://chad.github.io/blog/2014/01/19/empathy/"/>
+    <link href="http://chadfowler.com/blog/2014/01/19/empathy/"/>
     <updated>2014-01-19T09:10:00+01:00</updated>
-    <id>http://chad.github.io/blog/2014/01/19/empathy</id>
+    <id>http://chadfowler.com/blog/2014/01/19/empathy</id>
     <content type="html"><![CDATA[<p><strong>TL;DR</strong> - Empathy is the most important skill you can practice. It will lead to greater success personally and professionally and will allow you to become happier the more you practice.</p>
 
 <p>I&#8217;ve never considered myself a <em>real</em> programmer.  I know at this point it&#8217;s probably silly to say, but I started my scholastic and professional life as a musician, and I&#8217;ve never quite recovered from the <a href="http://en.wikipedia.org/wiki/Impostor_syndrome">Impostor Syndrome</a> that comes with making such a shift. One of the faux-self-deprecations I use to describe myself is: &#8220;I&#8221;m a people person who just <em>happens</em> to express this tendency through programming and technology projects&#8221;.</p>
@@ -103,9 +103,9 @@
   
   <entry>
     <title type="html"><![CDATA[About Eggs]]></title>
-    <link href="http://chad.github.io/blog/2013/08/13/about-eggs/"/>
+    <link href="http://chadfowler.com/blog/2013/08/13/about-eggs/"/>
     <updated>2013-08-13T08:27:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/08/13/about-eggs</id>
+    <id>http://chadfowler.com/blog/2013/08/13/about-eggs</id>
     <content type="html"><![CDATA[<p>This week&#8217;s Passionate Programmer excerpt is a warning against placing too strong a bet on technology you don&#8217;t control. It&#8217;s funny how dated it sounds. Case in point, I guess.</p>
 
 <p><a href="http://chadfowler.com/passionate-programmer/eggs.html">Don&#8217;t Put All Your Eggs in Someone Else&#8217;s Basket</a>.</p>
@@ -116,9 +116,9 @@
   
   <entry>
     <title type="html"><![CDATA[How Not to Panic - Passionate Programmer Excerpt]]></title>
-    <link href="http://chad.github.io/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/"/>
+    <link href="http://chadfowler.com/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/"/>
     <updated>2013-07-23T07:46:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt</id>
+    <id>http://chadfowler.com/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt</id>
     <content type="html"><![CDATA[<p><a href="http://chadfowler.com/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/">As I mentioned last week,</a> I&#8217;m releasing chapters of <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">The Passionate Programmer</a> every(ish) week until they&#8217;ve all been posted.</p>
 
 <p>This week&#8217;s chapter is one I actually re-read myself sometimes as a reminder. It&#8217;s about how to stay calm  and focused in the face of stress. It&#8217;s one of the most important lessons I&#8217;ve learned (and continue to learn) throughout my career and applies to every job I&#8217;ve had. Too often, our reaction to stress is to freak out and <em>just</em> <em>start</em> <em>trying</em> <em>shit</em>.</p>
@@ -131,9 +131,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Six Years of Ignorance]]></title>
-    <link href="http://chad.github.io/blog/2013/07/22/my-six-years-of-ignorance/"/>
+    <link href="http://chadfowler.com/blog/2013/07/22/my-six-years-of-ignorance/"/>
     <updated>2013-07-22T10:09:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/07/22/my-six-years-of-ignorance</id>
+    <id>http://chadfowler.com/blog/2013/07/22/my-six-years-of-ignorance</id>
     <content type="html"><![CDATA[<p>Six years ago, I gave up a bad habit.  Since 1999 I had been using RSS then Atom as my interesting-stuff changelog.  I eventually amassed a subscription collection of hundreds of feeds with subjects ranging from the obvious (tech news and software development) to religion, philosophy, language, and music. Every day, all day, new items
 came into my feed reader. I had gotten pretty good at culling uninteresting feeds, so <em>lots</em> of it was relevant and exciting to me. If a tech company was rumored to be in acquisition talks, I knew it. If Rubyists started favoring a new library for accessing relational databases or creating parsers, I knew that.</p>
 
@@ -153,9 +153,9 @@ came into my feed reader. I had gotten pretty good at culling uninteresting feed
   
   <entry>
     <title type="html"><![CDATA[Passionate Programmer - A free chapter (almost) every week until it's done]]></title>
-    <link href="http://chad.github.io/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/"/>
+    <link href="http://chadfowler.com/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week/"/>
     <updated>2013-07-16T09:15:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week</id>
+    <id>http://chadfowler.com/blog/2013/07/16/passionate-programmer-a-free-excerpt-almost-every-week</id>
     <content type="html"><![CDATA[<p>Starting today I&#8217;m going to post a free excerpt from <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">The Passionate Programmer</a> every week (time permitting) until I&#8217;ve posted them all. (Thanks to <a href="http://pragprog.com">my generous publisher</a> for allowing this!)</p>
 
 <p>If you have read it and wished you could share sections with friends and co-workers that don&#8217;t own the book, now&#8217;s your chance. If you haven&#8217;t read it and really don&#8217;t want to spend money on it, you can read it for free (out of order) over the course of the next year.</p>
@@ -170,9 +170,9 @@ came into my feed reader. I had gotten pretty good at culling uninteresting feed
   
   <entry>
     <title type="html"><![CDATA[Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components]]></title>
-    <link href="http://chad.github.io/blog/2013/06/23/immutable-deployments/"/>
+    <link href="http://chadfowler.com/blog/2013/06/23/immutable-deployments/"/>
     <updated>2013-06-23T18:57:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/06/23/immutable-deployments</id>
+    <id>http://chadfowler.com/blog/2013/06/23/immutable-deployments</id>
     <content type="html"><![CDATA[<p>As a developer and sometimes system administrator, one of the scariest things I ever encounter is a server that&#8217;s been running for ages which has seen multiple upgrades of system and application software.</p>
 
 <p>Why? Because an old system inevitably grows warts. They start as one-time hacks during outages. A quick edit to a config file saves the day. &#8220;We&#8217;ll put it back into Chef later,&#8221; we say, as we finally head off to sleep after a marathon fire fighting session.</p>
@@ -203,9 +203,9 @@ came into my feed reader. I had gotten pretty good at culling uninteresting feed
   
   <entry>
     <title type="html"><![CDATA[How to Give a Keynote]]></title>
-    <link href="http://chad.github.io/blog/2013/06/08/how-to-give-a-keynote/"/>
+    <link href="http://chadfowler.com/blog/2013/06/08/how-to-give-a-keynote/"/>
     <updated>2013-06-08T17:05:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/06/08/how-to-give-a-keynote</id>
+    <id>http://chadfowler.com/blog/2013/06/08/how-to-give-a-keynote</id>
     <content type="html"><![CDATA[<p>I&#8217;m not sure how it happened, but out of the many conferences in which I&#8217;ve spoken, I&#8217;ve only submitted two talk proposals.
 Both were to O&#8217;Reilly&#8217;s OSCON. One was in 2003. It was not accepted. Too bad; It would have been really good. The next was in 2004.
 It was accepted. It wasn&#8217;t all that great.</p>
@@ -252,9 +252,9 @@ So for my first keynote appearance, I actually gave two. One planned and one tha
   
   <entry>
     <title type="html"><![CDATA[How to get your conference talk accepted]]></title>
-    <link href="http://chad.github.io/blog/2013/05/25/how-to-get-your-conference-talk-accepted/"/>
+    <link href="http://chadfowler.com/blog/2013/05/25/how-to-get-your-conference-talk-accepted/"/>
     <updated>2013-05-25T16:33:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/05/25/how-to-get-your-conference-talk-accepted</id>
+    <id>http://chadfowler.com/blog/2013/05/25/how-to-get-your-conference-talk-accepted</id>
     <content type="html"><![CDATA[<p>I am one of the original organizers of both <a href="http://rubyconf.org">RubyConf</a> and <a href="http://railsconf.com">RailsConf</a>.  Combined, I&#8217;ve organized or been on the program committee for around 25 conferences.  I&#8217;ve read hundreds of proposals and seen hundreds of conference talks.</p>
 
 <p>Occasionally, a proposal or a talk stands out. Here&#8217;s one that I still think of when new would-be speakers ask how to get their first talk accepted. When preparing for RailsConf 2010 in Baltimore, we received this email from <a href="https://twitter.com/r00k">Ben Orenstein</a>:</p>
@@ -289,9 +289,9 @@ So for my first keynote appearance, I actually gave two. One planned and one tha
   
   <entry>
     <title type="html"><![CDATA[Discipline: Stomp Out Cynicism]]></title>
-    <link href="http://chad.github.io/blog/2013/05/20/discipline-stomp-out-cynicism/"/>
+    <link href="http://chadfowler.com/blog/2013/05/20/discipline-stomp-out-cynicism/"/>
     <updated>2013-05-20T11:36:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/05/20/discipline-stomp-out-cynicism</id>
+    <id>http://chadfowler.com/blog/2013/05/20/discipline-stomp-out-cynicism</id>
     <content type="html"><![CDATA[<p>Here&#8217;s an exercise you can put into place right now which will have a lasting, significant, positive effect on your life
 and the lives of those you work, live, collaborate, and play with. There are two versions: an easy version and a harder version. Start with the easy
 version unless you&#8217;re the kind of person who has to do things the hard way.</p>
@@ -315,9 +315,9 @@ fully. Be thankful to the negative emotion for giving you the opportunity to und
   
   <entry>
     <title type="html"><![CDATA[Who I Want to Hire]]></title>
-    <link href="http://chad.github.io/blog/2013/04/09/who-i-want-to-hire/"/>
+    <link href="http://chadfowler.com/blog/2013/04/09/who-i-want-to-hire/"/>
     <updated>2013-04-09T09:44:00+02:00</updated>
-    <id>http://chad.github.io/blog/2013/04/09/who-i-want-to-hire</id>
+    <id>http://chadfowler.com/blog/2013/04/09/who-i-want-to-hire</id>
     <content type="html"><![CDATA[<p>There&#8217;s a person I want to work with. I can&#8217;t find this person. I&#8217;ve literally searched the world,
 and I can hardly find a trace.</p>
 
@@ -360,9 +360,9 @@ I don&#8217;t care if you write books, contribute to Open Source software, or sp
   
   <entry>
     <title type="html"><![CDATA[If it stresses you out, it's not your job]]></title>
-    <link href="http://chad.github.io/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/"/>
+    <link href="http://chadfowler.com/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/"/>
     <updated>2013-03-25T19:11:00+01:00</updated>
-    <id>http://chad.github.io/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job</id>
+    <id>http://chadfowler.com/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job</id>
     <content type="html"><![CDATA[<p>I keep learning this lesson over and over again, so I&#8217;m writing it here in an effort to never forget again. As a manager, if some task constantly stresses me out or makes me feel uneasy,
 it&#8217;s probably because I&#8217;m doing someone else&#8217;s job.</p>
 
@@ -379,9 +379,9 @@ lovingly completed.</p>
   
   <entry>
     <title type="html"><![CDATA[I'm a Wunderkind!]]></title>
-    <link href="http://chad.github.io/blog/2013/02/19/im-a-wunderkind/"/>
+    <link href="http://chadfowler.com/blog/2013/02/19/im-a-wunderkind/"/>
     <updated>2013-02-19T15:58:00+01:00</updated>
-    <id>http://chad.github.io/blog/2013/02/19/im-a-wunderkind</id>
+    <id>http://chadfowler.com/blog/2013/02/19/im-a-wunderkind</id>
     <content type="html"><![CDATA[<p>As I mentioned recently, <a href="http://chadfowler.com/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">we&#8217;ve moved to Berlin!</a>.  We got to spend a week of down time exploring the city.  We are definitely in love with Berlin so far!</p>
 
 <p>I&#8217;m excited today to finally announce that I&#8217;ve joined <a href="http://www.6wunderkinder.com/blog/willkommen-chad">6Wunderkinder</a> as CTO. In case you don&#8217;t know them by the company name, 6Wunderkinder are the creators of the extremely popular <a href="http://www.wunderlist.com">Wunderlist</a>, which is a cross-platform, simple, and beautiful productivity application.  I&#8217;m a user, and as I&#8217;ve told friends and family about my move, I&#8217;ve discovered that many of you are too.</p>
@@ -394,9 +394,9 @@ lovingly completed.</p>
   
   <entry>
     <title type="html"><![CDATA[Switched to github page, octopress, and a new design]]></title>
-    <link href="http://chad.github.io/blog/2013/02/15/switched-to-github/"/>
+    <link href="http://chadfowler.com/blog/2013/02/15/switched-to-github/"/>
     <updated>2013-02-15T17:35:00+01:00</updated>
-    <id>http://chad.github.io/blog/2013/02/15/switched-to-github</id>
+    <id>http://chadfowler.com/blog/2013/02/15/switched-to-github</id>
     <content type="html"><![CDATA[<p>Thanks to <a href="http://lynn.io/">Lynn Wallenstein</a>, I have a new web site design. If you see problems with the layout, it&#8217;s almost definitely because I screwed something up after Lynn gave me the code. Sorry, Lynn. :(</p>
 
 <p>I have also used this as a chance to move from my own server (which I&#8217;ve been screwing with for over a decade) to Octopress hosted on Github Pages. I&#8217;m glad to be done with that phase of my life.</p>
@@ -407,9 +407,9 @@ lovingly completed.</p>
   
   <entry>
     <title type="html"><![CDATA[Moving to Berlin and auf wiedersehen to friends]]></title>
-    <link href="http://chad.github.io/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/"/>
+    <link href="http://chadfowler.com/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/"/>
     <updated>2013-01-08T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends</id>
+    <id>http://chadfowler.com/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends</id>
     <content type="html"><![CDATA[<p>It&#8217;s hard to believe it&#8217;s been <a href="http://techcrunch.com/2011/03/14/livingsocial-gains-wealth-of-ruby-on-rails-expertise-with-infoether-acquisition/">almost two years</a> since InfoEther was acquired by LivingSocial. Since then, we&#8217;ve built the strongest development team I&#8217;ve ever known. We&#8217;ve set <a href="http://mashable.com/2012/09/06/livingsocial-starbucks-record/">records</a> for e-commerce transaction volume. We&#8217;ve grown at an incredible pace, both as a business and as <a href="http://www.youtube.com/watch?feature=player_embedded&v=14sUms68LwA">technology team</a>. We&#8217;ve shipped a lot of software, and made millions of people&#8217;s lives more interesting in the process.  I&#8217;ve had the privilege to work with <a href="https://coderwall.com/team/livingsocial">some of the most admired engineers in on industry</a>. I&#8217;m proud of the team <a href="http://aaronbatalion.com/">Aaron Batalion</a> (from whom I&#8217;ve learned a ton about running a consumer internet product) had assembled before InfoEther arrived and of the team that ultimately grew from that foundation.</p>
 <p><a href="http://www.chadfowler.com/2011/12/21/re-thinking-software-development-education">As I mentioned when I announced</a> our <a href="http://hungryacademy.com">Hungry Academy program</a>, for me personally the experience at LivingSocial has been intense. As I said in that post, “These last 8 months at LivingSocial have been the best 4 years of my career.” That holds true today.</p>
 <p>Playing the role of Senior Vice President of Technology and serving on the senior executive team at LivingSocial has been a rewarding learning experience.  I&#8217;m humbled by the talent and experience of every member of that team, and since my first day have been awed by <a href="http://corporate.livingsocial.com/ourteam">Tim O&#8217;Shaughnessy&#8217;s</a> business sense and natural leadership ability.  I look back on my career, and a handful of teachers and mentors stand out that have had a significant impact on me. Tim is now in that very short list.</p>
@@ -421,18 +421,18 @@ lovingly completed.</p>
   
   <entry>
     <title type="html"><![CDATA[Leaving a Legacy System revisited]]></title>
-    <link href="http://chad.github.io/blog/2012/10/29/leaving-a-legacy-system-revisited/"/>
+    <link href="http://chadfowler.com/blog/2012/10/29/leaving-a-legacy-system-revisited/"/>
     <updated>2012-10-29T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2012/10/29/leaving-a-legacy-system-revisited</id>
+    <id>http://chadfowler.com/blog/2012/10/29/leaving-a-legacy-system-revisited</id>
     <content type="html"><![CDATA[<p>Early last year, <a href="http://chadfowler.com/2011/03/17/leaving-a-legacy-system">I posted</a> about how we&#8217;ve unfortunately turned the word &#8220;legacy&#8221; into a bad word in the software industry.</p>
 <p>At Nordic Ruby and again at Aloha Ruby Conf this year I <a href="http://confreaks.com/videos/1240-aloharuby2012-legacy">turned this idea into an exploratory presentation</a>.  I think it turned out pretty well and is an important topic.  Watch it and let me know what you think!</p>]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[The art/craft/commodity continuum]]></title>
-    <link href="http://chad.github.io/blog/2011/12/27/the-art-craft-commodity-continuum/"/>
+    <link href="http://chadfowler.com/blog/2011/12/27/the-art-craft-commodity-continuum/"/>
     <updated>2011-12-27T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2011/12/27/the-art-craft-commodity-continuum</id>
+    <id>http://chadfowler.com/blog/2011/12/27/the-art-craft-commodity-continuum</id>
     <content type="html"><![CDATA[<p>When you create art, the purpose is self-expression.</p>
 <p>When you create software, the purpose is rarely self-expression.</p>
 <p>When you create software, someone somewhere wants it to perform a set of functions and has a stake in how well those functions are implemented. The definition of &#8220;well&#8221; is up to the stakeholder.</p>
@@ -456,9 +456,9 @@ lovingly completed.</p>
   
   <entry>
     <title type="html"><![CDATA[Re-thinking Software Development Education]]></title>
-    <link href="http://chad.github.io/blog/2011/12/21/re-thinking-software-development-education/"/>
+    <link href="http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education/"/>
     <updated>2011-12-21T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2011/12/21/re-thinking-software-development-education</id>
+    <id>http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education</id>
     <content type="html"><![CDATA[<p>Where have I been lately?  Good question. When asked over these past months, I jokingly say something like, &#8220;These last 8 months at LivingSocial have been the best 4 years of my career.&#8221;</p>
 <p>But I don&#8217;t just mean I&#8217;ve been busy. I&#8217;ve been focused on building the best software development team I can to do what I think is some important and industry-changing work in the world of local commerce.</p>
 <p>And when I joke about these 8 months being the best 4 years of my career, what I really mean is that I feel like I&#8217;ve learned 4 years worth of lessons and gained 4 years worth of experience. What we&#8217;re doing isn&#8217;t easy. It&#8217;s the kind of work I&#8217;ve always sought out.</p>
@@ -477,9 +477,9 @@ lovingly completed.</p>
   
   <entry>
     <title type="html"><![CDATA[Leaving a Legacy...System]]></title>
-    <link href="http://chad.github.io/blog/2011/03/17/leaving-a-legacy-system/"/>
+    <link href="http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system/"/>
     <updated>2011-03-17T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2011/03/17/leaving-a-legacy-system</id>
+    <id>http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system</id>
     <content type="html"><![CDATA[<p>Ever since reading David Heinemeir Hansson&#8217;s post <a href="http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php">Enterprise Is the New Legacy</a> over five years ago, I&#8217;ve been chewing on something. The gist of the post was that &#8220;enterprise&#8221; is and should be a bad word, just like &#8220;legacy&#8221;.</p>
 <p>But why is &#8220;legacy&#8221; a bad word to begin with?  The word makes most software developers and IT people ill.</p>
 <p>In other fields and in life in general, the word &#8220;legacy&#8221; isn&#8217;t thusly encumbered.  It refers to an inheritance left to those behind you. Your life&#8217;s work. Your essential story.</p>
@@ -502,9 +502,9 @@ lovingly completed.</p>
   
   <entry>
     <title type="html"><![CDATA[The Harajuku Moment]]></title>
-    <link href="http://chad.github.io/blog/2011/03/15/the-harajuku-moment/"/>
+    <link href="http://chadfowler.com/blog/2011/03/15/the-harajuku-moment/"/>
     <updated>2011-03-15T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2011/03/15/the-harajuku-moment</id>
+    <id>http://chadfowler.com/blog/2011/03/15/the-harajuku-moment</id>
     <content type="html"><![CDATA[<p>A few years ago, sitting in the July heat on a wall in the Harajuku district of Tokyo, I came to a conclusion: I had let myself be a loser. At least, I had let myself become a partial loser. I was fat and unhappy. My skin looked grey. I was slowly killing myself. I was obese. I made excuses to myself and others. I used my success in other areas as a justification: I just wasn&#8217;t a fitness guy.</p>
 <p><strong>It was bullshit.</strong></p>
 <p>
@@ -537,9 +537,9 @@ Note: I wrote a more detailed account of my weight loss story in <a href="http:/
   
   <entry>
     <title type="html"><![CDATA[Caring Like Crazy ]]></title>
-    <link href="http://chad.github.io/blog/2011/03/13/caring-like-crazy/"/>
+    <link href="http://chadfowler.com/blog/2011/03/13/caring-like-crazy/"/>
     <updated>2011-03-13T00:00:00+01:00</updated>
-    <id>http://chad.github.io/blog/2011/03/13/caring-like-crazy</id>
+    <id>http://chadfowler.com/blog/2011/03/13/caring-like-crazy</id>
     <content type="html"><![CDATA[<p>I&#8217;ve just finished reading Gary Vaynerchuk&#8217;s <a href="http://www.amazon.com/Thank-You-Economy-Gary-Vaynerchuk/dp/0061914185">The Thank You Economy</a>.  From the outside it looks like a book about marketing. It looks like a book for companies who need a &#8220;social media strategy&#8221;.  On the inside, it&#8217;s much more.</p>
 <p>Everyone doing business of any sort has an important lesson to learn from The Thank You Economy.  Here&#8217;s that lesson in Gary&#8217;s own words (from last year&#8217;s <a href="http://railsconf.org">RailsConf</a> keynote):</p>
 <pre>
