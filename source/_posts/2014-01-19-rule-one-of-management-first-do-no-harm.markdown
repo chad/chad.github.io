@@ -12,7 +12,7 @@ I propose "first, do no harm" as a principle to apply in every situation where t
 
 Managers hold a position of power in an organization. A manager having a bad day can make a decision that changes the course of years of multiple people's lives. A managerial decision can destroy morale, burn people out, or even ruin another person's career.
 
-Couple this power with the typical human need  to _do something_, and we have a problem on our hands.  As people, we grow anxious when we're in a position and we don't feel we're actively doing anything. Especially for new managers, this can drive a person crazy.  You're used to being the producer who gets things done, and suddenly you're in meetings and you aren't the one producing anymore.  How do you measure your productivity?
+Couple this power with the typical human need  to _do something_, and we have a problem on our hands.  As people, we grow anxious when we're in a position in which we don't feel we're actively doing anything. Especially for new managers, this can drive a person crazy.  You're used to being the producer who gets things done, and suddenly you're in meetings and you aren't the one producing anymore.  How do you measure your productivity?
 
 In the worst case, you base it on something like the number of decisions you make or the number of processes you change.
 
