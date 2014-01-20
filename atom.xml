@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-19T14:12:05+01:00</updated>
+  <updated>2014-01-20T06:08:22+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rule One of Management: First, Do No Harm]]></title>
+    <link href="http://chadfowler.com/blog/2014/01/19/rule-one-of-management-first-do-no-harm/"/>
+    <updated>2014-01-19T14:20:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2014/01/19/rule-one-of-management-first-do-no-harm</id>
+    <content type="html"><![CDATA[<p>Primum non nocere, or &#8220;first, do no harm&#8221; is a universal principle among healthcare professionals worldwide. It essentially means this: given a (bad) situation, your first priority is to not make it <em>worse</em> through your actions. Doctors hold a position of power over their patients. Most patients are unqualified to diagnose and treat themselves, so they must trust the education, experience, and skill of the doctor. A doctor can significantly (even terminally) affect a patient&#8217;s life.</p>
+
+<p>I propose &#8220;first, do no harm&#8221; as a principle to apply in every situation where the do-er has a position of power over those his or her actions affect. Like managers.</p>
+
+<p>Managers hold a position of power in an organization. A manager having a bad day can make a decision that changes the course of years of multiple people&#8217;s lives. A managerial decision can destroy morale, burn people out, or even ruin another person&#8217;s career.</p>
+
+<p>Couple this power with the typical human need  to <em>do something</em>, and we have a problem on our hands.  As people, we grow anxious when we&#8217;re in a position in which we don&#8217;t feel we&#8217;re actively doing anything. Especially for new managers, this can drive a person crazy.  You&#8217;re used to being the producer who gets things done, and suddenly you&#8217;re in meetings and you aren&#8217;t the one producing anymore.  How do you measure your productivity?</p>
+
+<p>In the worst case, you base it on something like the number of decisions you make or the number of processes you change.</p>
+
+<p>Try to remember the last time you were in a job and things got screwed up because a manager was out of the office.  Now try to remember the last time things were screwed up because of an offhand comment, a sarcastic remark, a poorly timed email, or a decision some manager made.</p>
+
+<p>At a tactical level, the risks of managerial action far outweigh the risks of inaction.</p>
+
+<p>Therefore, managers&#8211;especially you first-time new managers, please don&#8217;t feel pressured to just <em>do something</em>. Be reasoned and careful when you encounter a new problem.</p>
+
+<p>Rule number one is: First, do no harm.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Your most important skill: Empathy]]></title>
@@ -533,32 +558,6 @@ Me after losing 70 pounds (photo by Duncan Davidson)</p>
 Note: I wrote a more detailed account of my weight loss story in <a href="http://fourhourworkweek.com">Tim Ferriss&#8217;s</a> best selling book, <a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X">The Four Hour Body</a>. I have no financial interest in the book, but having re-read my own chapter when Tim sent me a copy of the book last December, I was inspired enough to double down on my efforts to go from OK to awesome. I&#8217;ve lost 20 more pounds since January 1.  Tim&#8217;s advice for weight loss is solid, and (if I do say so myself) my chapter alone is worth the cost of the book.</p>
 <p><a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X"><img src="http://thefourhourbody.org/wp-content/uploads/2010/12/thefourhourbody.jpg" alt="" /></a><br />
 </i></p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Caring Like Crazy ]]></title>
-    <link href="http://chadfowler.com/blog/2011/03/13/caring-like-crazy/"/>
-    <updated>2011-03-13T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/03/13/caring-like-crazy</id>
-    <content type="html"><![CDATA[<p>I&#8217;ve just finished reading Gary Vaynerchuk&#8217;s <a href="http://www.amazon.com/Thank-You-Economy-Gary-Vaynerchuk/dp/0061914185">The Thank You Economy</a>.  From the outside it looks like a book about marketing. It looks like a book for companies who need a &#8220;social media strategy&#8221;.  On the inside, it&#8217;s much more.</p>
-<p>Everyone doing business of any sort has an important lesson to learn from The Thank You Economy.  Here&#8217;s that lesson in Gary&#8217;s own words (from last year&#8217;s <a href="http://railsconf.org">RailsConf</a> keynote):</p>
-<pre>
-  "Giving a Fuck is comin' on strong!"
-</pre>
-<p>
-<div class="video_embed"><object width="500" height="411"><param name="movie" value="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="500" height="411" allowFullScreen="true" wmode="transparent"></embed></object></div>
-</p>
-<p>Gary uses this phrase over and over in the book: &#8220;caring like crazy&#8221;.  What does that mean?</p>
-<p>Joel Spolsky wrote <a href="http://www.joelonsoftware.com/items/2007/06/05.html">a whole book</a> about how what you need out of people you work with is for them to be smart and to get things done. Having hired a ton of people myself (hundreds) and worked with a fair number of others, I have to disagree. Smart and gets things done are both excellent, important qualities.  But ultimately I don&#8217;t care if you&#8217;re smart. I&#8217;ve worked with my share of brilliant people who just don&#8217;t care.</p>
-<p>Look at this exchange between <a href="http://twitter.com/coreyhaines">Corey Haines</a> and <a href="http://twitter.com/jgehtland">Justin Gehtland</a> from a few days ago:</p>
-<p><img src="http://chadfowler.com/giving_a_shit.png" alt="" /></p>
-<p>I worked with a <span class="caps">CEO</span> in India who embodied this idea I remember the first time I noticed it.  We walked in the front of the building and he noticed some trash on the lawn next to the security guard who was stoicly standing there staring at nothing.  Trash in India.  It&#8217;s everywhere.  I certainly didn&#8217;t notice. It seems like an impossibly uncontrollable problem.</p>
-<p>In mid-sentence, he stops and runs over, picks up the trash and hurries back over to the guard who learns that we&#8217;re <i>not</i> going to have trash in our lawn and if the guard doesn&#8217;t care about his workplace he can go somewhere else. He wasn&#8217;t mean about it.  He was matter-of-fact. The guard tried to take the trash from him, but he wouldn&#8217;t have it.  He took it himself and threw it away.  He did this constantly.  Eventually, all of the guards started doing it. Then the programmers started doing it. In fact, anything broken, or dirty, or at all not right got fixed by whoever saw it. We were a culture of caring and it was going to be both superficially and deeply ingrained.</p>
-<p>One of our people got severely injured a few months later in a motorcycle accident. He wasn&#8217;t wearing a helmet, as is very very common in India. From that day on, our <span class="caps">CEO</span> or I stood at the drive into the building refusing to allow employees in unless they were wearing helmets.  A couple of the employees couldn&#8217;t afford them, so our <span class="caps">CEO</span> personally bought them the best helmets he could buy.</p>
-<p>He cared about the business (even the building it took place in) and he cared about the people. And you can be damned sure he cared about the work.  It was infectious.  It was viral.</p>
-<p>If you <span class="caps">REALLY</span> care and you&#8217;re capable, I don&#8217;t care much how smart you are for most work that needs to be done. Give me someone passionate over an apathetic genius any day of the week.</p>
-<p><img src="http://ecx.images-amazon.com/images/I/41HCiSFoi0L.jpg" alt="" /></p>
-<p>So this is my takeaway from The Thank You Economy.  Care like crazy. Whether you&#8217;re running a company or just running your career.  It&#8217;s sound obvious, but it&#8217;s oh too easy to forget and let it slide. Let a little apathy in, and it makes a mess. A cyncical remark, or a posted Dilbert cartoon are all it takes to start the wrong kind of culture of apathy. Care like crazy.</p>]]></content>
   </entry>
   
 </feed>
