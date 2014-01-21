@@ -9,9 +9,9 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Not to be outdone by the Seattle.rb crew, Greg and James are <a
-href="http://www.livejournal.com/users/ruby_gambit/">broadcasting their
-progress on &hellip;">
+  <meta name="description" content="Daniel Berger just released <a
+href="http://raa.ruby-lang.org/project/pathname2/">pathname2, a file
+path manipulation library that works well on UNIX &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +71,69 @@ progress on &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/06/11/who-will-create-the-300th-gem/">Who Will Create the 300th Gem?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-06-11T00:00:00+02:00" pubdate data-updated="true">2005.06.11</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Daniel Berger just released <a
+href="http://raa.ruby-lang.org/project/pathname2/">pathname2</a>, a file<br />
+path manipulation library that works well on <span class="caps">UNIX</span> or Windows systems<br />
+(including <span class="caps">UNC</span> paths).</p>
+<p>
+<p>Most notable about this from my perspective is that it is 299th unique <a
+href="http://rubygems.rubyforge.org">RubyGem</a>. That means there are 299<br />
+different pieces of software (not counting their many different versions)<br />
+available for installation via the RubyGems system.</p>
+</p>
+<pre>
+        ~/svn/MJWTI/Book chadfowler$ gem list -r|grep &amp;quot;^[a-zA-Z].*)$&amp;quot;|wc -l
+        299
+        ~/svn/MJWTI/Book chadfowler$
+</pre>
+<p>
+<p>As of this week, not counting downloads of the <a
+href="http://rubyforge.org/projects/rubyinstaller/">Ruby Windows<br />
+Installer</a>, the RubyGems framework has been downloaded more than 50,000<br />
+times. Within a week, it will have served up <a
+href="http://gems.rubyforge.org/stats.html">half a million gems</a>.</p>
+</p>
+<p>
+<p>So, who&#8217;s going to create the 300th gem?</p>
+</p>
+<p>
+<p>Be sure to watch the <a href="http://onestepback.org/gemwatch.rss">rss<br />
+feed</a> if you want to find out which gem pulled across the 300 mark.</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -672,135 +735,6 @@ href="http://www.loudthinking.com">friend from Denmark</a>.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/04/06/my-job-went-to-india/">My Job Went to India</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-04-06T00:00:00+02:00" pubdate data-updated="true">2005.04.06</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It&#8217;s official: <a
-href="http://pragmaticprogrammer.com/titles/mjwti/index.html">I&#8217;m writing a<br />
-book!</a></p>
-<p>
-<p>It&#8217;s being published by my friends and (reluctant) mentors, <a
-href="http://www.pragmaticprogrammer.com/">The Pragmatic Programmers</a>,<br />
-which is especially thrilling, considering that they are two of my favorite<br />
-authors. Having worked with <a
-href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave</a> as an editor<br />
-on <a href="http://www.hypermetrics.com/rubyhacker/coralbook/">The Ruby<br />
-Way</a> (meaning, Dave was tech-editor and I was contributing author) and<br />
-in the same capacity on <a
-href="http://pragmaticprogrammer.com/titles/ruby/index.html">Programming<br />
-Ruby, 2nd edition</a>, I came into this project with the understanding of<br />
-the magic he can work with a little &quot;English refactoring&quot;.</p>
-</p>
-<p>
-<p>They also have the most amazing publishing system I could imagine.<br />
-It&#8217;s unbelievably motivating to be able to type:</p>
-</p>
-<pre>
-        $ make book.pdf &amp;amp;&amp;amp; open book.pdf
-</pre>
-<p>
-<p>&#8230;and to see a print-ready (sort of) copy of my work in progress.</p>
-</p>
-<p>
-<p>The name of the book is &quot;My Job Went to India, and All I Got Was This<br />
-Lousy Book&quot;. Here&#8217;s a particularly illustrative blurb from the<br />
-book&#8217;s web site:</p>
-</p>
-<pre>
-        The American IT job market is slowly coming apart at the seams,
-        and it's all our fault. Most of us have been stumbling around
-        letting our careers take us where they may, and now we're surprised
-        when our companies are shipping our jobs overseas for a fraction of
-        the price. It's time to take control of our careers, and in the
-        process, learn to stay both relevant and employed. This book will
-        show you how to take action to avoid becoming yet another casualty of
-        offshoring.
-</pre>
-<p>
-<p>The book is a survival guide for the Western programmer. It lays out a<br />
-process, a mindset, and a set of techniques for helping you:</p>
-</p>
-<ul>
-<li>Pick the right technologies and business domains to &quot;invest&quot; in.</li>
-<li>Continually refresh your skills.</li>
-<li>Kick ass on the job.</li>
-<li>Make sure people know who you are and what you&#8217;re capable of.</li>
-</ul>
-<p>
-<p>My goal is to help software developers learn how to make<br />
-<em>remarkable</em> careers for themselves.</p>
-</p>
-<p>
-<p>The book is due out around August 1, but I&#8217;ll be finishing a first<br />
-draft much earlier. I&#8217;m looking for brutally honest reviewers. Please<br />
-<a href="mailto:chad@chadfowler.com?subject=MJWTI-REVIEW">let me know</a><br />
-if you&#8217;re interested.</p>
-</p>
-<hr size="2"></hr><h3>An Aside</h3>
-<p>
-<p>There are currently 895 people who want to <a
-href="http://www.43things.com/things/view/220">write a book</a> on <a
-href="http://43things.com">43things.com</a> (not counting the fact that<br />
-some may have spelled it &quot;right a book&quot;, and so on :). I am one<br />
-of the 895. I&#8217;ve had the urge to write for a long time now. In fact,<br />
-publishing a book was in my new year resolutions list at least as far back<br />
-as 1999.</p>
-</p>
-<p>
-<p>As I regurgitated <a
-href="http://www.43things.com/people/progress/chadfowler/105207">here</a>,<br />
-what I think all of us 895 people really want is &quot;to have written a<br />
-book&quot;. For me, specifically, the process of writing and being read is<br />
-identical to the process I went through when I <a
-href="http://www.kamranince.com">studied music composition</a>. I would<br />
-spend each week pouring the best of myself into an act of creativity, and<br />
-unlike music <em>performance</em>, a composer has the luxury of revision<br />
-before showing his or her work. In my paranoia- and anxiety-ridden world,<br />
-this luxury translates into the disturbing realization that those who see<br />
-my work are <em>aware</em> of the fact that I already had a chance to<br />
-improve it. So, I would go into my music composition lessons with a score,<br />
-feeling as if I were opening up a horribly personal part of myself for<br />
-inspection. &quot;Here&#8217;s the best I&#8217;m capable of. This is<br />
-basically &#8216;me&#8217;. Go ahead. Tear it apart.&quot; I have to learn<br />
-how to make writing <em>not</em> be like this. It obviously doesn&#8217;t<br />
-lead to productivity.</p>
-</p>
-<p>
-<p>Of course, the music composition story always had a happy ending. And,<br />
-despite all the worry, I&#8217;m really pleased with how it&#8217;s turning<br />
-out so far. I can&#8217;t wait to hear what you think!</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/23/">&larr; Older</a>
@@ -852,6 +786,10 @@ out so far. I can&#8217;t wait to hear what you think!</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/19/rule-one-of-management-first-do-no-harm/">Rule One of Management: First, Do No Harm</a>
       </li>
     
@@ -865,10 +803,6 @@ out so far. I can&#8217;t wait to hear what you think!</p>
     
       <li class="post">
         <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/22/my-six-years-of-ignorance/">My Six Years of Ignorance</a>
       </li>
     
   </ul>

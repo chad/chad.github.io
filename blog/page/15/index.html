@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="(This article is part of the Big Rewrite series.)
-When you do a technology rewrite, you want things to be clean. That&#8217;s usually a major goal in &hellip;">
+To add to the stress of the Big Bang comes another, mostly people-related issue. Almost all &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +70,46 @@ When you do a technology rewrite, you want things to be clean. That&#8217;s usua
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/03/justifications-and-lies/">Justifications and Lies</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-03T00:00:00+01:00" pubdate data-updated="true">2007.01.03</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">(This article is part of the <a href="http://chadfowler.com/blog/2006/12/27/the-big-rewrite">Big Rewrite</a> series.)
+<p>To add to the stress of the <a href="http://chadfowler.com/2007/1/3/justifications-and-lies">Big Bang</a> comes another, mostly people-related issue.  Almost all technology rewrites are driven by some technologist.  Behind almost every technologist pushing for a Big Rewrite is a business person saying &#8220;But, why?&#8221;  The question is valid.  The product already works.  It&#8217;s successful enough to even consider re-plumbing it, so we must have already gotten something right, no?</p>
+<p>So, then come the justifications.  They start with the real reasons the software is being rewritten (but usually censored to avoid the technologist looking like he or she screwed up big time on the initial development of the product).  The system will be more maintainable.  It will be easier to add features.  &#8220;Oh yea?  So we can do more features faster?&#8221;  &#8220;Uh, yea.&#8221;  &#8220;How much faster?&#8221;  And so on.</p>
+<p>As those discussions get heated and prove unsatisfactory, the list of promises gets longer.  The system will be more scalable.  System response time will improve for our customers.  We will have greater uptime.  And so on.</p>
+<p>It&#8217;s rare, in fact, that a technology rewrite can deliver on all these fronts.  A J2EE Web application may not prove in practice to provide higher availability than a mainframe application.  Rails might be a more flexible and productive environment for a developer, but Rails apps slightly underperform equivalent <span class="caps">PHP</span> apps.  So, you don&#8217;t sell Rails as something that will be <em>faster</em> than <span class="caps">PHP</span>.  You sell it as something that is more flexible and maintainable, and will perform reasonably compared to a <span class="caps">PHP</span> application.</p>
+<p>The piles of justification lead to piles of additional work and/or piles of mismatched expectations and disappointment after release.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -506,103 +546,6 @@ multistep processes.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2006/12/27/the-big-rewrite/">The Big Rewrite</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-12-27T00:00:00+01:00" pubdate data-updated="true">2006.12.27</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre>
-  This is the first in a series of articles, discussing why
-  many software rewrite projects end badly and what
-  to do to avoid some of the ways I've seen them go astray.
-</pre>
-<p>You&#8217;ve got an existing, successful software product. You&#8217;ve hit<br />
-the ceiling on extensibility and maintainability. Your project platform is<br />
-inflexible, and your application is a software house of cards that<br />
-can&#8217;t support another new feature.</p>
-<p>
-<p>You&#8217;ve seen the videos, the weblog posts and the hype, and<br />
-you&#8217;ve decided you&#8217;re going to re-implement your product in<br />
-Rails (or Java, or .<span class="caps">NET</span>, or Erlang, etc.).</p>
-</p>
-<p>
-<p>Beware. This is a longer, harder, more failure-prone path than you expect.</p>
-</p>
-<p>
-<p>Throughout my career in software development, I&#8217;ve been involved in<br />
-Big Rewrite after Big Rewrite. I suspect it&#8217;s because I have an<br />
-interest in learning eclectic computer languages, operating systems, and<br />
-development environments. Not being just-a-Java-guy or just-a-Windows-guy<br />
-has led to me becoming a serial rewriter. I&#8217;ve been on projects to<br />
-replace C, <span class="caps">COBOL</span>, <span class="caps">PHP</span>, Visual Basic, Perl, <span class="caps">PLSQL</span>, <span class="caps">VBX</span> (don&#8217;t ask!)<br />
-and all manner of architectural atrocities with the latest and greatest<br />
-technology of the day.</p>
-</p>
-<p>
-<p>In many cases, these Big Rewrite projects have resulted in unhappy<br />
-customers, political battles, missed deadlines, and sometimes complete<br />
-failure to deliver. In <em>all</em> cases, the projects were considerably<br />
-harder than the projects&#8217; initiators ever thought they would be.</p>
-</p>
-<p>
-<p>This is not a technology problem. It&#8217;s not at all Rails-specific, but<br />
-being in the limelight these days, Rails implementations are both very<br />
-likely to happen and very risky right now.</p>
-</p>
-<h2>Why So Hard?</h2>
-<p>
-<p>So, why, in software rewrites, when you&#8217;re traversing exclusively<br />
-<em>familiar</em> territory are the results so often unpredictable and<br />
-negative?</p>
-</p>
-<p>
-<p>For the next week, I&#8217;ll post specific reasons I&#8217;ve seen things<br />
-go wrong. The following is a list which will eventually be made into links:</p>
-</p>
-<ul>
-<li><a
-href="http://www.chadfowler.com/blog/2006/12/28/software-as-spec">Software<br />
-as Spec</a></li>
-<li><a
-href="http://www.chadfowler.com/blog/2006/12/29/invention-or-implementation">Invention<br />
-or Implementation?</a></li>
-<li><a href="http://chadfowler.com/blog/2006/12/30/the-wish-list">The Wish List</a></li>
-<li><a href="http://chadfowler.com/blog/2007/01/02/the-big-bang">The Big Bang</a></li>
-<li><a href="http://chadfowler.com/blog/2007/01/03/justifications-and-lies">Justification and Lies</a></li>
-<li><a href="http://chadfowler.com/blog/2007/01/04/who's-tending-the-store">Who&#8217;s Tending the Store?</a></li>
-</ul>
-<p>
-<p>Stay tuned.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/16/">&larr; Older</a>
@@ -654,6 +597,10 @@ or Implementation?</a></li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/19/rule-one-of-management-first-do-no-harm/">Rule One of Management: First, Do No Harm</a>
       </li>
     
@@ -667,10 +614,6 @@ or Implementation?</a></li>
     
       <li class="post">
         <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/22/my-six-years-of-ignorance/">My Six Years of Ignorance</a>
       </li>
     
   </ul>

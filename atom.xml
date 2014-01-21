@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-20T06:08:22+01:00</updated>
+  <updated>2014-01-21T10:14:04+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[On Having Something to Say]]></title>
+    <link href="http://chadfowler.com/blog/2014/01/21/on-having-something-to-say/"/>
+    <updated>2014-01-21T10:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2014/01/21/on-having-something-to-say</id>
+    <content type="html"><![CDATA[<p>The first time I was invited to give a keynote speech, I thought &#8220;Why would they want me? I have nothing to say.&#8221; The second time was a few months later. Same thing. What should I talk about? What&#8217;s worth listening to?</p>
+
+<p>Previously I had been asked by <a href="http://pragprog.com">my favorite publisher</a> to write a book. But, what should it be about? I don&#8217;t really have much interesting to say. I&#8217;m just learning, after all.</p>
+
+<p>Now it&#8217;s about ten years later. I&#8217;ve written and contributed to several books. I don&#8217;t know how many conferences I&#8217;ve spoken at anymore or even how many countries I&#8217;ve been invited to.  Still, when I receive a request to speak or am asked my thoughts on a topic by a stranger, I think to myself, &#8220;But, why? What do I have to say?&#8221; I&#8217;m still learning, after all.</p>
+
+<p>I started writing my second book, <a href="http://pragprog.com/book/rr2/rails-recipes">Rails Recipes</a>, roughly a month after I started actually using Rails full time at work. Compared to a lot of other people I knew, I was unqualified to write it. I was going to have to learn a lot in order to write anything at all.  I was even going to have to learn what I needed to learn!</p>
+
+<p>The only thing I had to say about Rails at the time is &#8220;I don&#8217;t know what to say about Rails&#8221;.</p>
+
+<p>By the time I finished the book I had written many small Rails applications and worked on one large one extensively. I had also read almost every line of code in the book and made some fairly decent contributions to the framework.  By the end of the book project, I was an expert.  I had a <em>lot</em> to say about Rails.</p>
+
+<p>But I think one of the reasons the book resonated so well with new Rails developers is that it was written from the fresh perspective of someone still learning.</p>
+
+<p>I saw <a href="http://martinfowler.com">Martin Fowler</a> give a lecture in Bangalore 11 years ago. He said something that has stuck with me ever since: &#8220;Whenever I want to really learn about something, I write a book about it.&#8221; To most people, like me, this is counter-intuitive, but my own history has shown me that it makes a <em>lot</em> of sense.</p>
+
+<p>So, these days, while casting about for something worth saying, I just ask myself, &#8220;What do I wish I had something to say about?&#8221; and I explore that topic aloud. Sometimes it falls flat, and sometimes it results in content that helps me and other people get through the world a little easier.</p>
+
+<p>Don&#8217;t be afraid of not knowing enough or not being experienced enough to help people with your words. The worst case is you learn something in the process. The best case is you create something remarkable.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rule One of Management: First, Do No Harm]]></title>
@@ -523,41 +550,6 @@ lovingly completed.</p>
 <p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
 <p>I don&#8217;t <em>know</em> how to design a system that could live a long and healthy life. I don&#8217;t <em>know</em> because I haven&#8217;t done it yet. Have you?</p>
 <p><i>Note: This wasn&#8217;t a rhetorical question.</i></p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Harajuku Moment]]></title>
-    <link href="http://chadfowler.com/blog/2011/03/15/the-harajuku-moment/"/>
-    <updated>2011-03-15T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/03/15/the-harajuku-moment</id>
-    <content type="html"><![CDATA[<p>A few years ago, sitting in the July heat on a wall in the Harajuku district of Tokyo, I came to a conclusion: I had let myself be a loser. At least, I had let myself become a partial loser. I was fat and unhappy. My skin looked grey. I was slowly killing myself. I was obese. I made excuses to myself and others. I used my success in other areas as a justification: I just wasn&#8217;t a fitness guy.</p>
-<p><strong>It was bullshit.</strong></p>
-<p>
-<p><img src="http://www.voidspace.org.uk/python/weblog/images/chad_fowler.jpg" alt="" /><br />
-Me (on the right) and Michael Foord</p>
-</p>
-<p>These days I&#8217;m still not an elite athlete, but I&#8217;ve turned things around. I&#8217;ve lost nearly 100 pounds, gone from a max ability to run 45 seconds at a time to running a half marathon, and lost 10 inches around my waist.</p>
-<p>
-<p><img src="http://c.photoshelter.com/img-get/I0000ZHyRDf0HBX4/s" alt="" /><br />
-Me after losing 70 pounds (photo by Duncan Davidson)</p>
-</p>
-<p>Before, I was incomplete. I allowed myself to believe in a partial picture of myself.  Now, I&#8217;m closer to the real me. I&#8217;m still a smart, creative guy. But I can also do more pushups in a row than the average American male, and can run longer and faster than most guys my age. And I feel great. I feel noticeably better almost all the time.</p>
-<p>I&#8217;m often asked by other obese and overweight people how I did it. People see me at conferences and other venues and literally don&#8217;t recognize me. How did I make such an incredible transformation?</p>
-<p>If you&#8217;ve asked me this question, this post is for you.</p>
-<p>It&#8217;s a long story. But I&#8217;m going to give you the very very short version:  it was easy.</p>
-<p>I could tell you exactly which system I devised and exactly what worked for me. But that would be missing the major point. The most important element of making a change like this is that it is <em>easy</em>.</p>
-<p><strong>If you could trade your body for one that is 50-100% better in a year, what would you give? </strong> If you had asked me in early 2008, I wouldn&#8217;t have even believed it possible. I would have given a lot. What about 6 months? Obese or overweight people, what if I told you that in 6 months you could be in almost unrecognizably better shape? Would you jump on whatever I was selling?</p>
-<p>The secret? I&#8217;m not selling anything. It&#8217;s just true. Choose <em>any</em> non-bullshit system and actually stick with it for 6 months and you can and will experience life-changing results. You can extend your life span significantly.</p>
-<h2>If you&#8217;re reading this and you want to change, here&#8217;s what I want you to do:</h2>
-<p>1. Recognize how deep in denial you&#8217;ve been<br />
-2. Measure yourself now. If it&#8217;s weight that&#8217;s your issue, get on the scale immediately. Stand on it and cry. You probably haven&#8217;t been measuring it, and it&#8217;s probably worse than you think. Embrace how far you&#8217;ve gone in the wrong direction.  This is the end of that long, drawn out series of lies you&#8217;ve been telling yourself.<br />
-3. Find any program that doesn&#8217;t look like snake oil and try it for 20 days. Measure your progress. If you don&#8217;t know what to try, start with 45 minute light cardiovascular exercise sessions 4 times per week (find a TV series to watch on a treadmill&#8230;a one hour show without commercials is about 42 minutes), forcing yourself to eat a protein-heavy breakfast within 30 minutes of waking, cutting out empty calories and sugars (coke, sugar-heavy &#8220;coffee&#8221; drinks, beer, etc.), and eating 5 small meals per day.<br />
-4. After 20 days, you&#8217;re almost 1/6 of the way through a major transformation.  You have probably gone down one clothing size or are close to it. How far do you want to go? Pick something you didn&#8217;t previously think you were capable of and commit to it. Maybe it&#8217;s a bike race or a triathlon or doing Cross Fit.</p>
-<p>The funny thing about huge change is that making it happen isn&#8217;t usually as huge an effort as we think. We just get stuck. All you have to do to go <span class="caps">ALL</span> of the way is to go <span class="caps">SOME</span> of the way.</p>
-<p><i><br />
-Note: I wrote a more detailed account of my weight loss story in <a href="http://fourhourworkweek.com">Tim Ferriss&#8217;s</a> best selling book, <a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X">The Four Hour Body</a>. I have no financial interest in the book, but having re-read my own chapter when Tim sent me a copy of the book last December, I was inspired enough to double down on my efforts to go from OK to awesome. I&#8217;ve lost 20 more pounds since January 1.  Tim&#8217;s advice for weight loss is solid, and (if I do say so myself) my chapter alone is worth the cost of the book.</p>
-<p><a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X"><img src="http://thefourhourbody.org/wp-content/uploads/2010/12/thefourhourbody.jpg" alt="" /></a><br />
-</i></p>]]></content>
   </entry>
   
 </feed>
