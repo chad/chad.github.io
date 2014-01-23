@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-23T06:48:47+01:00</updated>
+  <updated>2014-01-23T06:59:33+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -22,14 +22,14 @@
 
 <p>And it&#8217;s stupid.</p>
 
-<p>If you want a &#8220;knowledge worker&#8221; to be as ineffective and produce the lowest level of quality possible, deprive them of their sleep and hold them to an unrealistic deadline. In other words, activate Crunch Mode.</p>
+<p>If you want a <a href="http://www.slideshare.net/leadandtransform/knowledge-worker-productivity">&#8220;knowledge worker&#8221;</a> to be as ineffective and produce the lowest level of quality possible, <a href="http://www.ncbi.nlm.nih.gov/books/NBK19958/">deprive them of their sleep</a> and hold them to an unrealistic deadline. In other words, activate Crunch Mode.</p>
 
 <h2>Why Not to Crunch?</h2>
 
 <ul>
-<li>It makes us stupid. The more I work, the less relevant my years of experience become. I constantly make rookie mistakes. I break things in production. I leave messes behind. I waste hours going down the wrong train of thought.</li>
+<li><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2656292/">It makes us stupid</a>. The more I work, the less relevant my years of experience become. I constantly make rookie mistakes. I break things in production. I leave messes behind. I waste hours going down the wrong train of thought.</li>
 <li>It burns people out, sometimes permanently. They burn up their passion that takes down time to replenish. Unless the non-Crunch work is sufficiently energizing (and frequent), enough crunching can cause your best people to leave.</li>
-<li>It makes people lazy. This may seem ironic, but when someone puts in heroic levels of effort, they start to place less value on each minute. I know that if I work all night, then an hour brain-break mid-day sounds very reasonable. The problem is that these breaks become a habit that can persist between Crunch times.</li>
+<li><a href="http://legacy.igda.org/why-crunch-modes-doesnt-work-six-lessons">It makes people lazy and less productive</a>. This may seem ironic, but when someone puts in heroic levels of effort, they start to place less value on each minute. I know that if I work all night, then an hour brain-break mid-day sounds very reasonable. The problem is that these breaks become a habit that can persist between Crunch times.</li>
 <li>It&#8217;s a risky way to make your commitments. Crunch Mode means you are using your team beyond capacity. That&#8217;s like trying to drive 50km on 40km of gas. It <em>might</em> be OK, but if you do it all the time you&#8217;re going to end up broken down on the side of the road waiting for help at some point. Maybe more often than not.</li>
 <li>Accountability is lost. When someone is working all hours, they can&#8217;t be blamed for mistakes. They can&#8217;t be blamed for coming in late, forgetting an email, introducing bugs, not writing tests, cutting technical corners, and doing all sorts of things that <em>don&#8217;t</em> describe how you want people on your team behaving.</li>
 <li>It puts the credibility of management in question every time. Because, managers, believe it or not, every single time it happens, the entire team asks themselves, &#8220;But why?&#8221;</li>
