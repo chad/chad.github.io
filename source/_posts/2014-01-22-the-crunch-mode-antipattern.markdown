@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Stopping the Crunch Mode Antipattern"
+title: "Killing the Crunch Mode Antipattern"
 date: 2014-01-22 09:42
 comments: true
 categories:
