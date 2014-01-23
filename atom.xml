@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-23T06:59:33+01:00</updated>
+  <updated>2014-01-23T07:02:44+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[War On Crunch Mode]]></title>
+    <title type="html"><![CDATA[Stopping the Crunch Mode Antipattern]]></title>
     <link href="http://chadfowler.com/blog/2014/01/22/the-crunch-mode-antipattern/"/>
     <updated>2014-01-22T09:42:00+01:00</updated>
     <id>http://chadfowler.com/blog/2014/01/22/the-crunch-mode-antipattern</id>
