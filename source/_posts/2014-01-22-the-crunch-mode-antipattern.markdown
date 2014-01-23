@@ -22,7 +22,7 @@ If you want a ["knowledge worker"](http://www.slideshare.net/leadandtransform/kn
 * It puts the credibility of management in question every time. Because, managers, believe it or not, every single time it happens, the entire team asks themselves, "But why?"
 * It shows a team that the leader cares about meeting a business goal more than he or she cares about their health. This may sound harsh but it is literally true.
 
-The more you have to use your brain, the less effective and healthy Crunch Mode is. In fields that require less creativity and though, it might even really work as a (ruthless) management technique. In software development, it just doesn't.
+The more you have to use your brain, the less effective and healthy Crunch Mode is. In fields that require less creativity and thought, it might even really work as a (ruthless) management technique. In software development, it just doesn't.
 
 ## Why do we do it?
 
