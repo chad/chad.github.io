@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "War On Crunch Mode"
+title: "Stopping the Crunch Mode Antipattern"
 date: 2014-01-22 09:42
 comments: true
 categories:
