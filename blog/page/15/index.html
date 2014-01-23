@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="(This article is part of the Big Rewrite series.)
-To add to the stress of the Big Bang comes another, mostly people-related issue. Almost all &hellip;">
+While we&#8217;re all in the back creating the next revision of a product, who&#8217;s tending to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +70,44 @@ To add to the stress of the Big Bang comes another, mostly people-related issue.
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/04/who%27s-tending-the-store/">Who&#8217;s Tending the Store?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-04T00:00:00+01:00" pubdate data-updated="true">2007.01.04</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">(This article is part of the <a href="http://chadfowler.com/blog/2006/12/27/the-big-rewrite">Big Rewrite</a> series.)
+<p>While we&#8217;re all in the back creating the next revision of a product, who&#8217;s tending to the day to day issues of the existing product?  Typically, it&#8217;s the domain experts and the original implementers of the product.</p>
+<p>Regardless of our intentions, day to day life and in-your-face time-sensitive issues can very easily steal all of the attention from a Big Rewrite.  Screaming customers need their problems solved.  Outages and serious bugs need to be fixed.  Enhancements have to keep rolling in if your project takes as long as projects tend to take.  Somebody has to do these things.  Training new people is hard and doesn&#8217;t seem to make sense.  If we&#8217;re getting rid of a system, why would we train someone how to maintain it?</p>
+<p>So, the experts keep the old system running while the new system is being built.  So, who builds the new system?  Not the experts, that&#8217;s who.  Usually, it&#8217;s people like me:  technology experts.  And while we&#8217;re banging away at the existing system&#8217;s UI, trying to figure out what needs to be coded, the domain experts are doing their jobs.  Unfortunately, this means the domain experts aren&#8217;t watching the Big Rewrite very closely.  Regardless of how good the team, if communication is impaired between the domain experts and the technology experts, things are going to move slowly, and wrong software is going to be created.</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -462,90 +500,6 @@ accordingly.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2006/12/28/software-as-spec/">Software as Spec</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2006-12-28T00:00:00+01:00" pubdate data-updated="true">2006.12.28</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>(This article is part of the <a
-href="http://chadfowler.com/index.cgi/Computing/Programming/TheBigRewrite/TheBigRewrite.rdoc,v">Big<br />
-Rewrite</a> series.)</p>
-<p>
-<p>&quot;Make it do what it already does.&quot; That&#8217;s a tempting and<br />
-simple way to view software requirements on a rewrite project. After all,<br />
-the system already exists. The question of &quot;what should it do<br />
-when&#8230;&quot; can presumably always be answered with: &quot;what it<br />
-already does&quot;.</p>
-</p>
-<p>
-<p>There are two major problems with this assumption. The first, and most<br />
-disruptive, is that the programmers don&#8217;t know what questions to ask.<br />
-This is especially true if the programmers weren&#8217;t the original<br />
-developers of the system (most often the case on a major technology shift),<br />
-but even a programmer who did the original implementation of a product<br />
-won&#8217;t remember every nook, cranny, and edge case. What&#8217;s worse,<br />
-with the fragile safety net of an existing implementation, programmers can<br />
-easily oversimplify the interface, and <em>assume</em> they know the<br />
-capabilities of the system. If a combination of drop-down selections<br />
-results in a whole new corner of the system, how are they to know without<br />
-stumbling onto it (or performing an exhaustive and expensive test cycle)?</p>
-</p>
-<p>
-<p>If the software you&#8217;ve built is complex enough that it <em>needs</em><br />
-to be rewritten, it&#8217;s probably also so complex that it&#8217;s not<br />
-discoverable in this way. This means that domain experts are going to have<br />
-to be heavily involved. It means that requirements are going to need to be<br />
-communicated in much the same way they are on a green-field project. And it<br />
-means that, unless it&#8217;s only used as a supplement, the existing<br />
-system is more a liability to the rewrite than an asset.</p>
-</p>
-<p>
-<p>Optimistic programmers might think I&#8217;ve missed something important<br />
-here. If you&#8217;re rewriting a system, you&#8217;ve already got the<br />
-code. The <em>code</em> can serve as the spec, right? Probably not.</p>
-</p>
-<p>
-<p>Based on my own experiences and conversations with thousands of software<br />
-developers around the planet, I unscientifically conclude that almost all<br />
-production software is in such bad shape that it would be nearly useless as<br />
-a guide to re-implementing itself. Now take this already bad picture, and<br />
-extract only those products that are big, complex, and fragile enough to<br />
-need a major rewrite, and the odds of success with this approach are<br />
-significantly worse.</p>
-</p>
-<p>
-<p>Existing code is good for discovering algorithms&#8212;not complex,<br />
-multistep processes.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/16/">&larr; Older</a>
@@ -592,6 +546,10 @@ multistep processes.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/22/the-crunch-mode-antipattern/">War On Crunch Mode</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
       </li>
     
@@ -605,10 +563,6 @@ multistep processes.</p>
     
       <li class="post">
         <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
       </li>
     
   </ul>

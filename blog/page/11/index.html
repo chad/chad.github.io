@@ -9,7 +9,8 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Today I installed Apple&#8217;s latest OS release: Leopard. One of the most exciting features for me as a Rubyist is the inclusion of a well-designed &hellip;">
+  <meta name="description" content="The RailsConf 2008 Call for Presentations is now open. Proposals need to be in by December 13th.
+This year, we want to change the flavor a bit. In &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +70,45 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/11/02/railsconf-cfp/">RailsConf CFP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-02T00:00:00+01:00" pubdate data-updated="true">2007.11.02</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <a href="http://en.oreilly.com/rails2008/public/cfp/6">RailsConf 2008 Call for Presentations</a> is now open.  Proposals need to be in by December 13th.</p>
+<p>This year, we want to change the flavor a bit.  In the past two years, Rails was changing so rapidly that it was hard to keep up with what the state of the art from week to week.</p>
+We’re specifically looking for a large number of advanced-level proposals the 2008 event. With so many excellent books and online resources available, we think
+the RailsConf audience would benefit from a larger helping of hardcore technical topics, particularly around design or coding techniques, testing tools, and
+deployment techniques.</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -471,54 +511,6 @@ end
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2007/08/03/enumerable-injecting/">Enumerable#injecting</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-08-03T00:00:00+02:00" pubdate data-updated="true">2007.08.03</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I saw this while browsing the Merb source code, and despite the bad variable names thought it was pretty nice:</p>
-module Enumerable
-def injecting(s)
-inject(s) do |k, i|
-yield(k, i); k
-end
-end
-end
-<p>Use like:</p>
-<pre>[&#8216;o&#8217;, &#8216;hai&#8217;, &#8216;rly&#8217;, &#8216;srsly&#8217;].injecting({}) {|accumulator, value| accumulator[value] = value.size}
-<ol>
-	<li>=&gt; {&quot;srsly&quot;=&gt;5, &#8220;o&#8221;=&gt;1, &#8220;hai&#8221;=&gt;3, &#8220;rly&#8221;=&gt;3}</pre></li>
-</ol>
-<p>Simple pleasures.  I find it increasingly hard to live without things like this, Object#returning, and Symbol#to_proc as I start to use them.  <a href="http://www.paulgraham.com/power.html">After all&#8230;</a></p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/12/">&larr; Older</a>
@@ -565,6 +557,10 @@ end
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/22/the-crunch-mode-antipattern/">War On Crunch Mode</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
       </li>
     
@@ -578,10 +574,6 @@ end
     
       <li class="post">
         <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
       </li>
     
   </ul>

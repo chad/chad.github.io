@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-21T10:29:14+01:00</updated>
+  <updated>2014-01-23T06:48:47+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[War On Crunch Mode]]></title>
+    <link href="http://chadfowler.com/blog/2014/01/22/the-crunch-mode-antipattern/"/>
+    <updated>2014-01-22T09:42:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2014/01/22/the-crunch-mode-antipattern</id>
+    <content type="html"><![CDATA[<p>In the software industry, especially the startup world, Crunch Mode is a ubiquitous, unhealthy antipattern. Crunch Mode refers to periods of overtime work brought on by the need to meet a project deadline. Developers stereotypically glorify the ability and propensity to stay up all night grinding through a difficult problem. It&#8217;s part of our folklore. It&#8217;s part of how we&#8217;re measured. It&#8217;s something companies and leaders take advantage of in order to accomplish more with less.</p>
+
+<p>And it&#8217;s stupid.</p>
+
+<p>If you want a &#8220;knowledge worker&#8221; to be as ineffective and produce the lowest level of quality possible, deprive them of their sleep and hold them to an unrealistic deadline. In other words, activate Crunch Mode.</p>
+
+<h2>Why Not to Crunch?</h2>
+
+<ul>
+<li>It makes us stupid. The more I work, the less relevant my years of experience become. I constantly make rookie mistakes. I break things in production. I leave messes behind. I waste hours going down the wrong train of thought.</li>
+<li>It burns people out, sometimes permanently. They burn up their passion that takes down time to replenish. Unless the non-Crunch work is sufficiently energizing (and frequent), enough crunching can cause your best people to leave.</li>
+<li>It makes people lazy. This may seem ironic, but when someone puts in heroic levels of effort, they start to place less value on each minute. I know that if I work all night, then an hour brain-break mid-day sounds very reasonable. The problem is that these breaks become a habit that can persist between Crunch times.</li>
+<li>It&#8217;s a risky way to make your commitments. Crunch Mode means you are using your team beyond capacity. That&#8217;s like trying to drive 50km on 40km of gas. It <em>might</em> be OK, but if you do it all the time you&#8217;re going to end up broken down on the side of the road waiting for help at some point. Maybe more often than not.</li>
+<li>Accountability is lost. When someone is working all hours, they can&#8217;t be blamed for mistakes. They can&#8217;t be blamed for coming in late, forgetting an email, introducing bugs, not writing tests, cutting technical corners, and doing all sorts of things that <em>don&#8217;t</em> describe how you want people on your team behaving.</li>
+<li>It puts the credibility of management in question every time. Because, managers, believe it or not, every single time it happens, the entire team asks themselves, &#8220;But why?&#8221;</li>
+<li>It shows a team that the leader cares about meeting a business goal more than he or she cares about their health. This may sound harsh but it is literally true.</li>
+</ul>
+
+
+<p>The more you have to use your brain, the less effective and healthy Crunch Mode is. In fields that require less creativity and though, it might even really work as a (ruthless) management technique. In software development, it just doesn&#8217;t.</p>
+
+<h2>Why do we do it?</h2>
+
+<p>The number one reason teams go into Crunch Mode is that their leaders have failed to understand and/or set realistic expectations for the time it takes to complete a project. In worst cases, the deadlines are arbitrarily set by management and not tied to any specific business need. In other cases, the deadlines are inflexible, but the scope can and should be adjusted to a realistic level. Sure, it may be that the team committed to those incorrect deadlines, but it&#8217;s up to the ones <em>deciding</em> on the deadlines to verify that they&#8217;re realistic before making a commitment.</p>
+
+<p>Fear and the resulting breakdown of communication also drive us into Crunch Mode.  &#8220;Can you get this done by <insert very important date here>?&#8221;  &#8220;Uh&#8230;yes?&#8221;  Developers fear saying &#8220;no&#8221;.  Managers fear looking bad by committing to what seem like far off dates.  Managers fear setting far off deadlines, because developers miss dates more often than not. &#8220;If we pad the estimates are we going to miss <em>those</em> by 20% too?&#8221;</p>
+
+<p>Another reason we go into Crunch Mode is that we are perpetuating a culture of cowboy heroism which many of us unwittingly get caught up in. The feeling of finishing tons of work in a short period and depriving oneself of quality personal time can be addicting, especially when it results in &#8220;saving the day&#8221; for a project. Rolling up your sleeves and cranking to the end of a deadline makes you feel valuable in a very <strong>concrete</strong> way. Without your overtime, the project doesn&#8217;t get done on time. With it, the project is saved. It&#8217;s hard to find such black and white ways to add value in daily &#8220;normal&#8221; work.</p>
+
+<p>Maybe the most addictive feature of Crunch Mode is it&#8217;s the easiest way to see a team <em>really</em> click.  At the beginning of Crunch Mode, people get intensely focused. Communication is streamlined. The big important stuff gets tackled quickly and finished. A team can initially raise its skill level a notch with the focus alone. It feels great as both a manager and a team member to work that efficiently and effectively. Unfortunately it&#8217;s difficult (not impossible) to work this way all the time, so we&#8217;re tempted to activate Crunch Mode on occasion just to feel this way again.</p>
+
+<h2>Alternatives to Crunch-Mode</h2>
+
+<ul>
+<li>Miss the deadline. Ya, that&#8217;s right. Let your customers down this time. Make less money. Incur opportunity cost. Just fail. You already failed to manage your team and your time. Maybe you should let than have more visible consequences?</li>
+<li>Set smaller goals. When you set a massive goal, way off in the future, it&#8217;s impossible to estimate whether it&#8217;s actually realistic. However, if you set a goal for this afternoon, you&#8217;re probably going to be pretty accurate with your estimates.</li>
+<li>Measure progress concretely and in small steps. Never trust a status report, even from yourself. In software, the only deliverable that matters is one that you can execute.</li>
+<li>Set more realistic goals for the team and problems you face. If you&#8217;re continually having to slip into Crunch Mode, you clearly don&#8217;t understand your capabilities. Admit that you&#8217;re going to go slower than you expected and adjust for it.</li>
+</ul>
+
+
+<p>As unhealthy, counterproductive, and just plain stupid as Crunch Mode is, sometimes you just <em>have</em> to do it.  We all accept that.  Crunch Mode is the nuclear option. A leader <em>needs</em> to have it available as a tool, but each time he or she wields this tool, he or she pays in long term credibility and trust.</p>
+
+<h2>Can we stop it?</h2>
+
+<p>It&#8217;s time to <em>finally</em> stop this insanity. Think of the time, money, energy, and potential happiness wasted on poor planning, communication, and leadership.</p>
+
+<p><strong>Managers</strong>, hold yourself accountable for Crunch Mode when it happens. See it as a personal failure.</p>
+
+<p><strong>Everyone else</strong>, hold yourself accountable for every non-crunch minute you work. Make them count. Overcommunicate. Focus.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[On Having Something to Say]]></title>
@@ -525,31 +583,6 @@ lovingly completed.</p>
 <p>My colleagues are clearly thinking along the same lines. I&#8217;ve seen speakers such as <a href="http://rubyhoedown.com/">Joe O&#8217;Brien</a> talking about it this year.  And we see programs popping up all over.  Software Craftsman Ken Auer is launching the <a href="http://craftsmanshipacademy.com/">Craftsmanship Academy</a> to teach apprentices the art and craft of software development in an intense hands-on residency-oriented program.  <a href="http://codeacademy.org/">Code Academy</a> is a part-time 12 week course to accelerate the path to web development or design.</p>
 <p>Today we&#8217;re launching a new program at <a href="http://livingsocial.com">LivingSocial</a> called <a href="http://hungryacademy.com">Hungry Academy</a>.  Hungry Academy is a five month intense entrepreneurial immersion that will take raw, hungry talented programmers (and aspiring programmers!) and develop them into ultra-productive software engineers. Those that make it through to the end will be offered a position on our development team and paired with a mentor from LivingSocial&#8217;s growing list of some of the <a href="http://twitter.com/#!/merbist/livingsocial">industry&#8217;s most talented software engineers</a>.  Best of all, we will <em>pay</em> you to attend.  Your <em>job</em> for five months is to take your craft and career to the next level.</p>
 <p>This isn&#8217;t going to be easy. Some people will get in but won&#8217;t make it to the end. Those that do will spend five months gaining the best 4 years of experience of their careers.</p>]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Leaving a Legacy...System]]></title>
-    <link href="http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system/"/>
-    <updated>2011-03-17T00:00:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system</id>
-    <content type="html"><![CDATA[<p>Ever since reading David Heinemeir Hansson&#8217;s post <a href="http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php">Enterprise Is the New Legacy</a> over five years ago, I&#8217;ve been chewing on something. The gist of the post was that &#8220;enterprise&#8221; is and should be a bad word, just like &#8220;legacy&#8221;.</p>
-<p>But why is &#8220;legacy&#8221; a bad word to begin with?  The word makes most software developers and IT people ill.</p>
-<p>In other fields and in life in general, the word &#8220;legacy&#8221; isn&#8217;t thusly encumbered.  It refers to an inheritance left to those behind you. Your life&#8217;s work. Your essential story.</p>
-<p>In software, that story is assumed to be a tragedy.</p>
-<p>But even in the case of software, &#8220;legacy&#8221; is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as &#8220;legacy&#8221; indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we&#8217;re &#8220;left with&#8221; and that we must either maintain or replace.</p>
-<p>That isn&#8217;t so bad, is it?  In an industry where <a href="http://www.projectsmart.co.uk/docs/chaos-report.pdf">more software projects fail or are &#8216;challenged&#8217; than succeed</a>, getting to legacy status is cause for celebration!</p>
-<p>Here&#8217;s a sad idea:  as developers, even when we <em>do</em> succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated <a href="http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf">within 10 years of its birth</a>.</p>
-<p>So, what do we developers leave as a legacy? In most cases, we don&#8217;t leave much of anything.</p>
-<p>At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom <span class="caps">TCP</span>/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.</p>
-<p>That was ten years ago. I&#8217;d be willing to bet it&#8217;s still running. If not the whole system, at least a subset.</p>
-<p>That would make it 35.</p>
-<p>Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.</p>
-<p>How <em>would</em> I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?</p>
-<p>It&#8217;s daunting, isn&#8217;t it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn&#8217;t. Even predicting next year is hard.</p>
-<p>So maybe I&#8217;d need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.</p>
-<p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
-<p>I don&#8217;t <em>know</em> how to design a system that could live a long and healthy life. I don&#8217;t <em>know</em> because I haven&#8217;t done it yet. Have you?</p>
-<p><i>Note: This wasn&#8217;t a rhetorical question.</i></p>]]></content>
   </entry>
   
 </feed>

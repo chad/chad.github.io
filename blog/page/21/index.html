@@ -9,8 +9,9 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="You can try to hide it or dress it up as something more palatable, but
-they&#8217;ll sniff it out and they&#8217;ll condemn it for what it is: &hellip;">
+  <meta name="description" content="As Jim <a
+href="http://onestepback.org/index.cgi/Tech/Ruby/OneMillionServed.red">put
+so eloquently, $ lynx -dump http://gems.rubyforge.org/stats.html &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +71,61 @@ they&#8217;ll sniff it out and they&#8217;ll condemn it for what it is: &hellip;
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/09/18/one-million-gems-served/">One Million Gems Served</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2005-09-18T00:00:00+02:00" pubdate data-updated="true">2005.09.18</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As Jim <a
+href="http://onestepback.org/index.cgi/Tech/Ruby/OneMillionServed.red">put<br />
+so eloquently</a>,</p>
+<pre>
+        $ lynx -dump http://gems.rubyforge.org/stats.html \
+         | ruby -e 'p ARGF.inject(0) { |s,t| t.split[1].to_i + s }'
+        $ 1007130
+</pre>
+<p>
+<p>Also note that there are now 396 unique libraries and applications to<br />
+choose from in the repository. 100 new gems in only <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/Ruby/RyanWinsThePrize.rdoc,v">3<br />
+months</a>! Got a new library that you&#8217;ve been planning to polish off<br />
+and release? Go ahead and spend your Sunday on it and you might be lucky<br />
+number 400.</p>
+</p>
+<p>
+<p>Perhaps it&#8217;s not too late to see RubyGems make an appearance in <a
+href="http://redhanded.hobix.com/inspect/ruby183PreviewTwo.html">Ruby<br />
+1.8.3</a>?</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -716,55 +772,6 @@ has already helped <tt>me</tt>. More on that later&#8230;</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/06/13/ryan-davis-wins-the-prize/">Ryan Davis Wins the Prize</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2005-06-13T00:00:00+02:00" pubdate data-updated="true">2005.06.13</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The 300th Gem: <a
-href="http://rubyforge.org/projects/zenhacks/">ZenHacks</a></p>
-<p>
-<p>We&#8217;re actually now at 302 gems, and we&#8217;ve already <a
-href="http://gems.rubyforge.org/stats.html">crossed the half million<br />
-mark</a> in gems served.</p>
-</p>
-<p>
-<p>Go check out ZenHacks. In fact, all that &quot;Zen&quot; <a
-href="http://rubyforge.org/projects/parsetree/">stuff</a> <a
-href="http://rubyforge.org/projects/rubyinline/">is</a> <a
-href="http://rubyforge.org/projects/ruby2c/">worth</a> <a
-href="http://rubyforge.org/projects/zenweb/">checking</a> <a
-href="http://rubyforge.org/projects/zentest/">out</a>.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/22/">&larr; Older</a>
@@ -811,6 +818,10 @@ href="http://rubyforge.org/projects/zentest/">out</a>.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/22/the-crunch-mode-antipattern/">War On Crunch Mode</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
       </li>
     
@@ -824,10 +835,6 @@ href="http://rubyforge.org/projects/zentest/">out</a>.</p>
     
       <li class="post">
         <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
       </li>
     
   </ul>

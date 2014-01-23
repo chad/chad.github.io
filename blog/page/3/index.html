@@ -9,7 +9,7 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="A few years ago, sitting in the July heat on a wall in the Harajuku district of Tokyo, I came to a conclusion: I had let myself be a loser. At least &hellip;">
+  <meta name="description" content="Ever since reading David Heinemeir Hansson&#8217;s post Enterprise Is the New Legacy over five years ago, I&#8217;ve been chewing on something. The &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +69,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy&#8230;System</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-17T00:00:00+01:00" pubdate data-updated="true">2011.03.17</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ever since reading David Heinemeir Hansson&#8217;s post <a href="http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php">Enterprise Is the New Legacy</a> over five years ago, I&#8217;ve been chewing on something. The gist of the post was that &#8220;enterprise&#8221; is and should be a bad word, just like &#8220;legacy&#8221;.</p>
+<p>But why is &#8220;legacy&#8221; a bad word to begin with?  The word makes most software developers and IT people ill.</p>
+<p>In other fields and in life in general, the word &#8220;legacy&#8221; isn&#8217;t thusly encumbered.  It refers to an inheritance left to those behind you. Your life&#8217;s work. Your essential story.</p>
+<p>In software, that story is assumed to be a tragedy.</p>
+<p>But even in the case of software, &#8220;legacy&#8221; is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as &#8220;legacy&#8221; indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we&#8217;re &#8220;left with&#8221; and that we must either maintain or replace.</p>
+<p>That isn&#8217;t so bad, is it?  In an industry where <a href="http://www.projectsmart.co.uk/docs/chaos-report.pdf">more software projects fail or are &#8216;challenged&#8217; than succeed</a>, getting to legacy status is cause for celebration!</p>
+<p>Here&#8217;s a sad idea:  as developers, even when we <em>do</em> succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated <a href="http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf">within 10 years of its birth</a>.</p>
+<p>So, what do we developers leave as a legacy? In most cases, we don&#8217;t leave much of anything.</p>
+<p>At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom <span class="caps">TCP</span>/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.</p>
+<p>That was ten years ago. I&#8217;d be willing to bet it&#8217;s still running. If not the whole system, at least a subset.</p>
+<p>That would make it 35.</p>
+<p>Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.</p>
+<p>How <em>would</em> I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?</p>
+<p>It&#8217;s daunting, isn&#8217;t it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn&#8217;t. Even predicting next year is hard.</p>
+<p>So maybe I&#8217;d need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.</p>
+<p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
+<p>I don&#8217;t <em>know</em> how to design a system that could live a long and healthy life. I don&#8217;t <em>know</em> because I haven&#8217;t done it yet. Have you?</p>
+<p><i>Note: This wasn&#8217;t a rhetorical question.</i></p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -588,65 +640,6 @@ http://www.flickr.com/photos/dancoulter/21042744/</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/12/30/dead-end-jobs-are-you-suffering-from-stockholm-syndrome/">Dead-End Jobs: Are You Suffering From Stockholm Syndrome?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-30T00:00:00+01:00" pubdate data-updated="true">2010.12.30</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Have you heard of Stockholm Syndrome? It&#8217;s a name given to the condition wherein hostages develop positive feelings toward their captors despite being held in negative, unfavorable and even life-threatening conditions.  Victims of Stockholm Syndrome will even inexplicably stay with their captors even when given the chance at freedom.</p>
-<p>Hopefully nobody reading this is literally being held hostage right now. If you are, good luck!</p>
-<p>For the rest of you, why might I suggest that you are suffering from Stockholm Syndrome? Because employment relationships can manifest themselves in this very way.</p>
-<p>In the article, <a href="http://drjoecarver.makeswebsites.com/clients/49355/File/love_and_stockholm_syndrome.html">Love and Stockholm Syndrome: The Mystery of Loving an Abuser</a>, Dr. Joseph Carver says that the following four situations serve as a foundation for the development of Stockholm Syndrome:</p>
-<p>&lt;quote&gt;</p>
-<ul>
-	<li>The presence of a perceived threat to oneâ€™s physical or psychological survival and the belief that the abuser would carry out the threat.</li>
-	<li>The presence of a perceived small kindness from the abuser to the victim</li>
-	<li>Isolation from perspectives other than those of the abuser</li>
-	<li>The perceived inability to escape the situation</li>
-</ul>
-<p>&lt;/quote&gt;</p>
-<p>Looking back at my own career (specifically some of the extremely intelligent people I&#8217;ve met who are stagnating in oppressive companies or positions) I have recognized that many of these people (and sometimes myself) have felt &#8220;stuck&#8221; for no obvious reason. Some people seem just plain crazy when you look at their skill sets, ability, and the low quality of work or environment they&#8217;re willing to put up with.</p>
-<p>So I contacted Joseph Carver to ask his opinion. Could this be Stockholm Syndrome?  He agreed. In email, he said &#8220;SS is most likely to develop when the employee feels trapped, perhaps by a high salary, fear of losing a career, or fear of humiliation.&#8221;  So let&#8217;s look at his four conditions:</p>
-<h2>Perceived threat:</h2>
-<p>Getting fired, being humiliated, not being a &#8220;top 20%&#8221; employee, not getting a raise. Employers wield a lot of perceived power over employees, especially for those in very traditional corporate jobs.  The employer <em>must</em> be willing to carry out the threat. Every business is under the right conditions. It&#8217;s how businesses work.</p>
-<h2>Small kindness</h2>
-<p>Got a Christmas bonus once when you really needed it? Make a competitive salary? Great benefits? Get to work on a technology you don&#8217;t think you&#8217;d be able to work on elsewhere?  There ya go.</p>
-<h2>Isolation from other perspectives</h2>
-<p>Again, a big corporate environment is <em>ripe</em> for this kind of isolation.  If you work for BigCo, you learn to do things The BigCo way.  The company&#8217;s organizational structure becomes a blueprint for your career progression.  You start to lose sight of what industry pay and incentives look like since you have a homogeneous population to compare with. Unfortunately, from what I&#8217;ve seen even the <em>best</em> run companies create this kind of isolation of perspective and group-think. Charismatic leaders are particularly capable of creating a culture vacuum around a cult of personality.</p>
-<h2>Perceived inability to escape</h2>
-<p>According to the Bureau of Labor statistics, American adults <a href="http://www.bls.gov/news.release/atus.htm">spend by far more time working than any other activity.</a>  That&#8217;s a <em>lot</em> of your waking time being trapped in a routine. In a Stockholm Syndrome situation, the captor chips away at the self-esteem of the captive. So for most of our waking hours, those of us trapped in dead end jobs like these are exposed to environments which systematically destroy our self-confidence.  Not only that, a persistent fear and feeling of failure makes it harder to actually explore the options for leaving the bad situation. The instinctive self-preservation reaction in this kind of situation is to work <em>harder</em> to try to avoid the perceived threat coming to fruition.</p>
-<hr />
-<p>So, what if this describes your job?  You owe it to yourself to find a way out. Hopefully recognizing the signs will show you that the <em>real</em> situation is far less grim than you might believe and that you have control over how you choose to spend the <em>majority</em> of your adult life.</p>
-<p>I&#8217;m writing this for the many people I&#8217;ve met (and the countless I haven&#8217;t) that are senselessly stuck in bad job situations. Please stop wasting your precious time.</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -693,6 +686,10 @@ http://www.flickr.com/photos/dancoulter/21042744/</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/22/the-crunch-mode-antipattern/">War On Crunch Mode</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
       </li>
     
@@ -706,10 +703,6 @@ http://www.flickr.com/photos/dancoulter/21042744/</p>
     
       <li class="post">
         <a href="/blog/2013/08/13/about-eggs/">About Eggs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/23/how-not-to-panic-passionate-programmer-excerpt/">How Not to Panic - Passionate Programmer Excerpt</a>
       </li>
     
   </ul>
