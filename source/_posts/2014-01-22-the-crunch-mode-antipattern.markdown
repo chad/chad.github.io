@@ -10,13 +10,13 @@ In the software industry, especially the startup world, Crunch Mode is a ubiquit
 
 And it's stupid.
 
-If you want a "knowledge worker" to be as ineffective and produce the lowest level of quality possible, deprive them of their sleep and hold them to an unrealistic deadline. In other words, activate Crunch Mode.
+If you want a ["knowledge worker"](http://www.slideshare.net/leadandtransform/knowledge-worker-productivity) to be as ineffective and produce the lowest level of quality possible, [deprive them of their sleep](http://www.ncbi.nlm.nih.gov/books/NBK19958/) and hold them to an unrealistic deadline. In other words, activate Crunch Mode.
 
 ## Why Not to Crunch?
 
-* It makes us stupid. The more I work, the less relevant my years of experience become. I constantly make rookie mistakes. I break things in production. I leave messes behind. I waste hours going down the wrong train of thought.
+* [It makes us stupid](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2656292/). The more I work, the less relevant my years of experience become. I constantly make rookie mistakes. I break things in production. I leave messes behind. I waste hours going down the wrong train of thought.
 * It burns people out, sometimes permanently. They burn up their passion that takes down time to replenish. Unless the non-Crunch work is sufficiently energizing (and frequent), enough crunching can cause your best people to leave.
-* It makes people lazy. This may seem ironic, but when someone puts in heroic levels of effort, they start to place less value on each minute. I know that if I work all night, then an hour brain-break mid-day sounds very reasonable. The problem is that these breaks become a habit that can persist between Crunch times.
+* [It makes people lazy and less productive](http://legacy.igda.org/why-crunch-modes-doesnt-work-six-lessons). This may seem ironic, but when someone puts in heroic levels of effort, they start to place less value on each minute. I know that if I work all night, then an hour brain-break mid-day sounds very reasonable. The problem is that these breaks become a habit that can persist between Crunch times.
 * It's a risky way to make your commitments. Crunch Mode means you are using your team beyond capacity. That's like trying to drive 50km on 40km of gas. It _might_ be OK, but if you do it all the time you're going to end up broken down on the side of the road waiting for help at some point. Maybe more often than not.
 * Accountability is lost. When someone is working all hours, they can't be blamed for mistakes. They can't be blamed for coming in late, forgetting an email, introducing bugs, not writing tests, cutting technical corners, and doing all sorts of things that _don't_ describe how you want people on your team behaving.
 * It puts the credibility of management in question every time. Because, managers, believe it or not, every single time it happens, the entire team asks themselves, "But why?"
