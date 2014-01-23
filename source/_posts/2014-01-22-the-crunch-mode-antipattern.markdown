@@ -36,7 +36,7 @@ Maybe the most addictive feature of Crunch Mode is it's the easiest way to see a
 
 ## Alternatives to Crunch-Mode
 
-* Miss the deadline. Ya, that's right. Let your customers down this time. Make less money. Incur opportunity cost. Just fail. You already failed to manage your team and your time. Maybe you should let than have more visible consequences?
+* Miss the deadline. Ya, that's right. Let your customers down this time. Make less money. Incur opportunity cost. Just fail. You already failed to manage your team and your time. Maybe you should let that have more visible consequences?
 * Set smaller goals. When you set a massive goal, way off in the future, it's impossible to estimate whether it's actually realistic. However, if you set a goal for this afternoon, you're probably going to be pretty accurate with your estimates.
 * Measure progress concretely and in small steps. Never trust a status report, even from yourself. In software, the only deliverable that matters is one that you can execute.
 * Set more realistic goals for the team and problems you face. If you're continually having to slip into Crunch Mode, you clearly don't understand your capabilities. Admit that you're going to go slower than you expected and adjust for it.
