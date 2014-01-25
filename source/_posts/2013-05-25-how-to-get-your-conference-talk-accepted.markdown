@@ -9,7 +9,7 @@ I am one of the original organizers of both <a href="http://rubyconf.org">RubyCo
 
 Occasionally, a proposal or a talk stands out. Here's one that I still think of when new would-be speakers ask how to get their first talk accepted. When preparing for RailsConf 2010 in Baltimore, we received this email from <a href="https://twitter.com/r00k">Ben Orenstein</a>:
 
-<img src="https://www.evernote.com/shard/s10/sh/f55ad33d-1d6b-4b65-a99f-101cbbb0102f/e65102090bed40292d838dbea4519ed4/deep/0/Screenshot%205/25/13%204:37%20PM.png">
+<img src="http://chadfowler.com/images/talk/1.png">
 
 Ben had never spoken at a conference before, and he knew we had a lot of proposals to consider.  Here's what I like about his email (and <a href="http://www.youtube.com/watch?v=pg33EQCdMxw">video</a>):
 <ul>
@@ -22,11 +22,11 @@ I immediately looked up his proposal, and as you might guess it was as thoughtfu
 
 I then sent my <a href="http://benscofield.com/">conference co-chair, Ben Scofield</a>, the following email:
 
-<img src="https://www.evernote.com/shard/s10/sh/c94adab6-544d-42a0-8dc8-8a0204a2f7c4/adf24b4fa91301619dbdd76a0c0bd6d2/deep/0/Screenshot%205/25/13%204:55%20PM.png">
+<img src="http://chadfowler.com/images/talk/2.png">
 
 And his response:
 
-<img src="https://www.evernote.com/shard/s10/sh/c5578176-2ce1-4df1-ba3d-9bd381702981/3b61f42fb63bbeda938dbb35d8cd0dec/deep/0/Screenshot%205/25/13%205:00%20PM.png">
+<img src="http://chadfowler.com/images/talk/3.png">
 
 This is surely only one way to get a talk accepted, but as a new presenter, it's a good example to consider.
 
