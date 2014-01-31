@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Where have I been lately? Good question. When asked over these past months, I jokingly say something like, &#8220;These last 8 months at LivingSocial &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/page/3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/12/21/re-thinking-software-development-education/">Re-thinking Software Development Education</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-21T00:00:00+01:00" pubdate data-updated="true">2011.12.21</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Where have I been lately?  Good question. When asked over these past months, I jokingly say something like, &#8220;These last 8 months at LivingSocial have been the best 4 years of my career.&#8221;</p>
+<p>But I don&#8217;t just mean I&#8217;ve been busy. I&#8217;ve been focused on building the best software development team I can to do what I think is some important and industry-changing work in the world of local commerce.</p>
+<p>And when I joke about these 8 months being the best 4 years of my career, what I really mean is that I feel like I&#8217;ve learned 4 years worth of lessons and gained 4 years worth of experience. What we&#8217;re doing isn&#8217;t easy. It&#8217;s the kind of work I&#8217;ve always sought out.</p>
+<p>I am a self-taught software developer. To date, my formal education consists of two 3-day training classes on specific programming languages (Java many years ago and Erlang in 2008). During my first work experiences in IT, I remember the shock of discovering that a Masters degree in software development doesn&#8217;t necessarily translate to knowing how to effectively use a computer. I was a saxophonist and system administrator and would regularly <em>teach</em> the computer scientists I worked with about things I would have assumed they learned in college.</p>
+<p>As I headed further into the workforce I noticed another odd thing: people with tens of years of experience as software developers weren&#8217;t necessarily very good at it. My assumptions were based on what I had previously learned as a jazz musician.  Jazz musicians polish and hone their skills throughout their careers. The longer a jazz musician has been playing, the more likely he or she is to be an excellent jazz musician.</p>
+<p>Programmers, though. As far as I could tell the average programmer spent his day complaining about his co-workers and waiting for 5pm.</p>
+<p>So what&#8217;s the disconnect? Some of it, of course, is just the people. Some <a href="http://pragprog.com/book/cfcar2/the-passionate-programmer">programmers are passionate</a> and some aren&#8217;t. Those that aren&#8217;t, aren&#8217;t going to be radically successful. Assuming this is the case in all fields, what&#8217;s really frustrating to me is that I continue to run into passionate developers who just don&#8217;t know the right stuff.</p>
+<p>When I started out in this field, I was lucky enough to stumble onto a mentor. That too was probably informed by my experience as an aspiring jazz musician. Jazz musicians take the idea of musical lineage seriously and look for someone from whom to receive direction on how to parse the potentially overwhelming task of going from novice to master jazz improviser. My mentor in the software field did the same. He told me: first learn these three things. He picked topics that were diverse but complementary. He picked skills that set a foundation on which it was easy to build the next set. Most new developers don&#8217;t get so lucky.</p>
+<p>And It&#8217;s not just technology skills. The developers I work with are entrepreneurs at heart.  We aren&#8217;t sitting around polishing our tools and conducting thought experiments.  We&#8217;re delivering stuff that matters and we hate working on projects that drag on or don&#8217;t deliver value.  Becoming a great developer involves not just learning the ins and outs of software development but understanding how businesses work and exactly how software systems fit into that picture. It&#8217;s about delivering value quickly and iteratively. Great developers understand what Kent Beck and the rest of the authors of the <a href="http://agilemanifesto.org/">agile manifesto</a>  were getting at a decade ago. And what people like <a href="http://www.startuplessonslearned.com/">Eric Ries</a> are teaching today.</p>
+<p>I&#8217;ve often thought &#8220;just give me 3 months with a smart person and I can have them running circles around the average developer.&#8221; Have you thought that too? I know a lot of my colleagues have.</p>
+<p>It&#8217;s time to rethink how we educate software developers. Computers used to be huge scary machines in big white rooms that very few people touched. Today you probably have at least one computer ON <span class="caps">YOUR</span> <span class="caps">BODY</span> most of the time. They&#8217;re ubiquitous and friendly and just <span class="caps">NOT</span> that hard to work with. The technology landscape has changed. The system of educating developers should change along with it.</p>
+<p>My colleagues are clearly thinking along the same lines. I&#8217;ve seen speakers such as <a href="http://rubyhoedown.com/">Joe O&#8217;Brien</a> talking about it this year.  And we see programs popping up all over.  Software Craftsman Ken Auer is launching the <a href="http://craftsmanshipacademy.com/">Craftsmanship Academy</a> to teach apprentices the art and craft of software development in an intense hands-on residency-oriented program.  <a href="http://codeacademy.org/">Code Academy</a> is a part-time 12 week course to accelerate the path to web development or design.</p>
+<p>Today we&#8217;re launching a new program at <a href="http://livingsocial.com">LivingSocial</a> called <a href="http://hungryacademy.com">Hungry Academy</a>.  Hungry Academy is a five month intense entrepreneurial immersion that will take raw, hungry talented programmers (and aspiring programmers!) and develop them into ultra-productive software engineers. Those that make it through to the end will be offered a position on our development team and paired with a mentor from LivingSocial&#8217;s growing list of some of the <a href="http://twitter.com/#!/merbist/livingsocial">industry&#8217;s most talented software engineers</a>.  Best of all, we will <em>pay</em> you to attend.  Your <em>job</em> for five months is to take your craft and career to the next level.</p>
+<p>This isn&#8217;t going to be easy. Some people will get in but won&#8217;t make it to the end. Those that do will spend five months gaining the best 4 years of experience of their careers.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/17/leaving-a-legacy-system/">Leaving a Legacy&#8230;System</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-17T00:00:00+01:00" pubdate data-updated="true">2011.03.17</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ever since reading David Heinemeir Hansson&#8217;s post <a href="http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php">Enterprise Is the New Legacy</a> over five years ago, I&#8217;ve been chewing on something. The gist of the post was that &#8220;enterprise&#8221; is and should be a bad word, just like &#8220;legacy&#8221;.</p>
+<p>But why is &#8220;legacy&#8221; a bad word to begin with?  The word makes most software developers and IT people ill.</p>
+<p>In other fields and in life in general, the word &#8220;legacy&#8221; isn&#8217;t thusly encumbered.  It refers to an inheritance left to those behind you. Your life&#8217;s work. Your essential story.</p>
+<p>In software, that story is assumed to be a tragedy.</p>
+<p>But even in the case of software, &#8220;legacy&#8221; is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as &#8220;legacy&#8221; indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we&#8217;re &#8220;left with&#8221; and that we must either maintain or replace.</p>
+<p>That isn&#8217;t so bad, is it?  In an industry where <a href="http://www.projectsmart.co.uk/docs/chaos-report.pdf">more software projects fail or are &#8216;challenged&#8217; than succeed</a>, getting to legacy status is cause for celebration!</p>
+<p>Here&#8217;s a sad idea:  as developers, even when we <em>do</em> succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated <a href="http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf">within 10 years of its birth</a>.</p>
+<p>So, what do we developers leave as a legacy? In most cases, we don&#8217;t leave much of anything.</p>
+<p>At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom <span class="caps">TCP</span>/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.</p>
+<p>That was ten years ago. I&#8217;d be willing to bet it&#8217;s still running. If not the whole system, at least a subset.</p>
+<p>That would make it 35.</p>
+<p>Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.</p>
+<p>How <em>would</em> I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?</p>
+<p>It&#8217;s daunting, isn&#8217;t it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn&#8217;t. Even predicting next year is hard.</p>
+<p>So maybe I&#8217;d need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.</p>
+<p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
+<p>I don&#8217;t <em>know</em> how to design a system that could live a long and healthy life. I don&#8217;t <em>know</em> because I haven&#8217;t done it yet. Have you?</p>
+<p><i>Note: This wasn&#8217;t a rhetorical question.</i></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/15/the-harajuku-moment/">The Harajuku Moment</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-15T00:00:00+01:00" pubdate data-updated="true">2011.03.15</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A few years ago, sitting in the July heat on a wall in the Harajuku district of Tokyo, I came to a conclusion: I had let myself be a loser. At least, I had let myself become a partial loser. I was fat and unhappy. My skin looked grey. I was slowly killing myself. I was obese. I made excuses to myself and others. I used my success in other areas as a justification: I just wasn&#8217;t a fitness guy.</p>
+<p><strong>It was bullshit.</strong></p>
+<p>
+<p><img src="http://www.voidspace.org.uk/python/weblog/images/chad_fowler.jpg" alt="" /><br />
+Me (on the right) and Michael Foord</p>
+</p>
+<p>These days I&#8217;m still not an elite athlete, but I&#8217;ve turned things around. I&#8217;ve lost nearly 100 pounds, gone from a max ability to run 45 seconds at a time to running a half marathon, and lost 10 inches around my waist.</p>
+<p>
+<p><img src="http://c.photoshelter.com/img-get/I0000ZHyRDf0HBX4/s" alt="" /><br />
+Me after losing 70 pounds (photo by Duncan Davidson)</p>
+</p>
+<p>Before, I was incomplete. I allowed myself to believe in a partial picture of myself.  Now, I&#8217;m closer to the real me. I&#8217;m still a smart, creative guy. But I can also do more pushups in a row than the average American male, and can run longer and faster than most guys my age. And I feel great. I feel noticeably better almost all the time.</p>
+<p>I&#8217;m often asked by other obese and overweight people how I did it. People see me at conferences and other venues and literally don&#8217;t recognize me. How did I make such an incredible transformation?</p>
+<p>If you&#8217;ve asked me this question, this post is for you.</p>
+<p>It&#8217;s a long story. But I&#8217;m going to give you the very very short version:  it was easy.</p>
+<p>I could tell you exactly which system I devised and exactly what worked for me. But that would be missing the major point. The most important element of making a change like this is that it is <em>easy</em>.</p>
+<p><strong>If you could trade your body for one that is 50-100% better in a year, what would you give? </strong> If you had asked me in early 2008, I wouldn&#8217;t have even believed it possible. I would have given a lot. What about 6 months? Obese or overweight people, what if I told you that in 6 months you could be in almost unrecognizably better shape? Would you jump on whatever I was selling?</p>
+<p>The secret? I&#8217;m not selling anything. It&#8217;s just true. Choose <em>any</em> non-bullshit system and actually stick with it for 6 months and you can and will experience life-changing results. You can extend your life span significantly.</p>
+<h2>If you&#8217;re reading this and you want to change, here&#8217;s what I want you to do:</h2>
+<p>1. Recognize how deep in denial you&#8217;ve been<br />
+2. Measure yourself now. If it&#8217;s weight that&#8217;s your issue, get on the scale immediately. Stand on it and cry. You probably haven&#8217;t been measuring it, and it&#8217;s probably worse than you think. Embrace how far you&#8217;ve gone in the wrong direction.  This is the end of that long, drawn out series of lies you&#8217;ve been telling yourself.<br />
+3. Find any program that doesn&#8217;t look like snake oil and try it for 20 days. Measure your progress. If you don&#8217;t know what to try, start with 45 minute light cardiovascular exercise sessions 4 times per week (find a TV series to watch on a treadmill&#8230;a one hour show without commercials is about 42 minutes), forcing yourself to eat a protein-heavy breakfast within 30 minutes of waking, cutting out empty calories and sugars (coke, sugar-heavy &#8220;coffee&#8221; drinks, beer, etc.), and eating 5 small meals per day.<br />
+4. After 20 days, you&#8217;re almost 1/6 of the way through a major transformation.  You have probably gone down one clothing size or are close to it. How far do you want to go? Pick something you didn&#8217;t previously think you were capable of and commit to it. Maybe it&#8217;s a bike race or a triathlon or doing Cross Fit.</p>
+<p>The funny thing about huge change is that making it happen isn&#8217;t usually as huge an effort as we think. We just get stuck. All you have to do to go <span class="caps">ALL</span> of the way is to go <span class="caps">SOME</span> of the way.</p>
+<p><i><br />
+Note: I wrote a more detailed account of my weight loss story in <a href="http://fourhourworkweek.com">Tim Ferriss&#8217;s</a> best selling book, <a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X">The Four Hour Body</a>. I have no financial interest in the book, but having re-read my own chapter when Tim sent me a copy of the book last December, I was inspired enough to double down on my efforts to go from OK to awesome. I&#8217;ve lost 20 more pounds since January 1.  Tim&#8217;s advice for weight loss is solid, and (if I do say so myself) my chapter alone is worth the cost of the book.</p>
+<p><a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X"><img src="http://thefourhourbody.org/wp-content/uploads/2010/12/thefourhourbody.jpg" alt="" /></a><br />
+</i></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/13/caring-like-crazy/">Caring Like Crazy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-13T00:00:00+01:00" pubdate data-updated="true">2011.03.13</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve just finished reading Gary Vaynerchuk&#8217;s <a href="http://www.amazon.com/Thank-You-Economy-Gary-Vaynerchuk/dp/0061914185">The Thank You Economy</a>.  From the outside it looks like a book about marketing. It looks like a book for companies who need a &#8220;social media strategy&#8221;.  On the inside, it&#8217;s much more.</p>
+<p>Everyone doing business of any sort has an important lesson to learn from The Thank You Economy.  Here&#8217;s that lesson in Gary&#8217;s own words (from last year&#8217;s <a href="http://railsconf.org">RailsConf</a> keynote):</p>
+<pre>
+  "Giving a Fuck is comin' on strong!"
+</pre>
+<p>
+<div class="video_embed"><object width="500" height="411"><param name="movie" value="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="500" height="411" allowFullScreen="true" wmode="transparent"></embed></object></div>
+</p>
+<p>Gary uses this phrase over and over in the book: &#8220;caring like crazy&#8221;.  What does that mean?</p>
+<p>Joel Spolsky wrote <a href="http://www.joelonsoftware.com/items/2007/06/05.html">a whole book</a> about how what you need out of people you work with is for them to be smart and to get things done. Having hired a ton of people myself (hundreds) and worked with a fair number of others, I have to disagree. Smart and gets things done are both excellent, important qualities.  But ultimately I don&#8217;t care if you&#8217;re smart. I&#8217;ve worked with my share of brilliant people who just don&#8217;t care.</p>
+<p>Look at this exchange between <a href="http://twitter.com/coreyhaines">Corey Haines</a> and <a href="http://twitter.com/jgehtland">Justin Gehtland</a> from a few days ago:</p>
+<p><img src="http://chadfowler.com/giving_a_shit.png" alt="" /></p>
+<p>I worked with a <span class="caps">CEO</span> in India who embodied this idea I remember the first time I noticed it.  We walked in the front of the building and he noticed some trash on the lawn next to the security guard who was stoicly standing there staring at nothing.  Trash in India.  It&#8217;s everywhere.  I certainly didn&#8217;t notice. It seems like an impossibly uncontrollable problem.</p>
+<p>In mid-sentence, he stops and runs over, picks up the trash and hurries back over to the guard who learns that we&#8217;re <i>not</i> going to have trash in our lawn and if the guard doesn&#8217;t care about his workplace he can go somewhere else. He wasn&#8217;t mean about it.  He was matter-of-fact. The guard tried to take the trash from him, but he wouldn&#8217;t have it.  He took it himself and threw it away.  He did this constantly.  Eventually, all of the guards started doing it. Then the programmers started doing it. In fact, anything broken, or dirty, or at all not right got fixed by whoever saw it. We were a culture of caring and it was going to be both superficially and deeply ingrained.</p>
+<p>One of our people got severely injured a few months later in a motorcycle accident. He wasn&#8217;t wearing a helmet, as is very very common in India. From that day on, our <span class="caps">CEO</span> or I stood at the drive into the building refusing to allow employees in unless they were wearing helmets.  A couple of the employees couldn&#8217;t afford them, so our <span class="caps">CEO</span> personally bought them the best helmets he could buy.</p>
+<p>He cared about the business (even the building it took place in) and he cared about the people. And you can be damned sure he cared about the work.  It was infectious.  It was viral.</p>
+<p>If you <span class="caps">REALLY</span> care and you&#8217;re capable, I don&#8217;t care much how smart you are for most work that needs to be done. Give me someone passionate over an apathetic genius any day of the week.</p>
+<p><img src="http://ecx.images-amazon.com/images/I/41HCiSFoi0L.jpg" alt="" /></p>
+<p>So this is my takeaway from The Thank You Economy.  Care like crazy. Whether you&#8217;re running a company or just running your career.  It&#8217;s sound obvious, but it&#8217;s oh too easy to forget and let it slide. Let a little apathy in, and it makes a mess. A cyncical remark, or a posted Dilbert cartoon are all it takes to start the wrong kind of culture of apathy. Care like crazy.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/24/be-careful-of-who-you-work-with/">Be Careful of Who You Work With</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-24T00:00:00+01:00" pubdate data-updated="true">2011.02.24</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You instinctively know that who you associate with matters a lot.  Our parents bring us up steering away and toward others who influence us.</p>
+<p>But most of us don&#8217;t realize just how much those around us influence us.</p>
+<p>As I recall in the introduction to <a href="http://pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer</a>, there was one specific event that turned the tide for me.  I had been chugging along in my slightly-above-average corporate job and experiencing what I considered to be the height of success.  Then I had an intense period during which, for a few months, I had the opportunity to collaborate with a whole new level of software developers.  It all came to a head when I went to the eXtreme Programming Immersion that Object Mentor taught.  After a week surrounded by brilliant developers and leaders in the field, I knew I had to do something different.</p>
+<p>I had to be as much like them as I could.</p>
+<p>In The Passionate Programmer, I quote Pat Metheny&#8217;s advice to young musicians: always be the worst musician in every band you&#8217;re in.  As a musician and as a programmer, I&#8217;ve tried Pat&#8217;s advice.  You play with a group of people better than you, and you&#8217;ll almost always play better.</p>
+<p><img src="http://farm4.static.flickr.com/3315/3613370192_30635de1cb_m.jpg" alt="" /><br />
+http://www.flickr.com/photos/jazzuality/3613370192/</p>
+<p>That&#8217;s good anecdotal advice.  If you don&#8217;t trust Pat, how about <a href="http://christakis.med.harvard.edu/">Nicholas Christakis</a>?  Nicholas is a social scientist at Harvard University.  Together with James Fowler of UC San Diego, his research focuses on how behavior and then even <span class="caps">EMOTION</span> spread through social networks.  Can behavior be epidemic?</p>
+<p>Here are some things their research has shown to spread through social networks ilke disease:  <a href="http://www.nytimes.com/2007/07/25/health/25cnd-fat.html?_r=1&amp;scp=4&amp;sq=nicholas%20christakis&amp;st=cse">Obesity</a>), <a href="http://www.nejm.org/doi/full/10.1056/NEJMsa0706154">Smoking</a>, <a href="http://www.annals.org/content/152/7/426.abstract">Alcohol Consumption</a>, and….<a href="http://www.bmj.com/content/337/bmj.a2338.full"><span class="caps">HAPPINESS</span></a>!  Yes, emotional state is contagious.</p>
+<p><img src="http://farm1.static.flickr.com/48/165829023_8e97572f07_o.jpg" alt="" /><br />
+http://www.flickr.com/photos/saintbob/165829023/</p>
+<p>These aren&#8217;t insignificant numbers, either.  For example, obesity chances increase 57% if you have a friend who is or becomes obese.  And, more disturbing than that, this is an effect that is conducted through more than one node in the social graph.  If your friends&#8217; friends&#8217; friends are obese, <a href="http://bit.ly/eOY1LP">you are 10% more likely to be obese</a></p>
+<p>If behavior spreads through social networks, then working in a toxic or slow-moving corporate environment is really really bad for you.  If you&#8217;re a consultant, you <span class="caps">MUST</span> fire the clients that bring you down a notch and seek out clients that pull you up.  If you&#8217;re a teacher, go where the students care about what they&#8217;re learning.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/24/a-forum-for-the-passionate-programmer/">A Forum for the Passionate Programmer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-24T00:00:00+01:00" pubdate data-updated="true">2011.02.24</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;ve setup a <a href="http://www.facebook.com/pages/The-Passionate-Programmer/127357787336585">Facebook page for The Passionate Programmer</a>.  Please Like it, Share it, and post your own questions, experiences, act-on-it reports, or doubts.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/18/automation-and-outsourcing/">Automation and Outsourcing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-18T00:00:00+01:00" pubdate data-updated="true">2011.02.18</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>What&#8217;s the difference between automation and outsourcing?</p>
+<p>I don&#8217;t know if it&#8217;s the same everywhere, but here in the <span class="caps">USA</span> we&#8217;re deluged with fear-driven &#8220;news&#8221; reporting, decrying the theft or export of our jobs to low cost, less skilled, offshore labor.  Or even onshore &#8220;illegal&#8221; labor.  It might be Mexico. Or China. Or India.  In the 80s it was the Japanese. And it was robots and computers.</p>
+<p>I&#8217;m not going to argue whether any of this is true or worth being upset about here.  <a href="http://pragprog.com/titles/cfcar2/the-passionate-programmer">I&#8217;ve done it elsewhere.</a>  What I&#8217;m interested in here is the question: what if, as individuals, instead of fearing outsourcing, offshoring, and automation, we decided to use it to our advantage?</p>
+<p>The standard argument against offshore outsourcing goes like this:  Offshore people don&#8217;t understand the work, or the culture, or don&#8217;t care about quality or just aren&#8217;t as good.  They might be cheaper by the hour, but they&#8217;re more expensive in the long run.</p>
+<p>OK.  That&#8217;s a hard one to disprove.  It&#8217;s also kind of hard to prove.  Regardless, hold that thought</p>
+<p><img src="http://farm1.static.flickr.com/16/21042744_0640512665.jpg" alt="" /><br />
+http://www.flickr.com/photos/dancoulter/21042744/</p>
+<p>In this day and age, we&#8217;ve collectively gotten over the fear that computers will replace us all.  We&#8217;re used to the idea that certain tasks can and should be automated.  For the younger readers, did you know that there was such thing as a spreadsheet before computer existed?  That&#8217;s right.  It was roughly the same except a <em>person</em> had to calculate each value!  And if any numbers changed, guess what happened?  Someone had to recalculate them!</p>
+<p>Anybody want that job?  I didn&#8217;t think so.</p>
+<p>So that&#8217;s automation.  If you think <em>really</em> hard about what you do every day, I bet you can come up with a few things that could be automated so you wouldn&#8217;t have to do them anymore.  You wouldn&#8217;t feel bad about those things.  You&#8217;d be saving yourself time and saving your employers money if you could automate them.  Software developers spend their careers doing this for others.</p>
+<p>Anything that could be done by a computer or a robot (roughly) just as well as it could be done by a human should be automated.  That frees the people up to <em>think</em>.  That&#8217;s what we want, ya?  Hurray!</p>
+<p>Some tasks are almost automate-able.  But they just need that little extra push.  For example, human language is hard to parse.  It&#8217;s not exact enough to write reliable programs (usually) to read and act on.  So what do you do with those tasks that seem mundane enough to automate but can&#8217;t actually be done without a human?</p>
+<p>Outsource!</p>
+<p>Outsourcing might mean giving the task to a more junior person you already work with. It might mean hiring someone on another continent who costs a fraction per hour than you do and can be trained to do the mundane work you do.  It might mean taking on <a href="http://oreilly.com/catalog/9780596518387">an apprentice</a> and teaching them as they handle the &#8220;easy&#8221; stuff.</p>
+<p>But, the fact of the matter is, in the work that most of us do every day there are things we could have someone less experienced do for us. And if that person is happy to do it, benefits from it in some way, costs less than we do, or is just <em>willing</em> when we are not, it&#8217;s not a bad thing to try.</p>
+<p>If you continually do things that are &#8220;below your pay grade&#8221;, you&#8217;re wasting precious time or money.</p>
+<p>At the end of the day today, think about what you did today.  Given a little time, how much of it could have been automated?</p>
+<p>Given a little time to document what needed to be done, how much of it could have been done just as well by someone else who is maybe less skilled or less expensive than you?</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes/">McDonalds, Six Sigma, and Offshore Outsourcing (Notes)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-10T00:00:00+01:00" pubdate data-updated="true">2011.02.10</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+<p>These are notes from a talk I&#8217;ve given in various forms at <a href="http://scna.softwarecraftsmanship.org/"><span class="caps">SCNA</span></a>, <a href="http://codemash.org">CodeMash</a>, and <a href="http://magic-ruby.com">Magic Ruby</a>.  I&#8217;ve mirrored them here from the <a href="http://infoether.com">InfoEther weblog</a>.</p>
+<p>
+<p><img src="http://lh4.ggpht.com/_TVhFMT7oEd0/TLvjzmOWODI/AAAAAAAAKJ8/pR4oKLszOWE/0131.jpg" style='width:300px'/><br/>Me at <span class="caps">SCNA</span><br/>Photo credit: <a href="http://picasaweb.google.com/jangdiafoto/SoftwareCraftsmanshipNorthAmerica20101016#5529263443100973106">Monty Ksycki</a><br />
+<br/>
+<p></p>
+<p>The presentation is called &#8220;McDonalds, Six Sigma, and Offshore Outsourcing &#8211; Unexpected Sources of Insight&#8221;.  Here&#8217;s the abstract:</p>
+</p>
+<blockquote>
+<p>We software developers like to think of what we do as an art form (or a craft, if you&#8217;re at this conference). I was once asked to come up with a set of guidelines for creating great software so our (huge) company could more effectively use an offshore development team that had been delivering amorphous piles of crummy, nonworking code. I was frustrated and responded with something like this: &#8220;Give me a list of guidelines for how to make a beautiful song!&#8221; The nerve! Repeatable processes? Who did she think she was talking to?! This is a creative process! This is <span class="caps">ART</span>!!!!</p>
+</blockquote>
+<blockquote>
+<p>I&#8217;ve since grown up a bit and I&#8217;d like to talk about how I was wrong and how we can all hopefully learn from my mistakes.</p>
+</blockquote>
+<p><img src="http://chadfowler.com/art-commodity-continuum.png" style='width:400px'/><br/>The Art-Craft-Commodity Continuum (from my presentation)<br />
+<br/></p>
+<p>
+<p>In it, I tell the story of my experiences with the Six Sigma quality methodology and with offshore outsourcing, urging developers not to blindly write off potentially useful software development strategies based on hearsay and misunderstanding. I also propose a customer-driven, data-driven approach to software engineering, dovetailing off of InfoEther&#8217;s Chief Scientist, <a href="http://www.vanderburg.org/blog">Glenn Vanderburg&#8217;s</a> recent ruminations on <a href="http://confreaks.net/videos/282-lsrc2010-real-software-engineering">&#8220;Real Software Engineering&#8221;</a>.</p>
+</p>
+<p><a href="http://en.wikipedia.org/wiki/File:Originalronaldmcdonald.jpg"><img  style='width:300px' src="http://upload.wikimedia.org/wikipedia/en/9/91/Originalronaldmcdonald.jpg" alt="The original, scary Ronald McDonald"/></a><br/>The original <a href="http://en.wikipedia.org/wiki/Ronald_McDonald">Ronald McDonald</a> (Willard Scott)<br />
+<p><br />
+  Videos from <span class="caps">SCNA</span> will be posted on <a href="http://www.infoq.com/">InfoQ</a> eventually, and I&#8217;ll link mine here when that happens. In the mean time, many people asked me for pointers to some of the books and resources I mentioned during my presentation.  Here&#8217;s a link dump that you might find useful:</p>
+</p>
+<ul>
+<li>
+<p><a href="http://www.amazon.com/Mustang-Sally-LP-Version/dp/B00124HFII/ref=sr_1_1?ie=UTF8&qid=1287442362&sr=8-1">Wilson Pickett&#8217;s Mustang Sally</a></p>
+</li>
+<li>
+<p><a href="http://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0061673730/ref=sr_1_1?s=books&ie=UTF8&qid=1287442054&sr=1-1">Zen and the Art of Motorcycle Maintenance: An Inquiry into Values</a></p>
+</li>
+<li>
+<p><a href="http://www.amazon.com/E-Myth-Revisited-Small-Businesses-About/dp/0887307280">The E-Myth Revisited: Why Most Small Businesses Don&#8217;t Work and What to Do About It</a></p>
+</li>
+<li>
+<p><a href="http://vmgbpo.com"><span class="caps">VMG</span> <span class="caps">BPO</span> &#8211; Offshore business outsourcing</a></p>
+</li>
+<li>
+<p><a href="http://asksunday.com">Ask Sunday &#8211; Virtual Personal Assistants</a></p>
+</li>
+<li>
+<p><a href="http://glowtouch.com">GlowTouch &#8211; Low cost offshore IT outsourcing</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Quality_function_deployment">Quality Function Deployment</a></p>
+</li>
+<li>
+<p><a href="http://isixsigma.com/">iSixSigma &#8211; Lots of six sigma info</a></p>
+</li>
+<li>
+<p><a href='http://www.sixsigmaonline.org/six-sigma-training-certification-information/articles/the-dmadv-methodology.html'><span class="caps">DMADV</span> &#8211; the six sigma design process in a nutshell</a></p>
+</li>
+<li>
+<p><a href='http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?ie=UTF8&qid=1287442512&sr=8-1'>Design Patterns: Elements of Reusable Object-Oriented Software</a></p>
+</li>
+<li>
+<p><a href="http://www.wiley.com/legacy/products/subject/business/forbes/kroc.pdf">Forbes article on Ray Kroc and the founding of the McDonalds chains</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/John_Zorn">John Zorn &#8211; Avant Garde saxophonist</a></p>
+</li>
+<li>
+<p><a href="http://www.paulsmith.co.uk/">Paul Smith &#8211; Fashion designer</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Mark_Rothko">Mark Rothko &#8211; Abstract Expressionist painter</a></p>
+</li>
+<li>
+<p><a href="http://yankov.us/rage">Rage comic generator</a></p>
+</li>
+<li>
+<p><a href="http://gist.github.com/612263">Ugly Kitty Server code by me and Anthony Burns</a></p>
+</li>
+<li>
+<p><a href="http://chadfowler.com:4567">Ugly Kitty Server in action</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/I_know_it_when_I_see_it">The &#8220;I know it when I see it&#8221; Supreme Court case</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/Alhazen">Ibn Al-Haytham &#8211; inventor of the scientific method</a></p>
+</li>
+<li>
+<p><a href="http://www.zazzle.com/tdd+gifts"><span class="caps">TDD</span> T-Shirts</a></p>
+</li>
+<li>
+<p><a href="http://www.extremeprogramming.org/map/project.html">Extreme Programming flow chart</a></p>
+</li>
+<li>
+<p><a href="http://www.richdad.com/default.aspx">Rich Dad &#8211; Poor Dad</a></p>
+</li>
+<li>
+<a href="http://www.keavy.co.uk/">Keavy McMinn&#8217;s webblog on Ironman etc.</a>
+<li>
+<p><a href="http://www.pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer &#8211; My book</a></p>
+</li>
+<li>
+<p><a href="http://www.fourhourworkweek.com/">The 4-Hour Work Week</a></p>
+</li>
+<li>
+<p><a href="http://en.wikipedia.org/wiki/The_Turk">The Mechanical Turk</a></p>
+</li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers/">Rails 3 Recipes Needs Tech Reviewers!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-09T00:00:00+01:00" pubdate data-updated="true">2011.02.09</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><b><span class="caps">UPDATE</span>: We got 8 times as many volunteers for Rails 3 Recipes reviews as we need.  You people are awesome!  Closing the call for help now.</b></p>
+<p>The original <a href="http://www.pragprog.com/titles/fr_rr/rails-recipes">Rails Recipes</a> has been used by tens of thousands of Rails developers as they&#8217;ve worked toward mastering everyone&#8217;s favorite Web framework.  Five years later, and after the release of Rails 3, we&#8217;re seeing a new wave of Rails developers.  Through my work with <a href="http://infoether.com">InfoEther</a> and <a href="http://pragmaticstudio.com">The Pragmatic Studio</a> it&#8217;s clear that an updated version of this classic would help a huge group of new Rails developers.</p>
+<p>So here comes Rails 3 Recipes!</p>
+<p>I&#8217;m a little over half way done with the new edition, which is full of both substantially updated and entirely new content.  Now I need your help.</p>
+<p>Before we take the book to Beta, we need technical reviewers.  To tech review, you need to either already know Rails fairly well or be interested in trying to use the book to learn (some Rails knowledge is assumed).</p>
+<p>In return for your comments, we&#8217;ll give you a free copy of the electronic and paper versions of the book as well as a mention in the book itself.</p>
+<p>Interested?  If so, please contact us at <a href="mailto:rails3recipes@gmail.com">rails3recipes@gmail.com</a> and let us know your level of Rails expertise.  We can only handle a certain number of reviewers (probably 15), so we&#8217;ll be limited to accepting the first who get in touch.</p>
+<p>To those who are interested, <span class="caps">THANK</span> <span class="caps">YOU</span>!!!!!!</p>
+<p>If the original Rails Recipes&#8217; success is any indicator, Rails 3 Recipes is going to be <em>the</em> book every Rails developer will have sitting on his or her desk over the next couple of years. I&#8217;m very excited about it and looking forward to some feedback.</p>
+<p><img src="http://chadfowler.com/rr2.jpg" title="width 120" alt="width 120" /></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/">How Rails Developers Do Ajax (With jQuery) in 2011</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-09T00:00:00+01:00" pubdate data-updated="true">2011.02.09</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanting to survey what the current state of the art in Rails Ajax development is, I asked this question on twitter:</p>
+<p><a href="http://twitter.com/#!/chadfowler/status/35068144976404480"><img src="http://chadfowler.com/ajax_question.png" alt="Rails developers, how are you doing Ajax with JQuery these days? .js.erb templates? Rendering partials back old-style?"/></a></p>
+<p>I got a lot of great responses!  44 last time I checked. Here&#8217;s what I found out people are doing:</p>
+<ul>
+	<li><a href="https://github.com/janl/mustache.js">mustache.js</a></li>
+	<li>Sending JavaScript back down to the client using .js.erb template files (Ryan Bates linked a couple of examples <a href="http://bit.ly/YCunh">here</a> and <a href="http://bit.ly/dHbKW5">here</a>)</li>
+	<li><a href="http://api.jquery.com/jQuery.template/">JQuery templates</a></li>
+	<li>Hitting <span class="caps">RESTFUL</span> endpoints and responding with <span class="caps">JSON</span> data to be manipulated on the client</li>
+	<li>Using <a href="http://documentcloud.github.com/backbone">backbone.js</a></li>
+	<li>Rendering partials and updating elements on the page with their raw content (the original old-school Rails way of doing it)</li>
+	<li>Use <a href="https://github.com/mrb/sammyonrails">SammyOnRails</a></li>
+</ul>
+<p>There is definitely a divide and a lot of opinion (suprise!) between those who are OK with delivering JavaScript and/or <span class="caps">HTML</span> from the server to be rendered on the client and those who prefer to deliver data and have the client process it.  I&#8217;d characterize the former as the less clean, more pragmatic approach and the latter as the idealistic cleaner approach.  It seems that tools like mustache.js, backbone, JQuery templates, and Sammy.js are tightening the gap between quick + dirty and slow + clean.</p>
+<p>What do you think?  What did we miss?</p></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://linz.kod.io/">Kod.io</a></span>
+        <span class="location">Linz</span>
+        <span class="the-date">March 1, 2014</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://craft-conf.com/2014/">Craft-Conf</a></span>
+        <span class="location">Budapest</span>
+        <span class="the-date">April 23, 2014</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/amsterdam-2014">GOTO Amsterdam</a></span>
+        <span class="location">Amsterdam</span>
+        <span class="the-date">June 19, 2014</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/26/the-magic-of-strace/">The Magic of strace</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/22/the-crunch-mode-antipattern/">Killing the Crunch Mode Antipattern</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/19/rule-one-of-management-first-do-no-harm/">Rule One of Management: First, Do No Harm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/19/empathy/">Your most important skill: Empathy</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Rails Recipes is Done - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Dave tells me <a
+href="http://pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes is <a
+href="http://weblog.rubyonrails.org/articles/2006/05/15/ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/2006/05/15/rails-recipes-is-done/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Rails Recipes Is Done</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-05-15T00:00:00+02:00" pubdate data-updated="true">2006.05.15</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://pragmaticprogrammer.com">Dave</a> tells me <a
+href="http://pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a> is <a
+href="http://weblog.rubyonrails.org/articles/2006/05/15/rails-recipes-is-out-of-beta">out<br />
+of beta</a> and on the way to the printers.</p>
+<p>
+<p>It&#8217;s been a short (but seemingly long) and intense ride, and<br />
+I&#8217;m looking forward to a little rest and relaxation. I owe a huge<br />
+thanks to everyone who contributed ideas, content, and bug reports.</p>
+</p>
+<p>
+<p>For those of you who have been trying to decide whether to grab a copy,<br />
+here&#8217;s the first part of the book&#8217;s introduction, which will<br />
+hopefully give you a better sense of what I was trying to accomplish in the<br />
+book:</p>
+</p>
+<h2>What Makes a Good Recipe Book?</h2>
+<pre>
+  If I were to buy a real recipe book---you know, a book about cooking
+  food---I wouldn't be looking for a book that tells me how to dice vegetables
+  or how to use a skillet. I can find that kind of information in an
+  overview about cooking.
+
+  A recipe book is about how to make food you might not be able to easily
+  figure out how to make on your own. It's about skipping the trial and
+  error and jumping straight to a solution that works. Sometimes it's
+  even about making food you never imagined you could make.
+
+  If you want to learn how to make great Indian food, you buy a recipe
+  book by a great Indian chef and follow his or her directions. You're not
+  just buying any old solution. You're buying a solution you can trust to
+  be good. That's why famous chefs sell lots and lots of books. People
+  want to make food that tastes good, and these chefs know how to make
+  (and teach you how to make) food that tastes good.
+
+  Good recipe books do teach you techniques. Sometimes they even teach
+  you about new tools. But they teach these skills within the context and
+  with the end goal of making something---not just to teach them.
+
+  My goal for Rails Recipes is to teach you how to make great stuff with
+  Rails and to do it right on your first try. These recipes and the tech-
+  niques herein are extractions from my own work and from the &amp;quot;great
+  chefs&amp;quot; of Rails: the Rails core developer team, the leading trainers and
+  authors, and the earliest of early adopters.
+
+  I also hope to show you not only how to do things but to explain why
+  they work the way they do. After reading through the recipes, you
+  should walk away with a new level of Rails understanding to go with a
+  huge list of successfully implemented hot new application features.
+
+  Not all of these recipes are long and involved. To spice things up, I've
+  included a number of smaller offerings, which I've called snacks. Typically
+  one or two pages long, these snacks will help satisfy those cravings
+  we all get between meals.
+</pre></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-05-15T00:00:00+02:00" pubdate data-updated="true">2006.05.15</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chadfowler.com/blog/2006/05/15/rails-recipes-is-done/" data-via="chadfowler" data-counturl="http://chadfowler.com/blog/2006/05/15/rails-recipes-is-done/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2006/05/04/rails-recipes-face-to-face/" title="Previous Post: Rails Recipes: Face to Face
+">&laquo; Rails Recipes: Face to Face
+</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2006/06/16/how-to-ship-a-book/" title="Next Post: How to Ship a Book">How to Ship a Book &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://linz.kod.io/">Kod.io</a></span>
+        <span class="location">Linz</span>
+        <span class="the-date">March 1, 2014</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://craft-conf.com/2014/">Craft-Conf</a></span>
+        <span class="location">Budapest</span>
+        <span class="the-date">April 23, 2014</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/amsterdam-2014">GOTO Amsterdam</a></span>
+        <span class="location">Amsterdam</span>
+        <span class="the-date">June 19, 2014</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>-->
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/26/the-magic-of-strace/">The Magic of strace</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/22/the-crunch-mode-antipattern/">Killing the Crunch Mode Antipattern</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/19/rule-one-of-management-first-do-no-harm/">Rule One of Management: First, Do No Harm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/19/empathy/">Your most important skill: Empathy</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

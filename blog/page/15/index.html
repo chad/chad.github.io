@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="I recently had the privilege of writing a tutorial for Dabble DB&#8217;s new plugin API. If you haven&#8217;t heard of Dabble DB yet, it&#8217;s one &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/page/15/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/speaking">Speaking</a></li>
+  <li><a href="/books">Books</a></li>
+  <li><a href="/interviews">Interviews</a></li>
+  <li><a href="/contact">Contact</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/08/dabble-plugin-api/">Dabble Plugin API</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-08T00:00:00+01:00" pubdate data-updated="true">2007.01.08</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I recently had the privilege of writing a tutorial for <a href="http://dabbledb.com">Dabble DB&#8217;s</a> new <a href="http://dabbledb.com/blog/?p=69">plugin <span class="caps">API</span></a>.  If you haven&#8217;t heard of Dabble DB yet, it&#8217;s one of the few really innovative applications you&#8217;ll find with the &#8220;web 2.0&#8221; label.  For a quick look at what it&#8217;s all about, check out the <a href="http://dabbledb.com/blog/?p=66">popular</a> <a href="http://dabbledb.com/explore/7minutedemo/">7 minute demo movie</a> that <a href="http://smallthought.com/avi/">Avi</a> made.</p>
+<p>Even if you&#8217;re not planning to use Dabble DB, I think it&#8217;s worth reading <a href="http://dabbledb.com/help/guides/pluginapi/">the tutorial</a> to see how they&#8217;ve implemented plugins.  It may have been done before, but I haven&#8217;t seen it done like this.  When you host an application on the open internet, how do you allow users to safely &#8220;plug&#8221; their own code into your application?  You could go to a lot of trouble and create a sandboxed interpreted environment inside your application, exposing an <span class="caps">API</span>.  But that&#8217;s really really hard to do.</p>
+<p>What Smallthought did might be more aptly called &#8220;plugouts&#8221;.  Instead of just exposing services that you can consume into your own mashup, they allow Dabble DB to call out to custom, internet-accessible services.  And, rather than clutter things up with an ugly <span class="caps">XML</span> <span class="caps">API</span>, they deal in simple <span class="caps">CSV</span> in and out, kind of like <span class="caps">UNIX</span> pipes.</p>
+<p>It&#8217;ll be interesting to see what happens with this both in Dabble DB and other applications that start to adopt this approach.  Immediately after the plugin API&#8217;s release, there are already <a href="http://timcraft.com/2007/7">a couple of publicly available plugins</a> (from an apparent Rubyist.  Hi Tim!)</p>
+<p>What other interesting approaches have you seen to accomplish this same goal?</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/04/who%27s-tending-the-store/">Who&#8217;s Tending the Store?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-04T00:00:00+01:00" pubdate data-updated="true">2007.01.04</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">(This article is part of the <a href="http://chadfowler.com/blog/2006/12/27/the-big-rewrite">Big Rewrite</a> series.)
+<p>While we&#8217;re all in the back creating the next revision of a product, who&#8217;s tending to the day to day issues of the existing product?  Typically, it&#8217;s the domain experts and the original implementers of the product.</p>
+<p>Regardless of our intentions, day to day life and in-your-face time-sensitive issues can very easily steal all of the attention from a Big Rewrite.  Screaming customers need their problems solved.  Outages and serious bugs need to be fixed.  Enhancements have to keep rolling in if your project takes as long as projects tend to take.  Somebody has to do these things.  Training new people is hard and doesn&#8217;t seem to make sense.  If we&#8217;re getting rid of a system, why would we train someone how to maintain it?</p>
+<p>So, the experts keep the old system running while the new system is being built.  So, who builds the new system?  Not the experts, that&#8217;s who.  Usually, it&#8217;s people like me:  technology experts.  And while we&#8217;re banging away at the existing system&#8217;s UI, trying to figure out what needs to be coded, the domain experts are doing their jobs.  Unfortunately, this means the domain experts aren&#8217;t watching the Big Rewrite very closely.  Regardless of how good the team, if communication is impaired between the domain experts and the technology experts, things are going to move slowly, and wrong software is going to be created.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/03/justifications-and-lies/">Justifications and Lies</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-03T00:00:00+01:00" pubdate data-updated="true">2007.01.03</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">(This article is part of the <a href="http://chadfowler.com/blog/2006/12/27/the-big-rewrite">Big Rewrite</a> series.)
+<p>To add to the stress of the <a href="http://chadfowler.com/2007/1/3/justifications-and-lies">Big Bang</a> comes another, mostly people-related issue.  Almost all technology rewrites are driven by some technologist.  Behind almost every technologist pushing for a Big Rewrite is a business person saying &#8220;But, why?&#8221;  The question is valid.  The product already works.  It&#8217;s successful enough to even consider re-plumbing it, so we must have already gotten something right, no?</p>
+<p>So, then come the justifications.  They start with the real reasons the software is being rewritten (but usually censored to avoid the technologist looking like he or she screwed up big time on the initial development of the product).  The system will be more maintainable.  It will be easier to add features.  &#8220;Oh yea?  So we can do more features faster?&#8221;  &#8220;Uh, yea.&#8221;  &#8220;How much faster?&#8221;  And so on.</p>
+<p>As those discussions get heated and prove unsatisfactory, the list of promises gets longer.  The system will be more scalable.  System response time will improve for our customers.  We will have greater uptime.  And so on.</p>
+<p>It&#8217;s rare, in fact, that a technology rewrite can deliver on all these fronts.  A J2EE Web application may not prove in practice to provide higher availability than a mainframe application.  Rails might be a more flexible and productive environment for a developer, but Rails apps slightly underperform equivalent <span class="caps">PHP</span> apps.  So, you don&#8217;t sell Rails as something that will be <em>faster</em> than <span class="caps">PHP</span>.  You sell it as something that is more flexible and maintainable, and will perform reasonably compared to a <span class="caps">PHP</span> application.</p>
+<p>The piles of justification lead to piles of additional work and/or piles of mismatched expectations and disappointment after release.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2007/01/02/the-big-bang/">The Big Bang</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-01-02T00:00:00+01:00" pubdate data-updated="true">2007.01.02</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">(This article is part of the <a href="http://chadfowler.com/blog/2006/12/27/the-big-rewrite">Big Rewrite</a> series.)
+<p>When you do a technology rewrite, you want things to be clean.  That&#8217;s usually a major goal in a project like this.  And at the beginning of a Big Rewrite, while you&#8217;re still wide-eyed and hopeful for your application&#8217;s ultra-elegant, scalable, maintainable future, you&#8217;re faced with a question:  Should we deliver the Rewrite incrementally or all in one big release?  Now, imagine your existing infrastructure is a home-grown Oracle Pro*C-based <span class="caps">CGI</span> framework with its own cookie-based authentication mechanism which relies on carnal knowledge of an aging mainframe <span class="caps">ERP</span> system.  Incremental deliveries means making the new technology work within the dirty framework of the old system.  One big release would mean we could just turn off the old system, turn on the new one, and keep our new efforts isolated and pristine.</p>
+<p>In most cases, it&#8217;s the Big Bang approach that wins the argument.</p>
+<p>Now picture yourself as a developer or project leader nine months into this project.  The old system, still in production, has been patched and enhanced along side the new one as you&#8217;ve been developing it.  You haven&#8217;t had time to keep up with each and every change that took place in the old system.  As a result, on top of behavioral changes, you&#8217;ve got an ever-evolving database schema to port to the new platform.  And the new system&#8217;s wish list has gotten so out of control, that there are major differences between the old and the new.  To top it all off, working from the old system as a specification didn&#8217;t work, and you&#8217;re way behind schedule due to misunderstood requirements and rework.</p>
+<p>The table has been set.  The guests are on their third course.  And now you have to come along and replace the table on which they&#8217;re eating without disturbing their meal.</p>
+<p>On a big system with a lot of customers, data migration can be a huge problem.  Not only do we have to keep track of what gets migrated when, but we have to actually <em>perform</em> the migration at some point.  The Big Bang sounds like a lovely idea until you get to the actual event, and you realize it&#8217;s kind of like preparing for a world title boxing match when you know it&#8217;s the first and last time you&#8217;ll ever compete.  The processes and software you have to create, the attention you have to pay before you can create an event like this is often as consuming, complex, and potentially disastrous as the system development effort itself.</p>
+<p>But by making it a Big Bang release, you&#8217;ve maximized the chances that you&#8217;ll be behind schedule when you get to the end, and you&#8217;ve therefore maximized the chances that you won&#8217;t spend enough time preparing.  This results in a bad time for both you and your customers.</p>
+<p>Unfortunately, perhaps due to something intrinsic in human nature, this scenario is a cliche for Big Rewrite projects.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/12/30/the-wish-list/">The Wish List</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-30T00:00:00+01:00" pubdate data-updated="true">2006.12.30</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">(This article is part of the <a href="http://chadfowler.com/blog/2006/12/27/the-big-rewrite">Big Rewrite</a> series.)
+<p>Imagine going to the hospital for a kidney transplant, and before and during the surgery saying to the surgeon: &#8220;Oh, and while you&#8217;re already in there digging around, I&#8217;ve had some problems with my lungs that could use a little attention.  And, yes, I&#8217;ve been overeating terribly&#8212;-could you do one of those stomach reduction things I hear about?  And on that note, how about a little plastic surgery since we&#8217;ve got the knives out?&#8221;</p>
+<p>This is effectively what happens on <a href="http://chadfowler.com/blog/2006/12/27/the-big-rewrite">The Big Rewrite</a>.  An existing product, no matter how successful, always has a few warts.  The rewrite is seen by many people as the perfect opportunity to shave off the warts.  If we&#8217;re going to do it over again, we might as well do it <em>right</em> this time.</p>
+<p>Under the veil of a rewrite, the assumption is that the personality and capabilities of the software aren&#8217;t changing.  So, what might start as just a few little tweaks will usually turn into an unbridled reinvention, with none of the usual checks and balances that go into new product development.  With potentially many stake-holders involved and an uncontrolled process, I&#8217;ve seen little tweaks end up increasing the total effort and feature-set of a Big Rewrite by as much as 100%.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/12/30/site-redesign-and-software-change/">Site Redesign and Software Change</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-30T00:00:00+01:00" pubdate data-updated="true">2006.12.30</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In the not-so-interesting-for-you department, I&#8217;m changing quite a few things around here this week:</p>
+<p><a href="http://codefluency.com">Bruce Williams</a> has done a stunningly great redesign of this site.  Bruce is the designer for <a href="http://rubycentral.org">Ruby Central</a>, so if you&#8217;ve been to our recent conferences, you probably have one of his t-shirts.</p>
+<p>Also, after nearly four years of faithful service, I&#8217;ve retired Dave Thomas&#8217;s <a href="http://rubyforge.org/projects/rublog/">Rublog</a> in favor of Rick Olson&#8217;s <a href="http://mephistoblog.com/">Mephisto</a>.  If you suddenly see a bunch of my old posts in your news reader, that&#8217;s probably why.</p>
+<p>I worked to try to map old URLs to new URLs, but there are bound to be some things broken.  Let me know (my first name @ my domain) if you encounter anything wacky you don&#8217;t think I know about.  Also, I haven&#8217;t yet moved the comments over, so apologies to those who&#8217;ve posted comments lately.  I&#8217;ll try to get them ported over next week.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/12/29/training/">Training</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-29T00:00:00+01:00" pubdate data-updated="true">2006.12.29</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Public and Private Training</h2>
+<p>I&#8217;m proud to offer public and private training through the premier Ruby and Rails training company, The Pragmatic Studio.</p>
+<p><a href="http://pragmaticstudio.com/"><img src="http://chadfowler.com/images/pragmatic_studio.gif"></a></p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/12/29/speaking/">Speaking</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-29T00:00:00+01:00" pubdate data-updated="true">2006.12.29</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href='#' onclick='alert("Email chad at this domain");return false;'>Contact Me</a> if you&#8217;d like me to speak at your conference or to your user group.  I love to speak to new groups and to meet and learn from other software developers.  With my training and consulting schedule, I may even already have a trip planned to your area.</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/12/29/invention-or-implementation/">Invention or Implementation?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-29T00:00:00+01:00" pubdate data-updated="true">2006.12.29</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In his article, <a
+href="http://www.zedshaw.com/essays/c2i2_hypothesis.html">The C2I2<br />
+Hypothesis</a>, programmer Zed Shaw criticizes the famous <a
+href="http://en.wikipedia.org/wiki/Chrysler_Comprehensive_Compensation_System">C3<br />
+project</a> at Chrysler, which is known for being the birthplace of eXtreme<br />
+Programming. He says that the project was an implementation&#8212;not an<br />
+invention. An invention, according to Zed, is something new which needs<br />
+creativity and high customer involvement, whereas an implementation is a<br />
+project which participants (including programmers) have done before.<br />
+According to Zed:</p>
+<blockquote>
+If that&#8217;s the case, why was the customer involved all the time? They had a
+completely working specification in an already working system. Replacing it is
+more a matter of reverse engineering than gathering vision, customer feedback, use cases,
+stories, or any of the other crap the XP team used.
+</blockquote>
+<p>
+<p>Here&#8217;s the problem: when does the label &quot;Payroll System&quot;<br />
+become so broad that you don&#8217;t <em>know</em> if it&#8217;s an<br />
+invention or an implementation? Could it be possible that at a huge company<br />
+like Chrysler the payroll system was unlike any other payroll system that<br />
+had ever existed? And, within the realm of this possibility, might it also<br />
+be possible that Chrysler were redesigning the system, because through such<br />
+changes as globalization and evolving international tax and labor laws, the<br />
+system which was being replaced was no longer valid?</p>
+</p>
+<p>
+<p>My point isn&#8217;t to say Zed is wrong. He makes some excellent points<br />
+and may very well be right (though, knowing some of the guys on the C3<br />
+project, I&#8217;d guess they knew the difference between invention and<br />
+implementation).</p>
+</p>
+<p>
+<p>My point is that it&#8217;s not always clear cut which things are<br />
+implementation and which are invention. Worse than being ambiguous,<br />
+it&#8217;s often not clear that it <em>is</em> ambiguous. My experience<br />
+says that most of the time, people doing the Big Rewrite will assume that<br />
+they&#8217;re doing an implementation and will staff and estimate<br />
+accordingly.</p>
+</p>
+<p>
+<p>Most of the time, they&#8217;re wrong.</p>
+</p></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/12/29/consulting/">Consulting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-29T00:00:00+01:00" pubdate data-updated="true">2006.12.29</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Through my work at <a href="http://infoether.com">InfoEther</a>, I&#8217;m available to help you with your projects.</p>
+<p>I&#8217;ve worked in a broad range of platforms, architectures, and programming languages.  I&#8217;m available to:</p>
+<ul>
+	<li>Write code!</li>
+	<li>Perform code reviews and help you refactor</li>
+	<li>Jump-start your Ruby/Rails project</li>
+	<li>Mentor your developers</li>
+	<li>Set up automation for your build and deployment processes</li>
+	<li>Help you set up your Rails deployment environment</li>
+	<li>Help you plan and execute <a href="/blog/2006/12/27/the-big-rewrite">The Big Rewrite</a></li>
+</ul></div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/16/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/14/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">Github</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://linz.kod.io/">Kod.io</a></span>
+        <span class="location">Linz</span>
+        <span class="the-date">March 1, 2014</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://craft-conf.com/2014/">Craft-Conf</a></span>
+        <span class="location">Budapest</span>
+        <span class="the-date">April 23, 2014</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/amsterdam-2014">GOTO Amsterdam</a></span>
+        <span class="location">Amsterdam</span>
+        <span class="the-date">June 19, 2014</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/26/the-magic-of-strace/">The Magic of strace</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/22/the-crunch-mode-antipattern/">Killing the Crunch Mode Antipattern</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/21/on-having-something-to-say/">On Having Something to Say</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/19/rule-one-of-management-first-do-no-harm/">Rule One of Management: First, Do No Harm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/19/empathy/">Your most important skill: Empathy</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
