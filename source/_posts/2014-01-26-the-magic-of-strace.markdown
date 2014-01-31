@@ -27,7 +27,7 @@ To start the program, we invoke strace and pass the program name (and any parame
 
 After the invocation, we see a rather verbose log of every system call. To some (most?), this might look like gibberish. But, even if you have almost _no_ idea what you're looking at, you can quickly spot some useful pieces of information.
 
-The first line of the trace shows a call to execve. Unsurprisingly, execve's job is to run a program. It accepts the path to the program, any arguments as an array, and a list of environment variables to set for the program (which are ommitted from the output since they'd be so noisey).
+The first line of the trace shows a call to execve(). Unsurprisingly, execve()'s job is to run a program. It accepts the path to the program, any arguments as an array, and a list of environment variables to set for the program (which are ommitted from the output since they'd be so noisey).
 
 The last two lines contain another recognizable sequence. First you see a call to write() with our C program's string "hi\n". The first argument to write() is the file descriptor to write to. In this case it's "1", which is the process's standard output stream. After the write call (which looks garbled because the actual write to standard out showed up along with the strace output), the program calls exit_group().  This function acts like exit() but exits all threads in a process.
 
