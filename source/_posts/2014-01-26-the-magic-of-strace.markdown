@@ -9,7 +9,7 @@ Early in my career, a co-worker and I were flown from Memphis to Orlando to try 
 
 Lotus Domino was a closed-source black box of a "groupware" server. I can't remember the exact problem, but it had something to do with files not being properly accessible in its database, and apparently even the escalated support from Lotus was unable to solve the problem.
 
-This was one of the most profoundly educational experiences of my career.  It's when I learned what may be the most important UNIX tool I ever learned: strace.*
+This was one of the most profoundly educational experiences of my career.  It's when I learned what may be for me the most important UNIX tool to date: strace.*
 
 Nowadays I probably use strace or some equivalent almost every day I work as a programmer and/or systems engineer.  In this post I'll explain why and how and hopefully show you some tips on how to get the most out of this powerful little tool.
 
