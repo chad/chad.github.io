@@ -82,7 +82,7 @@ We skipped over a few details here, but hopefully you can see how with a combina
 
 Sometimes we just want to get an overview of what a process is doing. I first remember having this need when troubleshooting a broken off the shelf supply chain management application written in "Enterprise Java" in the late 90s.  It worked for some time and then suddenly under some unknown circumstance at a specific time of day it would start refusing connections. We had no source code, and we suffered from the typical level of quality you get from an enterprise support contract (i.e. we solved all problems ourselves).  So I decided to try to compare "normal" behavior with the behavior when things went wrong.
 
-I did this by regularly sampling system call activities for the processes and then compared those normal samples with the activity when the process was in trouble. I don't remember the exact outcome that time, but it's a trick I've used ever since.  Until recently I would always write scripts to run strace, capture the output, and parse it into an aggregate. Then I discovered that strace can do this for me.
+I did this by regularly sampling system call activity for the processes and then compared those normal samples with the activity when the process was in trouble. I don't remember the exact outcome that time, but it's a trick I've used ever since.  Until recently I would always write scripts to run strace, capture the output, and parse it into an aggregate. Then I discovered that strace can do this for me.
 
 Let's take a look at a unicorn process again:
 
