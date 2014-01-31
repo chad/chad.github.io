@@ -122,7 +122,7 @@
 
 <p>After the invocation, we see a rather verbose log of every system call. To some (most?), this might look like gibberish. But, even if you have almost <em>no</em> idea what you&#8217;re looking at, you can quickly spot some useful pieces of information.</p>
 
-<p>The first line of the trace shows a call to execve. Unsurprisingly, execve&#8217;s job is to run a program. It accepts the path to the program, any arguments as an array, and a list of environment variables to set for the program (which are ommitted from the output since they&#8217;d be so noisey).</p>
+<p>The first line of the trace shows a call to execve(). Unsurprisingly, execve()&#8217;s job is to run a program. It accepts the path to the program, any arguments as an array, and a list of environment variables to set for the program (which are ommitted from the output since they&#8217;d be so noisey).</p>
 
 <p>The last two lines contain another recognizable sequence. First you see a call to write() with our C program&#8217;s string &#8220;hi\n&#8221;. The first argument to write() is the file descriptor to write to. In this case it&#8217;s &#8220;1&#8221;, which is the process&#8217;s standard output stream. After the write call (which looks garbled because the actual write to standard out showed up along with the strace output), the program calls exit_group().  This function acts like exit() but exits all threads in a process.</p>
 
