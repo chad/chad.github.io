@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-31T08:16:05+01:00</updated>
+  <updated>2014-01-31T08:17:22+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -22,7 +22,7 @@
 
 <p>Lotus Domino was a closed-source black box of a &#8220;groupware&#8221; server. I can&#8217;t remember the exact problem, but it had something to do with files not being properly accessible in its database, and apparently even the escalated support from Lotus was unable to solve the problem.</p>
 
-<p>This was one of the most profoundly educational experiences of my career.  It&#8217;s when I learned what may be the most important UNIX tool I ever learned: strace.*</p>
+<p>This was one of the most profoundly educational experiences of my career.  It&#8217;s when I learned what may be for me the most important UNIX tool to date: strace.*</p>
 
 <p>Nowadays I probably use strace or some equivalent almost every day I work as a programmer and/or systems engineer.  In this post I&#8217;ll explain why and how and hopefully show you some tips on how to get the most out of this powerful little tool.</p>
 
