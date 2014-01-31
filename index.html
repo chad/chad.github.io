@@ -159,7 +159,7 @@
 
 <p>Next, we see a series of calls which try to accept the incoming connection on the UNIX socket but return with EAGAIN. This normal behavior in a multi-processing network server. The process goes back and waits for more incoming data and tries again.</p>
 
-<p>Finally, a call to accept4() returns a file descriptor (13) with no error. It&#8217;s time to process a request! First the process checks info on the file descriptor using fstat(). The second argument to fstat() is a &#8220;stat&#8221; struct which the function fills with data. Here you can see mode (S_IFSOCK) and the size (which shows 0 since this isn&#8217;t a regular file). After presumably seeing that all is as expected with the socket&#8217;s file descriptor, the process receives data from the socket using recvfrom().</p>
+<p>Finally, a call to accept4() returns a file descriptor (13) with no error. It&#8217;s time to process a request! First the process checks info on the file descriptor using fstat(). The second argument to fstat() is a &#8220;stat&#8221; struct which the function fills with data. Here you can see its mode (S_IFSOCK) and the size (which shows 0 since this isn&#8217;t a regular file). After presumably seeing that all is as expected with the socket&#8217;s file descriptor, the process receives data from the socket using recvfrom().</p>
 
 <h3>Here&#8217;s where things get interesting</h3>
 
