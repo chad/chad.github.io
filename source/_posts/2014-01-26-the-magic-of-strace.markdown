@@ -62,7 +62,7 @@ In the 4th column of lsof's output, labeled "FD", we can see the file descriptor
 
 Next, we see a series of calls which try to accept the incoming connection on the UNIX socket but return with EAGAIN. This normal behavior in a multi-processing network server. The process goes back and waits for more incoming data and tries again.
 
-Finally, a call to accept4() returns a file descriptor (13) with no error. It's time to process a request! First the process checks info on the file descriptor using fstat(). The second argument to fstat() is a "stat" struct which the function fills with data. Here you can see mode (S_IFSOCK) and the size (which shows 0 since this isn't a regular file). After presumably seeing that all is as expected with the socket's file descriptor, the process receives data from the socket using recvfrom().
+Finally, a call to accept4() returns a file descriptor (13) with no error. It's time to process a request! First the process checks info on the file descriptor using fstat(). The second argument to fstat() is a "stat" struct which the function fills with data. Here you can see its mode (S_IFSOCK) and the size (which shows 0 since this isn't a regular file). After presumably seeing that all is as expected with the socket's file descriptor, the process receives data from the socket using recvfrom().
 
 ### Here's where things get interesting
 
