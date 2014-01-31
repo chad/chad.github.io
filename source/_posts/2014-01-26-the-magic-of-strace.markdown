@@ -5,7 +5,7 @@ date: 2014-01-26 16:05
 comments: true
 categories:
 ---
-Early in my career, a co-worker and I were flown from Memphis to Orland to try to help end a mult-day outage of our company's corporate Lotus Domino server. The team in Orlando had been fire-fighting for days and had gotten nowhere. I'm not sure why they thought my co-worker and I could help. We didn't know anything at all about Lotus Domino. But it ran on UNIX and we were pretty good with UNIX. I guess they were desperate.
+Early in my career, a co-worker and I were flown from Memphis to Orlando to try to help end a mult-day outage of our company's corporate Lotus Domino server. The team in Orlando had been fire-fighting for days and had gotten nowhere. I'm not sure why they thought my co-worker and I could help. We didn't know anything at all about Lotus Domino. But it ran on UNIX and we were pretty good with UNIX. I guess they were desperate.
 
 Lotus Domino was a closed-source black box of a "groupware" server. I can't remember the exact problem, but it had something to do with files not being properly accessible in its database, and apparently even the escalated support from Lotus was unable to solve the problem.
 
