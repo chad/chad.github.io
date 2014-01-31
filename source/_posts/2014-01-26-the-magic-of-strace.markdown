@@ -66,7 +66,11 @@ Finally, a call to accept4() returns a file descriptor (13) with no error. It's 
 
 ### Here's where things get interesting
 
-Like fstat(), recvfrom()'s first parameter is the file descriptor to receive data from and its second is a buffer to fill with that data.  Here's where things get really interesting when you're trying to debug a problem: You can see the full HTTP request that has been sent to this web server process! This can be _extremely_ helpful when you're trying to troubleshoot a process you don't have much control over. The return value of the recvfrom() call indicates the number of bytes received by the call (167). Now it's time to respond.
+Like fstat(), recvfrom()'s first parameter is the file descriptor to receive data from and its second is a buffer to fill with that data.  Here's where things get really interesting when you're trying to debug a problem: You can see the full HTTP request that has been sent to this web server process! Here it is, expanded for readability:
+
+<script src="https://gist.github.com/chad/53636a6353f160a9e9b9.js"></script>
+
+This can be _extremely_ helpful when you're trying to troubleshoot a process you don't have much control over. The return value of the recvfrom() call indicates the number of bytes received by the call (167). Now it's time to respond.
 
 The process first uses ppoll to ask the system to tell it when it would be OK to write to this socket.  ppoll() takes a list of file descriptors and events to poll for. In this case the process has asked to be notified when writing to the socket would not block (POLLOUT). After being notified, it writes the beginning of the HTTP response header using write().
 
