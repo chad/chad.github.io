@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-01-31T08:30:30+01:00</updated>
+  <updated>2014-01-31T08:31:12+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -89,7 +89,7 @@
 
 <p>Next we can see the Unicorn process&#8217;s internal routing behavior at work. It uses stat() to see if there is a physical file on the file system which it could serve at the requested address. stat() returns ENOENT, indicating no file at that path, so the process continues executing code.  This is the typical behavior for static file-based caching on Rails systems. First look for a static file that would satisfy the request, then move on to executing code.</p>
 
-<p>As a final glimpse into the workings of this particular process, we see a SQL query being sent to file descriptor 16. Reviewing our lsof output above, we can see that file descriptor 16 is a TCP connection to another host on that host&#8217;s postgresql port (this number to name mapping is configured in /etc/services in case you&#8217;re curious). THe process uses sendto() to send the formatted SQL query to the postgresql server. The third argument is the message&#8217;s size and the fourth is a flag&#8211;MSG_NOSIGNAL in this case&#8211;which tells the operating system not to interrupt it with a SIGPIPE signal if there is a problem with the remote connection.</p>
+<p>As a final glimpse into the workings of this particular process, we see a SQL query being sent to file descriptor 16. Reviewing our lsof output above, we can see that file descriptor 16 is a TCP connection to another host on that host&#8217;s postgresql port (this number to name mapping is configured in /etc/services in case you&#8217;re curious). The process uses sendto() to send the formatted SQL query to the postgresql server. The third argument is the message&#8217;s size and the fourth is a flag&#8211;MSG_NOSIGNAL in this case&#8211;which tells the operating system not to interrupt it with a SIGPIPE signal if there is a problem with the remote connection.</p>
 
 <p>The process then uses the poll() function to wait for either read or error activity on the socket and, on receiving read activity, receives the postgresql server&#8217;s response using recvfrom().</p>
 
