@@ -124,7 +124,7 @@ strace is an amazingly rich tool.  I've only covered a few of the options that I
 
 If you read through this far and you didn't know what all these function calls meant, don't be alarmed. Neither did I at some point. I learned most of this stuff by tracing broken programs and reading man pages. If you program in a UNIX environment, I encourage you to pick a program you care about and strace its execution. Learn what's happening at the system level. Read the man pages. Explore. It's fun and you'll understand your own work even better than before.
 
-## UPDATE: So what happened with the Lotus Domino server?
+## UPDATE: And the fate of Lotus Domino server?
 
 Apparently this article appeared to be a dramatic setup for the conclusion of the story of the Domino server. People on other sites, twitter, and in person all asked "OMG What happened to the Domino server?!?!?!"  So I'll wrap up by telling the rest of the story.
 
