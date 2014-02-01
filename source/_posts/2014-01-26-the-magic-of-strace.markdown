@@ -124,6 +124,16 @@ strace is an amazingly rich tool.  I've only covered a few of the options that I
 
 If you read through this far and you didn't know what all these function calls meant, don't be alarmed. Neither did I at some point. I learned most of this stuff by tracing broken programs and reading man pages. If you program in a UNIX environment, I encourage you to pick a program you care about and strace its execution. Learn what's happening at the system level. Read the man pages. Explore. It's fun and you'll understand your own work even better than before.
 
+## UPDATE: So what happened with the Lotus Domino server?
+
+Apparently this article appeared to be a dramatic setup for the conclusion of the story of the Domino server. People on other sites, twitter, and in person all asked "OMG What happened to the Domino server?!?!?!"  So I'll wrap up by telling the rest of the story.
+
+Somehow, by tracing system calls, we fixed the Domino server. I'm afraid I don't remember exactly how, but you can rest assured it was extremely dramatic and a HUGE surprise to everyone involved.
+
+Then my co-worker and I went out into the parking lot and got into our rented, convertible, red Ford Mustang, cranked up the volume on the only CD we brought with us to listen to (Guns & Roses' Appetite for Destruction), drove safely to the airport, and forgot to take the CD out of the car.  Only after returning otherwise uneventfully to Memphis (via Atlanta) did we realize we had left it in the car.
+
+I hope whoever rented that car next enjoyed the hair metal as much as we did.
+
 ----
 
 * Actually I'm simplifying a bit. We were on Solaris, and the equivalent tool there was truss. It's basically the same. You get the point.
