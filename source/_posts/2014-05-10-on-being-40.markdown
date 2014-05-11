@@ -1,0 +1,41 @@
+---
+layout: post
+title: "On Being 40"
+date: 2014-05-10 19:03
+comments: true
+categories:
+---
+Today I am 40 years old.
+
+40 is a confusing age. Old enough to not be a kid anymore by any reasonable definition.  Still young, inexperienced, and stupid enough to feel like one anyway. Maybe that last bit never goes away. Maybe it only intensifies.
+
+One feature of my version of met at 40 is that I have gradually, through the years, weeded my habits of many of the meaningless societal norms I had programmed into me as a child. For example, Kelly and I don't celebrate Valentine's Day or religious holidays for faiths we don't hold (so, really, any of them). And, birthdays are just arbitrary landmarks in an ever-accruing collection of minutes and seconds between birth and death. Christmas, Easter, Halloween, etc. are just days like any other. "Bah, humbug" says this crusty, aging ruiner-of-annual-spirit!
+
+For some reason people pay special attention to the birthdays and anniversaries that are evenly divisible by 10. Why 10? What's so special about 10? Sure, it has some interesting mathematical properties, but we don't tend to make much use of them when we measure time.
+
+I can't remember my 10th, 20th, or 30th birthdays.  I don't recall having done anything spectacular while I was of those ages. Nothing especially remarkable happened to me when I was 10, 20, or 30.
+
+But, here I am at 40, somehow unable to shake the made-up significance of this particular instance of modulus 10 equaling zero.
+
+Here are some facts about becoming 40:
+
+* The vast majority of people from my part of the world live to be at least 40. It's only one day more remarkable than turning 39 + 364 days. And in fact one day _less_ remarkable than turning 39 + 366 days (depending on leap years I guess).
+* At 40, I'm statistically probably over half way through with my life. While this might sound heavy, it's actually already been [true for a few years](http://en.wikipedia.org/wiki/List_of_U.S._states_by_life_expectancy). I just didn't write about it then, because my age wasn't evenly divisbile by 10.
+* My turning 40 is slightly more remarkable than my birth and my eventual death. Everybody is born and everybody dies. Not _everybody_ turns 40.
+* At this age, I'm becoming aware of just how long and short 40 years is. Literally everything that has ever happened to me can fit into 40 years. If I do another 40, twice as much can happen in total, but...
+* Relative to the age of the earth or many other arbitrarily choosable lengths of time, 40 years is so insigificant I might as well not even exist.
+* 40 years ago today, my amazing, kind, wise mother must have been going through one of the most terrifying experiences of her life. She was 19, and I was a human being coming into the world that she was going to have to somehow take care of.  I try to imagine myself doing this at 19. What an imaginary disaster! I hope I've been worth it. She sure did a great job, especially during those times when I was an unreasonable mess (specifically, when I was... _19_!!!).
+
+Now that I'm old, I'm supposed to be able to give young people advice. I don't really have any, so instead I'll give young readers a glimpse into what 40 is like (for me, anyway).  Here goes.
+
+Being 40 feels very much like being 30. Except your body hurts more. I say that even as someone who is in significantly better shape at 40 than I was at 30.  It still literally hurts. Everyone likes to joke about this, so you think it's just a joke like those idiotic jokes everyone likes to tell about being chained to their spouses and. But it's real. Sorry about that. Also, I can't stay awake as long as I used to without getting seriously grumpy. I'm pretty sure I'm generally less fun than I used to be. That's saying something, because I've probably never been the person people considered to be "fun" anyway.
+
+But that's all superficial. At 40 I feel a much greater sense of appreciation for all I have and all I have been able to do in my life.  I [won at marriage](http://kellyjeanne.org). I've made a [remarkable career for myself](http://pragprog.com/book/cfcar2/the-passionate-programmer). I've had the privilege to travel around the world, working, meeting people, speaking at conferences, and generally exceeding any expectation I've ever had for how things would turn out.
+
+And I feel a much stronger sense of urgency to remember to appreciate every minute of every day.  I'm professionally much more accomplished than I was at 20 or 30. But I don't feel the magnitude of that every day. Those things even themselves out on the [hedonic treadmill](http://en.wikipedia.org/wiki/Hedonic_treadmill).
+
+I do, however, feel the magnitude of my increasing, deepening love for my wife and my family. I understand more accutely the rarity of true friendship and the scarcity of [empathy](http://chadfowler.com/blog/2014/01/19/empathy/). And I have learned to differentiate between proximity and truth when it comes to human relationships. A relationship doens't have to be constantly tended to to remain precious.
+
+Like turning 40, none of these realizations is remarkable. But, sometimes just feeling and expressing is enough. As I get older I realize not everything I do has to be an attempt to be remarkable.
+
+I hope you have a good day today, even if--especially if--it's not your birthday. Thanks for reading this.
