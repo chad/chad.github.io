@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-05-11T09:48:41+02:00</updated>
+  <updated>2014-05-11T11:51:40+02:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[On Being 40]]></title>
-    <link href="http://chadfowler.com/blog/2014/05/10/on-being-40/"/>
-    <updated>2014-05-10T19:03:00+02:00</updated>
-    <id>http://chadfowler.com/blog/2014/05/10/on-being-40</id>
+    <link href="http://chadfowler.com/blog/2014/05/11/on-being-40/"/>
+    <updated>2014-05-11T09:03:00+02:00</updated>
+    <id>http://chadfowler.com/blog/2014/05/11/on-being-40</id>
     <content type="html"><![CDATA[<p>Today I am 40 years old.</p>
 
 <p>40 is a confusing age. Old enough to not be a kid anymore by any reasonable definition.  Still young, inexperienced, and stupid enough to feel like one anyway. Maybe that last bit never goes away. Maybe it only intensifies.</p>
