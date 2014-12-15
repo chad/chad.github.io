@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Valueless Software - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Today, Dave questioned the emphasis on nouns over verbs in software development. This hit a nerve. The thought that most stands out to me is: Once I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/2003/03/25/valueless-software">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Valueless Software</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2003-03-25T00:00:00+01:00'><span class='date'>2003.03.25</span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Today, Dave <a href="http://www.pragprog.com/pragdave/Practices/Artifacting.rdoc,v">questioned the emphasis</a> on nouns over verbs in software development.  This hit a nerve.<br />
+<p><br />
+The thought that most stands out to me is:<br />
+<pre><br />
+	Once I started thinking about this as a pattern, <br />
+	it started to change the way I look at many of the <br />
+	other artifacts we produce (including the <br />
+	delivered programs themselves).<br />
+</pre><br />
+<P><br />
+Some people say that programming is an art form.  This is significantly less popular than the programming-as-engineering metaphor, but assuming it has some merit, there seem to be some holes (or lessons-to-be-learned, perhaps) in the way we practice.  Without going into a full scale contrast between the practice of programming and, say, music, there is one particular aspect of practicing &#8220;art&#8221; which seems conspicuously missing from the every day work of the programmer.  As a musician, I might spend a significant portion of my practice schedule playing things that nobody would want to listen to.  This might include scales, arpeggios, extended tones (good for improving control on wind instruments, for example), and various technical patterns.  I would certainly never record them and release them on a CD.   I wouldn&#8217;t even bore anyone with these sounds unless they either lived in my house and had no choice or were being paid to listen to them and offer suggestions for improvement.  This is an example of &#8220;work&#8221; in which the action is far more valuable than the direct output.<br />
+<P><br />
+Musicians don&#8217;t just do these things in the early stages of their development.  They continue throughout their careers.  In my experience, the <i>specific</i> things they practice change over time, usually decreasing in stand-alone value with experience.  For example, one of my last saxophone teachers, <a href="http://cuneiformrecords.com/bandshtml/cartwright.html">George Cartwright</a>, spent a great deal of his practice time doing nothing but playing a single note and listening to it.  It would be absolutely unnerving to listen to if you weren&#8217;t George himself.  The way he played the notes didn&#8217;t even sound good.  But, the output wasn&#8217;t the point.  It was the act. <br />
+<P><br />
+Something I learned as a saxophonist is that the less valuable the direct output of that which you practice, the more emphasis you will place on the act of practicing.  I can learn more, for instance, from making horrid noises for 30 minutes than I can from learning a Charlie Parker solo and playing it from memory.  Why is this?  I&#8217;m so focused on the output of the Charlie Parker solo&#8212;making it sound good, feeling good as a result&#8212;that I forget to focus on the process of learning it, and important bits of information are liable to fall through the proverbial cracks.<br />
+<P><br />
+I started thinking about this about a year and a half ago, on my return trip from the first <a href="http://www.rubyconf.org">International Ruby Conference</a>.  In software development, even for hobbyists like me, we&#8217;re almost always focused on creating something useful.  If software is simply a craft or an engineering discipline, this doesn&#8217;t seem strange, but if it&#8217;s an art, this is a big hole.  If I&#8217;m trying to make a cool new <span class="caps">CGI</span> program for my web site, I&#8217;m probably more interested in the feature I&#8217;m implementing than the fact that I&#8217;m implementing it.  Eric Raymond says that Open Source software &#8220;scratches an itch&#8221; of the programmer that creates it, meaning that the programmer finds something missing and creates software to fill the void.  And, of course, in commercial software development, we get paid to create something&#8212;not to learn how to code. <br />
+<P><br />
+Back to Dave&#8217;s point (though I wouldn&#8217;t guess that he was thinking <i>exactly</i> this), the emphasis is entirely on the artifact (in this case, the functioning piece of software) and not so much on the process of development.  From hobbyists to professionals, we&#8217;re all very focused on creating useful stuff.<br />
+<P><br />
+This is why I developed (among other less publishable &#8220;pieces&#8221;) <a href="http://chadfowler.com/ruby/rubyook/">Ruby Ook</a>, which is an interpreter for a language so useless that the language&#8217;s designer never bothered to write an interpreter or compiler for it.  I knew that in the end, it would take so long to write an Ook program, that I probably wouldn&#8217;t ever bother.  It was a perfect chance to write something that, though implementing a &#8220;requirement&#8221;, had an end result of almost no value.  It felt great.  I worked on it on and off during a single weekend and found myself scrapping bits, refactoring, testing everything&#8212;cutting no corners.  After all, why should you cut a corner when you don&#8217;t care if you ever get to your destination?  In the end, I had some code which I was extremely proud of.  Even if it&#8217;s useless, I knew that I hadn&#8217;t compromised in its creation.  And, even though the end result isn&#8217;t very big or impressive (even in terms of its internals), I learned a lot about how I think and program in the process.<br />
+<P><br />
+A few years ago, a friend of mine read an eastern philosophy book called (something like) <B>The Path With No Destination</B>.  At the time, it sounded like a pretty hokey title.  But, over the past couple of years, I&#8217;ve thought about it often.  I don&#8217;t even know what the book is about, but the title has taken on its own meaning to me.  Whether it&#8217;s music, programming, work, or life in general, you generally spend a lot more time on the &#8220;path&#8221; than you do at the &#8220;goal&#8221;.  Your experience will be richer and you&#8217;ll learn a lot more if you keep that in mind.</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2003-03-25T00:00:00+01:00'><span class='date'>2003.03.25</span> <span class='time'>12:00 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chadfowler.com/blog/2003/03/25/valueless-software/" data-via="chadfowler" data-counturl="http://chadfowler.com/blog/2003/03/25/valueless-software/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2003/03/22/barcelona-days-7-inspect/" title="Previous Post: Barcelona.days[7].inspect">&laquo; Barcelona.days[7].inspect</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2003/03/29/spaces/" title="Next Post: Spaces
+">Spaces
+ &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">GitHub</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://linz.kod.io/">microxchg</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">February 12, 2015</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/chicago-2015">GOTO Chicago</a></span>
+        <span class="location">Chicago</span>
+        <span class="the-date">May 11, 2015</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/14/do-you-give-energy-or-take-energy/">Do You Give Energy or Take Energy?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/25/the-curse-of-a-name-how-to-kill-a-good-idea/">The Curse of a Name: How to Kill a Good Idea</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/13/must-read-software-development-books/">Must-Read Software Development Books</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/on-being-40/">On Being 40</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/26/the-magic-of-strace/">The Magic of Strace</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RubyGem of the Month - Rails - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="I&#8217;ve decided to highlight Rails this month, because it&#8217;s
+remarkably boring. That&#8217;s right: Boring. Even David Heinemeier Hansson ( &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/2004/08/17/rubygem-of-the-month-rails">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">RubyGem of the Month - Rails</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2004-08-17T00:00:00+02:00'><span class='date'>2004.08.17</span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&#8217;ve decided to highlight <a
+href="http://www.rubyonrails.org">Rails</a> this month, because it&#8217;s<br />
+remarkably <em>boring</em>.</p>
+<p>
+<p>That&#8217;s right: Boring. Even David Heinemeier Hansson (its author) <a
+href="http://www.loudthinking.com/arc/000255.html">agrees</a>.</p>
+</p>
+<p>
+<p>I started writing a little web application for my <a
+href="http://gomanginstitute.org">other non-profit</a> to put Rails through<br />
+its paces. Armed with experience, let me step you slowly through its<br />
+ever-so-boring pieces:</p>
+</p>
+<ul>
+<li><b>Installation</b> is a total snoozer.<br />
+<br />
+<pre><br />
+      [chad@mymachine]$ sudo gem install rails<br />
+      Attempting local installation of &#8216;rails&#8217;<br />
+      Local gem file not found: rails.gem<br />
+      Attempting remote installation of &#8216;rails&#8217;<br />
+      Install required dependency rake? [Yn]   y<br />
+      Install required dependency activerecord? [Yn]   y<br />
+      Install required dependency actionpack? [Yn]   y<br />
+      Successfully installed rails, version 0.6.0<br />
+<br />
+      [chad@mymachine]$ mkdir -p ~/code/ruby<br />
+      [chad@mymachine]$ rails ~/code/ruby/mynewsite<br />
+      [chad@mymachine]$ cd ~/code/ruby/mynewsite<br />
+      [chad@mymachine]$ public/dispatch.servlet<br />
+      [2004-08-16 22:34:15] <span class="caps">INFO</span>  WEBrick 1.3.1<br />
+      [2004-08-16 22:34:15] <span class="caps">INFO</span>  ruby 1.8.1 (2003-12-25) [i686-linux]<br />
+      [2004-08-16 22:34:15] <span class="caps">WARN</span>  TCPServer Error: Address family not supported by protocol &#8211; socket(2)<br />
+      [2004-08-16 22:34:15] <span class="caps">INFO</span>  WEBrick::HTTPServer#start: pid=21242 port=3000<br />
+</pre></li>
+</ul>
+<p>
+<p>Not only did this install Rails and all of its dependencies (using <a
+href="http://rubygems.rubyforge.org">RubyGems</a>, of course), but the last<br />
+little bit setup a new Rails workspace with everything I needed to actually<br />
+run a Rails application and then started it up with Webrick. Where are all<br />
+of the <span class="caps">XML</span> config files that I love so much to squint at?</p>
+</p>
+<ul>
+<li>Writing <b>database</b> code is even worse. For the basics, you don&#8217;t<br />
+have to do <em>any</em> coding. What kind of <em>sick</em> mind was behind<br />
+<a href="http://activerecord.rubyonrails.org/">ActiveRecord</a> anyway? How<br />
+are we programmers supposed to stay employed if there&#8217;s no work for<br />
+us to do?</li>
+<li><b>Gluing</b> this all together to get an end-to-end web application<br />
+working is the biggest non-event yet. Roughly:<br />
+<br />
+<pre><br />
+      scaffold :tablename<br />
+</pre></li>
+</ul>
+<p>
+<p>That sets up &quot;scaffolding&quot; which creates (in the runtime<br />
+environment) controller, view, and model code to fully manipulate the table<br />
+that you point to. In case you missed it (it was quick), here it is again:</p>
+</p>
+<pre>
+        scaffold :tablename
+</pre>
+<ul>
+<li>The most frustratingly boring part of all of this is the<br />
+<b>documentation</b>. David&#8217;s got videos, wikis, tutorials and demo<br />
+apps (all on <a href="http://www.rubyonrails.org">www.rubyonrails.org</a>),<br />
+which means I didn&#8217;t get the fun of having to wade through<br />
+Rails&#8217; source code every time I wanted to implement a new feature for<br />
+my web application.</li>
+</ul>
+<p>
+<p>Despite being arguably the most boring web framework I&#8217;ve ever seen,<br />
+a lot of people seem to be coming to Rails from all over the place. <a
+href="http://www.loudthinking.com/arc/000276.html">Even the DotNet and Java<br />
+guys</a>, who <em>definitely</em> don&#8217;t seem to like being bored with<br />
+nothing to do (All that Static Typing leads to lots of Typing) seem to be<br />
+coming around to Ruby-land as a result of Rails.</p>
+</p>
+<p>
+<p>I hear there are talks about porting this thing to languages like Python<br />
+and <span class="caps">TCL</span> (Java, too? Is it possible in Java?).</p>
+</p>
+<p>
+<p>Thankfully, though Rails itself is boring, it stays out of the way, and you<br />
+can do really interesting things <em>with</em> it.</p>
+</p>
+<p>
+<p>I hear that <a href="http://rubygems.org">this</a> is destined to be one of<br />
+the more interesting examples&#8230;</p>
+</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2004-08-17T00:00:00+02:00'><span class='date'>2004.08.17</span> <span class='time'>12:00 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chadfowler.com/blog/2004/08/17/rubygem-of-the-month-rails/" data-via="chadfowler" data-counturl="http://chadfowler.com/blog/2004/08/17/rubygem-of-the-month-rails/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2004/08/17/is-ruby-readable/" title="Previous Post: Is Ruby Readable?
+">&laquo; Is Ruby Readable?
+</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2004/08/22/gem-watch/" title="Next Post: Gem Watch
+">Gem Watch
+ &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">GitHub</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://linz.kod.io/">microxchg</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">February 12, 2015</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/chicago-2015">GOTO Chicago</a></span>
+        <span class="location">Chicago</span>
+        <span class="the-date">May 11, 2015</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/14/do-you-give-energy-or-take-energy/">Do You Give Energy or Take Energy?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/25/the-curse-of-a-name-how-to-kill-a-good-idea/">The Curse of a Name: How to Kill a Good Idea</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/13/must-read-software-development-books/">Must-Read Software Development Books</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/on-being-40/">On Being 40</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/26/the-magic-of-strace/">The Magic of Strace</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

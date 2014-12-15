@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Not So Fast (Ruby Continuations) - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="Some people are happy,
+and some people are sad.
+But the truth of the matter is, as Pat mentions in a comment on
+Patrick&#8217;s post, Matz and Koichi &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/2006/10/27/not-so-fast-ruby-continuations">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Not So Fast (Ruby Continuations)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2006-10-27T00:00:00+02:00'><span class='date'>2006.10.27</span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Some people are <a
+href="http://pluralsight.com/blogs/dbox/archive/2006/10/25/41184.aspx">happy</a>,<br />
+and some people are <a
+href="http://patricklogan.blogspot.com/2006/10/ruby-sucks.html">sad</a>.<br />
+But the truth of the matter is, as <a
+href="http://on-ruby.blogspot.com">Pat</a> mentions in a comment on<br />
+Patrick&#8217;s post, Matz and Koichi are still planning to implement<br />
+continuations for Ruby 2.0.</p>
+<p>
+<p>&quot;If it&#8217;s not too hard&quot;, said Matz over breakfast. Koichi<br />
+then nodded quickly and nervously, not looking up from the <span class="caps">YARV</span> source on<br />
+his laptop (which was given higher priority real estate on the table than<br />
+his breakfast plate).</p>
+</p>
+<p>
+<p><a href="http://headius.com/">Charles</a> says he can do them in JRuby. <a
+href="http://weblogs.asp.net/scottgu/">Scott</a> told me he had some ideas<br />
+on how to do them on .<span class="caps">NET</span>. My money&#8217;s on Koichi for making it happen.</p>
+</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2006-10-27T00:00:00+02:00'><span class='date'>2006.10.27</span> <span class='time'>12:00 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chadfowler.com/blog/2006/10/27/not-so-fast-ruby-continuations/" data-via="chadfowler" data-counturl="http://chadfowler.com/blog/2006/10/27/not-so-fast-ruby-continuations/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2006/09/16/a-big-global-circle/" title="Previous Post: A Big Global Circle
+">&laquo; A Big Global Circle
+</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2006/11/20/first-time-on-the-rails-edge/" title="Next Post: First Time on The Rails Edge">First Time on The Rails Edge &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">GitHub</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://linz.kod.io/">microxchg</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">February 12, 2015</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/chicago-2015">GOTO Chicago</a></span>
+        <span class="location">Chicago</span>
+        <span class="the-date">May 11, 2015</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/14/do-you-give-energy-or-take-energy/">Do You Give Energy or Take Energy?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/25/the-curse-of-a-name-how-to-kill-a-good-idea/">The Curse of a Name: How to Kill a Good Idea</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/13/must-read-software-development-books/">Must-Read Software Development Books</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/on-being-40/">On Being 40</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/26/the-magic-of-strace/">The Magic of Strace</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

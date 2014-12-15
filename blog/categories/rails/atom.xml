@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails, | Chad Fowler]]></title>
+  <link href="http://chadfowler.com/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2014-12-15T09:53:51+01:00</updated>
+  <id>http://chadfowler.com/</id>
+  <author>
+    <name><![CDATA[Chad Fowler]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails 3 Recipes Needs Tech Reviewers!]]></title>
+    <link href="http://chadfowler.com/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers/"/>
+    <updated>2011-02-09T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/02/09/rails-3-recipes-needs-tech-reviewers</id>
+    <content type="html"><![CDATA[<p><b>UPDATE: We got 8 times as many volunteers for Rails 3 Recipes reviews as we need.  You people are awesome!  Closing the call for help now.</b></p>
+
+<p>The original &#8220;Rails Recipes&#8221;:http://www.pragprog.com/titles/fr_rr/rails-recipes has been used by tens of thousands of Rails developers as they&#8217;ve worked toward mastering everyone&#8217;s favorite Web framework.  Five years later, and after the release of Rails 3, we&#8217;re seeing a new wave of Rails developers.  Through my work with &#8220;InfoEther&#8221;:http://infoether.com and &#8220;The Pragmatic Studio&#8221;:http://pragmaticstudio.com it&#8217;s clear that an updated version of this classic would help a huge group of new Rails developers.</p>
+
+<p>So here comes Rails 3 Recipes!</p>
+
+<p>I&#8217;m a little over half way done with the new edition, which is full of both substantially updated and entirely new content.  Now I need your help.</p>
+
+<p>Before we take the book to Beta, we need technical reviewers.  To tech review, you need to either already know Rails fairly well or be interested in trying to use the book to learn (some Rails knowledge is assumed).</p>
+
+<p>In return for your comments, we&#8217;ll give you a free copy of the electronic and paper versions of the book as well as a mention in the book itself.</p>
+
+<p>Interested?  If so, please contact us at &#8220;rails3recipes@gmail.com&#8221;:mailto:rails3recipes@gmail.com and let us know your level of Rails expertise.  We can only handle a certain number of reviewers (probably 15), so we&#8217;ll be limited to accepting the first who get in touch.</p>
+
+<p>To those who are interested, THANK YOU!!!!!!</p>
+
+<p>If the original Rails Recipes&#8217; success is any indicator, Rails 3 Recipes is going to be <em>the</em> book every Rails developer will have sitting on his or her desk over the next couple of years. I&#8217;m very excited about it and looking forward to some feedback.</p>
+
+<p>!http://chadfowler.com/rr2.jpg(width 120)!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Rails Developers Do Ajax (With jQuery) in 2011]]></title>
+    <link href="http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011/"/>
+    <updated>2011-02-09T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/02/09/how-rails-developers-do-ajax-with-jquery-in-2011</id>
+    <content type="html"><![CDATA[<p>Wanting to survey what the current state of the art in Rails Ajax development is, I asked this question on twitter:</p>
+
+<p><a href="http://twitter.com/#!/chadfowler/status/35068144976404480"><img src="http://chadfowler.com/ajax_question.png" alt="Rails developers, how are you doing Ajax with JQuery these days? .js.erb templates? Rendering partials back old-style?"/></a></p>
+
+<p>I got a lot of great responses!  44 last time I checked. Here&#8217;s what I found out people are doing:</p>
+
+<ul>
+<li>&#8220;mustache.js&#8221;:https://github.com/janl/mustache.js</li>
+<li>Sending JavaScript back down to the client using .js.erb template files (Ryan Bates linked a couple of examples &#8220;here&#8221;:http://bit.ly/YCunh and &#8220;here&#8221;:http://bit.ly/dHbKW5)</li>
+<li>&#8220;JQuery templates&#8221;:http://api.jquery.com/jQuery.template/</li>
+<li>Hitting RESTFUL endpoints and responding with JSON data to be manipulated on the client</li>
+<li>Using &#8220;backbone.js&#8221;:http://documentcloud.github.com/backbone</li>
+<li>Rendering partials and updating elements on the page with their raw content (the original old-school Rails way of doing it)</li>
+<li>Use &#8220;SammyOnRails&#8221;:https://github.com/mrb/sammyonrails</li>
+</ul>
+
+
+<p>There is definitely a divide and a lot of opinion (suprise!) between those who are OK with delivering JavaScript and/or HTML from the server to be rendered on the client and those who prefer to deliver data and have the client process it.  I&#8217;d characterize the former as the less clean, more pragmatic approach and the latter as the idealistic cleaner approach.  It seems that tools like mustache.js, backbone, JQuery templates, and Sammy.js are tightening the gap between quick + dirty and slow + clean.</p>
+
+<p>What do you think?  What did we miss?</p>
+]]></content>
+  </entry>
+  
+</feed>

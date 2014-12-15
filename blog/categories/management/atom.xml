@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Management, | Chad Fowler]]></title>
+  <link href="http://chadfowler.com/blog/categories/management/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2014-12-15T09:53:51+01:00</updated>
+  <id>http://chadfowler.com/</id>
+  <author>
+    <name><![CDATA[Chad Fowler]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Automation and Outsourcing]]></title>
+    <link href="http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing/"/>
+    <updated>2011-02-18T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/02/18/automation-and-outsourcing</id>
+    <content type="html"><![CDATA[<p>What&#8217;s the difference between automation and outsourcing?</p>
+
+<p>I don&#8217;t know if it&#8217;s the same everywhere, but here in the USA we&#8217;re deluged with fear-driven &#8220;news&#8221; reporting, decrying the theft or export of our jobs to low cost, less skilled, offshore labor.  Or even onshore &#8220;illegal&#8221; labor.  It might be Mexico. Or China. Or India.  In the 80s it was the Japanese. And it was robots and computers.</p>
+
+<p>I&#8217;m not going to argue whether any of this is true or worth being upset about here.  &#8220;I&#8217;ve done it elsewhere.&#8221;:http://pragprog.com/titles/cfcar2/the-passionate-programmer  What I&#8217;m interested in here is the question: what if, as individuals, instead of fearing outsourcing, offshoring, and automation, we decided to use it to our advantage?</p>
+
+<p>The standard argument against offshore outsourcing goes like this:  Offshore people don&#8217;t understand the work, or the culture, or don&#8217;t care about quality or just aren&#8217;t as good.  They might be cheaper by the hour, but they&#8217;re more expensive in the long run.</p>
+
+<p>OK.  That&#8217;s a hard one to disprove.  It&#8217;s also kind of hard to prove.  Regardless, hold that thought</p>
+
+<p>!http://farm1.static.flickr.com/16/21042744_0640512665.jpg!
+http://www.flickr.com/photos/dancoulter/21042744/</p>
+
+<p>In this day and age, we&#8217;ve collectively gotten over the fear that computers will replace us all.  We&#8217;re used to the idea that certain tasks can and should be automated.  For the younger readers, did you know that there was such thing as a spreadsheet before computer existed?  That&#8217;s right.  It was roughly the same except a <em>person</em> had to calculate each value!  And if any numbers changed, guess what happened?  Someone had to recalculate them!</p>
+
+<p>Anybody want that job?  I didn&#8217;t think so.</p>
+
+<p>So that&#8217;s automation.  If you think <em>really</em> hard about what you do every day, I bet you can come up with a few things that could be automated so you wouldn&#8217;t have to do them anymore.  You wouldn&#8217;t feel bad about those things.  You&#8217;d be saving yourself time and saving your employers money if you could automate them.  Software developers spend their careers doing this for others.</p>
+
+<p>Anything that could be done by a computer or a robot (roughly) just as well as it could be done by a human should be automated.  That frees the people up to <em>think</em>.  That&#8217;s what we want, ya?  Hurray!</p>
+
+<p>Some tasks are almost automate-able.  But they just need that little extra push.  For example, human language is hard to parse.  It&#8217;s not exact enough to write reliable programs (usually) to read and act on.  So what do you do with those tasks that seem mundane enough to automate but can&#8217;t actually be done without a human?</p>
+
+<p>Outsource!</p>
+
+<p>Outsourcing might mean giving the task to a more junior person you already work with. It might mean hiring someone on another continent who costs a fraction per hour than you do and can be trained to do the mundane work you do.  It might mean taking on &#8220;an apprentice&#8221;:http://oreilly.com/catalog/9780596518387 and teaching them as they handle the &#8220;easy&#8221; stuff.</p>
+
+<p>But, the fact of the matter is, in the work that most of us do every day there are things we could have someone less experienced do for us. And if that person is happy to do it, benefits from it in some way, costs less than we do, or is just <em>willing</em> when we are not, it&#8217;s not a bad thing to try.</p>
+
+<p>If you continually do things that are &#8220;below your pay grade&#8221;, you&#8217;re wasting precious time or money.</p>
+
+<p>At the end of the day today, think about what you did today.  Given a little time, how much of it could have been automated?</p>
+
+<p>Given a little time to document what needed to be done, how much of it could have been done just as well by someone else who is maybe less skilled or less expensive than you?</p>
+]]></content>
+  </entry>
+  
+</feed>

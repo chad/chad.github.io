@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>RailsConf Speaker Interview: Charlie Nutter and Evan Phoenix - Chad Fowler</title>
+  <meta name="author" content="Chad Fowler">
+
+  
+  <meta name="description" content="As I did for last year&#8217;s RubyConf, I&#8217;m starting a series of interviews of speakers at this year&#8217;s RailsConf to be held May 4-7 in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chadfowler.com/blog/2009/03/10/railsconf-speaker-interview-charlie-nutter-and-evan-phoenix">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Chad Fowler" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Chad Fowler</a></h1>
+  
+    <h2>the passionate programmer, author, speaker, musician, technologist, CTO</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chadfowler.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">RailsConf Speaker Interview: Charlie Nutter and Evan Phoenix</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2009-03-10T00:00:00+01:00'><span class='date'>2009.03.10</span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>As I did for last year&#8217;s <a href="http://chadfowler.com/rubyconf-speaker-interviews">RubyConf</a>, I&#8217;m starting a series of interviews of speakers at this year&#8217;s <a href="http://railsconf.org">RailsConf</a> to be held May 4-7 in Las Vegas.</p>
+<p>First up are two of my Ruby heroes: <a href="http://blog.headius.com/">Charlie Nutter</a> and <a href="http://blog.fallingsnow.net/">Evan Phoenix</a>, leaders of the <a href="http://jruby.org">JRuby</a> and <a href="http://rubini.us">Rubinius</a> projects respectively. Whenever two people with the brains and determination to create a working Ruby implementation get together and want to impart some hard-earned wisdom, it&#8217;s well worth listening.</p>
+<p>Charlie and Evan will be jointly presenting a session called <a href="http://en.oreilly.com/rails2009/public/schedule/detail/8680">What Makes Ruby Go: An Implementation Primer</a> at RailsConf.  Probably one of the nerdier sessions at the conference, but as you&#8217;ll see there are big practical benefits to learning how Ruby implementations work, even for those of us who don&#8217;t have the time, skill, or interest to create our own.</p>
+<h2>This being a Rails conference, what&#8217;s the benefit for the average attendee in learning how to make a Ruby implementation? How can learning how to program Ruby itself help us become better Ruby (and Rails) programmers?</h2>
+<p><em>Evan</em>: One thing we&#8217;re going to focus is not just how to build a ruby implementation, but rather helping people understand how certain things have to be implemented and how they effect you. A great example is the method cache and how Object#extend effects it. This helps educate people on how using Object#extend in their code effects their application.</p>
+<p><em>Charlie</em>: Ruby does a really good job of hiding implementation details and hardware details and platform details. Unfortunately sometimes those are the details that mean the difference between a good application and a great one. My hope with this talk is that Ruby and Rails developers will not only learn how their favorite language is implemented, but how to make better use of its features.</p>
+<p>I think it will also be important for Rubyists to understand Ruby implementation details in the future, since there are very real limitations on how many features and how much performance you can squeeze out of Ruby. It&#8217;s often too easy for Ruby users to say &#8220;just make it faster&#8221; when they don&#8217;t understand how difficult it may be to do so.</p>
+<h2>Did you both get into this language/vm implementation thing as a hobby? How do you go from zero to leading a dynamic language implementation?</h2>
+<p><em>Evan</em>: Yep, just something fun to work on in my spare time. Following in others footsteps certainly helped the project along. Reading a lot of papers and such on early Smalltalk systems helped give me a good perspective.</p>
+<p><em>Charlie</em>: I got into JRuby after attending RubyConf 2004, where I was amazed that without knowing Ruby I understood every presentation. Since I was firmly rooted in the Java world, and since the JRuby project existed and was being managed by an old friend, I thought I&#8217;d try to help out.</p>
+<p>Since then, we&#8217;ve almost completely rewritten JRuby. We&#8217;ve taken it from being the slowest Ruby impl to one of the fastest. Where we could barely run any 1.8 code before, we now have dozens of production users. And we&#8217;re not even done yet; we have a great start on 1.9 support, and we have plans that could double performance again over the next couple months. It&#8217;s been a wild ride; Ruby and JRuby have changed my life.</p>
+<h2>How long do you think it will be before we start seeing Ruby 1.9 as the mainstream version everyone (developers and language implementors) is targeting?</h2>
+<p><em>Evan</em>: Honestly, I&#8217;ve got no idea. Implementors will likely not put too much energy into 1.9 compatibility until a lot of developers start calling for it. Because of all the changes to the APIs, my guess is that people will only start using 1.9 on new projects. So once 1.9 has been established as &#8216;stable enough&#8217;, people will consider using it when they&#8217;re getting started on something new.</p>
+<p>I think the biggest issue is not new applications, but rather libraries. Today&#8217;s rails apps probably use at least 10 gems. Those 10 developers that have to be aware of 1.9 compatibility. If they&#8217;re not, it&#8217;s likely that those gems will have issues under 1.9. How gem users and gem authors decided to sort out 1.9 compatibility will be something interesting to watch for.</p>
+<p><em>Charlie</em>: Ruby 1.9 is a great step forward for the C implementation, both in its improved performance and and its new features. But Ruby has reached a point in its lifecycle Java reached some years ago: getting people to move to a new version is like pulling teeth. We deal with people on a regular basis still running Java 1.4, even though it&#8217;s no longer a supported platform and was first released over six years ago. I don&#8217;t think it will be that bad for Ruby 1.9, but it&#8217;s a very similar situation.</p>
+<p>Ruby has matured, and is being used for mission-critical applications around the world. And along with that maturity comes a need for stability, not just stability in the implementations but stability of features and stability of development processes. Ruby 1.9.1, by most measures the first reasonably &#8220;stable&#8221; 1.9 release, has been out for less than two months, and it&#8217;s unclear how much more its features will change in 1.9.2 and beyond. It&#8217;s not battle-tested. It&#8217;s unfamiliar. And it will take time for people to start depending on 1.9 to help pay their bills&#8230;certainly more than a couple months.</p>
+<h2>If you had to quit using and developing for Ruby today, what do you think you would focus on?</h2>
+<p><em>Evan</em>: Hm. Lately I&#8217;ve been interested in Cocoa programming, both desktop and iPhone, so it&#8217;s likely I&#8217;d play with that to a certain extent.</p>
+<p>Knowing me, I&#8217;d probably start work on a brand new language and VM for fun. :)</p>
+<p><em>Charlie</em>: I don&#8217;t intend to work on JRuby forever, so this is a question often on my mind.</p>
+<p>In general, I hope to spend the rest of my life helping open platforms like the <span class="caps">JVM</span> &#8220;win&#8221; against closed, proprietary alternatives. My work on JRuby has been a lot of fun, but I&#8217;ve also been trying to prove a point: that the <span class="caps">JVM</span> is the best hope for language implementations in the future. Yes, it has its warts, and there&#8217;s some work needed to better support dynamic and functional languages. But it&#8217;s an amazing piece of technology, already one of the fastest (if not the fastest) managed runtimes in existence. With implementations like JRuby stretching it and nudging it forward, we&#8217;ll all benefit&#8230;and we&#8217;ll be able to use any language we choose.</p>
+<p>So if I didn&#8217;t work on or with Ruby anymore&#8230;I&#8217;d probably be doing the same thing for other languages on the <span class="caps">JVM</span>. But I like Ruby best so far :)</p>
+<h2>Creating an implementation of Ruby takes countless hours of work. How do you avoid burning out, and what are you passionate about outside of programming?</h2>
+<p><em>Evan</em>: This takes work for me, to avoid burnout. I&#8217;ve grown good at telling when I&#8217;m starting to go down that road and take action. One of the first things I do is a change of scenery, typically this means working in a coffee shop for the day. I also head up to San Francisco usually once a month to work in the EY office, which helps.</p>
+<p>Getting outside for some exercise helps clear my head and reduce stress levels, which also stave off burnout.</p>
+<p>I also try and switch gears within Rubinius. Usually my burnout is associated with frustration with one particular aspect of the project, for instance debugging a garbage collector. The project is big enough that I can set that aside for a bit and switch to something more exciting. This helps me keep my brain engaged in the project as a whole, but avoid that frustration.</p>
+<p><em>Charlie</em>: For me, programming is not what leads to burnout. I&#8217;ve done this stuff my whole life, and it&#8217;s hard for me to <strong>not</strong> be hacking at any hour of the day. It&#8217;s more than my job, it&#8217;s my vocation. My risk of burnout comes from the constant arms race with other Ruby implementations, other <span class="caps">JVM</span> language implementations, other managed platforms, and so on.</p>
+<p>While I&#8217;m proud of what we&#8217;ve accomplished with JRuby, I feel like I need to keep working at a breakneck pace to continue proving my point. Whenever someone posts a benchmark showing we&#8217;re slower, I feel obligated to fix the problem. Whenever someone talks about a new <span class="caps">JVM</span> dynamic language or Ruby implementation performing better, I feel like I am personally under attack. I&#8217;ve poured my heart and soul into JRuby, and there&#8217;s a lot of my spirit in there. If JRuby fails, I fail, so I work hard (maybe too hard) to ensure that doesn&#8217;t happen.</p>
+<p>Of course, it could be I need to get out more. :)</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chad Fowler</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2009-03-10T00:00:00+01:00'><span class='date'>2009.03.10</span> <span class='time'>12:00 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://chadfowler.com/blog/2009/03/10/railsconf-speaker-interview-charlie-nutter-and-evan-phoenix/" data-via="chadfowler" data-counturl="http://chadfowler.com/blog/2009/03/10/railsconf-speaker-interview-charlie-nutter-and-evan-phoenix/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/02/08/one-more-week-for-railsconf-proposals/" title="Previous Post: One More Week for RailsConf Proposals">&laquo; One More Week for RailsConf Proposals</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/03/16/railsconf-speaker-interview-obie-fernandez/" title="Next Post: RailsConf Speaker Interview: Obie Fernandez">RailsConf Speaker Interview: Obie Fernandez &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <ol id="social-media-links">
+  <li class="github"><a href="https://github.com/chad?rel=author">GitHub</a></li>
+  <li class="twitter"><a href="https://twitter.com/chadfowler?rel=author">Twitter</a></li>
+  <li class="google-plus"><a href="https://plus.google.com/115940317748827567617?rel=author">Google Plus</a></li>
+  <li class="rss"><a href="http://feeds.feedburner.com/ThePassionateProgrammer">RSS</a></li>
+</ol>
+<section id="upcoming-speaking" class="widget">
+  <h2 class="widget-header">See Me Speak</h2>
+  <ol>
+      <li class="vevent">
+        <span class="summary"><a href="http://linz.kod.io/">microxchg</a></span>
+        <span class="location">Berlin</span>
+        <span class="the-date">February 12, 2015</span>
+      </li>
+      <li class="vevent">
+        <span class="summary"><a href="http://gotocon.com/chicago-2015">GOTO Chicago</a></span>
+        <span class="location">Chicago</span>
+        <span class="the-date">May 11, 2015</span>
+      </li>
+  </ol>
+
+  <!--<a class="more-events" href="#">More Events »</a>&#8211;>
+  <p class="i-speak">Want me to speak at your event? <a href="mailto:chad@chadfowler.com">Email me.</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/14/do-you-give-energy-or-take-energy/">Do You Give Energy or Take Energy?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/25/the-curse-of-a-name-how-to-kill-a-good-idea/">The Curse of a Name: How to Kill a Good Idea</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/10/13/must-read-software-development-books/">Must-Read Software Development Books</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/on-being-40/">On Being 40</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/26/the-magic-of-strace/">The Magic of Strace</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chad Fowler -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

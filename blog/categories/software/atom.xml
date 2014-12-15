@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Software, | Chad Fowler]]></title>
+  <link href="http://chadfowler.com/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://chadfowler.com/"/>
+  <updated>2014-12-15T09:53:51+01:00</updated>
+  <id>http://chadfowler.com/</id>
+  <author>
+    <name><![CDATA[Chad Fowler]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Re-thinking Software Development Education]]></title>
+    <link href="http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education/"/>
+    <updated>2011-12-21T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/12/21/re-thinking-software-development-education</id>
+    <content type="html"><![CDATA[<p>Where have I been lately?  Good question. When asked over these past months, I jokingly say something like, &#8220;These last 8 months at LivingSocial have been the best 4 years of my career.&#8221;</p>
+
+<p>But I don&#8217;t just mean I&#8217;ve been busy. I&#8217;ve been focused on building the best software development team I can to do what I think is some important and industry-changing work in the world of local commerce.</p>
+
+<p>And when I joke about these 8 months being the best 4 years of my career, what I really mean is that I feel like I&#8217;ve learned 4 years worth of lessons and gained 4 years worth of experience. What we&#8217;re doing isn&#8217;t easy. It&#8217;s the kind of work I&#8217;ve always sought out.</p>
+
+<p>I am a self-taught software developer. To date, my formal education consists of two 3-day training classes on specific programming languages (Java many years ago and Erlang in 2008). During my first work experiences in IT, I remember the shock of discovering that a Masters degree in software development doesn&#8217;t necessarily translate to knowing how to effectively use a computer. I was a saxophonist and system administrator and would regularly <em>teach</em> the computer scientists I worked with about things I would have assumed they learned in college.</p>
+
+<p>As I headed further into the workforce I noticed another odd thing: people with tens of years of experience as software developers weren&#8217;t necessarily very good at it. My assumptions were based on what I had previously learned as a jazz musician.  Jazz musicians polish and hone their skills throughout their careers. The longer a jazz musician has been playing, the more likely he or she is to be an excellent jazz musician.</p>
+
+<p>Programmers, though. As far as I could tell the average programmer spent his day complaining about his co-workers and waiting for 5pm.</p>
+
+<p>So what&#8217;s the disconnect? Some of it, of course, is just the people. Some &#8220;programmers are passionate&#8221;:http://pragprog.com/book/cfcar2/the-passionate-programmer and some aren&#8217;t. Those that aren&#8217;t, aren&#8217;t going to be radically successful. Assuming this is the case in all fields, what&#8217;s really frustrating to me is that I continue to run into passionate developers who just don&#8217;t know the right stuff.</p>
+
+<p>When I started out in this field, I was lucky enough to stumble onto a mentor. That too was probably informed by my experience as an aspiring jazz musician. Jazz musicians take the idea of musical lineage seriously and look for someone from whom to receive direction on how to parse the potentially overwhelming task of going from novice to master jazz improviser. My mentor in the software field did the same. He told me: first learn these three things. He picked topics that were diverse but complementary. He picked skills that set a foundation on which it was easy to build the next set. Most new developers don&#8217;t get so lucky.</p>
+
+<p>And It&#8217;s not just technology skills. The developers I work with are entrepreneurs at heart.  We aren&#8217;t sitting around polishing our tools and conducting thought experiments.  We&#8217;re delivering stuff that matters and we hate working on projects that drag on or don&#8217;t deliver value.  Becoming a great developer involves not just learning the ins and outs of software development but understanding how businesses work and exactly how software systems fit into that picture. It&#8217;s about delivering value quickly and iteratively. Great developers understand what Kent Beck and the rest of the authors of the &#8220;agile manifesto&#8221;:http://agilemanifesto.org/  were getting at a decade ago. And what people like &#8220;Eric Ries&#8221;:http://www.startuplessonslearned.com/ are teaching today.</p>
+
+<p>I&#8217;ve often thought &#8220;just give me 3 months with a smart person and I can have them running circles around the average developer.&#8221; Have you thought that too? I know a lot of my colleagues have.</p>
+
+<p>It&#8217;s time to rethink how we educate software developers. Computers used to be huge scary machines in big white rooms that very few people touched. Today you probably have at least one computer ON YOUR BODY most of the time. They&#8217;re ubiquitous and friendly and just NOT that hard to work with. The technology landscape has changed. The system of educating developers should change along with it.</p>
+
+<p>My colleagues are clearly thinking along the same lines. I&#8217;ve seen speakers such as &#8220;Joe O&#8217;Brien&#8221;:http://rubyhoedown.com/ talking about it this year.  And we see programs popping up all over.  Software Craftsman Ken Auer is launching the &#8220;Craftsmanship Academy&#8221;:http://craftsmanshipacademy.com/ to teach apprentices the art and craft of software development in an intense hands-on residency-oriented program.  &#8220;Code Academy&#8221;:http://codeacademy.org/ is a part-time 12 week course to accelerate the path to web development or design.</p>
+
+<p>Today we&#8217;re launching a new program at &#8220;LivingSocial&#8221;:http://livingsocial.com called &#8220;Hungry Academy&#8221;:http://hungryacademy.com.  Hungry Academy is a five month intense entrepreneurial immersion that will take raw, hungry talented programmers (and aspiring programmers!) and develop them into ultra-productive software engineers. Those that make it through to the end will be offered a position on our development team and paired with a mentor from LivingSocial&#8217;s growing list of some of the &#8220;industry&#8217;s most talented software engineers&#8221;:http://twitter.com/#!/merbist/livingsocial.  Best of all, we will <em>pay</em> you to attend.  Your <em>job</em> for five months is to take your craft and career to the next level.</p>
+
+<p>This isn&#8217;t going to be easy. Some people will get in but won&#8217;t make it to the end. Those that do will spend five months gaining the best 4 years of experience of their careers.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Leaving a Legacy...System]]></title>
+    <link href="http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system/"/>
+    <updated>2011-03-17T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/03/17/leaving-a-legacy-system</id>
+    <content type="html"><![CDATA[<p>Ever since reading David Heinemeir Hansson&#8217;s post &#8220;Enterprise Is the New Legacy&#8221;:http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php over five years ago, I&#8217;ve been chewing on something. The gist of the post was that &#8220;enterprise&#8221; is and should be a bad word, just like &#8220;legacy&#8221;.</p>
+
+<p>But why is &#8220;legacy&#8221; a bad word to begin with?  The word makes most software developers and IT people ill.</p>
+
+<p>In other fields and in life in general, the word &#8220;legacy&#8221; isn&#8217;t thusly encumbered.  It refers to an inheritance left to those behind you. Your life&#8217;s work. Your essential story.</p>
+
+<p>In software, that story is assumed to be a tragedy.</p>
+
+<p>But even in the case of software, &#8220;legacy&#8221; is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as &#8220;legacy&#8221; indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we&#8217;re &#8220;left with&#8221; and that we must either maintain or replace.</p>
+
+<p>That isn&#8217;t so bad, is it?  In an industry where &#8220;more software projects fail or are &#8216;challenged&#8217; than succeed&#8221;:http://www.projectsmart.co.uk/docs/chaos-report.pdf, getting to legacy status is cause for celebration!</p>
+
+<p>Here&#8217;s a sad idea:  as developers, even when we <em>do</em> succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated &#8220;within 10 years of its birth&#8221;:http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf.</p>
+
+<p>So, what do we developers leave as a legacy? In most cases, we don&#8217;t leave much of anything.</p>
+
+<p>At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom TCP/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.</p>
+
+<p>That was ten years ago. I&#8217;d be willing to bet it&#8217;s still running. If not the whole system, at least a subset.</p>
+
+<p>That would make it 35.</p>
+
+<p>Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.</p>
+
+<p>How <em>would</em> I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?</p>
+
+<p>It&#8217;s daunting, isn&#8217;t it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn&#8217;t. Even predicting next year is hard.</p>
+
+<p>So maybe I&#8217;d need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.</p>
+
+<p>Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.</p>
+
+<p>I don&#8217;t <em>know</em> how to design a system that could live a long and healthy life. I don&#8217;t <em>know</em> because I haven&#8217;t done it yet. Have you?</p>
+
+<p><i>Note: This wasn&#8217;t a rhetorical question.</i></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[McDonalds, Six Sigma, and Offshore Outsourcing (Notes)]]></title>
+    <link href="http://chadfowler.com/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes/"/>
+    <updated>2011-02-10T00:00:00+01:00</updated>
+    <id>http://chadfowler.com/blog/2011/02/10/mcdonalds-six-sigma-and-offshore-outsourcing-notes</id>
+    <content type="html"><![CDATA[<p><p>
+These are notes from a talk I&#8217;ve given in various forms at &#8220;SCNA&#8221;:http://scna.softwarecraftsmanship.org/, &#8220;CodeMash&#8221;:http://codemash.org, and &#8220;Magic Ruby&#8221;:http://magic-ruby.com.  I&#8217;ve mirrored them here from the &#8220;InfoEther weblog&#8221;:http://infoether.com.</p>
+
+<p><p></p>
+
+<p><img src="http://lh4.ggpht.com/_TVhFMT7oEd0/TLvjzmOWODI/AAAAAAAAKJ8/pR4oKLszOWE/0131.jpg" style='width:300px'/><br/>Me at SCNA<br/>Photo credit: <a href="http://picasaweb.google.com/jangdiafoto/SoftwareCraftsmanshipNorthAmerica20101016#5529263443100973106">Monty Ksycki</a>
+<br/>
+<p></p>
+
+<p>The presentation is called &#8220;McDonalds, Six Sigma, and Offshore Outsourcing - Unexpected Sources of Insight&#8221;.  Here&#8217;s the abstract:
+</p></p>
+
+<p><blockquote>
+    We software developers like to think of what we do as an art form (or a craft, if you&#8217;re at this conference). I was once asked to come up with a set of guidelines for creating great software so our (huge) company could more effectively use an offshore development team that had been delivering amorphous piles of crummy, nonworking code. I was frustrated and responded with something like this: &#8220;Give me a list of guidelines for how to make a beautiful song!&#8221; The nerve! Repeatable processes? Who did she think she was talking to?! This is a creative process! This is ART!!!!
+</blockquote>
+<blockquote></p>
+
+<pre><code>I've since grown up a bit and I'd like to talk about how I was wrong and how we can all hopefully learn from my mistakes.
+</code></pre>
+
+<p></blockquote>
+<img src="http://chadfowler.com/art-commodity-continuum.png" style='width:400px'/><br/>The Art-Craft-Commodity Continuum (from my presentation)
+<br/></p>
+
+<p><p></p>
+
+<p>  In it, I tell the story of my experiences with the Six Sigma quality methodology and with offshore outsourcing, urging developers not to blindly write off potentially useful software development strategies based on hearsay and misunderstanding. I also propose a customer-driven, data-driven approach to software engineering, dovetailing off of InfoEther&#8217;s Chief Scientist, <a href="http://www.vanderburg.org/blog">Glenn Vanderburg&#8217;s</a> recent ruminations on <a href="http://confreaks.net/videos/282-lsrc2010-real-software-engineering">&#8220;Real Software Engineering&#8221;</a>.
+</p>
+    <a href="http://en.wikipedia.org/wiki/File:Originalronaldmcdonald.jpg"><img  style='width:300px' src="http://upload.wikimedia.org/wikipedia/en/9/91/Originalronaldmcdonald.jpg" alt="The original, scary Ronald McDonald"/></a><br/>The original <a href="http://en.wikipedia.org/wiki/Ronald_McDonald">Ronald McDonald</a> (Willard Scott)
+<p>
+  Videos from SCNA will be posted on <a href="http://www.infoq.com/">InfoQ</a> eventually, and I&#8217;ll link mine here when that happens. In the mean time, many people asked me for pointers to some of the books and resources I mentioned during my presentation.  Here&#8217;s a link dump that you might find useful:
+</p></p>
+
+<p><ul>
+  <li>
+    <a href="http://www.amazon.com/Mustang-Sally-LP-Version/dp/B00124HFII/ref=sr_1_1?ie=UTF8&qid=1287442362&sr=8-1">Wilson Pickett&#8217;s Mustang Sally</a>
+  </li>
+  <li>
+    <a href="http://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0061673730/ref=sr_1_1?s=books&ie=UTF8&qid=1287442054&sr=1-1">Zen and the Art of Motorcycle Maintenance: An Inquiry into Values</a>
+  </li>
+  <li>
+    <a href="http://www.amazon.com/E-Myth-Revisited-Small-Businesses-About/dp/0887307280">The E-Myth Revisited: Why Most Small Businesses Don&#8217;t Work and What to Do About It</a>
+  </li>
+  <li>
+    <a href="http://vmgbpo.com">VMG BPO - Offshore business outsourcing</a>
+  </li>
+  <li>
+    <a href="http://asksunday.com">Ask Sunday - Virtual Personal Assistants</a>
+  </li>
+  <li>
+    <a href="http://glowtouch.com">GlowTouch - Low cost offshore IT outsourcing</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Quality_function_deployment">Quality Function Deployment</a>
+  </li>
+  <li>
+    <a href="http://isixsigma.com/">iSixSigma - Lots of six sigma info</a>
+  </li>
+  <li>
+    <a href='http://www.sixsigmaonline.org/six-sigma-training-certification-information/articles/the-dmadv-methodology.html'>DMADV - the six sigma design process in a nutshell</a>
+  </li>
+  <li>
+    <a href='http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612/ref=sr_1_1?ie=UTF8&qid=1287442512&sr=8-1'>Design Patterns: Elements of Reusable Object-Oriented Software</a>
+  </li>
+  <li>
+    <a href="http://www.wiley.com/legacy/products/subject/business/forbes/kroc.pdf">Forbes article on Ray Kroc and the founding of the McDonalds chains</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/John_Zorn">John Zorn - Avant Garde saxophonist</a>
+  </li>
+  <li>
+    <a href="http://www.paulsmith.co.uk/">Paul Smith - Fashion designer</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Mark_Rothko">Mark Rothko - Abstract Expressionist painter</a>
+  </li>
+  <li>
+    <a href="http://yankov.us/rage">Rage comic generator</a>
+  </li></p>
+
+<p>  <li>
+    <a href="http://gist.github.com/612263">Ugly Kitty Server code by me and Anthony Burns</a>
+  </li>
+  <li>
+    <a href="http://chadfowler.com:4567">Ugly Kitty Server in action</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/I_know_it_when_I_see_it">The &#8220;I know it when I see it&#8221; Supreme Court case</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/Alhazen">Ibn Al-Haytham - inventor of the scientific method</a>
+  </li>
+  <li>
+    <a href="http://www.zazzle.com/tdd+gifts">TDD T-Shirts</a>
+  </li>
+  <li>
+    <a href="http://www.extremeprogramming.org/map/project.html">Extreme Programming flow chart</a>
+  </li>
+  <li>
+    <a href="http://www.richdad.com/default.aspx">Rich Dad - Poor Dad</a>
+  </li>
+  <li>
+      <a href="http://www.keavy.co.uk/">Keavy McMinn&#8217;s webblog on Ironman etc.</a>
+  <li>
+    <a href="http://www.pragprog.com/titles/cfcar2/the-passionate-programmer">The Passionate Programmer - My book</a>
+    </li>
+  <li>
+    <a href="http://www.fourhourworkweek.com/">The 4-Hour Work Week</a>
+  </li>
+  <li>
+    <a href="http://en.wikipedia.org/wiki/The_Turk">The Mechanical Turk</a>
+  </li>
+</ul></p>
+]]></content>
+  </entry>
+  
+</feed>
