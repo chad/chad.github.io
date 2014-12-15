@@ -1,0 +1,102 @@
+---
+layout: post
+title: !binary |-
+  QmFyY2Vsb25hLmRheXNbN10uaW5zcGVjdA0=
+enki_id: 4447
+---
+
+Excuse por favor el queso.  I was in a mood.
+<BR>
+<BR>
+<P>
+<style type="text/css">
+.S0 {
+	color: #808080;
+}
+.S1 {
+	font-family: Comic Sans MS;
+	color: #007F00;
+	font-size: 9pt;
+}
+.S2 {
+	color: #007F7F;
+}
+.S3 {
+	font-family: Courier New;
+	color: #7F007F;
+	font-size: 10pt;
+}
+.S5 {
+	font-weight: bold;
+	color: #00007F;
+}
+.S9 {
+	font-weight: bold;
+	color: #007F7F;
+}
+.S10 {
+	font-weight: bold;
+}
+.S11 {
+	color: #7F7F7F;
+}
+span {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<span><span class="S0">&nbsp;&nbsp;</span><span class="S11">LA_RAMBLA</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S11">Street</span><span class="S10">.</span><span class="S11">new</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;</span><span class="S11">LA_RAMBLA</span><span class="S10">.</span><span class="S11">location</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S11">BARCELONA</span><span class="S10">.</span><span class="S11">center</span><span class="S0"><br /></span>
+<span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;</span><span class="S11">CAFE_CON_LECHE</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S3">"Coffee with milk"</span><span class="S0"><br /></span>
+<span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;</span><span class="S5">def</span><span class="S0"> </span><span class="S9">cnn</span><span class="S10">()</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">while</span><span class="S10">(!</span><span class="S11">headache</span><span class="S10">)</span><span class="S0"> </span><span class="S5">do</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">watch</span><span class="S10">(</span><span class="S11">CNN</span><span class="S10">)</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">end</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;</span><span class="S5">end</span><span class="S0"><br /></span>
+<span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;</span><span class="S5">if</span><span class="S0"> </span><span class="S5">__FILE__</span><span class="S0"> </span><span class="S10">==</span><span class="S0"> $</span><span class="S2">0</span><span class="S0"> </span><span class="S5">then</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">until</span><span class="S10">(</span><span class="S11">Time</span><span class="S10">.</span><span class="S11">now</span><span class="S10">.</span><span class="S11">hour</span><span class="S0"> </span><span class="S10">&gt;=</span><span class="S0"> </span><span class="S2">9</span><span class="S10">)</span><span class="S0"> </span><span class="S5">do</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">sleep</span><span class="S0"> </span><span class="S2">1</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">end</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">while</span><span class="S10">(</span><span class="S11">kelly</span><span class="S10">.</span><span class="S11">sleeping</span><span class="S10">?)</span><span class="S0"> </span><span class="S5">do</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">view</span><span class="S10">(</span><span class="S11">computer</span><span class="S10">.</span><span class="S11">mozilla</span><span class="S10">.</span><span class="S11">open</span><span class="S10">(</span><span class="S11">self</span><span class="S10">.</span><span class="S11">favorites</span><span class="S10">.</span><span class="S11">sites</span><span class="S10">))</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">end</span><span class="S0"><br /></span>
+<span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">cnn</span><span class="S10">()</span><span class="S0"><br /></span>
+<span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">goto</span><span class="S0"> </span><span class="S11">LA_RAMBLA</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">shop</span><span class="S10">(</span><span class="S11">LA_RAMBLA</span><span class="S10">)</span><span class="S0"> </span><span class="S10">{</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">begin</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">drink</span><span class="S10">(</span><span class="S11">CAPUCCINO</span><span class="S10">)</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">rescue</span><span class="S0"> </span><span class="S11">DrinkNotFoundError</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">drink</span><span class="S10">(</span><span class="S11">CAFE_CON_LECHE</span><span class="S10">).</span><span class="S11">good</span><span class="S10">?</span><span class="S0"> </span><span class="S1">#=&gt;true</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">end</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">purchase</span><span class="S0"> </span><span class="S11">Painting</span><span class="S10">.</span><span class="S11">new</span><span class="S10">(</span><span class="S3">"Barcelona Street Scene"</span><span class="S10">)</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">eat</span><span class="S10">(</span><span class="S11">FALAFEL</span><span class="S10">)</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">watch</span><span class="S10">([</span><span class="S3">"Street musicians"</span><span class="S10">,</span><span class="S0"> <br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S3">"Flamenco dancers"</span><span class="S10">,</span><span class="S0"> <br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S3">"Silly Medieval musicians with swords"</span><span class="S10">,</span><span class="S0"> <br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S3">"Living statue"</span><span class="S10">]).</span><span class="S11">good</span><span class="S10">?</span><span class="S0"> </span><span class="S1">#=&gt; [false, false, false, true]</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S10">}</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">until</span><span class="S10">(</span><span class="S11">kilometers</span><span class="S0"> </span><span class="S10">&gt;=</span><span class="S0"> </span><span class="S11">TOO_MANY</span><span class="S0"> </span><span class="S10">+</span><span class="S0"> </span><span class="S2">2</span><span class="S10">)</span><span class="S0"> </span><span class="S5">do</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">walk</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S5">end</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">purchase</span><span class="S0"> </span><span class="S11">Movie</span><span class="S10">::</span><span class="S11">Tickets</span><span class="S10">.</span><span class="S11">new</span><span class="S10">(</span><span class="S2">2</span><span class="S10">)</span><span class="S0"> </span><span class="S1"># We don't get many movies in India</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">movie</span><span class="S0"> </span><span class="S10">=</span><span class="S0"> </span><span class="S11">Movie</span><span class="S10">[</span><span class="S3">"Adapation"</span><span class="S10">]</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">sleep</span><span class="S0"> </span><span class="S2">1800</span><span class="S0"> </span><span class="S1">#seconds</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">movie</span><span class="S10">.</span><span class="S11">during</span><span class="S0"> </span><span class="S10">{</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">watch</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S10">}</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">movie</span><span class="S0"> </span><span class="S10">&gt;</span><span class="S0"> </span><span class="S11">Movie</span><span class="S10">[</span><span class="S3">"Being John Malkovich"</span><span class="S10">]</span><span class="S0"> </span><span class="S1">#=&gt; true</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">enter</span><span class="S10">(</span><span class="S11">street</span><span class="S10">.</span><span class="S11">cars</span><span class="S10">.</span><span class="S11">find</span><span class="S0"> </span><span class="S10">{|</span><span class="S11">car</span><span class="S10">|</span><span class="S0"> </span><span class="S11">car</span><span class="S10">.</span><span class="S11">type</span><span class="S0"> </span><span class="S10">==</span><span class="S0"> </span><span class="S11">Taxi</span><span class="S10">}.</span><span class="S11">shift</span><span class="S10">)</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">sleep</span><span class="S0"> </span><span class="S2">900</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">drink</span><span class="S10">(</span><span class="S11">COKE</span><span class="S10">)</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">WEBSITE</span><span class="S0"> </span><span class="S10">&lt;&lt;</span><span class="S0"> </span><span class="S11">Post</span><span class="S10">.</span><span class="S11">new</span><span class="S10">(</span><span class="S11">Style</span><span class="S10">.</span><span class="S11">new</span><span class="S10">(</span><span class="S11">SILLY</span><span class="S10">),</span><span class="S0"> </span><span class="S11">today</span><span class="S10">.</span><span class="S11">events</span><span class="S10">.</span><span class="S11">inspect</span><span class="S10">)</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">cnn</span><span class="S10">()</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="S11">sleep</span><span class="S0"><br /></span>
+<span class="S0">&nbsp;&nbsp;</span><span class="S5">end</span><span class="S0"><br /></span>
+<span class="S0"></span></span>

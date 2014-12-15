@@ -1,0 +1,44 @@
+---
+layout: post
+title: !binary |-
+  U2Vhc2lkZSBEaXNzb25hbmNlCg==
+enki_id: 4549
+---
+Avi and I were talking about <a
+href="http://www.cincomsmalltalk.com/userblogs/avi/blogView?showComments=true&entry=3257728961">this
+post</a> &#8212;specifically <a
+href="http://www.cincomsmalltalk.com/blog/blogView">James's</a> comment,
+which says that Avi should consider including a templating engine in <a
+href="http://www.beta4.com/seaside2/">Seaside</a> to avoid making newcomers
+feel uncomfortable.
+
+<p>
+I had the following to say (&quot;lusers&quot; refers to the Dick Gabriel
+saying that Avi quotes in his post):
+</p>
+<p>
+<img src="http://www.chadfowler.com/images/SeasideConversation.jpg">
+</p>
+<p>
+(The ultimate in weblogging laziness.)
+</p>
+<p>
+The qmail reference might elude some of you. <a
+href="http://st-www.cs.uiuc.edu/users/johnson/">Ralph</a> walked us through
+qmail&#8217;s code at the <a href="http://wiki.cs.uiuc.edu/MFA">Software
+MFA Program</a> in January. qmail does some really unorthodox things with
+IO streams, quickly alerting the reader (of the code) to the fact they
+aren&#8217;t in Kansas anymore.
+</p>
+<p>
+My <a href="http://wiki.cs.uiuc.edu/MFA/Craft+Elements">"craft element"</a>
+remark refers to the possibility that this kind of forced discomfort
+(dissonance) may be a trick-of-the-trade that developers can deliberately
+take advantage of.
+</p>
+<p>
+From this perspective, throwing templates into Seaside would be something
+like Gyorgy Ligeti ending <a
+href="http://www.amazon.com/exec/obidos/clipserve/B00005Y34N001002/0/104-2481148-3195168">Atmospheres</a>
+(scroll down and listen to the clip) on a C major triad.
+</p>

@@ -1,0 +1,9 @@
+---
+layout: post
+title: !binary |-
+  Tm90IE9uZSBPZiAnRW0=
+enki_id: 4437
+---
+
+<img src="http://www.chadfowler.com/images/cells.jpg"/>
+<span class="quote-text">Not a single one of the cells that compose you knows who you are, or cares. - <a href="http://en.wikipedia.org/wiki/Daniel_Dennett">Daniel Dennett</a></span>

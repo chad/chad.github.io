@@ -1,0 +1,77 @@
+---
+layout: post
+title: !binary |-
+  VGVzdERveA0K
+enki_id: 4534
+---
+Thoughtworks&#8217; Joe Walnes has posted a link (<a
+href="http://joe.truemesh.com/blog/archives/agile/000047.html">joe.truemesh.com/blog/archives/agile/000047.html</a>)
+to an interesting project called <b>TestDox</b> (<a
+href="http://agiledox.sourceforge.net/">agiledox.sourceforge.net/</a>).
+Given a suite of JUnit (<a href="http://www.junit.org">www.junit.org</a>)
+tests, it generates documentation.
+
+<p>
+Like FIT (<a href="http://fit.c2.com">fit.c2.com</a>), this is an
+interesting bridge between executable code and documentation. TestDox
+converts camelCasedTestMethodNames into separate words, so this code
+</p>
+<pre>
+  public class DogTest extends TestCase
+  {
+    public void testBarksAtCats() {}
+    public void testEatsALot() {}
+    public void testSleepsWhenNotBarkingOrEating() {}
+  }
+</pre>
+<p>
+&#8230;would produce the documentation that looks basically like
+(untested):
+</p>
+<p>
+<b>Dog</b>
+</p>
+<ul>
+<li>Barks at cats
+
+</li>
+<li>Eats a lot
+
+</li>
+<li>Sleeps when not barking or eating
+
+</li>
+</ul>
+<p>
+This has arguably limited usefulness, and it depends trickily on class and
+method naming conventions. But, it starts the ideas flowing, and
+TestDox&#8217;s parent project (<b>Agiledox</b>) will hopefully expand and
+explore these much further. It may sound like heresy to the XP world, but
+I&#8217;d be interested in being able to do this sort of thing round-trip
+(documentation -&gt; test -&gt; documentation -&gt; test -&gt;
+documentation -&gt; &#8230;)
+</p>
+<p>
+In my own unit testing, I haven&#8217;t always been so methodical about
+using method names that describe a characteristic of the entity being
+tested. It&#8217;s not that I don&#8217;t use descriptive names, but I may
+include tests with names like &quot;testEatBadTastingFood()&quot;, which
+describes a specific scenario but not an ongoing behaviour of dogs. Running
+my tests through TestDox might generate misleading documentation.
+It&#8217;s not that dogs generally eat food they don&#8217;t like. I just
+wanted to test what a dog would/should do in the eventuality that they
+<b>did</b> eat bad food. I&#8217;m not sure if my current behaviour is bad
+or good, but it will definitely be something I think about next time I sit
+down to do some coding.
+</p>
+<p>
+A fear I have is that, with this tool in place, I may be tempted to think
+about what the generated documentation will look like as I write my tests.
+This would create a new and potentially conflicting objective in my test
+writing. And, since I tend to do test driven design, it would ultimately
+impact my design and coding decisions.
+</p>
+<p>
+I&#8217;m not ruling out the possibility that this change in thinking would
+<b>improve</b> my code. I guess I&#8217;ll just have to try and find out.
+</p>

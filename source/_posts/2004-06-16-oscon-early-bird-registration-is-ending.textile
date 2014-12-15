@@ -1,0 +1,18 @@
+---
+layout: post
+title: !binary |-
+  T1NDT04gRWFybHkgQmlyZCBSZWdpc3RyYXRpb24gaXMgRW5kaW5nIQo=
+enki_id: 4521
+---
+As Ted <a href="http://www.sauria.com/blog/2004/06/16#971">points out</a>,
+OSCON <a
+href="http://conferences.oreillynet.com/pub/w/29/register.html">early
+registration</a> is ending on Friday. You can save a fairly decent amount
+of money by signing up early.
+
+<p>
+Not only that, but if you sign up for <b>Ruby</b> <a
+href="http://conferences.oreillynet.com/pub/w/29/track_ruby.html">sessions</a>
+early, you also gain &quot;prestige points&quot;, which are redeemable for
+the respect and admiration of your peers. :)
+</p>

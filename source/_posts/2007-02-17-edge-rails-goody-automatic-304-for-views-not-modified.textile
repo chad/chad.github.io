@@ -1,0 +1,24 @@
+---
+layout: post
+title: !binary |-
+  RWRnZSBSYWlscyBHb29keTogQXV0b21hdGljIDMwNCBmb3IgVmlld3MgTm90
+  IE1vZGlmaWVk
+enki_id: 4609
+---
+One of the first thing you learn when you write your own weblog software and get a decent number of subscribers, is that you need to provide a way for aggregators to tell you which version of a feed they have, so your server can respond by telling the aggregator that it already has the latest version.  Otherwise, you waste a lot of bandwidth sending the same polling client the same data over and over again.
+
+This is commonly handled in the weblog software world with a combination of the "ETag header":http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19, which allows clients and servers to communicate in terms of a _variant_ of a specific resource and the "304 Not Modified" HTTP response and an empty response body.
+
+This technique isn't limited in usefulness to RSS and Atom feeds.  You could use the same thing with HTML, PDF, anything you like.  If the client sends you an ETag and it matches the version you already have, you give it a 304 with an empty response body.  
+
+It turns out that if you use a Web framework with a consistent rendering system, you can bake this kind of behavior right into the framework.
+
+A few hours ago, David Heinemeier Hansson "did just that":http://dev.rubyonrails.org/changeset/6158.
+
+h3. "Cool, how do I use it?"
+
+If you're using Edge Rails, it just happens automatically.  
+
+Who knows if this will still be there in a month, but it's at worst a cool experiment and at best a nice optimization for all future Rails applications.
+
+UPDATE: "Rick Olson":http://techno-weenie.net/ just pointed out to me that a weblog is not a good Rails-specific example of when this new feature would be useful, since weblogs can usually be cached at the page level (after which real Web servers can just do their thing with the static content).  He is, of course, right.  I didn't mean for the weblog example to carry through into what you would use this feature for.  It _would_ be very useful for situations where content is dynamically generated on, say, a per-user or per-account basis---like most of the applications most of us make with Rails.

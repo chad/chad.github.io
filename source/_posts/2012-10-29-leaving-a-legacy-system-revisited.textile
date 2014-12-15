@@ -1,0 +1,9 @@
+---
+layout: post
+title: !binary |-
+  TGVhdmluZyBhIExlZ2FjeSBTeXN0ZW0gcmV2aXNpdGVk
+enki_id: 4719
+---
+Early last year, "I posted":http://chadfowler.com/2011/03/17/leaving-a-legacy-system about how we've unfortunately turned the word "legacy" into a bad word in the software industry.
+
+At Nordic Ruby and again at Aloha Ruby Conf this year I "turned this idea into an exploratory presentation":http://confreaks.com/videos/1240-aloharuby2012-legacy.  I think it turned out pretty well and is an important topic.  Watch it and let me know what you think!

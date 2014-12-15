@@ -1,0 +1,31 @@
+---
+layout: post
+title: !binary |-
+  V2hvIEFyZSBZb3VyIEluZmx1ZW5jZXM/
+enki_id: 4666
+---
+I've recently been revisiting my musical roots.  I recently visited the home of my dormant music career (Memphis, TN) and spent time former band-mates and collaborators.  I've been also been dipping back into the jazz and classical composition worlds, learning who's new on the scene and rediscovering old favorites.
+
+Something has stood out as I've been browsing through online material connecting the dots again.  It's a part of the culture I took for granted as a musician but which now feels sort of foreign. Musicians often talk about each other (and even themselves) in terms of their influences.
+
+An "example":http://www.musicianguide.com/biographies/1608003182/Eric-Dolphy.html:
+
+  Among Dolphy's early influences were Charlie Parker and the sounds of nature.
+
+It's also common to talk about who _taught_ you as a musician.  Here's a snippet from my "college roommate/bandmate's bio":http://www.parkerandersonjazz.com/parker/:
+
+<pre>
+Chris Parker was born in North Little Rock, Arkansas. He first learned from local Arkansas musicians, most notably:   
+Charles Thomas, Art Porter, Sr., Bob Steele, Lee Tomboulian, and Michael Bates. Chris moved to Memphis, TN in 1991. 
+There he received his BA degree from the University of Memphis and learned from/ studied with musicians including Gene
+ Rush, James Williams, Herman Green, Fred Ford, Calvin Newborn, Bill Mobley, Alvin Fielder, Kidd Jordan, Joe Jennings, and 
+Vernel Fournier.
+</pre>
+
+This creates a strong emphasis on creating a _tradition_ which is carried forward and evolve generationally.  Jazz is a fairly new genre but here's an example "family tree" of jazz: Lester Young "was influenced early on by Frankie Trambauer":http://www.allaboutjazz.com/php/musician_timeline.php?id=11573.  Dexter Gordon was heavily "influenced by Lester Young":http://en.wikipedia.org/wiki/Dexter_Gordon.  Dexter Gordon was in turn the biggest influence on a young "Virginia Mayhew":http://www.jazzreview.com/articledetails.cfm?ID=2166.
+
+So we have Frankie -> Lester -> Dexter -> Virginia -> ??? 
+
+This visible passing on of tradition not only conveys a pride in the craft, but it gives listeners an understanding of what to expect when approaching a new artist. Not a completely road map but at least some clues.
+
+In "My Job Went to India":http://www.pragprog.com/titles/mjwti/my-job-went-to-india I wrote about standing on the shoulders of giants in our industry. Musicians make explicit which giants they're standing on the shoulders of. It strikes me as a bit of a shame that we don't do that as programmers.

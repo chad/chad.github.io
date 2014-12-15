@@ -1,0 +1,111 @@
+---
+layout: post
+title: !binary |-
+  TWFnbGV2
+enki_id: 4650
+---
+We just wrapped up "RailsConf 2008":http://railsconf.org.  A lot has been said about RailsConf elsewhere, so 
+as the program chair I'll just say "thank you" to the speakers, attendees, co-organizers, sponsors, and 
+everyone else for making it the best conference I've ever been to.
+
+A lot of exciting things happened.  Among the most exciting to me was the public unveiling of 
+"Maglev":http://ruby.gemstone.com.  I've had a version of Maglev on my computer for about a month now, but 
+I haven't been able to talk about it. Now that it has been announced, most things I know are fair game.
+
+"Avi Bryant":http://avibryant.com and I met at the first RubyConf.  He's been a fan and friend of Ruby ever 
+since.  He happens to be doing mostly Smalltalk these days, but he's been following the Ruby and (more 
+recently) Rails communities closely.  After that first RubyConf, we reconnected while both attending "Dick 
+Gabriel's":http://dreamsongs.com pilot MFA in Software Development program at "UIUC":http://www.uiuc.edu/ in 
+early 2003.  Avi's been talking since then about running Ruby on a Smalltalk VM.
+I've even started my own attempt once or twice, based on Avi's ideas of how it could be done.  
+
+Given Avi's interest in Ruby on Smalltalk and that he also created the mind-bending 
+"Seaside":http://seaside.st web application framework, we invited him to keynote at last year's RailsConf.  It was there, in his "message from the future":http://railsconf.blip.tv/#574286 keynote, that he made public
+his belief that Ruby could benefit from being hosted on a mature, dynamic (Smalltalk) VM.
+
+It was also, as I understand it, from that talk that "Gemstone":http://gemstone.com got the idea to run Rails.
+
+The conversations started just after RailsConf last year, but it was only a few short months ago that Avi started work on "Maglev":http://maglev.gemstone.com.  That's part of what makes it so amazing.  He and the
+engineers at Gemstone have gotten a huge subset of the Ruby language running on the Gemstone VM in just three months.
+
+h1. RDBMS R.I.P.
+
+Well, not really, but it's fun to say.
+
+There are a lot of things to like about what Maglev promises.  By far the most interesting to me is 
+Gemstone's persistence engine.
+
+What's coolest about how Gemstone's persistence engine works within the context of Maglev is that it doesn't
+feel like a persistence engine.  It's just objects.  Everything's just objects.
+
+If you think about it, the average Rails application is a styled set of CRUD operations on top of an 
+_object graph_.  That's right, an object graph.  The fact that most Rails applications are backed
+by a relational database is a somewhat-necessary annoyance.
+
+So in circumstances where you don't NEED an RDBMS, why would you want to litter your pristine Ruby objects with SQL and other RDBMS-related work-arounds?  If it were possible to simply instantiate objects and not have to think about the underlying storage implementation at all, wouldn't that be better?
+
+That's what Gemstone (and, therefore, Maglev) gives you.
+
+There were questions during the demo about ActiveRecord compatibility.  To me, building in ActiveRecord 
+compatibility is worse than a waste of time.  Sure, there are things in ActiveRecord which would be useful 
+regardless of the storage mechanism.  Declarative relationships and validations are examples.  But, when 
+you're dealing with objects in memory, the idea of a :conditions clause with SQL in it is absolutely 
+unnecessary and unappealing.
+
+h1. Fast as hell
+
+Avi and the Gemstone people knew from their understanding of how the VM works that a Ruby implementation
+on Gemstone would be really fast.  They were right.  But as I said, the speed of the implementation is 
+secondary to the persistence engine.
+
+That being said, it's really really fast.  On micro-benchmarks, it's up to 100 times faster than MRI.  
+
+As has already been whined about ad nauseam, micro-benchmarks can be misleading.  They test very specific 
+parts of the implementation and don't always give you a picture of what real-world application performance 
+will be like. So, let's take this approach with the Maglev benchmarks: it's fast enough.  It's probably a
+lot faster than MRI.  And, we've been using MRI for years for real applications.
+
+Good enough.  Probably awesome.  But at least good enough.
+
+Now is it going to slow down as they start implementing more of the libraries and language features? That's
+the conventional wisdom.  I say _no_.
+
+Smalltalk and Ruby are, as Avi has said numerous times, essentially the same language.  So the Gemstone VM
+has been tailor-made for running dynamic language code with closures, continuations, etc. and has been
+doing it for years.  Imagine the process, then, of converting Ruby to Smalltalk.  It's in most cases
+a fairly straightforward language to language translation.
+
+Where it _isn't_ as simple as that, Gemstone have a pretty big advantage:  they own the VM and they can 
+change it to fit what Ruby needs.
+
+I expect Maglev to get _faster_ as the team starts to spend time on optimization.  So far, they're in the
+"make it run" phase of the process.  Remember, three months in.
+
+Antonio Cangiano "also had a look at Maglev recently":http://antoniocangiano.com/2008/06/05/maglev-handles-trees-like-a-monkey/ and has a bit more to say about the specifics of Maglev performance
+
+h1. Ruby Compliance (or "it runs WEBRick!")
+
+So what's next for Maglev?  As the Gemstone team has said, their next goal is to start running and passing
+the Ruby specs created by the other Ruby implementers.  They hadn't prioritized this leading up to RailsConf,
+because, RailsConf being a web development conference, they wanted us all to see WEBRick running.
+
+But, hey, they have WEBRick running!  Have you looked at the code for WEBRick?  That's a lot of Ruby.
+
+I'm looking forward to a report on how well the Ruby specs run at this moment.  I think everyone will be
+pleasantly surprised.  And the specs will give the team a clear goal to work toward.
+
+h1. So Will I Use This Thing?!
+
+When you don't NEED an RDBMS (more often than you think) or you need scalable Ruby servers, I think
+Maglev is going to be an enticing alternative.  It's not going to kill the other implementations.  Each
+implementation has its place. This isn't a war, after all. 
+
+Macruby, JRuby, and IronRuby are for integration.  MRI/YARV and Rubinius will compete for the "standard" use 
+cases. Maglev is for big, distributed object stores inside of fast, scalable servers.  Think Rails, 
+Adhearsion, or various coordination services running custom protocols on sockets.  Don't run scripts in 
+Maglev.  Don't write desktop apps in Maglev.  Just use Maglev to serve tons of requests against billions of 
+objects.
+
+Maglev is good for the Ruby ecosystem just as MRI/YARV, Macruby, JRuby, and IronRuby are good for the 
+Ruby ecosystem.  The fact that we (will) have so many alternatives is a good thing. 
+

@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  UnlhbiBEYXZpcyBXaW5zIFRoZSBQcml6ZQo=
+enki_id: 4503
+---
+The 300th Gem: <a
+href="http://rubyforge.org/projects/zenhacks/">ZenHacks</a>
+
+<p>
+We&#8217;re actually now at 302 gems, and we&#8217;ve already <a
+href="http://gems.rubyforge.org/stats.html">crossed the half million
+mark</a> in gems served.
+</p>
+<p>
+Go check out ZenHacks. In fact, all that &quot;Zen&quot; <a
+href="http://rubyforge.org/projects/parsetree/">stuff</a> <a
+href="http://rubyforge.org/projects/rubyinline/">is</a> <a
+href="http://rubyforge.org/projects/ruby2c/">worth</a> <a
+href="http://rubyforge.org/projects/zenweb/">checking</a> <a
+href="http://rubyforge.org/projects/zentest/">out</a>.
+</p>

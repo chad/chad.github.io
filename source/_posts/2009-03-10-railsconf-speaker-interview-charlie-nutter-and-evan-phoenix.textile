@@ -1,0 +1,70 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIFNwZWFrZXIgSW50ZXJ2aWV3OiBDaGFybGllIE51dHRlciBh
+  bmQgRXZhbiBQaG9lbml4
+enki_id: 4676
+---
+As I did for last year's "RubyConf":http://chadfowler.com/rubyconf-speaker-interviews, I'm starting a series of interviews of speakers at this year's "RailsConf":http://railsconf.org to be held May 4-7 in Las Vegas. 
+
+First up are two of my Ruby heroes: "Charlie Nutter":http://blog.headius.com/ and "Evan Phoenix":http://blog.fallingsnow.net/, leaders of the "JRuby":http://jruby.org and "Rubinius":http://rubini.us projects respectively. Whenever two people with the brains and determination to create a working Ruby implementation get together and want to impart some hard-earned wisdom, it's well worth listening.
+
+Charlie and Evan will be jointly presenting a session called "What Makes Ruby Go: An Implementation Primer":http://en.oreilly.com/rails2009/public/schedule/detail/8680 at RailsConf.  Probably one of the nerdier sessions at the conference, but as you'll see there are big practical benefits to learning how Ruby implementations work, even for those of us who don't have the time, skill, or interest to create our own.
+
+
+h2. This being a Rails conference, what's the benefit for the average attendee in learning how to make a Ruby implementation? How can learning how to program Ruby itself help us become better Ruby (and Rails) programmers?
+
+
+_Evan_: One thing we're going to focus is not just how to build a ruby implementation, but rather helping people understand how certain things have to be implemented and how they effect you. A great example is the method cache and how Object#extend effects it. This helps educate people on how using Object#extend in their code effects their application.
+
+_Charlie_: Ruby does a really good job of hiding implementation details and hardware details and platform details. Unfortunately sometimes those are the details that mean the difference between a good application and a great one. My hope with this talk is that Ruby and Rails developers will not only learn how their favorite language is implemented, but how to make better use of its features.
+
+I think it will also be important for Rubyists to understand Ruby implementation details in the future, since there are very real limitations on how many features and how much performance you can squeeze out of Ruby. It's often too easy for Ruby users to say "just make it faster" when they don't understand how difficult it may be to do so.
+
+h2. Did you both get into this language/vm implementation thing as a hobby? How do you go from zero to leading a dynamic language implementation?
+
+
+_Evan_: Yep, just something fun to work on in my spare time. Following in others footsteps certainly helped the project along. Reading a lot of papers and such on early Smalltalk systems helped give me a good perspective.
+
+_Charlie_: I got into JRuby after attending RubyConf 2004, where I was amazed that without knowing Ruby I understood every presentation. Since I was firmly rooted in the Java world, and since the JRuby project existed and was being managed by an old friend, I thought I'd try to help out.
+
+Since then, we've almost completely rewritten JRuby. We've taken it from being the slowest Ruby impl to one of the fastest. Where we could barely run any 1.8 code before, we now have dozens of production users. And we're not even done yet; we have a great start on 1.9 support, and we have plans that could double performance again over the next couple months. It's been a wild ride; Ruby and JRuby have changed my life.
+
+
+h2. How long do you think it will be before we start seeing Ruby 1.9 as the mainstream version everyone (developers and language implementors) is targeting?
+
+
+_Evan_: Honestly, I've got no idea. Implementors will likely not put too much energy into 1.9 compatibility until a lot of developers start calling for it. Because of all the changes to the APIs, my guess is that people will only start using 1.9 on new projects. So once 1.9 has been established as 'stable enough', people will consider using it when they're getting started on something new.
+
+I think the biggest issue is not new applications, but rather libraries. Today's rails apps probably use at least 10 gems. Those 10 developers that have to be aware of 1.9 compatibility. If they're not, it's likely that those gems will have issues under 1.9. How gem users and gem authors decided to sort out 1.9 compatibility will be something interesting to watch for.
+
+_Charlie_: Ruby 1.9 is a great step forward for the C implementation, both in its improved performance and and its new features. But Ruby has reached a point in its lifecycle Java reached some years ago: getting people to move to a new version is like pulling teeth. We deal with people on a regular basis still running Java 1.4, even though it's no longer a supported platform and was first released over six years ago. I don't think it will be that bad for Ruby 1.9, but it's a very similar situation.
+
+Ruby has matured, and is being used for mission-critical applications around the world. And along with that maturity comes a need for stability, not just stability in the implementations but stability of features and stability of development processes. Ruby 1.9.1, by most measures the first reasonably "stable" 1.9 release, has been out for less than two months, and it's unclear how much more its features will change in 1.9.2 and beyond. It's not battle-tested. It's unfamiliar. And it will take time for people to start depending on 1.9 to help pay their bills...certainly more than a couple months.
+
+h2. If you had to quit using and developing for Ruby today, what do you think you would focus on?
+
+_Evan_: Hm. Lately I've been interested in Cocoa programming, both desktop and iPhone, so it's likely I'd play with that to a certain extent.
+
+Knowing me, I'd probably start work on a brand new language and VM for fun. :)
+
+_Charlie_: I don't intend to work on JRuby forever, so this is a question often on my mind.
+
+In general, I hope to spend the rest of my life helping open platforms like the JVM "win" against closed, proprietary alternatives. My work on JRuby has been a lot of fun, but I've also been trying to prove a point: that the JVM is the best hope for language implementations in the future. Yes, it has its warts, and there's some work needed to better support dynamic and functional languages. But it's an amazing piece of technology, already one of the fastest (if not the fastest) managed runtimes in existence. With implementations like JRuby stretching it and nudging it forward, we'll all benefit...and we'll be able to use any language we choose.
+
+So if I didn't work on or with Ruby anymore...I'd probably be doing the same thing for other languages on the JVM. But I like Ruby best so far :)
+
+h2. Creating an implementation of Ruby takes countless hours of work. How do you avoid burning out, and what are you passionate about outside of programming?
+
+
+_Evan_: This takes work for me, to avoid burnout. I've grown good at telling when I'm starting to go down that road and take action. One of the first things I do is a change of scenery, typically this means working in a coffee shop for the day. I also head up to San Francisco usually once a month to work in the EY office, which helps.
+
+Getting outside for some exercise helps clear my head and reduce stress levels, which also stave off burnout.
+
+I also try and switch gears within Rubinius. Usually my burnout is associated with frustration with one particular aspect of the project, for instance debugging a garbage collector. The project is big enough that I can set that aside for a bit and switch to something more exciting. This helps me keep my brain engaged in the project as a whole, but avoid that frustration.
+
+_Charlie_: For me, programming is not what leads to burnout. I've done this stuff my whole life, and it's hard for me to *not* be hacking at any hour of the day. It's more than my job, it's my vocation. My risk of burnout comes from the constant arms race with other Ruby implementations, other JVM language implementations, other managed platforms, and so on.
+
+While I'm proud of what we've accomplished with JRuby, I feel like I need to keep working at a breakneck pace to continue proving my point. Whenever someone posts a benchmark showing we're slower, I feel obligated to fix the problem. Whenever someone talks about a new JVM dynamic language or Ruby implementation performing better, I feel like I am personally under attack. I've poured my heart and soul into JRuby, and there's a lot of my spirit in there. If JRuby fails, I fail, so I work hard (maybe too hard) to ensure that doesn't happen.
+
+Of course, it could be I need to get out more. :)

@@ -1,0 +1,131 @@
+---
+layout: post
+title: !binary |-
+  SW4gQwo=
+enki_id: 4462
+---
+Since coming back from the MFASoftware program, I&#8217;ve been trying to
+stay focused on my remote assignments. I&#8217;ve been doing a
+particularily bad job of actually finishing anything, but I <b>have</b>
+been learning a lot.
+
+<p>
+One of my assignments was to read and annotate Guy Steele&#8217;s Lambda
+The Ultimate Imperative (<a
+href="http://library.readscheme.org/page1.html">library.readscheme.org/page1.html</a>).
+I&#8217;ve read the paper twice and opened up an editor to write about it
+five or six times. As I read the paper, I knew it was teaching me something
+that was going to have a lasting effect, but somehow when I sat to write
+about it, the only memories I could summon were the mechanics of Scheme
+(which the paper is written in/using).
+</p>
+<p>
+I&#8217;ve been learning Scheme in parallel to reading this paper, and
+I&#8217;ve definitely felt a lot of &quot;schemisms&quot; snap into place
+as I read. But I know that simply learning the language isn&#8217;t what
+this paper is about. It&#8217;s just so hard to separate learning the
+language from discovering the purity and simplicity of what Steele is
+demonstrating. The beauty of Scheme is that there&#8217;s hardly anything
+to it. To see Steele effortlessly implement programming constructs on top
+of this near-nothingness drives home the power of minimalism.
+</p>
+<p>
+So, now I realise that, above all else, it&#8217;s a fascination with
+minimalism that I&#8217;ve brought home from Illinois. <a
+href="http://www.cincomsmalltalk.com/userblogs/avi/blogView?showComments=true&entry=3254253382">Apparently</a>,
+I&#8217;m not the only one.
+</p>
+<p>
+If minimalism is good, then what&#8217;s the opposite of minimalism?
+</p>
+<p>
+When I studied music composition with <a
+href="http://www.kamranince.com">Kamran_Ince</a>, there was one thing I
+always knew he was going to say when I walked into his office with a new
+composition. He was going to tell me something like, &quot;You&#8217;ve got
+such a great idea here. Why do you have to run away from it so quickly? You
+didn&#8217;t develop it. We didn&#8217;t even know it happened!&quot; I
+would literally walk in to the beginning of a lesson <tt>knowing</tt> this
+was going to happen, and yet it would happen every time. It felt a little
+like not being able to spell &quot;FBI&quot; or like being given the
+answers to a test and then failing it anyway.
+</p>
+<p>
+Though he wasn&#8217;t necessarily trying to encourage me to write music in
+the style of a minimalist, the lesson was in fact about minimalism as a
+craft element. And, if minimalism is good, then what I was bringing to
+Kamran each week was its opposite. Lots of good ideas, jammed into a very
+tiny temporal space. The end result was a jumble of intelligent thoughts,
+stepping all over each other so that none were ultimately recognizable.
+Have you tried to use <a
+href="http://java.sun.com/products/jndi/tutorial/">JDNI</a>? It was
+probably the musical equivalent. In the software world, this has the effect
+of both muddying up what is already there, and creating an environment that
+is unfriendly to extension and change.
+</p>
+<p>
+I don&#8217;t know much about the thing called &quot;minimalism&quot; in
+art-forms other than music. But, in music, one of minimalism&#8217;s key
+features is that of emergence. When players are making repetitive and
+rhythmic sounds, a la <a href="http://terryriley.com">Terry</a> <a
+href="http://terryriley.com/">Reilly</a>, it&#8217;s almost never the
+<b>written</b> notes and rhythms that are interesting. It&#8217;s what
+happens when they&#8217;re all played together by imperfect humans.
+It&#8217;s the slow and subtle phase shifting, and then the
+musicians&#8217; subtle reactions to the phase shifting.
+</p>
+<p>
+Scheme obviously creates an environment that encourages emergent behaviors.
+In fact, the whole point of Lambda the Ultimate Imperative (LtUI) is to
+show that Scheme can be an imperative language, without changing Scheme and
+without &quot;shoe-horning&quot; Scheme to awkwardly meet the imperative
+critera. LtUI happens to be written by one of Scheme&#8217;s designers, but
+there&#8217;s no reason you or I couldn&#8217;t have written that paper
+(other than my age at its time of publication).
+</p>
+<p>
+So, back to Kamran Ince. He was trying to teach me not just to keep my
+music simple so I could develop ideas. He was also trying to teach me to
+create powerful ideas. You can&#8217;t write music the &quot;Kamran
+Way&quot; while making timid gestures. If you&#8217;re going to let it all
+hang out with an idea, it better be strong.
+</p>
+<p>
+And, with music, I think it&#8217;s a lot more apparent (than in
+programming) that you can&#8217;t start with an idea that doesn&#8217;t
+provide a platform on which to build a piece. For a patently contrived
+example, listen to <a
+href="http://chadfowler.com/music/ThatsAllFolks.mp3">this</a>. It would be
+possible to build a piece of music on something that sounds so final, but
+it would sound strange and intentional. While the temporal element is
+missing, an extremely rigid language or an API that is too large and
+complex can produce the same effect of stunted idea growth in software. For
+(potentially inflamatory) example, if a method of an object can only accept
+parameters of a certain class, my freedoms are extremely and intentionally
+limited when using that object.
+</p>
+<p>
+So, &quot;good minimalism&quot; doesn&#8217;t require simply that we
+&quot;be minimal&quot;. It requires that we correctly balance substance and
+space in a way that encourages evolutionary growth. It is possible to be
+minimal and rigid, which will lead to small ideas that can&#8217;t be
+developed any further. This is rarely what we want. Minimalism is one of
+these words (like &quot;simple&quot;) that sound easy to do but actually
+require a lot of practice to get them right.
+</p>
+<p>
+I see now that Lisp and Scheme aren&#8217;t different because of their
+minimal syntax or their dynamism. It&#8217;s the fact that they &quot;get
+out of the way&quot;, providing the right balance of mechanism and policy
+to allow their users to continue to evolve in the direction that nature
+selects, while not being so austere that wheels are necessariliy being
+reinvented every day. This is what has drawn me to Ruby (and Smalltalk and
+Scheme) and away from the likes of Java and C#. Not dynamic vs. static
+typing or compiled vs. interpreted environments.
+</p>
+<p>
+Many of the arguments for and against these minimal environments seem to
+boil down to the Mechanism vs. Policy <a
+href="http://pragprog.com/pragdave/Practices/MechPolicy.rdoc">tradeoff</a>.
+But, I&#8217;ll leave that for a later post.
+</p>

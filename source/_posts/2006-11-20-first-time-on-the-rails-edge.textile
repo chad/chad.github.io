@@ -1,0 +1,51 @@
+---
+layout: post
+title: !binary |-
+  Rmlyc3QgVGltZSBvbiBUaGUgUmFpbHMgRWRnZQ==
+enki_id: 4517
+---
+This past weekend, I had the privilege of participating in Pragmatic
+Studio&#8217;s <a href="http://therailsedge.com">Rails Edge</a> conference.
+I haven&#8217;t had this much fun in a <em>long</em> time. It was a
+single-track event with a definite who&#8217;s-who <a
+href="http://pragmaticstudio.com/therailsedge/speakers.html">speaker
+lineup</a> (seriously humbling to be in that list). I learned an incredible
+amount from the other speakers&#8217; presentations (not to mention my own,
+come to think of it).
+
+<p>
+Highlights for me were getting to pick <a
+href="http://duncandavidson.com/">James's</a> brain about how best to deal
+with multiplatform issues in <a href="http://rubygems.org">RubyGems</a>,
+learning about Rails internals from <a href="http://vernix.org">Marcel
+Molina, Jr.</a> (I don&#8217;t think a presentation went by for the full 3
+days without Marcel being asked some hard questions), and spending quality
+time with the <a href="http://relevancellc.com/">Relevance</a> guys for the
+first time.
+</p>
+<div style='float:left;margin-right:1em;'>
+<a href='/images/rails_edge_denver_round.jpg' rel='lightbox' title='Rails Edge Denver&lt;br/&gt;Photo courtesy of Dave Thomas'><img src="/images/rails_edge_denver_round_sm.jpg"/></a>
+</div>
+<p>
+(Like many of the best photos of Ruby/Rails events, <a
+href="http://pragmaticprogrammer.com">Dave Thomas</a> took this photo.
+Check out his <a
+href="http://flickr.com/photos/pragdave/sets/72157594379209598/">photoset</a>
+of the event. Lots of good ones.)
+</p>
+<p>
+Overall, this is the event that I think is responsible for fully
+rejuvenating me after a short period of burnout. I can feel the wheels
+turning again and can&#8217;t <em>wait</em> until the <a
+href="http://pragmaticstudio.com/therailsedge/reston.html">next one</a> in
+Reston. Being their home town, maybe some of the <a
+href="http://richkilmer.blogs.com/">folks</a> <a
+href="http://tomcopeland.blogs.com/">from</a> <a
+href="http://infoether.com/">InfoEther</a> will make it.
+</p>
+<p>
+The conversations on RubyGems and deployment issues spawned a <a
+href="http://rubyforge.org/projects/tattle">new project</a> which
+we&#8217;re banging away at. Hopefully we&#8217;ll have a release over the
+holidays (in between driving, eating too much turkey, etc.)
+</p>

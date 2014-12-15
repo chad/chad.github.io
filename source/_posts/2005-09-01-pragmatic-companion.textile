@@ -1,0 +1,50 @@
+---
+layout: post
+title: !binary |-
+  UHJhZ21hdGljIENvbXBhbmlvbgo=
+enki_id: 4430
+---
+<a href="http://blog.alancfrancis.com/">Alan Francis</a> is a long time
+industry veteran and agile development guru. I met him several years ago
+when he was my team&#8217;s coach at Object mentor&#8217;s <a
+href="http://www.objectmentor.com/courses/xpImmersion">XP Immersion</a>
+(taught by Robert Martin, Ron Jeffries, and Kent Beck).
+
+<p>
+More recently, he was one of the early draft reviewers of <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti/">my book</a>. He had
+the following <a
+href="http://blog.alancfrancis.com/2005/09/my_job_went_to_.html">to say
+about it</a>:
+</p>
+<pre>
+        The book is, in my head at least, a companion volume to Pragmatic
+        Programmer. PragProg gave a list of concrete advice for programmers
+        to improve their programming. MJWTI (as the new book is affectionately
+        known) gives a list of good concrete advice for programmer to improve
+        everything else that makes them employable.
+</pre>
+<p>
+This isn&#8217;t the first comparison between <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti/">My Job Went to
+India</a> and <a
+href="http://www.pragmaticprogrammer.com/ppbook/index.shtml">The Pragmatic
+Programmer</a> that I&#8217;ve heard, and I hope it won&#8217;t be the
+last. Since reading it in 2000, The Pragmatic Programmer has been on my
+short list of books I recommend to every programmer I work with, because
+being a programmer and <em>not</em> having read it is a crime. It just has
+too much to offer the average programmer <a
+href="http://www.43things.com/things/view/2296">to go unread</a>.
+</p>
+<p>
+If MJWTI can help as many people in as profound a way, the investment will
+have been well worth it to me.
+</p>
+<p>
+There are now sample chapters <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti/">available</a>, and
+the book can be pre-ordered (the PDF ships <em>now</em>, and the paper copy
+ships at the end of this month). I&#8217;d love to hear your thoughts as
+you read it (even just the sample chapters). <a
+href="mailto:chad+mjwticomments@chadfowler.com">Don't be shy</a>.
+</p>

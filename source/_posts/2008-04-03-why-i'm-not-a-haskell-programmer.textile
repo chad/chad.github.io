@@ -1,0 +1,7 @@
+---
+layout: post
+title: !binary |-
+  V2h5IEknbSBOb3QgYSBIYXNrZWxsIFByb2dyYW1tZXI=
+enki_id: 4648
+---
+I recently flew to Poland to speak at the "SFI Academic IT Festival":http://www.sfi.org.pl/news in Krakow.

@@ -1,0 +1,49 @@
+---
+layout: post
+title: !binary |-
+  MjMgdHJhdmVsIHRpcHMgdG8gbWFrZSBsb25nIHRyaXBzIG1vcmUgZW5qb3lh
+  Ymxl
+enki_id: 4702
+---
+I travel a lot. Not the most of anyone I know, but enough to have found myself inconvenienced plenty of times and to have learned ways to make life more comfortable on the road. Here are a few tips that I've collected over time (or most recently "via twitter":http://twitter.com/chadfowler/status/24098334515). Hopefully they'll come in handy to others.
+
+* Always carry a power strip in your suitcase. Great for international trips to avoid having to buy multiple adapters. But even in your home country, hotels can be really bad about providing enough outlets. I have "one of these":http://www.amazon.com/gp/product/B000F9YN2M?ie=UTF8&tag=chadfowcom-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B000F9YN2M which fits nicely in a suitcase or laptop bag without taking up too much room.
+* If you like coffee or tea, bring your own favorite brand of instant mix. I'm not a big Starbucks coffee fan, but their "Via":http://www.amazon.com/gp/product/B002P5LFJI?ie=UTF8&tag=chadfowcom-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B002P5LFJI product is the best tasting instant coffee I've ever had and beats the coffee available in any hotel room anywhere. When you're trying to beat jet lag, having something better than the usual hotel swill is very welcome.
+* Considering getting a portable WIFI router. Many of the hotels I stay in only provide ethernet connections, which would otherwise tether me to a desk. Given how much work I do at my computer, being able to sit where ever I like in the room is important. I also use the WIFI router to connect multiple devices without having to (potentially) pay multiple times for internet access. We have an old "airport express":http://www.amazon.com/gp/product/B0015YJOK2?ie=UTF8&tag=chadfowcom-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B0015YJOK2 which we use for this purpose.
+* Be careful about SMS messages. Even if your phone works overseas, you can easily amass a ridiculous cell phone bill from sending or receiving SMS messages. One friend accidentally ended up with a $600 bill from text messages alone after a trip overseas. It's not unusual for each text message to cost $0.50 or more.
+* Rent a cell phone and/or internet access device when traveling internationally. As an example, in Japan's Narita airport you can easily rent a portable WIFI access point which provides internet access via the cellular network right in the arrivals area. On my last trip, I passed the time on a bus video chatting with my wife. Another cell phone option is to bring an unlocked phone and buy a pre-paid SIM card for it in your destination country.
+* Carry your own meal replacement bars.  You never know when you're going to find yourself stuck on a tarmac starving or inconveniently moving from flight to flight during meal times.  Keeping your eating on schedule helps significantly with jet lag, but it also just helps you not feel terrible as you travel.  "Joe O'Brien":http://twitter.com/objo suggests "Clif Bars":http://www.amazon.com/gp/product/B00336EXQU?ie=UTF8&tag=chadfowcom-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B00336EXQU. Personally I like the "GNC brand protein bars":http://www.amazon.com/gp/product/B001RD38D0?ie=UTF8&tag=chadfowcom-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B001RD38D0. 
+* Always keep a spare set of clothes in your carry-on luggage if you're checking bags. I don't do this one, but I should. I spent several days freezing in the winter in Poland a couple of years ago because not only did I not have extra clothes in my carry-on but I checked my coat to avoid having to lug it around on the flights. Big mistake. Polish Air lost my suitcase and didn't get it to me until nearly the end of the trip.
+* Use something like "Tripit":http://tripit.com to consolidate your itinerary info then print it out. 
+* Leave your international travel supplies packed. For example, there's no reason to take your travel power adapter, WIFI router, or international power supplies out of your suitcase if you always use the same luggage. When I went to Japan recently I ended up tearing the grounding pin out of my Macbook Pro power cable so I could plug it into the Japanese outlets. BTW, I don't recommend doing that.
+* Especially for really long flights, drink a lot of water. Air travel can dehydrate you. The effect of drinking water is subtle but magical. You'll feel _much_ better if you make yourself do it.
+* Spend a significant amount of time outside in the sunlight on your first and second days in a new time zone. Go for a walk, breathe a lot of fresh air, maybe even do some outside exercise. Natural light and fresh air are two of the best tools for beating jet lag.
+* Consider traveling light and not checking any bags. Saves time and is safer than checking luggage (see my Poland story above). I confess I still don't usually do this but I should.
+* If you fly any significant amount at all, stick with one airline and record the miles. I get free upgrades on many domestic flights and some international flights simply because I fly United all the time. 
+* Use "http://seatguru.com":http://seatguru.com to pick your seats. I've been using it since "Dave Thomas":http://pragprog.com told me about it several years ago and I've more than once saved myself from an undesirable seat that I otherwise wouldn't have known about until I boarded.  When you're going to be stuck in the same spot for 5 hours, you don't want to be e.g. wedged into the wall in a seat that doesn't recline.
+* Another one from Dave Thomas: Start living in the destination timezone when you get on the plane. When you arrive, no sleeping until at least 8pm local. I'm going to New York tonight and I let myself get up at 5AM MDT this morning since I knew it was 7AM EDT. I sometimes take it to the extreme, adjusting a few days early if I know I'm going to have trouble waking up for work in the new time zone. "David Black":http://twitter.com/david_a_black says he can't manage to stay awake until 8PM when traveling east, so he limits himself to a 1.5 hour nap. I can't limit myself to a 1.5 hour nap so I avoid sleeping at all.
+* If you have any aptitude for language learning at all, you'd be surprised how easy it is to learn a few basic phrases. Spend a short amount of time on the plane learning some key phrases in your destination country. If the country has a different alphabet than the one you're used to, don't assume it will be too hard to learn. I learned "Hiragana and much of Katakana":http://www.amazon.com/gp/product/1880656183?ie=UTF8&tag=chadfowcom-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1880656183 for a recent Japan trip and instantly found it useful. Even though I would misread some things, it came in handy for me. When in South India, it took me two days to learn how to phonetically read Kannada. 
+* If you're going to be shopping, take a bigger suitcase than you need. Don't fill it on the way there so you can fill it on the way back. Another option is to buy a cheap duffle bag and fill it with dirty clothes for the trip back using your main suitcase for your purchased items.
+* Don't fold your clothes. If you roll them, they take less room in your luggage.
+* Scan your travel documents and upload them to a web site somewhere that will be easy to get to while you're traveling.
+* "Ian McFarland":http://twitter.com/imf suggests: "Keeping all your key docs in a clear plastic folder helps a ton. Tripit itinerary, passport photocopies, any paper tickets", etc. I haven't done that before but it's a great idea.
+* David Black suggests that if you wear glasses, bring an eyeglass screwdriver. I had an eyeglass malfunction in Hungary once and it took two days to find a screwdriver to fix them (busy work schedule, unfamiliar with the area, etc.). The world looked lopsided for two days. Very annoying.
+* Choose your flight schedules carefully. I personally like to plan to get to my destination fairly early. Even for domestic trips, I'd rather schedule myself to get in at 5PM and sit around with nothing to do than schedule an 11PM arrival, risking a delay and an unwanted late night.  "Jeremy Hinegardner":http://twitter.com/copiousfreetime  also suggests minimum 2 hour layovers. Delays happen and a longer layover is like an insurance policy. You pay a little every trip to avoid paying a lot when you really really don't want to.
+* Also from Jeremy, in his own words: "Travel problems: don't get pissy. There are 2 people who care about it, you, and the person helping you. One of them can stop." Wise.
+
+I've collected travel advice from a lot of people. Most of it is common sense, but if I forgot to mention someone, my apologies. Here are the people whose ideas I took from Twitter today (thanks all!):
+
+* "gregfahy":http://twitter.com/gregfahy
+* "kenrickchien":http://twitter.com/kenrickchien
+* "dimsumthinking":http://twitter.com/dimsumthinking
+* "pragdave":http://twitter.com/pragdave
+* "glenngillen":http://twitter.com/glenngillen
+* "elise_huard":http://twitter.com/elise_huard
+* "Donoskeys1":http://twitter.com/Donoskeys1
+* "dan_melnick":http://twitter.com/dan_melnick
+* "shazNamna":http://twitter.com/shazNamna
+* "jlecour":http://twitter.com/jlecour
+* "ginnyhendry":http://twitter.com/ginnyhendry
+* "imf":http://twitter.com/imf
+* "david_a_black":http://twitter.com/david_a_black
+* "copiousfreetime":http://twitter.com/copiousfreetime

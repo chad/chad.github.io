@@ -1,0 +1,68 @@
+---
+layout: post
+title: !binary |-
+  VGhlIENvbWluZyBMYWJvciBTaG9ydGFnZQo=
+enki_id: 4548
+---
+I picked up a copy of Business 2.0 magazine (<a
+href="http://www.business2.com">www.business2.com</a>) last night, and
+learned about something very interesting.
+
+<p>
+I may have been in the dark for the past few years, but there are
+apparently quite a few people and agencies who believe that the united
+states is headed into a huge labor shortage. <b>LABOR</b> shortage. Sorry
+for being obnoxious, but with the way things are going these days two of
+the people I&#8217;ve mentioned this to since last night said &quot;Yea, of
+course there&#8217;s a shortage&quot;, their brains auto-munging my words
+into &quot;job shortage&quot;.
+</p>
+<p>
+The claims are based on demographics. In a nutshell, the number of
+working-aged people is going to drop sharply over the next few years as the
+baby boomers retire. The percentage of college educated people is
+stabilizing at around 60%. And, the number of jobs is going to grow at a
+slow and predictable rate. This apparently results in millions of US jobs
+that can&#8217;t be filled by US workers.
+</p>
+<p>
+Business 2.0 doesn&#8217;t have the article up yet, but until then, Google
+turns up a lot of hits. Here are a few:
+</p>
+<p>
+<a
+href="http://featuredreports.monster.com/laborshortage/forecast/">featuredreports.monster.com/laborshortage/forecast/</a>
+</p>
+<p>
+<a
+href="http://www.cfo.com/article/1,5309,9847,00.html?f=features">www.cfo.com/article/1,5309,9847,00.html?f=features</a>
+</p>
+<p>
+<a
+href="http://www.csmonitor.com/2003/0106/p16s02-wmwo.html">www.csmonitor.com/2003/0106/p16s02-wmwo.html</a>
+</p>
+<p>
+<a
+href="http://www.bizjournals.com/austin/stories/2003/02/03/focus1.html">www.bizjournals.com/austin/stories/2003/02/03/focus1.html</a>
+</p>
+<p>
+Not surprisingly, there are nay-sayers as well. I remember reading about
+the &quot;Y2K disaster&quot; in 1996. People generally thought that the Y2K
+doomsayers were insane. There&#8217;s a little of that going around now:
+</p>
+<p>
+<a
+href="http://heather.cs.ucdavis.edu/itaa.real.html">heather.cs.ucdavis.edu/itaa.real.html</a>
+</p>
+<p>
+<a
+href="http://www.geocities.com/tablizer/shortage.htm">www.geocities.com/tablizer/shortage.htm</a>
+(warning: this one is moronic)
+</p>
+<p>
+This is all very confusing. Should I be reading &quot;How to Keep Your
+Job&quot; (<a
+href="http://www.pragmaticprogrammer.com/talks/HowToKeepYourJob/HowToKeepYourJob.htm">www.pragmaticprogrammer.com/talks/HowToKeepYourJob/HowToKeepYourJob.htm</a>)
+or &quot;How to <b>Pick</b> Your Job&quot;? I guess I&#8217;ll have to
+hedge and prepare for both.
+</p>

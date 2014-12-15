@@ -1,0 +1,16 @@
+---
+layout: post
+title: !binary |-
+  WFAgRG9nbWEgKyBaZWFs
+enki_id: 4546
+---
+
+Over the past couple of years, I've gone from being an <a href="http://www.extremeprogramming.org">Extreme Programming</a> fanatic to a casual bystander.  I haven't really changed my mind about its applicability or power.  I haven't become a skeptic.  I'm just sick of the dogmatic zealotry associated with it.  (And, yes, I've been guilty of this myself.  I hope I've grown out of it.)
+<P>
+I can't remember if I was reading a book that talks about this or I just thought it, but have you noticed that nobody gets this dogmatic and zealous over things that aren't in some way questionable?  Outside of grade school, you won't find a "Toothbrushers Advocacy Group".  There isn't a club for people who think we should eat balanced meals.  If there were, I might wonder whether or not it *is* a good idea to eat balanced meals.  At least for a second.
+<P>
+That brings me to my point.  Extreme Programming has a silly enough name as it is.  The dogma and zeal just make it seem even more like a fad.  Otherwise, why are these people *fighting* so hard for it?
+<P>
+I recently attended a technical conference about XP with a well known speaker from the XP community.  I told him that I was working in a software group doing geographically distributed development, and that while we weren't going to necessarily do full-blown XP, we would probably be taking the parts that make sense and augmenting it with processes that would make sense given our distributed situation.  Sadly, he belched out a retort to the tune of "Oh, you suck because you're not doing it 100%!"  <code>$respect--</code>.  I guess when you get paid to travel around the world and talk about something, you don't like it when people only drink half of your koolaide.
+<P>
+I suggest we leave the zealotry to the people who are trying to legalize Marijuana or some other questionable cause.  If you actually care about something and believe that it's good, (use it|do it) and let your successes do the speaking.  No bumper sticker required.

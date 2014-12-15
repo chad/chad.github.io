@@ -1,0 +1,11 @@
+---
+layout: post
+title: !binary |-
+  QWxvaGEgb24gUmFpbHM=
+enki_id: 4684
+---
+If you only have the budget to travel to one regional Rails conference this year, this might be a good choice:
+
+<a href="http://alohaonrails.com"><img src="http://www.alohaonrails.com/wp-content/uploads/2009/05/aor_spkr.jpg"/></a>
+
+...for obvious reasons.

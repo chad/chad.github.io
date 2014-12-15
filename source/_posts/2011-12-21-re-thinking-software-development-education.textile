@@ -1,0 +1,35 @@
+---
+layout: post
+title: !binary |-
+  UmUtdGhpbmtpbmcgU29mdHdhcmUgRGV2ZWxvcG1lbnQgRWR1Y2F0aW9u
+enki_id: 4717
+categories: !binary |-
+  Y2FyZWVyLCBzb2Z0d2FyZSwgZWR1Y2F0aW9u
+---
+Where have I been lately?  Good question. When asked over these past months, I jokingly say something like, "These last 8 months at LivingSocial have been the best 4 years of my career."
+
+But I don't just mean I've been busy. I've been focused on building the best software development team I can to do what I think is some important and industry-changing work in the world of local commerce.
+
+And when I joke about these 8 months being the best 4 years of my career, what I really mean is that I feel like I've learned 4 years worth of lessons and gained 4 years worth of experience. What we're doing isn't easy. It's the kind of work I've always sought out.
+
+I am a self-taught software developer. To date, my formal education consists of two 3-day training classes on specific programming languages (Java many years ago and Erlang in 2008). During my first work experiences in IT, I remember the shock of discovering that a Masters degree in software development doesn't necessarily translate to knowing how to effectively use a computer. I was a saxophonist and system administrator and would regularly _teach_ the computer scientists I worked with about things I would have assumed they learned in college.
+
+As I headed further into the workforce I noticed another odd thing: people with tens of years of experience as software developers weren't necessarily very good at it. My assumptions were based on what I had previously learned as a jazz musician.  Jazz musicians polish and hone their skills throughout their careers. The longer a jazz musician has been playing, the more likely he or she is to be an excellent jazz musician.
+
+Programmers, though. As far as I could tell the average programmer spent his day complaining about his co-workers and waiting for 5pm.
+
+So what's the disconnect? Some of it, of course, is just the people. Some "programmers are passionate":http://pragprog.com/book/cfcar2/the-passionate-programmer and some aren't. Those that aren't, aren't going to be radically successful. Assuming this is the case in all fields, what's really frustrating to me is that I continue to run into passionate developers who just don't know the right stuff.
+
+When I started out in this field, I was lucky enough to stumble onto a mentor. That too was probably informed by my experience as an aspiring jazz musician. Jazz musicians take the idea of musical lineage seriously and look for someone from whom to receive direction on how to parse the potentially overwhelming task of going from novice to master jazz improviser. My mentor in the software field did the same. He told me: first learn these three things. He picked topics that were diverse but complementary. He picked skills that set a foundation on which it was easy to build the next set. Most new developers don't get so lucky.
+
+And It's not just technology skills. The developers I work with are entrepreneurs at heart.  We aren't sitting around polishing our tools and conducting thought experiments.  We're delivering stuff that matters and we hate working on projects that drag on or don't deliver value.  Becoming a great developer involves not just learning the ins and outs of software development but understanding how businesses work and exactly how software systems fit into that picture. It's about delivering value quickly and iteratively. Great developers understand what Kent Beck and the rest of the authors of the "agile manifesto":http://agilemanifesto.org/  were getting at a decade ago. And what people like "Eric Ries":http://www.startuplessonslearned.com/ are teaching today.
+
+I've often thought "just give me 3 months with a smart person and I can have them running circles around the average developer." Have you thought that too? I know a lot of my colleagues have.
+
+It's time to rethink how we educate software developers. Computers used to be huge scary machines in big white rooms that very few people touched. Today you probably have at least one computer ON YOUR BODY most of the time. They're ubiquitous and friendly and just NOT that hard to work with. The technology landscape has changed. The system of educating developers should change along with it.
+
+My colleagues are clearly thinking along the same lines. I've seen speakers such as "Joe O'Brien":http://rubyhoedown.com/ talking about it this year.  And we see programs popping up all over.  Software Craftsman Ken Auer is launching the "Craftsmanship Academy":http://craftsmanshipacademy.com/ to teach apprentices the art and craft of software development in an intense hands-on residency-oriented program.  "Code Academy":http://codeacademy.org/ is a part-time 12 week course to accelerate the path to web development or design.
+
+Today we're launching a new program at "LivingSocial":http://livingsocial.com called "Hungry Academy":http://hungryacademy.com.  Hungry Academy is a five month intense entrepreneurial immersion that will take raw, hungry talented programmers (and aspiring programmers!) and develop them into ultra-productive software engineers. Those that make it through to the end will be offered a position on our development team and paired with a mentor from LivingSocial's growing list of some of the "industry's most talented software engineers":http://twitter.com/#!/merbist/livingsocial.  Best of all, we will _pay_ you to attend.  Your _job_ for five months is to take your craft and career to the next level.
+
+This isn't going to be easy. Some people will get in but won't make it to the end. Those that do will spend five months gaining the best 4 years of experience of their careers.

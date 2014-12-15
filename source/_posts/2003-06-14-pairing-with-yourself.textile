@@ -1,0 +1,85 @@
+---
+layout: post
+title: !binary |-
+  UGFpcmluZyBXaXRoIFlvdXJzZWxmCg==
+enki_id: 4472
+---
+I guess it&#8217;s been a couple of years now since Dave (<a
+href="http://pragprog.com/pragdave">pragprog.com/pragdave</a>) and I had a
+discussion about attempting to extend some of the benefits of paired
+programming (<a
+href="http://www.pairprogramming.com">www.pairprogramming.com</a>) to
+individual programming sessions. Unfortunately, this 5 minute-ish
+conversation resulted in little more than a dangling Wiki link (<a
+href="http://www.pragmaticprogrammer.com/cgi-local/pragprog?MorePragmaticTips">www.pragmaticprogrammer.com/cgi-local/pragprog?MorePragmaticTips</a>)
+with a catchy tag line. I&#8217;ve revisited it occasionally to see if
+anyone had anything interesting to say.
+
+<p>
+In his latest Code Kata installment (<a
+href="http://www.pragprog.com/pragdave/Practices/Kata/KataSeven.rdoc,v">www.pragprog.com/pragdave/Practices/Kata/KataSeven.rdoc,v</a>),
+Dave has&#8212;probably unintentionally&#8212;started filling in the hole.
+He suggests a structured, 3-step approach to reviewing your own code, with
+the goal of developing new perspectives in the process. It&#8217;s this
+same role-playing-ish type of process that I&#8217;ve had in mind since we
+discussed the &quot;solo pairing&quot; idea.
+</p>
+<p>
+The Zen Buddhists [oh no&#8230;there he goes with that Buddhism thing
+again] have developed a concept called &quot;Beginner&#8217;s Mind&quot;.
+Shunryu Suzuki-roshi, author of &quot;Zen Mind, Beginner&#8217;s Mind&quot;
+(<a
+href="http://www.booksite.com/texis/scripts/oop/click_ord/addcart.html?sid=3471&Buy=0834800799">www.booksite.com/texis/scripts/oop/click_ord/addcart.html?sid=3471&Buy=0834800799</a>),
+writes:
+</p>
+<pre>
+  &quot;In the beginner's mind there are many possibilities, but in the
+   expert's there are few.&quot;
+</pre>
+<p>
+As per my limited understanding, the goal is to always think as if you were
+seeing or doing something for the first time. Beginners aren&#8217;t
+usually proud or boastful. They are impressionable. Beginners don&#8217;t
+already <b>know</b> why things are the way they are or what the best course
+of action is at any given moment. They&#8217;re more likely to actually
+stop and look around them.
+</p>
+<p>
+This strikes a chord with the solo pairing idea. As we program lone,
+there&#8217;s a lot of seemingly autonomous stuff that can happen without
+any intentional thought. We get into a rhythm, not noticing the familiar
+scenery around us. Like driving to work every day, we are dulled to the
+routine of the environment in which we work. Think about it next time you
+sit down by yourself to write a program: How conscious are you of the names
+you choose for variables, methods, or classes? For the &quot;easy&quot;
+problems, how critical are you of your own norms and rituals? I&#8217;m not
+suggesting that you aren&#8217;t <b>conscientious</b>&#8212;in fact it
+might be conscientiousness that has led many of us to a rigid (most of us
+prefer to say &quot;correct&quot;) way of approaching many of life&#8217;s
+little problems.
+</p>
+<p>
+But, when you&#8217;re sitting with another person&#8212;especially if this
+person is a beginner&#8212;they&#8217;re not inside your head with you.
+They&#8217;re more likely to question your established protocol. &quot;Why
+do you put &#8216;p underscore&#8217; in those variable names?&quot; This
+might be a little frustrating at first until you irritatedly answer,
+&quot;Because it shows that they&#8217;re parameters to the method. Our old
+code&#8217;s methods were so long and jumbled that you often couldn&#8217;t
+remember where a variable was declared, so we had to do this. Thank God
+we&#8217;ve stopped coding like that&#8230;hmm, why <b>do</b> I put those
+&#8216;p underscore&#8217;s there?&quot;
+</p>
+<p>
+Dave asks:
+</p>
+<pre>
+  &quot;However, doing this six months after you write code is not the best way
+   of developing good software today. So the underlying challenge of this
+   kata is this: how can we get into the habit of critically reviewing
+   the code that we write, as we write it?&quot;
+</pre>
+<p>
+Maybe we could replace the word &quot;critically&quot; here with
+&quot;innocently&quot; to achieve a different but still beneficial effect?
+</p>

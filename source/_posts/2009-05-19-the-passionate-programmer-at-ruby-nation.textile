@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFBhc3Npb25hdGUgUHJvZ3JhbW1lciBhdCBSdWJ5IE5hdGlvbg==
+enki_id: 4685
+---
+Next month, I'll be presenting at "Ruby Nation":http://rubynation.org in my home away from home, Northern Virginia (I seem to spend almost as much time there as I do in Colorado).  The presentation will be something like this:
+
+h2. The Passionate Programmer
+
+What should the career path of a programmer be? How do you know what you're aiming for? What defines success?
+
+Many of us started out assuming the answers to these questions included slowly climbing a corporate promotion structure,
+ultimately becoming a people or project manager and no longer a programmer.  
+
+But we didn't get into software development so we could fill out spreadsheets and attend status meetings. We got into software
+development because we were excited about it. We wanted to be creative and to build great things. 
+
+From the author of The Passionate Programmer, this session will walk through how a software developer can not only succeed but
+work toward building a remarkable career. We'll draw examples from business, the arts, music, and sports. By the end of the
+presentation, we will have laid out a structured framework for radically succeeding in the software industry.

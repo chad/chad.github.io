@@ -1,0 +1,11 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgQ2FsbCBmb3IgUHJvcG9zYWxz
+enki_id: 4654
+---
+It's that time of year again!  We're now "accepting proposals":http://rubyconf.org/proposals/new for the "8th International Ruby Conference":http://rubyconf.org.  RubyConf will be in Orlando, FL this year on November 6-8.
+
+We're closing the proposal process on Aug. 21, so don't delay too much if you're just now seeing this. That's 10 days from today.
+
+While we're on the subject, what topics would you be interested in seeing this year?

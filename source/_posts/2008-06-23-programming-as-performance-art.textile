@@ -1,0 +1,14 @@
+---
+layout: post
+title: !binary |-
+  UHJvZ3JhbW1pbmcgYXMgUGVyZm9ybWFuY2UgKGFydCk/
+enki_id: 4652
+---
+Much of what we do in software development is focused on residual artifacts of the process.  But software development is itself a process, and the best development happens not when programmers are keying in the code to implement a design but when great programmers are improvising within constraints and iterating toward a goal.
+
+Programming is something you do (as opposed to something that is just _done_).  Why isn't there much focus on programming as a performance activity?
+
+I've heard interesting tales of programmers performing on stage either during conference presentations (the developer of Ruby Cocoa at Ruby Kaigi last year) or driving live computer-music.
+
+I'd like to see more examples.  Anyone have any to link?
+

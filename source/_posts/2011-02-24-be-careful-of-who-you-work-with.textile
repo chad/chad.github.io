@@ -1,0 +1,34 @@
+---
+layout: post
+title: !binary |-
+  QmUgQ2FyZWZ1bCBPZiBXaG8gWW91IFdvcmsgV2l0aA==
+enki_id: 4712
+categories: !binary |-
+  Y2FyZWVyLCBsaWZl
+---
+You instinctively know that who you associate with matters a lot.  Our parents bring us up steering away and toward others who influence us.
+
+But most of us don't realize just how much those around us influence us.
+
+As I recall in the introduction to "The Passionate Programmer":http://pragprog.com/titles/cfcar2/the-passionate-programmer, there was one specific event that turned the tide for me.  I had been chugging along in my slightly-above-average corporate job and experiencing what I considered to be the height of success.  Then I had an intense period during which, for a few months, I had the opportunity to collaborate with a whole new level of software developers.  It all came to a head when I went to the eXtreme Programming Immersion that Object Mentor taught.  After a week surrounded by brilliant developers and leaders in the field, I knew I had to do something different.
+
+I had to be as much like them as I could.
+
+
+In The Passionate Programmer, I quote Pat Metheny's advice to young musicians: always be the worst musician in every band you're in.  As a musician and as a programmer, I've tried Pat's advice.  You play with a group of people better than you, and you'll almost always play better. 
+
+!http://farm4.static.flickr.com/3315/3613370192_30635de1cb_m.jpg!
+http://www.flickr.com/photos/jazzuality/3613370192/
+
+That's good anecdotal advice.  If you don't trust Pat, how about "Nicholas Christakis":http://christakis.med.harvard.edu/?  Nicholas is a social scientist at Harvard University.  Together with James Fowler of UC San Diego, his research focuses on how behavior and then even EMOTION spread through social networks.  Can behavior be epidemic?
+
+Here are some things their research has shown to spread through social networks ilke disease:  "Obesity":http://www.nytimes.com/2007/07/25/health/25cnd-fat.html?_r=1&scp=4&sq=nicholas%20christakis&st=cse), "Smoking":http://www.nejm.org/doi/full/10.1056/NEJMsa0706154, "Alcohol Consumption":http://www.annals.org/content/152/7/426.abstract, and…."HAPPINESS":http://www.bmj.com/content/337/bmj.a2338.full!  Yes, emotional state is contagious.  
+
+!http://farm1.static.flickr.com/48/165829023_8e97572f07_o.jpg!
+http://www.flickr.com/photos/saintbob/165829023/
+
+These aren't insignificant numbers, either.  For example, obesity chances increase 57% if you have a friend who is or becomes obese.  And, more disturbing than that, this is an effect that is conducted through more than one node in the social graph.  If your friends' friends' friends are obese, "you are 10% more likely to be obese":http://bit.ly/eOY1LP
+
+
+If behavior spreads through social networks, then working in a toxic or slow-moving corporate environment is really really bad for you.  If you're a consultant, you MUST fire the clients that bring you down a notch and seek out clients that pull you up.  If you're a teacher, go where the students care about what they're learning.
+

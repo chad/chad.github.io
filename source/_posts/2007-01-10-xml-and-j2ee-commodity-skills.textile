@@ -1,0 +1,40 @@
+---
+layout: post
+title: !binary |-
+  WE1MIGFuZCBKMkVFOiBDb21tb2RpdHkgU2tpbGxz
+enki_id: 4600
+---
+In "My Job Went to India":http://pragmaticprogrammer.com/titles/mjwti, I talked about using supply and demand as a gauge with which to make decisions about which technologies you should invest in as a software developer:
+
+bq. The offshore market has injected its low-cost programmers into a relatively narrow set of technologies. Java and .NET programmers are a dime  a dozen in India. India has a lot of Oracle DBAs as well. Less mainstream technologies are very much underrepresented by the offshore development shops.  When choosing a technology set to focus your career on, you should understand the effects of increased supply and lower prices on your career prospects. 
+  
+bq. As a .NET programmer, you may find yourself competing with tens of thousands of more people in the job market than you would if you were, for example, a Python programmer. This would result in the average cost of a .NET programmer decreasing significantly, possibly driving demand higher (i.e., creating more .NET jobs). So, you’d be likely to find jobs available, but the jobs wouldn't pay all that well. The supply of Python programmers might be much smaller than that of .NET programmers with a demand to match. 
+  
+bq.  If the Python job market were to support noticeably higher prices per-programmer, additional people might be attracted to supply their services at this higher price range, resulting in competition that would drive the price back down. 
+  
+bq. The whole thing is a balancing act. But, one thing seems certain (for now). India caters to the already balanced IT services markets. You don’t find mainstream Indian offshoring companies jumping on unconventional technologies. They aren't first-movers. They generally don't take chances.  They wait for technology services markets to balance, and they disrupt those markets with significantly lower per-programmer costs. 
+
+Yesterday, one of the "Rails Core":http://rubyonrails.org/core guys passed along an interesting link to and article called "Who's Searching for XML?":http://www.megginson.com/blogs/quoderat/2007/01/09/whos-searching-for-xml/ by XML noteworthy, David Megginson.  
+
+David used "Google Trends":http://google.com/trends to compare and contrast where searches for certain technologies were coming from geographically.  Have a look at a few:
+
+* "J2EE":http://google.com/trends?q=j2ee&ctab=0&geo=all&date=all
+* "XML":http://google.com/trends?q=xml&ctab=0&geo=all&date=all
+* "Java":http://google.com/trends?q=xml&ctab=0&geo=all&date=all
+* "C#":http://google.com/trends?q=C#&ctab=0&geo=all&date=all
+* "ASP":http://google.com/trends?q=ASP&ctab=0&geo=all&date=all
+* "Spring Framework":http://google.com/trends?q=Spring%20Framework&ctab=0&geo=all&date=all
+* "Hibernate":http://google.com/trends?q=Hibernate&ctab=0&geo=all&date=all
+* "Struts":http://google.com/trends?q=Struts&ctab=0&geo=all&date=all
+* "Servlet":http://google.com/trends?q=Servlet&ctab=0&geo=all&date=all
+* "EJB":http://google.com/trends?q=EJB&ctab=0&geo=all&date=all
+
+Now look at these:
+
+* "Ruby on Rails":http://google.com/trends?q=Ruby+on+Rails&ctab=0&geo=all&date=all
+* "Smalltalk":http://google.com/trends?q=Smalltalk&ctab=0&geo=all&date=all
+* "Lisp":http://google.com/trends?q=lisp&ctab=0&geo=all&date=all
+* "OCaml":http://google.com/trends?q=ocaml&ctab=0&geo=all&date=all (I especially enjoyed both Urbana and Champaign being high on this list)
+
+As David says, it's totally unscientific.  But if I were a young programmer trying to figure out where to invest my time, I might spend just a little of it on Google Trends researching who I'm likely to be competing with.
+

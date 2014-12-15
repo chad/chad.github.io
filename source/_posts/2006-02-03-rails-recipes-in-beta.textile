@@ -1,0 +1,32 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgUmVjaXBlcyBpbiBCZXRh
+enki_id: 4508
+---
+Last night we released the first beta of my new book, <a
+href="http://www.pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a>.
+For those that don&#8217;t know, a Pragmatic <a
+href="http://pragmaticprogrammer.com/starter_kit/faqs/beta_faq.html">Beta
+Book</a> lets you read the book as it&#8217;s being <em>written</em>.
+I&#8217;m about a third of the way through, but there&#8217;s already a lot
+of helpful content in the book, and with the beta process, the book will
+grow in its owners&#8217; hands as it&#8217;s developed.
+
+<p>
+If you&#8217;re looking for <a
+href="http://headrush.typepad.com/creating_passionate_users/2005/09/conversational_.html">easy
+to read</a> walkthroughs of <em>advanced</em> Rails topics, this is the
+book for you. If you&#8217;ve read <a
+href="http://www.pragmaticprogrammer.com/titles/ruby/index.html">Programming
+Ruby</a> and <a
+href="http://www.pragmaticprogrammer.com/titles/rails/index.html">Agile Web
+Development With Rails</a>, this book is the logical next step.
+</p>
+<p>
+I&#8217;m taking suggestions for Recipes, so if you get in early, your
+recipe idea might just make it into the book.
+</p>
+<p>
+<img src="http://www.pragmaticprogrammer.com/images/fr_rr_medium.jpg">
+</p>

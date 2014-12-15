@@ -1,0 +1,60 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgRGF5Cg==
+enki_id: 4519
+---
+<a href="http://www.rubyonrails.com">Ruby on Rails</a> has got to be the
+most hyped non-commercial web programming tool in history. A lot of Java
+and .NET people are skeptical. Some are even downright angry.
+
+<p>
+If I were them, I would be angry too. You&#8217;ve got people like <a
+href="http://blog.curthibbs.us/">Curt</a> running around <a
+href="http://www.onlamp.com/pub/a/onlamp/2005/01/20/rails.html">preaching</a>
+about a 10x productivity increase over other web frameworks. And, of
+course, <a href="http://www.loudthinking.com">David</a> receives a great
+deal of pleasure in taking pot shots at the poor J2EE and PHP people (come
+on, David, it&#8217;s like taking candy from a baby!). And, to top it all
+off, when they pull off the cover of hype, they find that there really
+<em>is</em> a productivity increase approaching what might feel like 10x.
+<em>Damn</em>!
+</p>
+<p>
+The people of the Ruby and Rails community are about to put the
+productivity claim to a real test (though most would call it a
+demonstration, not a test): <a href="http://railsday.com">Rails Day</a>.
+Rails Day is being organized by <a href="http://rufy.com">Lucas Carlson</a>
+(and others?). On June 4, web developers will have a chance to show just
+how much application functionality they can pack into 24 hours of
+development. They&#8217;ll be working in teams of no greater than 3 people,
+using ONLY libraries installable via <a
+href="http://rubygems.rubyforge.org">RubyGems</a>, competing for a
+collection of fabulous prizes. (Not quite as thrilling as, say the Mac
+Mini, <a href="http://rubycentral.org">Ruby Central</a> is giving away a
+free <a href="http://rubyconf.org">RubyConf</a> pass). By the time it would
+take a Java team to get their IDEs installed, the contest will be over, and
+we&#8217;ll have a set of new web applications that are <em>sure</em> to be
+smashing.
+</p>
+<p>
+So, you&#8217;ve got more than a month to prepare. If you don&#8217;t
+already know Rails (or even Ruby), it&#8217;s not too late. Believe me: one
+month is <em>plenty</em> of time to learn both of them.
+</p>
+<p>
+Also, remember that you can only use <em>gems</em>, libraries included with
+the Ruby distribution, or Rails itself (which is a gem, of course). This
+means you can cheat! You have a month to create and release all of the gems
+you may need to create the killer web application. A <em>whole</em>
+<em>month</em>! Go read the <a href="http://www.railsday.com">list of
+prizes</a>. Now make some gems! (Never mind the fact that there are already
+258 different gems to choose from&#8212;not including the multiple versions
+of each&#8212;you&#8217;ll still need more!)
+</p>
+<p>
+And, remember: this contest is about fun. Don&#8217;t be too mean to the
+Java, .NET, and PHP people afterward (I won&#8217;t even mention the Python
+and Perl people&#8230;that wouldn&#8217;t be fair). They already feel bad
+enough.
+</p>

@@ -1,0 +1,47 @@
+---
+layout: post
+title: !binary |-
+  SmF2YSBQcm9ncmFtbWVycyB0byBTeW50YXggRmFtaWxpYXIgSXMK
+enki_id: 4532
+---
+Richard Monson-Haefel <a
+href="http://weblogs.java.net/pub/wlg/1125">writes</a> about how <a
+href="http://groovy.codehaus.org/">Groovy</a> is being proposed as an
+&quot;official&quot; language for the JVM. It would definitely be nice to
+have a dynamic language &quot;officially&quot; supported on the JVM by Sun.
+I might even sneak it into a project or two while nobody&#8217;s looking.
+
+<p>
+But the thing that really caught my attention was this excerpt from the
+&quot;Why Groovy?&quot; rationale, defending its choice over <a
+href="http://www.jython.org">Jython</a> or <a
+href="http://jruby.sf.net">JRuby</a>:
+</p>
+<pre>
+  ..is the best choice because it was built from the ground up for
+  the Java Platform and uses syntax that is familiar to Java developers..
+</pre>
+<p>
+<a href="http://www.vanderburg.org/Blog">Glenn</a> and I were chatting a
+couple of mornings ago about AppleScript and how it&#8217;s said to be
+&quot;easy to use&quot;, because it&#8217;s so much like English. The
+problem, though, is that it looks like English and feels like English (sort
+of), but it&#8217;s <b>not</b> English. My brain wants it to be English and
+I end up typing English phrases into the editor that don&#8217;t parse.
+Incidentally, as someone who is very familiar with Java, I have the same
+problem on occasion with JavaScript (<a
+href="http://wiki.codehaus.org/groovy/WhatsWrongWithJavaScript">here's
+why</a> you should use Groovy instead of JavaScript). It confused me
+because it looked like Java, but it wasn&#8217;t Java.
+</p>
+<p>
+The point of adding Groovy as an &quot;officially&quot; supported language
+for the JVM would be to allow programmers to think and do things
+differently than they can with the Java language. If the language is so
+semantically different, why struggle to make it syntactically similar? Why
+not let a different thing actually <b>look</b> different?
+</p>
+<p>
+It&#8217;s good to be uncomfortable on occasion. It shows you that
+you&#8217;re growing.
+</p>

@@ -1,0 +1,94 @@
+---
+layout: post
+title: !binary |-
+  TG92ZSBpdCBPciBMZWF2ZSBpdA==
+enki_id: 4579
+---
+As I mentioned in a <a
+href="http://chadfowler.com/index.cgi/Writing/MyJobWentToIndiaDone.rdoc,v">previous
+post</a>, though my goal was to help others, the process of writing <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti/">My Job Went to
+India</a> has already helped <em>me</em>.
+
+<p>
+While living in Bangalore, I saw <a
+href="http://www.martinfowler.com">Martin Fowler</a> speak at a
+Thoughtworks-sponsored event on agile development. The one thing he said
+that has stuck with me since then is that when he wants to learn about
+something, he writes about it. It&#8217;s obvious that writing a book or an
+essay on a topic would help you learn about it, but it never occurred to me
+that these guru-authors might be writing about things that they
+didn&#8217;t already know before starting a book or article. Writing is
+both a process of documentation <tt>and</tt> discovery.
+</p>
+<p>
+That makes a lot of sense when you&#8217;re writing about a technology.
+There are bound to be nooks and crannies that you hadn&#8217;t previously
+explored, even if you&#8217;re an expert. To present a complete picture,
+you&#8217;re going to have to dig into things you hadn&#8217;t previously
+had a need for.
+</p>
+<p>
+What wasn&#8217;t as obvious to me was that the same would be true of
+non-tech writing. My book isn&#8217;t a reference manual. It&#8217;s a
+collection of bits of advice. It&#8217;s less about knowledge and more
+about common sense, good judgement, and wisdom. So the nooks and crannies I
+explored as I wrote weren&#8217;t in obscure language features or rarely
+touched APIs. They were in concepts that I had either taught myself or had
+absorbed through osmosis from the wiser people around me throughout my
+career.
+</p>
+<p>
+While I was codifying ideas that had been everyday companions to me for
+years, they went from being rough and ragged to polished. Not only were
+they clearer for my readers (the purpose of the polishing) but they were
+actually <em>better</em>. As a result I have produced advice that, at least
+on a granular level, is new to me.
+</p>
+<p>
+So there&#8217;s this one particular section of my book that I learned a
+<em>lot</em> from. I&#8217;ve read it many times since it was written, and
+I&#8217;ve thought about it even more. It&#8217;s called &quot;Love it or
+Leave it&quot;. The premise is that, if you don&#8217;t love what
+you&#8217;re doing, you won&#8217;t be <em>great</em> at it. Or to flip it
+around, if you love your job, you stand a much greater chance of being
+great at it.
+</p>
+<p>
+Stated alone like this, it couldn&#8217;t get any more obvious. But this
+book is about making things actionable. I realized as I thought about it
+that I was unable to come up with a recent personal example of how
+<em>I</em> had taken this most primitive piece of advice and done something
+about it. My career had taken a turn that most Americans would consider to
+be &quot;success&quot;, and I had let it take me where it wanted. That
+meant management in big corporations.
+</p>
+<p>
+But the undercurrent that was always tugging on me was that I looked at a
+lot of my friends in the industry with a feeling of envy. I wished
+<em>I</em> could (at least attempt to) innovate all day. I wished
+<em>I</em> could write Ruby code full time. I wished <em>I</em> could work
+in an environment that was 100% focused on getting things done instead of
+drifting in the tides of corporate politics. I wanted to work for a company
+that was focused on <em>winning</em> instead of trying not to
+<em>lose</em>.
+</p>
+<p>
+So I decided to take my own advice and find this environment I&#8217;d been
+looking for. On the same day that I decided to look, I <a
+href="http://naviance.com">found it</a>. <a
+href="http://www.kellyjeanne.org">Kelly</a> and I are moving to Denver, so
+that I can be a full time Ruby (on <a
+href="http://www.rubyonrails.org">Rails</a>) developer for Naviance.
+</p>
+<p>
+Several years in the big corporate world creates a lot of inertia.
+It&#8217;s no easy decision to make. But it feels <em>right</em> once
+it&#8217;s done, and the interactions I&#8217;ve had with my new team only
+serve to reinforce my choice.
+</p>
+<p>
+The team is going to stay small and focused. We&#8217;re looking for a <a
+href="http://www.naviance.com/company/webdes.html">designer with Rails
+experience</a>. Might this be the leap you&#8217;ve been waiting to make?
+</p>

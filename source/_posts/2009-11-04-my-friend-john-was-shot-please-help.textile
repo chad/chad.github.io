@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  TXkgRnJpZW5kIEpvaG4gd2FzIFNob3QgLSBQbGVhc2UgSGVscA==
+enki_id: 4697
+---
+<a href='http://www.pledgie.com/campaigns/6842'><img alt='Click here to lend your support to: Help John recover and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/6842.png?skin_name=chrome' border='0' /></a>
+
+My friend and fellow Rails developer John Lannon, lead developer at http://resonantvibes.com, was mugged last night while picking up dinner for his wife. He didn't have anything on him to give to the robbers and they shot him point blank in the chest.
+
+His friends and teammates at "Resonant Vibes":http://resonantvibes.com are "raising money":http://www.pledgie.com/campaigns/6842 to help with his recovery. Please consider helping a fellow developer and a remarkable individual who (not that anyone does) really does not deserve to be in the predicament he's in now.
+
+Thanks
