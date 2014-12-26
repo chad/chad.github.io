@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://chadfowler.com/blog/2014/12/26/michael-moritz-on-being-a-world-class-entrepreneur/</loc>
+    <lastmod>2014-12-26T14:02:24+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://chadfowler.com/blog/2014/12/14/do-you-give-energy-or-take-energy/</loc>
     <lastmod>2014-12-14T13:19:57+01:00</lastmod>
     <priority>0.8</priority>
@@ -1582,67 +1587,73 @@
   </url>
   <url>
     <loc>http://chadfowler.com/passionate-programmer/burn.html</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/passionate-programmer/eggs.html</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/blog/archives/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://chadfowler.com/passionate-programmer/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/about/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://chadfowler.com/genau/</loc>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://chadfowler.com/passionate-programmer/</loc>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/interviews/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://chadfowler.com/books/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/contact/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://chadfowler.com/books/</loc>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/speaking/</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://chadfowler.com/passionate-programmer/panic.html</loc>
-    <lastmod>2014-12-15T09:57:35+01:00</lastmod>
+    <lastmod>2014-12-26T15:31:25+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

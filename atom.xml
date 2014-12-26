@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-12-15T09:57:35+01:00</updated>
+  <updated>2014-12-26T15:31:25+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Michael Moritz on Being a World-Class Entrepreneur]]></title>
+    <link href="http://chadfowler.com/blog/2014/12/26/michael-moritz-on-being-a-world-class-entrepreneur/"/>
+    <updated>2014-12-26T14:02:24+01:00</updated>
+    <id>http://chadfowler.com/blog/2014/12/26/michael-moritz-on-being-a-world-class-entrepreneur</id>
+    <content type="html"><![CDATA[<p>Semil Shah did a nice job of <a href="http://blog.semilshah.com/2014/12/25/mike-moritz-in-foreign-affairs/">pulling highlights</a> from a recent interview with <a href="http://en.wikipedia.org/wiki/Michael_Moritz">Sir Michael Moritz</a> in Foreign Affairs.  This one struck me as a particularily useful checklist for would-be entrepreneurs.</p>
+
+<p>What makes a world-class entrepreneur?</p>
+
+<p>Michael Moritz says:</p>
+
+<ul>
+<li>Clarity of thought.</li>
+<li>The ability to communicate clearly.</li>
+<li>A great sense of mission.</li>
+<li>A massive willingness to perservere.</li>
+<li>A willingness to make painful decisions.</li>
+<li>Extraordinary energy.</li>
+</ul>
+
+
+<p>(I made this into a bulleted list.)</p>
+
+<p>This list rings true to me. I have seen surpluses and deficits in each of these points in myself and others, and I&#8217;ve seen the impact of someone who matches this list well (or doesn&#8217;t but thinks they do).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Do You Give Energy or Take Energy?]]></title>
@@ -741,21 +768,6 @@ mature organization, it&#8217;s even obvious <i>who</i> the work should go to.</
 
 <p>The beautiful thing about being a manager of people is that your core job includes uncluttering your and everyone else&#8217;s work days by putting the work, moving tasks to a home  where they can be
 lovingly completed.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[I'm a Wunderkind!]]></title>
-    <link href="http://chadfowler.com/blog/2013/02/19/im-a-wunderkind/"/>
-    <updated>2013-02-19T15:58:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2013/02/19/im-a-wunderkind</id>
-    <content type="html"><![CDATA[<p>As I mentioned recently, <a href="http://chadfowler.com/blog/2013/01/08/moving-to-berlin-and-auf-wiedersehen-to-friends/">we&#8217;ve moved to Berlin!</a>.  We got to spend a week of down time exploring the city.  We are definitely in love with Berlin so far!</p>
-
-<p>I&#8217;m excited today to finally announce that I&#8217;ve joined <a href="http://www.6wunderkinder.com/blog/willkommen-chad">6Wunderkinder</a> as CTO. In case you don&#8217;t know them by the company name, 6Wunderkinder are the creators of the extremely popular <a href="http://www.wunderlist.com">Wunderlist</a>, which is a cross-platform, simple, and beautiful productivity application.  I&#8217;m a user, and as I&#8217;ve told friends and family about my move, I&#8217;ve discovered that many of you are too.</p>
-
-<p><a href="http://www.bizjournals.com/washington/blog/techflash/2013/02/former-svp-chad-fowler-on-the-state-of.html">As I&#8217;ve said previously,</a>, I&#8217;ll miss my LivingSocial team and look forward to watching them from here in Berlin, but I&#8217;m extremely excited to get back to hands-on software development with the small, focused, team of brilliant product engineers here at 6Wunderkinder.</p>
-
-<p>For those in the Berlin tech scene, if you happen to see me around at <a href="http://www.sanktoberholz.de/">Sankt Oberholz</a>, please do stop by and say hi :)</p>
 ]]></content>
   </entry>
   
