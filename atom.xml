@@ -4,7 +4,7 @@
   <title><![CDATA[Chad Fowler]]></title>
   <link href="http://chadfowler.com/atom.xml" rel="self"/>
   <link href="http://chadfowler.com/"/>
-  <updated>2014-12-26T15:31:25+01:00</updated>
+  <updated>2014-12-28T15:12:23+01:00</updated>
   <id>http://chadfowler.com/</id>
   <author>
     <name><![CDATA[Chad Fowler]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My Best Conference Talks on Video]]></title>
+    <link href="http://chadfowler.com/blog/2014/12/28/my-best-conference-talks-on-video/"/>
+    <updated>2014-12-28T15:11:36+01:00</updated>
+    <id>http://chadfowler.com/blog/2014/12/28/my-best-conference-talks-on-video</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve given many presentations over the years at conferences all over the world. These are links to video recordings of some of the best.</p>
+
+<iframe src=https://www.wunderlist.com/list/140970556 width=720 height=550 frameborder=0></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Michael Moritz on Being a World-Class Entrepreneur]]></title>
@@ -749,25 +761,6 @@ I don&#8217;t want a &#8220;rock star&#8221;. I definitely don&#8217;t want a ni
 I don&#8217;t care if you write books, contribute to Open Source software, or speak at conferences. I do those things, and I know how little they predict how well I do my job.</p>
 
 <p>If this describes you, I definitely want to know you. If you are interested in building scalable APIs and automated infrastructures for those APIs and would like to work with me in Berlin making beautiful productivity software, I <em>definitely</em> want to know you. Please get in touch.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[If It Stresses You Out, It's Not Your Job]]></title>
-    <link href="http://chadfowler.com/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job/"/>
-    <updated>2013-03-25T19:11:00+01:00</updated>
-    <id>http://chadfowler.com/blog/2013/03/25/if-it-stresses-you-out-its-not-your-job</id>
-    <content type="html"><![CDATA[<p>I keep learning this lesson over and over again, so I&#8217;m writing it here in an effort to never forget again. As a manager, if some task constantly stresses me out or makes me feel uneasy,
-it&#8217;s probably because I&#8217;m doing someone else&#8217;s job.</p>
-
-<p>I don&#8217;t mean someone&#8217;s being lazy and I&#8217;m picking up their slack. I&#8217;m talking about those nagging little annoying things you find yourself doing as infrequently as you can
-and do a half-assed job at every time. So you not only stress because they&#8217;re in the way of your <i>real</i> work but you stress because you suck at them.</p>
-
-<p>Every time I allow myself to notice this feeling&#8211;every time I  analyze what&#8217;s causing it, it&#8217;s because I should be delegating this work to someone else. Usually, in a
-mature organization, it&#8217;s even obvious <i>who</i> the work should go to.</p>
-
-<p>The beautiful thing about being a manager of people is that your core job includes uncluttering your and everyone else&#8217;s work days by putting the work, moving tasks to a home  where they can be
-lovingly completed.</p>
 ]]></content>
   </entry>
   

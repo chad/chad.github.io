@@ -9,9 +9,10 @@
   <meta name="author" content="Chad Fowler">
 
   
-  <meta name="description" content="Our kind friends at The
-Rubyist released their latest edition today. Though I don&#8217;t read
-Japanese, I&#8217;m always sure to find pointers to &hellip;">
+  <meta name="description" content="One of our grant
+winners, The
+Seattle Ruby Brigade, has just finished the first weekend HackFest in
+which they will dramatically improve RubyGems]. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +71,66 @@ Japanese, I&#8217;m always sure to find pointers to &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2005/05/30/rubygems-hackfest-part-1/">RubyGems HackFest Part 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2005-05-30T00:00:00+02:00'><span class='date'>2005.05.30</span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of our <a
+href="http://www.ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/133197">grant<br />
+winners</a>, <a href="http://www.zenspider.com/Languages/Ruby/Seattle/">The<br />
+Seattle Ruby Brigade</a>, has just finished the first weekend HackFest in<br />
+which they will dramatically improve <a
+href="http://rubygems.rubyforge.org">RubyGems</a>].</p>
+<p>
+<p><a href="http://zenspider.com">Ryan Davis</a> has the <a
+href="http://blog.zenspider.com/archives/2005/05/rubygems_hackfe.html">writeup</a>.</p>
+</p>
+<p>
+<p>Among other <span class="caps">REALLY</span> nice improvements are some <a
+href="http://rubyforge.org/cgi-bin/viewcvs.cgi/rubygems/test/?cvsroot=rubygems">dramatic<br />
+refactoring of the way testing is done</a> and a potentially massive<br />
+performance <a
+href="http://rubyforge.org/cgi-bin/viewcvs.cgi/rubygems/lib/rubygems/specification.rb?cvsroot=rubygems">improvement</a><br />
+in one of the core classes of the RubyGems library, affecting not just<br />
+install time but <tt>runtime</tt> performance of RubyGems-enabled<br />
+applications.</p>
+</p>
+<p>
+<p>All this with unit tests. Nice job, Seattle!</p>
+</p>
+<p>
+<p>I&#8217;d love to see more of this kind of thing (especially when people<br />
+are improving software that I have a hand in). Hey all you other Ruby<br />
+groups, it might be too late (this year) for a <a
+href="http://rubycentral.org">RubyCentral</a> code fest grant, but<br />
+it&#8217;s not too late to organize your own self-funded Hack Fest.</p>
+</p>
+<p>
+<p>Anyone close enough to Kentucky want to give it a go?</p>
+</p></div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -750,79 +811,6 @@ like-minded developers is a very important part of the learning process.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2005/03/12/chihuahua-with-a-messiah-complex/">Chihuahua With a Messiah Complex</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2005-03-12T00:00:00+01:00'><span class='date'>2005.03.12</span> <span class='time'>12:00 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre>
-        I like the dancing.
-        That can only be inferred.
-        Hop to it, sparky.
-</pre>
-<p>Same <a
-href="http://chadfowler.com/index.cgi/Computing/Programming/Ruby/HaikuInTheWild.rdoc,v">lovely<br />
-Haiku</a>, enhanced with <a href="http://google.com">Google</a>, and <a
-href="http://www.ntecs.de/blog/Blog/WWW-Mechanize.rdoc"><span class="caps">WWW</span>::Mechanize</a>.<br />
-Searches the internet for the terms you pass in as arguments, and creates a<br />
-Haiku with that as a title. It&#8217;s deep. Really really deep:</p>
-<pre>
-        $ ./find_haiku Pretentiousness for the rest of us
-        #&amp;lt;WWW::Link:0x1650964 @href=&amp;quot;
-        http://www.pixeldiva.co.uk/obnoxious-pretentiousness.html&amp;quot;
-        , @node=&amp;lt;a href='http://www.pixeldiva.co.uk/obnoxious-pretentiousness
-        .html'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
-        #&amp;lt;WWW::Link:0x164d228 @href=&amp;quot;http://writersword.com/print.php?sid=5&amp;quot;,
-        @node=&amp;lt;a href='http://writersword.com/print.php?sid=5'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
-        #&amp;lt;WWW::Link:0x1649da8 @href=&amp;quot;http://writersword.com/index.php&amp;quot;,
-        @node=&amp;lt;a href='http://writersword.com/index.php'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
-        #&amp;lt;WWW::Link:0x16468b0 @href=&amp;quot;http://www.tamingingrid.com/domstory.htm&amp;quot;,
-        @node=&amp;lt;ahref='http://www.tamingingrid.com/domstory.htm'&amp;gt; ... &amp;lt;/&amp;gt;&amp;gt;
-        ...
-        Got 23 docs
-        Pretentiousness for the rest of us
-                And so is Pisces.
-                It just is to Capricorn.
-                Ideas abound.
-
-                Easton and Kurt H.
-                We simply need more courage.
-                Don't edit below!
-
-                Life is a big deal.
-                has anybody won yet?
-                Don't edit below!
-</pre>
-<p>
-<p>If you&#8217;re interested in wasting some time, have a look a the <a
-href="http://chadfowler.com/find_haiku">unpolished script</a> that<br />
-generates this stuff.</p>
-</p>
-<p>
-<p>Don&#8217;t ask me why.</p>
-</p></div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page24">&larr; Older</a>
@@ -864,6 +852,10 @@ generates this stuff.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/12/28/my-best-conference-talks-on-video/">My Best Conference Talks on Video</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/26/michael-moritz-on-being-a-world-class-entrepreneur/">Michael Moritz on Being a World-Class Entrepreneur</a>
       </li>
     
@@ -877,10 +869,6 @@ generates this stuff.</p>
     
       <li class="post">
         <a href="/blog/2014/10/13/must-read-software-development-books/">Must-Read Software Development Books</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/11/on-being-40/">On Being 40</a>
       </li>
     
   </ul>
