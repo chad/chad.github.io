@@ -1,0 +1,83 @@
+---
+layout: post
+title: !binary |-
+  TXkgSm9iIFdlbnQgdG8gSW5kaWEgaXMgU2hpcHBpbmcK
+enki_id: 4434
+---
+<a href="http://pragmaticprogrammer.com/titles/mjwti/index.html">My Job
+Went to India</a> (MJWTI) is in stock and shipping!
+
+<p>
+You can order it directly from The Pragmatic Programmers or from any of the
+<a
+href="http://www.amazon.com/exec/obidos/tg/detail/-/0976694018/qid=1128000274/sr=8-1/ref=pd_bbs_1/103-0213063-5255802?v=glance&s=books&n=507846">major</a>
+<a
+href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?userid=NW0Ql4GCyP&isbn=0976694018&itm=1">booksellers</a>.
+It should start arriving in stores shortly.
+</p>
+<p>
+In his announcement about MJWTI, <a
+href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi">Dave Thomas</a> says:
+</p>
+<pre>
+        In 52 delightfully written calls-to- action, Chad explains how each
+        of us can position ourselves not just to survive, but to prosper in
+        the new, flatter world. Most end with an &quot;Act on it!&quot; section,
+        suggesting specific actions we can take.
+
+        I'm really proud of this book--in many ways it strikes me as the career
+        equivalent of The Pragmatic Programmer.
+</pre>
+<p>
+I think of the entire book as a &quot;call to action&quot;. It&#8217;s
+about not letting yourself believe that you have to be a <em>victim</em> of
+whatever the economy and the &quot;greedy corporations&quot; do to you.
+It&#8217;s about how to take control of your career and play to
+<em>win</em>&#8212;not just to avoid losing. Sure, you can rally, protest,
+and vote, but don&#8217;t let that be your only plan.
+</p>
+<p>
+MJWTI is set against a backdrop of IT offshoring and the economic shift
+that&#8217;s taking place, but as reviewer Vik Chadha pointed out,
+it&#8217;s not about Americans beating Indians out of jobs or Indians
+beating Americans. It&#8217;s about building things of <em>value</em> and
+making software developers better.
+</p>
+<p>
+So don&#8217;t expect a pity party. There&#8217;s a fair amount of <a
+href="http://chadfowler.com/index.cgi/Computing/Career/WhyDoGeeksHateMarketing.rdoc,v">tough
+love</a>. But hopefully, you&#8217;ll <a
+href="http://outofhanwell.com/blog/index.php?title=my_job_went_to_india&more=1&c=1&tb=1&pb=1">find
+the book rejuvenating</a>:
+</p>
+<pre>
+        I walked away from this book rejuvenated, but it was more than a
+        motivational pep talk. These are basics principles that every
+        software developer should absorb, and honestly, I wish I had had this
+        book before now.
+
+        Each chapter is only several pages long, so you can read this book in
+        large or small pieces. I've read it through once as a PDF, but I think
+        any serious developer should get a printed copy. I want to be able to
+        pick up the book in a week from now, open it to any chapter, and be
+        reminded exactly what it is that makes a software developer great.
+</pre>
+<p>
+I sincerely hope and believe that those of you who read the book will find
+it helpful. I urge you to not only read it but to seriously use it (or
+steps it inspires) to create your own <a
+href="http://www.pragmaticprogrammer.com/talks/HowToKeepYourJob/HTKYJ.html">"Pragmatic
+Investment Plan"</a>. You might even want to, as <a
+href="http://www.luisdelarosa.com/blog/2005/09/review_my_job_w.html">Luis
+de la Rosa is doing</a>, form a study/discussion group to help each other
+stay on course.
+</p>
+<p>
+As always, I welcome comments by weblog, discussion forum, or <a
+href="mailto:chad+mjwti@chadfowler.com">email</a>.
+</p>
+<pre>
+        Don't bother just to be better than your contemporaries or
+        predecessors Try to be better than yourself.
+                                                 -- William Faulkner
+</pre>

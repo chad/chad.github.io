@@ -1,0 +1,24 @@
+---
+layout: post
+title: !binary |-
+  SG93IHRvIFNoaXAgYSBCb29r
+enki_id: 4429
+---
+<a href="http://pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a> is
+shipping!
+
+<img src="/images/rr_book.jpg" style='float:left;margin-right:1em;'>
+
+<p>
+It&#8217;s always satisfying the first time you get to hold a physical copy
+of a book you&#8217;ve slaved over. But as a special treat, this time <a
+href="http://pragprog.com">Pragmatic Dave</a> has put together a <a
+href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Random/ShippingRecipes.html">slide
+show</a> of what it takes to actually ship a book.
+</p>
+<p>
+Particulary impressive is the fact that Dave seems to have cloned himself
+to have more hands on deck during the shipping process. I&#8217;ve always
+wondered how he manages to accomplish so much given the same number of
+hours available as the rest of us.
+</p>

@@ -1,0 +1,40 @@
+---
+layout: post
+title: !binary |-
+  Q2FyaW5nIExpa2UgQ3Jhenkg
+enki_id: 4714
+---
+I've just finished reading Gary Vaynerchuk's "The Thank You Economy":http://www.amazon.com/Thank-You-Economy-Gary-Vaynerchuk/dp/0061914185.  From the outside it looks like a book about marketing. It looks like a book for companies who need a "social media strategy".  On the inside, it's much more.
+
+Everyone doing business of any sort has an important lesson to learn from The Thank You Economy.  Here's that lesson in Gary's own words (from last year's "RailsConf":http://railsconf.org keynote):
+
+<pre>
+  "Giving a Fuck is comin' on strong!"
+</pre>
+
+<p>
+<div class="video_embed"><object width="500" height="411"><param name="movie" value="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/-QWHkcCP3tA&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="500" height="411" allowFullScreen="true" wmode="transparent"></embed></object></div>
+</p>
+
+Gary uses this phrase over and over in the book: "caring like crazy".  What does that mean?
+
+Joel Spolsky wrote "a whole book":http://www.joelonsoftware.com/items/2007/06/05.html about how what you need out of people you work with is for them to be smart and to get things done. Having hired a ton of people myself (hundreds) and worked with a fair number of others, I have to disagree. Smart and gets things done are both excellent, important qualities.  But ultimately I don't care if you're smart. I've worked with my share of brilliant people who just don't care.
+
+Look at this exchange between "Corey Haines":http://twitter.com/coreyhaines and "Justin Gehtland":http://twitter.com/jgehtland from a few days ago:
+
+!http://chadfowler.com/giving_a_shit.png!
+
+I worked with a CEO in India who embodied this idea I remember the first time I noticed it.  We walked in the front of the building and he noticed some trash on the lawn next to the security guard who was stoicly standing there staring at nothing.  Trash in India.  It's everywhere.  I certainly didn't notice. It seems like an impossibly uncontrollable problem.
+
+In mid-sentence, he stops and runs over, picks up the trash and hurries back over to the guard who learns that we're <i>not</i> going to have trash in our lawn and if the guard doesn't care about his workplace he can go somewhere else. He wasn't mean about it.  He was matter-of-fact. The guard tried to take the trash from him, but he wouldn't have it.  He took it himself and threw it away.  He did this constantly.  Eventually, all of the guards started doing it. Then the programmers started doing it. In fact, anything broken, or dirty, or at all not right got fixed by whoever saw it. We were a culture of caring and it was going to be both superficially and deeply ingrained.
+
+One of our people got severely injured a few months later in a motorcycle accident. He wasn't wearing a helmet, as is very very common in India. From that day on, our CEO or I stood at the drive into the building refusing to allow employees in unless they were wearing helmets.  A couple of the employees couldn't afford them, so our CEO personally bought them the best helmets he could buy.
+
+He cared about the business (even the building it took place in) and he cared about the people. And you can be damned sure he cared about the work.  It was infectious.  It was viral.
+
+If you REALLY care and you're capable, I don't care much how smart you are for most work that needs to be done. Give me someone passionate over an apathetic genius any day of the week.
+
+
+!http://ecx.images-amazon.com/images/I/41HCiSFoi0L.jpg!
+
+So this is my takeaway from The Thank You Economy.  Care like crazy. Whether you're running a company or just running your career.  It's sound obvious, but it's oh too easy to forget and let it slide. Let a little apathy in, and it makes a mess. A cyncical remark, or a posted Dilbert cartoon are all it takes to start the wrong kind of culture of apathy. Care like crazy.

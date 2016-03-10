@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  R29vZ2xlIHRvIENsZWFuIFVwIFRoZSBXZWI=
+enki_id: 4554
+---
+
+A few months ago, I <a href="http://www.chadfowler.com/index.cgi/Computing/GoogleBloggerBuyout.html">suggested</a> that Google might have purchased <a href="http://www.pyra.com">Pyra Labs</a> in an effort to polish the excrement that "blogging" creates.
+<p>
+I was pleased today to <a href="http://www.theregister.co.uk/content/6/30621.html">find out</a> that I might have been right.  It seems that Google may separate web log search results from everything else, as they've done with Usenet.
+<p>
+I'm looking forward to the appearance of a "web logs" tab on google.com, both so I can occasionally click it, and so I can search for something and actually get some usable results back.  The only disappointing thing is that my site is much less likely to get amusing referrals from Google searches like "Iron Maiden Fan Club in Iraq" (I didn't make that up, and it happened more than once).
+<p>
+I'm not feeling as negative about "blogging" as I did in February, but I was still amused by the following quote from the Register article:
+<pre>
+Recent research by Pew put the number of blog readers as opposed 
+to writers, as "statistically insignificant".
+
+However, through dense and incestuous linking, results from blogs 
+can drown out other sources. 
+</pre>

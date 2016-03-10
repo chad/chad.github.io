@@ -1,0 +1,33 @@
+---
+layout: post
+title: !binary |-
+  Q2FyZWVyIFN0cmF0ZWdpZXMgZm9yIHRoZSBPZmZzaG9yaW5nIEVyYQo=
+enki_id: 4580
+---
+If you&#8217;ve got some time this morning, you might want to sign up for
+<a
+href="http://devnet.developerpipeline.com/documents/s=9910/dev060110ns/dev011006ns.html">this</a>
+net seminar put on by <a href="http://sdmagazine.com/">Software Development
+magazine</a>. Here&#8217;s the abstract:
+
+<pre>
+  As U.S. executives increasingly see IT as a commodity, how do you hold on
+  to your job? In a follow-up to the popular October 2005 Software Development
+  NetSeminar with Dr. Ron Hira, IEEE-USA.s vice president for career
+  activities, this 90-minute interactive conversation with career maven
+  Chad Fowler will give you the ammunition to avoid the shock of seeing
+  your position outsourced to cheaper climes. Fowler, author of My Job Went
+  to India (Pragmatic Programmers, 2005), offers 52 ways to navigate the
+  global job marketplace, with tips ranging from choosing the most valuable
+  technical and business domain skills to how to advertise your
+  accomplishments internally and externally.
+
+  Don't miss the opportunity to pose your questions live to Fowler, an
+  application architect, Ruby programming language expert and author with
+  a keen interest in awakening developers to ways they can elevate the
+  visibility and value of their profession.
+</pre>
+<p>
+The net seminar is at 9AM PST. Good lunch break material on the East coast.
+Hope to see you there.
+</p>

@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  Tm90IER1bWIgRW5vdWdoCg==
+enki_id: 4531
+---
+Lesson learned: Even when you try to <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/Languages/GroovyJSR.rdoc,v">dumb
+down the syntax of a language</a>, there are some people for whom you <a
+href="http://weblogs.java.net/pub/wlg/1572">can't make it dumb enough</a>.
+
+<p>
+Which &quot;obscuring lesson&quot; did we learn from C? Was C more
+obfuscated than the languages available at the time of its creation?
+</p>
+<p>
+&quot;weird cryptic syntax&quot;? I&#8217;m not a huge Groovy proponent,
+but <a
+href="http://www.sauria.com/presentations/Groovy%20SeaJUG%202004-03.ppt.pdf.zip">look
+here</a> and contrast pages 2 and 7 in this PDF presentation. The Groovy
+example is more cryptic than the Java example?
+</p>

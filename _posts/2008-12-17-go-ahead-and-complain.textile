@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  R28gQWhlYWQgYW5kIENvbXBsYWlu
+enki_id: 4673
+---
+"Twitter":http://twitter.com is an excellent service for allowing people to vent. I'd guess a large percentage of the messages that pump through the site are complaints about something (technology, airlines, restaurants, etc.). I know I've posted my share of complaints.
+
+A couple of days ago, "Chris Wanstrath":http://ozmm.org/ linked to "one of his Twitter complaints":http://twitter.com/defunkt/status/112575642 from a year and a half ago:
+
+  failed at setting up a public git repo with working push. giving up for tonight, working on something else. 
+
+This was probably the first seed that led to the birth of the extremely popular "GitHub":http://github.com. 
+
+I'm hoping to remember this every time I type in a whiny tweet about something I have the power to fix. Complaining and being critical is great as long as you're willing to do something about the problem when you can. And, maybe if it's annoying enough for you to type it into Twitter to share with your followers, it's annoying enough that a solution could be your next big thing.

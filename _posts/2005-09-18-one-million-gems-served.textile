@@ -1,0 +1,28 @@
+---
+layout: post
+title: !binary |-
+  T25lIE1pbGxpb24gR2VtcyBTZXJ2ZWQK
+enki_id: 4481
+---
+As Jim <a
+href="http://onestepback.org/index.cgi/Tech/Ruby/OneMillionServed.red">put
+so eloquently</a>,
+
+<pre>
+        $ lynx -dump http://gems.rubyforge.org/stats.html \
+         | ruby -e 'p ARGF.inject(0) { |s,t| t.split[1].to_i + s }'
+        $ 1007130
+</pre>
+<p>
+Also note that there are now 396 unique libraries and applications to
+choose from in the repository. 100 new gems in only <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/Ruby/RyanWinsThePrize.rdoc,v">3
+months</a>! Got a new library that you&#8217;ve been planning to polish off
+and release? Go ahead and spend your Sunday on it and you might be lucky
+number 400.
+</p>
+<p>
+Perhaps it&#8217;s not too late to see RubyGems make an appearance in <a
+href="http://redhanded.hobix.com/inspect/ruby183PreviewTwo.html">Ruby
+1.8.3</a>?
+</p>

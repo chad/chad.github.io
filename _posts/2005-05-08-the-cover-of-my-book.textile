@@ -1,0 +1,24 @@
+---
+layout: post
+title: !binary |-
+  VGhlIENvdmVyIE9mIE15IEJvb2sK
+enki_id: 4432
+---
+We have now finalized the cover for <a
+href="http://pragmaticprogrammer.com/titles/mjwti/index.html">My Job Went
+to India</a>.
+
+<p>
+<img src="http://chadfowler.com/images/mjwti_medium.jpg">
+</p>
+<p>
+The book is very close to being content complete, shortly after which the
+reviewing process will start. The requests from reviewers have been
+overwhelming, which is further proof that we&#8217;re on to something here.
+</p>
+<p>
+By the way, <a
+href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Random/MyJobTitle.rdoc">if
+you think this book is a slam against Indians</a>, be sure to actually read
+it before jumping to conclusions.
+</p>

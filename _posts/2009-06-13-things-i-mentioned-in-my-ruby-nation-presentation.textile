@@ -1,0 +1,64 @@
+---
+layout: post
+title: !binary |-
+  VGhpbmdzIEkgbWVudGlvbmVkIGluIG15IFJ1YnkgTmF0aW9uIHByZXNlbnRh
+  dGlvbg==
+enki_id: 4688
+---
+I had a great time at "Ruby Nation":http://rubynation.org this weekend. After my presentation I got a number of questions asking about things I referenced during the talk. Here's an attempt to point to some of them. If you weren't there, you won't have any context but feel free to follow the links anyway You might find something interesting.
+
+"My Book":http://www.pragprog.com/titles/cfcar2/the-passionate-programmer/
+
+"Bureau of Labor Statistics Time Use Survey":http://www.bls.gov/tus/charts/
+
+"Stockholm Syndrome":http://en.wikipedia.org/wiki/Stockholm_syndrome
+
+"Karlheinz Stockhausen":http://www.stockhausen.org/  whose name I accidentally used when trying to refer to Stockholm Syndrome.
+
+"4d Database":http://www.4d.com/
+
+"John Coltrane":http://www.johncoltrane.com/swf/main.htm
+
+"da Vinci Sketches":http://www.drawingsofleonardo.org/
+
+"Eight Hour Burn":http://c2.com/cgi/wiki?EightHourBurn
+
+"XP (Agile) Immersion":http://www.objectmentor.com/omTraining/course_agile_immersion.html
+
+"Pat Metheny":http://hepcat1950.com/pmivmix1.html - "Whenever young guys ask me what they should do to get better, I always say try to be the worst guy in whatever band you're in. That's the secret."
+
+"I Will Teach You To Be Rich":http://iwillteachyoutoberich.com
+
+"Purple Cow":http://www.sethgodin.com/purple/
+
+"4-Hour Work Week":http://fourhourworkweek.com/
+
+"Wozzeck":http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?ids=322685-2355964-4316308&s=143441 by "Alban Berg":http://w3.rz-berlin.mpg.de/cmp/berg.html
+
+"Drepung Gomang Institute":http://drepunggomang.com/ (for whom we translated Hindi)
+
+"What Would You Rather Be Doing?":http://chadfowler.com/2009/5/2/what-would-you-rather-be-doing
+
+"Ask Sunday":http://www.asksunday.com/ - the company I mentioned that helped me with research
+
+"My exercise bike":http://www.amazon.com/Stamina-1350-Magnetic-Resistance-Recumbent/dp/B001ICPCPW/ref=sr_1_258?ie=UTF8&s=sporting-goods&qid=1244916825&sr=1-258
+
+"Arduino":http://www.arduino.cc/ - I used this to create the interface to my exercise bike
+
+"Gosu":http://code.google.com/p/gosu/ - The game library I used to write my exercise bike "game"
+
+"Building Games with Ruby":http://rubyhoedown2007.confreaks.com/session05.html - Andrea O.K. Wright's presentation on game development in Ruby
+
+"You and Your Research":http://www.cs.virginia.edu/~robins/YouAndYourResearch.html - Richard Hamming at Bell Labs
+
+"Fixing Broken Windows: Restoring Order And Reducing Crime In Our Communities":http://www.amazon.com/Fixing-Broken-Windows-Restoring-Communities/dp/0684837382
+
+"The Pragmatic Programmer":http://pragprog.com
+
+"Discussion Panel: Women in Rails (Video)":http://en.oreilly.com/rails2009/public/schedule/detail/8772
+
+"14 Worst Health Mistakes Even Smart Women Make":http://www.prevention.com/14worsthealthmistakes/list/12.html - Referenced Harvard and University of Texas studies on the effect of the company you keep
+
+"How to Call Attention to Your Music":http://sivers.org/pdf - Derek Sivers free ebook
+
+"15 Things Kurt Vonnegut Said Better Than Anyone Else Ever Has Or Will":http://www.avclub.com/articles/15-things-kurt-vonnegut-said-better-than-anyone-el,1858/

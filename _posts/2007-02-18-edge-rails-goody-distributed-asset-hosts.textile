@@ -1,0 +1,29 @@
+---
+layout: post
+title: !binary |-
+  RWRnZSBSYWlscyBHb29keTogIERpc3RyaWJ1dGVkIEFzc2V0IEhvc3Rz
+enki_id: 4610
+---
+These days, with all the buzz around rich browser-based client development, our applications are more and more likely to include a large number of external resources.  "Beautiful little icons":http://www.famfamfam.com/, JavaScript "infrastructure":http://www.prototypejs.org/ and "effects":http://script.aculo.us/ libraries, and external CSS files add up quickly.  As soon as you add a line such as:
+
+  <%= javascript_include_tag :defaults %>
+
+to your Rails application (never mind whether this practice is optimal--it's pervasive), the browser has to download several separate files to completely load a single page.
+
+I'm pretty far to the left on the premature optimization continuum, so I wouldn't worry about this kind of thing unless it were a problem.  It turns out it really _is_ a problem.  Especially if your application is being accessed via HTTPS.  Not only does HTTPS add the overhead of encryption and encryption to your request, but browsers will not cache resources requested via HTTPS.  This leads to very noticeable performance issues--the kind your users complain about (and rightly so).
+
+It turns out this problem is even worse than I previously realized.  According to "this page":http://www.die.net/musings/page_load_time/ (which I found out about in the patch I'll mention in the next paragraph), most browsers impose a limit on how many connections can be made to a single named host at any given time.  And on the internet's most popular browser, this number is a whopping _two_.  Add to this the fact that "HTTP Pipelining":http://www.mozilla.org/projects/netlib/http/pipelining-faq.html is disabled by default, and a resource-heavy page is a recipe for a sluggish user experience.
+
+So it was with great interest that I noticed "this change":http://dev.rubyonrails.org/changeset/6161 late last night in Edge Rails.  "Jeremy Kemper":http://bitsweat.net/ checked in a new feature allowing Rails developers to configure multiple asset hosts using a numbered naming convention.  
+
+As a refresher, the ActionController::Base.asset_host variable tells your Rails application to generate external resources' links pointing to the host of your choosing.  This is a good way to ensure that your Mongrel or FastCGI process isn't being asked to serve static content.
+
+With Jeremy's change, you can now do this:
+
+  ActionController::Base.asset_host = "http://assets%d.example.com" 
+
+This tells Rails to generate links to the following four hosts:  assets0.example.com, assets1.example.com, assets2.example.com, and assets3.example.com.
+
+Keep in mind that for this technique to be effective, you don't _have_ to configure four separate machines to respond to these requests.  Simply creating these four DNS aliases and pointing them at one server will still make a difference, since the browser per-host limitations are per _name_--not per IP.
+
+UPDATE: According to Dan Kubb and DHH, setting the Cache-Control and/or Expires headers properly on your web server will get around the SSL caching issue I mentioned above.  Somehow I must have gotten it wrong when I tried on my own.  Thanks for pointing that out, guys!

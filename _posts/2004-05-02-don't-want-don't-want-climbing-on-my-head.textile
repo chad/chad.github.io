@@ -1,0 +1,87 @@
+---
+layout: post
+title: !binary |-
+  RG9uJ3QgV2FudC0tRG9uJ3QgV2FudC0tQ2xpbWJpbmcgT24gTXkgSGVhZCEK
+enki_id: 4545
+---
+<a
+href="http://www.anomaly.org/wade/archives/programming_philosophy/000050.html">G.
+Wade Johnson on programming idioms.</a>
+
+<p>
+A lot of what he says relates very clearly to the motivation behind <a
+href="http://conferences.oreillynet.com/cs/os2004/view/e_sess/5303">this
+talk</a> that David Black and I are giving at <a
+href="http://conferences.oreillynet.com/os2004/">OSCON</a> in July. New
+speakers of Ruby-as-a-second-language often feverishly attempt to force-fit
+Ruby into being a syntactically different copy of whatever their
+&quot;native&quot; language is. An oft-cited example from the Ruby world is
+static vs. dynamic typing (<a
+href="index.cgi/Computing/Programming/Ruby/RubyTypesAndClasses.rdoc,v">RubyTypesAndClasses</a>),
+but it definitely doesn&#8217;t end there.
+</p>
+<p>
+It&#8217;s a lot easier to learn a new programming language than it is to
+learn a new spoken/written language. It may be for this reason that, when
+learning a new spoken language, we tend to come with humility, but when
+learning a new programming language, the attitude of the learner is usually
+a lot less humble. So, new users of a language assume that they already
+know the one true way to express programming constructs, and the only task
+at hand is to learn how to syntactictally convert their thoughts into the
+new language.
+</p>
+<p>
+There are exceptions in each camp, of course. An Indian friend of mine
+described a college professor who refused to learn idiomatic English and
+would constantly use direct translations of colloquial Malayalam phrases in
+class. His favorite, used when students were bugging him about something,
+was (emphatically) &quot;Don&#8217;t want&#8212;Don&#8217;t want. Climbing
+on my head!&quot; In Malayalam, this phrase means something and has
+probably evolved based on a combination of factors, including how easily it
+flows from the tongue. In English, it&#8217;s just strange sounding
+nonsense. Since programs actually have to work (i.e. there is a
+fast-feedback validation that happens when we write a program), programmers
+will sometimes go to great lengths, building elaborate frameworks to
+attempt to make a new language behave like their &quot;native&quot;
+language.
+</p>
+<p>
+Wade (is it &quot;Wade&quot;?) talks about idioms as being singular items
+that can be learned, like patterns or tricks. You learn one, you over-use
+it, you start to use it correctly, and then you learn another. I know
+he&#8217;s presenting a simplified look at the process, but I think
+it&#8217;s important to separate the learning of a language&#8217;s idioms
+from learning what is idiomatic in that language. Learning of idioms is
+about knowledge transfer whereas learning about &quot;idiomatic&quot;
+requires a thought process change. I think of the former as being a step
+toward the latter.
+</p>
+<hr size="2"></hr><p>
+On an unrelated note, Wade makes an interesting point about what I would
+call &quot;dissonance&quot; (see <a
+href="index.cgi/Computing/Programming/SeasideDissonance.rdoc,v">SeasideDissonance</a>
+and <a href="http://wiki.cs.uiuc.edu/MFA/Tension">MFA:Tension</a>).
+</p>
+<pre>
+   Idiom can also serve as a warning. An unusual or advanced idiom
+   should tell the reader that he is entering dangerous territory. This
+   is a message that it's time to pay close attention.
+</pre>
+<hr size="2"></hr><p>
+On another unrelated note, I think we must define both &quot;simple&quot;
+and &quot;expressive&quot; differently:
+</p>
+<pre>
+  The simpler the language, the quicker you get to the end of this cycle.
+  But, a simpler language is not as expressive. So, you find yourself doing
+  more work than should be necessary. A more expressive language takes
+  longer to learn, but it's easier to pass on subtle shades of meaning to
+  the maintenance programmer (possibly yourself).
+</pre>
+<p>
+I think of Scheme as being both extremely simple and extremely expressive,
+while I think of a language like Java as being very complex but not very
+expressive. I would be more likely to say: &quot;But, a more rigid language
+is not as expressive.&quot; And to me, rigidity is much more likely to
+result from complexity than simplicity.
+</p>

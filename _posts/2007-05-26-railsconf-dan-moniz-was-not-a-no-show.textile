@@ -1,0 +1,11 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mOiBEYW4gTW9uaXogd2FzIG5vdCBhIG5vLXNob3c=
+enki_id: 4619
+---
+Hi.  I wanted to clear something up.
+
+On the last day of "RailsConf":http://railsconf.org, it appeared to attendees that Dan Moniz didn't show up for his security talk.  It turns out we never actually told him his proposal was accepted.  Our fault.  Please spread the word.  Dan would have loved to speak (he proposed a great looking talk on Rails security).
+
+The attendees of the then-quiet session stepped up and converted it into a lightning talk round (which is cool, because we had hoped to fit one more in).  Hopefully we'll see Dan speaking at next year's conference.

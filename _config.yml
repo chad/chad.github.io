@@ -1,0 +1,12 @@
+# Site settings
+title: Chad Fowler
+email: chad+hai@chadfowler.com
+description: > # this means to ignore newlines until "baseurl:"
+  Chad Fowler's web site. CTO, Musician, Author, Speaker, The Passionate Programmer, Blueyard Capital
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://chadfowler.com" # the base hostname & protocol for your site
+twitter_username: chadfowler
+github_username:  chad
+
+# Build settings
+markdown: kramdown

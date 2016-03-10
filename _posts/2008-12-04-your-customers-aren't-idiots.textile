@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  WW91ciBDdXN0b21lcnMgQXJlbid0IElkaW90cw==
+enki_id: 4669
+---
+I was in a customer conference call with "John Athayde":http://boboroshi.com/ recently, and he did something really smart. He was talking about his in-progress design for the customer's product and he wanted to explain that we would have reusable snippets of the design which would allow us to consistently provide the same view of an important part of the system whenever it would show up. This being a Rails project, we would do this using ERb partials.  
+
+So, John said, "We will extract this out into little snippets that I'll call...partials".  And so on.
+
+He could have made up a metaphor and used a new customer-friendly term for this.  Or he could have explained that we're using Rails, and Rails supports this thing called "partials" which is...blah blah blah. But the former requires us to learn a dumb new word just for this project, and the latter is too much information. The term "partial" is a pretty good one to describe what it does. In fact, in most well-designed systems, the terms the _system_ uses to describe concepts are pretty good.  Pretty easy to understand.
+
+For some reason we developers feel compelled to hide these terms and concepts from our customers as if they're children that can't be trusted with sharp tools. They're not idiots. They just know different things than we do. Imagine if they tried to hide _their_ terms and concepts from you because they assumed you were unable to understand them. 
+
+I saw "Martin Fowler":http://martinfowler.com speak at an XP users' meeting several years ago, and when he got to the practice called "system metaphor", he said he didn't really do that practice so much anymore because (paraphrased from iffy memory), "Sometimes the best metaphor for a system is the system itself". Note to self: keep that in mind more often.

@@ -1,0 +1,23 @@
+---
+layout: post
+title: !binary |-
+  QWlybGluZSBFbmdsaXNo
+enki_id: 4607
+---
+I'm spending an almost uninterrupted month on the road this February.  I've just come from London to Seattle, after which I'll be in Reston, VA.
+
+With all this moving about naturally comes a whole lot of air travel.  I've started to notice what has become, to me at least, a disturbing pattern in the speech of the employees of the airline industry.  I've been interested in the way speech evolves in tight social groups for a while now, so this is awakening the armchair linguist in me.  
+
+If you've done much air travel, the sound of this may be familiar to you:
+
+"Welcome to Seattle, Washington.  The current time is 7:05PM.  We _do_ hope you had an enjoyable flight with us and that if you _do_ have airline needs in the future that you _do_ choose ****Air again.  We _do_ know that you have a choice when choosing an airline, and we _do_ thank you for your business.  _Do_ be careful when opening the overhead compartments as contents _do_ shift during travel and _do_ sometimes fall on the heads of unsuspecting passengers.  We _do_ hope you _do_ have a nice day."
+
+(Emphasis NOT mine).
+
+It's as if the airlines have evolved their own little English, which favors the verb "do".  It seems that, somehow, the airline employees have been taught that inefficient over-use of the word "do" makes for more "official" sounding language.
+
+Or maybe there's actually a game being played by the pilots and flight attendants.  Every time you say "do" you get a point.  You collect them like air miles and get awarded "elite", "silver", "gold", or "platinum" flight attendant status at the end of the year, which you can cash in for the right to serve the first class cabins instead of having to deal with us riff-raff back in coach.
+
+Maybe it's not an accident at all.  Maybe some brilliant scientist somewhere has determined that using speech like this helps people who don't speak English as their native language.  I hope that's not the case, though.  It's more fun to think of it as an accident.  Given the fact that it happens even in the more casual speech of the pilots, in between talking about how we'll enjoy the weather on the ground in Cancun and filling us in on the latest football scores, I'd bet it's not intentional.
+
+Can you think of any other industry groups (other than us IT people) who have evolved their own language quirks?

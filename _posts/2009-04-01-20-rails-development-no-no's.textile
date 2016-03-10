@@ -1,0 +1,247 @@
+---
+layout: post
+title: !binary |-
+  MjAgUmFpbHMgRGV2ZWxvcG1lbnQgTm8tTm8ncw==
+enki_id: 4679
+---
+Yesterday, "I asked Twitter":http://twitter.com/chadfowler/statuses/1427732195:
+
+  Rails programmers: what's an example of one thing you find in other people's Rails 
+  code that you (almost) always consider to be wrong?
+
+Quite a few people responded, and several asked if I'd post the aggregated answers. Here's an attempt. I don't necessarily agree with everything here. I'd love to hear more of these in the comments.
+
+h2. 1. Code in Views
+
+"@greg_fu":http://twitter.com/greg_fu/status/1427754064
+
+"@briandoll":http://twitter.com/briandoll/status/1427811202 
+
+"@mbleigh":http://twitter.com/mbleigh/status/1427756656 
+
+@briandoll's response was particularly interesting:
+
+  extensive logic in views. If the erb would be ugly and harder to pull off in
+  haml, it's likely a code smell
+
+This is something I always liked in Java about XMLC:http://www.enhydra.org/tech/xmlc/index.html. It was really hard to end up with a mess of co-mingling code and views, because you would have to work _harder_ in XMLC to even make that possible.  "Amrita":http://rubyforge.org/projects/amrita2/ used to have that same characteristic, but I'm not sure it still does (or if it is even maintained).
+
+I've been resistant to "HAML":http://haml.hamptoncatlin.com/ but maybe it's time to give it another look.
+
+Also, as @mbleigh points out, any code in views is suspect. CSS should be in CSS files.  Javascript should be in Javascript files.
+
+h2. 2. Tabs instead of spaces and bad indentation
+
+"@Tricon":http://twitter.com/Tricon/status/1427737916
+
+"@fowlduck":http://twitter.com/fowlduck/status/1427790433
+
+"@boboroshi":http://twitter.com/boboroshi/statuses/1428400137
+
+Enough said.
+
+h2. 3. Bad or Missing Tests
+
+"@rickbradley":http://twitter.com/rickbradley/status/1427742106
+
+"@merbist":http://twitter.com/merbist/status/1427755691
+
+"@alancfrancis":http://twitter.com/alancfrancis/status/1427766801 
+
+"@joshuabates":http://twitter.com/joshuabates/statuses/1429783137
+
+"@mattsoutherden":http://twitter.com/mattsoutherden/statuses/1430399565
+
+"@seancribbs":http://twitter.com/seancribbs/statuses/1432077224
+
+
+"@seancribbs":http://twitter.com/seancribbs singles out auto-generated tests. I'll have to agree with him.
+
+"@alancfrancis":http://twitter.com/alancfrancis says simply "rspec". Certainly not a religious topic. I'm sure if you could somehow see in the code which editor someone used, we'd see a lot of TextMate, vi, and emacs in the responses.
+
+h2. 4. Bad use of Polymorphic Associations and Single-Table Inheritance
+
+"@brendanbaldwin":http://twitter.com/brendanbaldwin/status/1427824999 says "I've seen Polymorphic Associations and Single Table Inheritance abused to absurdity."
+
+As have I. I've also abused them to absurdity myself.  The storage of a column called "type" which holds a class name is a pretty good indicator that something fishy is going on. It's fishy but not always bad. I think, though, that any time you use it you should ask yourself more than once if it's the right solution. Databases don't do what they do best as well when you have lots of STI and polymorphic associations.
+
+h2. 5. Cavalier Exception Handling
+
+"@technomancy":http://twitter.com/technomancy/status/1427898481
+
+"@mikesax":http://twitter.com/mikesax/statuses/1429254463
+
+I once had to debug a problem with a commercial, Java-based portal product. The mail module was failing, saying it couldn't connect to the mail server. In fact, what was happening was my login credentials were incorrect.  Guess what the offending JSP looked like (pseudo-code)?
+
+  try {
+	// do everything here
+  } catch (Exception e) {
+    out.println("Unable to connect to the mail server")	;
+  }
+
+Exceptions are one of the only places in Ruby where you rely on checking the classes of objects to do useful and interesting things. Never rescue Exception unless it's at the end of a stanza in which you've already handled one or more other exception types. 
+
+UPDATE: from the comments, Phil didn't mean what I typed here:
+
+  That’s not actually what I meant. Never rescue Exception unless you’re working with code that abuses the   
+  exception hierarchy. In normal circumstances you should be rescuing StandardError instead. If you rescue  
+  Exception, you won’t even be able to ctrl-c your way out of your code(!) among other problems
+
+More info on his weblog "here":http://technomancy.us/114
+
+h2. 6. Accidental Local-variable Assignment
+
+"@technomancy":http://twitter.com/technomancy/status/1427898481
+
+  <pre>
+  class Potato
+    attr_accessor :size
+  end
+  potato = Potato.new
+  potato.instance_eval do
+    size = 123
+  end
+  p potato.size
+  # => nil
+</pre>
+
+Ruby's assignment to method-call syntax sugar only works when there's an explicit receiver (such as self.size = 123)
+
+h2. 7. Code That Produces Ruby Warnings
+
+"@tenderlove":http://twitter.com/tenderlove/statuses/1427958668
+
+Always run with -w. Fix any warnings you see. A good place to see them is when running your application's _comprehensive_ test suite.
+
+h2. 8. Code that uses the features of Rails :)
+
+"@drawohara":http://twitter.com/drawohara/statuses/1427969367
+
+"@drawohara":http://twitter.com/drawohara/statuses/1427990203
+
+"@brianleroux":http://twitter.com/brianleroux/statuses/1427778227
+
+"@joshuabates":http://twitter.com/joshuabates/statuses/1429783137
+
+RJS, render, nested named routes, and ERb are the targets of these criticisms.
+
+h2. 9. Misuse of validates_uniqueness_of
+
+"@hedron":http://twitter.com/hedron/statuses/1428222323
+
+validates_uniqueness_of is a strange critter. It's so easy to use, that it's tempting to slap it into your code and consider it good enough. But even the documentation for it warns you:
+
+  Using this validation method in conjunction with ActiveRecord::Base#save
+  does not guarantee the absence of duplicate record insertions, because
+  uniqueness checks on the application level are inherently prone to race
+  conditions.
+
+
+
+h2. 10. Code in the Wrong Place
+
+"@mperham":http://twitter.com/mperham/statuses/1428346727
+
+"@bcalloway":http://twitter.com/bcalloway/statuses/1427760949 
+
+"@mikesax":http://twitter.com/mikesax/statuses/1429254463
+
+"@joshuabates":http://twitter.com/joshuabates/statuses/1429783137
+
+
+Here are some rules of thumb:
+
+* Nothing that looks at all like SQL should go into a controller, view, or helper.
+* Try to avoid code that causes a database query (even through a shielded API) in views and helpers
+* Never generate HTML in a model
+* Not counting respond_to blocks, shoot for controller actions of 5 lines or less.
+
+h2. 11. Configuration Files That Contain Their Own Environment Sections
+
+"@stonean":http://twitter.com/stonean/statuses/1427754016
+
+If you create your own configuration file and have to check RAILS_ENV, you're not using a built-in facility of Rails.
+
+
+h2. 12. Too Much Code
+
+"@aaroncampos":http://twitter.com/aaroncampos/statuses/1427763052
+
+OK, so this isn't really what he meant. But it's a good thing to think about. If you find yourself writing a lot of code to do something simple, you might be missing something Rails (or a plugin) provides. I've seen a whole lot of wheels re-invented inside models, controllers, and helpers. Part of Rails mastery is learning to ask yourself, "Shouldn't somebody have already done this for me by now?"
+
+h2. 13. Messing Up $LOAD_PATH
+
+"@drnic":http://twitter.com/drnic/statuses/1427781054
+
+Seems like if you find yourself manipulating Ruby's load path in your Rails code, you're doing something strange. If you don't know you're doing something strange, then you're probably doing something wrong.
+
+h2. 14. Obfuscated Logic
+
+"@sneakin":http://twitter.com/sneakin/statuses/1427822914
+
+"@pelargir":http://twitter.com/pelargir/statuses/1429096093
+
+As "Dave Thomas":http://pragprog.com likes to say "Don't not use positive logic" (or something like that).
+
+Can someone tell me _where_ the use of "!!true" crept into the Ruby vernacular? Sure, it's syntactically valid to do:
+
+  <pre>
+	!!!!!!!!!!!!!!!!!!ok?
+  </pre>
+
+But why?
+
+It's April 1st, so my mind wanders to the hypothesis that someone introduced this and started spreading it as an elaborate joke. If so, well played. Is there a good use of this idiom I'm missing?
+
+h2. 15. Seed Data in Migrations
+
+"@lifo":http://twitter.com/lifo/statuses/1428634121
+
+ActiveRecord migrations define a simple API/DSL for doing schema manipulation. But when they run, they're just Ruby classes and methods executing within the Rails environment. So you can do anything you like in that context.
+
+Sometimes people use migrations to load seed data. Pratik doesn't like this.
+
+I'm on the fence on this one. In small doses it doesn't strike me as a horrible practice. That being said, I don't tend to do it. I'd be interested in hearing opinions.
+
+h2. 16.  Sending Data on GET Requests
+
+"@Adkron":http://twitter.com/Adkron/statuses/1428640575
+
+I guess it depends on what you're doing with the parameters. Sometimes long parameter lists on GET requests are a sign that there are two actions' worth of work happening in a single action. Or that you're doing something that belongs behind a POST or PUT. This one doesn't bother me as much as it does "@Adkron":http://twitter.com/Adkron.
+
+h2. 17. Not Using Transactions
+
+"@sbfaulkner":http://twitter.com/sbfaulkner/statuses/1428534172
+
+  <pre>
+	if foo.save && bar.save
+  </pre>
+
+if bar fails to save, foo doesn't.  Oops. I've seen this more than once in the wild.
+
+h2. 18. Bad Use of Javascript
+
+"@leandroico":http://twitter.com/leandroico/statuses/1428498212
+
+"@RobotDeathSquad":http://twitter.com/RobotDeathSquad/statuses/1428400742
+
+Obtrusive Javascript and RJS are the themes here.
+
+What's the worst use of RJS you've seen? I love RJS. I may be one of the offenders. Doesn't feel like it (usually) though.
+
+
+h2. 19. Long Methods
+
+"@mikesax":http://twitter.com/mikesax/statuses/1429228639
+
+Smalltalk people, as a collective culture, seem to get this right. "Kent Beck":http://www.threeriversinstitute.org/ documents a simple pattern in his "Smalltalk Best Practice Patterns":http://www.amazon.com/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X called "Compose Method". He says that one way to determine whether a new method is required is whether all of the code in a given method operates at the same level of abstraction. That's a simple but _powerful_ rule. Think about it next time you're coding and I think you'll agree.
+
+h2. 20. Chatty Comments
+
+"@mikesax":http://twitter.com/mikesax/statuses/1429239355
+
+I agree with Mike on this one. I don't tend to write any comments, so I may be on the anti-comment side to a fault. My goal is always to write code that is clear enough that comments don't add anything. If you name everything well and keep your classes, modules, and methods short, you're already going to make comments redundant in a lot of cases.
+
+Whenever I see a comment _inside_ a method definition, I consider it a bad sign. In most cases, whenever you encounter a comment inside a method, it's a marker for where code should be extracted into a new method.
+
+If you're writing a framework, the rules are different. But most of the time as a Rails developer, you shouldn't be writing a framework.

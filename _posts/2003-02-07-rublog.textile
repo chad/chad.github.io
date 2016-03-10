@@ -1,0 +1,33 @@
+---
+layout: post
+title: !binary |-
+  UnViTG9nCg==
+enki_id: 4553
+---
+I&#8217;ve just switched to what I think is the 5th piece of software that
+I&#8217;ve used to power this site since its inception. Unlike every other
+switch I&#8217;ve made, this one is done because it&#8217;s <b>better</b>
+than the others. I can say that with a clear conscience, because I&#8217;ve
+personally written almost all of the software that has run this site, and I
+know that the motivation behind almost every other switch I&#8217;ve made
+is nothing more than boredom and the desire to try something new.
+
+<p>
+<a href="index.cgi/Computing/RubLog.rdoc,v">RubLog</a> is written in Ruby
+(<a href="http://www.ruby-lang.org">www.ruby-lang.org</a>), which has been
+a constant for me for the past two years. It supports CVS, categories, and
+multiple different file formats. Have a look here: <a
+href="http://www.pragprog.com/pragdave/Tech/Blog/SourceCode.rdoc,v">www.pragprog.com/pragdave/Tech/Blog/SourceCode.rdoc,v</a>.
+</p>
+<p>
+One important thing to keep in mind is that, though my site is ugly,
+it&#8217;s always been ugly. You can&#8217;t blame this on <a
+href="index.cgi/Computing/RubLog.rdoc,v">RubLog</a>&#8217;s creator
+(although if you think Dave&#8217;s site is ugly, you can blame <b>that</b>
+on him). :)
+</p>
+<p>
+Now, I&#8217;m looking forward to the day when I can upload MS Word
+documents and have them appear as weblog entries. Not because I want to use
+Word, but because it&#8217;ll be cool.
+</p>

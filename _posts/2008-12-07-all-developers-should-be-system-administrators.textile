@@ -1,0 +1,10 @@
+---
+layout: post
+title: !binary |-
+  QWxsIERldmVsb3BlcnMgU2hvdWxkIEJlIFN5c3RlbSBBZG1pbmlzdHJhdG9y
+  cw==
+enki_id: 4670
+---
+All developers should, for at least one period in their careers, serve as system administrators. 
+
+Be the person developers blame when their applications are slow, unresponsive, or crashing.

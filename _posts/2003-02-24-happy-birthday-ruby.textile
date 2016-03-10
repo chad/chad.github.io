@@ -1,0 +1,10 @@
+---
+layout: post
+title: !binary |-
+  SGFwcHkgQmlydGhkYXkgUnVieQ==
+enki_id: 4525
+---
+
+My <a href="http://www.ruby-lang.org">favorite language</a> is 10 years old today.  Congratulations to Matz.  In honor of the occasion, we've officially opened the doors of our non-profit, <a href="http://www.rubycentral.org">Ruby Central, Inc.</a>.
+<P>
+For my own little celebration, I purchased a copy of the Harvard Business Review's collection of papers and essays on how to run a non-profit.  Should be fun. :)

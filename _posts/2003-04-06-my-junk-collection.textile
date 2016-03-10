@@ -1,0 +1,18 @@
+---
+layout: post
+title: !binary |-
+  TXkgSnVuayBDb2xsZWN0aW9u
+enki_id: 4536
+---
+
+While surfing through my home directory on my laptop today, I realized that I have started many more since-abandoned (and forgotten) projects than I thought.  In February, I post <a href="/index.cgi/AttentionSpanChallenged.html">an explanation</a> of why this happens.  
+<p>
+I looked through some of the code I had written and was alarmed to see that some of it actually works.  It would be a shame to let it be <i>completely</i> forgotten and go to permanent waste, so I've taken a step toward preserving the many project beginnings that I create.
+<p>
+I've decided that all future potential throw-away projects will, instead of living on a CVS repository on my local PC, be maintained in a centralized CVS repository, located <a href="/viewcvs.cgi">here</a>.
+<p>
+If you browse there now, you'll see <a href="/viewcvs.cgi/jvm_analysis">today's distraction</a>.  I've started adapting some of the code from <a href="http://www.namikilab.tuat.ac.jp/~sasada/prog/rava.html">Rava</a> (an attempt at a ruby-based Java Virtual Machine--no English documentation as far as I can tell) in an effort to create an automated code-review/analysis tool for Java projects.  I know such tools already exist, but they're usually expensive and require you to write Java code or use a feature-limited GUI to create new rules.  I'm excited about the potential of expressing code review rules in a simple Ruby-based API-cum-domain-language.  
+<p>
+I've been gradually refactoring Rava and removing things I don't need over the course of the day.  So far, I haven't added anything new, though it's becoming less and less recognizable as Rava as the day moves on.  Another couple of hours' work should yield some preliminary code review functionality.  As of now, it just reads class files.  It really could use some unit tests, too.  This is the kind of thing that can quickly become read-only without tests.
+<p>
+Sometime soon, I'll try to get around to cleaning up the various other almost-projects sitting on my laptop and desktop PCs and import all of them.  Unfortunately, our internet connection is so dreadfully slow here in India that it's a huge pain to check things in and out from my new repository.  Another month more, and we'll be back to blazingly fast internet access that I'll never take for granted again.

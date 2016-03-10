@@ -1,0 +1,41 @@
+---
+layout: post
+title: !binary |-
+  VGl2byBmb3IgeW91ciBtaW5kCg==
+enki_id: 4561
+---
+Howard Rheingold (<a
+href="http://www.smartmobs.com/archives/001184.html">www.smartmobs.com/archives/001184.html</a>)
+posted a link to a a wearable buffering video camera (<a
+href="http://www.idg.net/ic_1322387_9677_1-5042.html">www.idg.net/ic_1322387_9677_1-5042.html</a>).
+Apparently, you wear it on your eye glasses or cap, it buffers 30 seconds
+of video (of what you&#8217;re seeing) at a time, and you can press a
+button whenever you like to save the previous 30 seconds permanently. They
+(<a href="http://www.mydejaview.com">www.mydejaview.com</a>) have another
+model that can save up to 4 hours.
+
+<p>
+I don&#8217;t know whether to be excited or frightened, but I&#8217;m
+leaning toward excited. It&#8217;s still pretty bulky, but I imagine
+another year&#8217;ll solve that. I&#8217;d like to add a small playback
+display, so when I space out during a conversation, I can gracefully
+recover by pressing the capture button, excusing myself, and rewinding the
+last 30 seconds:
+</p>
+<pre>
+  &quot;How's that sound to you, Chad?&quot;
+  (wakes up)
+  &quot;Uh...yea...hold on just a moment.  I'll be right back.&quot;
+  (leaves room, plays back video, returns)
+  &quot;Right, then...&quot; (potentially less ignorant conversation ensues)
+</pre>
+<p>
+Even more exciting&#8212;but farther off in the future&#8212;is the
+possibility of combining the audio portion of this technology with wireless
+networking, speech recognition, and text data mining. Imagine the power of
+having a personal, searchable (<a
+href="index.cgi/Computing/LatentSemanticIndexing.rdoc,v">LatentSemanticIndexing</a>),
+index of every conversation you have and everything you hear. May that
+sounds a little spooky? Doesn&#8217;t feel quite right to you? That&#8217;s
+just the feeling of old age creeping over you&#8230;it&#8217;s OK. :)
+</p>

@@ -1,0 +1,29 @@
+---
+layout: post
+title: !binary |-
+  UnVieUdlbXMgQXJ0aWNsZSBpbiBUaGUgUnVieWlzdAo=
+enki_id: 4492
+---
+Our kind friends at <a href="http://jp.rubyist.net/magazine/">The
+Rubyist</a> released their latest edition today. Though I don&#8217;t read
+Japanese, I&#8217;m always sure to find pointers to interesting Rubyisms
+via The Rubyist.
+
+<p>
+This time, they&#8217;ve featured <a
+href="http://jp.rubyist.net/magazine/?0006-PackageManagement">the first</a>
+in a multipart article series I&#8217;m writing on <a
+href="http://rubygems.rubyforge.org">RubyGems</a>. Big thanks to <a
+href="http://d.hatena.ne.jp/babie/">babie</a> for translating!
+</p>
+<p>
+It&#8217;s really cool to see your own words in a language you
+(embarrassingly, when you have Japanese heritage, I have to admit)
+can&#8217;t even read.
+</p>
+<p>
+For those English speakers who aren&#8217;t as easily amused as I am,
+I&#8217;ve also posted the article <a
+href="http://rubygarden.org/index.cgi/Libraries/RubyGems-PastPresentAndFuture-part1.rdoc">in
+English</a> over on <a href="http://www.rubygarden.org">RubyGarden</a>.
+</p>

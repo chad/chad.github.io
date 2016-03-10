@@ -1,0 +1,24 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFJhaWxzIEVkZ2UK
+enki_id: 4479
+---
+Today <a href="http://clarkware.com">Mike and Nicole Clark</a> let their <a
+href="http://pragmaticstudio.com/cgi-bin/pragstudio.cgi/AnnouncingTheRailsEdge.rdoc">next
+big thing</a> out of the bag: <a href="http://therailsedge.com">The Rails
+Edge</a>.
+
+<p>
+With a <a
+href="http://pragmaticstudio.com/therailsedge/speakers.html">speaker
+line-up</a> like this <em>everyone</em> is bound to learn
+something&#8212;including the speakers. I&#8217;ll have to agree with <a
+href="http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Random/RailsEdge.html">Dave's
+gushing</a> over the single-track, collaborative format. This thing&#8217;s
+going to be different.
+</p>
+<p>
+<a href="http://pragmaticstudio.com/register/EDGE_20061116">Seeya
+there?</a>
+</p>

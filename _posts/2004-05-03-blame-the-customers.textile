@@ -1,0 +1,32 @@
+---
+layout: post
+title: !binary |-
+  QmxhbWUgVGhlIEN1c3RvbWVycwo=
+enki_id: 4459
+---
+<a
+href="http://story.news.yahoo.com/news?tmpl=story2&u=/nm/20040503/tc_nm/tech_worm_sasser_dc">story.news.yahoo.com/news?tmpl=story2&u=/nm/20040503/tc_nm/tech_worm_sasser_dc</a>
+
+<pre>
+  &quot;If you take a normal Windows PC and connect to the Internet, you
+  will be infected in 10 minutes (without protection),&quot; Mikko Hypponen,
+  Anti-Virus research director at Finnish data security firm F-Secure
+  (FSC1V.HE), told Reuters.
+</pre>
+<p>
+(This is more directed at companies&#8212;especially large ones like
+mine&#8212;than consumers):
+</p>
+<p>
+At some point, you have to stop blaming Microsoft and blame the people who
+keep buying their products. How many more times will it take? How much more
+lost money?
+</p>
+<p>
+<b>Update</b>: <a
+href="http://www.google.com/search?q=sue+gun+manufacturer+shooting+death&hl=en&lr=&ie=UTF-8&oe=UTF-8&start=10&sa=N">The
+weapons industry</a> has been dealing with the issue of who to blame for
+quite some time&#8212;with a mixed set of results. Maybe there should be a
+<a href="http://w3.agsfoundation.com/s_wait1.html">mandatory background
+check and waiting period</a> for all Windows purchases?
+</p>

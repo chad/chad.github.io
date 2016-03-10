@@ -1,0 +1,14 @@
+---
+layout: post
+title: !binary |-
+  UnVieUdlbXMgdHVybnMgMSAodmVyc2lvbiAxKQ==
+enki_id: 4641
+---
+This has been a long time coming, and it is admittedly kind of arbitrary, but it feels good to see our little package manager growing up:
+
+  Macintosh-2:~ chad$ gem -v
+  1.0.0
+
+Thanks to "Eric":http://segment7.net/ for gradually taking the lead over the past year and putting the nail in a few of the long-standing TODO items for RubyGems.  
+
+"http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/284268":http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/284268

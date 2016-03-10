@@ -1,0 +1,65 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgUmVjaXBlczogRmFjZSB0byBGYWNlCg==
+enki_id: 4507
+---
+Tonight, I&#8217;m just starting to put the final copy-edits into <a
+href="http://pragmaticprogrammer.com/titles/fr_rr/">Rails Recipes</a>. This
+means that we&#8217;re only days away from printing and not long from a
+real, dead-tree book.
+
+<p>
+As I sat in my offices, hotel rooms, living room, and basement cranking out
+recipes for the past few months, it never occurred to me that the book
+might take on a life of its own. Even before it hit the shelves, as
+I&#8217;ve <a
+href="http://www.sdforum.org/SDForum/Templates/Level1.aspx?pid=10218&sid=3">traveled</a>
+<a href="http://skillsmatter.com/ruby-on-rails-course">around</a> the <a
+href="http://www.scotlandonrails.com/">world</a> I&#8217;ve had the
+pleasure of meeting a surprising number of people who have read the book in
+<a
+href="http://pragmaticprogrammer.com/starter_kit/faqs/beta_faq.html">beta</a>
+form and are already using it daily.
+</p>
+<p>
+It&#8217;s incredibly rewarding to see these things transferred from long
+Sundays in the basement to a real developer&#8217;s project in the UK or
+China.
+</p>
+<p>
+What I really didn&#8217;t anticipate, though, was something I ran into
+this week. Next week, Peter Marklund is holding a <a
+href="http://marklunds.com/articles/one/302">Rails Recipes Meetup</a> in
+<em>Stockholm</em>, featuring presentations and discussion based in part on
+the book. What a <em>cool</em> idea! It looks like participants will be
+presenting either discussions of the recipes from the book or their own
+recipes.
+</p>
+<p>
+Judging by the activity on the <a
+href="http://fora.pragprog.com/rails-recipes">Rails Recipes forum</a>, this
+session is bound to turn out some valuable tips. Here&#8217;s hoping
+they&#8217;re documented and shared with the rest of us.
+</p>
+<p>
+As if that wasn&#8217;t cool enough, today <a
+href="http://relevancellc.com/">Relevance</a> announced a <a
+href="http://blogs.relevancellc.com/articles/2006/05/03/rails-recipes-training">training
+course</a> based on Rails Recipes. Relevance are Stu Halloway and Justin
+Gehtland, two top-notch veteran trainers and speakers, both of whom are
+speaking at the <a href="http://railsconf.org">First International Rails
+Conference</a> in June and are part of the touring <a
+href="http://pragmaticstudio.com/ajax/index.html">Pragmatic Studio</a>,
+delivering a course on Ajax.
+</p>
+<p>
+I consider it an honor to have guys like this <em>read</em> the book much
+less base a class around it.
+</p>
+<p>
+So, before I go back to the copy edits, I wanted to say &quot;thanks
+again&quot; to the ever-growing population of super-smart readers that make
+staying up late fixing grammar and punctuation mistakes a worthwhile
+activity.
+</p>

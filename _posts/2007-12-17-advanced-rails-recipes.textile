@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  QWR2YW5jZWQgUmFpbHMgUmVjaXBlcw==
+enki_id: 4640
+---
+You may remember that I was working on "Advanced Rails Recipes":http://pragprog.com/titles/fr_arr earlier this year.  I'm not anymore.  I've been over-committed and I finally decided to face facts and withdraw myself from the authoring process.
+
+That's OK though.  Someone has pressed the "Kick Ass" button on the "Mike Clark":http://clarkware.com/ book-writing machine, and "Advanced Rails Recipes":http://pragprog.com/titles/fr_arr has appeared in beta.  
+
+The book is a collection of recipes by Mike and top members of the Rails community.  There is literally no one I trust more to put together timely, trustworthy advice on how to develop Rails applications right more than Mike.  This one is a must-read, and beta is a great time to get in on the action in that it gives you a chance to make an impact on the final product.  
+
+The book is not yet complete, but it's already worth the price.

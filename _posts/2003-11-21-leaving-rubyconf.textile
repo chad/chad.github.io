@@ -1,0 +1,80 @@
+---
+layout: post
+title: !binary |-
+  TGVhdmluZyBSdWJ5Q29uZgo=
+enki_id: 4516
+---
+Rich (<a
+href="http://richkilmer.blogs.com/ether">richkilmer.blogs.com/ether</a>),
+Jim (<a href="http://onestepback.org">onestepback.org</a>), and I are
+decompressing in the Austin airport, taking advantage of some Wi-fi access
+and waiting for our flights. As I warned in a previous post, my posting
+during the conference would require some very special planetary alignment.
+It didn&#8217;t happen.
+
+<p>
+However, I was able to login to irc from Matz&#8217;s keynote to braindump
+into the #ruby-lang channel (on freenode.net) about upcoming Ruby language
+changes. I won&#8217;t go too much into detail here, but Horacio Lopez (<a
+href="http://ruby-es.org">ruby-es.org</a>) reformatted and posted it all on
+the Wiki (<a
+href="http://rubygarden.org/ruby?Rite">rubygarden.org/ruby?Rite</a>). There
+are some fairly major incompatabilities on the way, but overall
+they&#8217;re going to make the language just that much better.
+</p>
+<p>
+The conference, as usual, as a great experience. It&#8217;s great to get
+together with that many smart and creative people all at once. This year,
+we&#8217;ve done something I&#8217;ve been wanting to do since 2001: We
+wrote code. Friday night, during the round table with Matz, David Black (<a
+href="http://wobblini.net">wobblini.net</a>) brought up the age-old
+question of standardizing ruby package installation procedures. After the
+round table, he, Rich, Jim, Paul (<a
+href="http://rubystuff.org">rubystuff.org</a>), and I spent the rest of the
+weekend crash-coding in whatever free time we could find and creating that
+standardized distribution system. It is based on an idea that was
+introduced at the first Ruby Conference, and has also adopted that
+idea&#8217;s name: RubyGems (<a
+href="http://rubyforge.org/projects/rubygems">rubyforge.org/projects/rubygems</a>).
+</p>
+<p>
+We must have been quite a spectacle to the hipsters in the hotel bar, with
+our laptops and ad-hoc network. We coded long into the night. The end
+result is that during today&#8217;s talks, Jim showed how you can create
+working Rake (<a href="http://rake.rubyforge.org">rake.rubyforge.org</a>)
+tasks for creating and installing gems, and Rich actually installed
+RubyJDWP as a gem &quot;live on stage&quot; for his RubyJDWP (<a
+href="http://rubyforge.org/projects/rubyjdwp">rubyforge.org/projects/rubyjdwp</a>)
+talk. We were also able to get remote installation and dependency
+management working (though not perfectly) before we left, including a
+&quot;gem server&quot; which you can use to serve ruby packages to others
+who have the right client-side tools.
+</p>
+<p>
+The Ruby community has been talking about this for years. It was nice to
+just say, &quot;Let&#8217;s do it <b>now</b>&quot; while we had Matz and a
+great core group of Ruby programmers handy to give us requirements, answer
+questions, etc. For example, it was really nice when Paul and I had a
+problem with Test::Unit to say, &quot;Nathaniel, what does this message
+mean?&quot; (Nathaniel wrote Test::Unit).
+</p>
+<p>
+The only regret I have about RubyConf this year is that it can&#8217;t be
+what I do every day.
+</p>
+<p>
+I&#8217;ll post some more details on the conference highlights after I get
+some real rest (which unfortunately might not be until Wednesday or
+Thursday). Excuse any typos and/or incoherencies until then. . . ;)
+</p>
+<p>
+Update: Ryan Davis pointed out that I mispoke (I mentioned I was tired,
+right?) when I said that Matz&#8217;s presentation was on future language
+changes. He was really looking for feedback on a bunch of high level ideas.
+It was more of a brainstorming session than a presentation. This is
+important for two reasons. The first is that I don&#8217;t want to mislead
+anyone into thinking that Matz&#8217;s presentation represented fully baked
+ideas. The second, and more important, is just the very fact that Matz came
+to the community and asked for help. That&#8217;s really great if ya ask
+me.
+</p>

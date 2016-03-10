@@ -1,0 +1,41 @@
+---
+layout: post
+title: !binary |-
+  SGlkZGVuIFJ1YnkgTGFuZ3VhZ2UgRmVhdHVyZXMK
+enki_id: 4497
+---
+<a href="http://www.testing.com">Brian Marick</a> writes about a <a
+href="http://www.testing.com/cgi-bin/blog/2004/04/12#automock">little-known
+feature</a> of the Ruby language: the ability to automatically mock classes
+for testing at runtime. There is a keyword called &quot;mock&quot; that you
+can use to do it. For example, if you want to temporarily replace the
+behavior of a class called <tt>MyDatabaseConnector</tt> for a test, you
+would use the following code:
+
+<pre>
+  mock MyDatabaseConnector
+  class ClassToMockWith
+    ..code...
+  end
+</pre>
+<p>
+Whatever class definition directly succeeds the invocation of
+&quot;<tt>mock</tt>&quot; will be temporarily substituted for the class
+specified as an argument to &quot;<tt>mock</tt>&quot;. Specifically, in
+this case, any references to MyDatabaseConnector will be replaced with
+references to ClassToMockWith, so instantiating MyDatabaseConnector
+actually instantiates ClassToMockWith, and so on.
+</p>
+<p>
+Rubyists reading this are probably thinking I&#8217;ve lost my mind,
+because this isn&#8217;t really a feature of the Ruby language. It&#8217;s
+just a simple (albeit powerful) extension that Brian has written. But, to
+someone coming from a history of work exclusively done in in one or more of
+the more static languages (Java, C#, etc.), it looks like a first-class
+part of the language.
+</p>
+<p>
+This is what Guy Steele was talking about in his <a
+href="http://homepages.inf.ed.ac.uk/wadler/gj/Documents/steele-oopsla98.pdf">Growing
+a Language OOPSLA talk</a>.
+</p>

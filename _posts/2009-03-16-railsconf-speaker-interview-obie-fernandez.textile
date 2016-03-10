@@ -1,0 +1,122 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIFNwZWFrZXIgSW50ZXJ2aWV3OiBPYmllIEZlcm5hbmRleg==
+enki_id: 4677
+---
+Continuing my series of "RailsConf speaker interviews":http://chadfowler.com/railsconf-speaker-interviews, next up is "Obie Fernandez":http://obiefernandez.com/
+
+Obie started and runs the Rails consultancy "Hashrocket":http://www.hashrocket.com/ and is the author of the best selling "The Rails Way":http://www.amazon.com/Rails-Way-Addison-Wesley-Professional-Ruby/dp/0321445619?&camp=212361&creative=383837&linkCode=wss&tag=obiefernandez-20.
+
+At RailsConf, Obie will be presenting a "Blood, Sweat, and Rails":http://en.oreilly.com/rails2009/public/schedule/detail/7721, which if it's anything like his talk at last year's "Rails Summit Latin America":http://www.akitaonrails.com/2008/7/13/rails-summit-latin-america-2008 will no doubt be educational, thought provoking and entertaining. It might even include some Def Leppard music if we're lucky.
+
+h2. I've had dreams of starting my own business and doing my own thing. I've learned over time that fear is the biggest thing getting in my way. Is that something you encountered to?  How do you overcome it?
+
+I started at least half-a-dozen real businesses between the ages of 15
+and 21. Those experiences taught me that I didn't know enough, either
+about business or just in terms of plain ole life experience to
+successfully run a business. So I waited, and waited, almost 15 years
+until trying again in earnest. All the while wishing I was my own
+boss, but not feeling ready to make the leap. Fear of failure was a
+big part of that, as well as many other fears, like not being able to
+pay my child support obligations.
+
+As for overcoming the fear, I'm guessing that everyone is going to
+have different tipping points. One commonality though, is probably to
+give yourself distance from the culture of fear that permeates our
+world. I did away with my "normal" television watching habits a long
+time ago -- nowadays our television goes weeks without being turned on
+-- most commercials prey on pervasive fear culture of our society.
+Fear of death, fear of getting sick, fear of accidents, of not being
+successful enough.  Get rid of it!
+
+If you really want to succeed, you have to distance yourself from
+whiners and low-achievers too. We all have toxic people in our lives,
+you gotta put space between you and them if you want to overcome the
+fear and negativity that they breed.
+
+My tipping point to success was building a solid reputation online via
+my blog and getting so good at what I was doing that I didn't have to
+particularly worry about going back to fulltime employment if I
+happened to fall flat on my face as an independent.
+
+
+h2. Is there a place for fixed bid projects in the world of Rails consulting? What would you say are the pros and cons? I've had very bad experience with fixed bid projects in large companies. I'm wondering if there's a way to do it right.
+
+I think fixed-bid contracting for custom web applications is a
+horrible idea, overall. I slept on this question for a few days and
+dug back in my memory over the last dozen years of consulting: I've
+never heard of anyone being happy with the outcome of a fixed-bid
+project.
+
+The fundamental problem with fixed-bid is the fluid and living nature
+of all but the tiniest single-purpose webapps. Once you start
+development, there are going to be changes necessary. A lot of those
+will feel "easy" and/or "logical" as if they should have been included
+in the requirements to begin with. Pressure will be on to include
+those changes in the original budget, especially if you're focused on
+customer service and keeping that client happy. Doubly so if the
+client is on a tight budget and simply doesn't have more money to pay.
+Your hands are tied and odds are you're going to suffer the
+consequences.
+
+I don't think there's a "right" way to do fixed-bid. You'd have to
+have a really awesome and understanding client and implement a very
+rigorous change-control policy that I suspect would encumber the whole
+development process to a large and unenjoyable degree.
+
+If possible, invest the time in helping your client to understand the
+nature of variable scope and why it's in their best interest. 
+
+(Note: Obie recently covered this topic on his own weblog "here":http://blog.obiefernandez.com/content/2009/02/explain-variable-scope-with-ponies.html)
+
+h2. Hashrocket currently focuses on Rails projects. Do you see any technologies coming up that you might focus some or all of the team on?
+
+No, not right now. I'm very focused on being the best of the best in
+one particular niche: large-scale, custom web application development.
+And I don't think that there's any technology that even comes close to
+what you get with Rails for that. There's always lots of cool and
+exciting new things going on, the latest craze seems to be iPhone
+development. We have a number of people interested in that, but I will
+not take the company in that direction. It would be detrimental to
+lose focus from what we do best.
+
+h2. What if I'm a developer who has no dreams of becoming an entrepreneur...what does it buy me to understand sales, marketing, managing client relationships and what-not?
+
+Unless you're independently wealthy, when it comes to landing a good
+job and keeping it, you're always going to have to hustle to promote
+yourself. Lessons in sales and marketing apply whether you're selling
+a product, a company's services or your own services. What are you
+doing when you prepare a resume? When you go on an interview? Selling!
+Get good at it, or suffer the crappy jobs and work environments that
+you will get otherwise.
+
+As for client relationships, if someone is paying you, they're your
+client. Doesn't matter if you answer to another company or to a
+manager. The skills of maintaining a healthy relationship and knowing
+how to properly set expectations apply to everyone.
+
+h2. Agile processes are obviously a cornerstone of your company. How do you draw the line between passion and dogma?
+
+That's an interesting distinction. Passion is undeniably necessary for
+success. Without passion, without the ability to inspire others, via
+your words and/or actions, you're not going to get very far in life. I
+believe that Agile software development "just is" and I'm very
+passionate about that. It just is the way that you do quality
+software. Not doing quality software? That's fine, but I won't work
+with you. Nowadays Agile is far enough along in mindshare that I don't
+feel I have to sell it very much or get anywhere near dogmatic about
+it. As in everything, I try to keep an open mind and if a better
+philosophy evolves, maybe it's "Lean Sofware" or maybe it's something
+else, I'll go with the flow. Until then, I stick to my principles.
+Passionately.
+
+h2. What's got you excited these days outside of your programming and entrepreneurial life?
+
+I guess I'd have to say travel, more than anything else. Last year I
+was blessed to be able to take my kids on a few good vacations,
+including a fancy three-week trip around the world with stops in South
+Africa and Far East. This year it's looking like I'm going to be
+spending a lot of time in Europe and South America, so I'm definitely
+excited about that. It's a big world out there. Get out and see it
+while you still can!

@@ -1,0 +1,16 @@
+---
+layout: post
+title: !binary |-
+  T25lIFdlZWsgZm9yIFJhaWxzQ29uZiAyMDA3IENGUA==
+enki_id: 4511
+---
+Just a reminder: <a
+href="http://conferences.oreillynet.com/rails/">RailsConf 2007</a> CFPs are
+due on November 2007. If you&#8217;ve got something exciting to talk about
+or valuable experience to share, don&#8217;t let the date slip by. This
+year we&#8217;re partnering with the conference team at <a
+href="http://ora.com">O'Reilly</a>. It&#8217;s going to be even bigger and
+better than our debut in 2006. I&#8217;m looking forward to seeing how the
+content evolves and matures along with the Rails community and the
+framework itself.
+

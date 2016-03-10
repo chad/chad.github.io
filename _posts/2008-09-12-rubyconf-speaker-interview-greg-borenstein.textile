@@ -1,0 +1,82 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgU3BlYWtlciBJbnRlcnZpZXc6IEdyZWcgQm9yZW5zdGVpbg==
+enki_id: 4659
+---
+"RubyConf registration is open":http://rubyconf.org, and I am so excited by the program this year that I thought it would be fun to ask some of the speakers some questions before the conference. So I'm starting a series of informal interviews with RubyConf speakers.  
+
+The first one is "Greg Borenstein":http://www.urbanhonking.com/ideasfordozens/, creator of "RAD":http://rad.rubyforge.org/.  Greg also ran the lightning talks at "RailsConf 2008":http://railsconf.org.
+
+h2. You're working on RAD (Ruby Arduino Development).  How did you get into electronics in the first place?  I've never had training myself and always been interested but intimidated.  Was it hard?
+
+I had electronics twice, in high school and again in college, as part of general physics classes. I was incredibly bored by the subject and quite bad at it both times. Neither of those experiences had much in the way of hands-on tinkering time. Instead, they were electronics as Science: dry equations, proofs, and word problems, and I never absorbed much of it.
+
+In college I majored in art and wrote my thesis in art history, but what I was really trying to study was how to make things. I'd met there, for the first time, people who were budding engineers and I kind of got infected by their mindset: the constant pull to understand how things worked, not necessarily to reveal the grand truths of the universe, but just to dive beneath the surface of things to learn how they operated enough to change them and make them your own and make new ones. I took classes in painting, printmaking, music theory, book making, anything that I thought would teach me how to build something new -- even my run of math classes and my written thesis, I approached as varieties of making. A group of us got money from the school to try to build our own atomic force microscope. We got pretty far designing and constructing it, finally running out of school year while still hung up on the control software.
+
+Also, the summer before my senior year, I interned at the Museum of Jurassic Technology ("http://mjt.org":http://mjt.org). The Museum is like a cross between an pre-renaissance cabinet of curiosities, a contemporary art installation, and a Disneyland ride. It's filled with amazing exhibits that move and buzz and talk and glow; exhibits on micro-miniature sculpture, folk cures, Athanasius Kircher, Soviet cosmonaut dogs, Innuit string art, stereographic x-rays of flowers, etc. The museum's founder, David Wilson, used to work in optical effects in Hollywood and is this genius of museum craft: optics, dioramas, lighting, etc. The summer I was there, there was an intern from the Getty cleaning the exhibits so their insides were open, relays and gears, projectors and wires, all spilling out.
+
+All through this, I'd say I didn't really know electronics and, mostly, I still don't. These experiences, rather than teaching me much of practical use about electronics really just served to infect me with the bug to learn more. They showed me that electronics could be more than dry Science, it could be magic and it could be a key into how things really worked. Magic that you could make.
+
+After college I wound my way through a series of professions and avocations and eventually wound up in programming. After awhile, the Arduino came along. I started to hear about it from mostly media-oriented friends as something they wanted to get into. Eventually, a group of us got together, ordered a handful of them from Sparkfun and set out to meet once a week to try to teach ourselves to use them. We were very quickly confronted with the fact that we barely knew any electronics. Getting a resistor on the right side of an LED to do the classic Arduino hello world was a challenged for us.
+
+So, I started digging through my old physics textbooks and looking for new ones that were better. We'd set ourselves little projects like playing a melody on a tiny speaker or checking for a pattern on a series of buttons. For the first time, I was learning electronics the way I learned printmaking and Ruby: out of the need to see something I was making actually work.
+
+Finally, the last few years, I've been really making progress, but it's a challenge because the resources are really amazingly poor. Compared with the tools available for learning programming languages (from books to blogs to users' groups), the hardware story is just brutally bad in this regard for beginners. All the documentation is tied up in data sheets from hardware vendors meant to be used by professional electrical engineers to design projects for mass production. Most of the tutorials, magazines, and books meant for regular people are based around one-off projects that, even if you do gather all the resources together to actually build, will teach you little about the actual underlying principles that you could actually grasp or re-use.
+
+My most successful strategy has usually been getting my hands on real people that actual know this stuff and just asking stupid questions repeatedly until they actually give me an answer that starts at the beginning. That plus a few amazing books (that I've been beginning to catalog here: "http://github.com/atduskgreg/rad/wikis/books":http://github.com/atduskgreg/rad/wikis/books) has really been all that's helped.
+
+
+h2. Can you explain architecturally how RAD works? How do you get Ruby code to "compile" to code that can run on an Arduino microprocessor?
+
+
+RAD works by translating some Ruby code into C which can then be linked against the full Arduino software library and handed off to avr-gcc for compilation down into the hex that can be uploaded to an Arduino. The Arduino software library is built around two main functions: setup and loop; setup runs once when the Arduino starts up and after that, loop runs repeatedly. RAD takes a different translation strategy for each of these.
+
+For setup, RAD provides a base class ArduinoSketch. Much like Rails' ActiveRecord::Base, classes that inherit from ArduinoSketch gain a bunch of class methods for doing a lot of the configuration and setup necessary for programming the Arduino: declaring pins as input or output, setting up helpers for working with various pieces of hardware such as LCDs and Servos, etc.. RAD uses some metaprogramming magic and some seriously lo-fi string concatenation to use these class methods that you call in your sketch to generate a big chunk of C code: a lot of function signatures, library includes, and other boilerplate as well as the setup function itself
+
+Now, the loop function is another story. RAD looks for a method on your subclass of ArduinoSketch called loop. It takes that method and hands it off to a library called RubyToC, which spits back the C equivalent. RubyToC was written by Ryan Davis and Eric Hodel and probably some of the other Seattle.rb geniuses as part of the Metaruby Project whose goal was to rewrite Ruby entirely in Ruby. I think that project might be some form of dead at this point since all of those guys now work for Engine Yard on Rubinius. Anyway, from RAD's point of view, RubyToC is mostly magic alien technology that does exactly what we need (though we have made our own extensions by subclassing some pieces of the RubyToC machinery in order to implement some additional features (such as times blocks) in ways that might not be satisfactory for the general project of converting Ruby to C, but work great for us with our constrained compiler targeting).
+
+We do the same thing with any other additional helper methods you've written on your class, glue the whole thing together and send it off for compilation.
+
+The Arduino is obviously highly resource constrained (it only has 16k of flash program memory) and so a lot of people ask about the bloat that's caused by the inefficient C we generate. We work had to keep that down (I can't find the current stat for it, but I'll get back to you with that) and I think that it's worth it for the great increase in ease of use that Ruby provides over C++.
+
+
+h2. What's the coolest thing you've done or seen done with RAD?
+
+
+Right now, the answer to that is probably one of JD Barnhart's recent projects. Either his Ruby on Bells:
+
+"http://vimeo.com/1261369":http://vimeo.com/1261369
+
+or his Ruby + Auduino Midi Beat Box Demo:
+
+"http://www.vimeo.com/1650051":http://www.vimeo.com/1650051
+
+JD came along like manna from open source heaven this summer: I hadn't had much time to work on RAD for awhile and had accumulated a laundry list of requested features, both my own and from other users. As soon as I put RAD up on GitHub, JD forked it and added nearly all of them. He announced his work by putting a great screencast up with that Bells demo and a tour of his improvements. He makes great screencasts! I've since brought him on as part of the RAD core team and he has, along with Bryan Riley from wulfden.org, been a big part of the fast rate of improvement RAD's been seeing lately.
+
+
+h2. Where do you see yourself taking RAD next?
+
+
+Right now, we're in the middle of doing a few desperately needed refactorings on the RAD code base, mostly consolidating things so we can clean up some of the fallout of all the recent improvements and make things more flexible and easier to improve.
+
+After that I have two main directions I want to take the project: the educational route and the 'modern software tools' route.
+
+I mentioned in response to you first question how much Arduino helped make it possible for me to learn electronics in the first place by giving me a fun environment where I could experiment and build things rapidly and easily. The whole purpose of RAD is to take this project even further: to let you program the Arduino in Ruby instead of C because it's even faster and more fun. I think RAD can be a great tool for lowering the barrier to learning hardware hacking. Ruby's expressiveness makes RAD code examples extremely readable. I'm trying to foster a culture around RAD of really good documentation: not just of RAD itself, but of exactly the hardware that is usually only explained through arcane data sheets. The RAD wiki is already starting to house some good material like this:
+
+"http://github.com/atduskgreg/rad/wikis":http://github.com/atduskgreg/rad/wikis
+
+and I'm hoping to see (and write) more and more as the project progresses. Just as some of the great books that helped me learn Ruby (the Pickaxe book, _why's Poignant Guide, Chris Pine's Learn to Program) also taught me the basics of good programming itself, I'm hoping that RAD can be an entry point into creating some documentation for the wider world of hardware hacking.
+
+The other big direction I want to take the project is to build all the 'modern software tools': we've become used to in Rubyland, but are still extreme luxuries in embedded C++ such as testing, simulation, code stats, etc. One of the great things about having written a program for your Arduino in Ruby instead of C++ is that once you've done so, we can use Ruby's metaprogamming power to interpret that program in different contexts to accomplish different goals. So, just through writing a different implementation of ArduinoSketch, we can run your sketch in a test framework that will help you make sure that it actually does what you want it to or in a graphical simulator that lets you play with different hardware connections and code combinations to see what will happen before having to actually build out circuits or connect your real Arduino at all. Both of these projects (the testing framework and the simulation app) are in extremely nascent stages right now, but I hope to pour more time into them as soon as we finish up our current refactor.
+
+
+h2. What are you passionate about outside of computer programming and electronics?
+
+
+
+Music has been a passion for me for a long time. I play in an indie rock band called At Dusk ("http://atduskmusic.com":http://atduskmusic.com) that's been together for almost 10 years. We've toured around the country and put out 3 albums (with a fourth and final one on the way). I also run a local Portland music non-profit called PDX Pop Now! that puts on a free local all-ages music festival every year, produces an annual compilation of all local music, and helps do advocacy for kids' access to music.
+
+I'm also passionate about art -- I think part of my energy for electronics comes from surplus created from drawing less the last couple of years. Artists like Jennifer and Kevin McCoy ("http://flickr.com/photos/mccoyspace/":http://flickr.com/photos/mccoyspace/), Joseph Cornell, Thomas Demand ("http://www.thomasdemand.de/":http://www.thomasdemand.de/), Chandra Bocci, and David Hockney, et al inspire my interest in physical computing stuff as much as anything on the technical side does.
+
+This year, I've discovered a passion for cooking. I've been working from Alice Waters' books which are all about simple preparations of the best seasonal local produce so that's lead me to start learning about gardening as well. That, combined with my adoption of biking as my main form of transportation starting a few months back, as made me feel like I've finally become the typical northwesterner, which must mean that it's time to shake things up!

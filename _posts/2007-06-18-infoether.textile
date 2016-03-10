@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  SW5mb0V0aGVy
+enki_id: 4622
+---
+The weekend before last, I did something I've been hoping to do for literally several years:  I joined "InfoEther":http://infoether.com (as CTO).  If you're outside the Ruby, Flash, or Semantic Web communities, you may not know of InfoEther.  They are a technology company co-founded by my friend and Ruby Central co-conspirator, "Rich Kilmer":http://richkilmer.blogs.com/.
+
+InfoEther is best known for doing seemingly impossible technological feats faster than most companies can write a J2EE bug tracker.  They've led the way consistently in Ruby, Flash, and Semantic Web technologies since Rich and Mark founded the company several years ago.
+
+For me, joining InfoEther is probably akin to what joining a company like Google is to many programmers. It's like going back to school, in that I'm joining a small team of people who have all been somehow caught up in Rich's special reality distortion field in which no technological problem is difficult or time consuming.  I'm hoping to catch at least a little of that bug.
+
+Under the umbrella of the "indi":http://site.getindi.com/, a personal semantic web platform, we're working on some innovative technologies which bring together much of the diverse and cutting edge stuff InfoEther has been doing over the past 5 years.  More on this later.
+
+A refreshing change of pace from making simple Web applications.

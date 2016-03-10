@@ -1,0 +1,25 @@
+---
+layout: post
+title: !binary |-
+  VG93YXJkIGFuIEFnaWxlIENhcmVlciBEZXZlbG9wbWVudCBNZXRob2RvbG9n
+  eQ==
+enki_id: 4694
+---
+Since finishing "The Passionate Programmer":http://www.pragprog.com/titles/cfcar2/the-passionate-programmer I've been putting a lot of thought into how to package the advice from the book into something more structured, serial, and prescriptive.
+
+The Amazon reviews for the book are almost all glowingly positive with the occasional piece of constructive criticism. Here's one such excerpt from an otherwise positive review by Ira Laefksy which I agreed with and took to heart:
+
+"I was somewhat disappointed with the lack of a road map to carrying out this excellent advice over the career of a self-driven software professional and the only tool to locate the appropriate essay for choosing to carry out being the table of contents. Perhaps the author/editor will provide chronological/situation-based guidance to employing this life-changing advice in a companion web-site making the volume more accessible to the demands of a particular life/career situation in addition to being an invaluable set of essays.":http://www.amazon.com/review/R1D32FLM2NZ3ES/ref=cm_cr_rdp_perm
+
+Ira and I have the same idea. What I think we're both looking for is a career development methodology. 
+
+As an example methodology pulled from the software field, Extreme Programming has always been codified as a set of distinct practices, all of which can be beneficially understood and adopted on their own. But, "as the famous flowchart shows":http://www.extremeprogramming.org/map/project.html, XP doesn't just give you a bunch of great ideas about how to develop software. It tells you what to do when you get to work each morning.
+
+The idea of following a software development methodology is nothing new to any of us in the field. It's common practice. Software projects are expensive, complex and (sometimes) important. Letting them chaotically emerge isn't a reasonable approach for a professional to take. 
+
+So why should our careers be any different?
+
+"Mike Swaine":http://swaine.com recently approached me about writing an article for
+ the Pragmatic Bookshelf's "PragPub issue #3":http://www.pragprog.com/magazines. I decided to use this as an opportunity to explore some of the ideas I've had about crystalizing the advice from The Passionate Programmer into a prescriptive career development methodology.
+
+I think I'm onto something, but I'd like feedback.  The article, titled "Clone Yourself - Destroy Your Job Through Automation and Outsourcing",  contains just the beginnings of what I have in mind. Please "go read it":http://www.pragprog.com/magazines and let me know what you think.

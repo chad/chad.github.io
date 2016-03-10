@@ -1,0 +1,9 @@
+---
+layout: post
+title: !binary |-
+  Q2hhcml0eSBhbmQgVGVzdGluZyBhdCB0aGUgSG9lZG93bg==
+enki_id: 4624
+---
+Now that my domain is alive again (sorry if you tried to send me email within the last week and a half), I wante to quickly mention that "Bruce Tate":http://blog.rapidred.com/, "Marcel Molina":http://vernix.org and I will be doing a charity workshop on Ruby testing techniques at "The Ruby Hoedown":http://rubyhoedown.com in Raleigh, NC.  As was started by the Dave and Mike with "The Rails Guidebook":http://conferences.oreillynet.com/cs/rails2007/view/e_sess/12338, we'll be suggesting a small donation ($50) to charity (this time the "Food Bank of Central and Eastern North Carolina":http://www.foodbankcenc.org/).  We've been quiet for a little longer than we should have on this, so please do pop over and "register":http://changingthepresent.org/drives/show/241 if you're interested in testing in Ruby, helping the hungry, or both.
+
+Note that you don't _have_ to attend the session to donate.  So if you're totally uninterested in testing (shame on you!), a Ruby skeptic, don't even know what programming means or don't want to travel to Raleigh, feel free to "add some dollars to the cause":http://changingthepresent.org/drives/show/241.  

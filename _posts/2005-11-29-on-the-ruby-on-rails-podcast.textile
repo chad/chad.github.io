@@ -1,0 +1,24 @@
+---
+layout: post
+title: !binary |-
+  T24gdGhlIFJ1Ynkgb24gUmFpbHMgUG9kY2FzdAo=
+enki_id: 4569
+---
+<a href="http://topfunky.com/">Geoffrey Grosenbach</a> recently <a
+href="http://hoodwinkd.hobix.com/">hoodwink'd</a> me into doing an
+interview for the <a href="http://podcast.rubyonrails.org">Ruby on Rails
+Podcast</a>. Geoffrey had a lot of great questions. <a
+href="http://paranode.com/~topfunky/audio/2005/Chad-Fowler.mp3">Tune in</a>
+to hear me talk about how to become a remarkable software developer, why
+Rails developers are currently at risk, why RubyGems has taken so long to
+beincluded in the core Ruby distribution, and why you should always strive
+to be the worst developer on every team you&#8217;re in.
+
+<p>
+Also, if you missed my radio appearance last week, you can now listen to it
+<a href="http://www.ourmedia.org/node/105087">here</a>.
+</p>
+<p>
+I&#8217;m still trying to get used to the sound of my own voice being
+played back to me.
+</p>

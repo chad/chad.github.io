@@ -1,0 +1,45 @@
+---
+layout: post
+title: !binary |-
+  UnVieSBDb25mIDIwMDMgLSBBdXN0aW4K
+enki_id: 4537
+---
+Just occurred to me today that there&#8217;s only about one month left
+until the Third International Ruby Conference (<a
+href="http://www.rubyconf.org">www.rubyconf.org</a>). Time to finalize
+little details like name tags and t-shirts.
+
+<p>
+If you&#8217;re interested in programming&#8212;Ruby or not&#8212;this is a
+great conference to attend. The first conference (2001) was one of the best
+computer geek gatherings I&#8217;ve been to. We had language designers, XP
+people, and a bunch of really smart people with a bunch of really good
+ideas. You&#8217;re guaranteed to leave the conference with new found
+inspiration.
+</p>
+<p>
+For some idea of what has gone on in the past:
+</p>
+<p>
+<a
+href="http://www.chadfowler.com/rubyconf.html">www.chadfowler.com/rubyconf.html</a>
+</p>
+<p>
+<a
+href="http://whytheluckystiff.net/arch/2002/11/02">whytheluckystiff.net/arch/2002/11/02</a>
+</p>
+<p>
+<a
+href="http://whytheluckystiff.net/arch/2002/11/04">whytheluckystiff.net/arch/2002/11/04</a>
+</p>
+<p>
+<a
+href="http://www.zenspider.com/Languages/Ruby/RubyConf2002/index.html">www.zenspider.com/Languages/Ruby/RubyConf2002/index.html</a>
+</p>
+<p>
+Registration ends on October 24, but if you miss it you can still get
+in&#8212;foodless&#8212;by registering late or just showing up.
+</p>
+<p>
+See you there?
+</p>

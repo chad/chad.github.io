@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  SSBEb24ndCBLbm93
+enki_id: 4706
+categories: !binary |-
+  bGlmZSwgY2FyZWVy
+---
+I had the pleasure of watching "Scott Chacon":http://scottchacon.com/ keynote at "CodeMash":http://codemash.org this week. He spoke about how "Github":http://github.com "manages" its development team and product development.  I enjoyed the talk, and encourage you to download his "slides":https://github.com/schacon/ddd if you weren't at the conference.
+
+Scott is a very energetic speaker and talks really fast, so he ended his keynote with a lot of time to spare (something I wish I would do more often). So he took questions from the audience.
+
+A lot of the questions were about trying to fit Github's process into companies of very different profiles.  So, for example, "Would this work in blah blah blah environment that is totally different from Github?"  Scott's answer was excellent in these several cases:
+
+"I don't know."
+
+He didn't blow the questions off. He then discussed possibilities.  But it was incredibly refreshing to hear "I don't know" from a speaker being questioned in front of an audience of almost 1000 people.
+
+I wrote in "The Passionate Programmer":http://pragprog.com/titles/cfcar2 about the difficulty and importance of learning to say "no". I think "I don't know" is scarier and harder and maybe more important.
+
+When someone regularly says "I don't know", you trust them more when they say they DO know. 

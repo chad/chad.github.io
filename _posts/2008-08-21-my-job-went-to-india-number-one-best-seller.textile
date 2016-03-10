@@ -1,0 +1,17 @@
+---
+layout: post
+title: !binary |-
+  TXkgSm9iIFdlbnQgdG8gSW5kaWE6IE51bWJlciBPbmUgQmVzdCBTZWxsZXIh
+enki_id: 4656
+---
+"Thank you Slashdot, for your review":http://books.slashdot.org/books/08/08/20/1316202.shtml (3 years after the release of the book)!
+
+"My Job Went to India (and all I got was this lousy book)":http://www.pragprog.com/titles/mjwti/my-job-went-to-india is at this very moment (but probably not by the time you're reading this) the _number_ _one_ best seller in "Amazon's India travel  books category.":http://www.amazon.com/gp/bestsellers/books/16792/ref=pd_zg_hrsr_b_1_4_last
+
+I've always wanted to write a travel book. Today I get the sensation of having written one without having to go to the effort.
+
+But seriously, it's been fun to watch the reaction on Slashdot, well known for its high level of discourse. Sadly, everyone except the reviewer (thanks Josh!) is caught up in the India part. My fault, I know. It's not really about India or outsourcing. It's about building a remarkable career. 
+
+It's not about trying not to lose.  It's about trying to win.
+
+I think we'll have to fix this perception problem in the near future.

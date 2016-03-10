@@ -1,0 +1,11 @@
+---
+layout: post
+title: !binary |-
+  Tk9WQSBSVUcgVG9uaWdodA==
+enki_id: 4480
+---
+There&#8217;s a blizzard in Denver, so I&#8217;m stuck in the DC area on a
+business trip instead of flying home this evening. Serendipitously, Rich is
+speaking at the <a href="http://novarug.org">NOVA RUG</a> tonight. If
+you&#8217;re a Rubyist in the area, hopefully I&#8217;ll see you there.
+

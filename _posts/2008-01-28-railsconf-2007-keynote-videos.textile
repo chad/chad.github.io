@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIDIwMDcgS2V5bm90ZSBWaWRlb3M=
+enki_id: 4642
+---
+"Now available!":http://railsconf.blip.tv/
+
+Scanning through the videos this morning, I was reminded of what a great time I had at RailsConf.  Planning is well underway for RailsConf 2008 (keep your eyes peeled for registration to open soon).  An initial batch of proposals have been selected, and I'm already excited about the program this year.
+
+The Rails community is maturing, and the level of proposed content has matured along with it.  Expect more advanced content this year from a more experienced (obviously) group of practitioners.
+
+Seeya there!

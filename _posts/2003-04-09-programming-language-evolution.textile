@@ -1,0 +1,62 @@
+---
+layout: post
+title: !binary |-
+  UHJvZ3JhbW1pbmcgTGFuZ3VhZ2UgRXZvbHV0aW9u
+enki_id: 4544
+---
+
+What if human languages didn't evolve as they do, but instead, all language change was centralized and controlled by expert linguists?  Would we be able to communicate with even half the level of expressiveness and creativity that we do now?  I don't know of any natural languages whose complete vocabularies and rule-sets have been successfully codified and documented.  Sure, we have dictionaries and grammar books, but ultimately these serve only as a starting point from which experience and learning have to fill in the gaps.  So far, natural language has proven to be too expressive and complex to, for example, allow us to create computer programs capable of parsing and understanding it.
+<P>
+I started thinking a lot about this after reading Steven Pinker's <a href="http://search.barnesandnoble.com/textbooks/booksearch/isbnInquiry.asp?userid=2TLSUZ2VRE&isbn=0060958332&TXT=Y&itm=1">The Language Instinct</a>, followed by <a href="http://search.barnesandnoble.com/booksearch/isbnInquiry.asp?userid=2TLSUZ2VRE&isbn=0060958405&itm=1">Words and Rules</a>.  While in Barcelona, I was lucky enough to discover and purchase a copy of Jean Aitchison's excellent exploration of language evolution, <a href="http://search.barnesandnoble.com/textbooks/booksearch/results.asp?TTL=Language+Change+Progress+or+Decay&userid=2TLSUZ2VRE">Language Change: Progress or Decay?</a>.  Her thesis is that language change represents both progress <i>and</i> decay, and that it's a natural process which should be no more questionable than the evolution of a species.
+<p>
+Some of the major points from LCP:oD - 
+<ul>
+<li>Language change is, like most natural phenomena, decentralized in nature.  Attempts, such as those made by the French government, to "command and control" language evolution have proven to be futile.
+<li>Change usually creeps in as an exploitation of weakness in a language.  Examples are certain combinations of sounds in varieties of the English language which have combined into one <i>(jump-ed -> jump'd)</i>, morphed <i>(spoilt -> spoiled)</i>, or disappeared completely over time <i>(Cockney's bottom -> bo'om)</i>.
+<li>Most language changes beget compression and increased efficiency for the speaker.
+<li>Once a change is introduced, its spread is often influenced by social factors.  For example, a manner of speech which suggests a higher social status will spread quickly in middle and lower class communities.
+<li>While language change is natural and inevitable, it is sometimes socially undesirable.  Excessive change may be inconvenient if it linguistically divides two or more communities that were once able to communicate with each other.
+</ul>
+<hr>
+What if computer programming languages <i>could</i> evolve, and progress in programming language technology <i>wasn't</i> centralized and controlled by expert computer scientists?  How much more expressively and efficiently could we communicate with computers--and with the programmers who have to read and modify our code?
+<p>
+There is, of course, the matter of practical reality getting in the way of something like this immediately happening.  The biggest challenge is that we have to communicate both with humans <i>and</i> with computers.  If computers were smart enough to handle an ever-evolving language, we probably wouldn't still have a field of research called Computational Linguistics.
+<p>
+How could you make evolutionary program language "design" work?  The easiest answer is to say that it already does...to some extent.  Bjarne Stroustrup once <a href="http://www.amazon.com/exec/obidos/ASIN/0201700735/qid=1049645974/sr=2-2/ref=sr_2_2/002-9394931-1863239">said</a> that:
+<pre>
+"Library design is language design"
+</pre>
+By this, he meant that APIs are like little languages that represent a specific domain.  Each has its own "manner of speech", so to speak.  If this is true, then you could easily see how the same compression, efficiency and social status drivers that affect language change could impact the way APIs are designed or even how programming styles differ from programmer to programmer.
+<p>
+You can be sure that, when designing <a href="http://www.ruby-lang.org">Ruby</a>, <a href="http://www.wikipedia.org/wiki/Yukihiro_Matsumoto">Matz</a> never directly intended for his language to lead to the following manner of programming:
+<pre>
+a='p=0;t=""*30000;';$<.each_byte{|c|a<<({?>=>"p+=1;",?<=>"p-=1;",?+=> "t[p]+=1;
+",?-=>"t[p]-=1;",?[=>"while t[p]>0;",?]=>"end;",?.=>"putc t[p];
+", ?,=>"t[p]=STDIN.getc||0;"}||"")};eval a
+</pre>
+And, there's definitely a big difference between this code snippet and the following example of how to create a sidebar in the (also Ruby-based) <a href="http://www.pragprog.com/pragdave/Tech/Blog">software</a> that powers this website:
+<pre>
+LinkHolder.new("Some Links",
+        "http://www.rubycentral.org"          => "Ruby Central",
+        "http://www.chadfowler.com" => "Chad Fowler",
+	"http://languagehat.blogspot.com"              => "Artima"
+)
+</pre>
+They're both Ruby, but the similarities stop there.  I'd go so far as to say that the first program (which happens to be an <a href="http://www.chadfowler.com/index.cgi/Computing/Programming/ABetterOok.rdoc">interpreter</a> for an obfuscated programming language) is no more immediately understandable to the average Ruby programmer than Spanish is to the average English speaker.  Though you might not go so far as to say these are two different <i>languages</i>, it wouldn't be too far off base to think of them as two different <i>dialects</i>.  It would be interesting to know how much API design and dominant programming style affect the designers of languages and ultimately, though indirectly, set the future direction of programming language design.  Maybe there is a touch of evolution indirectly guiding our language designs.
+<p>
+As I said, the "Library design is language design" argument gives us an easy answer.  We see in its evolution the same kind of subtle innovation that we see in spoken language.  But, the world of computing is rarely characterized as being a breeding ground for <i>subtle</i> innovation.
+<p>
+In a <a href="http://www.openp2p.com/lpt/a/3369">recent interview</a>, Alan Kay, the inventor of Smalltalk, said that "People today aren't doing a lot of work to move programming to its next phase."  He's disappointed to see that innovations he and his team made in the early 70s <i>still</i> seem "modern" today.  Similarly, at MIT's <a href="http://ll2.ai.mit.edu/">Lightweight Languages Workshop 2002</a>, Microsoft's Todd Proebsting <a href="http://ll2.ai.mit.edu/talks/proebsting.ppt">argued</a> that the industry needs to start looking at "Disruptive Programming Language Technologies" (read: non-linear innovation) and stop focusing on optimization (beating) of the same old paradigm (near-dead horse).
+<p>
+So, maybe there's something to be said for changing the way we go about designing programming languages.
+<p>
+Having said all this, I still don't have much of an idea of how to overcome the practical problems of decentralized programming language evolution.  But, here are a few thoughts for starters:
+<ul>
+<li><i>Learn from our syntax errors.</i>  What are the most common mistakes that programmers make?  Why?  In some cases, it might be carelessness, but if you could capture all of the mistakes made in the world of, for example, Java programming, there might be some patterns that show us a "weakness" that could be exploited.  If you think about it, programming errors are an important source of feedback to the language designer that are currently being lost by the ton each day.  How different might Java look if Sun could just see how often I screw up my Java programs because of all of those damned parentheses I generate having to type-cast everything?
+<li><i>Bring language design to the masses</i> in the same way that the Quake engine brought 3D game design to thousands of college freshman with too much free time.  Surely there has to be a more user-friendly tool for language implementation than Bison or Antlr.    Maybe we'll look back 15 years from now and laugh about how hard it used to be to make a new language in the same way that we look back now and laugh about how hard it used to be to do what Excel makes simple today.
+<li><i>Actually build an adaptive interpreter or compiler.</i>  By this, I mean an interpreter that will learn from programmers' mistakes and adapt to nuances in programmers' styles.  <a href="http://www.asd.k12.ak.us/Schools/Bartlett/academics/HIP/Gumptionology/Pages/Value_rigidity.html">Value rigidty</a> mixed with a healthy respect for reality make this one pretty tough to swallow, but as Proebsting says in his "Disruptive Programming Language Technologies" talk (not in so many words), the disruptive technologies of the future are the ones that seem ridiculous to us now.
+</ul>
+<p>
+It would take someone a lot smarter and more patient than me to actually do anything with these ideas.  But, (as Jean Aitchison puts it) "social undesirability" aside, the idea of programming in Pidgin Java or SmallPerl# Creole appeals to me in an exciting and indescribable way.
+<p>
+<font size="-1"><i>(Off Topic: For those who've read it, am I the only one who has been paranoid about everything I write since reading Glenn Vanderburg's <a href="http://www.vanderburg.org/cgi-bin/glv/blosxom/2003/03/24#Software/Development/nouns_and_verbs">post</a> about abstract nouns?)</i></font>

@@ -1,0 +1,11 @@
+---
+layout: post
+title: !binary |-
+  V2hhdCdzIEhhcHBlbmluZyBhdCBSYWlsc0NvbmY/
+enki_id: 4617
+---
+If you want to be _totally_ up-to-the-second in tune with what's happening at RailsConf, our friends at "Twitter":http://twitter.com have set up an excellent "flash-based visualizer":http://twitter.com/flash/railsconf/.  Click it to have it take over your screen.  Sit back, and let the hours pass.  Let it mesmerize you.
+
+In case, for some reason, you have to get up for your computer, you can follow the "railsconf":http://twitter.com/railsconf user on Twitter with your cell phone by texting "following railsconf" to 40404.  
+
+If you add railsconf as a friend, railsconf will add you as a friend.  This is the New Rails Community:  We friend you back.

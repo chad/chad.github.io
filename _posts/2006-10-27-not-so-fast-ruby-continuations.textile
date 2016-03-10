@@ -1,0 +1,26 @@
+---
+layout: post
+title: !binary |-
+  Tm90IFNvIEZhc3QgKFJ1YnkgQ29udGludWF0aW9ucyk=
+enki_id: 4501
+---
+Some people are <a
+href="http://pluralsight.com/blogs/dbox/archive/2006/10/25/41184.aspx">happy</a>,
+and some people are <a
+href="http://patricklogan.blogspot.com/2006/10/ruby-sucks.html">sad</a>.
+But the truth of the matter is, as <a
+href="http://on-ruby.blogspot.com">Pat</a> mentions in a comment on
+Patrick&#8217;s post, Matz and Koichi are still planning to implement
+continuations for Ruby 2.0.
+
+<p>
+&quot;If it&#8217;s not too hard&quot;, said Matz over breakfast. Koichi
+then nodded quickly and nervously, not looking up from the YARV source on
+his laptop (which was given higher priority real estate on the table than
+his breakfast plate).
+</p>
+<p>
+<a href="http://headius.com/">Charles</a> says he can do them in JRuby. <a
+href="http://weblogs.asp.net/scottgu/">Scott</a> told me he had some ideas
+on how to do them on .NET. My money&#8217;s on Koichi for making it happen.
+</p>

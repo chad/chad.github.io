@@ -1,0 +1,105 @@
+---
+layout: post
+title: !binary |-
+  UnVieUdlbSBvZiB0aGUgTW9udGggLSBSYWlscw==
+enki_id: 4541
+---
+I&#8217;ve decided to highlight <a
+href="http://www.rubyonrails.org">Rails</a> this month, because it&#8217;s
+remarkably <em>boring</em>.
+
+<p>
+That&#8217;s right: Boring. Even David Heinemeier Hansson (its author) <a
+href="http://www.loudthinking.com/arc/000255.html">agrees</a>.
+</p>
+<p>
+I started writing a little web application for my <a
+href="http://gomanginstitute.org">other non-profit</a> to put Rails through
+its paces. Armed with experience, let me step you slowly through its
+ever-so-boring pieces:
+</p>
+<ul>
+<li><b>Installation</b> is a total snoozer.
+
+<pre>
+      [chad@mymachine]$ sudo gem install rails
+      Attempting local installation of 'rails'
+      Local gem file not found: rails.gem
+      Attempting remote installation of 'rails'
+      Install required dependency rake? [Yn]   y
+      Install required dependency activerecord? [Yn]   y
+      Install required dependency actionpack? [Yn]   y
+      Successfully installed rails, version 0.6.0
+
+      [chad@mymachine]$ mkdir -p ~/code/ruby
+      [chad@mymachine]$ rails ~/code/ruby/mynewsite
+      [chad@mymachine]$ cd ~/code/ruby/mynewsite
+      [chad@mymachine]$ public/dispatch.servlet
+      [2004-08-16 22:34:15] INFO  WEBrick 1.3.1
+      [2004-08-16 22:34:15] INFO  ruby 1.8.1 (2003-12-25) [i686-linux]
+      [2004-08-16 22:34:15] WARN  TCPServer Error: Address family not supported by protocol - socket(2)
+      [2004-08-16 22:34:15] INFO  WEBrick::HTTPServer#start: pid=21242 port=3000
+</pre>
+</li>
+</ul>
+<p>
+Not only did this install Rails and all of its dependencies (using <a
+href="http://rubygems.rubyforge.org">RubyGems</a>, of course), but the last
+little bit setup a new Rails workspace with everything I needed to actually
+run a Rails application and then started it up with Webrick. Where are all
+of the XML config files that I love so much to squint at?
+</p>
+<ul>
+<li>Writing <b>database</b> code is even worse. For the basics, you don&#8217;t
+have to do <em>any</em> coding. What kind of <em>sick</em> mind was behind
+<a href="http://activerecord.rubyonrails.org/">ActiveRecord</a> anyway? How
+are we programmers supposed to stay employed if there&#8217;s no work for
+us to do?
+
+</li>
+<li><b>Gluing</b> this all together to get an end-to-end web application
+working is the biggest non-event yet. Roughly:
+
+<pre>
+      scaffold :tablename
+</pre>
+</li>
+</ul>
+<p>
+That sets up &quot;scaffolding&quot; which creates (in the runtime
+environment) controller, view, and model code to fully manipulate the table
+that you point to. In case you missed it (it was quick), here it is again:
+</p>
+<pre>
+        scaffold :tablename
+</pre>
+<ul>
+<li>The most frustratingly boring part of all of this is the
+<b>documentation</b>. David&#8217;s got videos, wikis, tutorials and demo
+apps (all on <a href="http://www.rubyonrails.org">www.rubyonrails.org</a>),
+which means I didn&#8217;t get the fun of having to wade through
+Rails&#8217; source code every time I wanted to implement a new feature for
+my web application.
+
+</li>
+</ul>
+<p>
+Despite being arguably the most boring web framework I&#8217;ve ever seen,
+a lot of people seem to be coming to Rails from all over the place. <a
+href="http://www.loudthinking.com/arc/000276.html">Even the DotNet and Java
+guys</a>, who <em>definitely</em> don&#8217;t seem to like being bored with
+nothing to do (All that Static Typing leads to lots of Typing) seem to be
+coming around to Ruby-land as a result of Rails.
+</p>
+<p>
+I hear there are talks about porting this thing to languages like Python
+and TCL (Java, too? Is it possible in Java?).
+</p>
+<p>
+Thankfully, though Rails itself is boring, it stays out of the way, and you
+can do really interesting things <em>with</em> it.
+</p>
+<p>
+I hear that <a href="http://rubygems.org">this</a> is destined to be one of
+the more interesting examples&#8230;
+</p>

@@ -1,0 +1,90 @@
+---
+layout: page
+title: "books"
+date: 2013-02-15 10:53
+comments: false
+sharing: false
+footer: false
+---
+
+<div class="book">
+
+<img src="http://imagery.pragprog.com/products/239/rr2.jpg?1300128814" width="180"/>
+
+h2.  <a href="http://pragprog.com/book/rr2/rails-recipes">Rails Recipes</a>
+
+The second-edition of my best-selling "Rails Recipes":http://www.pragprog.com/titles/fr_rr/rails-recipes updated for Rails 3.  Much of the content is new.  This is _the_ book you want next to you while you're programming Rails applications.
+
+</div>
+<div class="book">
+
+<a href="http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X"><img src="/images/books/4-hour-body.jpg" width="180"/></a>
+
+h2.  "The 4-Hour Body: An Uncommon Guide to Rapid Fat-Loss, Incredible Sex, and Becoming Superhuman":http://www.amazon.com/4-Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X
+
+h3. (contributing author)
+
+This book features chapter by me about my transformation from obesity to good health and, more important, the mental process that led me to make the change.  The chapter is called "The Harajuku Moment", named after a trip with some friends to Harajuku in Tokyo.
+
+I have a number of friends and acquaintances who have followed the diet advice in this book and lost a significant amount of weight in a short time.
+
+</div>
+<div class="book">
+
+<img src="/images/books/passionate-programmer.jpg" width="180"/>
+
+h2. "The Passionate Programmer: Creating a Remarkable Career in Software Development":http://pragprog.com/titles/cfcar2/the-passionate-programmer
+
+Most programmers and people in the IT field should read this book.  The Passionate Programmer details the many techniques I've learned over the years for creating a remarkable career.  Bored with your job?  Always wishing you could do more? Longing for more influence, notoriety, freedom in your job?  This book shows you the way.
+
+</div>
+<div class="book">
+
+<img src="/images/books/rails-recipes.jpg" width="180"/>
+
+h2. " Rails Recipes":http://www.pragprog.com/titles/fr_rr/rails-recipes
+
+The original Rails Recipes has been used by tens of thousands of Rails developers as they’ve worked toward mastering everyone’s favorite Web framework.
+
+</div>
+<div class="book">
+
+<img src="/images/books/mjwti.jpg" width="180"/>
+
+h2.  "My Job Went to India (and all I got was this lousy book)":http://pragprog.com/titles/mjwti/my-job-went-to-india
+
+In the early 2000s, <a href="http://twitter.com/kellyjeanne">@kellyjeanne</a> and I moved to India for a year and a half.  Afterward I wrote this book about what the experience taught me about life and career.
+
+</div>
+<div class="book">
+<img src="/images/books/progruby.jpg" width="180"/>
+
+h2.  "Programming Ruby":http://pragprog.com/titles/ruby/programming-ruby
+
+h3. (contributing author)
+
+If any book could be called the Bible for Ruby, this is it.  Dave Thomas and Andy Hunt are responsible for bringing Ruby into popularity outside of Japan, and this book was the catalyst.  Dave has been relentless about keeping the book up to date and improving it through the years.  You can't go wrong buying and reading a book by Dave Thomas.
+
+</div>
+<div class="book">
+
+<img src="/images/books/the-ruby-way.jpg" width="180"/>
+
+h2.  "The Ruby Way (1st Edition)":http://www.amazon.com/Ruby-Way-Hal-Fulton/dp/0672320835
+
+h3. (contributing author)
+
+I wrote a big chunk of the networking chapter of this book and was a tech reviewer.  I used the money I earned to buy a very old beat up Volvo station wagon.
+
+</div>
+<div class="book">
+
+<img src="/images/books/pat.jpg" width="180"/>
+
+h2. Professional Apache Tomcat
+
+h3. (contributing author)
+
+I wrote a chapter of this book. Never got paid for it by WROX. They sold the title to Wiley when WROX died.  Wiley asked if I wanted to rev my chapter for the next edition. I said no thanks. They sentence-by-sentence rephrased my chapter and released the book with no attribution or credit.
+
+</div>

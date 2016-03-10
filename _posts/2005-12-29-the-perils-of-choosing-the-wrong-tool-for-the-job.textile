@@ -1,0 +1,61 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFBlcmlscyBvZiBDaG9vc2luZyB0aGUgV3JvbmcgVG9vbCBmb3IgdGhl
+  IEpvYg==
+enki_id: 4533
+---
+Joel Spolsky has just <a
+href="http://www.joelonsoftware.com/articles/ThePerilsofJavaSchools.html">made
+a telling assertion</a>. He says that in an interview, if he lets
+programmers choose the language they want to use to implement some
+programming tasks, they&#8217;ll often choose Java these days. And this
+makes him worry:
+
+<pre>
+  Instead what I'd like to claim is that Java is not, generally, a hard
+  enough programming language that it can be used to discriminate
+  between great programmers and mediocre programmers.
+</pre>
+<p>
+Why on <em>earth</em> would you want an interviewee to pick a
+<em>difficult</em> language? That&#8217;s a <em>bad</em> <em>sign</em>.
+</p>
+<p>
+As someone who has interviewed and hired a <em>lot</em> of programmers, let
+me counter with some advice of my own: If you give someone the task of
+digging a hole and offer them the tool of their choice, favor the one that
+chooses the auger over the garden spade.
+</p>
+<p>
+Sure, seeing someone handle a nasty pointer issue tells you something. It
+tells you whether they can deal with nasty pointer issues. If you&#8217;re
+doing software that requires that sort of thing, by all means&#8212;force
+people to show you they can handle it.
+</p>
+<p>
+Software development happens at many levels. I&#8217;ve known a lot of
+programmers that are good at the low level stuff but not so great at coming
+up with the high level architectures or the fluffy stuff that make a user
+<em>love</em> an application. And vice versa. I&#8217;m not convinced that
+all programmers can and/or will be great at both. I&#8217;d even go so far
+as to say that different parts of the brain and potentially different
+<em>people</em> are going to be right for these different layers and types
+of application development.
+</p>
+<p>
+Joel feels that low(ish) level languages like C and C++ with their pointers
+and other various &quot;hard stuff&quot; are necessary to weed people out
+of the industry. The ones that can&#8217;t handle the hard stuff in the
+languages are the ones that were never meant to be programmers in the first
+place.
+</p>
+<p>
+What worries me is that this will weed out the artists and the
+craftspeople, leaving us with nothing but a bunch of engineers. Sometimes
+you need an engineer. Sometimes you need an artist.
+</p>
+<p>
+What you <em>always</em> need is someone capable of choosing the right tool
+for the job.
+</p>

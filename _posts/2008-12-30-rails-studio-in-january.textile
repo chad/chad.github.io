@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgU3R1ZGlvIGluIEphbnVhcnk=
+enki_id: 4674
+---
+"Mike":http://clarkware.com just reminded me that the Early Bird discount is soon to expire for our January "Rails Studio":http://pragmaticstudio.com/rails/ in Denver. If you've been thinking about attending a Rails Studio and work for a big company, here's a tip I learned the hard way: corporations usually budget for training and then when it's time to "save some dollars" in later quarters, they cut the training budget first. In my big corporate days, that bit me more than once, stopping me from going to conferences (OOPSLA) and training (XP Immersion, which I later eventually made it to).
+
+So if you're interested in doing _any_ training this year, I'd recommend that you do it in the first quarter before the budget is pulled out from under you. Unless you work for an enlightened company with a healthy revenue stream.
+
+The Rails Studio has the added advantage (for me) of being held at a beautiful, resort-like hotel with a bunch of really nice fitness facilities and excellent food. Last time we taught there, I was actually sad to go back to our full service gym at home. 
+
+If you're coming and either into getting in shape or music, let me know. Maybe we can arrange some after-hours activities.

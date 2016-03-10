@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  UnVieSBvbiBMZW9wYXJk
+enki_id: 4634
+---
+Today I installed Apple's latest OS release: Leopard.  One of the most exciting features for me as a Rubyist is the inclusion of a well-designed Ruby installation, complete with RubyGems and a bundle of pre-installed gems for the software I typically use as well as some of the Mac-specific gems most Rubyists would like to have (dnssd, rubycocoa, etc.)
+
+Some of the gems shipped with Leopard are slightly out of date, as can be expected.  But since they shipped the software as gems, updating Rails (for example) was as simple as 'gem update rails'.
+
+Apple has shipped Ruby as one of its Frameworks and has provided first-class integration with its development tools for the first time.  They've been working with us in the community for nearly a year to get this right and it shows.  Kudos to Apple and especially to Laurent Sansonetti and Jordan Hubbard for a job well done.  
+
+I can finally remove that extra non-Apple Ruby install I've been carrying around for years now and just use the Apple-supported Framework.
+
+(FYI, Giles has "completely jumped the shark on this one":http://gilesbowkett.blogspot.com/2007/10/apples-ruby-communities-not-features.html.  Don't let his poo-pooing worry you.)

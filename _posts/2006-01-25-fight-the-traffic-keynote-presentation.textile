@@ -1,0 +1,56 @@
+---
+layout: post
+title: !binary |-
+  RmlnaHQgVGhlIFRyYWZmaWMgS2V5bm90ZSBQcmVzZW50YXRpb24K
+enki_id: 4558
+---
+Last week I flew to Montreal to keynote at <a
+href="http://cusec.soen.info/">CUSEC</a>. Mine was the opening keynote,
+titled <a
+href="http://www.chadfowler.com/index.cgi/Computing/Career/FightTheTraffic.rdoc,v">Fight
+The Traffic</a>. Other keynotes were to include <a
+href="http://headrush.typepad.com/">Kathy Sierra</a> and <a
+href="http://www.loudthinking.com/">David Heinemeier Hansson</a>.
+Unfortunately David ended up getting snowed in, so I also gave the closing
+keynote, which I called &quot;Rails is Boring, and Ruby is a Toy&quot;, and
+in which I described some of the salient philosophical features of Ruby and
+Rails and encouraged their application in other (less fortunate?) software
+environments.
+
+<p>
+CUSEC is a wonderful conference. It&#8217;s arranged by Canadian software
+engineering students <em>for</em> software engineering students. The talks
+were engaging, and like most conferences, the in-between-session
+discussions were especially inspirational. The CUSEC organizers wooed me
+with the promise of speaking to the future of software development in
+Canada, and I wasn&#8217;t disappointed. These were some smart,
+<em>passionate</em> kids.
+</p>
+<p>
+It was my first chance to see Kathy&#8217;s <a
+href="http://conferences.oreillynet.com/cs/os2005/view/e_sess/7077">Creating
+Passionate Users</a> talk, which I can&#8217;t recommend more strongly. It
+will affect the way <a
+href="http://www.pragmaticprogrammer.com/titles/fr_rr/">I write</a>, work,
+and <em>consume</em> from now on. She&#8217;s got a book coming out in the
+not-too-distant future on the topic. I&#8217;m convinced that it will
+become and remain a classic.
+</p>
+<p>
+I was particularly fond of my slides for the talk. I can say that without
+fear of sounding conceited, because I didn&#8217;t make them myself. My
+friend and cothinker, <a href="http://steveakers.blogspot.com/">Steve
+Akers</a> worked with me to <em>draw</em> the slides for my talk by
+<em>hand</em>. What follows is the title slide, but the rest are available
+on his site, <a href="http://www.moebot.com">Moe Bot</a>. Check &#8216;em
+out. You can also <a href="http://feeds.feedburner.com/MoeBot">subscribe to
+his pictures via RSS</a>.
+</p>
+<p>
+<img src="http://www.chadfowler.com/images/fight-the-traffic.png">
+</p>
+<p>
+The sessions were recorded, so I&#8217;ll post a link when they&#8217;re
+available. On the mp3, you&#8217;ll be able to hear me make wretched noises
+on my soprano saxophone. Stay tuned. You won&#8217;t want to miss that.
+</p>
