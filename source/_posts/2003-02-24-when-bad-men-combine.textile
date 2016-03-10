@@ -1,0 +1,142 @@
+---
+layout: post
+title: !binary |-
+  JnF1b3Q7V2hlbiBiYWQgbWVuIGNvbWJpbmUuLi4mcXVvdDs=
+enki_id: 4556
+---
+
+<a href="http://www.tartarus.org/~martin/">Martin Porter</a>, creator of the 
+<a href="http://www.tartarus.org/~martin/PorterStemmer/index.html">Porter 
+Stemming Algorithm</a> wrote an interesting pair of essays 
+(<a href="http://www.tartarus.org/~martin/essays/burkequote.html">1</a>, 
+<a href="http://www.tartarus.org/~martin/essays/burkequote2.html">2</a>), 
+tracing the misuse of a famous quote by Edmund Burke through the web.  
+It's a very interesting read to see how the quote (approximately "All that 
+is necessary for the triumph of evil is that good men do nothing") has evolved 
+over time into various forms which sometimes suffer semantic loss and even 
+complete reversal of meaning.
+<p>
+But, the <i>really</i> interesting part is the climax of the story.  As he tries 
+to validate the original quote, he discovers that there <i>is no original</i>.  
+It's been somehow conjured up, associated with Edmund Burke, and then used 
+excessively on the internet and in other places.
+<p>
+This got me thinking about how these things spread--specifically about 
+how misinformation can be spread on the web like a virus.  This is, of course, 
+following from the same ideas that led me to <a href="/index.cgi/Computing/GoogleBloggerBuyout.html">recently 
+say</a> that "blogging" with it's unbridled, so-easy-my-grandmother-can-do-it 
+web publishing functionality is a problem that the internet needs a solution 
+for.  There's no accountability for what's published.  I have no professional 
+or ethical requirement to not make mistakes or flat-out <i>lie</i> on my 
+personal web site.
+<p>
+Take the following example:  Anyone who knows me is aware that I'm a student 
+of the Hindi language.  I've gotten to the point of being conversational if 
+not near-fluent.  Let me teach you a sentence:
+<blockquote>
+  Tu paagal kutta hai.
+</blockquote>
+I'll walk you through it, word by word:<br>
+<b>"Tu"</b> means "you".  There are three forms of "you" in Hindi: "Tu", "Tum", 
+and "Aap".  These forms are used in addressing people in different relationships 
+with the speaker, specifically to denote respect.  The most respectful form of 
+"you" in Hindi is "Tu", which is used both to address elders and God.  When in 
+doubt, use "Tu".  It is sometimes acceptable to use "Tum", but it's better to 
+stay on the safe side and use "Tu" if you're not sure of which to use.  You 
+wouldn't want to offend anyone.  Only use "Aap" when addressing animals or 
+people of much lower castes.
+<br>
+<b>"paagal"</b> is a possessive word that means "my" or "ours".  In this case, 
+"tu" is the subject of the sentence, and "paagal" implies that I am saying that 
+"you are mine".  If I wanted to say "yours", I would change "paagal" to 
+"paagalwala".  "paagal" is both the root word or stem and the first person 
+possessive form.
+<br>
+<b>"kutta"</b> means "ray of light".
+<br>
+<b>"hai"</b> means "is" or "are".  The root word here is "hona" and it is 
+conjugated in various ways depending on the subject of the sentence.  "tu" 
+goes with "hai", "tum" goes with "ho", and "aap" goes with "hain".
+<br>
+So, the complete translation of this sentence is a very respectful:
+<blockquote>
+You are my ray of light.
+</blockquote>
+This is very similar, of course, to the familiar <i>"you are my sunshine"</i>.  
+Interestingly, this phrase is very common in Indian society and is usually used 
+to express gratitude in formal situations.
+<br>
+You might be surprised when you got off the plane in India, expressed your 
+gratitude to the nearest person with the only Hindi phrase you know and deeply 
+offended them (perhaps even eliciting mild violence).  "Tu paagal kutta hai" is 
+a very disrespectful way of delivering the very disrespectful content: "You are 
+a crazy dog".  If you were to do some casual web validation, you would find that 
+there really are multiple ways to say "you", each with varying levels of respect implied.
+You would also find that words are conjugated in a similar what to that which I 
+described above.  You might, in this casual validation-search decide that my
+description is basically consistent with other sites you can find and that I can
+probably be trusted. 
+<p>
+How were <i>you</i> supposed to know?
+<p>
+How many times do you read something on the web from what seems to be a 
+reliable source and just take it for granted?  A colleague and I were working 
+yesterday to try to plan an event.  We were worried that it would conflict with 
+Thanksgiving, so we each hit Google to try to find out when Thanksgiving is.  
+"November 27, 2003" yielded the minutes of a meeting that had not yet happened.  
+We had a good chuckle, but it was still using this same method and from this 
+same proven-to-be-corrupt data set that we eventually decided that November 27 
+was <i>not</i> Thanksgiving (or was it?).
+<p>
+Maybe I'm an idiot, but I've fallen into a rhythm of just trusting what I 
+see on the internet.  It's a bad habit born out of laziness.  This probably 
+wasn't such a bad thing to do in 1994, but in the days of the "blogroll", it 
+falls apart.
+<p>
+As I was thinking about this when I woke up today, I did some browsing around 
+some of those <a href="/index.cgi/Computing/GoogleBloggerBuyout.html">Category 2</a> 
+(completely useless) websites I mentioned in my last related post.  I specifically 
+looked at some of the sites which seem to form a tight-knit community, looking 
+at semantic loss and/or distortion from site to site.  This is hardly what 
+you could call a representative sample (1 data point), but interestingly the 
+very first article that I looked at was an absolutely misguided reaction to an 
+article on a "sister site", which completely misinterpreted and then restated 
+a major point made on the site to which it was referring.  The article's 
+meaning changed in at least two major ways with only one step away from its origin.
+<p>
+Potter ends his essays with a set of <b>Principles for Quotations</b>:
+<pre>
+Principle 1 (for readers)
+    Whenever you see a quotation given with an author but no source assume 
+    that it is probably bogus.
+
+Principle 2 (for readers)
+    Whenever you see a quotation given with a full source assume that 
+    it is probably being misused, unless you find good evidence that the quoter 
+    has read it in the source.
+
+Principle 3 (for quoters)
+    Whenever you make a quotation, give the exact source.
+
+Principle 4 (for quoters)
+    Only quote from works that you have read.
+</pre>
+I was particularily interested in the first two principles, which in effect 
+advise readers not to trust information available on the web.
+<p>
+The title of this post, "When bad men combine..." is part of an actual Edmund 
+Burke quote <b>[1]</b>, which I have taken out of context.  You could easily 
+read my usage to mean that "bloggers" (like myself, in this context) are "bad men" 
+and that the combination of their efforts leads to the viral spread of 
+misinformation on the web.  This is, of course, completely unrelated to 
+the point Burke was trying to make when he used this quote in a speech to 
+the British Parliament:
+<blockquote>
+When bad men combine, the good must associate; else they will fall one by 
+one, an unpitied sacrifice in a contemptible struggle.
+</blockquote>
+<p>
+But, how are <i>you</i> supposed to know that?  If you've never heard 
+of him before this, how can you be sure that Edmund Burke ever even existed?
+<p>
+<font size="-2">[1] Edmund Burke, Thoughts on the cause of the present discontents, 1770. In The Works of the Right Honourable Edmund Burke, edited by Henry Froude, Oxford Univerity Press, 1909, Volume 2, page 83, lines 7 to 16.</font> 

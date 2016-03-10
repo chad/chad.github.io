@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFJ1YnlDb25mIHByb3Bvc2FsIGRlYWRsaW5lIGlzIGxvb21pbmcuLi4=
+enki_id: 4627
+---
+RubyConf is going to be held on November 2-4, 2007 in Charlotte, NC, USA.  This is the international ruby conference.  Matz will be there.  And so on.
+
+The proposal deadline is right around the corner.  This coming Monday at 5PM EDT.  Some of you have started proposals but never submitted them to get them out of draft state.  Some of you have forgotten about the deadline.  Some of you didn't know proposals were open at all.  "Hopefully this will help you to spring into action":http://proposals.rubycentral.org/.
+
+Let us know if you run into any snags with the proposal system.  We've had some email issues that have prevented registration confirmation emails from getting to their intended recipients.
+
+UPDATE: The deadline has been extended to Wednesday at 5PM.  We didn't want the technical issues with the proposal site to get in the way of good proposals being submitted.
+
+UPDATE UPDATE:  I got the deadline wrong here.  I meant to say Thursday. I promise I didn't do that on purpose ;)

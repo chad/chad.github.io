@@ -1,0 +1,14 @@
+---
+layout: post
+title: !binary |-
+  UHJvZHVjdGl2aXR5IHRpcDogTGV0IERlcmVrIFNpdmVycyBUYWtlIE5vdGVz
+  IGZvciBZb3U=
+enki_id: 4690
+---
+I just finished reading the inspiring "The E-Myth Revisited":http://www.amazon.com/E-Myth-Revisited-Small-Businesses-About/dp/0887307280/ref=sr_1_1?ie=UTF8&s=books&qid=1246487770&sr=8-1, which like my own first book "My Job Went to India":http://www.pragprog.com/titles/mjwti/my-job-went-to-india suffers from an incredibly bad name.  
+
+This is definitely one of the most practically useful and potentially career-changing business books I've read. As I started getting toward the end, I realized that I should have been taking notes. The book is an excellent read, but at its core, it can be distilled into a clear outline of stuff to _do_ after you read it.  I was reading on my Kindle, which I'm still not good at using as a quick reference device. So, while I was excited about going back through the book and making myself a TODO list, I wasn't sure how to best do it.
+
+Then I remembered Derek Sivers' "book list":http://sivers.org/book. Derek has obviously spent a _lot_ of time thoughtfully preparing a list of recommended books with reasons behind each recommendation. Not only that, he includes "detailed notes":http://sivers.org/book/EMythRevisited on each book.  I read his notes on E-Myth Revisited and was pleased to see that all of the important stuff is captured. Thanks Derek!
+
+Speaking of Derek and books, don't miss his book, "How to Call Attention to Your Music":http://sivers.org/pdf. It might be titled for musicians but I think everyone will find something valuable inside.

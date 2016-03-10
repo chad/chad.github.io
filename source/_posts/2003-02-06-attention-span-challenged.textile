@@ -1,0 +1,41 @@
+---
+layout: post
+title: !binary |-
+  QXR0ZW50aW9uIHNwYW4gY2hhbGxlbmdlZA==
+enki_id: 4585
+---
+
+I've been sitting in front of my laptop all day taking some time off after 3 weeks of being physically ill in Budapest.  Kelly and Ramesh are outside playing chess (a new found passion for Kelly).  I'm starting to squint at the screen as the sun goes down on Bangalore and my house, but I dormantly refuse (or, rather, I don't have the motivation) to get up and turn on a light.
+<P>
+I've been sitting here all day trying to do something productive.  Those that know me pretty well wouldn't be at all surprised to hear me say that I'm challenged when it comes to attention span.  Recently, someone at work asked me how I manage to be so productive and to involve myself in so many things in life (citing speaking Indian languages, playing music, writing books, programming recreationally, etc.).  Here's the secret...
+<P>
+I've always had a short attention span.  This is probably just a lame excuse,
+but I think it's genetic.  So, my approach to trying to remain useful despite
+this limitation is something akin to the Shotgun Approach.  In any given day,
+I'll have 2-10 new ideas of things I want to do or try to involve myself in.
+Rather than stopping myself and trying to focus, I try *all* of them.  If I'm
+lucky, I'll "hit something" with one of those shotgun pellets.  This way, when
+a <a
+href="http://www.wyrdsmiths.com/index.php?fid=xt_picker&callfid=xt_gumption">gumption trap</a> comes along--a problem I can't solve, software that won't compile, realizing just how ignorant and incapable I might be, etc.--I can just switch gears to something more do-able.  This context switching might happen hourly, daily, or even every few minutes.  It depends on a potentially infinite number of factors that I can't understand (currently) and therefore make no attempt to control.  At the end of the day (or, more accurately, "epoch"), the shotgun approach usually has done enough damage to at least draw a little blood.  These "bleeding" items are the ones I remember next time I sit down and restart the cycle, leaving the others to carry on without me interfering with them.  So, effectively, I probably start about 10 times more things than I finish.
+<P>
+Today, I've been shooting blanks.  So, though I've been focusing intently on several different activities, I haven't made progress in any of them.  Thankfully, this doesn't happen too often.  But, when it does, it sure is a demotivating experience.
+<P>
+As an experiment, here's a list of things that I've currently got the shotgun pointing at.  I can check back here in a month or so, and see how many are still in sight.
+<UL>
+<LI><a href="http://www.rubyconf.org">RubyConf 2004</a></LI>
+<LI><a href="http://fit.c2.com"</a>Fit</a> (see my last post)</LI>
+<LI><a href="http://www.apple.com">Getting a Mac</a>, and specifically involving myself in <a href="http://www.imasy.or.jp/~hisa/mac/rubycocoa/">Ruby Cocoa</a> development</LI>
+<LI>Starting my own record label for jazz music</LI>
+<LI>Exploring the concept of "executable documentation" in more detail with my own Ruby project</LI>
+<LI>Trying to write a parser/interpreter for SQL in Ruby in support of the previous idea (though, it's separate enough that it could succeed or fail independently)</LI>
+<LI>Exploring and documenting Ruby internals</LI>
+<LI>Veena</LI>
+<LI>Hindi</LI>
+<LI>Reviving my skills on the Saxophone with the soprano sax I recently purchased here in India</LI>
+<LI>Kannada</LI>
+<LI>My job (I don't have much choice on this one)</LI>
+</UL>
+<P>
+This isn't the whole list, but I got tired of typing. ;)  I think I'll be sufficiently embarrassed to see how I've fared with even a subset.
+<P>
+Don't get me wrong.  I'm not complaining.  So far, this has worked out pretty well for me.  I just thought I'd explain it here for the sake of 1) people who have to work with me in these conditions or just have to tolerate listening to me rapidly change directions all the time, and--the minority--2) people who actually want to know how/why I get involved in as many "projects" as I do.  

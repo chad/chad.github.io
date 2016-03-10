@@ -1,0 +1,30 @@
+---
+layout: post
+title: !binary |-
+  VmFsdWVsZXNzIFNvZnR3YXJlDQ==
+enki_id: 4555
+---
+
+Today, Dave <a href="http://www.pragprog.com/pragdave/Practices/Artifacting.rdoc,v">questioned the emphasis</a> on nouns over verbs in software development.  This hit a nerve.
+<p>
+The thought that most stands out to me is:
+<pre>
+	Once I started thinking about this as a pattern, 
+	it started to change the way I look at many of the 
+	other artifacts we produce (including the 
+	delivered programs themselves).
+</pre>
+<P>
+Some people say that programming is an art form.  This is significantly less popular than the programming-as-engineering metaphor, but assuming it has some merit, there seem to be some holes (or lessons-to-be-learned, perhaps) in the way we practice.  Without going into a full scale contrast between the practice of programming and, say, music, there is one particular aspect of practicing "art" which seems conspicuously missing from the every day work of the programmer.  As a musician, I might spend a significant portion of my practice schedule playing things that nobody would want to listen to.  This might include scales, arpeggios, extended tones (good for improving control on wind instruments, for example), and various technical patterns.  I would certainly never record them and release them on a CD.   I wouldn't even bore anyone with these sounds unless they either lived in my house and had no choice or were being paid to listen to them and offer suggestions for improvement.  This is an example of "work" in which the action is far more valuable than the direct output.
+<P>
+Musicians don't just do these things in the early stages of their development.  They continue throughout their careers.  In my experience, the <i>specific</i> things they practice change over time, usually decreasing in stand-alone value with experience.  For example, one of my last saxophone teachers, <a href="http://cuneiformrecords.com/bandshtml/cartwright.html">George Cartwright</a>, spent a great deal of his practice time doing nothing but playing a single note and listening to it.  It would be absolutely unnerving to listen to if you weren't George himself.  The way he played the notes didn't even sound good.  But, the output wasn't the point.  It was the act. 
+<P>
+Something I learned as a saxophonist is that the less valuable the direct output of that which you practice, the more emphasis you will place on the act of practicing.  I can learn more, for instance, from making horrid noises for 30 minutes than I can from learning a Charlie Parker solo and playing it from memory.  Why is this?  I'm so focused on the output of the Charlie Parker solo--making it sound good, feeling good as a result--that I forget to focus on the process of learning it, and important bits of information are liable to fall through the proverbial cracks.
+<P>
+I started thinking about this about a year and a half ago, on my return trip from the first <a href="http://www.rubyconf.org">International Ruby Conference</a>.  In software development, even for hobbyists like me, we're almost always focused on creating something useful.  If software is simply a craft or an engineering discipline, this doesn't seem strange, but if it's an art, this is a big hole.  If I'm trying to make a cool new CGI program for my web site, I'm probably more interested in the feature I'm implementing than the fact that I'm implementing it.  Eric Raymond says that Open Source software "scratches an itch" of the programmer that creates it, meaning that the programmer finds something missing and creates software to fill the void.  And, of course, in commercial software development, we get paid to create something--not to learn how to code. 
+<P>
+Back to Dave's point (though I wouldn't guess that he was thinking <i>exactly</i> this), the emphasis is entirely on the artifact (in this case, the functioning piece of software) and not so much on the process of development.  From hobbyists to professionals, we're all very focused on creating useful stuff.
+<P>
+This is why I developed (among other less publishable "pieces") <a href="http://chadfowler.com/ruby/rubyook/">Ruby Ook</a>, which is an interpreter for a language so useless that the language's designer never bothered to write an interpreter or compiler for it.  I knew that in the end, it would take so long to write an Ook program, that I probably wouldn't ever bother.  It was a perfect chance to write something that, though implementing a "requirement", had an end result of almost no value.  It felt great.  I worked on it on and off during a single weekend and found myself scrapping bits, refactoring, testing everything--cutting no corners.  After all, why should you cut a corner when you don't care if you ever get to your destination?  In the end, I had some code which I was extremely proud of.  Even if it's useless, I knew that I hadn't compromised in its creation.  And, even though the end result isn't very big or impressive (even in terms of its internals), I learned a lot about how I think and program in the process.
+<P>
+A few years ago, a friend of mine read an eastern philosophy book called (something like) <B>The Path With No Destination</B>.  At the time, it sounded like a pretty hokey title.  But, over the past couple of years, I've thought about it often.  I don't even know what the book is about, but the title has taken on its own meaning to me.  Whether it's music, programming, work, or life in general, you generally spend a lot more time on the "path" than you do at the "goal".  Your experience will be richer and you'll learn a lot more if you keep that in mind.

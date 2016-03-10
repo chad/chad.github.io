@@ -1,0 +1,19 @@
+---
+layout: post
+title: !binary |-
+  T25lIE1vcmUgV2VlayBmb3IgUmFpbHNDb25mIFByb3Bvc2Fscw==
+enki_id: 4675
+---
+We're closing the "RailsConf call for proposals":http://en.oreilly.com/rails2009/public/cfp/46 in just over a week, so if you've been procrastinating (certainly my M.O.), now's the time to start putting something together. 
+
+We're keeping the CFP open longer this year than we have in years past, which is great for the content (Rails 3!!) and hard for the logistics. I think it's a good trade-off. 
+
+If you're tracking and/or working on Rails 3, we'd especially love to see a proposal. If you don't have anything _solid_ yet but have a good idea you'd like to try to slot in later, I'd love to hear from you.
+
+We already have a number of "talks":http://en.oreilly.com/rails2009/public/schedule/presentations/General and "tutorials":http://en.oreilly.com/rails2009/public/schedule/topic/Tutorial selected, as well as keynotes by "(Uncle) Bob Martin":http://objectmentor.com, "the Rails Core team":http://rubyonrails.org/core, and of course "DHH":http://loudthinking.com. 
+
+Both "CabooseConf":http://conference.caboose.org/ and our "code drive":http://chadfowler.com/2008/2/2/railsconf-community-project-code-drive were popular hacking sessions last year, so we're excited about the fact that this year CabooseConf will be run in conjunction with RailsConf this year, providing a _free_ group hacking area (but you have to contribute to an open source project for admission). With the economy sucking the way it is now, hopefully this will give some people an affordable way to join the fun without spending as much money. Thanks to Courtenay and the caboosers for making that happen.
+
+"Ron Evans":http://deadprogrammersociety.blogspot.com/ will be organizing a music session this year. If all goes well, we'll have more equipment than last year (sound system--maybe drums?), so if you're a musician watch for it and come by to make some noise.
+
+I'm looking forward to holding RailsConf in Vegas this year. The venue is awesome, and Vegas is an easy location to get in and out of. All in all, things are shaping up for this to be yet another in a string of better-than-last-year RailsConfs.

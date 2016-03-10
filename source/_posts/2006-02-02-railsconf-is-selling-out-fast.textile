@@ -1,0 +1,65 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIGlzIFNlbGxpbmcgT3V0IEZhc3QhCg==
+enki_id: 4514
+---
+I stayed up late last night opening up <a
+href="http://railsconf.org/">RailsConf registration</a>. Before I even got
+the time to post about it here, we&#8217;re well on our way to <a
+href="http://weblog.rubyonrails.org/articles/2006/02/02/railsconf-2006-selling-fast">selling
+out</a>.
+
+<p>
+RailsConf is going to be <em>the</em> conference to go to this year.
+We&#8217;ve got a <a href="http://railsconf.org/pages/keynotes/">keynote
+lineup</a> so amazing I can hardly believe it. We have over 80 high quality
+talk proposals to pick from, so the main session content is guaranteed to
+be incredible. We&#8217;re planning panel discussions with the <a
+href="http://rubyonrails.org/core">Rails Core team</a>, and time for
+self-organizing activities.
+</p>
+<p>
+But I think the thing I&#8217;m most proud of, which I can&#8217;t take any
+credit for, is the <a href="http://railsconf.org/pages/guidebook">Rails
+Guidebook</a>. What if you were excited about a technology and really
+wanted to attend a conference to learn about it, but you thought the
+sessions might all be over your head? How would you prepare yourself to
+make sure you got the most out of the experience?
+</p>
+<p>
+How about getting the <a href="http://www.pragmaticstudio.com">top
+instructors in the field</a> to give you a one-day immersion, covering
+everything you need to know to feel like an <em>insider</em> at the
+conference? That&#8217;s what the Rails Guidebook is. Dave Thomas and Mike
+Clark, of the Pragmatic Studio, are going to be laying all the groundwork
+you might need all day on June 22.
+</p>
+<p>
+Members of the Rails Core team and the RubyGems team will be onsite for an
+install fest, that will get you and your laptop all set up to experiment
+and create during the conference.
+</p>
+<p>
+And all you have to do to attend the Guidebook session (aside from
+registering for the conference itself) is to donate money to one or more of
+a <a
+href="http://www.justgive.org/basket?donorId=42670&listTypeId=1&acton=viewList">predefined
+list of charities</a>. The minimum requested donation is $40 US, but
+we&#8217;ve already seen people exceed that by leaps and bounds. It&#8217;s
+exciting to see people giving so generously in the name of Ruby and Rails.
+</p>
+<p>
+When the Guidebook fills up (and that&#8217;s going to happen
+<em>soon</em>), I would love to see the giving continue. Dave and Mike will
+be announcing how much we as a community have raised at RailsConf. So even
+if you&#8217;re not going to attend the Guidebook session&#8212;or even
+RailsConf&#8212;help <a
+href="http://www.justgive.org/basket?donorId=42670&listTypeId=1&acton=viewList">make
+the community proud</a>.
+</p>
+<p>
+Let&#8217;s put another <em>insanely</em> <em>great</em> <a
+href="http://weblog.rubyonrails.org/articles/2006/02/01/secrets-behind-ruby-on-rails-the-numbers">number
+on the map</a> for the Ruby community.
+</p>

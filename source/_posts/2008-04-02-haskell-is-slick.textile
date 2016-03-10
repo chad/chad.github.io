@@ -1,0 +1,9 @@
+---
+layout: post
+title: !binary |-
+  SGFza2VsbCBpcyBTbGljaw==
+enki_id: 4647
+---
+Not that it should be too surprising to me, but (even as a long time Rubyist) I'm finding the "Haskell":http://www.haskell.org/ posts on "Slick or Slack":http://slickorslack.com to be the most beautiful so far.  When I took my first look at Haskell years ago, I thought it was ugly.  Every progressive year it strikes me as more and more beautiful.
+
+Why am I not a Haskell programmer, then?  More on this in an upcoming post.

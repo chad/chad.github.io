@@ -1,0 +1,152 @@
+---
+layout: post
+title: !binary |-
+  SXMgdGhlIExvbmcgVGFpbCB3YWdnaW5nIHRoZSBkb2c/
+enki_id: 4557
+---
+At the <a href="http://rubyconf.org">Fifth International Ruby
+Conference</a>, like others I sat engrossed by <a
+href="http://blog.talbott.ws/pages/the_railroad_then_and_now.html">Nathaniel
+Talbott's talk</a> on the &quot;long tail&quot; of software development.
+There we were, an audience full of geeks who like to write code, hearing
+how our favorite technology (Ruby) was enabling geeks who like to write
+code to make money doing so. It was an exciting and tempting idea.
+
+<p>
+Nathaniel talked about his wife&#8217;s co-op&#8217;s Excel spreadsheets,
+and how many small (often local) organizations across the country have
+similar, ineffective spreadsheets. There&#8217;s money to be made in
+writing small, focused applications to cater to the very specific needs of
+these little groups, says Nathaniel. And according to the bigger ongoing
+&quot;long tail&quot; discussion on the &#8216;net, there is an opportunity
+to provide previously underserved fringe groups with a product that will
+delight them like no general-purpose product has or can.
+</p>
+<p>
+Tempting, as I said. And true sometimes, I would guess. But&#8230;
+</p>
+<p>
+<a href="http://www.intertwingly.net/blog/">Sam Ruby</a>, who was also at
+the conference, <a
+href="http://www.intertwingly.net/blog/2005/10/20/Homesteaders-of-the-21st-Century">picked
+the long tail presentation as a favorite</a>. But while the conference
+brought up a lot of discussion of <a href="http://nakedobjects.org">Naked
+Objects</a> in Ruby and various RAD tools, I think Sam hit on something
+more relevant that a lot of us are likely to miss:
+</p>
+<pre>
+        Those are the long tailer developers of today.  Nathaniel asks:
+        what happens when t approaches zero?  Nathaniel's answer was that
+        people who aren't currently developers wont suddenly want to become
+        ones even if the cost were essentially zero.  IMHO, the answer is
+        that you will see a lot more applications like that financial
+        application that was written in Excel.
+</pre>
+<p>
+It&#8217;s not just about <em>who</em> will be doing this development.
+It&#8217;s about <em>why</em>. Hint: These people aren&#8217;t going to be
+developing apps themselves because it&#8217;s cheaper than before.
+</p>
+<p>
+We developers are quick to dismiss the little Excel and Access applications
+that &quot;lusers&quot; tend to write. We assume that they would do them in
+a &quot;better&quot; technology if only they knew how. But they
+don&#8217;t, so they either have to wait around for a software developer to
+come around and save the day, or they have to settle for this ugly
+spreadsheet stuff.
+</p>
+<p>
+Techno-elitist myopia. This is the tail-wagging-the-dog part of the post.
+</p>
+<p>
+Users don&#8217;t make spreadsheets just because they don&#8217;t know
+Java. They make them because they <em>like</em> them, and because they
+<em>want</em> to make them. I can think of at least two reasons why.
+</p>
+<p>
+First, the spreadsheets often fill an empty hole. They are created, not
+because the end users desperately needed them, but because one member of
+the group had the ability to create them and <em>enjoyed</em> filling the
+gap for the group. It&#8217;s one part self-expression, one part learning,
+and two parts showing off.
+</p>
+<p>
+Second, spreadsheets are inherently controllable by the end user. Sure, a
+small, user-focused development shop with a simple app can turn changes
+around really quickly. But, if a user wants, say, a new column added to a
+report view, it takes longer to email and ask the developers to add it than
+it would to just select and insert a column in Excel. I know we&#8217;re
+not talking about big companies here, but something I witnessed in
+Corporate America is that end users would guard their little Excel/Access
+&quot;applications&quot; from their IT departments as if hording treasure.
+As soon as they lost control, and their apps were &quot;upgraded&quot; to
+some kind of super-scalable J2EE monstrosity (custom-developed
+<em>just</em> for them&#8212;the long tail in action), their applications
+would become (maybe) more generally useful and (definitely) less
+specifically useful. Changes took a long time. They apps didn&#8217;t act
+exactly as they liked. The secret spreadsheets would often see an
+underground revival after the spotlight moved on.
+</p>
+<p>
+We developers are getting excited over the opportunity to develop small
+apps for small bases of users. But we might be attempting to apply a <a
+href="http://en.wikipedia.org/wiki/Disruptive_technology">sustaining
+technology solution where there is a disruptive technology</a> waiting to
+shake things up.
+</p>
+<p>
+As developers, we see problems in terms of the potential applications we
+could write. We even tend to see the spreadsheet itself as a problem. So we
+naturally want to save users from themselves and give them a <em>real</em>
+application.
+</p>
+<p>
+But what these &quot;long tail&quot; users often really want is a
+spreadsheet. So why aren&#8217;t we solving the <em>real</em> problems with
+spreadsheets instead of trying to get rid of them?
+</p>
+<p>
+I&#8217;ve had the privilege to test and experiment with an early version
+of a piece of software that <em>is</em> trying to solve this problem. <a
+href="http://www.cincomsmalltalk.com/userblogs/avi/blogView">Avi Bryant</a>
+(the brains behind the incredibly innovative <a
+href="http://seaside.st/">Seaside</a> web framework) and Andrew
+Catton&#8217;s company, <a href="http://smallthought.com/">Smallthought</a>
+have created a product called <a
+href="http://www.dabbledb.com/">Dabble</a>. From Dabble&#8217;s web page,
+</p>
+<pre>
+        Dabble combines the best of group spreadsheets, custom databases,
+        and intranet web applications into a new way to manage and share your
+        information online.
+</pre>
+<p>
+Or, you can just think of it as the application that solves the problem
+that Nathaniel, Sam Ruby, and I are talking about in these posts. And it
+does a fantastic job of it.
+</p>
+<p>
+I built two of my own not-an-applications with it while I was testing it.
+One was a fairly simple contact manager for my <a
+href="http://www.gomanginstitute.org">other nonprofit</a> (We&#8217;ve been
+using Yahoo &quot;databases&quot; and text files).
+</p>
+<p>
+The other was a re-implementation of the Rails-based project management
+tool, <a href="http://explainpmt.com/">eXplain Project Management Tool
+(PMT)</a> (nice simple app, by the way&#8212;try it out). In Dabble, with
+absolutely no programming, I incrementally created a project management
+tool with all of the functionality of PMT in about 30 minutes. That 30
+minutes included submitting bug reports and feature suggestions.
+</p>
+<p>
+I&#8217;ve been sitting silently on Dabble for a few months now as
+Smallthought has been working on it. Every time I see one of these
+&quot;Web 2.0&quot; posts pop up in my RSS aggregator, I bite my tongue. I
+don&#8217;t know what &quot;Web 2.0&quot; is, but I hope it&#8217;s like
+<em>this</em>. I&#8217;m really excited about Dabble, and I can&#8217;t
+wait to see what people do with it. As of today, you can <a
+href="http://dabbledb.com">sign up</a> to be notified of Dabble&#8217;s
+impending release. If you&#8217;re really lucky (unofficial word), you may
+even get a beta invitation out of it.
+</p>

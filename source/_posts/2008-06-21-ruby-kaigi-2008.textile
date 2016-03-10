@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  UnVieSBLYWlnaSAyMDA4
+enki_id: 4651
+---
+!http://chadfowler.com/ruby_kaigi.jpg!
+
+We're at "Ruby Kaigi 2008":http://jp.rubyist.net/RubyKaigi2008/ and having a great time.  Yesterday "Rich":http://richkilmer.blogs.com/ and I did a panel discussion with "Masayoshi Takahashi":http://www.presentationzen.com/presentationzen/2005/09/living_large_ta.html and "Matz":http://www.rubyist.net/~matz/ on the history of Ruby communities and business outside of Japan.
+
+Today the main conference starts with presentations by Koichi, Charlie, and Evan on YARV, JRuby, and Rubinius respectively.  It's shaping up to be an excellent conference.  More later.
+
+The one thing that strikes me so far is that it's much easier to get here and participate than I thought it would be.  If you've considered coming to Ruby Kaigi and have never been to Japan, I highly recommend it.  Tokyo is easy to get around even without speaking Japanese and the trip wasn't as harrowing as I expected.  Hopefully next year we'll see the non-Japanese contingent grow and the language barriers blur a little more.

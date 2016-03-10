@@ -1,0 +1,12 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIFByb3Bvc2Fscw==
+enki_id: 4639
+---
+There were more proposals for "RailsConf":http://railsconf.org/ this year than there were _attendees_ at "RubyConf":http://rubyconf.org 2006.  This means two things:  
+
+1. The state of the Rails community has changed significantly in that it has grown and there is a larger subset reaching the expert level.  
+
+2. It's going to take us a while to sort through all of these proposals and make selections.  Apologies in advance.
+

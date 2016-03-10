@@ -1,0 +1,28 @@
+---
+layout: post
+title: !binary |-
+  SXQncyBub3QganVzdCBwcm9ncmFtbWVycwo=
+enki_id: 4576
+---
+Rob, over at <a href="http://www.businesspundit.com">BusinessPundit</a>, <a
+href="http://www.businesspundit.com/archives/002301.html">made a
+confession</a> last night about not being good at self-promotion. <a
+href="http://chadfowler.com/index.cgi/Computing/Career/WhyDoGeeksHateMarketing.rdoc,v">It's
+not just us geeks</a> who are uncomfortable promoting ourselves.
+Here&#8217;s a guy who has been living and breathing entrepreneurialism for
+several years and who writes about it <em>daily</em>.
+
+<p>
+He closes with a paragraph that could have been lifted directly out of <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti">MJWTI</a>:
+</p>
+<pre>
+  What is it like where you work? Does your company reward the best employees,
+  or the best at self-promotion? Is Donald Trump really a good businessman,
+  or just a good self-promoter? Is there even a difference between the two?
+</pre>
+<p>
+I&#8217;d say that, as an entrepreneur, the answer is (at least in part)
+&quot;no&quot;. If you can&#8217;t promote it, (in most cases) you
+can&#8217;t sell it. And if it doesn&#8217;t sell, it&#8217;s not valuable.
+</p>

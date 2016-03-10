@@ -1,0 +1,63 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHMgUmVjaXBlcyBCZXRhLCBLaWNrYXNzIFJlYWRlcnMsIGFuZCBBbm90
+  aGVyIFByYWdtYXRpYyBKb2x0
+enki_id: 4485
+---
+We&#8217;ve just released another <a
+href="http://pragmaticprogrammer.com/titles/fr_rr/index.html">Rails
+Recipes</a> beta. This release features contributions from three of the
+incredibly talented <a href="http://rubyonrails.org/core">Rails core team
+members</a>: <a href="http://techno-weenie.net/">Rick Olson</a> (congrats,
+Rick!), <a href="http://jamis.jamisbuck.org/">Jamis Buck</a>, and <a
+href="http://vernix.org/marcel/">Marcel Molina, Jr.</a>. These guys are not
+only gifted programmers but gifted writers and teachers as well.
+
+<p>
+It&#8217;s exciting to watch the framework evolve, and writing this book
+has given me a chance to witness and document the bleeding edge as it
+happens. As a result, I&#8217;ve been able to cover a lot of the features
+in the upcoming Rails 1.1 release, for which there really is no other
+source of documentation right now.
+</p>
+<p>
+The <a href="http://fora.pragprog.com/rails-recipes">forum</a> we <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/Ruby/DiscussRailsRecipes.rdoc,v">opened
+last week</a> has been a wonderful source of ideas and inspiration. Thanks
+a <em>ton</em> to everyone who has signed up and contributed. Specifically
+notable are the two recipes <a
+href="http://fora.pragprog.com/rails-recipes/write-your-own">created by
+readers</a>:
+</p>
+<p>
+<a href="http://www.apptrain.org/">Mike Blake</a> posted a <a
+href="http://fora.pragprog.com/rails-recipes/write-your-own/post/42">really
+useful recipe</a> on backing up your data using <a
+href="http://rake.rubyforge.org">Rake</a> and ActiveRecord fixtures.
+</p>
+<p>
+<a href="http://sl33p3r.free.fr/blog">Frederick Ros</a> then followed up
+with an <a
+href="http://fora.pragprog.com/rails-recipes/write-your-own/post/84">excellent
+recipe</a> on using ActiveRecord with legacy databases that have their
+<em>own</em> conventions.
+</p>
+<p>
+As authors for the Ruby community, we&#8217;re blessed with a
+super-intelligent audience for our books. No doubt that readers are
+learning from <a
+href="http://pragmaticprogrammer.com/titles/fr_rr/index.html">Rails
+Recipes</a>, but Rails Recipes is also learning from its readers.
+</p>
+<p>
+Finally, CONGRATULATIONS to <a href="http://www.loudthinking.com">David</a>
+and <a href="http://www.pragmaticprogrammer.com">Dave and Andy</a> for
+<em>cleaning</em> <em>house</em> on the <a
+href="http://www.sdmagazine.com/pressroom/jolt_finalists_2006.html">16th
+Annual Jolt Awards</a>. The Jolt Awards are kind of like the Grammys or the
+Oscars of our industry. Dave and Andy <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/PragmaticJoltAward.rdoc,v">won
+once before</a>. Pretty amazing for a young publishing house to win twice
+in three years!
+</p>

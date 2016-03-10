@@ -1,0 +1,44 @@
+---
+layout: post
+title: !binary |-
+  VGhlIGFydC9jcmFmdC9jb21tb2RpdHkgY29udGludXVt
+enki_id: 4718
+---
+
+When you create art, the purpose is self-expression.
+
+When you create software, the purpose is rarely self-expression.
+
+When you create software, someone somewhere wants it to perform a set of functions and has a stake in how well those functions are implemented. The definition of "well" is up to the stakeholder.
+
+When you create art, you want it to be beautiful, or beautifully ugly, or ornate, or plain. You, the creator, are the stakeholder. You may hope that others find it beautiful, but if they don't, it's art--who's to say what's good and bad?
+
+When you attempt to judge the quality of a commodity good solely in terms of its aesthetic appeal, you ignore the objective evaluation of how well that product meets the needs of its stakeholders.
+
+When you attempt to judge the quality of a piece of art solely on some objective measure, you miss the point of the object as an expression of art.
+
+Craft falls somewhere between commodity and art. Craft items have both subjective, aesthetic appeal and objective function.
+
+This is a beautiful Christian Dior dress:
+
+!http://chadfowler.com/images/falf/dior.jpg!
+
+Beautiful but largely impractical.  Try to wear this on the subway or even in your car. Try to fit it through a standard door. It's a beautiful piece of art, but it fails as a useful article of clothing for most people.
+
+This is a "Paul Smith":http://paulsmith.co.uk suit. It's practical, extremely well made, creatively designed, and probably very expensive:
+
+!http://chadfowler.com/images/falf/paul-smith.jpg!
+
+This is a pair of pants on sale at "Wal-Mart":http://walmart.com:
+
+!http://chadfowler.com/images/falf/walmart.jpg!
+
+Beautiful?  I don't know many people who would call this beautiful. Completely unremarkable.
+
+And so it goes...from art to craft to commodity.
+
+Now consider yourself as the customer here. My guess is that most of my readers, even with an appreciation of the quality of the Paul Smith suit, would be much more comfortable in the Wal-Mart pants.
+
+When we create an item for another person, we have to consider whether that person is looking for art, craft, or commodity. We may wish to always be creating art. Or craft. But sometimes our customers want commodity. Not only is commodity cheaper but it's what they _prefer_. 
+
+!http://chadfowler.com/art-commodity-continuum.png! 

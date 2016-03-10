@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  TmV3IExpZmVzdHlsZT8=
+enki_id: 4620
+---
+Me on a conference call earlier this week:
+
+!http://chadfowler.com/NewLifestyleLeveled.jpg!
+
+What I'm looking at right now as I type away on my laptop heading down US-395 toward Lake Tahoe which, given the fact that we have an RV and an aircard, is just as good a work location as any:
+
+!http://chadfowler.com/US-395.jpg!
+
+More on this later I hope.

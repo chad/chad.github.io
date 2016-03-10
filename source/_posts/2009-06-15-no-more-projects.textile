@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  Tm8gTW9yZSBQcm9qZWN0cw==
+enki_id: 4689
+---
+As a young self-taught software developer, one of the first books I remember reading was Steve McConnell's "Software Project Survival Guide: How to Be Sure Your First Important Project Isn't Your Last":http://www.stevemcconnell.com/sg.htm. Who knows why I picked that one of all the possible books but I somehow knew I wanted to learn something about the broad practice of software development instead of just focusing on how to make specific widgets appear on the screen in Delphi or VB or how to automate the shell on our VAX cluster. I probably happened upon the book while aimlessly thumbing through spines in the local book store and was drawn to the snazzy cover. 
+
+And so it was that one of my first experiences in learning software became project-focused. "How to be sure your first important project isn't your last" indeed. This thing called software development was apparently all about doing _projects_.
+
+I was not alone in this understanding of how software development worked. Most of the people I encountered in my professional life approached software work this way. When something needs to get done, the first step is to name it--sometimes with a silly code name and sometimes with a generic name like "the HR system project" and the next step is to start planning the project.
+
+I've started to notice a bad habit. Whenever I need to do something I don't want to do. Or, worse, something that I want to do but I am prone to procrastinate (according to "The War of Art":http://www.amazon.com/War-Art-Through-Creative-Battles/dp/0446691437 procrastinating something is a sign that it's important). The bad habit is this: I turn it into a project.
+
+Projects are lovely for procrastinators. As soon as you call something a project, you give it permission to _not_ be completed right now. 
+
+Events such as the "Rails Rumble":http://railsrumble.com/ have shown that it's possible to finish software projects in two days that might take a corporate development team weeks or months in a normal project scenario. What's the difference? Do the Rails Rumble participants throw quality out the window? Do their apps _suck_? Do they avoid testing and cut corners? Yea, sometimes. But so do most corporate development groups. That's how things are.
+
+I've learned over the course of my career that the amount of time I spend on something doesn't positively correlate to its value or quality when finished. In other words, if I do something really quickly, it's not likely to be less valuable than something that takes me a long time to do. Within obvious limits.
+
+So if you want something to take a long time, call it a project. If you want it to get done, just get it done.

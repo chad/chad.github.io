@@ -1,0 +1,41 @@
+---
+layout: post
+title: !binary |-
+  QXNzdW1wdGlvbnMsIEJvd2xpbmcsIGFuZCBDb25zdHJhaW50cw==
+enki_id: 4547
+---
+
+With all the recent mention of programming practice [
+<a href="http://www.chadfowler.com/index.cgi/Computing/ValuelessSoftware.html">CF</a>,
+<a href="http://www.pragprog.com/pragdave/Practices/CodeKata.rdoc,v">PDT1</a>,
+<a href="http://www.pragprog.com/pragdave/Practices/Kata/KataOne.rdoc,v">PDT2</a>,
+<a href="http://www.pragprog.com/pragdave/Practices/MoreKata.rdoc,v">PDT3</a>,
+<a href="http://www.clabs.org/blogki/blogki.cgi?page=/ComputersAndTechnology/ProgrammingPractice">CM1</a>,
+<a href="http://www.clabs.org/blogki/blogki.cgi?page=/ComputersAndTechnology/ProgrammingPractice/CarpoolKata">CM2</a>,
+<a href="http://www.toolshed.com/blog/SoftwareDevelopment/PracticeBed.html,v">PAH</a>,
+<a href="http://www.testing.com/cgi-bin/blog/2003/03/24#march24-2">BM</a>
+], I thought I would pull together a few relevant old links on an old topic.  But, first...
+<p>
+In the article I <a href="http://www.chadfowler.com/index.cgi/Computing/Programming/HundredYearLanguage.rdoc">mentioned yesterday</a>, Paul Graham has the following to say about Object Oriented programming:
+<pre>
+    I don't predict the demise of object-oriented programming, by the way. 
+    Though I don't think it has much to offer good programmers, except in 
+    certain specialized domains, it is irresistible to large organizations. 
+    Object-oriented programming offers a sustainable way to write spaghetti 
+    code. It lets you accrete programs as a series of patches.
+</pre>
+Though I'm not sure if I <i>completely</i> agree with him, I always like to see someone intelligent questioning an accepted norm.  He's basically saying that OO is a crutch that allows bad programming to sustain itself.  This statement caused me to re-examine how much I rely on the OO crutch.
+<p>
+Back to "practice"...If I <i>do</i> indeed use OO as a crutch, I should probably include non-OO programming in my practice routines.  I'm once again reminded of a parallel to my studies in music.  I once had an improvisation teacher who asked me to play a 3 minute improvised piece of music using only the note G.  I didn't even know where to start at first (besides the obvious--G).  It was an amazingly difficult challenge to create something "musical" with this level of constraint.  That was the point, of course.  Sans-OO programming poses a similar, though admittedly less difficult, challenge for me.
+<p>
+As I started thinking of a suitable programming exercise, I was reminded of Bob Martin and Bob Koss's <a href="http://www.objectmentor.com/resources/articles/xpepisode.htm">bowling score exercise</a>.  My first exposure to it was at the <a href="http://www.objectmentor.com/courses/xpImmersion">eXtreme Programming Immersion</a>.  The purpose was to show how test driven design can lead to simpler, more elegant solutions than upfront design.  Many of the objects that you would assume are necessary never get created in the top-down test-first approach (at least in Bob and Bob's version).
+<p>
+I later <a href="http://www.rubygarden.org/article.php?sid=38">posted on RubyGarden</a> when Leo Scott and Wayne Conrad produced their own <a href="http://www.yagni.com/cgi-bin/pywiki?BowlingScores">version</a> of the bowling score program in Ruby.  It was interesting to see how their experience differed from The Bobs' and how the program changed with a straight port to Ruby.  
+<p>
+When Wayne questioned whether the code could have been shorter if they knew Ruby better, Dave posted the <a href="http://www.rubygarden.org/ruby?Dave_Bowling_Solution">this fascinating piece of minimalism</a>.  14 lines, and it passed all of the original tests.
+<p>
+Just when I thought it couldn't get any stranger than Dave's version, I ran across <a href="http://www.c2.com">Ward Cunningham's</a> Perl-based solution, which consists almost entirely of regular expressions.  He has a <a href="http://c2.com/doc/bowl/">full writeup</a> on his web site.
+<p>
+These are all basically transcripts of programmers' practice sessions, with Dave's and Ward's each being a different study on constraints.  Dave's constraint was size.  Ward's was the focus on regular expressions.  Eliminating explicit use of OO in an OO language might be another (less interesting) one.  The simple idea of programming with self-imposed constraints leads to a wealth of potential "Code Kata" ideas.  It's like fighting with one hand tied behind your back.
+<p>
+What other methods or resources do we take for granted while programming?  What other assumptions can we question about what makes "good" style?  This is the type of question I'll ask myself when I next sit down to "practice".  I'm sure I'll end up generating something hideous as a result, but hopefully I'll learn something too.

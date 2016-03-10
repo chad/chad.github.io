@@ -1,0 +1,17 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFJhaWxzIFN0dWRpbyBpcyBjb21pbmch
+enki_id: 4655
+---
+"This spam post":http://sersylvester.wordpress.com/2008/08/11/bilateral-all-the-thing-studios-this-dive/ reminded me that I haven't reminded you that the "Rails Studio":http://pragmaticstudio.com/rails/ is coming soon here in Denver. It's happening in September, but early registration ends _tomorrow_.
+
+This is my first time teaching the public Rails Studio with Dave. We do Advanced Ruby and Ruby Studio, and Advanced Rails together. I got to sit in on a Rails Studio he and Mike did together last year in Seattle and had a great time. It's really fun watching people experience the "aha" moments for the first time. Reminds you of how you felt the first time you watched the 15 minute intro video.
+
+Apart from all the fun of learning a great framework for the first time, Colorado is a really nice place to be in September. So if you are coming, try to plan a couple of days before or after (I'd say after....let your mind unwind after a few days of hard thinking and head up to "Rocky Mountain National Park":http://www.nps.gov/romo/ for the weekend.
+
+The spam post I linked above put it best, I think:
+
+  Self’ll broaden the mind he how on route to amplify tall idea-experienced programs.
+
+I'm looking forward to amplifying tall idea-experienced programs.  And teaching Rails.

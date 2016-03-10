@@ -1,0 +1,37 @@
+---
+layout: post
+title: !binary |-
+  U3BhY2VzCg==
+enki_id: 4583
+---
+Over the past week, I&#8217;ve been playing around with RSS news
+aggregators. I think I&#8217;ve settled (for now) on Spaces (<a
+href="http://www.dynamicobjects.com">www.dynamicobjects.com</a>).
+It&#8217;s actually a full email client/PIM as well as a news aggregator.
+What I really like about it is that the news posts trail in as messages in
+your inbox along with the actual emails. It&#8217;s nice to only have to
+look one place when I turn on my computer. And, when I search the messages
+in my inbox, it takes into account almost any online material I&#8217;m
+likely to have been reading.
+
+<p>
+Now, I just have to train myself not to open up my web browser and start
+visiting the sites for which I now <b>know</b> there are no updates. It
+sounds ridiculous, but I&#8217;ve been doing it consistently. This confirms
+the habitual nature of my internet-browsing behaviour.
+</p>
+<p>
+I&#8217;ve also still been using AgentFrank (<a
+href="http://www.decafbad.com/twiki/bin/view/Main/AgentFrank">www.decafbad.com/twiki/bin/view/Main/AgentFrank</a>)
+in combination with the aggregators. What I would <b>love</b> now is
+integration between something like Spaces and something like AgentFrank.
+I&#8217;m sure this idea would make a lot of people ill (especially the
+paranoid), but I would like for an AgentFrankish thing to discover what
+I&#8217;m looking at (repeatedly or based on semantic closeness to things I
+look at repeatedly) and then start pulling new items into a Spaces-esque
+aggregator without my asking it to. AgentFrank helps me to stop forgetting
+the interesting sites I find, and Spaces helps me to remember (or, more
+correctly, to not <b>have</b> to remember) to look at the interesting sites
+I know about. The combination of the two could be really powerful for a
+scatter-brained guy like me.
+</p>

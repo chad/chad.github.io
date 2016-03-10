@@ -1,0 +1,25 @@
+---
+layout: post
+title: !binary |-
+  UGFydCBPZiBUaGUgUHJvYmxlbQo=
+enki_id: 4438
+---
+From the <a
+href="http://chadfowler.com/index.cgi/Computing/Career/FightTheTraffic.rdoc,v">same
+taxi driver</a>:
+
+<pre>
+        I had this customer that got totally irate with me.  We
+        were stuck in traffic and the customer was in a hurry.
+
+        &quot;Why did you go this way?!  You IDIOT!  I'm going to be
+        SO LATE&quot;, he fumed.
+
+        I let him say what he had to say, staring forward at
+        the cars ahead of us.  Then, I turned around to look at
+        him.
+
+        &quot;I'm sorry you are so angry at the traffic.  But by
+        hiring me to take you from one place to another, you have
+        become part of the traffic.&quot;
+</pre>

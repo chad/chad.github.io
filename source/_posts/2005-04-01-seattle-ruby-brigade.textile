@@ -1,0 +1,119 @@
+---
+layout: post
+title: !binary |-
+  U2VhdHRsZSBSdWJ5IEJyaWdhZGUK
+enki_id: 4483
+---
+Tonight, I had the pleasure of attending my first Ruby Users&#8217; Group
+meeting. I&#8217;ve, of course, been to <a
+href="http://www.rubyconf.org">RubyConf</a> and <a
+href="http://conferences.oreillynet.com/os2005/">OSCON</a> (the Ruby track
+will blow you away this year), but Louisville has had a Ruby Users&#8217;
+Group with population 1 since I created <a
+href="http://rubygarden.org/ruby?LouisvilleGroup">this sad page</a> on the
+Wiki several years ago.
+
+<p>
+So, I&#8217;m out in Seattle for work, and <a
+href="http://www.zenspider.com">Ryan</a> and <a
+href="http://segment7.net/">Eric</a> reminded me that their <a
+href="http://www.zenspider.com/seattle.rb">Seattle.rb</a> meeting was going
+on. Eric was nice enough to pick me up in his lovely 1978 <a
+href="http://segment7.net/images/mercury/passenger-full.jpg">hoss</a> of a
+station wagon and take me out to the meeting.
+</p>
+<p>
+The meeting takes place at <a href="http://www.omnigroup.com/">The Omni
+Group</a>, which has probably the most interesting office I&#8217;ve ever
+been to. It looked like a fraternity house for Macintosh programmer geeks.
+They apparently have someone that cooks lunch and dinner for them every
+day. I&#8217;m probably not supposed to mention that I ate the food there.
+It turns out that, despite its horrid appearance, split pea soup
+isn&#8217;t bad when served with a biscuit.
+</p>
+<p>
+We started with introductions. There was a surprisingly large number of <a
+href="http://www.amazon.com">Amazonians</a> present. Apparently, there is
+an internal Amazon Ruby mailing list with more members than there are
+Rubyists in Louisville.
+</p>
+<p>
+Topics of discussion were:
+</p>
+<ul>
+<li><a href="http://zenspider.com/Languages/Ruby/MetaRuby.html">MetaRuby</a>
+
+</li>
+<li>Seattle.rb&#8217;s Ruby <a
+href="http://www.ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/133197">CodeFest</a>
+grant (to improve <a href="http://rubygems.rubyforge.org">RubyGems</a>!)
+
+</li>
+<li>Pat Eyler&#8217;s new <a href="http://rubyforge.org/projects/r43">r43</a>
+library, which provides access to <a
+href="http://www.43things.com/people/view/chadfowler">43things'</a> web
+services API
+
+</li>
+<li>&quot;Advanced Rails&quot; by Eric Hodel (who works on 43Things).
+
+</li>
+</ul>
+<p>
+After the MetaRuby presentation, Ryan set me up with access to their
+Perforce repository. MetaRuby is starting to become &quot;real&quot;, with
+some really great and <a
+href="http://rubyforge.org/projects/ruby2c/">usable stuff</a> already
+coming out of the effort. Maybe I can find time to hack up a pure Ruby
+implementation of the <tt>Hash</tt> class to help out. The overall effort
+is beyond my depth, but it would be fun to contribute to.
+</p>
+<p>
+R43 is simple and fun to play with:
+</p>
+<pre>
+        require 'r43'
+        connection = R43.new(&quot;yourapikeyfrom43things&quot;)
+        chad = connection.get_person(&quot;chadfowler&quot;)
+        chad.goals.each do |goal|
+                puts &quot;Chad wants to #{goal}&quot;
+        end
+</pre>
+<p>
+It was the first time I had met long-time Rubyist, <a
+href="http://eldersjournal.blogspot.com/">Pat Eyler</a>, who seems to be
+one of the genuinely nicest guys I&#8217;ve met in computer land.
+</p>
+<p>
+Eric&#8217;s presentation made me realize that I&#8217;ve let many of <a
+href="http://rubyonrails.com">Rails's</a> new features slip by, and
+it&#8217;s probably time for a Saturday catch-up session. Maybe after this
+month&#8217;s <a
+href="http://www.37signals.com/workshop-basecamp.php">Building of
+Basecamp</a> workshop in Chicago, I&#8217;ll be inspired to <a
+href="http://www.43things.com/things/view/35612">get moving</a> on one of
+those long-neglected web projects I&#8217;ve been putting off.
+</p>
+<p>
+At some point during the last presentation, Ryan recognized the jet lag
+kickin&#8217; in and took me down for a white mocha something-or-other that
+he made using the Omni Group&#8217;s espresso machine. Unfortunately,
+I&#8217;m still awake at 12:40AM as a result. It was tasty but ineffective
+in wiping the zombie-like expression from my face.
+</p>
+<p>
+Finally, Eric showed me some really cool <a
+href="http://povray.org/">Povray</a> stuff he has been doing. Maybe
+I&#8217;ll try Povray out again (I&#8217;ve tried and failed to learn how
+to use it at least 3 times in the past several years) now that I have an
+irc buddy to bounce my ignorance against.
+</p>
+<p>
+My ulterior motive for writing this post is to match &quot;Louisville&quot;
+and &quot;Ruby&quot; in Google searches. If you&#8217;re in Louisville and
+interested in doing some Ruby hacking (or even learning about
+Ruby&#8212;I&#8217;ll teach!), <a href="http://ruby.meetup.com/62/">look me
+up</a>. The 18-person turn-out at Seattle.rb was inspirational, and it
+occurred to me more than it has recently that having a local community of
+like-minded developers is a very important part of the learning process.
+</p>

@@ -1,0 +1,19 @@
+---
+layout: post
+title: !binary |-
+  Q29taW5nIFNvb24=
+enki_id: 4602
+---
+A few upcoming tidbits:
+
+* I'm flying to London late this week to teach my Rails intro course for "Skills Matter":http://skillsmatter.com/ruby-on-rails-course.  The course runs from Feb 5-8.  If you're in the area of the UK and you've been looking for a way to dive into Rails, now's  your chance.
+
+* On February 9, also in London, Skills Matter is putting together a one day Rails mini-conference called "The RoR eXchange":http://www.skillsmatter.com/rorexchange.  I'll be speaking, as will a host of other Rails developers.  I'm particularly looking forward to seeing Tom Locke's "Hobo":http://hobocentral.net/blog/.
+
+* Tickets are "on sale":http://www.acteva.com/booking.cfm?bevaid=126426 for the first "Mountain West Ruby Conference":http://mtnwestruby.org/.  The conference will be from March 16-17 in Salt Lake City.  It's another in a chain of regional Ruby conferences that have been popping up around the country.  The speaker list for the Mountain West conference is particularly interesting--especially the Ruby implementers' panel and summit. 
+
+* For the past several years, O'Reilly's "OSCON":http://conferences.oreillynet.com/os2007/ has featured a really nice Ruby track.  This week is the _last week_ to get a proposal in for this year's conference.
+
+* Registration for the second "International Rails Conference":http://railsconf.org should be opening _this week_.  Last year sold out fast, and RubyConf sold out even faster.  If these two data points are part of a trend, you'll need to stay alert if you want a ticket.
+
+* Update: "Josh Susser":http://hasmanythrough.com/ reminded me that I neglected to mention that the CFP for the Silicon Valley Ruby Conference is "out":http://blog.hasmanythrough.com/2007/1/26/rfp-silicon-valley-ruby-conf-2007.  We had a great time last year.  Recommended if you're looking for a Ruby gathering on the West coast.

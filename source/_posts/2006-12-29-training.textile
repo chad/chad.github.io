@@ -1,0 +1,12 @@
+---
+layout: post
+title: !binary |-
+  VHJhaW5pbmc=
+enki_id: 4587
+---
+<h2>Public and Private Training</h2>
+
+I'm proud to offer public and private training through the premier Ruby and Rails training company, The Pragmatic Studio.
+
+<a href="http://pragmaticstudio.com/"><img src="http://chadfowler.com/images/pragmatic_studio.gif"></a> 
+

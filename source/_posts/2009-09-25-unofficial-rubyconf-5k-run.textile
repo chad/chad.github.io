@@ -1,0 +1,23 @@
+---
+layout: post
+title: !binary |-
+  KHVub2ZmaWNpYWwpIFJ1YnlDb25mIDVrIFJ1bg==
+enki_id: 4695
+---
+"David Chelimsky":http://davidchelimsky.net/ and I were chatting a couple of weeks ago about my recently acquired running hobby and he asked "Why don't you organize a 5k race at RubyConf?"
+
+Then I said something like "heh". Then we both thought about it some more and thought it might actually be a fun thing to do.
+
+In a previous email, "Jarkko Laine":http://jlaine.net/ had volunteered to coordinate some morning exercise sessions at RubyConf, so we've pulled him in as well.
+
+So now, David, Jarkko, "Kelly":http://twitter.com/kellyjeanne and I are organizing some kind of 5k race for one of the mornings of RubyConf.
+
+h2. Can you run 3.1 miles?
+
+If so, be on the lookout to sign up and have some fun. 
+
+<b>If not, even better!</b> Chances are even if you don't run at all right now, you can practice and get ready to run (or mostly run) 3.1 miles by RubyConf. Check out a program like "Couch to 5K":http://www.c25k.com/ for an easy progressive schedule that will get you to running the distance without feeling like you're killing yourself.
+
+We're still getting our collective act together, but I wanted to share this to get you thinking about trying to run 5k if you haven't before. There might be some fast people in the crowd but I'm hoping for a greater ratio of people who have never been able to run just trying to finish it.
+
+So start training and see you there!

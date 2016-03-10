@@ -1,0 +1,27 @@
+---
+layout: post
+title: !binary |-
+  TUpXVEk6IEFuZHkgUHV0cyBpdCBPbiBXYXgK
+enki_id: 4427
+---
+<a href="http://www.toolshed.com">Andy Hunt</a> of the <a
+href="http://www.pragmaticprogrammer.com">Pragmatic Programmers</a> has
+started <a
+href="http://www.toolshed.com/blog/articles/2005/08/24/new-podcasts">podcasting</a>.
+Much to my delight, he chose to record an excerpt from the introduction to
+<a href="http://www.pragmaticprogrammer.com/titles/mjwti">My Job Went to
+India</a> (MJWTI). It&#8217;s the very beginning of the book which tells
+the story of my first experiences in India (My job <em>did</em> go to
+India. I went with it).
+
+<p>
+Listening to my own words read by someone else (and really well, I might
+add) is <em>bizarre</em>. I think the book might actually be better this
+way. I could also smell the idlis and sambar (maybe I&#8217;m just hungry).
+</p>
+<p>
+<a href="http://www.toolshed.com/downloads/podcasts/MJWTIIntro.mp3">Give it
+a listen</a> (or better, <a
+href="http://www.toolshed.com/podcasts/index.xml">subscribe</a> to
+Andy&#8217;s feed) and let us know what you think.
+</p>

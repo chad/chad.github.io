@@ -1,0 +1,29 @@
+---
+layout: post
+title: !binary |-
+  Q2hpY2FnbyBSdWJ5IE1lZXQK
+enki_id: 4484
+---
+Tonight, <a href="http://www.kellyjeanne.org">Kelly</a> and I are headed
+off to Chicago. I&#8217;ll be attending 37 Signals&#8217; <a
+href="http://www.37signals.com/workshop-basecamp.php">"Building of
+Basecamp"</a> workshop on Friday. On Saturday, there is a <a
+href="http://ruby.meetup.com/55/events/4500623/">Ruby meet</a> at
+Giordano&#8217;s pizza downtown (and then moving to a conference room at a
+company somewhere) at noon.
+
+<p>
+It looks like the event is at maximum capacity, whatever that means, but I
+bet if you haven&#8217;t gotten your name on the list you could probably
+still muscle your way in for some pizza and some chatting.
+</p>
+<p>
+There will be an exciting cast of characters present, including the elusive
+<a href="http://blog.curthibbs.us/">Curt Hibbs</a>, Python insurgent <a
+href="http://blog.ianbicking.org/">Ian Bicking</a>, Ajax master <a
+href="http://conio.net/">Sam Stephenson</a>, and of course our <a
+href="http://www.loudthinking.com">friend from Denmark</a>.
+</p>
+<p>
+Should be a hoot.
+</p>

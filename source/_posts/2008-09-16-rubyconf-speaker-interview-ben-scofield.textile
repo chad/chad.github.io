@@ -1,0 +1,48 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgU3BlYWtlciBJbnRlcnZpZXc6IEJlbiBTY29maWVsZA==
+enki_id: 4660
+---
+"RubyConf registration is open":http://rubyconf.org (and nearly sold out), and I am so excited by the program this year that I thought it would be fun to ask some of the speakers some questions before the conference. So I'm starting a series of informal interviews with RubyConf speakers.  
+
+The first one was "Greg Borenstein":http://www.urbanhonking.com/ideasfordozens/, creator of "RAD":http://rad.rubyforge.org/.  
+
+Next up is "Ben Scofield":http://www.culann.com/, author of "Practical REST on Rails 2 Projects":http://www.amazon.com/Practical-REST-Rails-2-Projects/dp/B001DA2BXU/ref=sr_1_3?ie=UTF8&s=books&qid=1221533963&sr=8-3 and developer at "Viget Labs":http://viget.com.  
+
+At RubyConf, Ben will be presenting "All I Really Need to Know* I Learned by Writing My Own Web Framework":http://rubyconf.org/talks/25.
+
+h2. So first you do Hello World, then you write your own framework?  Is this why there are so many Ruby web frameworks popping up? 
+
+Obviously, there are at least a couple steps between Hello World and writing your own web framework. For me, though, these two practices are (like creating a blog in a new web framework) learning experiences. Hello World introduces the basic syntax of a language; blogs demonstrate how ORM and other techniques are implemented in a given framework. Similarly, custom web frameworks provide a path into still more complicated functionality (network requests and responses, templating, etc.). Building a framework requires a certain level of knowledge of both the programming language and of how the web works, and that knowledge makes other tasks on the web and/or in that language easier.
+
+I do not think that this general point explains the plethora of Ruby web frameworks, however. That, instead, is due to two factors: Rack and Rails. Rack has made it astoundingly easy to try out a new idea for handling web requests (as I'll talk about in my session), lowering the barrier to entry dramatically. Rails, on the other hand, has motivated the development of new frameworks by both its success and its opinionated nature. Merb was originally developed as a very lightweight alternative to RoR and has since grown into a much less opinionated framework. Waves, on the other hand, is a reaction to a perceived lack of focus on resources in Rails. Most of the new frameworks are reactions to Rails, and to the specific opinions it internalizes. That's not to say that any of these frameworks are intrinsically worse (or better) than Rails—their genesis is entirely separate from their value, and I think that each of the frameworks out there has lessons to provide.
+
+
+
+h2. You seem to spend most of your working time in Rails. Has writing your own framework affected how you understand Rails? Has it made you more appreciative?  Or critical?
+
+Definitely; I think that building any software in a given domain is bound to affect how you perceive others' software written for that same domain, and web frameworks are no exception. Decisions that seem unfathomable at first glance take on an entirely new aspect when you've struggled with and addressed the same problems on your own. 
+
+The immediate cause of my setting out to write Athena was a disagreement with Rails' implementation of REST (over collection and singleton resource being handled together, more specifically). That said, I wouldn't say that I'm terribly critical of Rails; I love using it, and I don't foresee abandoning it soon. Of course, I think of Athena first as a learning experience, not a viable competitor to Rails (unlike Merb or Ramaze, for instance); if that were not the case, I might have a differerent opinion. For now, however, I'm content to continue to learn from my experiences and hopefully bring them back to Rails when I can (through patches, plugins, and gems).
+
+
+
+h2. Why do you think we're still stuck doing faux MVC web development? Is it time for something new?
+
+I think the main reason we're still building sites this way is that it works pretty darn well. Right now, we can build effective sites quickly, and we're happy doing it—at the various least, we're on a peak in the web framework landscape, and there's a real risk in moving from a satisfactory (if potentially suboptimal) approach to an alternative, in that if you don't know precisely where that next, higher peak is, you end up trudging through enormous valleys of unpleasant and unproductive work. Many of us made the move from frameworkless PHP or configuration-heavy Java because we used DHH's fifteen minute blog video as a roadmap to the better place, already well-defined and waiting for us. For the next move, we'll need something at least as comparable, and until then we'll stay in this general region (which, all things considered, still has a lot of room for improvement, as Rails gets better and other frameworks adopt these lessons).
+
+With that in mind, however, I do sometimes fear that we're building our local maximum of joy and productivity to height such that the next thing will have to be even *more* amazing before it pulls in an audience large enough to really compete with Rails. Of course, that makes the existing alternatives (with their communities) even more important, even if none of them are currently at the point of being the Coming Thing.
+
+
+
+h2. You have a degree in Linguistics or something, right? Is this why you like to deconstruct things and put them back together?  How has your nontraditional training and education affected the way you learn and approach your job?
+
+Yep—philosophy, actually. I don't know that I'd describe myself as breaking things down and reconstructing them, though given that my training was in analytical philosophy that does make sense. I prefer to look at my graduate work for inspriation; it was all about integrating distinct fields (cognitive science, philosophy of mind, animal behavior, biological psychology, evolutionary theory) into a cohesive whole. All of that has given me a perspective that's somewhat different from the standard computer science point of view, I think, and while that can cause problems (since I'm missing some of the fundamental education a CS course of study provides), it more often than not helps me to see and make use of the underlying patterns.
+
+
+
+h2. What are you passionate about outside of computer programming?
+
+That's a question that gets a different answer depending on when you ask. At various times over the past few years, I've been passionate about dogs, analytic philosophy, comic books, squash, MMORPGs, mythology, cooking, politics, young adult literature, writing, various musical genres, Chinese martial arts, anime, volleyball.... I'm both obsessive and mercurial, which means I get powerfully drawn into subjects for a time, then move on to another fascination. At the moment, I'm holding steady with a few topics: comics and speculative fiction, with a dash of volleyball and philosophy, and I'm continually surprised and enchanted by what my six-month-old daughter does from day to day.
+

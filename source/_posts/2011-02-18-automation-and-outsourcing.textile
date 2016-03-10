@@ -1,0 +1,43 @@
+---
+layout: post
+title: !binary |-
+  QXV0b21hdGlvbiBhbmQgT3V0c291cmNpbmc=
+enki_id: 4711
+categories: !binary |-
+  bGlmZSwgY2FyZWVyLCBtYW5hZ2VtZW50LCBqb2I=
+---
+What's the difference between automation and outsourcing?
+
+I don't know if it's the same everywhere, but here in the USA we're deluged with fear-driven "news" reporting, decrying the theft or export of our jobs to low cost, less skilled, offshore labor.  Or even onshore "illegal" labor.  It might be Mexico. Or China. Or India.  In the 80s it was the Japanese. And it was robots and computers.  
+
+I'm not going to argue whether any of this is true or worth being upset about here.  "I've done it elsewhere.":http://pragprog.com/titles/cfcar2/the-passionate-programmer  What I'm interested in here is the question: what if, as individuals, instead of fearing outsourcing, offshoring, and automation, we decided to use it to our advantage?
+
+The standard argument against offshore outsourcing goes like this:  Offshore people don't understand the work, or the culture, or don't care about quality or just aren't as good.  They might be cheaper by the hour, but they're more expensive in the long run.
+
+OK.  That's a hard one to disprove.  It's also kind of hard to prove.  Regardless, hold that thought
+
+!http://farm1.static.flickr.com/16/21042744_0640512665.jpg!
+http://www.flickr.com/photos/dancoulter/21042744/
+
+
+In this day and age, we've collectively gotten over the fear that computers will replace us all.  We're used to the idea that certain tasks can and should be automated.  For the younger readers, did you know that there was such thing as a spreadsheet before computer existed?  That's right.  It was roughly the same except a _person_ had to calculate each value!  And if any numbers changed, guess what happened?  Someone had to recalculate them!
+
+Anybody want that job?  I didn't think so.
+
+So that's automation.  If you think _really_ hard about what you do every day, I bet you can come up with a few things that could be automated so you wouldn't have to do them anymore.  You wouldn't feel bad about those things.  You'd be saving yourself time and saving your employers money if you could automate them.  Software developers spend their careers doing this for others.
+
+Anything that could be done by a computer or a robot (roughly) just as well as it could be done by a human should be automated.  That frees the people up to _think_.  That's what we want, ya?  Hurray!
+
+Some tasks are almost automate-able.  But they just need that little extra push.  For example, human language is hard to parse.  It's not exact enough to write reliable programs (usually) to read and act on.  So what do you do with those tasks that seem mundane enough to automate but can't actually be done without a human?
+
+Outsource!
+
+Outsourcing might mean giving the task to a more junior person you already work with. It might mean hiring someone on another continent who costs a fraction per hour than you do and can be trained to do the mundane work you do.  It might mean taking on "an apprentice":http://oreilly.com/catalog/9780596518387 and teaching them as they handle the "easy" stuff.
+
+But, the fact of the matter is, in the work that most of us do every day there are things we could have someone less experienced do for us. And if that person is happy to do it, benefits from it in some way, costs less than we do, or is just _willing_ when we are not, it's not a bad thing to try.
+
+If you continually do things that are "below your pay grade", you're wasting precious time or money.
+
+At the end of the day today, think about what you did today.  Given a little time, how much of it could have been automated?
+
+Given a little time to document what needed to be done, how much of it could have been done just as well by someone else who is maybe less skilled or less expensive than you?

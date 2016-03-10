@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  VGVzdGluZywgV2ViIDIuMCBFbnRyZXByZW5ldXJzaGlwLCBhbmQgS2FybWE=
+enki_id: 4629
+---
+As I mentioned previously, Marcel Molina and I are doing a "full day testing workshop for charity":http://www.railsconfeurope.com/cs/railseurope2007/view/e_sess/14736 at RailsConf Europe next month.
+
+"Dr. Nic Williams":http://drnicwilliams.com/ hopes to attend but rather than donate the required minimum $75 directly, he has "chosen to auction off":http://drnicwilliams.com/2007/08/23/myconfplan-for-sale/ his "MyConfPlan":http://myconfplan.com web site and to then donate the proceeds as part of his registration for the tutorial.
+
+So now's your chance to kick start your way into Web 2.0 entrepreneurship, help Dr. Nic fulfill his goal of learning more about testing, and develop good karma all in one action.
+
+"You can bid here.":http://cgi.ebay.com.au/ws/eBayISAPI.dll?ViewItem&item=160150359140
+
+It's easy to give money.  It's much harder and more personal to give your time, passion, accomplishments, and creativity.  Dr. Nic is a shining example for the rest of us.  Thanks, Nic!

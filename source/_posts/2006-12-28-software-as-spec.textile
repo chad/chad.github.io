@@ -1,0 +1,57 @@
+---
+layout: post
+title: !binary |-
+  U29mdHdhcmUgYXMgU3BlYw==
+enki_id: 4471
+---
+(This article is part of the <a
+href="http://chadfowler.com/index.cgi/Computing/Programming/TheBigRewrite/TheBigRewrite.rdoc,v">Big
+Rewrite</a> series.)
+
+<p>
+&quot;Make it do what it already does.&quot; That&#8217;s a tempting and
+simple way to view software requirements on a rewrite project. After all,
+the system already exists. The question of &quot;what should it do
+when&#8230;&quot; can presumably always be answered with: &quot;what it
+already does&quot;.
+</p>
+<p>
+There are two major problems with this assumption. The first, and most
+disruptive, is that the programmers don&#8217;t know what questions to ask.
+This is especially true if the programmers weren&#8217;t the original
+developers of the system (most often the case on a major technology shift),
+but even a programmer who did the original implementation of a product
+won&#8217;t remember every nook, cranny, and edge case. What&#8217;s worse,
+with the fragile safety net of an existing implementation, programmers can
+easily oversimplify the interface, and <em>assume</em> they know the
+capabilities of the system. If a combination of drop-down selections
+results in a whole new corner of the system, how are they to know without
+stumbling onto it (or performing an exhaustive and expensive test cycle)?
+</p>
+<p>
+If the software you&#8217;ve built is complex enough that it <em>needs</em>
+to be rewritten, it&#8217;s probably also so complex that it&#8217;s not
+discoverable in this way. This means that domain experts are going to have
+to be heavily involved. It means that requirements are going to need to be
+communicated in much the same way they are on a green-field project. And it
+means that, unless it&#8217;s only used as a supplement, the existing
+system is more a liability to the rewrite than an asset.
+</p>
+<p>
+Optimistic programmers might think I&#8217;ve missed something important
+here. If you&#8217;re rewriting a system, you&#8217;ve already got the
+code. The <em>code</em> can serve as the spec, right? Probably not.
+</p>
+<p>
+Based on my own experiences and conversations with thousands of software
+developers around the planet, I unscientifically conclude that almost all
+production software is in such bad shape that it would be nearly useless as
+a guide to re-implementing itself. Now take this already bad picture, and
+extract only those products that are big, complex, and fragile enough to
+need a major rewrite, and the odds of success with this approach are
+significantly worse.
+</p>
+<p>
+Existing code is good for discovering algorithms&#8212;not complex,
+multistep processes.
+</p>

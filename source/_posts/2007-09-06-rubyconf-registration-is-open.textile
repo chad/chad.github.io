@@ -1,0 +1,7 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgUmVnaXN0cmF0aW9uIGlzIE9wZW4=
+enki_id: 4631
+---
+We've just opened "RubyConf registration":http://www.regonline.com/Checkin.asp?EventId=145820.  There are more spots than last year, but it's probably still going to sell out.  I would book soon if I were you.

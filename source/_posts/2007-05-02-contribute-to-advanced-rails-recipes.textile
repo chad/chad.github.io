@@ -1,0 +1,23 @@
+---
+layout: post
+title: !binary |-
+  Q29udHJpYnV0ZSB0byBBZHZhbmNlZCBSYWlscyBSZWNpcGVz
+enki_id: 4615
+---
+What do you have cooking on your Rails project? The community wants to know!
+
+!http://pragmaticprogrammer.com/images/fr_arr_medium.jpg!
+
+When the "first Rails Recipes book":http://pragmaticprogrammer.com/titles/fr_rr/index.html was written, most of the Rails knowledge was concentrated in a small group of experts. These days, with new Rails applications being launched almost weekly and so many different problems being solved, the State of the Art is more evenly spread across the community. In order to capture what's happening in the Rails community, we'd like the second Rails Recipe book to incorporate advanced recipes from the community's best and brightest.
+
+So here's your chance to share tasty dishes that others may have never imagined they could make. We ("Mike":http://clarkware.com and "Chad":http://chadfowler.com) will help you prepare your recipe for inclusion in the upcoming "Advanced Rails Recipes":http://pragmaticprogrammer.com/titles/fr_arr/index.html book, including reviewing and testing the code, and you'll get all the credit.
+
+To propose a recipe idea, here's all we need from you:
+
+    * A paragraph or two describing the problem that the recipe solves
+    * A sentence or two indicating what the solution will be
+    * You should already have working code. You can send some along if it helps convey your idea.
+
+Email your idea to us at railsrecipes@gmail.com by May 25th (but if you've already got an idea in mind, go ahead and send it today!). We'll review your idea and let you know by May 31st if we can fit it in the book. After that, we'll start working together to get your recipe into the book!
+
+If your recipe is selected, your name, bio, and link to your site/blog will appear in the book. And you'll receive a complimentary copy of the book, of course.

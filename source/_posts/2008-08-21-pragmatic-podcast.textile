@@ -1,0 +1,13 @@
+---
+layout: post
+title: !binary |-
+  UHJhZ21hdGljIFBvZGNhc3Q=
+enki_id: 4657
+---
+Earlier this week, "Daniel Steinberg":http://dimsumthinking.com interviewed me for the "Pragmatic Programmers' Podcast":http://pragprog.com/podcasts. I'm a fan of Daniel's podcasts, so it was cool to have an opportunity to be the other voice on one of them.
+
+What was also fun about this one was that when he asked to interview me, he didn't have a specific topic in mind. So it ended up being about nothing and everything. Kinda like Seinfeld but unfortunately not as funny.
+
+Since I haven't been posting here a lot lately, the podcast is a good place to find out what I'm up to, which includes "Arduino":http://arduino.cc hacking and writing a computer game which interfaces with my exercise bike.
+
+"Listen here":http://podcasts.pragprog.com/2008-08/chad-fowler.mp3

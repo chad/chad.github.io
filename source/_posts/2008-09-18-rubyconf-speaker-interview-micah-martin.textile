@@ -1,0 +1,43 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgU3BlYWtlciBJbnRlcnZpZXc6IE1pY2FoIE1hcnRpbg==
+enki_id: 4661
+---
+In preparation for this year's "RubyConf":http://rubyconf.org, I'm doing a "series of interviews":http://chadfowler.com/rubyconf-speaker-interviews of some of the speakers.
+
+Today's interview is with author, speaker, and software craftsman, "Micah Martin of 8th Light":http://8thlight.com and formerly of "Object Mentor":http://www.objectmentor.com.  At RubyConf, Micah will be presenting "Ruby Kata and Sparring":http://rubyconf.org/talks/32.
+
+h2. You're speaking about exercises to improve your coding skills.  From what I know about the ideas you will present, they are very tactical and performance-oriented in nature.  We don't usually think of programming as a performance activity. Is it?
+
+Sure it is.  When a novelist writes a novel, or a poet writes a poem, aren't they performing?  Their work, their words, have to entertain.  They have to communicate ideas, and inspire their audience of readers.  When we write code, we have two audiences; the computer and our peers.  The computer is not a very demanding audience.  But our fellow programmers, they can be very harsh critics.  The code we write, if it's good, will easily communicate ideas to our peers.  It will inspire understanding of our intent.  And if it's really good, it will entertain.
+
+
+h2. Dave Thomas did a series of "code kata" many years ago. Is the kata portion of your talk a continuation of those same ideas?
+
+
+Yeah, for the most part.  Unclebob did some as well.  It's a great idea that hasn't seemed to gain much traction.  It's lack of popularity is understandable.  A skeptic might describe code kata as "writing useless code by yourself in your free time".  Sounds fun eh?
+
+It's the same in martial arts.  For the lower belt ranks, kata is rarely the activity of choice.  Most students would rather kick bags, break boards, and spar with other students.  Fortunately in martial arts, instructors influence students to practice kata over and over.  With time and experience, students learn to appreciate kata.  And once they catch the bug, you'll find martial artists practicing kata outside of class whenever they get the chance.
+
+Code kata requires discipline, but it offers a deep well of knowledge about our craft.  More than most groups, I feel that Ruby programmers understand the need for good coding form, and are more likely to embrace kata.
+
+
+h2. Everyone who calls his- or herself a musician knows that practice is essential.  The same with sports and other disciplines. Why don't many programmers practice?
+
+
+I don't know.  Maybe it's because many programmers are programmers because it's a good career yet they don't really enjoy programming.  It's hard for me to imagine any musicians who don't enjoy music or athletes who don't enjoy their sport.
+
+
+h2. Some call programming engineering.  Others call it art. Still others call it craft. You're using a fighting metaphor. What's your take on the subject?
+
+
+Having devoted 5 years of my life to martial arts and more than that to software, I can't help but to compare and contrast the two.  What I've found is that they're not so unalike.  They both have a scientific foundation yet require copious practice to become proficient.  This is my definition of a craft.
+
+Sparring is one facet of martial arts that doesn't seem to have a counterpart in software.  Sparring is great.  After all the devotion and practice you invest in your craft, you get to pit your skills against those of your peers and see who comes out on top.  It's a tool to measure your progress and learn your weaknesses.  It's also fun.  I hope to see more of this in software.
+
+
+h2. What are you passionate about outside of computer programming?
+
+
+Besides my family and software, my passions tend to jump around.  Martial arts has been a significant passion of mine.  I really enjoy playing the guitar.  Recently I've been playing around with basic electronic components, building little robots.  Basketball and soccer keep me active.  And as soon as I can spare the time, I'll learn to fly airplanes.

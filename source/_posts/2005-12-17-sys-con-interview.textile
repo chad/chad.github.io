@@ -1,0 +1,15 @@
+---
+layout: post
+title: !binary |-
+  U3lzLUNvbiBJbnRlcnZpZXcK
+enki_id: 4575
+---
+<a href="http://rssblog.linuxworld.com/">Roger Strukhoff</a> recently
+interviewed me about <a
+href="http://www.pragmaticprogrammer.com/titles/mjwti/index.html">My Job
+Went to India</a> for Sys-Con.TV. I had a great time, and I&#8217;m really
+happy with the way the interview turned out.
+
+<p>
+<a href="http://sys-con.tv/read/164481.htm">Check it out.</a>
+</p>

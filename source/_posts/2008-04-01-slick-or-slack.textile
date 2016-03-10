@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  U2xpY2sgb3IgU2xhY2s/
+enki_id: 4646
+---
+In my "previous post":http://chadfowler.com/2008/3/27/great-ruby-code, I asked for examples of great Ruby code.  I got emails, comments, instant messages, and twitter messages with suggestions.  I'd still like more. 
+
+But one really cool suggestion came from an idea "Bil Kleb":http://fun3d.larc.nasa.gov/ and "Peter Provost":http://www.peterprovost.org/ had.  They proposed a "Hot or Not":http://hotornot.com -like site for code.
+
+I thought that would be fun, so "Bruce":http://codefluency.com and I whipped something up in a couple of hours over the weekend:  "Slick or Slack?":http://slickorslack.com.
+
+!http://chadfowler.com/images/slickorslack.png!
+
+It's not done yet, but we deployed it anyway.  My experience helping "Ze Frank":http://zefrank.com with "Color Wars 2008":http://colorwar2008.com has convinced me that deploying things that aren't done is more often a good idea than not.  If for nothing else that for mental health reasons.
+
+What we want to do now is to start collecting potentially "Slick" code snippets.  This could mean beautiful code, clever code, code which does something awesome, or whatever.  You can also post code that sucks.  We just need code to start the tallies running.
+
+When you visit the site, you'll be presented with two code samples, probably doing totally different things.  They might even be in different languages.  Your job is to choose the better of the two.  If you can't make up your mind, just hit refresh.
+
+I doubt this is going to unearth great code in the same way that I doubt Hot or Not unearths great people.  But I hope it will be fun to play with.  It will probably be broken and we know it's lacking some necessary features to make it more useful and/or fun.  Suggestions are welcome.  Just don't take it too seriously.
+

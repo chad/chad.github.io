@@ -1,0 +1,77 @@
+---
+layout: post
+title: !binary |-
+  Tm8gRmx1ZmYgSnVzdCBTdHVmZiAK
+enki_id: 4523
+---
+I spent the last weekend at the No Fluff Just Stuff (<a
+href="http://www.nofluffjuststuff.com">www.nofluffjuststuff.com</a>) Ohio
+Java Software Symposium in Cincinnati.
+
+<p>
+Jim Weirich (<a href="http://onestepback.org/">onestepback.org/</a>) took
+much better notes than I did, so I&#8217;ll leave it to him to chronicle
+what we saw. We happened to go to the same sessions by chance (or was it
+something about the fact that we were both Ruby geeks at a Java conference
+and were attracted to the same topics?).
+</p>
+<p>
+Jay Zimmerman (conference organizer) has done an excellent job by sticking
+to a few guiding principles:
+</p>
+<ul>
+<li>No vendor sales-pitch presentations
+
+</li>
+<li>Keeping it small and personal (encouraging speakers to interact with
+attendees)
+
+</li>
+<li>Practical technical presentations that attendees can apply to their work
+
+</li>
+<li>Constant feedback collection from attendees and adaptation of the
+content/format as a result (it really shows).
+
+</li>
+</ul>
+<p>
+I had a great time. The sessions were fantastic, but the best thing was
+meeting a lot of smart people and participating in some interesting side
+conversations. I&#8217;ve only been to a couple of conferences, but from
+what I&#8217;ve seen the main draw for me will always be the
+between-the-sessions chat time.
+</p>
+<p>
+Primary takeaways from the conference:
+</p>
+<ul>
+<li>Java people sure do use a lot of XML. I get the feeling they&#8217;d like
+to be using a scripting language, and they use XML as an attempt to fill
+this void.
+
+</li>
+<li>Naked Objects (<a
+href="http://www.nakedobjects.org">www.nakedobjects.org</a>) is much more
+interesting than I thought it was. I thought it was a fascinating novelty
+when I first saw it, but seeing Dave (<a
+href="http://pragprog.com/pragdave">pragprog.com/pragdave</a>) speak about
+it made me realize just how important it might be.
+
+</li>
+<li>Some of the smartest Java people in the industry seem to spend a lot of
+effort working around road blocks in the Java language and accompanying
+acronyms.
+
+</li>
+<li>I realized just how much time software developers spend on plumbing vs.
+value added business logic.
+
+</li>
+</ul>
+<p>
+In short, if you&#8217;re a software developer or someone who works with
+software developers, I would highly recommend checking out the web site and
+looking for a No Fluff Just Stuff symposium in a city near you. It&#8217;s
+well worth the price of admission.
+</p>

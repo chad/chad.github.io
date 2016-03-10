@@ -1,0 +1,117 @@
+---
+layout: post
+title: !binary |-
+  UmFpbHNDb25mIFNwZWFrZXIgSW50ZXJ2aWV3OiBNaWNoYWVsIEJsZWlnaA==
+enki_id: 4678
+---
+Next up in my "series of RailsConf speaker interviews":http://chadfowler.com/railsconf-speaker-interviews is "Michael Bleigh":http://mbleigh.com/, who is Creative Director and Open-Source Activist at "Intridea":http://intridea.com in Washington D.C.
+
+Michael will be presenting "Twitter on Rails":http://en.oreilly.com/rails2009/public/schedule/detail/8517 at RailsConf this year, highlighting a small but growing trend of applications using Twitter as a communication platform.
+
+h2. You work on "Present.ly":https://www.presentlyapp.com and you're
+giving a talk on Twitter apps at RailsConf. Micro-update services is
+obviously a topic that has you excited. Why is that?
+
+I wasn't a super-early adopter of Twitter; I honestly think it's
+something that takes some time to "get." Then one day I woke up and
+realized that without even trying I was getting all kinds of news and
+information that I might not even have heard otherwise. The beauty of
+Twitter (and Present.ly for teams and organizations) is that it's a
+fast, passive medium: you don't have to make an effort to keep up to
+date, it just sort of happens. It works with two-way communication,
+too; on our team if I have a quick syntax or sanity check question
+about my code, I post it up on Present.ly and get five responses
+within three minutes. Micro-updates excite me because I feel like I'm
+getting smarter just by glancing at growl notifications for a few
+seconds every couple of minutes while I'm working. It's effortless.
+
+h2. What are the coolest Twitter applications you've seen?
+
+It's hard to pick out just a few; from a client perspective I've been
+using "EventBox":http://thecosmicmachine.com/ lately. It's integrated
+Twitter search feeds are really useful for keeping an eye on all of
+Intridea's brands (as well as my plugins and open-source projects).
+While I don't think anyone has nailed it perfectly yet, aggregators
+like "TweetMeme":http://tweetmeme.com/ are interesting in their
+attempts to bubble up content from the noise. Honestly, I don't think
+there are just a couple cool apps; I think that Twitter's true
+strength is this really energetic ecosystem around creating cool stuff
+with the API. That's what my talk is all about: lowering the barriers
+to people making cool stuff with Twitter. With the hundreds of apps
+currently available I still think we've only scratched the surface of
+the utility that Twitter-based applications can provide.
+
+h2. What does it mean to be "Open Source Activist" for a company?
+Should other companies fill this role?
+
+As the "Open Source Activist" I'm basically just trying to push people
+to package up what they're doing and share it with the community,
+whether it's through a Ruby gem, a plugin, or just a blog post. My
+colleagues are making cool stuff all of the time, and sharing that
+cool stuff with the community is absolutely beneficial for the
+company, the individual, and everyone who finds it useful. We've had
+clients come to us and when they're vetting our work it'll be "Oh
+yeah, I've used that plugin! You guys wrote that?"
+
+I think that every company needs someone who is pushing for that
+community involvement. Pushing for us to blog more often and release
+more open source doesn't just yield intangible reputation benefits:
+I've learned really cool techniques from other people at Intridea that
+they used for a project on which I'm not currently working. I'm always
+excited to foster that kind of sharing environment because the rewards
+are just great. I could go on for hours and I strongly encourage that
+every company working with Ruby or Rails try to release at least a few
+open-source libraries and write some blog posts to share your
+knowledge and expertise with the world at large.
+
+We really believe in putting our money where our mouth is on the
+open-source front. When we wrote mobile applications for Present.ly on
+five different platforms it was a no-brainer to me to "release them
+all as open-source":http://github.com/presently. Open source, open
+APIs and open communication foster innovation in amazing ways, and
+anything I can do to make that happen more often I will.
+
+h2. Why is Twitter Search special and/or interesting?
+
+Twitter Search is special because it's intrinsically a different beast
+than Google and other search engines. It's not indexing information,
+it's indexing **conversation**, and it does it in real time. If I'm
+trying to find information about something that happened in the last
+24 hours (like "who was that old woman on Lost?":http://intridea.com/2009/1/22/twitter-search-plus-find-replies-inline-with-twitter-search), I don't use Google
+anymore; I turn to Twitter because it will have up-to-the-second
+information that just isn't available anywhere else. Obviously it
+doesn't replace the usefulness of other search engines, but it opens
+up whole new channels of information discovery. Honestly search and
+Twitter are such a natural and amazing fit that it's surprising that
+it took a third party (Summize) to come along and realize that
+potential. I really look forward to where they (and third parties) are
+going to take the technology in the next year or two.
+
+h2. As I understand it, Intridea started as a consulting group but has
+quickly developed a set of products that have gotten some positive
+press. How do you balance consulting and product development? Do they
+support and feed off of each other?
+
+The balance actually works really well. We have a few people full time
+on products and then we rotate in services people either part-time or
+full-time depending on our client engagements at the time. I think
+it's been great for both sides of the company to have both services
+and products: we can try really bleeding edge and experimental things
+on the products and then bring that knowledge to the client work we
+do. Likewise, everyone at Intridea on the services side has an almost
+inhuman work ethic and an ability to juggle several projects at once
+so when they come on to the products they can pick it up fast and get
+things done. Consulting has also allowed us to try a number of
+products without ever having to accept outside funding.
+
+A number of our products also grew out of needs that clients would
+have again and again. For instance "Scalr":http://scalr.net is a great
+piece of software (don't ask me about how it works, it's over my
+head!) that gives us the ability to provide amazing scalable cloud
+hosting to our clients. "MediaPlug":http://www.gomediaplug.com/
+similarly provides an easy infrastructure that saves our clients time
+and money. We scratch our own itches with our products and that
+usually means that there are benefits for the consulting side of our
+business with every product we make. I'm honored and privileged to
+work with so many brilliant people and be allowed to pursue so many
+amazing ideas.

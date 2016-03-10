@@ -1,0 +1,96 @@
+---
+layout: post
+title: !binary |-
+  VGhlIFZpcnR1ZXMgb2YgTW9ua2V5IFBhdGNoaW5n
+enki_id: 4489
+---
+From a semi-recent <a
+href="http://blog.ianbicking.org/theres-so-much-more-than-rails.html">post</a>
+by Python programmer Ian Bicking:
+
+<pre>
+  You can monkeypatch code in Python pretty easily, but we look down
+  on it enough that we call it &quot;monkeypatching&quot;. In Ruby they call it
+  &quot;opening a class&quot; and think it's a cool feature.
+  I will assert: we are right, they are wrong.
+</pre>
+<p>
+Today, I was frustrated by a Rails bug affecting pagination with joins. In
+short, it doesn&#8217;t work. At all.
+</p>
+<p>
+Miraculously, (no, it wasn&#8217;t a coincidence&#8212;it was an actual
+miracle) <a href="http://glu.ttono.us/">Kevin Clark</a> posted a message to
+the Rails Core list <em>right</em> in the middle of this episode
+complaining about the exact same problem. He said he was working on a fix.
+<a href="http://jthopple.com/">Jeremy Hopple</a> responded a little over an hour later saying that he had
+already submitted a <a
+href="http://dev.rubyonrails.org/ticket/2597">patch</a> for the bug.
+</p>
+<p>
+Visions of the nasty download/patch process started trudging through my
+mind, but I was desperate for a fix so I would have dealt with the
+ugliness. I hate hacking my local Rails (I&#8217;m running off of trunk
+using svn:externals) because I don&#8217;t like dealing with what happens
+when the change actually gets applied to trunk or dealing with merges for
+other changes to the same files. It&#8217;s not rocket science to get
+working but it&#8217;s also not fun.
+</p>
+<p>
+Looking more closely at Jeremy&#8217;s email, he&#8217;s also distributing
+his patch as a Rails plugin. So:
+</p>
+<pre>
+  $ ruby script/plugin install count_limit_assocations
+</pre>
+<p>
+Now my code works. The bug is fixed. The plugin contains essentially
+nothing but a file that &quot;monkey patches&quot; some of the Rails core
+classes, implementing the changed version of the code.
+</p>
+<p>
+When the change is merged into the Rails trunk, I&#8217;ll just
+&#8216;script/plugin remove&#8217; Jeremy&#8217;s plugin.
+</p>
+<p>
+The Rails team is already using plugins like this as a way to get new
+functionality into circulation as a kind of proving ground before things
+make it into Rails core. And as we see today, it&#8217;s also a simple,
+painless way to get fixes distributed before they&#8217;re reviewed and
+committed. Sure, you can do the more obvious thing with plugins and
+distribute code that implements new functionality altogether. But this
+&quot;monkey patching&quot; thing is seriously powerful and, as an end-usre
+in this case, I can say that it makes things better for the <em>users</em>
+of Ruby.
+</p>
+<p>
+So Ian, with respect, no&#8230;you&#8217;re not right.
+</p>
+<p>
+UPDATE: Ian sent me the following clarification by email (reprinted with
+permission&#8212;thanks Ian!):
+</p>
+<pre>
+  Hi Chad.  Saw your post on monkeypatching.  Just thought I'd clarify
+  that I don't think that kind of use is wrong, and I do that frequently
+  -- applying a patch at runtime to the objects in memory, instead of the
+  source code on disk.  It can be expedient, and certainly a whole lot
+  better than trading patches around.  The use I object to that I see in
+  lots of Ruby examples (and maybe isn't indicative of most real Ruby
+  code) is when people add methods to other classes that aren't meant to
+  fix anything, but just because they don't have an object of their own to
+  hang the method off of.  I've seen several examples where people add
+  methods to Array to implement some recursive algorithm, instead of using
+  a function.  Or Rails adding methods to numbers to create time delta
+  objects (well, it would be good if they *were* time delta objects, but I
+  understand they actually just return seconds as ints, but that's another
+  issue entirely).
+
+  The term &quot;monkeypatch&quot; is really meant to denote that.  It's a patch, a
+  fix, an adjustment to the code.  The monkey part has a history (that
+  someone left on my post) that I think more-or-less is meant to indicate
+  a certain subversive intent, or at least playfully but maybe mischievous
+  manipulation.  We do it often in Python, but everytime we do it we know
+  we are working around the system and not with it.  Which is fine too,
+  but it's not the sort of thing you want as a foundation.
+</pre>

@@ -1,0 +1,29 @@
+---
+layout: post
+title: !binary |-
+  T1NDT04gU2NoZWR1bGUgUG9zdGVkCg==
+enki_id: 4527
+---
+O&#8217;Reilly has very recently posted their schedule of events for the <a
+href="http://conferences.oreillynet.com/os2004/">O'Reilly Open Source
+Convention</a>.
+
+<p>
+<img
+src="http://conferences.oreillynet.com/images/os2004/banners/speakers/oscon_speaker_125x125.gif">
+</p>
+<p>
+They&#8217;ve got a <a
+href="http://conferences.oreillynet.com/pub/w/29/track_ruby.html">Ruby
+track</a> again this year, including <a
+href="http://conferences.oreillynet.com/cs/os2004/view/e_sess/5303">two</a>
+<a
+href="http://conferences.oreillynet.com/cs/os2004/view/e_sess/5322">sessions</a>
+featuring yours truly.
+</p>
+<p>
+If I know you (electronically or in person) and you&#8217;ll be in Portland
+for this, let me know. <a
+href="http://richkilmer.blogs.com/ether/">Rich</a> and I are already
+planning some pre-conference hacking in Portland.
+</p>

@@ -1,0 +1,27 @@
+---
+layout: post
+title: !binary |-
+  R29vZ2xlIEJsb2dz
+enki_id: 4552
+---
+
+<a href="http://www.google.com">Google</a> has just <a href="http://weblog.siliconvalley.com/column/dangillmor/archives/000802.shtml#000802">signed a deal</a> to purchase <a href="http://www.pyra.com">Pyra Labs</a>, the creators of <a href="http://www.blogger.com">Blogger</a>.  Dan Gillmor of <a href="http://www.siliconvalley.com">siliconvalley.com</a>, Blogger's creators, and of course Google all seem to think that "blogging" represents a positive and revolutionary shift in the way news and publishing in general will happen in the near future.  I have my doubts.  Is this an acknowledgement that "blogging" is the next big advancement or a just a sign that it <i>might become</i> the next big advancement?
+<P>
+Over the past year or so and until very recently (around the time I started updating my site again), I completely lost patience with the "blog community".  Sites seem to generally fall into one or more of three categories: 1) Decent quality, but I'm not interested in the topic, 2) Completely useless on any front, and 3) Perpetually stale or out of date (http://www.chadfowler.com).  As I read Dan Gillmor's article, I notice that there are an estimated 200,000 active sites based on Blogger alone.  Surely out of just these 200,000 sites, there are at least a handful that I (and I'm using "I" as a statistic--one out of <i>n</i> internet users) might like to read on a periodic basis.  So, even if I limit the consideration to these 200,000 web logs, why had I lost faith in this "phenomenon"?
+<P>
+A lot of people today are interested in Iraq that didn't even know this time last year whether or not Iran and Iraq were alternate spellings for the same place.  And, of course, I could have said the same about Afghanistan last January.  This year, an increasing number of people will download MP3s onto their computers instead of going to a local record store and buying a CD (or just deciding to <i>not</i> have a copy of a song they'd like to hear).  More people will send email this year than last year and less people will send paper letters.  These are all shifts--some fast and short-lived, some slower and potentially long-lasting.  But, none of these trends has any value on its own.  A change is a change.  Change doesn't always imply improvement.
+<P>
+The same is true for web logging.  We've had the technological capability to "blog" since the creation of the Worldwide Web.  The difference now is that it's getting easier and easier to do.  <i>That's</i> the shift.  More and more content is getting created, and the content is getting increasingly time sensitive in nature.  Given a user-friendly piece of software and a 15 minute introduction, my grandmother or my teenage nephew is just as capable of publishing content on the open internet as I am.  And, given the relative free time that each of them probably enjoys, you might say that they're quite a bit <i>more</i> capable than I am.
+<P>
+So, does this have value?  I'd say the answer is "yes" and "no", with a much heavier weight on the "no".  For my grandmother, in this example, it's "yes".  Maybe she just wants to write for herself (nevermind the fact that she can do that in a paper journal where people don't have to read it).  Maybe she wants to keep her globally distributed family up to date on the events of her life.  To be able to do these things easily is great for her.  
+<P>
+But, for the internet as a whole, the answer is "no".  Nothing against my grandmother of course, but this "blogging" phenomenon is opening the flood gates for anyone with an internet connection to "muddy up" the information available on the internet even further than it already is.  While bloggers are probably adding some valuable content to the internet, they're also increasing the number of sites that fall into my #1,2,3 categories mentioned above.  In fact, Pyra itself has 1.1 million registered users, out of which they estimate that only the 200,000 are <i>actively</i> maintaining sites.  This means that while Blogger brings us 200,000 sites that at least don't fall into the "inactive" category (but may still be generally useless or irrelevant), it has also helped to dilute the internet with about 900,000 <i>dormant</i> sites.
+<P>
+Given those numbers (about 80% of Blogger sites in category #3 alone), I'd have to say that "blogging" is more of a <i>problem</i> than it is something to be excited about.
+<P>
+So, the <i>big</i> news isn't "blogging" itself.  The <i>big</i> news is that someone might actually try to take this mess and <i>do something</i> about it.  With recent additions like <a href="http://news.google.com">Google News</a> and <a href="http://answers.google.com">Google Answers</a>, Google is proving that it's strengths aren't so much limited to search engines as the ability to organize content in usable ways.  As the internet gets more and more diluted with drivel, I see this as being Google's recognition that the traditional search engine paradigm might be nearing obsolescence.  Instead of solely investing in their search engine technology to try to parse this mess, they're going straight to the largest and fastest growing source of drivel and taking the proverbial bull by the horns.  I'm looking forward to seeing what they do with this.
+<P>
+<PRE>
+&lt;joke&gt;Who knows--they might just systematically purchase and shut down all of the blog sites,
+to improve the quality of their search results&lt;/joke&gt;
+</PRE>

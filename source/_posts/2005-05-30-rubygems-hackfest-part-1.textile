@@ -1,0 +1,40 @@
+---
+layout: post
+title: !binary |-
+  UnVieUdlbXMgSGFja0Zlc3QgUGFydCAxCg==
+enki_id: 4494
+---
+One of our <a
+href="http://www.ruby-talk.org/cgi-bin/scat.rb/ruby/ruby-talk/133197">grant
+winners</a>, <a href="http://www.zenspider.com/Languages/Ruby/Seattle/">The
+Seattle Ruby Brigade</a>, has just finished the first weekend HackFest in
+which they will dramatically improve <a
+href="http://rubygems.rubyforge.org">RubyGems</a>].
+
+<p>
+<a href="http://zenspider.com">Ryan Davis</a> has the <a
+href="http://blog.zenspider.com/archives/2005/05/rubygems_hackfe.html">writeup</a>.
+</p>
+<p>
+Among other REALLY nice improvements are some <a
+href="http://rubyforge.org/cgi-bin/viewcvs.cgi/rubygems/test/?cvsroot=rubygems">dramatic
+refactoring of the way testing is done</a> and a potentially massive
+performance <a
+href="http://rubyforge.org/cgi-bin/viewcvs.cgi/rubygems/lib/rubygems/specification.rb?cvsroot=rubygems">improvement</a>
+in one of the core classes of the RubyGems library, affecting not just
+install time but <tt>runtime</tt> performance of RubyGems-enabled
+applications.
+</p>
+<p>
+All this with unit tests. Nice job, Seattle!
+</p>
+<p>
+I&#8217;d love to see more of this kind of thing (especially when people
+are improving software that I have a hand in). Hey all you other Ruby
+groups, it might be too late (this year) for a <a
+href="http://rubycentral.org">RubyCentral</a> code fest grant, but
+it&#8217;s not too late to organize your own self-funded Hack Fest.
+</p>
+<p>
+Anyone close enough to Kentucky want to give it a go?
+</p>

@@ -1,0 +1,24 @@
+---
+layout: post
+title: !binary |-
+  UnVieUdlbXMgUmFpbHMgUGx1Z2lucw==
+enki_id: 4478
+---
+Inspired by a dinner conversation at <a
+href="http://pragmaticstudio.com/therailsedge/">The Rails Edge</a>, Bruce
+Williams has <a
+href="http://codefluency.com/2006/11/29/rubygem-based-rails-plugins">created</a>
+a <a href="http://dev.rubyonrails.org/ticket/6726">Rails patch</a> to
+enable Rails to load plugins installed as gems.
+
+<p>
+With this patch, you get plugins with the dependency- and
+version-management goodness of RubyGems. Here&#8217;s hoping it gets
+applied.
+</p>
+<p>
+On a related note, <a href="http://vernix.org">Marcel</a> pointed out last
+night that we&#8217;re up to over 1000 unique gems in the main repository.
+I wonder if it&#8217;s time to look at some kind of <a
+href="http://rubyforge.org/pipermail/rubygems-developers/2006-November/002224.html">namespacing</a>.
+</p>

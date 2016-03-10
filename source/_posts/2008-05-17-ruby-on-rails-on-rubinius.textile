@@ -1,0 +1,9 @@
+---
+layout: post
+title: !binary |-
+  UnVieSBvbiBSYWlscyBvbiBSdWJpbml1cw==
+enki_id: 4649
+---
+Congratulations to Evan and the Rubinius team.  "Rubinius runs Rails!":http://blog.fallingsnow.net/2008/05/17/rails-on-rubinius/
+
+By this time next year, we'll see production deployments of Rubinius, with Rubinius quickly becoming the defacto standard Ruby implementation after that.  You won't want to try to deploy your Rails application on it today, but it's definitely time to give it a look if you haven't yet.

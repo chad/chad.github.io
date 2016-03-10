@@ -1,0 +1,103 @@
+---
+layout: post
+title: !binary |-
+  UnVieUNvbmYgU3BlYWtlciBJbnRlcnZpZXc6IE5hdGhhbmllbCBUYWxib3R0
+enki_id: 4662
+---
+In preparation for this year's "RubyConf":http://rubyconf.org, I'm doing a "series of interviews":http://chadfowler.com/rubyconf-speaker-interviews of some of the speakers.
+
+Today's interview is with "Nathaniel Talbott":http://terralien.com, creator of Ruby's built-in Test::Unit framework and long time Rubyist.  At RubyConf, Nathaniel will be presenting "Fear of Programming":http://rubyconf.org/talks/24.
+
+h2. You've spoken at 7 out of 7 RubyConfs and you're about to speak at your 8th. I've noticed your topics are veering farther and farther away from programming in Ruby. Is this because you're afraid?
+
+The primary impetus behind my talk this year is my discovery of two things:
+
+* I get lethargic/depressed/unproductive/unhappy when I'm not spending
+a significant portion of my time creating.
+* I often don't create because I'm afraid to start.
+
+These realizations grew out of my being the "business guy" for
+"Terralien":http://terralien.com/ for going on three years now, and thus not billing myself
+out for development work. While doing sales, marketing, project
+management, etc., is creating in some sense, I'm still a developer at
+heart and to create I need to *code*. When I don't, everything in my
+life (including all the business stuff) suffers. And the primary
+hurdle to writing code has been fear.
+
+So to answer your question, yes and no. Yes, a large part of the
+reason I've trended away from talking about code has been because fear
+kept me from writing code to talk about. No for this year, because
+I've written more Ruby in the past year than I have in a while, and
+have more to talk about, but I think talking about the fear is more
+important this year.
+
+And if one made the assumption there won't be any code in my talk,
+they might be in for a surprise...
+
+
+h2. At the first Ruby conference, you spoke about Lapidary, which became Test::Unit.  Are you as zealous about testing as you were when you created Lapidary? Why or why not?
+
+This is actually a big part of my talk, so I don't want to give away
+too much. Suffice it to say that my perspective on testing has changed
+significantly over the past six years, and a lot of that change has to
+do with fighting fear.
+
+
+h2. How does it feel having your first Ruby project in ruby's standard library? As one of the creators of RubyGems, I'm no stranger to harsh criticism of my Open Source code. Have you encountered a lot of this?  Is it worth it?
+
+To answer the last question first, it is *very* worth it. I don't
+think test/unit has drawn the ire that RubyGems has, since a testing
+framework doesn't have quite the entrenchment that a packaging system
+does. This has allowed various competitors and add-ons to spring up,
+giving would-be critics an outlet for their "I could do it better"
+ideas, and the cool thing is that they often *can* do it better and we
+all benefit.
+
+As far as getting test/unit in to the standard library, it was great
+for me but mostly bad for test/unit. It's a big plus to tell potential
+clients that you wrote something in the Ruby stdlib, and it does great
+things for your Google juice. At the same time, I was already
+struggling with motivation and productivity when working on test/unit
+at the time, and what I discovered is that getting a library in the
+stdlib is a huge demotivator for working on it, at least for me. It
+becomes *much* easier to stick with the status quo than to change it.
+
+So if getting "standardized" was good for me and bad for test/unit,
+how was it for the Ruby community? I think in general it was a good
+thing. We needed a testing library in the stdlib, and test/unit might
+not be brilliant but it is solid and fairly simple. Having it there
+really helped the testing culture in Ruby, and that continues through
+today. I like to think that Ruby shipping with testing built-in
+influenced David to ship Rails with testing built-in, and I think
+that's fantastic.
+
+
+h2.  How can I be more productive? I would love to be one of these people who churns out useful libraries once every few weeks and keeps them maintained.
+
+I'll have lots to say about this in my talk, but for now I'll give two
+conflicting points of advice: first, you have to _defocus_. There's a
+real tendency to get tunnel vision about the things we "need" and to
+stop playing with the things we *want*. Stop worrying about useful and
+instead explore fun and interesting.
+
+The second piece of advice is to _focus_. There are so many projects
+and activities that we can spend time on, we have to choose. Review
+your list of projects: are they all things you're excited about
+working on and that you're one of the best people to work on? I handed
+off maintainer-ship of test/unit for exactly this reason: it was
+distracting me from other things I was more passionate about.
+
+Confused and intrigued? Great, now you're motivated to come listen to
+"Fear of Programming":http://rubyconf.org/talks/24 at "RubyConf":http://rubyconf.org!
+
+
+h2. What are you passionate about outside of computer programming?
+
+Well, I have four amazing kids (ages 5, 3, 2 and 1) who I love
+watching grow and learn. We'll be homeschooling all of them when the
+times comes, so I have lots of years of learning with them to look
+forward to. I'm also really passionate about entrepreneurship, and
+have a few things cooking in that sphere, not the least of which is
+"http://spreedly.com":http://spreedly.com. I also enjoy studying the Bible, and enjoy
+teaching at our church every few months. So, life is pretty busy, but
+I'm loving every minute of it!

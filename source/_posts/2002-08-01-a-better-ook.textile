@@ -1,0 +1,22 @@
+---
+layout: post
+title: !binary |-
+  QSBCZXR0ZXIgT29rCg==
+enki_id: 4540
+---
+You may have seen my Ruby-based Ook/Bf interpreter, linked from this page.
+Yesterday, I happened upon the following (also Ruby-based) Bf interpreter
+on &lt;a href=&quot;<a
+href="http://www.cs.auc.dk/~larsch/ruby/">this">www.cs.auc.dk/~larsch/ruby/">this</a>
+disturbed gentleman&#8217;s site&lt;/a&gt;. I&#8217;m at a loss for words.
+:)
+
+<p>
+&lt;PRE&gt;
+a=&#8217;p=0;t=&quot;&quot;*30000;&#8217;;$&lt;.each_byte{|c|a&lt;&lt;({?&gt;=&gt;&quot;p+=1;&quot;,?&lt;=&gt;&quot;p-=1;&quot;,?+=&gt;
+&quot;t[p]+=1;&quot;,?-=&gt;&quot;t[p]-=1;&quot;,?[=&gt;&quot;while
+t[p]&gt;0;&quot;,?]=&gt;&quot;end;&quot;,?.=&gt;&quot;putc t[p];&quot;,
+?,=&gt;&quot;<a
+href="http://c">t[p]=STDIN.getc||0;"}</a>||&quot;&quot;)};eval a
+&lt;/PRE&gt;
+</p>

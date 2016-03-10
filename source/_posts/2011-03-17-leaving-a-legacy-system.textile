@@ -1,0 +1,45 @@
+---
+layout: post
+title: !binary |-
+  TGVhdmluZyBhIExlZ2FjeS4uLlN5c3RlbQ==
+enki_id: 4716
+categories: !binary |-
+  c29mdHdhcmUsIGRldmVsb3BtZW50LCBjYXJlZXI=
+---
+Ever since reading David Heinemeir Hansson's post "Enterprise Is the New Legacy":http://37signals.com/svn/archives2/predicting_06_enterprise_is_the_new_legacy.php over five years ago, I've been chewing on something. The gist of the post was that "enterprise" is and should be a bad word, just like "legacy".
+
+But why is "legacy" a bad word to begin with?  The word makes most software developers and IT people ill. 
+
+In other fields and in life in general, the word "legacy" isn't thusly encumbered.  It refers to an inheritance left to those behind you. Your life's work. Your essential story.
+
+In software, that story is assumed to be a tragedy.
+
+But even in the case of software, "legacy" is an indication of success. Sure, old software was written with old technology. And most software (or indeed most things created by humans) has its share of warts and dark corners. But the fact that we refer to a piece of software as "legacy" indicates that it was successful enough to have been deployed and to have been used for enough good that it is now something we're "left with" and that we must either maintain or replace.
+
+That isn't so bad, is it?  In an industry where "more software projects fail or are 'challenged' than succeed":http://www.projectsmart.co.uk/docs/chaos-report.pdf, getting to legacy status is cause for celebration!
+
+Here's a sad idea:  as developers, even when we _do_ succeed, we tend to create things that are abandoned at great cost only a few years after we pour our hearts and souls into them. As rough as your last project might have been and as hard as the deadlines were, chances are your project will be disparaged and terminated "within 10 years of its birth":http://www.graco.c.u-tokyo.ac.jp/~tamai/pub/icsm92.pdf.
+
+So, what do we developers leave as a legacy? In most cases, we don't leave much of anything.
+
+At a previous job, a mission-critical core system ran on an ancient, customized mainframe with a custom TCP/IP stack and a custom relational database system. At the time, the system was over 25 years old. It performed well. It survived Y2K. It was well understood. It reliably ran our (big) business.
+
+That was ten years ago. I'd be willing to bet it's still running. If not the whole system, at least a subset.
+
+That would make it 35. 
+
+Sure, it had its ugly parts. And most of us were terrified of it. But, hey! Still running and doing its business after 35 years. I hope I ever create something that successful.  
+
+How _would_ I create something that had that kind of longevity?  How different would my designs be if I believed I was creating software to last 40 years?  
+
+It's daunting, isn't it? My knee-jerk reaction might be to do a Big Design Up Front. But how could I possibly design an entire system with 40 years of future knowledge in mind? I couldn't. Even predicting next year is hard.
+
+So maybe I'd need to design something that was ultimately flexible. A framework of frameworks where everything is pluggable.
+
+Any software developer who lived through parts of the 90s knows these systems buckle under their own weight.
+
+I don't _know_ how to design a system that could live a long and healthy life. I don't _know_ because I haven't done it yet. Have you?
+
+<i>Note: This wasn't a rhetorical question.</i>
+
+
