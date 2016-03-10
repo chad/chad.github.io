@@ -16,7 +16,7 @@ Below are links to a few talks I've given over the years:
 h2. Service, Scottish RubyConf 2011 Closing Keynote
 Edinburgh, Scotland
 
-<a href="http://cdn.confreaks.com/system/assets/datas/1533/original/ML2_06_ChadFowler.mp4?1306031969"><img src="http://www.confreaks.com/system/videos/images/565/preview/565-scotlandruby2011-closing-keynote-thumb_0003.png?1306032938"></a>
+<a href="http://confreaks.tv/videos/scotlandruby2011-closing-keynote"><img src="/images/scottish-ruby.png"></a>
 
 h2. Legacy, Aloha RubyConf 2011
 Honolulu, Hawaii, USA
