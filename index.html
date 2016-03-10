@@ -2,22 +2,12 @@
 layout: default
 ---
 
-<div class="home">
+I'm Chad Fowler.  I [write books](http://chadfowler.com/books/), [write and play music](http://soundcloud.com/chad-fowler), write software, lead organizations (currently for [Microsoft, in Berlin](http://microsoft.com)), [invest in startups](http://blueyard.com), [speak](http://chadfowler.com/speaking/), [teach](http://pragmaticstudio.com/), learn, organize conferences, etc.
 
-  <h1 class="page-heading">Posts</h1>
+I started and co-organized a couple of Ruby-related conferences including <a href="http://rubyconf.org">The International Ruby Conference</a> and <a href="http://railsconf.org">RailsConf</a>.
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+This is what I look like:
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<img src="/images/chad.jpg" width="200"/><br />
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
