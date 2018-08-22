@@ -4,6 +4,8 @@ title: !binary |-
   SW52ZW50aW9uIG9yIEltcGxlbWVudGF0aW9uPw==
 enki_id: 4470
 ---
+  (This article is part of the "Big Rewrite":http://chadfowler.com/2006/12/27/the-big-rewrite series.)
+
 In his article, <a
 href="http://www.zedshaw.com/essays/c2i2_hypothesis.html">The C2I2
 Hypothesis</a>, programmer Zed Shaw criticizes the famous <a
