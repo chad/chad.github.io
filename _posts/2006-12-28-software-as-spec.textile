@@ -5,7 +5,7 @@ title: !binary |-
 enki_id: 4471
 ---
 (This article is part of the <a
-href="http://chadfowler.com/index.cgi/Computing/Programming/TheBigRewrite/TheBigRewrite.rdoc,v">Big
+href="http://chadfowler.com/2006/12/27/the-big-rewrite">Big
 Rewrite</a> series.)
 
 <p>
