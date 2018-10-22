@@ -1,0 +1,71 @@
+---
+layout: post
+title: !binary |-
+  SW52ZW50aW9uIG9yIEltcGxlbWVudGF0aW9uPw==
+enki_id: 4470
+---
+
+(This article is part of the [Big
+Rewrite](http://chadfowler.com/2006/12/27/the-big-rewrite) series.)
+
+In his article, <a
+href="http://www.zedshaw.com/essays/c2i2_hypothesis.html">The C2I2  
+Hypothesis</a>, programmer Zed Shaw criticizes the famous <a
+href="http://en.wikipedia.org/wiki/Chrysler_Comprehensive_Compensation_System">C3  
+project</a> at Chrysler, which is known for being the birthplace of
+eXtreme  
+Programming. He says that the project was an implementation—not an  
+invention. An invention, according to Zed, is something new which
+needs  
+creativity and high customer involvement, whereas an implementation is
+a  
+project which participants (including programmers) have done before.  
+According to Zed:
+
+<blockquote>
+If that’s the case, why was the customer involved all the time? They had
+a  
+completely working specification in an already working system. Replacing
+it is  
+more a matter of reverse engineering than gathering vision, customer
+feedback, use cases,  
+stories, or any of the other crap the XP team used.
+
+</blockquote>
+<p>
+Here’s the problem: when does the label "Payroll System&quot;  
+become so broad that you don’t <em>know</em> if it’s an  
+invention or an implementation? Could it be possible that at a huge
+company  
+like Chrysler the payroll system was unlike any other payroll system
+that  
+had ever existed? And, within the realm of this possibility, might it
+also  
+be possible that Chrysler were redesigning the system, because through
+such  
+changes as globalization and evolving international tax and labor laws,
+the  
+system which was being replaced was no longer valid?
+
+</p>
+<p>
+My point isn’t to say Zed is wrong. He makes some excellent points  
+and may very well be right (though, knowing some of the guys on the C3  
+project, I’d guess they knew the difference between invention and  
+implementation).
+
+</p>
+<p>
+My point is that it’s not always clear cut which things are  
+implementation and which are invention. Worse than being ambiguous,  
+it’s often not clear that it <em>is</em> ambiguous. My experience  
+says that most of the time, people doing the Big Rewrite will assume
+that  
+they’re doing an implementation and will staff and estimate  
+accordingly.
+
+</p>
+<p>
+Most of the time, they’re wrong.
+
+</p>

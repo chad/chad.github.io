@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  Q29uc3VsdGluZw==
+enki_id: 4588
+---
+
+Through my work at [InfoEther](http://infoether.com), I’m available to
+help you with your projects.
+
+I’ve worked in a broad range of platforms, architectures, and
+programming languages. I’m available to:
+
+-   Write code!
+-   Perform code reviews and help you refactor
+-   Jump-start your Ruby/Rails project
+-   Mentor your developers
+-   Set up automation for your build and deployment processes
+-   Help you set up your Rails deployment environment
+-   Help you plan and execute [The Big
+    Rewrite](/blog/2006/12/27/the-big-rewrite)
