@@ -1,0 +1,36 @@
+---
+layout: post
+title: !binary |-
+  R2FtYml0IENvZGVGZXN0IGluIEZ1bGwgU3dpbmcK
+enki_id: 4498
+---
+
+Not to be outdone by the Seattle.rb crew, Greg and James are <a
+href="http://www.livejournal.com/users/ruby_gambit/">broadcasting
+their  
+progress</a> on their <a
+href="http://ruby-lang.org/en/20050311.html">RubyCentral CodeFest  
+grant</a>.
+
+<p>
+It’s fun to watch an ongoing, quickly moving project like this. As  
+Tom Copeland mentioned on <a href="http://ruby-talk.org">ruby-talk</a>,
+you  
+can see the CVS age sticking around in minutes (and not hours or days).
+
+</p>
+<p>
+When it’s finished, Gambit looks like it’s going to be  
+something fun to play with:
+
+</p>
+            Gambit is pure Ruby framework for building multiplayer Web games
+            offering two key services:  Game management and design tools.  Gambit
+            can manage player's accounts, game hosting and joining, player
+            histories, in-game communication systems and out-of-game notifications
+            for in-game activities.
+
+<p>
+It’s nice to see these RubyCentral CodeFests starting to happen.
+
+</p>

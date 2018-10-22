@@ -1,0 +1,21 @@
+---
+layout: post
+title: !binary |-
+  V2VsY29tZSBCYWNrIENvZGVQYXN0ZQo=
+enki_id: 4473
+---
+
+<a href="http://codedbliss.com">Bruce Williams</a> has resurrected
+(given  
+rebirth to, actually) his <a
+href="http://codedbliss.com/index.php?p=7">CodePaste</a> system. This
+time  
+it’s written in <a href="http://www.rubyonrails.org">Rails</a>.
+
+<p>
+For those of us who collaborate with different programmers in
+different  
+countries every day, this is a wonderful idea with an even better  
+implementation.
+
+</p>

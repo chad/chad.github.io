@@ -1,0 +1,18 @@
+---
+layout: post
+title: !binary |-
+  V29yayBvciBQbGF5Pwo=
+enki_id: 4452
+---
+
+I thought this was a really nice way to think about things:
+
+<p>
+<a
+href="http://www.toolshed.com/blog/SocialCommentary/WorkPlay.html,v">www.toolshed.com/blog/SocialCommentary/WorkPlay.html,v</a>
+
+</p>
+<p>
+..very timely if you’re me.
+
+</p>

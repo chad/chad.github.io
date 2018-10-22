@@ -1,0 +1,33 @@
+---
+layout: post
+title: !binary |-
+  T1NDT04gLSBJbnZhc2lvbiBvZiB0aGUgUnVieWlzdHMK
+enki_id: 4455
+---
+
+O’Reilly’s <a
+href="http://conferences.oreillynet.com/os2005/">7th annual Open
+Source  
+Convention</a> will be happening on Aug. 1-5 in beautiful Portland,
+Oregon.
+
+<p>
+This year, <a href="http://ruby-lang.org">we’re</a> staging a hostile  
+takeover. If you want to join in on the action, <a
+href="http://conferences.oreillynet.com/cs/os2005/create/e_sess">go  
+signup</a> for a talk (or two).
+
+</p>
+<p>
+If you don’t do Ruby, you’re still allowed to submit a  
+proposal. But, everyone interesting will be in the Ruby track this
+year.  
+<img src="http://www.chadfowler.com/images/smiley.jpg">
+
+</p>
+<p>
+<em>Update</em>: I forgot to mention that you only have until  
+<em>Sunday</em> to get your proposals submitted! <em>Sunday</em>.  
+Don’t procrastinate.
+
+</p>

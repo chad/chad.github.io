@@ -1,0 +1,24 @@
+---
+layout: post
+title: !binary |-
+  SXQncyBiZWVuIGEgdmVyeSBnb29kIHllYXIK
+enki_id: 4487
+---
+
+Me: "How many people get paid to write Ruby code?"
+
+<p>
+<a href="http://rubyconf.org">RubyConf</a> attendees:
+
+</p>
+<p>
+<img src="http://chadfowler.com/images/HowManyPeopleGetPaid1.jpg"> <img
+src="http://chadfowler.com/images/HowManyPeopleGetPaid2.jpg"> <img
+src="http://chadfowler.com/images/HowManyPeopleGetPaid3.jpg">
+
+</p>
+<p>
+(also see <a
+href="http://clarkware.com/cgi/blosxom/2005/10/18#JobsAsTrendIndicator">this</a>)
+
+</p>

@@ -1,0 +1,36 @@
+---
+layout: post
+title: !binary |-
+  TmV4dCBHZW5lcmF0aW9uIEFnZ3JlZ2F0b3JzCg==
+enki_id: 4562
+---
+
+I think there are a lot of people (including me) who have been thinking
+of  
+implementing something like this:
+
+<p>
+<a
+href="http://www.decafbad.com/blog/geek/syndicated_whuffie.phtml">www.decafbad.com/blog/geek/syndicated\_whuffie.phtml</a>
+
+</p>
+<p>
+I’m really looking forward to the day when this bubbles up to the top  
+of the right person’s priority list, and enough people start using it  
+to make it valuable.
+
+</p>
+<p>
+I’m especially interested in the relevance (see <a
+href="index.cgi/Computing/LatentSemanticIndexing.rdoc,v">LatentSemanticIndexing</a>)  
+idea.
+
+</p>
+<p>
+With the combination of these kinds of shifts and the proliferation of
+P2P  
+and wireless technologies, I’m betting (and hoping) that the way  
+I’ll be using the web by the end of 2004 will be very different than  
+the way I use it now.
+
+</p>
