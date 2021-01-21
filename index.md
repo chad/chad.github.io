@@ -8,9 +8,9 @@
 
 saxophonist, label owner, programmer, etc.
 
-* <a href="https://mahakalamusic.com">Mahakala Music, my record label</a>
-* <a href="http://twitter.com/chadfowlermusic">@chadfowlermusic</a>
-* <a href="http://twitter.com/chadfowlermusic">@chadfowler</a> (tech stuff)
+* [Mahakala Music, my record label](https://mahakalamusic.com)
+* [@chadfowlermusic](http://twitter.com/chadfowlermusic)
+* [@chadfowler](http://twitter.com/chadfowlermusic) (tech stuff)
 
   </body>
 </html>
