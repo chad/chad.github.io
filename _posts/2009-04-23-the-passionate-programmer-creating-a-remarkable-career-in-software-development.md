@@ -1,9 +1,0 @@
----
-layout: post
-title: !binary |-
-  VGhlIFBhc3Npb25hdGUgUHJvZ3JhbW1lcjogQ3JlYXRpbmcgYSBSZW1hcmth
-  YmxlIENhcmVlciBpbiBTb2Z0d2FyZSBEZXZlbG9wbWVudA==
-enki_id: 4682
----
-
-![](http://assets3.pragprog.com/images/covers/190x228/cfcar2.jpg):http://www.pragprog.com/titles/cfcar2/the-passionate-programmer
