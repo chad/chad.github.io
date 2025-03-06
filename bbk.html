@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booboo's Voice Don't Work</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffebf5;
+            color: #5d3b69;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ff9ed2' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+            border: 3px solid #ffb7e5;
+            position: relative;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0C32.4 0 18.2 14.2 18.2 31.8c0 3.4.5 6.7 1.5 9.8-7.8 1.5-13.7 8.4-13.7 16.6 0 9.4 7.6 17 17 17 2.2 0 4.3-.4 6.3-1.2 5.3 3.9 11.9 6.2 19 6.2 7.1 0 13.7-2.3 19-6.2 2 .8 4.1 1.2 6.3 1.2 9.4 0 17-7.6 17-17 0-8.2-5.9-15.1-13.7-16.6 1-3.1 1.5-6.4 1.5-9.8C77.8 14.2 63.6 0 46 0H50z' fill='%23ffb7e5'/%3E%3Cellipse cx='35' cy='40' rx='7' ry='8' fill='%23000'/%3E%3Cellipse cx='65' cy='40' rx='7' ry='8' fill='%23000'/%3E%3Cpath d='M42 60c0 4.4 3.6 8 8 8s8-3.6 8-8H42z' fill='%23000'/%3E%3Cpath d='M72 28c5.5 0 10-4.5 10-10 0-2.2-1.8-4-4-4-1.2 0-2.3.6-3 1.5-.7-.9-1.8-1.5-3-1.5s-2.3.6-3 1.5c-.7-.9-1.8-1.5-3-1.5-2.2 0-4 1.8-4 4 0 5.5 4.5 10 10 10zm-44 0c5.5 0 10-4.5 10-10 0-2.2-1.8-4-4-4-1.2 0-2.3.6-3 1.5-.7-.9-1.8-1.5-3-1.5s-2.3.6-3 1.5c-.7-.9-1.8-1.5-3-1.5-2.2 0-4 1.8-4 4 0 5.5 4.5 10 10 10z' fill='%23ffb7e5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 10;
+        }
+        .container::after {
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23ffb7e5'/%3E%3Ccircle cx='30' cy='40' r='8' fill='%23000'/%3E%3Ccircle cx='70' cy='40' r='8' fill='%23000'/%3E%3Cpath d='M30 65c0 11 9 20 20 20s20-9 20-20H30z' fill='%23fff'/%3E%3Cpath d='M40 75c0-2.8 4.5-5 10-5s10 2.2 10 5' stroke='%23ff69b4' stroke-width='2' fill='none'/%3E%3Cpath d='M85 25c0 5.5-4.5 10-10 10s-10-4.5-10-10M35 25c0 5.5-4.5 10-10 10s-10-4.5-10-10' fill='%23ffb7e5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 10;
+        }
+        h1 {
+            color: #ff69b4;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+            font-family: 'Comic Sans MS', cursive;
+            box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+        }
+        button:hover {
+            background-color: #ff1493;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+        }
+        button:active {
+            transform: translateY(1px);
+        }
+        button:disabled {
+            background-color: #ffb6c1;
+            cursor: not-allowed;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .listening {
+            background-color: #ff69b4;
+            color: white;
+            animation: pulse 1.5s infinite;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .transcript-container {
+            margin-top: 20px;
+        }
+        .transcript {
+            background-color: #fff5fb;
+            border: 2px dashed #ffb7e5;
+            border-radius: 15px;
+            padding: 15px;
+            min-height: 150px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .voice-options {
+            margin: 20px 0;
+            background-color: #fff5fb;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid #ffb7e5;
+        }
+        select, input {
+            padding: 8px;
+            border-radius: 10px;
+            border: 1px solid #ffb7e5;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+        .history-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #fff5fb;
+            border-radius: 15px;
+            border-left: 5px solid #ff69b4;
+        }
+        .clear-btn {
+            background-color: #ff4081;
+        }
+        .clear-btn:hover {
+            background-color: #e91e63;
+        }
+        h2 {
+            color: #ff69b4;
+            border-bottom: 2px dotted #ffb7e5;
+            padding-bottom: 5px;
+        }
+        .paw-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30 40C30 35.6 26.4 32 22 32S14 35.6 14 40s3.6 8 8 8 8-3.6 8-8zM48 40c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8 8-3.6 8-8zM86 40c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8 8-3.6 8-8zM68 40c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8 8-3.6 8-8zM50 75c-8.3 0-15-6.7-15-15 0-1.7 1.3-3 3-3h24c1.7 0 3 1.3 3 3 0 8.3-6.7 15-15 15z' fill='%23ff69b4'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Booboo's Voice Don't Work <span class="paw-icon"></span></h1>
+        <p>Whisper into your microphone and the app will speak for you! Purrfect for when your voice needs a break! Meow!</p>
+
+        <div class="controls">
+            <div id="statusBox" class="status listening">Always listening</div>
+        </div>
+
+        <div class="voice-options">
+            <label for="voiceSelect">Select Voice:</label>
+            <select id="voiceSelect"></select>
+            
+            <label for="rateRange">Speech Rate:</label>
+            <input type="range" id="rateRange" min="0.5" max="2" step="0.1" value="1">
+            <span id="rateValue">1</span>
+            
+            <label for="pitchRange">Speech Pitch:</label>
+            <input type="range" id="pitchRange" min="0.5" max="2" step="0.1" value="1">
+            <span id="pitchValue">1</span>
+        </div>
+
+        <div class="transcript-container">
+            <h2><span class="paw-icon"></span> Current Transcript:</h2>
+            <div id="transcript" class="transcript"></div>
+            <button id="speakBtn">Speak Text & Clear</button>
+            <button id="copyBtn">Copy to Clipboard</button>
+        </div>
+
+        <div class="history-container">
+            <h2><span class="paw-icon"></span> History:</h2>
+            <div id="history"></div>
+            <button id="clearBtn" class="clear-btn">Clear History</button>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const speakBtn = document.getElementById('speakBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const statusBox = document.getElementById('statusBox');
+        const transcriptBox = document.getElementById('transcript');
+        const historyBox = document.getElementById('history');
+        const voiceSelect = document.getElementById('voiceSelect');
+        const rateRange = document.getElementById('rateRange');
+        const pitchRange = document.getElementById('pitchRange');
+        const rateValue = document.getElementById('rateValue');
+        const pitchValue = document.getElementById('pitchValue');
+
+        // Variables
+        let recognition;
+        let isListening = false;
+        let transcript = '';
+        let history = JSON.parse(localStorage.getItem('whisperHistory')) || [];
+
+        // Initialize Speech Recognition
+        function initSpeechRecognition() {
+            if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+                recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+                recognition.continuous = true;
+                recognition.interimResults = true;
+                recognition.lang = 'en-US';
+
+                recognition.onstart = () => {
+                    isListening = true;
+                    statusBox.textContent = 'Listening...';
+                    statusBox.classList.add('listening');
+                    startBtn.disabled = true;
+                    stopBtn.disabled = false;
+                };
+
+                recognition.onend = () => {
+                    isListening = false;
+                    statusBox.textContent = 'Not listening';
+                    statusBox.classList.remove('listening');
+                    startBtn.disabled = false;
+                    stopBtn.disabled = true;
+                };
+
+                recognition.onresult = (event) => {
+                    let interimTranscript = '';
+                    
+                    for (let i = event.resultIndex; i < event.results.length; i++) {
+                        const result = event.results[i];
+                        if (result.isFinal) {
+                            transcript += result[0].transcript + ' ';
+                        } else {
+                            interimTranscript += result[0].transcript;
+                        }
+                    }
+                    
+                    transcriptBox.innerHTML = `
+                        <div>${transcript}</div>
+                        <div style="color: gray;">${interimTranscript}</div>
+                    `;
+                };
+
+                recognition.onerror = (event) => {
+                    console.error('Speech recognition error', event.error);
+                    statusBox.textContent = `Error: ${event.error}`;
+                    stopListening();
+                };
+            } else {
+                alert('Speech recognition is not supported in your browser. Try using Chrome, Edge, or Safari.');
+                startBtn.disabled = true;
+                statusBox.textContent = 'Speech recognition not supported';
+            }
+        }
+
+        // Initialize Speech Synthesis
+        function initSpeechSynthesis() {
+            if ('speechSynthesis' in window) {
+                // Populate voice select
+                speechSynthesis.onvoiceschanged = () => {
+                    const voices = speechSynthesis.getVoices();
+                    voiceSelect.innerHTML = '';
+                    
+                    voices.forEach((voice, index) => {
+                        const option = document.createElement('option');
+                        option.value = index;
+                        option.textContent = `${voice.name} (${voice.lang})`;
+                        if (voice.default) {
+                            option.selected = true;
+                        }
+                        voiceSelect.appendChild(option);
+                    });
+                };
+                
+                // Trigger voices to load
+                speechSynthesis.getVoices();
+            } else {
+                alert('Speech synthesis is not supported in your browser.');
+                speakBtn.disabled = true;
+            }
+        }
+
+        // Start listening
+        function startListening() {
+            transcript = '';
+            transcriptBox.innerHTML = '';
+            recognition.start();
+        }
+
+        // Stop listening
+        function stopListening() {
+            if (isListening) {
+                recognition.stop();
+                if (transcript.trim()) {
+                    addToHistory(transcript);
+                }
+            }
+        }
+
+        // Speak the text and clear
+        function speakText() {
+            const text = transcriptBox.textContent.trim();
+            if (!text) return;
+            
+            if ('speechSynthesis' in window) {
+                // Add to history before clearing
+                addToHistory(text);
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                
+                // Set voice
+                const voices = speechSynthesis.getVoices();
+                if (voices.length > 0) {
+                    utterance.voice = voices[voiceSelect.value];
+                }
+                
+                // Set rate and pitch
+                utterance.rate = parseFloat(rateRange.value);
+                utterance.pitch = parseFloat(pitchRange.value);
+                
+                // Clear transcript after speaking starts
+                utterance.onstart = () => {
+                    transcript = '';
+                    transcriptBox.innerHTML = '';
+                };
+                
+                speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Copy to clipboard
+        function copyToClipboard() {
+            const text = transcriptBox.textContent.trim();
+            if (!text) return;
+            
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert('Text copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert('Failed to copy text.');
+                });
+        }
+
+        // Add to history
+        function addToHistory(text) {
+            const timestamp = new Date().toLocaleString();
+            history.unshift({ text, timestamp });
+            
+            // Limit history to 10 items
+            if (history.length > 10) {
+                history = history.slice(0, 10);
+            }
+            
+            updateHistoryDisplay();
+            saveHistory();
+        }
+
+        // Update history display
+        function updateHistoryDisplay() {
+            historyBox.innerHTML = '';
+            
+            if (history.length === 0) {
+                historyBox.innerHTML = '<p>No history yet</p>';
+                return;
+            }
+            
+            history.forEach((item, index) => {
+                const historyItem = document.createElement('div');
+                historyItem.className = 'history-item';
+                historyItem.innerHTML = `
+                    <p><strong>${item.timestamp}</strong></p>
+                    <p>${item.text}</p>
+                    <button class="speak-history-btn" data-index="${index}">Speak</button>
+                `;
+                historyBox.appendChild(historyItem);
+            });
+            
+            // Add event listeners to speak buttons
+            document.querySelectorAll('.speak-history-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const index = parseInt(btn.dataset.index);
+                    const utterance = new SpeechSynthesisUtterance(history[index].text);
+                    
+                    // Set voice
+                    const voices = speechSynthesis.getVoices();
+                    if (voices.length > 0) {
+                        utterance.voice = voices[voiceSelect.value];
+                    }
+                    
+                    // Set rate and pitch
+                    utterance.rate = parseFloat(rateRange.value);
+                    utterance.pitch = parseFloat(pitchRange.value);
+                    
+                    speechSynthesis.speak(utterance);
+                });
+            });
+        }
+
+        // Save history to localStorage
+        function saveHistory() {
+            localStorage.setItem('whisperHistory', JSON.stringify(history));
+        }
+
+        // Clear history
+        function clearHistory() {
+            history = [];
+            updateHistoryDisplay();
+            saveHistory();
+        }
+
+        // Event listeners
+        speakBtn.addEventListener('click', speakText);
+        copyBtn.addEventListener('click', copyToClipboard);
+        clearBtn.addEventListener('click', clearHistory);
+
+        // Range input event listeners
+        rateRange.addEventListener('input', () => {
+            rateValue.textContent = rateRange.value;
+        });
+        
+        pitchRange.addEventListener('input', () => {
+            pitchValue.textContent = pitchRange.value;
+        });
+
+        // Initialize
+        initSpeechRecognition();
+        initSpeechSynthesis();
+        updateHistoryDisplay();
+        
+        // Start listening automatically when the page loads
+        window.addEventListener('load', () => {
+            startListening();
+        });
+
+        // Handle page unload
+        window.addEventListener('beforeunload', () => {
+            if (isListening) {
+                stopListening();
+            }
+        });
+    </script>
+</body>
+</html>
