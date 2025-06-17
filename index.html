@@ -27,15 +27,58 @@
             display: flex;
         }
 
-        /* Music Side */
+        /* Brain Divider Line */
+        .brain-divider {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.1) 20%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0.1) 80%,
+                transparent 100%);
+            z-index: 900;
+            transform: translateX(-50%);
+        }
+
+        .brain-divider::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: brainPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes brainPulse {
+            0%, 100% { 
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        /* Music Side - Right Brain (Creative) */
         .music-side {
             position: relative;
             width: 50%;
             height: 100%;
             background: #1a0033;
             background-image: 
-                radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(75, 0, 130, 0.4) 0%, transparent 50%);
+                radial-gradient(ellipse at 30% 30%, rgba(138, 43, 226, 0.3) 0%, transparent 40%),
+                radial-gradient(ellipse at 70% 70%, rgba(75, 0, 130, 0.4) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 60%);
             overflow: hidden;
             transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
@@ -44,7 +87,20 @@
             width: 60%;
         }
 
-        /* Tech Side */
+        .music-side::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 20 Q30 40 50 60 Q70 40 50 20" fill="none" stroke="rgba(255,0,255,0.05)" stroke-width="0.5"/></svg>') no-repeat center;
+            background-size: 80% 80%;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* Tech Side - Left Brain (Logical) */
         .tech-side {
             position: relative;
             width: 50%;
@@ -52,13 +108,27 @@
             background: #001a1a;
             background-image: 
                 linear-gradient(45deg, #00ffff 0%, transparent 70%),
-                linear-gradient(-45deg, #0080ff 0%, transparent 70%);
+                linear-gradient(-45deg, #0080ff 0%, transparent 70%),
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(0, 255, 255, 0.03) 50px, rgba(0, 255, 255, 0.03) 52px);
             overflow: hidden;
             transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
         .tech-side:hover {
             width: 60%;
+        }
+
+        .tech-side::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" fill="none" stroke="rgba(0,255,255,0.05)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(0,255,255,0.05)" stroke-width="0.5"/></svg>') no-repeat center;
+            background-size: 80% 80%;
+            opacity: 0.3;
+            pointer-events: none;
         }
 
         /* Glitch Effect */
@@ -424,10 +494,15 @@
 
     <!-- Main Content -->
     <div class="split-container">
+        <!-- Brain Divider -->
+        <div class="brain-divider"></div>
+        
         <!-- Music Side -->
         <div class="music-side">
-            <div class="floating-element" style="top: 20%; left: 10%; font-size: 100px; transform: rotate(-15deg);">♪</div>
-            <div class="floating-element" style="top: 60%; right: 20%; font-size: 80px; transform: rotate(30deg);">♫</div>
+            <div class="floating-element" style="top: 20%; left: 10%; font-size: 100px; transform: rotate(-15deg);">🎷</div>
+            <div class="floating-element" style="top: 60%; right: 20%; font-size: 80px; transform: rotate(30deg);">🎶</div>
+            <div class="floating-element" style="top: 40%; left: 30%; font-size: 60px; transform: rotate(45deg);">🎺</div>
+            <div class="floating-element" style="bottom: 30%; right: 40%; font-size: 70px; transform: rotate(-30deg);">🎵</div>
             
             <div class="side-content">
                 <h1 class="jazz-title">MUSIC</h1>
@@ -537,31 +612,78 @@
                     <div class="book-card">
                         <h3>Programming Ruby</h3>
                         <p>The Pragmatic Programmers' Guide</p>
-                        <a href="https://pragprog.com/titles/ruby5/programming-ruby-3-2-5th-edition/" target="_blank">Get Book →</a>
+                        <a href="https://pragprog.com/titles/ruby4/programming-ruby-1-9-2-0-4th-edition/" target="_blank">Get Book →</a>
                     </div>
                     
                     <div class="book-card">
                         <h3>Rails Recipes</h3>
-                        <p>Rails 3 Edition</p>
-                        <a href="https://pragprog.com/titles/rr2/rails-recipes/" target="_blank">Get Book →</a>
+                        <p>Best-selling 2nd book ever published on Rails</p>
                     </div>
                 </div>
 
-                <!-- Featured Podcast: Snarks Chocolate -->
-                <h2 style="margin: 40px 0 20px; font-size: 2em;">Featured: Snark Chocolate Podcast</h2>
-                <div class="media-container">
+                <!-- Podcast Appearances -->
+                <h2 style="margin: 40px 0 20px; font-size: 2em;">Featured Podcast Appearances</h2>
+                
+                <!-- Featured: Snark Chocolate -->
+                <div class="media-container" style="margin-bottom: 40px;">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/z4aOkR_TnpI" title="Chad Fowler on Snark Chocolate Podcast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <p style="font-size: 1.1em; line-height: 1.6; margin: 20px 0; opacity: 0.9;">
+                <p style="font-size: 1.1em; line-height: 1.6; margin: 0 0 40px 0; opacity: 0.9;">
                     Join Chad on the Snark Chocolate podcast where he discusses the intersection of technology, creativity, and craftsmanship.
                 </p>
+                
+                <!-- Developer on Fire -->
+                <div class="code-block" style="margin-bottom: 30px;">
+                    <h3 style="color: #00ffff; margin-bottom: 15px;">Developer on Fire - Being Deliberate</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">
+                        Exploring mindfulness, working at Microsoft, fear of letting people down, and being deliberate in career and life choices.
+                    </p>
+                    <a href="https://developeronfire.com/podcast/developer-on-fire-096-chad-fowler-being-deliberate" target="_blank">Listen to Episode →</a>
+                </div>
 
-                <!-- Conference Talks & Podcasts -->
-                <h2 style="margin: 40px 0 20px; font-size: 2em;">Talks & Interviews</h2>
+                <!-- Developing Leadership -->
+                <div class="code-block" style="margin-bottom: 30px;">
+                    <h3 style="color: #00ffff; margin-bottom: 15px;">Developing Leadership - An Engineering Leader's Search for Meaning</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">
+                        A heartfelt existential conversation with Jason Warner and Eiso Kant about authenticity, compassion, introverted leadership, and reflecting on what it means to be an engineering leader.
+                    </p>
+                    <a href="https://www.developingleadership.co/episode/an-engineering-leaders-search-for-meaning-with-chad-fowler" target="_blank">Listen to Episode →</a>
+                </div>
+
+                <!-- Modern CTO -->
+                <div class="code-block" style="margin-bottom: 30px;">
+                    <h3 style="color: #00ffff; margin-bottom: 15px;">Modern CTO Podcast - Microsoft Startup Advocacy</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">
+                        Discussing venture funding, common founder mistakes, and becoming an expert through writing. Insights from leading Microsoft's Startup Advocacy.
+                    </p>
+                    <a href="https://moderncto.io/48-chad-fowler-cto-microsoft/" target="_blank">Listen to Episode →</a>
+                </div>
+
+                <!-- Maintainable Software -->
+                <div class="code-block" style="margin-bottom: 30px;">
+                    <h3 style="color: #00ffff; margin-bottom: 15px;">Maintainable Software - How Small Can We Make This Problem</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">
+                        A candid chat with Robby Russell about building software in small pieces, unit testing perspectives, and lessons from leading Wunderlist.
+                    </p>
+                    <a href="https://maintainable.fm/episodes/chad-fowler-how-small-can-we-make-this-problem" target="_blank">Listen to Episode →</a>
+                </div>
+
+                <!-- alphalist.CTO -->
+                <div class="code-block" style="margin-bottom: 30px;">
+                    <h3 style="color: #00ffff; margin-bottom: 15px;">alphalist.CTO - Musician, Author and VC</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.6;">
+                        Transforming Wunderlist from monolith to microservices. A unique perspective on technology from a musician and RPG player background.
+                    </p>
+                    <div class="media-container">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7I8kPXOgmzeIepPy8cHyWg?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Conference Talks & Keynotes -->
+                <h2 style="margin: 40px 0 20px; font-size: 2em;">Conference Keynotes</h2>
                 
                 <!-- Notable Talks -->
                 <div style="margin-bottom: 40px;">
-                    <h3 style="font-size: 1.5em; margin-bottom: 20px; color: #00ffff;">Conference Keynotes</h3>
                     
                     <!-- Keynote 1 -->
                     <div class="media-container" style="margin-bottom: 30px;">
@@ -584,16 +706,6 @@
                     </div>
                 </div>
                 
-                <!-- Podcast Interviews -->
-                <div style="margin-bottom: 40px;">
-                    <h3 style="font-size: 1.5em; margin-bottom: 20px; color: #00ffff;">Podcast Interviews</h3>
-                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                        <a href="https://developeronfire.com/podcast/developer-on-fire-096-chad-fowler-being-deliberate" target="_blank" style="padding: 15px 30px; background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; font-size: 1.1em;">Developer on Fire: Being Deliberate</a>
-                        <a href="https://rubyrogues.com/chad-fowler-the-passionate-programmer" target="_blank" style="padding: 15px 30px; background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; font-size: 1.1em;">Ruby Rogues: The Passionate Programmer</a>
-                        <a href="https://www.se-radio.net/2006/09/episode-30-chad-fowler-on-ruby/" target="_blank" style="padding: 15px 30px; background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; font-size: 1.1em;">Software Engineering Radio</a>
-                        <a href="https://corecursive.com/chad-fowler-passionate-programmer/" target="_blank" style="padding: 15px 30px; background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; font-size: 1.1em;">Corecursive: Career Advice</a>
-                    </div>
-                </div>
 
                 <h2 style="margin: 40px 0 20px; font-size: 2em;">Open Source</h2>
                 <div class="code-block">
@@ -793,7 +905,7 @@
             // Music notes
             const musicSide = document.querySelector('.music-side');
             const note = document.createElement('div');
-            note.innerHTML = ['♪', '♫', '♬', '♩'][Math.floor(Math.random() * 4)];
+            note.innerHTML = ['🎷', '🎺', '🎸', '🎹', '🥁', '🎻', '🎵', '🎶', '🎼', '🎤'][Math.floor(Math.random() * 10)];
             note.style.position = 'absolute';
             note.style.left = Math.random() * 100 + '%';
             note.style.top = '100%';
@@ -801,7 +913,7 @@
             note.style.opacity = '0.3';
             note.style.pointerEvents = 'none';
             note.style.animation = 'floatUp 10s linear';
-            note.style.color = '#ff00ff';
+            note.style.filter = 'hue-rotate(' + Math.random() * 60 + 'deg)';
             note.style.textShadow = '0 0 10px rgba(255, 0, 255, 0.5)';
             musicSide.appendChild(note);
             

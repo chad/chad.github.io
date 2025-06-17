@@ -1,0 +1,26 @@
+I'll search for information about Chad Fowler's podcast appearances to find the most interesting and popular ones.Let me search for more specific information about Chad Fowler's popular podcast appearances.Let me search for more specific podcast episodes with Chad Fowler to get better links.Let me get the direct link for the Developer on Fire episode.Let me search for the specific Developer on Fire episode URL.Based on my research, here are the top 5 most interesting and popular podcasts where Chad Fowler was a guest:
+
+## 1. **Developer on Fire - Episode 096: Chad Fowler - Being Deliberate**
+Chad Fowler talks with Dave Rael about being mindful, working at Microsoft, fear of letting people down, and being deliberate. This episode explores Chad's journey as an internationally known software developer, trainer, manager, speaker, and musician. Topics include his work leading Wunderlist at Microsoft and his role as Venture Partner at BlueYard Capital.
+
+**Link:** https://developeronfire.com/podcast/developer-on-fire-096-chad-fowler-being-deliberate
+
+## 2. **Developing Leadership - Episode 28: An Engineering Leader's Search for Meaning**
+Join Chad Fowler, Jason Warner, and Eiso Kant in a heartfelt existential episode on what it means to be an engineering leader that will have you question if the manager path is the right one for you. This episode dives deep into authenticity and compassion, introverted leadership, buying freedom, and reflecting on mortality to help you lead a better life and be a better leader.
+
+**Link:** https://www.developingleadership.co/episode/an-engineering-leaders-search-for-meaning-with-chad-fowler
+
+## 3. **Modern CTO Podcast - Episode 49: Chad Fowler CTO Microsoft Startup Advocacy**
+Today we are talking to Chad Fowler, the CTO of Microsoft's Startup Advocacy. And we discuss what it means to be venture funded, common mistakes founders make and how to avoid them, and how you can become an expert on a subject through the process of writing a book. This episode provides valuable insights for startup founders and CTOs.
+
+**Link:** https://moderncto.io/48-chad-fowler-cto-microsoft/
+
+## 4. **Maintainable Software Podcast - Chad Fowler: How Small Can We Make This Problem**
+Robby has a candid chat with Chad Fowler, the General Partner & CTO at BlueYard Capital, about the importance of building software in small, manageable pieces to facilitate easy updates or replacements, the counterintuitive perspective on unit testing's impact on maintainability, strategies for keeping software up-to-date by redeploying to new platforms. The conversation includes insights from Chad's tenure as CTO of Wunderlist and his philosophy on software development.
+
+**Link:** https://maintainable.fm/episodes/chad-fowler-how-small-can-we-make-this-problem
+
+## 5. **alphalist.CTO Podcast - Episode 39: Chad Fowler // CTO, Musician, Author and VC**
+Chad Fowler - an engineer, musician, and author - transformed Wunderlist 📋 from a messy monolith to a neat multi-language microservice. Be inspired by his unique view on technology stemming from his background as a musician 🎵 and RPG player 🎮. Topics covered include why we should rethink how computer science is taught, why and how he used multiple languages in his microservice architecture, and why startups should wait before adopting named methodologies.
+
+**Link:** https://open.spotify.com/episode/7I8kPXOgmzeIepPy8cHyWg
