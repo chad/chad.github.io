@@ -103,6 +103,38 @@
             color: #fff;
             overflow-x: hidden;
             cursor: crosshair;
+            position: relative;
+        }
+        
+        /* Brain Background */
+        .brain-background {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vw;
+            max-width: 800px;
+            max-height: 800px;
+            background: url('brain.png') no-repeat center;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 10;
+            pointer-events: none;
+            animation: brainFade 8s ease-in-out infinite;
+            filter: invert(1) brightness(0.8);
+            mix-blend-mode: screen;
+        }
+        
+        @keyframes brainFade {
+            0%, 100% { 
+                opacity: 0.1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% { 
+                opacity: 0.2;
+                transform: translate(-50%, -50%) scale(1.05);
+            }
         }
 
         /* Split Screen Container */
@@ -111,6 +143,7 @@
             width: 100vw;
             height: 100vh;
             display: flex;
+            z-index: 2;
         }
 
         /* Brain Divider Line */
@@ -131,65 +164,13 @@
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
 
-        .brain-divider::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 200px;
-            height: 240px;
-            transform: translate(-50%, -50%);
-            animation: brainPulse 6s ease-in-out forwards;
-            z-index: 1000;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240"><defs><linearGradient id="leftGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgba(255,0,255,0.8)"/><stop offset="100%" style="stop-color:rgba(255,0,255,0.3)"/></linearGradient><linearGradient id="rightGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgba(0,255,255,0.3)"/><stop offset="100%" style="stop-color:rgba(0,255,255,0.8)"/></linearGradient></defs><g id="brain"><path d="M100 20 C80 20 60 25 45 35 C30 45 20 60 20 80 C20 95 22 110 28 125 C34 140 42 155 55 170 C68 185 85 195 100 200 C115 195 132 185 145 170 C158 155 166 140 172 125 C178 110 180 95 180 80 C180 60 170 45 155 35 C140 25 120 20 100 20 Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5"/><path d="M100 20 L100 200" stroke="rgba(255,255,255,1)" stroke-width="3"/><g id="leftHemisphere"><path d="M100 20 C80 20 60 25 45 35 C30 45 20 60 20 80 C20 95 22 110 28 125 C34 140 42 155 55 170 C68 185 85 195 100 200 L100 20" fill="url(%23leftGrad)" opacity="0.8"/><path d="M35 50 C40 45 50 45 55 50 C60 55 60 65 55 70 C50 75 40 75 35 70 C30 65 30 55 35 50" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M40 75 C45 70 55 70 60 75 C65 80 65 90 60 95 C55 100 45 100 40 95 C35 90 35 80 40 75" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M35 100 C40 95 50 95 55 100 C60 105 60 115 55 120 C50 125 40 125 35 120 C30 115 30 105 35 100" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M45 125 C50 120 60 120 65 125 C70 130 70 140 65 145 C60 150 50 150 45 145 C40 140 40 130 45 125" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M55 150 C60 145 70 145 75 150 C80 155 80 165 75 170 C70 175 60 175 55 170 C50 165 50 155 55 150" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M65 45 C70 40 80 40 85 45 C90 50 90 60 85 65 C80 70 70 70 65 65 C60 60 60 50 65 45" fill="none" stroke="rgba(255,0,255,0.5)" stroke-width="1.5"/><path d="M70 85 C75 80 85 80 90 85 C95 90 95 100 90 105 C85 110 75 110 70 105 C65 100 65 90 70 85" fill="none" stroke="rgba(255,0,255,0.5)" stroke-width="1.5"/><path d="M75 115 C80 110 90 110 95 115 C100 120 100 130 95 135 C90 140 80 140 75 135 C70 130 70 120 75 115" fill="none" stroke="rgba(255,0,255,0.5)" stroke-width="1.5"/></g><g id="rightHemisphere"><path d="M100 20 C120 20 140 25 155 35 C170 45 180 60 180 80 C180 95 178 110 172 125 C166 140 158 155 145 170 C132 185 115 195 100 200 L100 20" fill="url(%23rightGrad)" opacity="0.8"/><path d="M165 50 C160 45 150 45 145 50 C140 55 140 65 145 70 C150 75 160 75 165 70 C170 65 170 55 165 50" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M160 75 C155 70 145 70 140 75 C135 80 135 90 140 95 C145 100 155 100 160 95 C165 90 165 80 160 75" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M165 100 C160 95 150 95 145 100 C140 105 140 115 145 120 C150 125 160 125 165 120 C170 115 170 105 165 100" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M155 125 C150 120 140 120 135 125 C130 130 130 140 135 145 C140 150 150 150 155 145 C160 140 160 130 155 125" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M145 150 C140 145 130 145 125 150 C120 155 120 165 125 170 C130 175 140 175 145 170 C150 165 150 155 145 150" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M135 45 C130 40 120 40 115 45 C110 50 110 60 115 65 C120 70 130 70 135 65 C140 60 140 50 135 45" fill="none" stroke="rgba(0,255,255,0.5)" stroke-width="1.5"/><path d="M130 85 C125 80 115 80 110 85 C105 90 105 100 110 105 C115 110 125 110 130 105 C135 100 135 90 130 85" fill="none" stroke="rgba(0,255,255,0.5)" stroke-width="1.5"/><path d="M125 115 C120 110 110 110 105 115 C100 120 100 130 105 135 C110 140 120 140 125 135 C130 130 130 120 125 115" fill="none" stroke="rgba(0,255,255,0.5)" stroke-width="1.5"/></g></g></svg>') no-repeat center;
-            background-size: contain;
-            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
-        }
-
-        @keyframes brainPulse {
-            0% { 
-                transform: translate(-50%, -50%) scale(1) rotate(0deg);
-                filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
-                opacity: 1;
-            }
-            10% {
-                transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
-                filter: drop-shadow(0 0 40px rgba(255, 0, 255, 0.6));
-                opacity: 1;
-            }
-            20% { 
-                transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
-                filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.8));
-                opacity: 1;
-            }
-            30% {
-                transform: translate(-50%, -50%) scale(1.1) rotate(-5deg);
-                filter: drop-shadow(0 0 40px rgba(0, 255, 255, 0.6));
-                opacity: 0.8;
-            }
-            50% {
-                transform: translate(-50%, -50%) scale(1) rotate(0deg);
-                filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
-                opacity: 0.4;
-            }
-            70% {
-                transform: translate(-50%, -50%) scale(0.9) rotate(0deg);
-                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
-                opacity: 0.1;
-            }
-            85%, 100% {
-                transform: translate(-50%, -50%) scale(0.8) rotate(0deg);
-                filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
-                opacity: 0;
-            }
-        }
 
         /* Music Side - Right Brain (Creative) */
         .music-side {
             position: relative;
             width: 50%;
             height: 100%;
-            background: #1a0033;
+            background: rgba(26, 0, 51, 0.9);
             background-image: 
                 radial-gradient(ellipse at 30% 30%, rgba(138, 43, 226, 0.3) 0%, transparent 40%),
                 radial-gradient(ellipse at 70% 70%, rgba(75, 0, 130, 0.4) 0%, transparent 40%),
@@ -218,7 +199,7 @@
             position: relative;
             width: 50%;
             height: 100%;
-            background: #001a1a;
+            background: rgba(0, 26, 26, 0.9);
             background-image: 
                 linear-gradient(45deg, #00ffff 0%, transparent 70%),
                 linear-gradient(-45deg, #0080ff 0%, transparent 70%),
@@ -625,6 +606,9 @@
     <div class="loading">
         <div class="loading-text">LOADING...</div>
     </div>
+    
+    <!-- Brain Background -->
+    <div class="brain-background"></div>
 
     <!-- Main Content -->
     <div class="split-container">
