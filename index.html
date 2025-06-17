@@ -199,34 +199,6 @@
         }
         
 
-        /* Hover expansion animation with delay */
-        @keyframes expandSide {
-            0%, 57% { width: 50%; }  /* Stay at 50% for 4 seconds (57% of 7s total) */
-            71% { width: 60%; }
-            86% { width: 75%; }
-            100% { width: 90%; }
-        }
-        
-        @keyframes contractSide {
-            0%, 57% { width: 50%; }  /* Stay at 50% for 4 seconds (57% of 7s total) */
-            71% { width: 40%; }
-            86% { width: 25%; }
-            100% { width: 10%; }
-        }
-        
-        .music-side:hover {
-            animation: expandSide 7s ease-out forwards;
-        }
-        
-        .music-side:hover ~ .tech-side {
-            animation: contractSide 7s ease-out forwards;
-        }
-        
-        .music-side:not(:hover) {
-            animation: none;
-            width: 50%;
-            transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
 
         .music-side::before {
             content: '';
@@ -255,20 +227,6 @@
             transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
-        .tech-side:hover {
-            animation: expandSide 7s ease-out forwards;
-        }
-        
-        .tech-side:not(:hover) {
-            animation: none;
-            width: 50%;
-            transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-        
-        /* Special case: when tech-side is hovered, music-side contracts */
-        .split-container:has(.tech-side:hover) .music-side {
-            animation: contractSide 7s ease-out forwards;
-        }
 
         .tech-side::before {
             content: '';
@@ -536,23 +494,6 @@
                 height: 50%;
             }
             
-            /* Disable horizontal animations on mobile, use vertical instead */
-            .music-side:hover, .tech-side:hover {
-                animation: none;
-                width: 100%;
-                height: 60%;
-            }
-            
-            .music-side:not(:hover), .tech-side:not(:hover) {
-                animation: none;
-                transition: height 0.8s ease;
-            }
-            
-            .split-container:has(.tech-side:hover) .music-side,
-            .music-side:hover ~ .tech-side {
-                animation: none;
-                height: 40%;
-            }
             
             .center-name {
                 font-size: 12vw;
@@ -977,6 +918,8 @@
         let audioContext;
         let analyser;
         let dataArray;
+        let animationId;
+        let isVisualizerActive = false;
         const canvas = document.getElementById('visualizer');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
@@ -986,6 +929,111 @@
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+        });
+        
+        // Initialize audio visualizer
+        function initVisualizer() {
+            if (audioContext && isVisualizerActive) return;
+            
+            // Go straight to simulated visualizer
+            setupMediaDetection();
+        }
+        
+        // Draw visualizer
+        function drawVisualizer() {
+            if (!isVisualizerActive) return;
+            
+            animationId = requestAnimationFrame(drawVisualizer);
+            
+            analyser.getByteFrequencyData(dataArray);
+            
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            const barWidth = (canvas.width / dataArray.length) * 2.5;
+            let barHeight;
+            let x = 0;
+            
+            for (let i = 0; i < dataArray.length; i++) {
+                barHeight = dataArray[i] * 2;
+                
+                // Color based on which side is dominant
+                const hue = (x < canvas.width / 2) ? 300 : 180; // Purple for left, cyan for right
+                ctx.fillStyle = `hsla(${hue}, 100%, 50%, 0.8)`;
+                
+                ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+                
+                x += barWidth + 1;
+            }
+        }
+        
+        // Setup media detection for YouTube/Spotify iframes
+        function setupMediaDetection() {
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                // Listen for play events (this is limited due to cross-origin policies)
+                iframe.addEventListener('load', () => {
+                    console.log('Media iframe loaded, visualizer ready');
+                });
+            });
+            
+            // Fallback: create a simple animated visualizer
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                analyser = audioContext.createAnalyser();
+                analyser.fftSize = 256;
+                
+                // Create oscillator for visual effect
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                gainNode.gain.value = 0; // Silent
+                oscillator.connect(gainNode);
+                gainNode.connect(analyser);
+                oscillator.start();
+                
+                const bufferLength = analyser.frequencyBinCount;
+                dataArray = new Uint8Array(bufferLength);
+                
+                // Simulate audio data
+                setInterval(() => {
+                    if (isVisualizerActive) {
+                        for (let i = 0; i < dataArray.length; i++) {
+                            dataArray[i] = Math.random() * 128 + Math.sin(Date.now() * 0.001 + i * 0.1) * 64;
+                        }
+                    }
+                }, 50);
+                
+                isVisualizerActive = true;
+                canvas.style.opacity = '0.3';
+                drawVisualizer();
+            }
+        }
+        
+        // Stop visualizer
+        function stopVisualizer() {
+            isVisualizerActive = false;
+            canvas.style.opacity = '0';
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+        }
+        
+        // Jazz keyword detection
+        let jazzBuffer = '';
+        document.addEventListener('keypress', (e) => {
+            jazzBuffer += e.key.toLowerCase();
+            if (jazzBuffer.length > 4) {
+                jazzBuffer = jazzBuffer.slice(-4);
+            }
+            
+            if (jazzBuffer === 'jazz') {
+                if (!isVisualizerActive) {
+                    initVisualizer();
+                } else {
+                    stopVisualizer();
+                }
+                jazzBuffer = '';
+            }
         });
         
         // Touch support for mobile
