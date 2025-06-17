@@ -32,16 +32,17 @@
             position: absolute;
             left: 50%;
             top: 0;
-            width: 2px;
+            width: 4px;
             height: 100%;
             background: linear-gradient(to bottom, 
                 transparent 0%, 
-                rgba(255, 255, 255, 0.1) 20%,
-                rgba(255, 255, 255, 0.3) 50%,
-                rgba(255, 255, 255, 0.1) 80%,
+                rgba(255, 255, 255, 0.2) 10%,
+                rgba(255, 255, 255, 0.5) 50%,
+                rgba(255, 255, 255, 0.2) 90%,
                 transparent 100%);
             z-index: 900;
             transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
 
         .brain-divider::before {
@@ -49,23 +50,51 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 40px;
-            height: 40px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
+            width: 200px;
+            height: 240px;
             transform: translate(-50%, -50%);
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: brainPulse 4s ease-in-out infinite;
+            animation: brainPulse 6s ease-in-out forwards;
+            z-index: 1000;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240"><defs><linearGradient id="leftGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgba(255,0,255,0.8)"/><stop offset="100%" style="stop-color:rgba(255,0,255,0.3)"/></linearGradient><linearGradient id="rightGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgba(0,255,255,0.3)"/><stop offset="100%" style="stop-color:rgba(0,255,255,0.8)"/></linearGradient></defs><g id="brain"><path d="M100 20 C80 20 60 25 45 35 C30 45 20 60 20 80 C20 95 22 110 28 125 C34 140 42 155 55 170 C68 185 85 195 100 200 C115 195 132 185 145 170 C158 155 166 140 172 125 C178 110 180 95 180 80 C180 60 170 45 155 35 C140 25 120 20 100 20 Z" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5"/><path d="M100 20 L100 200" stroke="rgba(255,255,255,1)" stroke-width="3"/><g id="leftHemisphere"><path d="M100 20 C80 20 60 25 45 35 C30 45 20 60 20 80 C20 95 22 110 28 125 C34 140 42 155 55 170 C68 185 85 195 100 200 L100 20" fill="url(%23leftGrad)" opacity="0.8"/><path d="M35 50 C40 45 50 45 55 50 C60 55 60 65 55 70 C50 75 40 75 35 70 C30 65 30 55 35 50" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M40 75 C45 70 55 70 60 75 C65 80 65 90 60 95 C55 100 45 100 40 95 C35 90 35 80 40 75" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M35 100 C40 95 50 95 55 100 C60 105 60 115 55 120 C50 125 40 125 35 120 C30 115 30 105 35 100" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M45 125 C50 120 60 120 65 125 C70 130 70 140 65 145 C60 150 50 150 45 145 C40 140 40 130 45 125" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M55 150 C60 145 70 145 75 150 C80 155 80 165 75 170 C70 175 60 175 55 170 C50 165 50 155 55 150" fill="none" stroke="rgba(255,0,255,0.6)" stroke-width="1.5"/><path d="M65 45 C70 40 80 40 85 45 C90 50 90 60 85 65 C80 70 70 70 65 65 C60 60 60 50 65 45" fill="none" stroke="rgba(255,0,255,0.5)" stroke-width="1.5"/><path d="M70 85 C75 80 85 80 90 85 C95 90 95 100 90 105 C85 110 75 110 70 105 C65 100 65 90 70 85" fill="none" stroke="rgba(255,0,255,0.5)" stroke-width="1.5"/><path d="M75 115 C80 110 90 110 95 115 C100 120 100 130 95 135 C90 140 80 140 75 135 C70 130 70 120 75 115" fill="none" stroke="rgba(255,0,255,0.5)" stroke-width="1.5"/></g><g id="rightHemisphere"><path d="M100 20 C120 20 140 25 155 35 C170 45 180 60 180 80 C180 95 178 110 172 125 C166 140 158 155 145 170 C132 185 115 195 100 200 L100 20" fill="url(%23rightGrad)" opacity="0.8"/><path d="M165 50 C160 45 150 45 145 50 C140 55 140 65 145 70 C150 75 160 75 165 70 C170 65 170 55 165 50" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M160 75 C155 70 145 70 140 75 C135 80 135 90 140 95 C145 100 155 100 160 95 C165 90 165 80 160 75" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M165 100 C160 95 150 95 145 100 C140 105 140 115 145 120 C150 125 160 125 165 120 C170 115 170 105 165 100" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M155 125 C150 120 140 120 135 125 C130 130 130 140 135 145 C140 150 150 150 155 145 C160 140 160 130 155 125" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M145 150 C140 145 130 145 125 150 C120 155 120 165 125 170 C130 175 140 175 145 170 C150 165 150 155 145 150" fill="none" stroke="rgba(0,255,255,0.6)" stroke-width="1.5"/><path d="M135 45 C130 40 120 40 115 45 C110 50 110 60 115 65 C120 70 130 70 135 65 C140 60 140 50 135 45" fill="none" stroke="rgba(0,255,255,0.5)" stroke-width="1.5"/><path d="M130 85 C125 80 115 80 110 85 C105 90 105 100 110 105 C115 110 125 110 130 105 C135 100 135 90 130 85" fill="none" stroke="rgba(0,255,255,0.5)" stroke-width="1.5"/><path d="M125 115 C120 110 110 110 105 115 C100 120 100 130 105 135 C110 140 120 140 125 135 C130 130 130 120 125 115" fill="none" stroke="rgba(0,255,255,0.5)" stroke-width="1.5"/></g></g></svg>') no-repeat center;
+            background-size: contain;
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
         }
 
         @keyframes brainPulse {
-            0%, 100% { 
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.5;
-            }
-            50% { 
-                transform: translate(-50%, -50%) scale(1.2);
+            0% { 
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
+                filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
                 opacity: 1;
+            }
+            10% {
+                transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
+                filter: drop-shadow(0 0 40px rgba(255, 0, 255, 0.6));
+                opacity: 1;
+            }
+            20% { 
+                transform: translate(-50%, -50%) scale(1.2) rotate(0deg);
+                filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.8));
+                opacity: 1;
+            }
+            30% {
+                transform: translate(-50%, -50%) scale(1.1) rotate(-5deg);
+                filter: drop-shadow(0 0 40px rgba(0, 255, 255, 0.6));
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
+                filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
+                opacity: 0.4;
+            }
+            70% {
+                transform: translate(-50%, -50%) scale(0.9) rotate(0deg);
+                filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+                opacity: 0.1;
+            }
+            85%, 100% {
+                transform: translate(-50%, -50%) scale(0.8) rotate(0deg);
+                filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+                opacity: 0;
             }
         }
 
@@ -82,6 +111,7 @@
             overflow: hidden;
             transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
+        
 
         .music-side:hover {
             width: 60%;
@@ -94,9 +124,9 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 20 Q30 40 50 60 Q70 40 50 20" fill="none" stroke="rgba(255,0,255,0.05)" stroke-width="0.5"/></svg>') no-repeat center;
-            background-size: 80% 80%;
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20 50 Q30 30 50 30 Q70 30 80 50 Q70 70 50 70 Q30 70 20 50" fill="none" stroke="rgba(255,0,255,0.1)" stroke-width="0.8"/><path d="M25 45 Q35 35 45 40 Q40 50 35 55 Q30 50 25 45" fill="rgba(255,0,255,0.05)"/><path d="M75 45 Q65 35 55 40 Q60 50 65 55 Q70 50 75 45" fill="rgba(255,0,255,0.05)"/></svg>') no-repeat center;
+            background-size: 90% 90%;
+            opacity: 0.5;
             pointer-events: none;
         }
 
@@ -125,9 +155,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" fill="none" stroke="rgba(0,255,255,0.05)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(0,255,255,0.05)" stroke-width="0.5"/></svg>') no-repeat center;
-            background-size: 80% 80%;
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20 50 Q30 30 50 30 Q70 30 80 50 Q70 70 50 70 Q30 70 20 50" fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.8"/><line x1="30" y1="40" x2="40" y2="40" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/><line x1="35" y1="45" x2="45" y2="45" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/><line x1="30" y1="50" x2="40" y2="50" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/><line x1="60" y1="40" x2="70" y2="40" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/><line x1="55" y1="45" x2="65" y2="45" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/><line x1="60" y1="50" x2="70" y2="50" stroke="rgba(0,255,255,0.1)" stroke-width="0.5"/><rect x="35" y="35" width="30" height="30" fill="none" stroke="rgba(0,255,255,0.05)" stroke-width="0.3"/></svg>') no-repeat center;
+            background-size: 90% 90%;
+            opacity: 0.5;
             pointer-events: none;
         }
 
@@ -345,6 +375,34 @@
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
         }
 
+        /* Neural Connections */
+        @keyframes neuralPulse {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .neural-connection {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, currentColor, transparent);
+            animation: neuralPulse 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        .music-side .neural-connection {
+            color: #ff00ff;
+        }
+        
+        .tech-side .neural-connection {
+            color: #00ffff;
+        }
+        
+        .neural-1 { top: 20%; animation-delay: 0s; }
+        .neural-2 { top: 40%; animation-delay: 1s; }
+        .neural-3 { top: 60%; animation-delay: 2s; }
+        .neural-4 { top: 80%; animation-delay: 0.5s; }
+
         /* Responsive */
         @media (max-width: 768px) {
             .split-container {
@@ -499,6 +557,10 @@
         
         <!-- Music Side -->
         <div class="music-side">
+            <div class="neural-connection neural-1"></div>
+            <div class="neural-connection neural-2"></div>
+            <div class="neural-connection neural-3"></div>
+            <div class="neural-connection neural-4"></div>
             <div class="floating-element" style="top: 20%; left: 10%; font-size: 100px; transform: rotate(-15deg);">🎷</div>
             <div class="floating-element" style="top: 60%; right: 20%; font-size: 80px; transform: rotate(30deg);">🎶</div>
             <div class="floating-element" style="top: 40%; left: 30%; font-size: 60px; transform: rotate(45deg);">🎺</div>
@@ -590,6 +652,10 @@
 
         <!-- Tech Side -->
         <div class="tech-side">
+            <div class="neural-connection neural-1"></div>
+            <div class="neural-connection neural-2"></div>
+            <div class="neural-connection neural-3"></div>
+            <div class="neural-connection neural-4"></div>
             <div class="floating-element" style="top: 30%; right: 10%; font-size: 60px;">&lt;/&gt;</div>
             <div class="floating-element" style="bottom: 20%; left: 15%; font-size: 80px;">{}</div>
             
