@@ -195,8 +195,33 @@
         }
         
 
+        /* Hover expansion animation with delay */
+        @keyframes expandSide {
+            0%, 57% { width: 50%; }  /* Stay at 50% for 4 seconds (57% of 7s total) */
+            71% { width: 60%; }
+            86% { width: 75%; }
+            100% { width: 90%; }
+        }
+        
+        @keyframes contractSide {
+            0%, 57% { width: 50%; }  /* Stay at 50% for 4 seconds (57% of 7s total) */
+            71% { width: 40%; }
+            86% { width: 25%; }
+            100% { width: 10%; }
+        }
+        
         .music-side:hover {
-            width: 60%;
+            animation: expandSide 7s ease-out forwards;
+        }
+        
+        .music-side:hover ~ .tech-side {
+            animation: contractSide 7s ease-out forwards;
+        }
+        
+        .music-side:not(:hover) {
+            animation: none;
+            width: 50%;
+            transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
         .music-side::before {
@@ -227,7 +252,18 @@
         }
 
         .tech-side:hover {
-            width: 60%;
+            animation: expandSide 7s ease-out forwards;
+        }
+        
+        .tech-side:not(:hover) {
+            animation: none;
+            width: 50%;
+            transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        /* Special case: when tech-side is hovered, music-side contracts */
+        .split-container:has(.tech-side:hover) .music-side {
+            animation: contractSide 7s ease-out forwards;
         }
 
         .tech-side::before {
@@ -496,9 +532,22 @@
                 height: 50%;
             }
             
+            /* Disable horizontal animations on mobile, use vertical instead */
             .music-side:hover, .tech-side:hover {
+                animation: none;
                 width: 100%;
                 height: 60%;
+            }
+            
+            .music-side:not(:hover), .tech-side:not(:hover) {
+                animation: none;
+                transition: height 0.8s ease;
+            }
+            
+            .split-container:has(.tech-side:hover) .music-side,
+            .music-side:hover ~ .tech-side {
+                animation: none;
+                height: 40%;
             }
             
             .center-name {
@@ -722,7 +771,7 @@
 
                 <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Mahakala Music</h2>
                 <p style="font-size: 1.2em; line-height: 1.8;">
-                    Founded in 2019, Mahakala Music is Chad's record label dedicated to 
+                    Founded in 2019, Mahakala Music is a record label (run by Chad and <a href="https://stevehirshdrums.com/">drummer Steve Hirsh</a>) dedicated to 
                     avant-garde jazz and free improvisation. Home to collaborations with 
                     William Parker, Matthew Shipp, Eri Yamamoto, Ivo Perelman, and more.
                 </p>
