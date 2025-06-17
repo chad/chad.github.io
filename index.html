@@ -1,21 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chad Fowler | Polymath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<html>
-  <head>
-   <title>Chad Fowler - Musician, Saxophonist</title>
- <script src="//d3plfjw9uod7ab.cloudfront.net/9f0b4d74-f7bf-42d4-b08f-34ec198e998e.js" type="text/javascript" async></script> <br />
-  </head>
-  <body>
-<h1>Chad Fowler</h1>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            cursor: crosshair;
+        }
 
-<p>saxophonist, label owner, programmer, etc.</p>
+        /* Split Screen Container */
+        .split-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
 
-<ul>
-<li><a href="https://mahakalamusic.com">Mahakala Music, my record label</a></li>
-<li><a href="http://twitter.com/chadfowlermusic">@chadfowlermusic</a></li>
-<li><a href="http://twitter.com/chadfowler">@chadfowler</a></li>
-<li><a href="http://medium.com/@chadfowler">Articles on Medium</a></li>
- <li><a href="https://www.youtube.com/results?search_query=%22Chad+Fowler%22">Listen to me speak at conferences, be interviewed on podcasts, and/or play music</a></li>
-<li>Email me at <a href="mailto:chad@chadfowler.com">chad at chadfowler.com</a></li>
-</ul>
+        /* Music Side */
+        .music-side {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background: #1a0033;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(75, 0, 130, 0.4) 0%, transparent 50%);
+            overflow: hidden;
+            transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .music-side:hover {
+            width: 60%;
+        }
+
+        /* Tech Side */
+        .tech-side {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background: #001a1a;
+            background-image: 
+                linear-gradient(45deg, #00ffff 0%, transparent 70%),
+                linear-gradient(-45deg, #0080ff 0%, transparent 70%);
+            overflow: hidden;
+            transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .tech-side:hover {
+            width: 60%;
+        }
+
+        /* Glitch Effect */
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+
+        .glitch {
+            animation: glitch 0.3s infinite;
+        }
+
+        /* Name in Center */
+        .center-name {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8vw;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            z-index: 1000;
+            mix-blend-mode: difference;
+            pointer-events: none;
+            text-transform: uppercase;
+        }
+
+        .center-name span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        /* Side Content */
+        .side-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 60px;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .music-side:hover .side-content,
+        .tech-side:hover .side-content {
+            opacity: 1;
+        }
+
+        /* Music Elements */
+        .jazz-title {
+            font-size: 3em;
+            font-weight: 100;
+            letter-spacing: 0.3em;
+            margin-bottom: 30px;
+            transform: rotate(-5deg);
+            color: #ff00ff;
+            text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+        }
+
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .album-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 0;
+            transform: skew(-5deg);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 0, 255, 0.3);
+        }
+
+        .album-card:hover {
+            transform: skew(-5deg) scale(1.05);
+            background: rgba(255, 0, 255, 0.1);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+        }
+
+        /* Tech Elements */
+        .tech-title {
+            font-size: 3em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #00ffff, #0080ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .code-block {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-block::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #0080ff, #00ffff);
+            z-index: -1;
+            animation: borderRotate 3s linear infinite;
+        }
+
+        @keyframes borderRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Media Embeds */
+        .media-container {
+            margin: 30px 0;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .media-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Links */
+        a {
+            color: inherit;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .music-side a {
+            color: #ff00ff;
+        }
+
+        .tech-side a {
+            color: #00ffff;
+        }
+
+        a:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            opacity: 0.3;
+            pointer-events: none;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, -100px) rotate(90deg); }
+            50% { transform: translate(-100px, -200px) rotate(180deg); }
+            75% { transform: translate(-200px, 100px) rotate(270deg); }
+        }
+
+        /* Book Grid */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .book-card {
+            background: rgba(0, 255, 255, 0.05);
+            padding: 20px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .split-container {
+                flex-direction: column;
+            }
+            
+            .music-side, .tech-side {
+                width: 100%;
+                height: 50%;
+            }
+            
+            .music-side:hover, .tech-side:hover {
+                width: 100%;
+                height: 60%;
+            }
+            
+            .center-name {
+                font-size: 12vw;
+            }
+            
+            .side-content {
+                padding: 30px;
+                opacity: 1;
+            }
+            
+            .jazz-title, .tech-title {
+                font-size: 2em;
+            }
+            
+            .album-grid, .book-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .floating-element {
+                display: none;
+            }
+            
+            nav {
+                bottom: 10px !important;
+                padding: 10px 20px !important;
+                gap: 10px !important;
+                font-size: 0.9em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .center-name {
+                font-size: 15vw;
+            }
+            
+            .side-content {
+                padding: 20px;
+            }
+            
+            .jazz-title, .tech-title {
+                font-size: 1.5em;
+                letter-spacing: 0.1em;
+            }
+            
+            .code-block {
+                font-size: 0.8em;
+                overflow-x: auto;
+            }
+            
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        
+        /* Tablet Portrait */
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+            .split-container {
+                flex-direction: column;
+            }
+            
+            .music-side, .tech-side {
+                width: 100%;
+                height: 50%;
+            }
+            
+            .center-name {
+                font-size: 10vw;
+            }
+        }
+        
+        /* High DPI Screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .album-card, .book-card, .code-block {
+                border-width: 0.5px;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .music-side ::-webkit-scrollbar-thumb {
+            background: #ff00ff;
+        }
+
+        .tech-side ::-webkit-scrollbar-thumb {
+            background: #00ffff;
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeOut 2s forwards 1s;
+        }
+
+        @keyframes fadeOut {
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        .loading-text {
+            font-size: 2em;
+            letter-spacing: 0.5em;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-text">LOADING...</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="split-container">
+        <!-- Music Side -->
+        <div class="music-side">
+            <div class="floating-element" style="top: 20%; left: 10%; font-size: 100px; transform: rotate(-15deg);">♪</div>
+            <div class="floating-element" style="top: 60%; right: 20%; font-size: 80px; transform: rotate(30deg);">♫</div>
+            
+            <div class="side-content">
+                <h1 class="jazz-title">AVANT-GARDE</h1>
+                
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Latest Albums</h2>
+                
+                <div class="album-grid">
+                    <div class="album-card">
+                        <h3>Birdsong (2024)</h3>
+                        <p>With Shanyse Strickland, Sana Nagano, Melanie Dyer</p>
+                        <a href="https://mahakalamusic.bandcamp.com/album/birdsong" target="_blank">Listen on Bandcamp →</a>
+                    </div>
+                    
+                    <div class="album-card">
+                        <h3>The Crop Circles Suite Part One</h3>
+                        <p>April 2024</p>
+                        <a href="https://mahakalamusic.bandcamp.com" target="_blank">Listen →</a>
+                    </div>
+                    
+                    <div class="album-card">
+                        <h3>Miserere (2023)</h3>
+                        <p>Septet with George Cartwright, Chris Parker</p>
+                        <a href="https://mahakalamusic.bandcamp.com/album/miserere" target="_blank">Listen →</a>
+                    </div>
+                    
+                    <div class="album-card">
+                        <h3>Old Stories (2022)</h3>
+                        <p>With Matthew Shipp - 2CD, 14 tracks</p>
+                        <a href="https://mahakalamusic.bandcamp.com/album/old-stories" target="_blank">Listen →</a>
+                    </div>
+                </div>
+
+                <!-- Spotify Artist Embed -->
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Listen on Spotify</h2>
+                <div class="media-container">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7ttY2znRRuk0WwrI8i6oFj?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+
+                <!-- Music Links -->
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Watch & Listen</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+                    <a href="https://mahakalamusic.bandcamp.com" target="_blank" style="padding: 15px 30px; background: rgba(255, 0, 255, 0.1); border: 1px solid #ff00ff; font-size: 1.2em;">Bandcamp Catalog</a>
+                    <a href="https://open.spotify.com/artist/7ttY2znRRuk0WwrI8i6oFj" target="_blank" style="padding: 15px 30px; background: rgba(255, 0, 255, 0.1); border: 1px solid #ff00ff; font-size: 1.2em;">Spotify Artist Page</a>
+                    <a href="https://www.youtube.com/results?search_query=%22Chad+Fowler%22+saxophone" target="_blank" style="padding: 15px 30px; background: rgba(255, 0, 255, 0.1); border: 1px solid #ff00ff; font-size: 1.2em;">YouTube Performances</a>
+                </div>
+
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Instruments</h2>
+                <ul style="list-style: none; font-size: 1.2em; line-height: 2;">
+                    <li>→ Stritch (straight alto saxophone)</li>
+                    <li>→ Saxello</li>
+                    <li>→ Alto Flute</li>
+                    <li>→ Baritone Saxophone</li>
+                </ul>
+
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Mahakala Music</h2>
+                <p style="font-size: 1.2em; line-height: 1.8;">
+                    Founded in 2019, Mahakala Music is Chad's record label dedicated to 
+                    avant-garde jazz and free improvisation. Home to collaborations with 
+                    William Parker, Matthew Shipp, Ivo Perelman, and more.
+                </p>
+                <a href="https://mahakalamusic.bandcamp.com" target="_blank" style="font-size: 1.5em; margin-top: 20px; display: inline-block;">
+                    Explore Full Catalog →
+                </a>
+            </div>
+        </div>
+
+        <!-- Tech Side -->
+        <div class="tech-side">
+            <div class="floating-element" style="top: 30%; right: 10%; font-size: 60px;">&lt;/&gt;</div>
+            <div class="floating-element" style="bottom: 20%; left: 15%; font-size: 80px;">{}</div>
+            
+            <div class="side-content">
+                <h1 class="tech-title">TECHNOLOGY</h1>
+                
+                <div class="code-block">
+                    <pre>
+{
+  "current": [
+    "VP Technology @ DEVCON",
+    "Partner & CTO @ BlueYard Capital"
+  ],
+  "languages": ["Ruby", "JavaScript", "Python", "C#"],
+  "books": 6,
+  "github_followers": 938
+}
+                    </pre>
+                </div>
+
+                <h2 style="margin: 40px 0 20px; font-size: 2em;">Books</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <h3>The Passionate Programmer</h3>
+                        <p>Creating a Remarkable Career in Software Development</p>
+                        <a href="https://pragprog.com/titles/cfcar2/the-passionate-programmer-2nd-edition/" target="_blank">Get Book →</a>
+                    </div>
+                    
+                    <div class="book-card">
+                        <h3>Programming Ruby</h3>
+                        <p>The Pragmatic Programmers' Guide</p>
+                        <a href="https://pragprog.com/titles/ruby5/programming-ruby-3-2-5th-edition/" target="_blank">Get Book →</a>
+                    </div>
+                    
+                    <div class="book-card">
+                        <h3>Rails Recipes</h3>
+                        <p>Rails 3 Edition</p>
+                        <a href="https://pragprog.com/titles/rr2/rails-recipes/" target="_blank">Get Book →</a>
+                    </div>
+                </div>
+
+                <!-- Podcast Embed -->
+                <h2 style="margin: 40px 0 20px; font-size: 2em;">Featured Podcast</h2>
+                <div class="media-container">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7I8kPXOgmzeIepPy8cHyWg?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+
+                <!-- Conference Talks & Podcasts -->
+                <h2 style="margin: 40px 0 20px; font-size: 2em;">Talks & Interviews</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+                    <a href="https://developeronfire.com/podcast/developer-on-fire-096-chad-fowler-being-deliberate" target="_blank" style="padding: 15px 30px; background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; font-size: 1.1em;">Developer on Fire Podcast</a>
+                    <a href="https://www.youtube.com/results?search_query=%22Chad+Fowler%22+RubyConf" target="_blank" style="padding: 15px 30px; background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; font-size: 1.1em;">RubyConf Talks</a>
+                    <a href="https://www.youtube.com/results?search_query=%22Chad+Fowler%22+RailsConf" target="_blank" style="padding: 15px 30px; background: rgba(0, 255, 255, 0.1); border: 1px solid #00ffff; font-size: 1.1em;">RailsConf Keynotes</a>
+                </div>
+
+                <h2 style="margin: 40px 0 20px; font-size: 2em;">Open Source</h2>
+                <div class="code-block">
+                    <p><strong>Ruby Central Co-founder</strong> (2002)</p>
+                    <p><strong>RubyConf</strong> Co-organizer (2001)</p>
+                    <p><strong>RailsConf</strong> Co-organizer (2006)</p>
+                    <p style="margin-top: 20px;">
+                        <a href="https://github.com/chad" target="_blank">GitHub: @chad →</a>
+                    </p>
+                </div>
+
+                <h2 style="margin: 40px 0 20px; font-size: 2em;">Venture Capital</h2>
+                <p style="font-size: 1.2em; line-height: 1.8;">
+                    As Partner & CTO at BlueYard Capital, investing $500K-$5M in 
+                    early-stage startups. Portfolio includes Snaplet, Garden, Otto, 
+                    and Cryptio.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Center Name -->
+    <div class="center-name">
+        <span>C</span><span>H</span><span>A</span><span>D</span>
+        <span> </span>
+        <span>F</span><span>O</span><span>W</span><span>L</span><span>E</span><span>R</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 2000; display: flex; gap: 20px; background: rgba(0,0,0,0.8); padding: 15px 30px; border-radius: 50px; backdrop-filter: blur(10px);">
+        <a href="mailto:chad@chadfowler.com" style="color: #fff; font-size: 1.1em;">Contact</a>
+        <a href="https://twitter.com/chadfowler" target="_blank" style="color: #00ffff;">@chadfowler</a>
+        <a href="https://twitter.com/chadfowlermusic" target="_blank" style="color: #ff00ff;">@chadfowlermusic</a>
+        <a href="https://github.com/chad" target="_blank" style="color: #fff;">GitHub</a>
+    </nav>
+
+    <!-- Audio Visualizer (hidden) -->
+    <canvas id="visualizer" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 500; opacity: 0.3; mix-blend-mode: screen;"></canvas>
+
+    <script>
+        // Audio Context for Visualizer
+        let audioContext;
+        let analyser;
+        let dataArray;
+        const canvas = document.getElementById('visualizer');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        // Touch support for mobile
+        let touchStartX = 0;
+        let touchStartY = 0;
+        
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        });
+        
+        document.addEventListener('touchmove', (e) => {
+            if (window.innerWidth <= 768) {
+                const touchX = e.touches[0].clientX;
+                const touchY = e.touches[0].clientY;
+                const deltaX = touchX - touchStartX;
+                const deltaY = touchY - touchStartY;
+                
+                // Swipe gestures
+                if (Math.abs(deltaX) > 50) {
+                    if (deltaX > 0) {
+                        // Swipe right - show music
+                        document.querySelector('.music-side').style.height = '60%';
+                        document.querySelector('.tech-side').style.height = '40%';
+                    } else {
+                        // Swipe left - show tech
+                        document.querySelector('.tech-side').style.height = '60%';
+                        document.querySelector('.music-side').style.height = '40%';
+                    }
+                }
+            }
+        });
+        
+        document.addEventListener('touchend', () => {
+            // Reset after touch
+            setTimeout(() => {
+                if (window.innerWidth <= 768) {
+                    document.querySelector('.music-side').style.height = '50%';
+                    document.querySelector('.tech-side').style.height = '50%';
+                }
+            }, 3000);
+        });
+
+        // Visual effects on mouse movement
+        let mouseX = 0;
+        let mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Create ripple effect
+            if (Math.random() > 0.95) {
+                createRipple(e.clientX, e.clientY);
+            }
+        });
+
+        function createRipple(x, y) {
+            const ripple = document.createElement('div');
+            ripple.style.position = 'fixed';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.style.width = '10px';
+            ripple.style.height = '10px';
+            ripple.style.border = '2px solid';
+            ripple.style.borderColor = Math.random() > 0.5 ? '#ff00ff' : '#00ffff';
+            ripple.style.borderRadius = '50%';
+            ripple.style.pointerEvents = 'none';
+            ripple.style.transform = 'translate(-50%, -50%)';
+            ripple.style.animation = 'rippleExpand 1s ease-out';
+            document.body.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 1000);
+        }
+
+        // Add ripple animation
+        const rippleStyle = document.createElement('style');
+        rippleStyle.textContent = `
+            @keyframes rippleExpand {
+                to {
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(rippleStyle);
+
+        // Interactive name animation
+        const nameLetters = document.querySelectorAll('.center-name span');
+        nameLetters.forEach((letter, index) => {
+            letter.addEventListener('mouseover', () => {
+                letter.style.transform = `scale(1.5) rotate(${Math.random() * 360}deg)`;
+                setTimeout(() => {
+                    letter.style.transform = 'scale(1) rotate(0deg)';
+                }, 500);
+            });
+        });
+
+        // Glitch effect on hover
+        const sides = document.querySelectorAll('.music-side, .tech-side');
+        sides.forEach(side => {
+            side.addEventListener('mouseenter', () => {
+                side.classList.add('glitch');
+                setTimeout(() => {
+                    side.classList.remove('glitch');
+                }, 300);
+            });
+        });
+
+        // Random glitch effect
+        setInterval(() => {
+            if (Math.random() > 0.9) {
+                const randomSide = sides[Math.floor(Math.random() * sides.length)];
+                randomSide.classList.add('glitch');
+                setTimeout(() => {
+                    randomSide.classList.remove('glitch');
+                }, 200);
+            }
+        }, 3000);
+
+        // Distortion effect on scroll
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            document.body.style.filter = 'blur(2px)';
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                document.body.style.filter = 'none';
+            }, 150);
+        });
+
+        // Parallax effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelectorAll('.floating-element').forEach((el, index) => {
+                const speed = (index + 1) * 20;
+                el.style.transform = `translate(${x * speed}px, ${y * speed}px) rotate(${x * 360}deg)`;
+            });
+        });
+
+        // Add random floating notes and code symbols
+        setInterval(() => {
+            // Music notes
+            const musicSide = document.querySelector('.music-side');
+            const note = document.createElement('div');
+            note.innerHTML = ['♪', '♫', '♬', '♩'][Math.floor(Math.random() * 4)];
+            note.style.position = 'absolute';
+            note.style.left = Math.random() * 100 + '%';
+            note.style.top = '100%';
+            note.style.fontSize = Math.random() * 30 + 20 + 'px';
+            note.style.opacity = '0.3';
+            note.style.pointerEvents = 'none';
+            note.style.animation = 'floatUp 10s linear';
+            note.style.color = '#ff00ff';
+            note.style.textShadow = '0 0 10px rgba(255, 0, 255, 0.5)';
+            musicSide.appendChild(note);
+            
+            // Code symbols
+            const techSide = document.querySelector('.tech-side');
+            const code = document.createElement('div');
+            code.innerHTML = ['{ }', '< >', '[ ]', '( )', '/**/','//'][Math.floor(Math.random() * 6)];
+            code.style.position = 'absolute';
+            code.style.right = Math.random() * 100 + '%';
+            code.style.top = '100%';
+            code.style.fontSize = Math.random() * 25 + 15 + 'px';
+            code.style.opacity = '0.3';
+            code.style.pointerEvents = 'none';
+            code.style.animation = 'floatUp 12s linear';
+            code.style.color = '#00ffff';
+            code.style.fontFamily = 'monospace';
+            code.style.textShadow = '0 0 10px rgba(0, 255, 255, 0.5)';
+            techSide.appendChild(code);
+            
+            setTimeout(() => {
+                note.remove();
+                code.remove();
+            }, 12000);
+        }, 2000);
+
+        // Float up animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                to {
+                    top: -100px;
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'm' || e.key === 'M') {
+                // Focus music side
+                document.querySelector('.music-side').scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('.music-side').style.width = '70%';
+                document.querySelector('.tech-side').style.width = '30%';
+                setTimeout(() => {
+                    document.querySelector('.music-side').style.width = '50%';
+                    document.querySelector('.tech-side').style.width = '50%';
+                }, 2000);
+            } else if (e.key === 't' || e.key === 'T') {
+                // Focus tech side
+                document.querySelector('.tech-side').scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('.tech-side').style.width = '70%';
+                document.querySelector('.music-side').style.width = '30%';
+                setTimeout(() => {
+                    document.querySelector('.tech-side').style.width = '50%';
+                    document.querySelector('.music-side').style.width = '50%';
+                }, 2000);
+            }
+        });
+
+        // Easter egg: Konami code
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        let konamiIndex = 0;
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    activatePartyMode();
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+
+        function activatePartyMode() {
+            document.body.style.animation = 'partyMode 2s infinite';
+            const partyStyle = document.createElement('style');
+            partyStyle.textContent = `
+                @keyframes partyMode {
+                    0% { filter: hue-rotate(0deg); }
+                    100% { filter: hue-rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(partyStyle);
+            
+            setTimeout(() => {
+                document.body.style.animation = '';
+            }, 10000);
+        }
+    </script>
 </body>
 </html>
