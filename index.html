@@ -305,6 +305,24 @@
             background: rgba(255, 0, 255, 0.1);
             box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
         }
+        
+        /* Mobile album card styles */
+        @media (max-width: 768px) {
+            .album-card, .book-card {
+                transform: none !important;
+            }
+            
+            .album-card:hover, .book-card:hover {
+                transform: none !important;
+                box-shadow: 0 5px 15px rgba(255, 0, 255, 0.3);
+            }
+            
+            .album-card a, .book-card a {
+                font-size: 1em;
+                padding: 10px 0;
+                display: block;
+            }
+        }
 
         /* Tech Elements */
         .tech-title {
@@ -352,6 +370,7 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            background: rgba(0, 0, 0, 0.2);
         }
 
         .media-container iframe {
@@ -361,6 +380,32 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+        
+        /* Mobile-optimized media containers */
+        @media (max-width: 768px) {
+            .media-container {
+                margin: 20px -15px;
+                width: calc(100% + 30px);
+            }
+            
+            /* Spotify embeds on mobile */
+            .media-container:has(iframe[src*="spotify"]) {
+                padding-bottom: 152px;
+                height: auto;
+            }
+            
+            .media-container:has(iframe[src*="spotify"]) iframe {
+                position: static;
+                height: 152px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .media-container {
+                margin: 15px -15px;
+                width: calc(100% + 30px);
+            }
         }
 
         /* Links */
@@ -464,33 +509,163 @@
         .neural-3 { top: 60%; animation-delay: 2s; }
         .neural-4 { top: 80%; animation-delay: 0.5s; }
 
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 3000;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-toggle span {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 24px;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-toggle span:nth-child(1) {
+            top: 10px;
+        }
+        
+        .mobile-menu-toggle span:nth-child(2) {
+            top: 19px;
+        }
+        
+        .mobile-menu-toggle span:nth-child(3) {
+            bottom: 10px;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: translateX(-50%) rotate(45deg);
+            top: 19px;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: translateX(-50%) rotate(-45deg);
+            bottom: 19px;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2500;
+            padding: 80px 30px 30px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 15px 0;
+            font-size: 1.2em;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav a:hover {
+            color: #00ffff;
+            transform: translateX(10px);
+        }
+        
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2400;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .mobile-overlay.active {
+            opacity: 1;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .split-container {
                 flex-direction: column;
+                height: auto;
+                min-height: 100vh;
             }
             
             .music-side, .tech-side {
                 width: 100%;
-                height: 50%;
+                height: auto;
+                min-height: 100vh;
+                position: relative;
             }
             
+            .brain-divider {
+                display: none;
+            }
+            
+            .brain-background {
+                position: fixed;
+                width: 90vw;
+                height: 90vw;
+                opacity: 0.05;
+            }
             
             .center-name {
-                font-size: 12vw;
+                font-size: 14vw;
+                position: fixed;
+                top: 50px;
+                transform: translate(-50%, 0);
+                z-index: 100;
+                mix-blend-mode: normal;
+                color: #fff;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             }
             
             .side-content {
-                padding: 30px;
+                padding: 120px 20px 30px;
                 opacity: 1;
             }
             
             .jazz-title, .tech-title {
-                font-size: 2em;
+                font-size: 2.5em;
+                margin-bottom: 20px;
             }
             
             .album-grid, .book-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .album-card, .book-card {
+                transform: none;
+                padding: 15px;
             }
             
             .floating-element {
@@ -498,35 +673,113 @@
             }
             
             nav {
-                bottom: 10px !important;
-                padding: 10px 20px !important;
-                gap: 10px !important;
+                display: none;
+            }
+            
+            .mobile-menu-toggle, .mobile-nav, .mobile-overlay {
+                display: block;
+            }
+            
+            .neural-connection {
+                display: none;
+            }
+            
+            .media-container {
+                margin: 20px 0;
+            }
+            
+            .code-block {
+                padding: 15px;
                 font-size: 0.9em;
+                overflow-x: auto;
+            }
+            
+            .code-block pre {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+            
+            /* Touch-friendly link styles */
+            a {
+                padding: 8px 5px;
+                margin: -8px -5px;
+                min-height: 44px;
+                display: inline-block;
+                line-height: 28px;
+            }
+            
+            /* Improved scrollbar for mobile */
+            ::-webkit-scrollbar {
+                width: 4px;
             }
         }
         
         @media (max-width: 480px) {
             .center-name {
-                font-size: 15vw;
+                font-size: 11vw;
+                letter-spacing: -0.02em;
+                top: 40px;
             }
             
             .side-content {
-                padding: 20px;
+                padding: 100px 15px 30px;
             }
             
             .jazz-title, .tech-title {
-                font-size: 1.5em;
-                letter-spacing: 0.1em;
+                font-size: 2em;
+                letter-spacing: 0.05em;
+                margin-bottom: 15px;
+            }
+            
+            .album-card h3, .book-card h3 {
+                font-size: 1.1em;
+                margin-bottom: 10px;
+            }
+            
+            .album-card p, .book-card p {
+                font-size: 0.9em;
+                line-height: 1.4;
             }
             
             .code-block {
-                font-size: 0.8em;
+                font-size: 0.75em;
                 overflow-x: auto;
+                padding: 10px;
             }
             
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
+            h2 {
+                font-size: 1.5em !important;
+                margin: 30px 0 15px !important;
+            }
+            
+            p {
+                font-size: 1em;
+                line-height: 1.6;
+            }
+            
+            ul li {
+                font-size: 1em;
+                line-height: 1.8;
+            }
+            
+            /* Optimize media embeds */
+            .media-container {
+                padding-bottom: 75%; /* Taller aspect ratio for mobile */
+            }
+            
+            /* Mobile-specific link styling */
+            a {
+                padding: 8px 5px;
+                margin: -8px -5px;
+                display: inline-block;
+                min-height: 44px;
+                line-height: 28px;
+            }
+            
+            /* Mobile menu toggle position */
+            .mobile-menu-toggle {
+                top: 15px;
+                right: 15px;
             }
         }
         
@@ -534,15 +787,34 @@
         @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
             .split-container {
                 flex-direction: column;
+                height: auto;
+                min-height: 100vh;
             }
             
             .music-side, .tech-side {
                 width: 100%;
-                height: 50%;
+                height: auto;
+                min-height: 100vh;
             }
             
             .center-name {
                 font-size: 10vw;
+                position: fixed;
+                top: 50px;
+                transform: translate(-50%, 0);
+            }
+            
+            .side-content {
+                padding: 120px 40px 40px;
+                opacity: 1;
+            }
+            
+            .brain-divider {
+                display: none;
+            }
+            
+            .album-grid, .book-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
@@ -616,7 +888,7 @@
         <div class="brain-divider"></div>
         
         <!-- Music Side -->
-        <div class="music-side">
+        <div class="music-side" id="music">
             <div class="neural-connection neural-1"></div>
             <div class="neural-connection neural-2"></div>
             <div class="neural-connection neural-3"></div>
@@ -629,7 +901,7 @@
             <div class="side-content">
                 <h1 class="jazz-title">MUSIC</h1>
                 
-                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Latest Albums</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;" class="section-title">Latest Albums</h2>
                 
                 <div class="album-grid">
                     <div class="album-card">
@@ -664,13 +936,13 @@
                 </div>
 
                 <!-- Spotify Artist Embed -->
-                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Listen on Spotify</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;" class="section-title">Listen on Spotify</h2>
                 <div class="media-container">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7ttY2znRRuk0WwrI8i6oFj?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
 
                 <!-- Live Performances -->
-                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Live Performances</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;" class="section-title">Live Performances</h2>
                 
                 <!-- Performance 1 -->
                 <div class="media-container" style="margin-bottom: 30px;">
@@ -689,7 +961,7 @@
                 </div>
 
 
-                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Instruments</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;" class="section-title">Instruments</h2>
                 <ul style="list-style: none; font-size: 1.2em; line-height: 2;">
                     <li>→ Stritch (straight alto saxophone)</li>
                     <li>→ Saxello</li>
@@ -698,7 +970,7 @@
                     <li>→ Electric Guitar</li>
                 </ul>
 
-                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">On Improvisation</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;" class="section-title">On Improvisation</h2>
                 <div class="album-card" style="transform: skew(-3deg); margin-bottom: 30px;">
                     <h3 style="font-size: 1.5em; margin-bottom: 15px;">15 Questions Interview</h3>
                     <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 20px; font-style: italic;">
@@ -712,7 +984,7 @@
                     </a>
                 </div>
 
-                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;">Mahakala Music</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;" class="section-title">Mahakala Music</h2>
                 <p style="font-size: 1.2em; line-height: 1.8;">
                     Founded in 2019, Mahakala Music is a record label (run by Chad and <a href="https://stevehirshdrums.com/">drummer Steve Hirsh</a>) dedicated to 
                     avant-garde jazz and free improvisation. Home to collaborations with 
@@ -725,7 +997,7 @@
         </div>
 
         <!-- Tech Side -->
-        <div class="tech-side">
+        <div class="tech-side" id="tech">
             <div class="neural-connection neural-1"></div>
             <div class="neural-connection neural-2"></div>
             <div class="neural-connection neural-3"></div>
@@ -756,7 +1028,7 @@
                     </pre>
                 </div>
 
-                <h2 style="margin: 40px 0 20px; font-size: 2em;">Books</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em;" class="section-title">Books</h2>
                 <div class="book-grid">
                     <div class="book-card">
                         <h3>The Passionate Programmer</h3>
@@ -777,7 +1049,7 @@
                 </div>
 
                 <!-- Podcast Appearances -->
-                <h2 style="margin: 40px 0 20px; font-size: 2em;">Featured Podcast Appearances</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em;" class="section-title">Featured Podcast Appearances</h2>
                 
                 <!-- Featured: Snark Chocolate -->
                 <div class="media-container" style="margin-bottom: 40px;">
@@ -835,7 +1107,7 @@
                 </div>
 
                 <!-- Conference Talks & Keynotes -->
-                <h2 style="margin: 40px 0 20px; font-size: 2em;">Conference Keynotes</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em;" class="section-title">Conference Keynotes</h2>
                 
                 <!-- Notable Talks -->
                 <div style="margin-bottom: 40px;">
@@ -862,7 +1134,7 @@
                 </div>
                 
 
-                <h2 style="margin: 40px 0 20px; font-size: 2em;">Open Source</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em;" class="section-title">Open Source</h2>
                 <div class="code-block">
                     <p><strong>Ruby Central Co-founder</strong> (2002)</p>
                     <p><strong>RubyConf</strong> Co-organizer (2001-2012)</p>
@@ -873,7 +1145,7 @@
                     </p>
                 </div>
 
-                <h2 style="margin: 40px 0 20px; font-size: 2em;">Venture Capital</h2>
+                <h2 style="margin: 40px 0 20px; font-size: 2em;" class="section-title">Venture Capital</h2>
                 <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 150px;">
                     As Partner &amp; CTO at <a href="https://blueyard.com">BlueYard Capital</a>, investing in technologies that bring us closer to Utopia or farther from Oblivion.
                 </p>
@@ -896,11 +1168,68 @@
         <a href="https://www.facebook.com/chadefowler" target="_blank" style="color: #ff00ff;">Facebook (music)</a>
         <a href="https://github.com/chad" target="_blank" style="color: #fff;">GitHub</a>
     </nav>
+    
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#music">🎷 Music</a>
+        <a href="#tech">💻 Technology</a>
+        <a href="mailto:chad@chadfowler.com">✉️ Contact</a>
+        <a href="https://twitter.com/chadfowler" target="_blank">🐦 Twitter</a>
+        <a href="https://bsky.app/profile/chadfowler.com" target="_blank">🦋 Bluesky</a>
+        <a href="https://www.facebook.com/chadefowler" target="_blank">📘 Facebook</a>
+        <a href="https://github.com/chad" target="_blank">🐙 GitHub</a>
+        <a href="https://mahakalamusic.bandcamp.com" target="_blank">🎵 Bandcamp</a>
+        <a href="https://open.spotify.com/artist/7ttY2znRRuk0WwrI8i6oFj" target="_blank">🎧 Spotify</a>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
     <!-- Audio Visualizer (hidden) -->
     <canvas id="visualizer" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 500; opacity: 0.3; mix-blend-mode: screen;"></canvas>
 
     <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        let isMobileMenuOpen = false;
+        
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            if (isMobileMenuOpen) {
+                mobileMenuToggle.classList.add('active');
+                mobileNav.classList.add('active');
+                mobileOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking a link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (link.getAttribute('href').startsWith('#')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+        
         // Audio Context for Visualizer
         let audioContext;
         let analyser;
@@ -1026,42 +1355,55 @@
         // Touch support for mobile
         let touchStartX = 0;
         let touchStartY = 0;
+        let isSwiping = false;
+        let currentSection = null;
         
+        // Improved swipe detection
         document.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
+            if (window.innerWidth <= 768 && !isMobileMenuOpen) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                isSwiping = false;
+                
+                // Determine which section we're in
+                const scrollPos = window.pageYOffset;
+                const musicSection = document.getElementById('music');
+                const techSection = document.getElementById('tech');
+                const musicTop = musicSection.offsetTop;
+                const techTop = techSection.offsetTop;
+                
+                if (scrollPos >= techTop - 100) {
+                    currentSection = 'tech';
+                } else {
+                    currentSection = 'music';
+                }
+            }
         });
         
         document.addEventListener('touchmove', (e) => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 768 && !isMobileMenuOpen && !isSwiping) {
                 const touchX = e.touches[0].clientX;
                 const touchY = e.touches[0].clientY;
                 const deltaX = touchX - touchStartX;
                 const deltaY = touchY - touchStartY;
                 
-                // Swipe gestures
-                if (Math.abs(deltaX) > 50) {
-                    if (deltaX > 0) {
-                        // Swipe right - show music
-                        document.querySelector('.music-side').style.height = '60%';
-                        document.querySelector('.tech-side').style.height = '40%';
-                    } else {
-                        // Swipe left - show tech
-                        document.querySelector('.tech-side').style.height = '60%';
-                        document.querySelector('.music-side').style.height = '40%';
+                // Only trigger swipe if horizontal movement is greater than vertical
+                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                    isSwiping = true;
+                    
+                    if (deltaX > 0 && currentSection === 'tech') {
+                        // Swipe right from tech - go to music
+                        document.getElementById('music').scrollIntoView({ behavior: 'smooth' });
+                    } else if (deltaX < 0 && currentSection === 'music') {
+                        // Swipe left from music - go to tech
+                        document.getElementById('tech').scrollIntoView({ behavior: 'smooth' });
                     }
                 }
             }
         });
         
         document.addEventListener('touchend', () => {
-            // Reset after touch
-            setTimeout(() => {
-                if (window.innerWidth <= 768) {
-                    document.querySelector('.music-side').style.height = '50%';
-                    document.querySelector('.tech-side').style.height = '50%';
-                }
-            }, 3000);
+            isSwiping = false;
         });
 
         // Visual effects on mouse movement
@@ -1141,15 +1483,75 @@
             }
         }, 3000);
 
-        // Distortion effect on scroll
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            document.body.style.filter = 'blur(2px)';
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                document.body.style.filter = 'none';
-            }, 150);
-        });
+        // Smooth scroll behavior for mobile
+        function setupSmoothScroll() {
+            // Add smooth scrolling to all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+        
+        setupSmoothScroll();
+        
+        // Mobile scroll indicator
+        if (window.innerWidth <= 768) {
+            let scrollIndicator = document.createElement('div');
+            scrollIndicator.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40px;
+                height: 40px;
+                z-index: 1500;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+            scrollIndicator.innerHTML = `
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <path d="M20 25 L12 17 L14 15 L20 21 L26 15 L28 17 Z" fill="white" opacity="0.8"/>
+                </svg>
+            `;
+            document.body.appendChild(scrollIndicator);
+            
+            // Show/hide scroll indicator based on position
+            let lastScrollTop = 0;
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = scrollTop / maxScroll;
+                
+                if (scrollPercent < 0.9 && scrollTop > lastScrollTop) {
+                    scrollIndicator.style.opacity = '1';
+                } else {
+                    scrollIndicator.style.opacity = '0';
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        }
+        
+        // Distortion effect on scroll (desktop only)
+        if (window.innerWidth > 768) {
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                document.body.style.filter = 'blur(2px)';
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    document.body.style.filter = 'none';
+                }, 150);
+            });
+        }
 
         // Parallax effect on mouse move
         document.addEventListener('mousemove', (e) => {
