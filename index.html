@@ -245,9 +245,36 @@
             font-weight: 900;
             letter-spacing: -0.05em;
             z-index: 1000;
-            mix-blend-mode: difference;
             pointer-events: none;
             text-transform: uppercase;
+            display: flex;
+            gap: 2vw;
+            width: 100%;
+            justify-content: center;
+            mix-blend-mode: difference;
+        }
+        
+        .name-left, .name-right {
+            display: flex;
+            color: #fff;
+        }
+        
+        .name-left {
+            animation: floatLeft 4s ease-in-out infinite;
+        }
+        
+        .name-right {
+            animation: floatRight 4s ease-in-out infinite;
+        }
+        
+        @keyframes floatLeft {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(-10px) translateY(-5px); }
+        }
+        
+        @keyframes floatRight {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(10px) translateY(-5px); }
         }
 
         .center-name span {
@@ -643,8 +670,11 @@
                 top: 50px;
                 transform: translate(-50%, 0);
                 z-index: 100;
+                gap: 1vw;
                 mix-blend-mode: normal;
-                color: #fff;
+            }
+            
+            .name-left, .name-right {
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             }
             
@@ -719,6 +749,7 @@
                 font-size: 11vw;
                 letter-spacing: -0.02em;
                 top: 40px;
+                gap: 0.5vw;
             }
             
             .side-content {
@@ -802,6 +833,7 @@
                 position: fixed;
                 top: 50px;
                 transform: translate(-50%, 0);
+                gap: 1vw;
             }
             
             .side-content {
@@ -1155,9 +1187,12 @@
 
     <!-- Center Name -->
     <div class="center-name">
-        <span>C</span><span>H</span><span>A</span><span>D</span>
-        <span> </span>
-        <span>F</span><span>O</span><span>W</span><span>L</span><span>E</span><span>R</span>
+        <div class="name-left">
+            <span>C</span><span>H</span><span>A</span><span>D</span>
+        </div>
+        <div class="name-right">
+            <span>F</span><span>O</span><span>W</span><span>L</span><span>E</span><span>R</span>
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -1459,6 +1494,32 @@
                     letter.style.transform = 'scale(1) rotate(0deg)';
                 }, 500);
             });
+        });
+        
+        // Make names respond to their respective sides on hover
+        const musicSide = document.querySelector('.music-side');
+        const techSide = document.querySelector('.tech-side');
+        const nameLeft = document.querySelector('.name-left');
+        const nameRight = document.querySelector('.name-right');
+        
+        musicSide.addEventListener('mouseenter', () => {
+            nameLeft.style.transform = 'scale(1.1)';
+            nameLeft.style.filter = 'brightness(1.3)';
+        });
+        
+        musicSide.addEventListener('mouseleave', () => {
+            nameLeft.style.transform = 'scale(1)';
+            nameLeft.style.filter = 'brightness(1)';
+        });
+        
+        techSide.addEventListener('mouseenter', () => {
+            nameRight.style.transform = 'scale(1.1)';
+            nameRight.style.filter = 'brightness(1.3)';
+        });
+        
+        techSide.addEventListener('mouseleave', () => {
+            nameRight.style.transform = 'scale(1)';
+            nameRight.style.filter = 'brightness(1)';
         });
 
         // Glitch effect on hover
