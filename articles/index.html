@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | Chad Fowler</title>
+    <meta name="description" content="Writing on technology, software development, and systems thinking.">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #00ffff;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #ff00ff;
+            transform: translateX(-5px);
+        }
+
+        .back-link::before {
+            content: '← ';
+        }
+
+        .articles-list {
+            list-style: none;
+        }
+
+        .article-item {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(0, 255, 255, 0.03);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .article-item:hover {
+            background: rgba(0, 255, 255, 0.08);
+            border-color: rgba(0, 255, 255, 0.5);
+            transform: translateX(5px);
+        }
+
+        .article-date {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .article-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .article-title a {
+            color: #00ffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .article-title a:hover {
+            color: #ff00ff;
+        }
+
+        .article-excerpt {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #00ffff;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #ff00ff;
+        }
+
+        .read-more::after {
+            content: ' →';
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 0, 255, 0.3);
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .article-item {
+                padding: 20px;
+            }
+
+            .article-title {
+                font-size: 1.4em;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .article-item {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .article-item:nth-child(1) { animation-delay: 0.1s; }
+        .article-item:nth-child(2) { animation-delay: 0.2s; }
+        .article-item:nth-child(3) { animation-delay: 0.3s; }
+        .article-item:nth-child(4) { animation-delay: 0.4s; }
+        .article-item:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Articles</h1>
+            <a href="../index.html" class="back-link">back to home</a>
+        </header>
+
+        <ul class="articles-list">
+            <li class="article-item">
+                <div class="article-date">June 23, 2013</div>
+                <h2 class="article-title">
+                    <a href="trash-your-servers-and-burn-your-code.html">
+                        Trash Your Servers and Burn Your Code: Immutable Infrastructure and Disposable Components
+                    </a>
+                </h2>
+                <p class="article-excerpt">
+                    As a developer and sometimes system administrator, one of the scariest things I ever encounter
+                    is a server that's been running for ages which has seen multiple upgrades of system and
+                    application software. Why? Because an old system inevitably grows warts...
+                </p>
+                <a href="trash-your-servers-and-burn-your-code.html" class="read-more">read article</a>
+            </li>
+
+            <!-- Add more articles here as you create them -->
+        </ul>
+
+        <footer>
+            <p>&copy; 2013-2024 Chad Fowler</p>
+        </footer>
+    </div>
+</body>
+</html>
