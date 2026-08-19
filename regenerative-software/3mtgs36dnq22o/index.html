@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Specification Is Not a Document — The Phoenix Architecture</title>
+
+<link rel="icon" href="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg">
+<link rel="stylesheet" href="/regenerative-software/style.css">
+</head>
+<body>
+<header class="site">
+  <a href="/regenerative-software/"><img class="icon" src="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg" alt=""></a>
+  <h1><a href="/regenerative-software/">The Phoenix Architecture</a></h1>
+  <p class="desc">Generative AI coding demands what we&#x27;ve always known: modularity, clear boundaries, disposable components. Principles that scaled human teams are now table stakes. Here, we make the implicit explicit</p>
+</header>
+<main>
+<article><h1 class="title">The Specification Is Not a Document</h1>
+<p class="meta">August 19, 2026</p>
+<p>Imagine joining a software project a few years from now.</p>
+<p>It is a large, mature system. It has thousands of business rules, years of operational experience, regulatory obligations, performance constraints, strange edge cases, customer commitments, and architectural decisions made by people who no longer work there.</p>
+<p>You ask the obvious question.</p>
+<blockquote><p>&quot;Where&#x27;s the specification?&quot;</p></blockquote>
+<p>Someone gives you access to it.</p>
+<p>There is no <code>SPEC.md</code>. No 900-page requirements document. No canonical YAML file. No giant prompt that somebody feeds to an agent. There is not even a directory you can browse and reasonably call <em>the specification</em>.</p>
+<p>So you ask how you are supposed to understand the system.</p>
+<p>The answer is another question:</p>
+<blockquote><p>&quot;What do you want to know?&quot;</p></blockquote>
+<blockquote><p>What is this system for?</p></blockquote>
+<blockquote><p>Who depends on it, and what promises does it make to them?</p></blockquote>
+<blockquote><p>Why does checkout retry a failed authorization three times?</p></blockquote>
+<blockquote><p>Which parts of the system are affected by European data residency requirements?</p></blockquote>
+<blockquote><p>What did production teach us in the last twelve months?</p></blockquote>
+<blockquote><p>Which architectural decisions still depend on assumptions that are no longer true?</p></blockquote>
+<p>Each question produces a different view of the same underlying body of knowledge.</p>
+<p>It is tempting to imagine that somewhere behind this interface there must still be a canonical specification: some master representation that contains the whole system in its definitive form.</p>
+<p>But that may be the wrong assumption too. The durable knowledge of a system might not have one natural representation at all. Some of it may be formal, some executable, some observational, some textual. What matters is that these pieces can be identified, related, queried, and traced back to their sources.</p>
+<p>I don’t think there is a single thing underneath all of this that a person could sensibly open and inspect from beginning to end.</p>
+<p>You don’t read it because there is no useful order in which to read it.</p>
+<p>That may turn out to be one of the more important changes in how we think about software in the generative era.</p>
+<h3>Documents impose order. Filesystems impose hierarchy.</h3>
+<p>When we say that a specification should be human-readable, we usually mean that a human should be able to inspect it and understand what it says. That is obviously desirable. But we have traditionally achieved readability by imposing a particular presentation on the underlying knowledge.</p>
+<p>A document has an order. Its author decides that one idea should come before another. A source file contains an ordered sequence of text. A codebase is more complicated: its files are normally organized into directories, packages, modules, repositories, and dependency structures.</p>
+<p>Those structures are useful, but they impose a primary organization on information that often does not have one.</p>
+<p>Consider a mundane rule in a payments system: a failed authorization can be retried up to three times within a particular interval.</p>
+<p>Where does that fact belong?</p>
+<p>It belongs to payments, but also to reliability. It may be constrained by the behavior of an external processor. A production incident may explain why the number is three. An architecture decision may explain why the retry happens asynchronously. An SLO constrains how long the process can take. A compliance requirement may prohibit retrying in some circumstances. An evaluation should reject future implementations that violate the rule.</p>
+<p>A directory tree still makes us choose where something lives. Everything else becomes a reference, a duplicate, a search result, or a fact somebody is expected to know how to find.</p>
+<p>Documents have the same problem. If I write an architecture document, I have to decide whether retries belong under Payments, Reliability, External Dependencies, or Failure Handling. Cross-references help, but I am still flattening a multidimensional set of relationships into an authored sequence.</p>
+<p>The retry rule is connected to a requirement, an implementation, an evaluation, an external dependency, an incident, a decision, and the reason for that decision. Those relationships are themselves part of what we know.</p>
+<p>Today, the person trying to understand the system reconstructs that graph.</p>
+<p>Perhaps we should store the graph instead.</p>
+<h3>We already know how to stop reading the source of truth</h3>
+<p>There is old precedent for this move.</p>
+<p>In 1970, Edgar F. Codd published <em><a href="https://dl.acm.org/doi/10.1145/362384.362685">A Relational Model of Data for Large Shared Data Banks</a></em>. One of the important ideas behind the relational model was independence from physical representation. Users should be able to reason about data without knowing the machine-level structure used to store it.</p>
+<p>That idea now feels mundane because it won so completely.</p>
+<p>Suppose I tell you I have a database containing twenty million customer records. You would not ask me to send you its storage files so you could read them. You might inspect its schema because you need to understand the vocabulary and relationships available to you, but then you query the contents.</p>
+<p>Show me customers who haven&#x27;t ordered in twelve months. Show me revenue by geography. Find accounts exhibiting this pattern. Join these facts to those facts. Give me the projection appropriate to the question I am trying to answer.</p>
+<p>The database does not have a useful reading order, and nobody expects it to.</p>
+<p>Software is full of databases, yet knowledge about the software itself still looks remarkably like a filing system:</p>
+<pre><code class="language-text">README.md
+docs/architecture.md
+services/payment/
+adr/017-retry-policy.md
+openapi.yaml
+terraform/
+dashboards/payment.json
+JIRA-1842</code></pre>
+<p>Some of these artifacts describe what we intended. Some describe what we built. Some explain why we built it. Some record what happened after we deployed it. Some provide evidence that particular properties hold.</p>
+<p>The engineer has to reconstruct the joins.</p>
+<p>Building Information Modeling offers a second example. In Revit, plans, sections, elevations, schedules, and other views are derived from a shared building model. Autodesk&#x27;s documentation describes a schedule as <a href="https://help.autodesk.com/cloudhelp/2025/PLK/Revit-DocumentPresent/files/GUID-F50D6FF4-859E-43A2-A2F6-81C84A1BA0EB.htm">&quot;another view of the model&quot;</a>.</p>
+<p>Despite what we lay-people tend to think, the floor plan is not the building model. It’s just one useful representation of it.</p>
+<p>BIM is not proof that model-centric work eliminates inconsistency, maintenance cost, or interoperability problems. It does not. The building industry has spent years dealing with information exchange and semantic interoperability between modeling systems. The narrower point is enough: a mature engineering discipline has found it useful to distinguish the durable model from the particular human artifacts used to inspect it.</p>
+<p>Software has tried to make this distinction too.</p>
+<h3>I&#x27;ve seen this movie before</h3>
+<p>Anyone familiar with the history of software engineering should be suspicious by now.</p>
+<p>There is a large graveyard of attempts to put a model above source code. The Object Management Group&#x27;s Model Driven Architecture separated platform-independent descriptions of behavior from platform-specific models and implementations. The ambition was to preserve stable meaning while technology underneath it changed.</p>
+<p>Charles Simonyi went somewhere related with Intentional Programming. In his 1997 USENIX talk, <em><a href="https://www.usenix.org/conference/dsl-97/invited-talk-intentional-programming-ecology-abstractions">Intentional Programming: An Ecology for Abstractions</a></em>, he described programs represented as abstract trees of intentions, with separate mechanisms determining how an intention appeared to a programmer and how it was implemented. Systems such as JetBrains MPS continue that projectional tradition today: the program is represented as an abstract syntax tree, and the editor presents a chosen view of that structure to the programmer.</p>
+<p>This history is unusually tangible for me. Microsoft acquired Intentional Software in 2017, and the Intentional team ended up in the group I was part of. I spent significant time with Charles and the team after the acquisition.</p>
+<p>So I don&#x27;t look at Intentional Programming or MDA as naive predecessors who simply lacked modern AI. I met people who had spent years thinking deeply about separating intention from representation. Very smart people have been attacking versions of this problem for a long time.</p>
+<p>The important question is why these approaches remained peripheral.</p>
+<p>Part of the answer is the cost of maintaining the model.</p>
+<p>A second authoritative representation is valuable only while it remains true. If engineers have to build the software and then separately maintain a model describing the software, maintaining the model becomes another job. Under pressure, the artifact that executes tends to win. The model drifts, or it becomes detailed enough that editing it starts to resemble programming in a less familiar environment.</p>
+<p>Cheap code generation by itself does not solve this.</p>
+<p>If regenerative software requires us to maintain an enormous hand-curated knowledge graph alongside the implementation, then we have rebuilt one of the central problems of model-driven development in a more fashionable database.</p>
+<p>That objection needs an answer.</p>
+<h3>Who maintains the thing?</h3>
+<p>The answer cannot be that developers become full-time knowledge engineers.</p>
+<p>The knowledge model has to emerge largely as a consequence of doing the work itself.</p>
+<p>An incident produces observations, evidence, and decisions. A code review contains reasoning and rejected alternatives. An evaluation states something we care enough about to enforce. A production trace provides evidence about actual behavior. A customer escalation can reveal an undocumented dependency. A legal review introduces a constraint. An architectural discussion changes an assumption.</p>
+<p>Most of this information already exists. The failure is that it remains scattered through meetings, code, tickets, chat, monitoring systems, documents, and people&#x27;s memories.</p>
+<p>Language models make extracting candidate structure from that exhaust cheaper than it used to be. Microsoft&#x27;s <a href="https://www.microsoft.com/en-us/research/project/graphrag/">GraphRAG</a> work, for example, uses LLMs to extract structured knowledge from unstructured text collections as part of its retrieval pipeline.</p>
+<p>But extraction is not authority.</p>
+<p>A system may infer from an incident report that the timeout was changed from twelve seconds to seven after incident 1842. That can enter the model as an observation with provenance. It is a different act to declare that every future implementation must use a seven-second timeout.</p>
+<p>The first is information extraction. The second is governance.</p>
+<p>That distinction suggests a lifecycle rather than a bag of supposedly true facts. Knowledge can be observed, inferred, proposed, accepted, contested, superseded, or rejected. Different claims can carry different sources and levels of authority. Machines can do much of the extraction and connection work. Humans become most important at the points where evidence turns into intent.</p>
+<p>Ratification cannot become a new approval queue for every inferred fact. Most observations should remain observations. Authority should be scoped, confidence should be explicit, and only claims that constrain future behavior should require deliberate promotion. Some claims may expire unless reaffirmed; others may inherit authority from an existing policy or decision. The goal is not to make humans approve everything the system learns. It is to make the transition from evidence to obligation visible.</p>
+<p>If maintaining the durable model requires engineers to stop what they are doing and document it, the model will rot. If the model is mostly the structured exhaust of work the organization was already doing, with humans responsible for ratifying the pieces that constrain future behavior, it has a chance.</p>
+<p>None of this eliminates the cost of deciding what kinds of things the system can know. Someone still has to establish vocabularies, scopes, authority rules, and enough shared structure for useful queries to work. The bet is not that this work disappears. It is that we can move from manually maintaining the contents of a second model toward maintaining the rules by which ordinary engineering activity continuously contributes to it.</p>
+<p>The vocabulary itself also has to remain cheap to change. A knowledge substrate that requires a committee to define the universal meaning of <em>Customer</em>, <em>Incident</em>, or <em>Dependency</em> before anyone can record useful facts will fail for the same reason overdesigned ontologies failed before. Shared structure should emerge where interoperability and querying require it. Local concepts can remain local until there is a reason to generalize them.</p>
+<p>The durable model should be strict about authority and loose about vocabulary.</p>
+<p>There is still another problem. Wikis and ADRs can also be produced as part of ordinary work, and they still decay.</p>
+<p>The difference I care about is that this model would have consequences for being wrong.</p>
+<h3>Regeneration is an epistemic test</h3>
+<p>Earlier in this series, <em><a href="https://aicoding.leaflet.pub/3mobohx4fq22x">The Implementation Remembers</a></em> argued that mature software contains knowledge the organization has forgotten. A validation may exist because of an outage five years ago. A retry may encode an undocumented property of a partner API. An apparently redundant ordering constraint may be the scar left by a race condition nobody remembers.</p>
+<p>That creates a fundamental problem for regenerative software.</p>
+<p>Suppose we delete a mature component and regenerate it from everything the organization believes to be the specification. The new component passes the known evaluations but behaves differently in production because the old implementation contained an important behavior that was never represented anywhere else.</p>
+<p>We have discovered the difference between what the organization knows and what the implementation knows.</p>
+<p>Regeneration is therefore more than a way to produce software. It can test whether the durable representation of the system is actually sufficient.</p>
+<p>That gives the knowledge model something a wiki does not have: consequences.</p>
+<p>A stale architecture page can sit unread for six years without causing a failure. A stale or incomplete constraint that participates in regeneration can produce the wrong implementation. An unknown production dependency can reveal itself when the regenerated artifact no longer preserves it. An evaluation failure can expose a contradiction between what we claim to want and what we have encoded.</p>
+<p>This does not make model rot disappear. It gives us a mechanism for detecting some of it.</p>
+<p>Of course, the test only works where regeneration actually happens. Knowledge surrounding a component that survives untouched for ten years can decay just as documentation does. This is one reason the pace layers of a regenerative system matter: regeneration cadence also becomes a cadence for testing whether the knowledge associated with that layer still describes reality.</p>
+<p><em><a href="https://aicoding.leaflet.pub/3md5ftetaes2e">The Deletion Test</a></em> asked what would have to survive if we threw an implementation away. <em><a href="https://aicoding.leaflet.pub/3mb526js42k26">Evaluations Are the Real Codebase</a></em> argued that externally verifiable behavior is more durable than the code that happens to satisfy it. The deeper consequence may be that repeatedly exercising our ability to regenerate is how we discover which pieces of knowledge have not yet escaped from the implementation.</p>
+<p>The current codebase becomes a source of evidence about missing knowledge rather than the permanent home of that knowledge.</p>
+<p>A mature regenerative system should be trying to move unique information out of its implementation until deleting the implementation destroys almost nothing the organization knows.</p>
+<h3>Plans and reasons</h3>
+<p>Once I started thinking about the specification this way, some surprisingly old work became relevant again.</p>
+<p>In an essay based on a December 1997 talk, Tim Berners-Lee wrote about what he saw as the Web&#x27;s unrealized collaborative potential. In <em><a href="https://www.w3.org/1998/02/Potential.html">Realising the Full Potential of the Web</a></em>, he imagined a group maintaining a &quot;running model — in the Web — of their plans and reasons.&quot;</p>
+<p>Plans and reasons.</p>
+<p>That phrase is remarkably close to what software organizations still have difficulty preserving.</p>
+<p>The Semantic Web effort later developed machinery for representing knowledge as relationships rather than as one canonical human document. RDF represents statements in graph form; SPARQL queries patterns across RDF graphs. W3C&#x27;s PROV vocabulary separately provides concepts for representing provenance, including entities, activities, agents, and their relationships.</p>
+<p>I am not arguing that regenerative software should be built on RDF. That would turn an architectural argument into a premature technology choice.</p>
+<p>What matters is the shape of the idea.</p>
+<p>Imagine:</p>
+<pre><code class="language-text">retry-policy
+    applies-to        payment-authorization
+    maximum-attempts  3
+    motivated-by      processor-rate-limit
+    changed-because   incident-1842
+    protected-by      retry-policy-evaluation</code></pre>
+<p><code>incident-1842</code> can itself be connected to production evidence, customer effects, a discussion, and a decision. The external processor constraint can have a source and an effective date. The evaluation can be related to the property it protects. A rejected alternative can remain connected to the assumption that caused us to reject it.</p>
+<p>Their adjacency is semantic, not textual.</p>
+<p>This is also where the argument in <em><a href="https://aicoding.leaflet.pub/3mcbiyal7jc2y">Provenance Is the New Version Control</a></em> becomes more concrete. Version control for regenerative systems cannot stop at remembering which line changed. It needs to preserve why a belief about the system changed, what evidence caused the change, what alternatives were considered, and what future behavior the decision is supposed to protect.</p>
+<p>Michael Nygard&#x27;s Architecture Decision Records were designed to preserve some of exactly this context in a lightweight form. ADRs record context and consequences because source code rarely tells us why an architectural choice was made.</p>
+<p>An ADR is still a document, though.</p>
+<p>If its important components become first-class parts of the system&#x27;s knowledge, I can ask questions that are much harder to answer from a directory of Markdown files:</p>
+<blockquote><p>Which current behaviors were introduced by this decision?</p></blockquote>
+<blockquote><p>Which alternatives did we reject?</p></blockquote>
+<blockquote><p>Which assumption caused us to reject them?</p></blockquote>
+<blockquote><p>Is that assumption still supported by production evidence?</p></blockquote>
+<blockquote><p>Which evaluations protect the intended consequence of the decision?</p></blockquote>
+<p>Now provenance is queryable.</p>
+<h3>Contradiction belongs in the model</h3>
+<p>Once claims, sources, and reasons become first-class, another property of real systems becomes easier to represent.</p>
+<p>Real organizations do not contain one consistent truth.</p>
+<p>Product says customers may cancel for thirty days. Legal says fourteen. The current implementation says forty-five because nobody updated it. A support document promises sixty under a particular contract. Production evidence suggests that several important customers depend on the forty-five-day behavior.</p>
+<p>A conventional specification creates pressure to resolve this into one answer before writing it down.</p>
+<p>The durable knowledge model should be capable of representing the disagreement itself.</p>
+<p>These are different claims made by different authorities, at different times, under different scopes, with different evidence. Resolving them is a governance problem. Hiding the inconsistency by placing each claim in a different document merely makes that governance problem harder to see.</p>
+<p>Making disagreement explicit does not resolve it. It makes the organization confront the fact that resolution is an exercise of authority rather than a documentation problem.</p>
+<p>So a representation might contain something like:</p>
+<pre><code class="language-text">product-policy-44
+    asserts             refund-period = 30 days
+    applies-to          consumer-product
+    effective-from      2026-01-01
+    authority           product
+
+legal-opinion-19
+    asserts             refund-period = 14 days
+    jurisdiction        ...
+    authority           legal
+
+production-observation-817
+    observed            refund-period = 45 days
+    derived-from        production
+    confidence          high</code></pre>
+<p>Now we have something useful to argue about.</p>
+<p>The contradiction is no longer an accidental property of where documents happened to be stored. It is represented as part of what the organization knows.</p>
+<p>This is one reason &quot;specification&quot; may ultimately be the wrong word for the thing I am describing. Specifications traditionally aspire to be consistent statements of intended behavior. Organizational knowledge is messier.</p>
+<p>It contains uncertainty, disagreement, temporal claims, jurisdictional differences, customer-specific promises, observations that conflict with stated intent, and decisions that remain active even though nobody can establish whether their original rationale still applies.</p>
+<p>A regenerative system cannot eliminate this mess by choosing a better serialization format. It can make the relationships explicit.</p>
+<h3>A specification can describe a space</h3>
+<p>Formal methods give us another useful piece of the puzzle.</p>
+<p>An Alloy model is a collection of constraints that implicitly describes a set of possible structures. The Alloy Analyzer searches for structures satisfying those constraints and can search for counterexamples to assertions.</p>
+<p>That is a different conception of specification from pseudocode.</p>
+<p>A specification does not necessarily have to tell us how to construct the program. It can define a space of acceptable programs.</p>
+<p>This matters when implementations are generated.</p>
+<p>The durable knowledge of a regenerative system should not casually insist that a future component be written in Rust, use Postgres, communicate through Kafka, or preserve today&#x27;s service topology. Some of those things may truly be constraints. Most are current answers to deeper requirements.</p>
+<p>That is the distinction I was trying to get at in <em><a href="https://aicoding.leaflet.pub/3msssevtkqc2c">When Does a Specification Become a Program?</a></em> If we preserve enough implementation detail to mechanically reproduce today&#x27;s program, we may simply have moved the program into another language.</p>
+<p>The more interesting specification says what must remain true while leaving room for the next implementation to be different.</p>
+<p>It also does not need one universal language. A formal invariant can remain formal. A schema can remain a schema. An evaluation can remain executable code. A business rule might begin as prose. A performance requirement can be a statistical threshold. A rejected architectural alternative may need several paragraphs of explanation.</p>
+<p>Uniform syntax is less important than connection.</p>
+<p>Can we identify the thing? Can we say what it concerns? Can we trace its source? Can we relate it to evidence, decisions, assumptions, and evaluations? Can we determine whether it is current? Can a machine retrieve it when regenerating the relevant part of the system?</p>
+<p>The substrate can be heterogeneous while the knowledge remains connected.</p>
+<h3>Documentation becomes a projection</h3>
+<p>Suppose I am a new engineer joining the payments team.</p>
+<p>I do not need the whole specification. I need an introduction to the payments system.</p>
+<p>Tell me why it exists. Explain who depends on it and what promises it makes. Show me its major concepts and dependencies. Walk through the important business rules in increasing detail. Include the architectural decisions that still constrain the design and the production incidents that most changed our understanding of it. Show me the evaluations I should understand before touching authorization.</p>
+<p>That is documentation.</p>
+<p>A security engineer asks a different question:</p>
+<p>Show me the trust boundaries, credential flows, externally reachable interfaces, authorization assumptions, and unresolved security exceptions. Trace the claims to their sources.</p>
+<p>That is documentation too.</p>
+<p>Legal might ask which system behaviors derive from a particular regulation. An operator might ask which assumptions are contradicted by current production evidence. A product manager might ask what promises are unique to enterprise customers. An agent regenerating one bounded component might ask for every applicable constraint, evaluation, interface, and dependency.</p>
+<p>These are not separate specifications.</p>
+<p>They are projections.</p>
+<p>Large language models make this practical because they can mediate between human questions and structured representations. But the model belongs in a particular place in the architecture.</p>
+<p>The LLM should not be the specification.</p>
+<p>If I ask why a retry limit exists, I do not want the authoritative answer to be whatever explanation the model happens to generate. I want the model to find the relevant claims, evidence, decisions, and provenance, then explain them to me.</p>
+<p>The path looks more like this:</p>
+<pre><code class="language-text">human question
+      ↓
+language model
+      ↓
+structured retrieval / query
+      ↓
+authoritative system knowledge
+      ↓
+facts + provenance
+      ↓
+language model
+      ↓
+useful human view</code></pre>
+<p>The LLM is an interface to memory, not the memory itself.</p>
+<p>We should also avoid pretending that natural-language querying has already been solved. <a href="https://spider2-sql.github.io/">Spider 2.0</a> was designed around 632 enterprise text-to-SQL workflow problems, often involving real-world databases with more than a thousand columns. In its original evaluation, an agent based on OpenAI&#x27;s o1-preview solved only about 17 percent of the tasks.</p>
+<p>Complex organizational knowledge will be at least as difficult.</p>
+<p>The answer is not to make the LLM more authoritative. It is to make the underlying knowledge explicit enough that retrieval can be checked, provenance surfaced, and generated explanations traced back to their sources.</p>
+<h3>Production teaches the specification</h3>
+<p>Earlier I argued in <em><a href="https://aicoding.leaflet.pub/3mjx4erlboc2l">Production Is a Compiler Input</a></em> that what a running system produces should become input to future regeneration.</p>
+<p>That does not mean production should be allowed to rewrite intent automatically.</p>
+<p>Production gives us evidence.</p>
+<p>Suppose users almost always click a particular button twice. We have observed something. We have not established that double-clicking is desirable.</p>
+<p>Suppose an old implementation has accepted a malformed request for six years. We have evidence that customers may depend on it. We still have to decide whether the next implementation should preserve it.</p>
+<p>Suppose the 99.9th-percentile latency of an operation gradually increases to eight seconds. Reality has taught us something important, but it has not told us that eight seconds is acceptable.</p>
+<p>A regenerative system cannot infer ought from is.</p>
+<p>Production observations enter the model with provenance. Evidence can lead to a decision. A decision can change a requirement. A changed requirement can create or modify an evaluation. That evaluation then constrains future implementations.</p>
+<p>Production is not the specification. Production teaches the specification.</p>
+<p>The distinction also gives us a boundary for governance. Machines can observe aggressively. They can extract aggressively. They can propose relationships and detect contradictions. The transition from evidence to durable intent deserves more care because that is where we decide what future software will be required to do.</p>
+<p>This closes the loop that <em><a href="https://aicoding.leaflet.pub/3mobohx4fq22x">The Implementation Remembers</a></em> exposed. Production is where software continues to learn things its designers did not know. The challenge is making sure those lessons eventually escape from the implementation instead of becoming another mysterious conditional somebody will have to reverse-engineer ten years later.</p>
+<h3>What is the durable artifact?</h3>
+<p>For most of the history of software, source code became the authoritative description of a system for a practical reason.</p>
+<p>It was the only representation detailed enough to reproduce the behavior.</p>
+<p>Requirements were incomplete. Documentation drifted. Diagrams aged. People left. Tickets disappeared into archives. The implementation stayed because the implementation had to run.</p>
+<p>So the code became memory.</p>
+<p>Over time, the implementation becomes a lossy compression of everything the organization once learned.</p>
+<p>We adapted an entire profession around that fact. When we want to know what the system really does, we inspect the implementation. When documentation and implementation disagree, the implementation wins. When nobody remembers why something behaves strangely, we perform archaeology on the artifact that survived.</p>
+<p>That relationship makes sense while the artifact is expensive to reproduce.</p>
+<p>Generative software changes the economics enough that we can ask whether the knowledge required to recreate the software should continue to live inside the thing being recreated.</p>
+<p>I increasingly think the durable asset is a connected body of knowledge about what the system is for, who relies on it, what it promises, what must remain true, why those constraints exist, what alternatives were rejected, what we have learned from operating it, where that knowledge came from, how certain we are of it, where people disagree, and how a future implementation can be evaluated against it.</p>
+<p>Code is one materialization of that knowledge. Documentation is a projection of it. Architecture diagrams are projections of it. Evaluations interrogate it. Production supplies evidence to it. Provenance explains how it came to contain what it contains.</p>
+<p>Regeneration tests whether we captured enough.</p>
+<p>When a regenerated implementation cannot reproduce something important, we have discovered knowledge still trapped in the old artifact. When a supposedly authoritative constraint repeatedly conflicts with current evidence, we have found something that deserves review. When two authorities disagree, we can represent the disagreement instead of accidentally hiding each claim in a different document.</p>
+<p>None of this requires a One True Metamodel. It does not require every engineer to learn RDF. It does not require replacing formal methods, tests, schemas, prose, diagrams, or existing tools with one grand specification language.</p>
+<p>It requires us to stop assuming that one of those representations must be the source.</p>
+<p>None of this requires waiting for a complete regenerative platform either. A team can begin by treating decisions, evaluations, incidents, assumptions, and production observations as connected knowledge rather than unrelated artifacts, and by asking which of those relationships would need to survive if the implementation disappeared.</p>
+<p>A future engineer arrives at a system and asks where the specification is.</p>
+<p>There is no master file to open.</p>
+<p>Instead she asks:</p>
+<blockquote><p>What is this system for?</p></blockquote>
+<blockquote><p>Who relies on it?</p></blockquote>
+<blockquote><p>Why does this behave this way?</p></blockquote>
+<blockquote><p>What depends on this assumption?</p></blockquote>
+<blockquote><p>What did we learn from the last failure?</p></blockquote>
+<blockquote><p>Where do we disagree about what the system should do?</p></blockquote>
+<blockquote><p>What would break if we changed this requirement?</p></blockquote>
+<blockquote><p>Show me the architecture from the perspective of identity.</p></blockquote>
+<blockquote><p>Show me the parts nobody fully understands.</p></blockquote>
+<blockquote><p>Show me what changed in what we believe about this system between last year and today.</p></blockquote>
+<blockquote><p>Generate a new implementation of this component that satisfies everything we currently know.</p></blockquote>
+<p>She never reads the specification.</p>
+<p>There is no useful order in which to read it.</p>
+<p>The codebase used to be where the system kept its memory. It doesn&#x27;t have to be anymore.</p>
+<p>The source of truth no longer has to be a source file.</p>
+<p class="tags">#ai #architecture #software #development</p>
+<nav class="prevnext"><span>&larr; <a href="/regenerative-software/3msssevtkqc2c/">When Does a Specification Become a Program?</a></span><span style="text-align:right"></span></nav>
+</article>
+</main>
+<footer class="site">
+  <p>The Phoenix Architecture &middot; written by <a href="https://bsky.app/profile/chadfowler.com">@chadfowler.com</a></p>
+  <p>Published on the <a href="https://atproto.com">AT Protocol</a> &middot; also at <a href="https://aicoding.leaflet.pub">aicoding.leaflet.pub</a></p>
+  <p><a href="/">chadfowler.com</a></p>
+</footer>
+</body>
+</html>

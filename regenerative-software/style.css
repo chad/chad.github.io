@@ -1,0 +1,58 @@
+
+:root {
+  --bg: rgb(253, 252, 250);
+  --fg: rgb(39, 39, 39);
+  --accent: rgb(233, 79, 55);
+  --accent-fg: rgb(255, 255, 255);
+  --muted: rgb(120, 117, 110);
+  --rule: rgba(39, 39, 39, 0.12);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 18px/1.65 Georgia, 'Times New Roman', serif;
+}
+header.site {
+  padding: 3rem 1rem 2rem; text-align: center;
+  border-bottom: 1px solid var(--rule);
+}
+header.site img.icon { width: 72px; height: 72px; border-radius: 12px; }
+header.site h1 { margin: 0.75rem 0 0.5rem; font-size: 1.9rem; }
+header.site h1 a { color: var(--fg); text-decoration: none; }
+header.site p.desc {
+  max-width: 38rem; margin: 0 auto; color: var(--muted); font-size: 0.95rem;
+}
+main { max-width: 40rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+a { color: var(--accent); }
+h1, h2, h3, h4 { line-height: 1.25; font-family: Georgia, serif; }
+article h1.title { font-size: 2.1rem; margin-bottom: 0.25rem; }
+p.meta { color: var(--muted); font-size: 0.85rem; margin-top: 0; }
+p.tags { color: var(--muted); font-size: 0.85rem; }
+blockquote {
+  margin: 1.5rem 0; padding: 0.25rem 1.25rem; border-left: 3px solid var(--accent);
+  color: rgb(70, 68, 64); font-style: italic;
+}
+pre {
+  background: rgb(245, 243, 238); border: 1px solid var(--rule); border-radius: 8px;
+  padding: 1rem; overflow-x: auto; font-size: 0.85rem; line-height: 1.5;
+}
+code { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 0.9em; }
+p code { background: rgb(245, 243, 238); padding: 0.1em 0.35em; border-radius: 4px; }
+figure { margin: 2rem 0; }
+figure img { max-width: 100%; height: auto; border-radius: 8px; }
+hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem auto; width: 40%; }
+ul.postlist { list-style: none; padding: 0; }
+ul.postlist li { margin: 0 0 1.75rem; }
+ul.postlist a.t { font-size: 1.25rem; text-decoration: none; }
+ul.postlist a.t:hover { text-decoration: underline; }
+ul.postlist .d { color: var(--muted); font-size: 0.85rem; display: block; }
+nav.prevnext {
+  display: flex; justify-content: space-between; gap: 1rem;
+  margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+nav.prevnext span { max-width: 45%; }
+footer.site {
+  text-align: center; color: var(--muted); font-size: 0.8rem;
+  padding: 2rem 1rem 3rem; border-top: 1px solid var(--rule);
+}

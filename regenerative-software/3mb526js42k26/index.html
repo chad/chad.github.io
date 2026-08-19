@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluations Are the Real Codebase — The Phoenix Architecture</title>
+<meta name="description" content="Why behavior outlives implementations">
+<link rel="icon" href="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg">
+<link rel="stylesheet" href="/regenerative-software/style.css">
+</head>
+<body>
+<header class="site">
+  <a href="/regenerative-software/"><img class="icon" src="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg" alt=""></a>
+  <h1><a href="/regenerative-software/">The Phoenix Architecture</a></h1>
+  <p class="desc">Generative AI coding demands what we&#x27;ve always known: modularity, clear boundaries, disposable components. Principles that scaled human teams are now table stakes. Here, we make the implicit explicit</p>
+</header>
+<main>
+<article><h1 class="title">Evaluations Are the Real Codebase</h1>
+<p class="meta">December 29, 2025</p>
+<p>If deleting your codebase feels terrifying, your evaluations are insufficient. That&#x27;s not a moral failure. It&#x27;s a technical one—and in the age of AI-assisted development, it&#x27;s an increasingly expensive one.</p>
+<p>Here is the shift: language models have made code generation cheap. Not free, not perfect, but cheap enough that regenerating a service is often faster than understanding and modifying it. This changes what counts as a durable asset. Code isn&#x27;t it. Code is now a materialized view of understanding—useful while current, disposable when stale.</p>
+<p>The durable asset is the thing that lets you regenerate with confidence: evaluations that encode what the system must do, independent of how any particular implementation does it.</p>
+<h3>Code is Cache</h3>
+<p>Traditional software culture treated code as the memory of the system. It encoded intent, explained decisions, and preserved behavior over time. Protecting it was rational because replacing it was expensive.</p>
+<p>That expense has collapsed. When a model can produce working code from a description in minutes, the calculus inverts. Keeping code around &quot;just in case&quot; stops being wisdom and starts being hoarding. The implementation is a cache. It&#x27;s a snapshot of your current understanding, useful for running in production, not precious in itself.</p>
+<p>If you delete a codebase and can&#x27;t confidently regenerate it, that&#x27;s not a tragedy. It&#x27;s a diagnosis. The problem wasn&#x27;t the deletion. The problem was that nothing important lived outside the code. The intent, the constraints, the behavioral requirements were all implicit in the implementation rather than explicit in artifacts that survive the implementation&#x27;s death.</p>
+<h3>The Spectrum of Test Durability</h3>
+<p>Most engineers, asked how they ensure a system works, answer &quot;tests.&quot; But tests vary enormously in what they actually protect.</p>
+<p>Consider a unit test that verifies a specific function&#x27;s behavior by calling it with specific inputs and checking specific outputs. This test is coupled to that function&#x27;s existence, its signature, its language. Rewrite the service in a different language and the test doesn&#x27;t just fail. It can&#x27;t run at all. The test&#x27;s lifetime is bounded by the implementation&#x27;s lifetime.</p>
+<p>This isn&#x27;t because the test was poorly written. Even exemplary TDD—testing behavior over structure, focusing on public interfaces—produces tests that assume the codebase continues to exist in the same language with the same entry points. That assumption was safe when reimplementation was rare. It&#x27;s not safe when regeneration is routine.</p>
+<p>The alternative is tests specified at a boundary that survives reimplementation:</p>
+<p><strong>Invariants</strong> are properties that hold regardless of implementation. &quot;Balances never go negative.&quot; &quot;Events maintain causal ordering.&quot; &quot;Round-trip serialization is lossless.&quot; These can be verified against any implementation in any language.</p>
+<p><strong>Contracts</strong> specify what crosses boundaries between components. If service A sends this shape, service B returns that shape. The contract survives reimplementation of either service.</p>
+<p><strong>Property-based tests</strong> verify behavioral properties across generated inputs. &quot;Sorting is idempotent.&quot; &quot;Encryption and decryption are inverses.&quot; These encode what must be true, not how to make it true.</p>
+<p><strong>End-to-end behavioral checks</strong> verify the system&#x27;s observable outputs. Given this input, the system produces output in this class. The internal path doesn&#x27;t matter.</p>
+<p>These are durable evaluations. They encode intent at a level of abstraction that outlives any particular implementation. A codebase can be deleted and regenerated; if these evaluations pass, the system still works.</p>
+<h3>The Cost of Durability</h3>
+<p>This is where most manifestos would stop. Having sold the destination, ignore the hike. But, writing durable evaluations is hard. Genuinely hard. Harder than writing the code they specify.</p>
+<p>Identifying true invariants requires deep domain understanding. Most systems have implicit invariants that no one has articulated. They&#x27;re embedded in code that &quot;just works&quot; without anyone knowing exactly why. Extracting these invariants is archaeological work.</p>
+<p>Property-based testing requires thinking in universals rather than examples. Instead of &quot;when I call <code>sort([3,1,2])</code>, I get <code>[1,2,3]</code>,&quot; you must specify &quot;for all lists, sorting produces a list with the same elements in non-decreasing order.&quot; This is a different mental motion than example-based testing, and most engineers haven&#x27;t practiced it.</p>
+<p>Formal contracts require precision that natural language resists. &quot;The API returns user data&quot; is not a contract. &quot;The API returns a JSON object with fields <code>id</code> (string, non-empty), <code>email</code> (string, valid RFC 5322), and <code>created_at</code> (ISO 8601 timestamp)&quot; is a contract. The gap between these is where bugs hide.</p>
+<p>The investment is real. But the alternative (keeping code around because you&#x27;re afraid to delete it, because nothing external specifies what it does) is also an investment. You pay it in cognitive load, in context-window costs, in the compounding complexity of systems that only grow.</p>
+<p>The question isn&#x27;t whether durable evaluations are expensive. The question is whether they&#x27;re cheaper than the alternative. As regeneration gets cheaper, the answer increasingly favors evaluation.</p>
+<h3>Why the Boundary Matters</h3>
+<p>The distinction between ephemeral and durable tests reduces to one question: is the test specified at a boundary that survives reimplementation?</p>
+<p>Tests against internal functions, private methods, specific call sequences: these are specified at the implementation boundary. They verify decisions that might change. Their lifetime is coupled to the implementation&#x27;s lifetime.</p>
+<p>Tests against inputs and outputs, observable behavior, interface contracts: these are specified at the system boundary. They verify obligations the system owes the outside world. The implementation can change completely as long as these obligations are met.</p>
+<p>This isn&#x27;t a new idea at all! Information hiding, API design, coupling versus cohesion, etc...the software engineering literature has understood interface boundaries for fifty years. What&#x27;s new is the economic weight. When regeneration was expensive, careful interface specification was good hygiene. When regeneration is cheap, it&#x27;s the difference between systems that can evolve and systems that calcify.</p>
+<p>A simple check for you to apply: if reimplementing your service in a different language would invalidate your test suite, your tests are specified at the wrong boundary.</p>
+<h3>Monitoring as Continuous Evaluation</h3>
+<p>Even rigorous evaluations only verify intent at a point in time. They don&#x27;t verify that production behavior matches intent continuously.</p>
+<p>This matters more as regeneration frequency increases. Each regeneration is an opportunity for drift. Subtle changes in behavior that pass all explicit checks but diverge from baseline in ways no one anticipated. Monitoring catches what tests miss.</p>
+<p>The relevant signals include standard operational metrics (latency distributions, error rates, throughput) but also business metrics specific to each application: conversion rates, fraud detection accuracy, revenue per transaction, whatever invariants matter in your domain. And for AI-assisted systems, add inference cost per request, token usage patterns, and context window consumption. If a regenerated system passes all tests but doubles your API costs or quietly degrades decision quality, that&#x27;s a failure your evaluations didn&#x27;t catch.</p>
+<p>Monitoring is not separate from evaluation. It&#x27;s evaluation that runs continuously against reality rather than periodically against test fixtures.</p>
+<h3>The Real Codebase</h3>
+<p>Three tiers of evaluation, three lifetimes:</p>
+<p><strong>Ephemeral tests</strong> verify implementation decisions. Unit tests, structural assertions, mock-heavy integration tests. Useful during development, disposable when the implementation changes. Write them freely; delete them without guilt.</p>
+<p><strong>Durable evaluations</strong> verify behavioral intent. Property tests, contract tests, invariants, end-to-end checks. These survive reimplementation because they&#x27;re specified at boundaries that survive reimplementation. They&#x27;re expensive to write and worth the expense.</p>
+<p><strong>Live evaluations</strong> verify production reality. Monitoring, drift detection, anomaly alerts. These run continuously because intent and reality can diverge even when all explicit tests pass.</p>
+<p>A system with only ephemeral tests cannot be safely regenerated. You don&#x27;t know what behavior you&#x27;re trying to preserve. A system with durable evaluations but no live evaluation will drift without warning. A system with all three can be deleted and rebuilt with confidence.</p>
+<p>That confidence is the product. Code is a byproduct.</p>
+<p>The real codebase is everything that lets you throw code away without fear: the properties that define correctness, the contracts that specify interfaces, the monitors that detect drift. If that set is empty, no amount of careful implementation will save you. If that set is rich, the implementation is just a detail, regenerable on demand, disposable without loss.</p>
+<p>This is the promise of regenerative software. It requires investment in specification that most teams haven&#x27;t made. It requires honesty about what your tests actually protect. And it requires accepting that the code you wrote yesterday might not exist tomorrow and that this is fine, because the behavior it encoded is preserved in artifacts that outlive it.</p>
+<p class="tags">#ai #architecture #systems #coding #code</p>
+<nav class="prevnext"><span>&larr; <a href="/regenerative-software/3mb2qb6odxc2d/">The Gradient of Trust</a></span><span style="text-align:right"><a href="/regenerative-software/3mbaguyrjek2g/">Immutable Infrastructure, Immutable Code</a> &rarr;</span></nav>
+</article>
+</main>
+<footer class="site">
+  <p>The Phoenix Architecture &middot; written by <a href="https://bsky.app/profile/chadfowler.com">@chadfowler.com</a></p>
+  <p>Published on the <a href="https://atproto.com">AT Protocol</a> &middot; also at <a href="https://aicoding.leaflet.pub">aicoding.leaflet.pub</a></p>
+  <p><a href="/">chadfowler.com</a></p>
+</footer>
+</body>
+</html>

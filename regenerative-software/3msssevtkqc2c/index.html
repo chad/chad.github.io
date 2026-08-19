@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When Does a Specification Become a Program? — The Phoenix Architecture</title>
+<meta name="description" content="A spec can contain prose, tests, schemas, formal models, even executable code. The useful boundary is not the syntax but, rather, what survives: if you throw the implementation away, what has to remain so you can build the next one?">
+<link rel="icon" href="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg">
+<link rel="stylesheet" href="/regenerative-software/style.css">
+</head>
+<body>
+<header class="site">
+  <a href="/regenerative-software/"><img class="icon" src="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg" alt=""></a>
+  <h1><a href="/regenerative-software/">The Phoenix Architecture</a></h1>
+  <p class="desc">Generative AI coding demands what we&#x27;ve always known: modularity, clear boundaries, disposable components. Principles that scaled human teams are now table stakes. Here, we make the implicit explicit</p>
+</header>
+<main>
+<article><h1 class="title">When Does a Specification Become a Program?</h1>
+<p class="meta">August 11, 2026</p>
+<p>Someone asked me recently where the boundary lies between a specification and an implementation.</p>
+<p>The question has been floating around a lot this year. Gabriella Gonzalez put it directly in an essay titled <a href="https://haskellforall.com/2026/03/a-sufficiently-detailed-spec-is-code">A sufficiently detailed spec is code</a>. Her argument is partly economic: if producing a specification precise enough for an agent requires doing essentially the same intellectual work as programming, we haven&#x27;t escaped the hard part.</p>
+<p>Mario Zechner made a related point in his AI Engineer talk <em><a href="https://youtube.com/watch?v=RjfbvDXpFls">Building Pi in a World of Slop</a></em>: whatever you leave unspecified gets filled in by the model, and those decisions are no longer yours.</p>
+<p>Both objections matter for regenerative software.</p>
+<p>Imagine starting with an English description of a system. It isn&#x27;t precise enough, so we add requirements. Then invariants. Examples. Schemas. Conditions. State machines. At some point pseudocode seems clearer than another paragraph of prose. Eventually we may include executable fragments because they express some requirement more accurately than English can.</p>
+<p>Keep going and the specification starts looking suspiciously like a program.</p>
+<p>But there are really two questions hiding here.</p>
+<p>How much work does it take to specify a system precisely enough that we trust what gets generated?</p>
+<p>And once our durable description contains prose, tests, schemas, formal constraints, executable examples, and maybe actual code, what distinguishes that description from the implementation itself?</p>
+<p>The first question is about whether specification actually saves intellectual labor. The second is about where the identity of a regenerative system lives.</p>
+<p>I&#x27;m interested in both, but especially the second.</p>
+<h3>There will be no perfect specification</h3>
+<p>One seductive version of AI-native development starts with an oracle.</p>
+<p>Describe the desired system perfectly. Give that description to a sufficiently capable machine. Receive a correct implementation. Delete it whenever you like and regenerate another.</p>
+<p>The fantasy is hiding inside the word <em>perfectly</em>.</p>
+<p>We have never been very good at describing complex systems completely before building and operating them. There is little reason to expect that changing the recipient of the description from a programmer to an LLM suddenly fixes that.</p>
+<p>The first version of a specification represents our current understanding of the problem. Reality immediately begins editing it.</p>
+<p>A dependency fails in a way nobody anticipated. A customer discovers a workflow we never modeled. Something that is logically correct takes eleven seconds in production and is therefore unusable. A regulatory requirement appears. An implementation passes every acceptance test while a business metric quietly deteriorates.</p>
+<p>Those discoveries change what we know the system must do.</p>
+<p>I wrote about this in <a href="https://aicoding.leaflet.pub/3mjx4erlboc2l">Production Is a Compiler Input</a>. Production gives us evidence that should flow back into the inputs to the next implementation. The durable description of the system has to be able to learn from that evidence.</p>
+<p>This is also where Zechner&#x27;s gap-filling concern becomes important. Every specification is incomplete. The generator will make decisions inside those gaps.</p>
+<p>Humans have always filled gaps too, but there is an important difference in scale. A human programmer&#x27;s decisions were at least made by someone present in the process and could plausibly be reviewed. An agent can fill thousands of unspecified details in seconds, most of which nobody will ever inspect individually.</p>
+<p>Some of those decisions are harmless implementation choices. Others will turn out to matter.</p>
+<p>The problem is knowing which of those decisions should remain ephemeral and which ones should become part of what the system knows about itself.</p>
+<p>That distinction only becomes visible over time.</p>
+<h3>Specifications are allowed to contain code</h3>
+<p>Suppose a requirement is most accurately expressed as an executable function.</p>
+<p>Maybe there is a financial calculation with enough edge cases that ten lines of code capture its meaning more faithfully than two pages of English. Maybe a property is naturally expressed in temporal logic. Maybe the clearest description of acceptable behavior is a collection of executable examples.</p>
+<p>There is no advantage in translating those into prose simply to preserve a neat border between specification language and programming language.</p>
+<p>An English sentence can describe an implementation detail. A piece of executable code can define an obligation.</p>
+<p>We already accept this in testing. A test is code, but nobody concludes that the test suite and the application under test are therefore the same artifact.</p>
+<p>If an executable property says:</p>
+<pre><code class="language-plaintext">decode(encode(x)) == x</code></pre>
+<p>then every implementation of the encoder and decoder is constrained by that property.</p>
+<p>One implementation might use JSON. Another CBOR. Another a custom binary representation. The executable assertion remains valid across all of them.</p>
+<p>I wrote about this in <a href="https://aicoding.leaflet.pub/3mb526js42k26">Evaluations Are the Real Codebase</a>. Durable evaluations survive implementation changes because they express obligations at boundaries that outlive the current code.</p>
+<p>The useful distinction is not whether something runs. It is what authority that artifact has over future implementations.</p>
+<h3>A specification is probably not a document</h3>
+<p>The word <em>specification</em> still carries an unfortunate image with it: a large document.</p>
+<p><code>Requirements Document v7-final-FINAL.docx</code></p>
+<p>I don&#x27;t think that shape survives. I mean I seriously hope it doesn’t.  Sheesh.</p>
+<p>A real system accumulates many different kinds of assertions.</p>
+<p>A checkout service may have an obvious behavioral requirement: a valid payment should result in an order.</p>
+<p>It may also have an operational constraint saying p95 response time must remain below 400ms under a particular traffic shape. There may be an invariant that the same payment authorization cannot create two orders, a jurisdiction-specific rule, examples of known edge cases, and a business constraint saying that abandonment above some threshold is unacceptable even if the software is technically functioning.</p>
+<p>Different representations are appropriate for different kinds of knowledge.</p>
+<p>Natural language is good at some of them. Schemas are good at others. Property tests, formal constraints, examples, diagrams, measured production evidence, and executable reference functions all have their place.</p>
+<p>I suspect the useful abstraction looks closer to a knowledge graph than a requirements document: a collection of structured assertions with relationships, provenance, evidence, and different projections for different consumers.</p>
+<p>A human might ask it for a readable design document. An agent might ask it for all constraints governing checkout. An evaluator might ask which obligations can be mechanically checked. A production system might attach new evidence to an existing assertion.</p>
+<p>The document becomes one view onto the underlying knowledge.</p>
+<h3>How do you read a specification like this?</h3>
+<p>If the specification is a graph of assertions, constraints, evidence, provenance, and executable fragments, an obvious question follows:</p>
+<p>How does a human read it?</p>
+<p>Probably the same way we read almost no large structured system directly.</p>
+<p>You don&#x27;t read the raw representation from top to bottom. You query it.</p>
+<p>Ask for everything related to performance. Everything that constrains checkout. Every requirement introduced after a particular incident. Every business rule that depends on a specific regulation. Every assertion that has weak evidence. Every part of the system whose current implementation depends on knowledge discovered in production.</p>
+<p>Or ask an LLM to explain a subsystem to you.</p>
+<p>Generate a dependency graph. Produce a requirements document for a particular team. Show the relationship between business objectives and the evaluations that enforce them. Trace a production failure backward through the constraints and decisions that led to the current implementation.</p>
+<p>The raw representation is storage, not necessarily an interface.</p>
+<p>This is part of what makes the graph model appealing to me. It separates the canonical knowledge from the way any particular person needs to consume it.</p>
+<p>There is an old idea hiding in here. More than twenty years ago, XML and XPath promised something similar: keep information in a structured form, then query and transform it into whatever view you need. When I wrote the first edition of <a href="https://pragprog.com/titles/cfcar2/the-passionate-programmer-2nd-edition/">The Passionate Programmer</a>, I did it in a proper XML editor with first class support for XML as a data model. It was an amazing glimpse into a future that didn’t quite pan out. The reality of XML was often much uglier than the promise, but the underlying idea was powerful.</p>
+<p>LLMs make that idea much more interesting.</p>
+<p>You no longer need to know the exact query language or schema before asking a useful question. You can ask, &quot;Why does this service have a 100ms latency requirement?&quot; or &quot;Show me everything we learned from the outage last March,&quot; and have the system traverse the underlying knowledge for you.</p>
+<p>The specification stops being a thing you read.</p>
+<p>It becomes a thing you interrogate.</p>
+<h3>Detail does not collapse the distinction</h3>
+<p><a href="https://buttondown.com/hillelwayne/archive/a-sufficiently-comprehensive-spec-is-not/">Hillel Wayne made a useful distinction</a> in his response to this debate: a specification describes a set of acceptable implementations. Making the specification more precise shrinks that set.</p>
+<p>That is a cleaner way to think about detail.</p>
+<p>Suppose we completely specify an API&#x27;s externally visible behavior: schemas, error conditions, authorization rules, latency envelope, idempotency guarantees, ordering constraints, examples, invariants, and compatibility requirements.</p>
+<p>There may still be many programs that satisfy it.</p>
+<p>One implementation could use PostgreSQL. Another could use FoundationDB. One could be written in Rust, another in Go. One could use actors internally, another conventional request handlers. They might have almost no source code in common.</p>
+<p>More precision narrows the implementation space. It does not automatically collapse specification and implementation into the same artifact.</p>
+<p>And if some small portion of a system becomes so tightly constrained that only one sensible implementation remains, that does not create a philosophical crisis. That implementation can simply become part of the durable system knowledge.</p>
+<p>The more interesting question is what needs to survive if we decide to generate a different implementation later.</p>
+<h3>What mature implementations know</h3>
+<p>There is a harder problem.</p>
+<p>Existing systems already contain knowledge that their specifications don&#x27;t.</p>
+<p>I wrote about this recently in <a href="https://aicoding.leaflet.pub/3mobohx4fq22x">The Implementation Remembers</a>. Mature codebases accumulate odd retries, strangely specific timeout values, defensive validations, exceptional workflows, and ugly-looking conditionals. Some are junk. Others are compressed history.</p>
+<p>That history matters enormously if we want to regenerate software.</p>
+<p>Suppose a query has an inexplicable index hint. An agent regenerating the service might reasonably remove it. Then production latency explodes because the hint was added three years ago after discovering pathological planner behavior at a particular data distribution.</p>
+<p>The index hint preserves the discovery, but only indirectly. What we learned was something about acceptable behavior under real conditions.</p>
+<p>Perhaps the real lasting fact is:</p>
+<blockquote><p>Under the observed production cardinality, this query must remain below 100ms at p95.</p></blockquote>
+<p>Once that fact is represented explicitly, a future implementation is free to solve the problem differently.</p>
+<p>The index hint might survive. It might be replaced by a different index, a rewritten query, a cache, or an entirely different storage engine.</p>
+<p>The important thing is that the production lesson no longer depends on preserving the particular code that first embodied it.</p>
+<p>This is where regeneration becomes interesting to me. Mature software contains a great deal of encoded experience. We need mechanisms that progressively move that experience into artifacts which survive the current implementation.</p>
+<h3>What is actually permanent?</h3>
+<p>This is why I would not make specification carry the entire conceptual load.</p>
+<p>Earlier in this series, in <a href="https://aicoding.leaflet.pub/3mjfruwwuck2d">The Phoenix Primitives</a>, I described four things that need to survive regeneration: specification, evaluation, context boundaries, and provenance.</p>
+<p>They answer different questions.</p>
+<p>The specification records what we require.</p>
+<p>Evaluations provide evidence that an implementation satisfies those requirements.</p>
+<p>Context boundaries define the obligations between independently regenerable parts.</p>
+<p>Provenance records how the current state arose.</p>
+<p>None of these needs to be a particular kind of file or language.</p>
+<p>A schema can define a boundary. Python can express an evaluation. English can state a requirement. Production telemetry can supply evidence. A conversation can create provenance.</p>
+<p>The architecture comes from the relationships among them.</p>
+<h3>Where the boundary matters for Phoenix</h3>
+<p>The set-of-programs definition tells us something useful about what a specification is, but Phoenix has a slightly different architectural problem.</p>
+<p>We need to know what survives.</p>
+<p>The counterfactual I find most useful is:</p>
+<p><strong>If I throw this implementation away and generate another one, does this information have to survive?</strong></p>
+<p>If it does, the information belongs somewhere in the durable system.</p>
+<p>It may be specification. It may be an evaluation, a boundary definition, provenance, a reference implementation, or production evidence. Phoenix does not require all durable knowledge to fit under the word <em>specification</em>.</p>
+<p>That distinction matters because some executable artifacts should survive regeneration and some prose should not.</p>
+<p>A 300-line state machine may encode a protocol that every future implementation has to preserve. Meanwhile, a page of English explaining the internal organization of today&#x27;s cache implementation may safely disappear with the code.</p>
+<p>The format tells us very little. The regeneration test tells us much more.</p>
+<h3>This changes the economics of precision</h3>
+<p>This is where Gonzalez&#x27;s objection bites hardest.</p>
+<p>If maintaining the durable description requires humans to manually reproduce every implementation decision in another form, we have gained nothing. We’ve created two codebases and called one a specification.</p>
+<p>Historically, that is close to what formal specification often meant in practice.</p>
+<p>You could write the program, or you could write an elaborate model of the program and then write the program too. Keeping the two synchronized created a permanent tax. Most teams understandably allowed the code to become the most precise description of the system.</p>
+<p>Generative systems may change that cost structure.</p>
+<p>Agents can extract candidate constraints from implementations. They can compare production behavior with declared expectations. They can generate evaluations from requirements and flag disagreements. They can connect production evidence to assumptions. They can produce multiple human and machine-readable views from the same underlying facts.</p>
+<p>Humans still have to decide what matters.</p>
+<p>That is the intellectual work we cannot automate away by renaming code a specification.</p>
+<p>But we may be able to automate much of the clerical work involved in keeping different representations synchronized.</p>
+<p>If that happens, richer external representations of system knowledge become economically plausible in a way they usually were not before.</p>
+<p>This does not make Gonzalez&#x27;s objection disappear. It changes where the cost lies.</p>
+<p>The difficult work becomes deciding which facts are authoritative, which observations deserve promotion into durable knowledge, which constraints are accidental, and which freedoms we want future implementations to retain.</p>
+<p>That seems like a better problem for humans to be spending their time on.</p>
+<h3>Regeneration needs a learning loop</h3>
+<p>There is one more consequence of all this.</p>
+<p>If specifications are incomplete, implementations will inevitably contain decisions that do not yet exist in the durable system.</p>
+<p>Some of those decisions will later prove important.</p>
+<p>A regenerative architecture therefore needs a path in the other direction.</p>
+<p>Generation takes durable system knowledge and produces an implementation.</p>
+<p>Operation produces evidence.</p>
+<p>That evidence changes our understanding of the system.</p>
+<p>Some of what we learn gets promoted into the durable layer and constrains the next generation.</p>
+<p>This is the loop I care about:</p>
+<pre><code class="language-plaintext">knowledge
+
+    ↓
+
+implementation
+
+    ↓
+
+production
+
+    ↓
+
+evidence
+
+    ↓
+
+revised knowledge</code></pre>
+<p>Without that return path, regeneration becomes amnesia.</p>
+<p>You can generate fresh software forever while repeatedly forgetting everything previous implementations learned the hard way.</p>
+<p>The useful system is the one that gets harder to fool every time it runs.</p>
+<h3>Has anyone built the complete version?</h3>
+<p>I haven&#x27;t seen a substantial production system that can throw away arbitrary pieces of itself and reliably regenerate them from a complete external body of system knowledge without meaningful loss.</p>
+<p>The ideas are ahead of the tooling.</p>
+<p>But “complete regeneration or nothing” is not a useful adoption threshold.</p>
+<p>A system can become progressively more regenerative.</p>
+<p>Move one important invariant out of implicit code and into a durable evaluation.</p>
+<p>Make one service boundary explicit enough that either side can be replaced.</p>
+<p>Recover one production lesson from an implementation and represent the constraint it exposed.</p>
+<p>Take one component and reach the point where deleting its implementation is boring.</p>
+<p>Each step changes where the system&#x27;s knowledge lives.</p>
+<p>Over time, less of its identity is trapped in the current source tree.</p>
+<p>And this gets back to the question in the title. A specification does not become a program merely because it gets detailed, formal, or executable. The boundary that matters appears when we ask what must survive regeneration and what can be allowed to disappear with this particular implementation.</p>
+<p>A sufficiently detailed specification may contain prose, schemas, tests, formal models, executable examples, and actual code.</p>
+<p>The important question is what remains after the program burns.</p>
+<p class="tags">#software #architecture #ai #systems</p>
+<nav class="prevnext"><span>&larr; <a href="/regenerative-software/3mobohx4fq22x/">The Implementation Remembers</a></span><span style="text-align:right"><a href="/regenerative-software/3mtgs36dnq22o/">The Specification Is Not a Document</a> &rarr;</span></nav>
+</article>
+</main>
+<footer class="site">
+  <p>The Phoenix Architecture &middot; written by <a href="https://bsky.app/profile/chadfowler.com">@chadfowler.com</a></p>
+  <p>Published on the <a href="https://atproto.com">AT Protocol</a> &middot; also at <a href="https://aicoding.leaflet.pub">aicoding.leaflet.pub</a></p>
+  <p><a href="/">chadfowler.com</a></p>
+</footer>
+</body>
+</html>

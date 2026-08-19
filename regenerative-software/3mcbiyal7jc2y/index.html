@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provenance Is the New Version Control — The Phoenix Architecture</title>
+
+<link rel="icon" href="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg">
+<link rel="stylesheet" href="/regenerative-software/style.css">
+</head>
+<body>
+<header class="site">
+  <a href="/regenerative-software/"><img class="icon" src="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg" alt=""></a>
+  <h1><a href="/regenerative-software/">The Phoenix Architecture</a></h1>
+  <p class="desc">Generative AI coding demands what we&#x27;ve always known: modularity, clear boundaries, disposable components. Principles that scaled human teams are now table stakes. Here, we make the implicit explicit</p>
+</header>
+<main>
+<article><h1 class="title">Provenance Is the New Version Control</h1>
+<p class="meta">January 13, 2026</p>
+<p>When code can be thrown away and recreated, the unit of change is no longer lines of code. It’s reasons. Version control has to follow.</p>
+<p>Regenerable systems quietly invalidate an assumption that has underpinned software engineering for decades: that the text of the code is the best record of how and why a system came to be. Once an AI can reliably regenerate an implementation from specification, the code itself becomes an artifact of synthesis, not the locus of intent.</p>
+<p>By <em>regenerable</em>, I mean: if you delete a component, you can recreate it from stored intent (requirements, constraints, and decisions) with the same behavior and integration guarantees.</p>
+<p>In that world, version control doesn’t disappear, but it has to move upstream.</p>
+<h3>When Diffs Stop Representing Decisions</h3>
+<p>Traditional version control works because code edits are a reasonable proxy for human decisions. Someone typed this conditional. Someone refactored that loop. A diff is an imperfect but serviceable record of authorship.</p>
+<p>AI-assisted generation severs that link.</p>
+<p>When an agent reads a specification, reasons about constraints, chooses an approach, and emits code, the resulting text reflects <em>outcomes</em>, not <em>decisions</em>. A diff can show what changed in the artifact, but it cannot explain which requirement demanded the change, which constraint shaped it, or which tradeoff caused one structure to be chosen over another.</p>
+<p>This is the sense in which code-first version control becomes a <strong>lossy history</strong>. Not because diffs are useless (they still matter operationally) but because they no longer represent the causal history of the system. They tell you what happened, not why it happened.</p>
+<p>That distinction matters once code is no longer directly authored.</p>
+<h3>Specifications as Executable Intent</h3>
+<p>In a regenerable system, specifications are no longer descriptive documents. They are executable inputs.</p>
+<p>If a component can be deleted and recreated at will, then whatever information is required to recreate it is, by definition, the source of truth. Specifications stop being explanatory prose and become causal inputs.</p>
+<p>The same is true of an agent’s plan.</p>
+<p>The plan that matters isn’t free-form thinking. It’s the decision record: chosen strategy, rejected alternatives, and the constraints that forced the choice. Even when the choice is wrong, it’s still the most useful artifact to preserve: it explains <em>why the system looks like this</em>. Treating this as throwaway reasoning discards information that is often more important than the final text.</p>
+<p>The plan is not documentation. It is part of the implementation.</p>
+<h3>A Concrete Example: Email Validation</h3>
+<p>Consider a small component: a function that validates email addresses.</p>
+<p>A specification might state:</p>
+<blockquote><p>The system must accept standard email addresses of the form <code>local@domain</code>.</p></blockquote>
+<blockquote><p>It must reject inputs without exactly one <code>@</code>.</p></blockquote>
+<blockquote><p>It must not attempt full RFC compliance.</p></blockquote>
+<p>An agent produces a plan:</p>
+<blockquote><p>Use a simple regular expression.</p></blockquote>
+<blockquote><p>Do not rely on external libraries.</p></blockquote>
+<blockquote><p>Explicitly reject whitespace.</p></blockquote>
+<blockquote><p>Favor readability over completeness.</p></blockquote>
+<p>From this, code is generated.</p>
+<p>Now the requirement changes:</p>
+<blockquote><p>The system must accept internationalized domain names (IDN) in the domain portion.</p></blockquote>
+<p>Nothing else changes.</p>
+<p></p>
+<figure><img src="/regenerative-software/blobs/bafkreielarcqw4dte7egyhiuighu3d4wtynsonruh6dqmluhvmdubexejm.png" alt="" loading="lazy" width="981" height="637"></figure>
+<p></p>
+<p>In a code-centric workflow, you inspect the diff and infer intent after the fact. In an intent-centric workflow, a single requirement node changes, the dependent plan node(s) changes, and the generated code changes as a consequence. The unit of change is not “these lines,” but “this reason.”</p>
+<p>You can now answer not just <em>what</em> changed, but <em>why it had to</em>.</p>
+<h3>From Files to Intent Graphs</h3>
+<p>To support this, intent cannot live in a loose collection of documents. It needs structure.</p>
+<p>The representation that works is a <a href="https://en.wikipedia.org/wiki/Content-addressable_storage">content-addressed</a> graph. Individual requirements, constraints, plans, decisions, and environmental factors become nodes. Each node has a stable representation and a hash derived from its content. Edges express causality: this plan depends on that requirement; this decision exists because of that constraint.</p>
+<p>In practice, each node needs at least: a type, canonical content, explicit dependencies, and evaluation artifacts (tests, constraints, budgets) that make regeneration checkable.</p>
+<p>Even in the small example above, the graph is explicit:</p>
+<ul><li>A requirement node: “accept standard email addresses”</li><li>A constraint node: “no RFC compliance”</li><li>A plan node: “use a regex, reject whitespace”</li><li>A generator node: “Claude-class model, email-validator template”</li></ul>
+<p>The code sits downstream of all four.</p>
+<p>The “version” of the component is the root hash of this graph. Change a requirement and only the downstream nodes change. Regenerate with identical inputs and the root hash remains stable. Identity moves from files to intent.</p>
+<h3>What’s New and What Isn’t</h3>
+<p>None of these ideas exist in isolation.</p>
+<p>Build systems like <a href="https://bazel.build/">Bazel</a>—and increasingly <a href="https://nixos.org/">Nix</a>-style systems—use hashed inputs and content-addressed caches to track which inputs produced which outputs. Formal methods <a href="https://lamport.azurewebsites.net/pubs/lamport-ftrtft94.pdf">have long pursued</a> specifications with mathematical semantics precise enough to analyze and verify.</p>
+<p>What’s new is the coupling.</p>
+<p>Bazel tracks <em>build</em> causality. Formal specifications describe <em>logical</em> intent. Regenerable systems require <strong>generative provenance</strong>: a direct, machine-enforced link between intent and implementation. The specification graph doesn’t sit beside the system. It drives it.</p>
+<p>Description can drift. Drivers cannot.</p>
+<h3>Why Traceability Failed and Why It Might Not Now</h3>
+<p>Industries have attempted requirements traceability for decades, usually through tickets, spreadsheets, and process checklists. It often failed in mainstream software because humans were asked to maintain links that the system itself did not depend on.</p>
+<p>Regenerable systems invert the incentives.</p>
+<p>If a system can regenerate itself, it must already know what it’s doing. Provenance stops being overhead and becomes infrastructure. The links exist because generation requires them.</p>
+<p><em>This does not describe how today’s AI tools work.</em> Current generators do not emit stable, versionable plans or structured intent graphs. This is not a description of the present. It’s an argument about the direction forced by regeneration economics: the cost of re-deriving code keeps falling, while the cost of rediscovering intent does not.</p>
+<h3>Hard Problems and Failure Modes</h3>
+<p>This model raises real challenges.</p>
+<p>Specifications expressed in natural language require canonicalization. Two nodes may be semantically equivalent but textually different, and we won’t always detect that reliably. Agents will make implicit assumptions that are not explicitly recorded. Non-deterministic generators may produce different code from identical intent graphs.</p>
+<p>These are not reasons to abandon the approach. They are design constraints.</p>
+<p>The model does not require perfect formalization. It requires tractability—and tractability improves as specifications become more structured, plans become explicit, and generators are forced to surface their decisions. Ambiguity becomes visible rather than hidden in diffs.</p>
+<p>Even failure becomes diagnosable at the level that matters: intent.</p>
+<h3>Versioning What Actually Matters</h3>
+<p>Git taught us how to version text.</p>
+<p>Regenerable systems force us to version intent: the requirements, constraints, and decisions that caused a system to take its current shape. Code still matters but it becomes an artifact, not the record of authorship.</p>
+<p>The tools to do this well don’t fully exist yet. But the pressure is already here. If code can be recreated at will, the question becomes unavoidable:</p>
+<p><strong>What, exactly, is worth preserving, and how would you know?</strong></p>
+<p class="tags">#ai #code #versioncontrol #documentation #specs</p>
+<nav class="prevnext"><span>&larr; <a href="/regenerative-software/3mbuc4mohwc2k/">n=1 Is a Design Constrain (Not a Staffing Model)</a></span><span style="text-align:right"><a href="/regenerative-software3mcxo5ojob22c/">UI Is a Conservation Layer</a> &rarr;</span></nav>
+</article>
+</main>
+<footer class="site">
+  <p>The Phoenix Architecture &middot; written by <a href="https://bsky.app/profile/chadfowler.com">@chadfowler.com</a></p>
+  <p>Published on the <a href="https://atproto.com">AT Protocol</a> &middot; also at <a href="https://aicoding.leaflet.pub">aicoding.leaflet.pub</a></p>
+  <p><a href="/">chadfowler.com</a></p>
+</footer>
+</body>
+</html>
