@@ -169,6 +169,25 @@ p code { background: rgb(245, 243, 238); padding: 0.1em 0.35em; border-radius: 4
 figure { margin: 2rem 0; }
 figure img { max-width: 100%; height: auto; border-radius: 8px; }
 hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem auto; width: 40%; }
+.subscribe {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem;
+  margin: 0 0 2.5rem; padding: 1rem 1.25rem;
+  border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+  border-radius: 8px; background: rgb(248, 246, 241);
+  font-size: 0.9rem; color: var(--muted);
+}
+.subscribe p { margin: 0; flex: 1 1 16rem; }
+.subscribe a.btn {
+  background: var(--accent); color: var(--accent-fg); text-decoration: none;
+  padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.85rem;
+  font-family: ui-sans-serif, system-ui, sans-serif; white-space: nowrap;
+}
+.subscribe a.btn:hover { filter: brightness(1.08); }
+.subscribe a.rss { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
+.subscribe-inline {
+  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+  color: var(--muted); font-size: 0.9rem;
+}
 ul.postlist { list-style: none; padding: 0; }
 ul.postlist li { margin: 0 0 1.75rem; }
 ul.postlist a.t { font-size: 1.25rem; text-decoration: none; }
@@ -187,6 +206,17 @@ footer.site {
 """
 
 
+LEAFLET = "https://aicoding.leaflet.pub"
+
+SUBSCRIBE_BOX = f"""<div class="subscribe">
+  <p><strong>Subscribe.</strong> New essays land in your inbox (and in your ATProto feed) via Leaflet.</p>
+  <a class="btn" href="{LEAFLET}">Subscribe on Leaflet</a>
+  <a class="rss" href="{LEAFLET}/rss">RSS</a>
+</div>"""
+
+SUBSCRIBE_INLINE = f"""<p class="subscribe-inline">Like this? <a href="{LEAFLET}">Subscribe to The Phoenix Architecture on Leaflet</a> &middot; <a href="{LEAFLET}/rss">RSS</a></p>"""
+
+
 def page(title, body, pub, desc=None, icon_href=None):
     desc_tag = f'<meta name="description" content="{html.escape(desc, quote=True)}">' if desc else ""
     icon_tag = f'<link rel="icon" href="{icon_href}">' if icon_href else ""
@@ -198,6 +228,7 @@ def page(title, body, pub, desc=None, icon_href=None):
 <title>{html.escape(title)}</title>
 {desc_tag}
 {icon_tag}
+<link rel="alternate" type="application/rss+xml" title="{html.escape(pub['name'], quote=True)}" href="{LEAFLET}/rss">
 <link rel="stylesheet" href="{BASE}/style.css">
 </head>
 <body>
@@ -272,6 +303,7 @@ def main():
         nav.append(f'<span>{older_link}</span>')
         nav.append(f'<span style="text-align:right">{newer_link}</span>')
         nav.append("</nav>")
+        body.append(SUBSCRIBE_INLINE)
         body.append("".join(nav))
         body.append("</article>")
         slug = doc["path"].lstrip("/")
@@ -290,7 +322,7 @@ def main():
         items.append(f'<li><a class="t" href="{BASE}{doc["path"]}/">{html.escape(doc["title"].strip())}</a>'
                      f'<span class="d">{d}</span>'
                      + (f'<span class="d">{desc}</span>' if desc else "") + "</li>")
-    index_body = f'<ul class="postlist">{"".join(items)}</ul>'
+    index_body = SUBSCRIBE_BOX + f'<ul class="postlist">{"".join(items)}</ul>'
     with open(os.path.join(OUT, "index.html"), "w") as f:
         f.write(page(pub["name"], index_body, pub, desc=pub.get("description"),
                      icon_href=icon_href))

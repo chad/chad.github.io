@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Most of Your Architecture Was Just Expensive Code — The Phoenix Architecture</title>
+
+<link rel="icon" href="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg">
+<link rel="alternate" type="application/rss+xml" title="The Phoenix Architecture" href="https://aicoding.leaflet.pub/rss">
+<link rel="stylesheet" href="/regenerative-software/style.css">
+</head>
+<body>
+<header class="site">
+  <a href="/regenerative-software/"><img class="icon" src="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg" alt=""></a>
+  <h1><a href="/regenerative-software/">The Phoenix Architecture</a></h1>
+  <p class="desc">Generative AI coding demands what we&#x27;ve always known: modularity, clear boundaries, disposable components. Principles that scaled human teams are now table stakes. Here, we make the implicit explicit</p>
+</header>
+<main>
+<article><h1 class="title">Most of Your Architecture Was Just Expensive Code</h1>
+<p class="meta">August 21, 2026</p>
+<p>For decades, architectural knowledge lived inside the implementation, because the implementation was expensive to reproduce. That expense is disappearing. And as it goes, we&#x27;re going to find out how much of what we called &quot;architecture&quot; was really the cost of change wearing a disguise.</p>
+<p>Cheap code is supposed to make architecture matter less. It&#x27;s doing the opposite. As implementation gets cheap, architecture becomes both more important and, for the first time, visible.</p>
+<p>The argument about AI coding has moved fast.</p>
+<p>A year or two ago, the interesting question was whether models could write useful software at all. Then it became whether they could complete features, navigate repositories, run tests, fix their own mistakes, and work for long stretches without someone watching over their shoulder.</p>
+<p>For anyone working seriously with the current generation of tools, that argument is mostly over. They can produce a lot of code. Sometimes an astonishing amount.</p>
+<p>The argument now is about what happens afterward.</p>
+<p>You hear it more and more from people at the frontier of these tools: code generation is no longer the bottleneck. Verification is. The same conversations keep circling back to harness engineering, cognitive debt, apprenticeship, and whether architecture and design still matter when the programmer is increasingly an agent rather than a person. <a href="https://martinfowler.com/fragments/2026-07-06.html">Martin Fowler has framed a live disagreement here</a>. Maybe sufficiently capable models will eventually deal with whatever spaghetti we hand them. Or maybe the properties that make systems understandable to humans (modularity, naming, clear boundaries) matter just as much to agents.</p>
+<p>Meanwhile, the people actually attempting highly autonomous software development are running into the walls.</p>
+<p><a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md">Dex Horthy of HumanLayer has described trying to run a lights-off software factory</a>. For a while it worked. Then, after several serious failures, the team reportedly got to the point where rebuilding parts of the system by hand was easier than recovering from what their agents had produced.</p>
+<p>His argument, as reported, is stronger than &quot;tests aren&#x27;t enough.&quot; Tests can give an agent a reward signal in seconds. Most of the costs of bad architecture show up over months or years. Cohesion, conceptual integrity, whether an abstraction makes the next hundred changes easier — those are hard to compress into a fast oracle. His conclusion for right now is blunt: <a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md">&quot;we&#x27;re stuck reading the code.&quot;</a></p>
+<p>I think he&#x27;s right about right now.</p>
+<p>I don&#x27;t think he&#x27;s describing a permanent boundary.</p>
+<p>The deeper problem isn&#x27;t that humans stopped typing the implementation. It&#x27;s that we spent decades letting architectural knowledge stay implicit <em>in</em> the implementation. Cheap code removes some of the friction that used to protect that architecture, and in doing so it makes architecture both more visible and more necessary.</p>
+<hr>
+<h3>What was architecture when change was expensive?</h3>
+<p>In <em><a href="https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf">Who Needs an Architect?</a></em>, Fowler quotes Ralph Johnson&#x27;s description of architecture as &quot;the important stuff, whatever that is.&quot; Fowler follows that to a useful consequence: maybe architecture is the set of decisions developers wish they could get right early. The things people perceive as hard to change. One of an architect&#x27;s jobs, he argues, is to eliminate irreversibility wherever possible.</p>
+<p>The difficulty-of-change test has always been useful because important architectural decisions tend to pick up enormous consequences. Change the tenancy model, the authorization scheme, or the ownership of an important data set, and the effects spread everywhere.</p>
+<p>But the history of software has quietly mixed together two very different reasons a thing can be hard to change.</p>
+<p>Some decisions are hard to change because their meaning is deeply embedded in the system.</p>
+<p>Others are hard to change because rewriting the implementation is expensive.</p>
+<p>For a long time those looked like the same thing. A framework choice could shape a company for a decade because replacing it meant rewriting millions of lines of code. A database engine could seem architectural because migrating away from it might cost years of work.</p>
+<p>Fred Brooks made a related distinction in <em><a href="https://doi.org/10.1109/MC.1987.1663532">No Silver Bullet</a></em>, separating the essential difficulty of software from the accidental difficulty introduced by the machinery we use to build it. Generative systems are an unusually powerful solvent for some forms of accidental implementation cost. They do much less to the essential difficulty of deciding what a system must <em>mean</em>.</p>
+<p>Then code generation gets cheap.</p>
+<p>Suddenly some supposedly architectural choices become trivial to replace while others stay every bit as consequential.</p>
+<p>Cheap code separates accidental irreversibility from intentional durability. Imagine regenerating a system tomorrow.</p>
+<p>The new version uses a different HTTP framework. You probably don&#x27;t care. It organizes internal types differently. Also fine. It swaps a cache for another implementation while keeping the same behavior and operational characteristics. Still nothing to object to.</p>
+<p>But suppose the regenerated system lets the payments service modify the ledger directly, even though the whole thing was deliberately designed so only a narrowly scoped accounting capability could do that.</p>
+<p>You care.</p>
+<p>Suppose externally visible operations that used to be idempotent can now execute twice.</p>
+<p>You care.</p>
+<p>Suppose customer data can cross a regional boundary that was intentionally impossible to cross before.</p>
+<p>That one you care about most of all.</p>
+<p>Which gives us a useful test:</p>
+<blockquote><p><strong>If I regenerated the system tomorrow and this changed, would I care?</strong></p></blockquote>
+<p>If the answer is no, the thing may have been an implementation choice masquerading as architecture because changing it used to be expensive.</p>
+<p>If the answer is yes, ask why. The answer will usually point at a boundary, invariant, authority, dependency rule, interface, or safety property that gives the system its shape.</p>
+<p>Call it the <strong>regeneration test for architecture</strong>.</p>
+<p>There&#x27;s an important limit. The test doesn&#x27;t manufacture architectural understanding. Someone who no longer knows why the ledger boundary exists can&#x27;t recover that knowledge just by asking whether they&#x27;d care if it disappeared.</p>
+<p>The test works best as a transcription mechanism. While we still understand the system, it helps us spot which parts of that understanding need to become durable somewhere other than the current implementation.</p>
+<p>Regeneration itself has a second job. When we regenerate something and find that a seemingly harmless difference causes a failure, an audit problem, a security hole, or an operational surprise, we&#x27;ve found architecture we didn&#x27;t know we were carrying.</p>
+<p><strong>The regeneration test captures known architecture. Regeneration failures expose unknown architecture.</strong></p>
+<hr>
+<h3>Architecture is a constraint on possibility</h3>
+<p>When implementation was expensive, architecture often looked like a plan for construction.</p>
+<p>We designed layers, modules, services, schemas, and interfaces, then spent months or years translating those choices into working software. It was natural to think of architecture as the skeleton the implementation got built around.</p>
+<p>Jack Reeves argued back in 1992 in <em><a href="https://www.cs.uml.edu/ecg/uploads/SoftwareEngineeringFall2007/DevDotStar_Reeves_CodeAsDesign.pdf">What Is Software Design?</a></em> that source code is the real design of software, because it&#x27;s the artifact detailed enough to be executed. Cheap regeneration puts new pressure on that idea. If executable detail becomes cheap to reproduce, more of the expensive design work has to become visible somewhere else.</p>
+<p>Suppose an agent can produce a hundred plausible implementations of a capability. Eighty pass the obvious functional tests.</p>
+<p>The architectural problem was never about producing implementation number 101. It&#x27;s really about ruling out the implementations we should never be willing to operate.</p>
+<p>Payments cannot acquire this capability. Customer data cannot cross this boundary. This operation must remain idempotent. These components cannot share persistence. This subsystem cannot know that another subsystem exists.</p>
+<p>There might be thousands of legal implementations inside those constraints. That freedom is useful.</p>
+<blockquote><p><strong>When code was expensive, architecture helped us build it. When code is cheap, architecture helps us reject it.</strong></p></blockquote>
+<p>Better generators don&#x27;t make architecture disappear. They increase the number of possible answers on the table.</p>
+<p>Architecture defines the acceptable region. A definition I find useful: architecture is the set of constraints on how a system is allowed to change. That holds whether the change is made by a person, an agent, or a compiler. The generative-era corollary is that architectural decisions are the things we deliberately refuse to leave unconstrained.</p>
+<hr>
+<h3>Architecture has to push back</h3>
+<p>This all sounds abstract until an architectural rule actually rejects an implementation.</p>
+<p>Say we&#x27;ve decided that code in the payments domain may not depend directly on ledger persistence. Payments can request accounting operations through an approved interface, but it cannot write ledger state itself.</p>
+<p>In Java, an architectural fitness function using ArchUnit might look like this:</p>
+<pre><code class="language-java">ArchRule paymentsCannotTouchLedgerPersistence =
+    noClasses()
+        .that().resideInAPackage(&quot;..payments..&quot;)
+        .should().dependOnClassesThat()
+        .resideInAnyPackage(&quot;..ledger.persistence..&quot;);</code></pre>
+<p>Now an agent gets a task:</p>
+<blockquote><p>Fix the refund race condition.</p></blockquote>
+<p>It inspects the system and finds a perfectly reasonable local shortcut. Instead of going through the accounting boundary, <code>PaymentService</code> writes directly through <code>LedgerRepository</code>.</p>
+<p>The feature tests pass. The race condition disappears. The implementation is simpler.</p>
+<p>The architecture rejects it.</p>
+<p>Now the agent has to find another path. It routes the operation through the accounting interface and lands the fix a few minutes later.</p>
+<p>The constraint didn&#x27;t tell the generator how to solve the problem. It steered the search away from a solution we&#x27;d already decided was unacceptable.</p>
+<p>A diagram describes an architecture.</p>
+<blockquote><p><strong>A fitness function participates in maintaining one.</strong></p></blockquote>
+<p>Neal Ford, Rebecca Parsons, Patrick Kua, and others working on evolutionary architecture have spent years arguing for architectural fitness functions for exactly this reason: important architectural characteristics should be continuously evaluated as a system evolves. That advice gets more urgent as the gap widens between a system&#x27;s implementation and the team&#x27;s shared understanding of how and why it works.</p>
+<p>There&#x27;s another reason written guidance alone won&#x27;t cut it.</p>
+<p>Empirical work on coding agents at repository scale has started testing what happens when agents do or don&#x27;t have the facts required for a large change. In <em><a href="https://arxiv.org/abs/2608.16630">The Working Set of a Coding Agent: Coherence Debt in Repository-Scale Tasks</a></em>, Bardia Mohammadi, Lars Klein, Aman Chadha, Akhil Arora, and Laurent Bindschaedler report a particularly interesting result: when an expected fact was missing, agents often acted anyway, fabricating a file or guessing a value. When a coding standard and the existing code disagreed, agents tended to follow the standard even when it prescribed the worse implementation. In those cases, a stale convention file could cost more than having no convention file at all.</p>
+<p>That&#x27;s a useful warning. Making architectural knowledge explicit isn&#x27;t enough. Wrong explicit knowledge can steer a generator with more confidence than missing knowledge.</p>
+<p>Documented constraints aren&#x27;t the goal. You want <strong>current constraints with consequences</strong>.</p>
+<hr>
+<h3>Where architecture still needs humans</h3>
+<p>The ArchUnit example is intentionally easy.</p>
+<p>Dependency direction is static, syntactic, and cheap to check. A whole useful class of architectural rules fits that shape: package dependencies, API compatibility, capability restrictions, some deployment rules, some data-location policies.</p>
+<p>Other properties are much harder. Idempotency is behavioral. Distributed consistency may depend on sequences of events and failures. A security invariant may cross processes and storage systems. You can sometimes attack these with property testing, model checking, runtime verification, or carefully designed evaluations, but doing it takes real work.</p>
+<p>Then there are properties like cohesion, conceptual integrity, the quality of an abstraction, and whether the next ten changes are getting easier or harder. We don&#x27;t have reliable mechanical oracles for those.</p>
+<p>This is where the lights-off experiments matter. An agent optimizing against tests can make locally sensible decisions while quietly degrading qualities whose cost won&#x27;t show up until much later. More loops around the same oracle don&#x27;t fix that.</p>
+<p>Harness engineering helps. A good harness gives an agent the context, tools, permissions, observations, and feedback it needs to navigate a search effectively.</p>
+<p>But a harness and an architecture answer different questions.</p>
+<blockquote><p><strong>The harness helps the agent navigate the search. Architecture defines the region in which a successful answer is allowed to land.</strong></p></blockquote>
+<p>Right now we can&#x27;t describe that entire region mechanically. Experienced engineers can spot architectural trouble in code that every automated check accepts. Reading code is still one of the sensors we use for those qualities.</p>
+<p>So no, I don&#x27;t think teams should stop reading generated code on Monday.</p>
+<p>Code review is the bridge. The destination is to keep shrinking the portion of architecture whose preservation depends entirely on tacit human judgment over the current implementation.</p>
+<p>Every boundary we make explicit helps. So does every invariant we can evaluate, every authority relationship we can represent. Some judgment may stay irreducible. That doesn&#x27;t make the rest of the effort pointless.</p>
+<p>It tells us where the boundary actually is.</p>
+<hr>
+<h3>The theory dies with the code</h3>
+<p>There&#x27;s an objection here, and it predates AI.</p>
+<p>In 1985, Peter Naur&#x27;s <em><a href="https://www.sciencedirect.com/science/article/pii/0165607485900328">Programming as Theory Building</a></em> argued that the primary product of programming isn&#x27;t the program text. Programmers build a theory of the problem and its solution. A mental model that lets them explain the system, modify it, and reason about cases the source never explicitly captured.</p>
+<p>This is one of the deepest roots of the current cognitive-debt worry.</p>
+<p>When a programmer builds software by hand, some of that theory develops almost by accident. You remember the awkward branch because you wrote it. You know why the abstraction is strange because you tried two others first. You can picture the call path because you spent an afternoon stepping through it.</p>
+<p>Agentic coding can strip out that incidental learning.</p>
+<p>The agent changes twenty files in ninety seconds. The tests pass. The diff looks plausible. You move on. Do that enough times and the software starts to feel like something happening <em>to</em> the team rather than something the team understands.</p>
+<p><a href="https://news.ycombinator.com/item?id=49153374">A widely circulated Hacker News discussion</a> got attention for the deliberately extreme suggestion that developers manually retype generated code to preserve comprehension. I don&#x27;t think typing is the right answer, but the anxiety behind the proposal is palpable.</p>
+<p>There&#x27;s a related mechanical reason the theory has to live outside the source. One way to model repository work is as a coupled-fact graph: APIs, tests, migrations, configuration, and other facts an agent must have to make a safe change. <a href="https://arxiv.org/abs/2608.16630">Mohammadi and colleagues</a> show that when a fact necessary for correct work is unavailable, the agent doesn&#x27;t reliably stop at the edge of its knowledge. It can confidently walk right over it.</p>
+<p>A tangled system therefore has a large working set. Changing one thing safely requires knowing seemingly unrelated facts scattered all over the place. This is <a href="https://doi.org/10.1145/361598.361623">David Parnas&#x27;s 1972 argument about information hiding</a> (modules should hide the decisions likely to change, so parts of a system can be understood with less knowledge of the rest) now made measurable by an agent&#x27;s bounded context. A well-structured system shrinks the amount of the world you have to understand correctly before a local change can be trusted.</p>
+<p>Even before AI, no senior engineer understood a large system by memorizing every line. We relied on architectural models, domain language, boundaries, interface contracts, operational knowledge, and the distributed theory held by a lot of people.</p>
+<p>Humans don&#x27;t need to hold onto every ephemeral line. They need to hold onto the theory of the system: what it&#x27;s for, where its boundaries are, who&#x27;s allowed to do what, what must stay true, which assumptions the design rests on, and what evidence tells us a change is still acceptable.</p>
+<p>The regeneration test depends on this understanding. Which means there&#x27;s a harder problem waiting behind the one in this essay.</p>
+<p>Architectural judgment has historically been learned partly by writing software, making mistakes, debugging it, and living with the consequences. If agents increasingly remove that apprenticeship path, we&#x27;ll need another way to teach engineers how to form the theory that architecture depends on.</p>
+<p>I don&#x27;t think we know what that path looks like yet.</p>
+<p>For now, the important thing is not to confuse preserving the theory with preserving every line we happened to learn it through.</p>
+<p>If human understanding stays tied exclusively to today&#x27;s generated source, <strong>we&#x27;ve built an architecture that depends on the scarcity of code.</strong></p>
+<p>That scarcity is disappearing.</p>
+<hr>
+<h3>Constraints can become fossils too</h3>
+<p>Making architecture executable brings its own failure mode.</p>
+<p>Constraints aren&#x27;t eternal truths.</p>
+<p>Say we encode the rule that payments cannot depend on ledger persistence. Five years later, the business changes, the accounting model changes, or we discover the boundary itself rested on an assumption that&#x27;s no longer true.</p>
+<p>If nobody knows why the constraint exists, it can become exactly the kind of accidental inertia this whole essay is arguing against.</p>
+<p>Only now the inertia has a build failure attached to it.</p>
+<blockquote><p><strong>This is Chesterton&#x27;s Fence with a build failure attached.</strong></p></blockquote>
+<p><a href="https://stafforini.com/works/chesterton-1929-thing/">The old warning</a> is that you should understand why a fence exists before removing it. Executable architecture raises the stakes, because the fence can now actively block change long after everyone&#x27;s forgotten its reason.</p>
+<p>So architectural constraints need governance of their own.</p>
+<p>A rule should be connected to its reason. Who established it? What decision introduced it? What threat, incident, regulation, or domain principle motivated it? Who has authority to change it? What evidence would make us revisit it?</p>
+<p>This is where provenance becomes part of architecture. An architectural constraint without provenance is just another mysterious conditional.</p>
+<p>The fact that a rule can push back makes its history more important, not less. When a constraint rejects a generated implementation three years from now, the engineer should be able to ask not only <em>what rule did I violate?</em> but <em>why do we still believe this rule should exist?</em></p>
+<p>Architecture can&#x27;t become a collection of immortal assertions. The constraints have to be able to change deliberately too.</p>
+<hr>
+<h3>Cheap change is dangerous</h3>
+<p>A more unsettling consequence falls out of all this: large systems may become dangerously easy to change.</p>
+<p>Historically, the cost of changing software gave us accidental resistance to architectural change. If altering the authorization model required six months of work across dozens of services, nobody did it casually.</p>
+<p>That friction was expensive, but it was protective.</p>
+<p>An agent can remove an authority boundary in seconds.</p>
+<p>Not maliciously. Locally, the change may be completely sensible. Maybe a component needs information that currently takes three calls through a capability boundary. The generator notices the underlying database is right there and simplifies the path.</p>
+<p>The tests still pass. The user-visible behavior is unchanged. The diff might even look cleaner.</p>
+<p>But the system now means something different. A component holds authority it was deliberately denied.</p>
+<p>This is the dangerous part of cheap code.</p>
+<blockquote><p><strong>It can make a semantically significant change look mechanically trivial.</strong></p></blockquote>
+<p>As that protective resistance vanishes, architectural intent has to become more explicit. Otherwise a capable enough generator can make the system easier to modify and easier to accidentally redefine at the exact same time.</p>
+<hr>
+<h3>Architectural gravity</h3>
+<p>Not every important decision fits comfortably into a fitness function.</p>
+<p>Some decisions exert gravity because so much of the system&#x27;s meaning depends on them.</p>
+<p>Data ownership is a good example.</p>
+<p>Say a company decides each domain owns its own authoritative data and other domains interact only through defined interfaces. Years later, someone proposes a shared operational database because it simplifies a handful of workflows.</p>
+<p>The code changes may be easy.</p>
+<p>The meaning changes everywhere.</p>
+<p>Which domain is authoritative? Who can mutate shared state? What happens when one schema needs to evolve independently? Which service is responsible during an incident? Which team can promise what to customers?</p>
+<p>The original data-ownership decision has architectural gravity because so many other decisions orbit it.</p>
+<p>Implementation complexity measures the work required to express a decision.</p>
+<blockquote><p><strong>Architectural gravity measures how much of the system&#x27;s meaning depends on it.</strong></p></blockquote>
+<p>Generative tools cut implementation complexity dramatically. They do much less to architectural gravity.</p>
+<p>So a high-gravity decision can become mechanically easy to rewrite without becoming any safer to redefine.</p>
+<p>Regeneration lets us see the difference.</p>
+<hr>
+<h3>The hidden architecture becomes visible</h3>
+<p>Cheap code exposes how much of what we historically called architecture was really expensive implementation.</p>
+<p>A framework choice may have stayed put because rewriting was prohibitively costly. A service boundary may have survived because restructuring it meant a dangerous migration. Their long life was never proof of their architectural importance.</p>
+<p>Regeneration separates two kinds of stability.</p>
+<p>Things stay stable because we want them to. Things stay stable because we can&#x27;t afford to change them.</p>
+<p>Traditional software made those look identical. Generative software starts to pull them apart.</p>
+<p>This is also the connection to the Phoenix idea, my own framing for systems whose implementations should be able to burn down and come back while the important knowledge survives them.</p>
+<p>But regeneration needs resistance.</p>
+<p>Boundaries, invariants, authority relationships, the interfaces we intentionally made durable, operational and security expectations — all of it has to survive. So do the reasons behind the constraints.</p>
+<p>Regenerate the constraints, and you get your system back. Regenerate only the code, and you get a different program that happens to pass the same tests.</p>
+<p>As implementation gets cheaper, engineering value moves toward deciding what must stay true, where authority lives, which things are allowed to vary, what evidence makes an implementation acceptable, and which parts of the system should stay independently understandable.</p>
+<p>Those were always architectural questions. Implementation just consumed enough effort that it was easy to mistake producing an answer for deciding which answers should be allowed.</p>
+<p>The model can produce another implementation. It can&#x27;t, on its own, decide which authority relationships an organization should promise its customers for the next decade. It can&#x27;t know that a test suite fails to encode the property everyone will care about three years from now. It can&#x27;t know that an inconvenient boundary exists because of an incident nobody remembers — not unless that knowledge survived somewhere outside the code it&#x27;s replacing.</p>
+<p>So we come back to the test:</p>
+<blockquote><p><strong>If I regenerated the system tomorrow and this changed, would I care?</strong></p></blockquote>
+<p>When we know the answer, we should make that knowledge durable before we lose it. When we don&#x27;t know the answer, regeneration may eventually teach us, sometimes painfully.</p>
+<p>For decades, software architecture was a mixture of deliberate constraints, expensive inertia, and assumptions we no longer remember making. Cheap code is dissolving the inertia. Some of what remains will be the architecture we intended. Some of it we&#x27;ll only discover when regeneration breaks something we didn&#x27;t know mattered.</p>
+<p>The difference between those two outcomes is the only architecture that was ever real.</p>
+<p class="tags">#architecture #software #ai #design #phoenix</p>
+<p class="subscribe-inline">Like this? <a href="https://aicoding.leaflet.pub">Subscribe to The Phoenix Architecture on Leaflet</a> &middot; <a href="https://aicoding.leaflet.pub/rss">RSS</a></p>
+<nav class="prevnext"><span>&larr; <a href="/regenerative-software/3mtgs36dnq22o/">The Specification Is Not a Document</a></span><span style="text-align:right"><a href="/regenerative-software/3mtu6c5wsvc2n/">SaaS Isn’t Dead. Sameness Is.</a> &rarr;</span></nav>
+</article>
+</main>
+<footer class="site">
+  <p>The Phoenix Architecture &middot; written by <a href="https://bsky.app/profile/chadfowler.com">@chadfowler.com</a></p>
+  <p>Published on the <a href="https://atproto.com">AT Protocol</a> &middot; also at <a href="https://aicoding.leaflet.pub">aicoding.leaflet.pub</a></p>
+  <p><a href="/">chadfowler.com</a></p>
+</footer>
+</body>
+</html>

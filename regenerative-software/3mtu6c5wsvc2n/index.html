@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SaaS Isn’t Dead. Sameness Is. — The Phoenix Architecture</title>
+
+<link rel="icon" href="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg">
+<link rel="alternate" type="application/rss+xml" title="The Phoenix Architecture" href="https://aicoding.leaflet.pub/rss">
+<link rel="stylesheet" href="/regenerative-software/style.css">
+</head>
+<body>
+<header class="site">
+  <a href="/regenerative-software/"><img class="icon" src="/regenerative-software/blobs/bafkreicnyhi7tiswzkpez3izlthpi7gdheuv6tbv2qzucmc34fhwbu6wbq.jpg" alt=""></a>
+  <h1><a href="/regenerative-software/">The Phoenix Architecture</a></h1>
+  <p class="desc">Generative AI coding demands what we&#x27;ve always known: modularity, clear boundaries, disposable components. Principles that scaled human teams are now table stakes. Here, we make the implicit explicit</p>
+</header>
+<main>
+<article><h1 class="title">SaaS Isn’t Dead. Sameness Is.</h1>
+<p class="meta">August 24, 2026</p>
+<p>Everyone suddenly wants to tell you SaaS is dead.</p>
+<p>The Klarna-replaced-Salesforce story spread because it fit the mood, whatever the exact boundary between “replaced the CRM” and “consolidated the data underneath it” turned out to be. Agents are starting to do work that once required people clicking through applications. Seat-based pricing looks vulnerable when the seats themselves stop doing the work.</p>
+<p>Even <a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence">Gartner now estimates</a> that as much as $234 billion in enterprise application spending could be exposed to what it calls “agentic arbitrage” by 2030, roughly 20 percent of enterprise SaaS spending.</p>
+<p>But Gartner itself hedges the apocalypse. It calls what is coming less an apocalypse than a metamorphosis.</p>
+<p>I think that’s right.</p>
+<p>And I want to make a more specific prediction about what SaaS turns into.</p>
+<p>Companies will still pay other companies to host important software, secure it, operate it, maintain authoritative data, track regulatory changes, connect to external networks, and answer the phone when something breaks.</p>
+<p>What is much less obviously going to survive is the assumption that ten thousand different companies should use substantially the same application.</p>
+<p><strong>The next SaaS company may run one service underneath ten thousand different applications.</strong></p>
+<h3>We standardized software because variation was expensive</h3>
+<p>Suppose your company has an unusual sales process.</p>
+<p>Twenty years ago you had two realistic options.</p>
+<p>You could buy a CRM designed for thousands of companies and configure it until it approximately fit the way you worked.</p>
+<p>Or you could build your own.</p>
+<p>The second option sounded appealing until somebody calculated what “build your own” meant: developers, designers, product management, security, hosting, integrations, upgrades, migrations, support, on-call coverage, and years of maintenance.</p>
+<p>You would spend millions building a worse version of something Salesforce already did, then own it forever.</p>
+<p>Of course you bought Salesforce.</p>
+<p>The same logic played out across the enterprise. Companies bought SAP, Workday, Jira, ServiceNow, Oracle, and hundreds of other products, then gradually changed themselves to fit the software.</p>
+<p>A CRM has concepts for opportunities, stages, accounts, contacts, and forecasts. A project management system has issues, epics, sprints, statuses, and workflows. An HR system has its own model of employees, managers, organizations, approvals, and reviews.</p>
+<p>These can be good abstractions. But they are still choices.</p>
+<p>Over time, the choices made by software vendors become the language of the organizations using them.</p>
+<p>We tend to describe this as standardization or best practice. Sometimes it is.</p>
+<p>Sometimes it is simply the result of an economic bargain:</p>
+<blockquote><p>Adapting the organization to the software is cheaper than adapting the software to the organization.</p></blockquote>
+<p>For decades, that bargain was obviously correct.</p>
+<p>The first copy of a serious software product was enormously expensive. The ten-thousandth copy cost almost nothing.</p>
+<p>SaaS turned that asymmetry into one of the best business models ever invented.</p>
+<h3>“Configure, don’t customize” was an economic rule</h3>
+<p>SaaS did more than move applications into the browser.</p>
+<p>It made sameness operationally valuable.</p>
+<p>The vendor controlled the running system. Everyone could be upgraded. Security fixes rolled out centrally. Features shipped continuously. The vendor no longer had to support hundreds of customer installations that had been modified beyond recognition.</p>
+<p>This produced one of enterprise software’s most durable maxims:</p>
+<blockquote><p>Configure, don’t customize.</p></blockquote>
+<p>Customization created forks.</p>
+<p>The customer changed the software. Then the vendor changed the software. Somebody had to reconcile the two.</p>
+<p>Repeat that for several years and the customer ended up stranded on an ancient release with a pile of modifications nobody fully understood.</p>
+<p>Configuration solved that problem by constraining variation. The vendor decided in advance which dimensions could differ: fields, permissions, workflow states, plugins, integrations, feature flags.</p>
+<p>Customers could be different, but only in ways the product had anticipated.</p>
+<p>That was an excellent compromise.</p>
+<p>But it was not a law of software engineering.</p>
+<p><strong>“Configure, don’t customize” was a coping strategy for expensive code.</strong></p>
+<p>If customer-specific software becomes cheap to produce and cheap to reproduce, that trade changes.</p>
+<h3>Software no longer needs a market to deserve to exist</h3>
+<p>Imagine an internal approval process used by fifty people.</p>
+<p>It is peculiar to one company because of two acquisitions, three jurisdictions, an old regulatory settlement, and a division of authority no sane product manager would ever design from scratch.</p>
+<p>Today the company probably buys a generalized workflow platform and spends months configuring it.</p>
+<p>Now imagine a small internal team can produce a purpose-built application in a few days.</p>
+<p>The company’s identity system already exists. The necessary data is available through stable interfaces. Authorization rules are explicit. Hosting, observability, security, and deployment come from a shared platform.</p>
+<p>The application does not need to appeal to five thousand other customers.</p>
+<p>It does not need a roadmap.</p>
+<p>It does not need a total addressable market.</p>
+<p>It needs to solve this problem for these fifty people.</p>
+<p>That changes what software is economically allowed to exist.</p>
+<p>For most of software history, an application had to justify its production cost. Either enough people needed roughly the same thing, or the problem was important enough to justify bespoke development.</p>
+<p>As production costs fall, the minimum viable market shrinks.</p>
+<p>One organization. One department. Eventually, for some software, one person.</p>
+<p>This leads to a strange possibility:</p>
+<p><strong>More software may mean fewer software companies.</strong></p>
+<p>An insurance company might generate twenty highly specific internal applications next year and never release any of them publicly. If three replace existing SaaS contracts, the world contains more software and less commercial software spend at the same time.</p>
+<p>That is a very different dynamic from the software economy we grew up with.</p>
+<h3>SaaS is not the thing that disappears</h3>
+<p>“SaaS is dead” bundles together several different ideas.</p>
+<p>The software is hosted by someone else. The vendor operates and secures it. The vendor maintains authoritative data, updates regulatory logic, handles migrations and integrations, and takes responsibility for availability and support. Customers pay for that capability over time.</p>
+<p>And historically, thousands of customers have also used substantially the same application.</p>
+<p>Cheap generation attacks that last property much harder than the others.</p>
+<p>I don’t want to run my own payment network because an agent can generate a checkout page.</p>
+<p>I don’t want to maintain tax tables because an agent can build payroll screens.</p>
+<p>I don’t want every hospital generating its own authoritative interpretation of medical records.</p>
+<p>A lot of the value in modern SaaS has surprisingly little to do with the visible application.</p>
+<p>It is data, trust, networks, compliance, operational responsibility, domain knowledge, auditability, accumulated history, and someone being accountable when reality gets complicated.</p>
+<p>AI can destroy the interface to a service while increasing demand for the service underneath it.</p>
+<p>That is why the disappearance of seats or screens does not imply the disappearance of the vendor.</p>
+<h3>The seat was never the value</h3>
+<p>This matters for pricing too.</p>
+<p>Traditional SaaS pricing often maps neatly onto humans using applications.</p>
+<p>Per seat. Per user. Per agent.</p>
+<p>That worked because the application was both the place where the work happened and the place where the vendor captured value.</p>
+<p>Agents weaken that link.</p>
+<p>A payroll provider does not become valueless because an employee stops opening its payroll interface. The customer is still paying it to calculate payroll correctly, keep up with tax law, move money, file with governments, maintain records, and accept operational responsibility.</p>
+<p>So perhaps it increasingly gets paid for employees processed, money moved, filings completed, jurisdictions supported, or outcomes guaranteed.</p>
+<p>A payments company already charges around transactions rather than seats. A data company can charge around information, rights, volume, or usage. A security company can charge around protected assets, workloads, identities, or risk.</p>
+<p>A substrate company has to price the thing it actually supplies.</p>
+<p>This will be painful for SaaS companies whose economics depend on selling access to screens that agents no longer need.</p>
+<p>It may be excellent for companies whose real value was hidden behind those screens all along.</p>
+<h3>The future is mass-customized SaaS</h3>
+<p>The easiest way to imagine the new model is to split the application into pace layers.</p>
+<p>At the bottom are things we want to move slowly: identity and authority, authoritative data, audit history, core domain semantics, regulatory logic, security boundaries, external contracts, networks, money movement, and accumulated operational knowledge.</p>
+<p>That last one matters more than it first appears.</p>
+<p><a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence">Gartner argues</a> that useful agentic systems will need to retain deep institutional memory and customer context over time. Every exception resolved, correction made, policy interpreted, and operational failure understood can become part of the durable capability underneath the application.</p>
+<p>The screens may be disposable while the institution underneath them gets smarter.</p>
+<p>Above those slow layers are things that can move much faster: workflows, interfaces, reports, approvals, automations, dashboards, local policy, orchestration, agent behavior, and team-specific tools.</p>
+<p>Today’s SaaS product typically bundles both layers together and expresses customer differences through configuration.</p>
+<p>A generative SaaS company can operate the slow layer and generate much of the fast layer separately for each customer.</p>
+<p>The vendor can still host everything. Still secure it. Still monitor it. Still control deployment. Still provide support.</p>
+<p>But customer A gets one application, customer B gets another, and customer C may interact mostly through agents.</p>
+<p><strong>The software is bespoke. The service is shared.</strong></p>
+<p>That is not the death of SaaS.</p>
+<p>It is mass-customized SaaS.</p>
+<h3>Sameness has real value</h3>
+<p>There is an easy way to overstate this argument.</p>
+<p>Sameness is not valuable only because variation was expensive.</p>
+<p>People join a company already knowing Salesforce or Jira.</p>
+<p>Consultants know how to implement them. A labor market forms around them. Integrations target them. Training and certifications exist. Answers are searchable. Thousands of customers discover bugs and edge cases together.</p>
+<p>A common workflow can also make an organization better by pushing it toward a practice that has already been learned elsewhere.</p>
+<p>Those effects are real.</p>
+<p>The future is not “variation wins.”</p>
+<p>It is:</p>
+<blockquote><p><strong>Standardize where sameness creates leverage. Generate where difference creates value.</strong></p></blockquote>
+<p>Why should every business share a payment protocol? There are enormous advantages.</p>
+<p>Why should two companies with radically different sales motions use the same opportunity-review screen?</p>
+<p>Much harder to explain.</p>
+<p>Historically, the second question barely mattered because arbitrary variation was prohibitively expensive.</p>
+<p>When variation gets cheap, sameness becomes a choice that needs a reason.</p>
+<h3>Pace layers keep customization from becoming chaos</h3>
+<p>Anyone old enough to remember serious bespoke enterprise software should be nervous at this point.</p>
+<p>We already tried letting every organization have its own software.</p>
+<p>It produced enormous amounts of archaeology: mystery scripts, custom databases, frozen vendor forks, spreadsheets acting as critical infrastructure, and integrations nobody dared touch.</p>
+<p>Customization gave us local fit and global incoherence.</p>
+<p>AI can reproduce that disaster much faster.</p>
+<p>The answer is not to avoid bespoke software.</p>
+<p>It is to stop making the whole stack bespoke.</p>
+<p>Stewart Brand’s idea of pace layers is useful here. Healthy complex systems contain parts that change at different rates. Fast layers experiment. Slow layers provide continuity.</p>
+<p>Software is no different.</p>
+<p>A dashboard can change tomorrow. A team’s workflow can change next month. The authoritative definition of a customer may need to survive for years. Identity and authority can survive generations of applications.</p>
+<p>Problems arise when those layers become fused.</p>
+<p>A temporary workflow gets baked into a data model. An org chart leaks into authorization. A UI assumption becomes an API contract. A local integration becomes the only place an important business rule exists.</p>
+<p>Then fast change starts dragging slow meaning behind it.</p>
+<p>The architectural rule for mass-customized SaaS is simple:</p>
+<blockquote><p><strong>Standardize the slow layers. Generate the fast layers.</strong></p></blockquote>
+<p>The point of strong architecture is not to prevent customization.</p>
+<p><strong>It is to make customization cheap without making the system incoherent.</strong></p>
+<p>The slow layers give the generated software something to push against.</p>
+<p>A claims interface can change. The meaning of a claim should not casually change with it.</p>
+<p>A team’s workflow can be regenerated next week. The identity model underneath it should not be reinvented because a generator found another representation more convenient.</p>
+<p>A temporary reporting application can disappear. The authoritative financial data and audit trail cannot disappear with it.</p>
+<p>Cheap variation is safe only when something durable constrains it.</p>
+<h3>Customization without forks</h3>
+<p>The old bespoke era had another problem: every customization became something you had to maintain.</p>
+<p>A customer modified version 4.2. The vendor shipped 4.3. Now somebody had to merge the changes.</p>
+<p>Over time, custom software accumulated weight.</p>
+<p>Generative software offers another possibility.</p>
+<p>Suppose the durable things are not the generated implementation itself but the customer’s intent, applicable policies, architectural constraints, available capabilities, data contracts, provenance, and evaluations that establish acceptable behavior.</p>
+<p>The implementation can be derived from those artifacts.</p>
+<p>The workflow changes. Regenerate it.</p>
+<p>The platform changes. Regenerate it.</p>
+<p>The company reorganizes. Regenerate it.</p>
+<p>This gives us something the old customization model did not:</p>
+<p><strong>Customization without forks.</strong></p>
+<p>There is a very large assumption hiding here.</p>
+<p>Intent, constraints, provenance, and evaluations have to become durable enough that an implementation can actually be regenerated from them. If they are incomplete, stale, or wrong, regeneration will faithfully produce the wrong software.</p>
+<p>That is the problem I have been exploring in <a href="https://aicoding.leaflet.pub/">The Phoenix Architecture and my Regenerative Software work</a>: if code becomes disposable, the knowledge required to recreate it cannot remain trapped inside the code.</p>
+<p>If we can solve enough of that problem, the economics change dramatically.</p>
+<p>A vendor no longer has to maintain ten thousand diverging implementations by hand.</p>
+<p>It maintains a shared substrate plus the durable knowledge necessary to produce ten thousand variations.</p>
+<p>The implementations become replaceable.</p>
+<h3>Ten thousand applications still need support</h3>
+<p>There is an obvious operational objection.</p>
+<p>Who supports ten thousand different applications?</p>
+<p>Who tests them?</p>
+<p>What does SOC 2 or HIPAA certification mean if customer A and customer B are running different generated interfaces and workflows?</p>
+<p>Customization without forks solves the source-maintenance problem. It does not automatically solve support, testing, security, or compliance.</p>
+<p>If every variation is an unconstrained snowflake, mass-customized SaaS collapses under its own operational cost.</p>
+<p>That is why the slow layer has to include more than APIs.</p>
+<p>It needs a governed execution environment with common identity and authorization, telemetry, deployment controls, data contracts, security boundaries, policy enforcement, and evaluation frameworks.</p>
+<p>A customer’s software can be different without being arbitrary.</p>
+<p>Cloud platforms already do something analogous one layer lower. Millions of applications can be different because the infrastructure underneath them standardizes enough operational behavior to make that diversity manageable.</p>
+<p>The next generation of SaaS may do the same thing above the infrastructure layer.</p>
+<p>Different applications.</p>
+<p>Common guarantees.</p>
+<p>Support changes too. The vendor should not need a human support engineer to reverse-engineer every customer’s generated source code. It needs enough provenance, telemetry, constraints, and reproducibility to answer what was generated, why it was generated, what changed, and whether it remains inside the supported envelope.</p>
+<p>Otherwise we have merely reinvented consultingware at AI speed.</p>
+<h3>The SaaS company becomes a substrate</h3>
+<p>This reframes the strategic question for software companies.</p>
+<p>What are customers actually paying you for?</p>
+<p>If the answer is mostly CRUD screens, generic workflows, dashboards, forms, approval logic, reports, and a configurable database, then the ground is moving.</p>
+<p>Those things remain useful, but part of their historical value came from the fact that somebody had to write and maintain them.</p>
+<p>If the answer is a trusted network, authoritative data, regulatory expertise, money movement, a system of record, an ecosystem, accumulated institutional knowledge, auditability, or operational responsibility, then cheap code does not reproduce the important part.</p>
+<p>The visible application can shrink while the substrate becomes more valuable.</p>
+<p><a href="https://www.idc.com/resource-center/blog/agent-supplier-or-featureware-the-choice-every-saas-vendor-faces-now/">IDC has described</a> one possible version of this future as SaaS applications becoming “featureware,” with agents owning more of the interaction while existing applications remain underneath as governed systems of record and capabilities.</p>
+<p>I think the opportunity is more ambitious than accepting demotion behind an agent.</p>
+<p>The best SaaS companies can deliberately become <strong>substrate companies</strong>.</p>
+<p>They own the slow layer.</p>
+<p>They make it safe to generate the fast one.</p>
+<h3>The uncomfortable question for SaaS founders</h3>
+<p>If I ran a SaaS company today, I would ask:</p>
+<blockquote><p><strong>If every customer had a bespoke application tomorrow, what part of our product would they still need to share?</strong></p></blockquote>
+<p>That question separates the application from the durable business underneath it.</p>
+<p>For Stripe, the answer is obviously not a checkout form.</p>
+<p>For a payroll company, it is not the employee table.</p>
+<p>For a financial information company, it is not a dashboard.</p>
+<p>For some companies, the answer will be substantial.</p>
+<p>For others, it may turn out that most of the product lives in the fast layer.</p>
+<p>That does not mean those companies disappear tomorrow.</p>
+<p>It does mean they should probably be racing to discover what they own underneath the UI before somebody else does.</p>
+<h3>The return of internal software</h3>
+<p>The same economics changes “buy before build.”</p>
+<p>That advice made sense when building an internal application meant staffing a software project indefinitely.</p>
+<p>But consider fifty employees losing twenty minutes a day to a workflow that poorly fits them.</p>
+<p>That may not justify six months of custom development.</p>
+<p>It could easily justify a few days of generated development on top of an existing substrate.</p>
+<p>This can produce a renaissance in internal software.</p>
+<p>Not giant IT departments rebuilding SAP.</p>
+<p>Small teams maintaining strong shared foundations while producing highly specific tools around them.</p>
+<p>Their advantage is not that they can type code better than a SaaS vendor.</p>
+<p>It is that they know the organization: its language, policies, data, authority structure, exceptions, and history.</p>
+<p>These are exactly the details generalized software has always had to abstract away.</p>
+<p>Difference becomes the internal team’s comparative advantage.</p>
+<h3>Someone still has to own reality</h3>
+<p>There is a nightmare version of all of this.</p>
+<p>Every team starts generating applications. Each creates another representation of customer identity, invents another permissions model, or makes another convenient copy of important data. Every agent gets whatever access makes the current task easiest.</p>
+<p>Within a year, the company owns a thousand locally sensible applications that disagree about basic reality.</p>
+<p>Generation makes this easier, not harder.</p>
+<p>So someone still has to own the slow layers.</p>
+<p>There needs to be authoritative data, shared domain concepts where common meaning matters, stable capabilities, authority boundaries, protocols, and constraints on what generated software is allowed to do.</p>
+<p>The governance should match the pace.</p>
+<p>A team should be able to regenerate its dashboard without an architecture committee.</p>
+<p>Redefining who may move company money is different.</p>
+<p>If every change requires central approval, customization dies.</p>
+<p>If nothing requires it, coherence dies.</p>
+<p>Good architecture tells us which is which.</p>
+<h3>Build versus buy is too coarse now</h3>
+<p>The traditional enterprise decision was made at the application level:</p>
+<p>Should we build a CRM or buy one?</p>
+<p>Build payroll or buy it?</p>
+<p>Build a support system or buy one?</p>
+<p>That unit may be too large.</p>
+<p>The better question is:</p>
+<blockquote><p><strong>Which layers should we buy, which should we share, and which should we generate?</strong></p></blockquote>
+<p>Buy the network.</p>
+<p>Share authoritative data.</p>
+<p>Standardize identity.</p>
+<p>Reuse the regulatory engine.</p>
+<p>Outsource the operational responsibility you do not want.</p>
+<p>Generate the workflow, interface, reports, and orchestration.</p>
+<p>Regenerate the things whose requirements change quickly.</p>
+<p>Preserve the things whose meaning needs to remain stable.</p>
+<p>A healthcare record should move slowly. The application one clinical team uses around it may move constantly.</p>
+<p>An accounting ledger should move slowly. The CFO’s current reporting experience probably should not.</p>
+<p>A customer identity should be durable. The sales workflow surrounding it can be peculiar to one company.</p>
+<p>This is not build versus buy anymore.</p>
+<p>It is build, buy, share, generate, and regenerate, each applied at the right pace.</p>
+<h3>The application becomes an instance of the organization</h3>
+<p>Configuration starts with the product.</p>
+<p>Here is our application.</p>
+<p>Here are the dimensions along which we anticipated you might differ.</p>
+<p>Tell us which values you want.</p>
+<p>Generation can start somewhere else.</p>
+<p>What are you trying to accomplish?</p>
+<p>What data and capabilities exist?</p>
+<p>What policies constrain them?</p>
+<p>What does success look like?</p>
+<p>Generate something appropriate.</p>
+<p>That reverses the relationship between software and the organization.</p>
+<p>For decades, organizations increasingly became instances of applications. They mapped themselves into the nouns, workflows, and screens provided by the software they bought.</p>
+<p>Generative systems make another relationship possible:</p>
+<p><strong>The application becomes an instance of the organization.</strong></p>
+<p>That does not mean every difference is good.</p>
+<p>It means difference no longer has to be rejected merely because it would have required another codebase.</p>
+<h3>Sameness has to earn its keep</h3>
+<p>The history of business software starts to look like three eras.</p>
+<p>The first was bespoke: excellent local fit, terrible economics.</p>
+<p>The second was standardized: packaged software and SaaS gave us extraordinary economies of scale by persuading enormous numbers of organizations to share applications.</p>
+<p>The third may combine both.</p>
+<p>Shared slow layers. Bespoke fast layers. Centralized operations. Local fit. Stable foundations. Replaceable applications.</p>
+<p>The first SaaS era achieved economies of scale by eliminating variation.</p>
+<p>The next one may achieve economies of scale while restoring it.</p>
+<p>That is why I don’t think SaaS is dead.</p>
+<p>Companies will still buy software as a service. Vendors will still host it. In many cases they may host even more of it.</p>
+<p>What changes is the default assumption that the visible application must be substantially identical for everyone.</p>
+<p>For the last twenty-five years, the software industry has asked an extraordinarily profitable question:</p>
+<blockquote><p>What application can ten thousand companies share?</p></blockquote>
+<p>The next era asks a different one:</p>
+<blockquote><p><strong>What must ten thousand companies share so that everything else can safely be different?</strong></p></blockquote>
+<p>One service.</p>
+<p>Ten thousand applications.</p>
+<p>SaaS isn’t dead.</p>
+<p><strong>Sameness is.</strong></p>
+<p class="tags">#saas #business #software #startups #ai</p>
+<p class="subscribe-inline">Like this? <a href="https://aicoding.leaflet.pub">Subscribe to The Phoenix Architecture on Leaflet</a> &middot; <a href="https://aicoding.leaflet.pub/rss">RSS</a></p>
+<nav class="prevnext"><span>&larr; <a href="/regenerative-software/3mtmk6ot6oc2i/">Most of Your Architecture Was Just Expensive Code</a></span><span style="text-align:right"></span></nav>
+</article>
+</main>
+<footer class="site">
+  <p>The Phoenix Architecture &middot; written by <a href="https://bsky.app/profile/chadfowler.com">@chadfowler.com</a></p>
+  <p>Published on the <a href="https://atproto.com">AT Protocol</a> &middot; also at <a href="https://aicoding.leaflet.pub">aicoding.leaflet.pub</a></p>
+  <p><a href="/">chadfowler.com</a></p>
+</footer>
+</body>
+</html>
