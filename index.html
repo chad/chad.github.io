@@ -361,6 +361,138 @@
             background: rgba(255, 0, 255, 0.1);
             box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
         }
+
+        /* Featured Release */
+        .featured-release {
+            margin: 25px 0 45px;
+            padding: 26px;
+            border: 1px solid rgba(255, 0, 255, 0.4);
+            border-top: 4px solid #ff00ff;
+            background: linear-gradient(150deg, rgba(255, 0, 255, 0.12), rgba(255, 255, 255, 0.03) 60%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-release::before {
+            content: '';
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            right: -120px;
+            top: -140px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 0, 255, 0.28), transparent 70%);
+            pointer-events: none;
+            animation: moonDrift 14s ease-in-out infinite alternate;
+        }
+
+        @keyframes moonDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-40px, 30px) scale(1.15); }
+        }
+
+        .release-badge {
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-size: 0.7em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ff00ff;
+            border: 1px solid #ff00ff;
+            padding: 4px 10px;
+            margin-bottom: 14px;
+            box-shadow: 0 0 16px rgba(255, 0, 255, 0.4);
+        }
+
+        .fr-top {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .fr-art {
+            position: relative;
+            transform: rotate(-2deg);
+            transition: transform 0.5s ease;
+        }
+
+        .fr-art:hover { transform: rotate(0deg) scale(1.03); }
+
+        .fr-art img {
+            width: 100%;
+            display: block;
+            border: 1px solid rgba(255, 0, 255, 0.5);
+            box-shadow: 0 14px 45px rgba(255, 0, 255, 0.35);
+        }
+
+        .fr-title {
+            font-size: 2.4em;
+            font-weight: 100;
+            line-height: 1.05;
+            margin: 0 0 6px;
+            letter-spacing: 1px;
+        }
+
+        .fr-credit {
+            font-size: 1.15em;
+            opacity: 0.85;
+            margin: 0 0 16px;
+        }
+
+        .fr-note {
+            font-size: 1.05em;
+            line-height: 1.75;
+            opacity: 0.92;
+        }
+
+        .fr-note em { color: #ff9cff; font-style: italic; }
+
+        .tracklist {
+            list-style: none;
+            counter-reset: trk;
+            margin: 22px 0 0;
+            padding: 0;
+            columns: 2;
+            column-gap: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+
+        .tracklist li {
+            counter-increment: trk;
+            padding: 4px 0;
+            opacity: 0.85;
+            break-inside: avoid;
+        }
+
+        .tracklist li::before {
+            content: counter(trk, decimal-leading-zero) '  ';
+            color: #ff00ff;
+            opacity: 0.8;
+        }
+
+        .bc-player {
+            margin: 26px 0 8px;
+            border: 1px solid rgba(255, 0, 255, 0.3);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .bc-player iframe {
+            display: block;
+            width: 100%;
+            height: 340px;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .fr-top { grid-template-columns: 1fr; gap: 18px; }
+            .fr-art { transform: none; max-width: 320px; }
+            .fr-title { font-size: 1.8em; }
+            .tracklist { columns: 1; }
+            .featured-release { padding: 18px; margin: 20px 0 30px; }
+            .bc-player iframe { height: 420px; }
+        }
         
         /* Mobile album card styles */
         @media (max-width: 768px) {
@@ -535,6 +667,129 @@
         .book-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        /* Projects / Lab */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 22px;
+            margin: 30px 0 50px;
+        }
+
+        .project-card {
+            background: rgba(0, 255, 255, 0.04);
+            border: 1px solid rgba(0, 255, 255, 0.25);
+            border-left: 3px solid rgba(0, 255, 255, 0.7);
+            padding: 22px 22px 18px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            transform: skew(-0.6deg);
+        }
+
+        .project-card:nth-child(even) {
+            transform: skew(0.6deg);
+        }
+
+        .project-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 110% -10%, rgba(0, 255, 255, 0.18), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+        }
+
+        .project-card:hover {
+            transform: skew(0deg) translateY(-6px);
+            border-color: rgba(0, 255, 255, 0.7);
+            box-shadow: 0 12px 40px rgba(0, 255, 255, 0.22);
+        }
+
+        .project-card:hover::after { opacity: 1; }
+
+        .project-card.featured {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.09), rgba(0, 128, 255, 0.04));
+            border-left-width: 5px;
+            transform: skew(-1deg);
+            padding: 28px 28px 22px;
+        }
+
+        .project-head {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .project-card h3 {
+            font-size: 1.5em;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .project-card.featured h3 { font-size: 2.1em; }
+
+        .project-card .project-url {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: rgba(0, 255, 255, 0.75);
+        }
+
+        .project-status {
+            font-family: 'Courier New', monospace;
+            font-size: 0.65em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border: 1px solid currentColor;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+
+        .status-live { color: #00ffaa; box-shadow: 0 0 12px rgba(0, 255, 170, 0.35); }
+        .status-open { color: #00ffff; }
+        .status-proto { color: #ffcc00; }
+        .status-weird { color: #ff00ff; }
+
+        .project-card p {
+            font-size: 1.02em;
+            line-height: 1.65;
+            opacity: 0.88;
+            margin: 10px 0 16px;
+        }
+
+        .project-card.featured p { font-size: 1.12em; }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 16px;
+        }
+
+        .project-tags span {
+            font-family: 'Courier New', monospace;
+            font-size: 0.72em;
+            letter-spacing: 1px;
+            padding: 3px 8px;
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            opacity: 0.85;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.92em;
         }
 
         /* Neural Connections */
@@ -718,7 +973,7 @@
                 margin-bottom: 20px;
             }
             
-            .album-grid, .book-grid {
+            .album-grid, .book-grid, .project-grid {
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
@@ -727,6 +982,14 @@
                 transform: none;
                 padding: 15px;
             }
+
+            .project-card, .project-card:nth-child(even), .project-card.featured {
+                transform: none;
+                padding: 18px;
+            }
+
+            .project-card h3 { font-size: 1.3em; }
+            .project-card.featured h3 { font-size: 1.6em; }
             
             .floating-element {
                 display: none;
@@ -879,10 +1142,16 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         
         /* High DPI Screens */
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            .album-card, .book-card, .code-block {
+            .album-card, .book-card, .code-block, .project-card {
                 border-width: 0.5px;
             }
         }
@@ -963,9 +1232,69 @@
             <div class="side-content">
                 <h1 class="jazz-title">MUSIC</h1>
                 
+                <h2 style="margin: 40px 0 10px; font-size: 2em; font-weight: 100;" class="section-title">New Release</h2>
+
+                <div class="featured-release">
+                    <span class="release-badge">Out now · Mahakala Music</span>
+                    <div class="fr-top">
+                        <div class="fr-art">
+                            <a href="https://mahakalamusic.bandcamp.com/album/polkadots-moonbeams" target="_blank">
+                                <img src="https://f4.bcbits.com/img/a0198912220_10.jpg" alt="Polkadots &amp; Moonbeams — cover embroidery by Kelly Jeanne" loading="lazy">
+                            </a>
+                        </div>
+                        <div>
+                            <h3 class="fr-title">Polkadots &amp; Moonbeams</h3>
+                            <p class="fr-credit">Chad Fowler &amp; Eri Yamamoto — duo, recorded at Park West Studio, Brooklyn</p>
+                            <p class="fr-note">
+                                No plan. The record started as a conversation in the car on the way to the studio.
+                                Nothing was discussed, rehearsed, or arranged — and yet the pieces arrived with the
+                                shape of songs that had been waiting all along.
+                            </p>
+                            <p class="fr-note" style="margin-top: 14px;">
+                                <em>“Ash”</em> was written in the days after my father died, after I brought his ashes home.
+                                At the other end is <em>“Polkadots and Moonbeams”</em> — the song played at my wedding nearly
+                                thirty years ago, the song whose opening bars are tattooed on my arm. Everything in
+                                between was improvised. Cover embroidery by Kelly Jeanne.
+                            </p>
+                            <p class="fr-note" style="margin-top: 14px; opacity: 0.75;">
+                                A son’s farewell to a wedding song, with a great deal of life in between.
+                            </p>
+                        </div>
+                    </div>
+
+                    <ol class="tracklist">
+                        <li>ash</li>
+                        <li>midnight mourning morning mirth</li>
+                        <li>when you die you become sentient energy</li>
+                        <li>russian dragon</li>
+                        <li>the things we’ll miss</li>
+                        <li>he always knew he’d be a preacher</li>
+                        <li>we can’t dance, can we?</li>
+                        <li>polkadots &amp; moonbeams</li>
+                    </ol>
+
+                    <div class="bc-player">
+                        <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3330871891/size=large/bgcol=181818/linkcol=ff00ff/artwork=small/transparent=true/" seamless title="Polkadots &amp; Moonbeams by Chad Fowler &amp; Eri Yamamoto" loading="lazy"><a href="https://mahakalamusic.bandcamp.com/album/polkadots-moonbeams">Polkadots &amp; Moonbeams by Chad Fowler, Eri Yamamoto</a></iframe>
+                    </div>
+
+                    <a href="https://mahakalamusic.bandcamp.com/album/polkadots-moonbeams" target="_blank" style="font-size: 1.2em; display: inline-block; margin-top: 10px;">Buy / stream on Bandcamp →</a>
+                </div>
+
                 <h2 style="margin: 40px 0 20px; font-size: 2em; font-weight: 100;" class="section-title">Latest Albums</h2>
                 
                 <div class="album-grid">
+                    <div class="album-card">
+                        <h3>Whirlpool (2026)</h3>
+                        <p>Duo with Matt Lavelle — stritch, saxello &amp; flutes against pocket trumpet and bass clarinet</p>
+                        <a href="https://mahakalamusic.bandcamp.com/album/whirlpool" target="_blank">Listen on Bandcamp →</a>
+                    </div>
+
+                    <div class="album-card">
+                        <h3>Who Does Not Seek The Sky? (2026)</h3>
+                        <p>Echo Party — with Khari Wynn, Alex Greene, Steve Hirsh; four long-form pieces</p>
+                        <a href="https://mahakalamusic.bandcamp.com/album/who-does-not-seek-the-sky" target="_blank">Listen on Bandcamp →</a>
+                    </div>
+
                     <div class="album-card">
                         <h3>Memphis Mandala (2026)</h3>
                         <p>with Art Edmaiston, Ra Kalam Bob Moses, Damon Smith, Clifford "Pee Wee" Jackson — recorded live at Crosstown Arts, Memphis</p>
@@ -1014,18 +1343,18 @@
                 
                 <!-- Performance 1 -->
                 <div class="media-container" style="margin-bottom: 30px;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5ENflh-5jQs" title="Chad Fowler Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5ENflh-5jQs" title="Chad Fowler Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
                 
                 <!-- Performance 2 -->
                 <div class="media-container" style="margin-bottom: 30px;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xeqektCmLYs" title="Chad Fowler Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xeqektCmLYs" title="Chad Fowler Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
                 
                 
                 <!-- Performance 4 -->
                 <div class="media-container" style="margin-bottom: 30px;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iys3CY4W2BI" title="Chad Fowler Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iys3CY4W2BI" title="Chad Fowler Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
 
 
@@ -1082,6 +1411,7 @@
   "current": [
     "Partner &amp; CTO @ BlueYard Capital",
     "Building <a href='https://www.freeq.at/'>freeq</a> — IRC rebuilt with identity",
+    "Teaching agents to <a href='https://github.com/chad/freeq-foundry'>form institutions</a>",
     "Writing <a href='/regenerative-software/'>The Phoenix Architecture</a>"
   ],
   "languages": ["Haskell", "Rust", "Ruby", "TypeScript", "Python"],
@@ -1097,6 +1427,148 @@
   ]
 }
                     </pre>
+                </div>
+
+                <h2 style="margin: 50px 0 10px; font-size: 2em;" class="section-title">Currently Building</h2>
+                <p style="font-family: 'Courier New', monospace; font-size: 0.95em; opacity: 0.6; margin: 0 0 10px; letter-spacing: 1px;">
+                    /* things that run, not slides about things that could run */
+                </p>
+
+                <div class="project-grid">
+
+                    <div class="project-card featured">
+                        <div class="project-head">
+                            <h3>Freeq</h3>
+                            <span class="project-status status-live">live</span>
+                            <span class="project-url">freeq.at · irc.freeq.at</span>
+                        </div>
+                        <p>
+                            The big one. A real, IRC-compatible communication system rebuilt around identity:
+                            AT Protocol DIDs, cryptographically signed messages, end-to-end encryption,
+                            <a href="https://www.iroh.computer/" target="_blank">iroh</a> transport and federation,
+                            Automerge for convergent state, first-class agents, and web plus native clients.
+                            Connect with a 1993 IRC client or a 2026 one — same network, same messages.
+                        </p>
+                        <div class="project-tags">
+                            <span>rust</span><span>irc</span><span>at-protocol</span><span>e2ee</span><span>iroh</span><span>automerge</span><span>local-first</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.freeq.at/" target="_blank">freeq.at →</a>
+                            <a href="irc://irc.freeq.at">irc.freeq.at →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-head">
+                            <h3>FreeqWorld</h3>
+                            <span class="project-status status-weird">gloriously weird</span>
+                        </div>
+                        <p>
+                            Proof that Freeq is a <em>protocol</em>, not a chat UI: a 1992-ish multiplayer RPG where
+                            rooms are IRC channels, characters are DIDs, and speech bubbles are honest-to-god
+                            IRC messages. Idle in a tavern from your terminal.
+                        </p>
+                        <div class="project-tags">
+                            <span>multiplayer</span><span>irc-as-game-engine</span><span>pixel-art</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://world.freeq.at" target="_blank">world.freeq.at →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-head">
+                            <h3>iroh-drop</h3>
+                            <span class="project-status status-open">open source</span>
+                        </div>
+                        <p>
+                            Decentralized AirDrop. Hand someone a single ticket string and they get your files or
+                            directories — then re-serve the blobs themselves, so popular things get faster instead
+                            of more expensive. CLI, daemon, and a native macOS app.
+                        </p>
+                        <div class="project-tags">
+                            <span>rust</span><span>iroh</span><span>p2p</span><span>blobs</span><span>macos</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/chad/iroh-drop" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-head">
+                            <h3>mdsnd</h3>
+                            <span class="project-status status-live">live</span>
+                        </div>
+                        <p>
+                            Small, complete, finished: Markdown publishing with secret unlisted URLs, editing and
+                            history, and optional password protection where the encryption happens in your browser —
+                            the server never sees the plaintext. Sign in with Google or Bluesky, or don't sign in at all.
+                        </p>
+                        <div class="project-tags">
+                            <span>markdown</span><span>client-side-crypto</span><span>atproto-oauth</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://mdsnd.freeq.at" target="_blank">mdsnd.freeq.at →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-head">
+                            <h3>Phoenix</h3>
+                            <span class="project-status status-open">open source</span>
+                        </div>
+                        <p>
+                            Not just the essays — a working implementation of regenerative, version-controlled
+                            software. Spec → architecture target → generated running application, with traceability
+                            back to intent and the ability to regenerate rather than repair.
+                        </p>
+                        <div class="project-tags">
+                            <span>regenerative-software</span><span>codegen</span><span>traceability</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/chad/phoenix" target="_blank">GitHub →</a>
+                            <a href="/regenerative-software/">The Phoenix Architecture →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-head">
+                            <h3>Freeq Foundry</h3>
+                            <span class="project-status status-weird">experiment</span>
+                        </div>
+                        <p>
+                            A running environment where independently operated agents form an <em>institution</em>:
+                            they draft governance, allocate authority and equity, argue, and then actually ship code.
+                            Twelve founders across nine model snapshots and three providers, real economic constraints,
+                            fully replayable runs. The artifact is the signed institutional history.
+                        </p>
+                        <div class="project-tags">
+                            <span>multi-agent</span><span>governance</span><span>replayable</span><span>programmable-orgs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/chad/freeq-foundry" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-head">
+                            <h3>freeq-swarm</h3>
+                            <span class="project-status status-proto">prototype</span>
+                        </div>
+                        <p>
+                            Distributed PR-review agents coordinating over Freeq: workers race-claim tasks,
+                            independently review a SHA-pinned diff, and a coordinator reduces their verdicts to a
+                            consensus result. Phases 0–7 implemented, ~180 tests. A shipped prototype, not a product —
+                            and I'd rather say so.
+                        </p>
+                        <div class="project-tags">
+                            <span>agents</span><span>consensus</span><span>code-review</span><span>freeq</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/chad/freeq-swarm" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+
                 </div>
 
                 <h2 style="margin: 40px 0 20px; font-size: 2em;" class="section-title">Books</h2>
@@ -1124,7 +1596,7 @@
 
                 <!-- Featured: AI Native Dev -->
                 <div class="media-container" style="margin-bottom: 40px;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n3uEWZ1KT64" title="Stop Maintaining Your Code. Start Replacing It - AI Native Dev" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n3uEWZ1KT64" title="Stop Maintaining Your Code. Start Replacing It - AI Native Dev" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
                 <p style="font-size: 1.1em; line-height: 1.6; margin: 0 0 40px 0; opacity: 0.9;">
                     Stop maintaining your code — start replacing it. On the Phoenix Architecture and why regenerative software changes everything.
@@ -1132,7 +1604,7 @@
 
                 <!-- Snark Chocolate -->
                 <div class="media-container" style="margin-bottom: 40px;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/z4aOkR_TnpI" title="Chad Fowler on Snark Chocolate Podcast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/z4aOkR_TnpI" title="Chad Fowler on Snark Chocolate Podcast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
                 <p style="font-size: 1.1em; line-height: 1.6; margin: 0 0 40px 0; opacity: 0.9;">
                     Join Chad on the Snark Chocolate podcast where he discusses the intersection of technology, creativity, and craftsmanship.
@@ -1193,22 +1665,22 @@
                     
                     <!-- Keynote 1 -->
                     <div class="media-container" style="margin-bottom: 30px;">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kw0ZZGgdVio" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kw0ZZGgdVio" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                     
                     <!-- Keynote 2 -->
                     <div class="media-container" style="margin-bottom: 30px;">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qH_y45he4-o" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qH_y45he4-o" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                     
                     <!-- Keynote 3 -->
                     <div class="media-container" style="margin-bottom: 30px;">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LhqWZscmTD4" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LhqWZscmTD4" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                     
                     <!-- Keynote 4 -->
                     <div class="media-container" style="margin-bottom: 30px;">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-UKEPd2ipEk" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-UKEPd2ipEk" title="Chad Fowler Keynote" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
                 
