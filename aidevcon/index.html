@@ -1,0 +1,2841 @@
+<!doctype html>
+<html lang="en" data-deck="regenerative-software-nyc" data-public>
+<head>
+<meta charset="utf-8">
+<title>Slide deck</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #07070a;
+    --ink: #f1eee8;
+    --ink-dim: #aab4c2;
+    --accent: #c8a96b;
+    --ruby: #7a1f2b;
+    --notes-bg: #14141a;
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%; width: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    overflow: hidden;
+  }
+  body { display: grid; grid-template-rows: 1fr; }
+
+  /* ---- Stage: letterboxed 16:9 area ---- */
+  .stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  .slide {
+    position: relative;
+    width: min(100vw, calc((100vh) * 16 / 9));
+    height: min(100vh, calc(100vw * 9 / 16));
+    background: #000;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #000 inset;
+  }
+  .slide-image {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #000;
+  }
+  .slide-image[data-missing="1"] {
+    visibility: hidden;
+  }
+  #slide-video[hidden] { display: none; }
+  #slide-video { pointer-events: auto; z-index: 3; }
+  .slide.has-video:not(.video-active) #slide-video { pointer-events: none; }
+  .slide.has-video .slide-image:not(#slide-video) { visibility: hidden; }
+  .video-hint { position: absolute; right: 1.2cqw; bottom: 1.2cqh; font: 500 1.1cqw/1 var(--sans); letter-spacing: .2em; color: var(--accent); opacity: .85; pointer-events: none; }
+  .video-hint[hidden] { display: none; }
+  .slide.video-active .layer, .slide.video-active .text-layer { display: none !important; }
+  .slide.video-active #slide-video { filter: none !important; object-fit: contain; }
+
+  /* ---- Text overlay over image ---- */
+  .text-layer {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: clamp(1.5rem, 4vw, 4rem);
+    background: linear-gradient(to top, rgba(7,7,10,0.86) 0%, rgba(7,7,10,0.55) 55%, rgba(7,7,10,0) 100%);
+    color: var(--ink);
+    pointer-events: none;
+  }
+  .text-layer[hidden] { display: none; }
+  .kicker {
+    font-family: var(--sans);
+    font-size: clamp(0.7rem, 1.1vw, 1rem);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.7rem;
+    opacity: 0.95;
+  }
+  .title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2rem, 5.5vw, 5.6rem);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.7);
+  }
+  .subtitle {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: clamp(0.95rem, 1.8vw, 1.6rem);
+    line-height: 1.35;
+    color: var(--ink-dim);
+    margin: 0 0 0.5rem 0;
+    max-width: 60ch;
+  }
+  .on-slide-text {
+    margin: 0.8rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.6rem;
+    font-family: var(--serif);
+    font-size: clamp(0.95rem, 1.6vw, 1.5rem);
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .on-slide-text li {
+    padding: 0;
+  }
+  /* When the on_slide_text is one or two long lines (quote-like), treat as a block */
+  .on-slide-text.is-quote {
+    display: block;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.4vw, 2.4rem);
+    line-height: 1.3;
+    max-width: 50ch;
+  }
+  .on-slide-text.is-quote li {
+    margin-bottom: 0.4rem;
+  }
+  /* When the title text equals one of the on_slide_text, hide the redundant line */
+  .on-slide-text.hide-first li:first-child { display: none; }
+
+  /* ---- Composed layouts (slide.layout: title | count | quote | versus | lines) ----
+     A full-slide typographic layer over a dimmed library image. Sizes use
+     container units so the type scales with the 16:9 stage, not the window. */
+  .slide { container-type: size; }
+  .slide.has-layer .slide-image { filter: brightness(0.42) saturate(0.7); object-fit: cover; }
+  .slide.has-layer .text-layer { display: none; }
+  .layer {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 7cqh 7cqw;
+    color: var(--ink);
+    pointer-events: none;
+    background: radial-gradient(ellipse at 30% 60%, rgba(7,7,10,0.35) 0%, rgba(7,7,10,0.55) 60%, rgba(7,7,10,0.75) 100%);
+  }
+  .layer[hidden] { display: none; }
+  .layer .lk {
+    font-family: var(--sans); font-weight: 500;
+    font-size: 1.35cqw; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 2.4cqh; opacity: 0.95;
+  }
+  .layer .lt {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 6.2cqw; line-height: 1.02; letter-spacing: -0.02em;
+    max-width: 80cqw; text-shadow: 0 2px 30px rgba(0,0,0,0.6);
+  }
+  .layer .ls {
+    font-family: var(--sans); font-weight: 300;
+    font-size: 2cqw; line-height: 1.4; color: var(--ink-dim);
+    max-width: 62cqw; margin-top: 2.2cqh;
+  }
+  .layer.l-title { align-items: flex-start; }
+  .layer.l-title.centered { align-items: center; text-align: center; }
+  .layer.l-title.centered .lt, .layer.l-title.centered .ls { max-width: 84cqw; }
+
+  .layer.l-count .num {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 24cqw; line-height: 0.9; letter-spacing: -0.05em;
+    text-shadow: 0 4px 60px rgba(0,0,0,0.7);
+    margin: 0 0 3cqh -0.3cqw;
+  }
+  .layer.l-count .num .of { color: var(--ink-dim); opacity: 0.6; font-size: 0.55em; margin: 0 0.06em; }
+  .layer.l-count .lt { font-size: 4.2cqw; max-width: 74cqw; }
+
+  .layer.l-quote .q {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: 4.6cqw; line-height: 1.16; letter-spacing: -0.01em;
+    max-width: 78cqw; text-shadow: 0 2px 30px rgba(0,0,0,0.6);
+  }
+  .layer.l-quote .q.long { font-size: 3.6cqw; }
+  .layer.l-quote .q::before { content: "\201C"; color: var(--accent); margin-right: 0.08em; }
+  .layer.l-quote .q::after { content: "\201D"; color: var(--accent); margin-left: 0.04em; }
+  .layer .attr {
+    font-family: var(--sans); font-weight: 500;
+    font-size: 1.5cqw; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--accent); margin-top: 3.4cqh;
+  }
+
+  .layer.l-versus { justify-content: center; }
+  .layer.l-versus .cols {
+    display: grid; grid-template-columns: 1fr 1px 1fr; gap: 0 5cqw; align-items: center;
+    width: 100%;
+  }
+  .layer.l-versus .rule { width: 1px; height: 46cqh; background: rgba(244,242,236,0.22); }
+  .layer.l-versus .col .attr { margin: 0 0 2.4cqh 0; }
+  .layer.l-versus .col .q {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: 3.1cqw; line-height: 1.2; text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+  }
+  .layer.l-versus .col .q.long { font-size: 2.5cqw; }
+  .layer.l-versus .col.right { text-align: left; }
+  .layer.l-versus .lt { font-size: 3.2cqw; margin-bottom: 5cqh; }
+
+  .layer.l-lines .lt { font-size: 4.8cqw; font-weight: 700; margin-bottom: 3.2cqh; }
+  .layer.l-lines ul { list-style: none; margin: 0; padding: 0; }
+  .layer.l-lines li {
+    font-family: var(--serif); font-weight: 400;
+    font-size: 3.0cqw; line-height: 1.22; letter-spacing: -0.01em;
+    margin: 0 0 1.4cqh 0; max-width: 84cqw;
+    display: grid; grid-template-columns: auto 1fr; gap: 0 2cqw; align-items: baseline;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+  }
+  .layer.l-lines li.compact { font-size: 2.5cqw; margin-bottom: 1cqh; }
+  .layer.l-lines li .lbl {
+    font-family: var(--sans); font-weight: 500;
+    font-size: 1.25cqw; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--accent); width: var(--lbl-w, 11cqw); overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+  }
+  .layer.l-lines li.bullet { grid-template-columns: 2.2cqw 1fr; gap: 0 0.6cqw; }
+  .layer.l-lines li .lbl.dot { width: auto; font-family: var(--serif); font-size: 1em; letter-spacing: 0; line-height: 1.22; }
+  .layer.l-lines li { transition: opacity 320ms ease; }
+  .layer.l-lines li.pending { opacity: 0; }
+  .layer.l-lines li.big { font-size: 3.6cqw; }
+
+  /* ---- Act marker: audience-visible orientation strip (top-right of the slide) ---- */
+  .acts {
+    position: absolute; top: 3cqh; right: 3.5cqw;
+    display: flex; align-items: center; gap: 0.55cqw;
+    font-family: var(--sans); font-weight: 500;
+    font-size: 1.05cqw; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-dim); opacity: 0.8; pointer-events: none; z-index: 5;
+    text-shadow: 0 1px 12px rgba(0,0,0,0.8);
+  }
+  .acts .dot { width: 0.55cqw; height: 0.55cqw; border-radius: 50%; background: var(--ink-dim); opacity: 0.45; }
+  .acts .dot.done { opacity: 0.8; }
+  .acts .dot.active { background: var(--accent); opacity: 1; transform: scale(1.35); }
+  .acts .name { margin-left: 0.9cqw; color: var(--accent); }
+  .acts[hidden] { display: none; }
+  /* Light images (paper, pinboards): a heavier, taller scrim behind the text
+     and a dark pill behind the act marker. Opt in per slide: "light_image": true. */
+  body.light-image .text-layer {
+    padding-top: 22cqh;
+    background: linear-gradient(to top, rgba(7,7,10,0.96) 0%, rgba(7,7,10,0.88) 45%, rgba(7,7,10,0.55) 80%, rgba(7,7,10,0) 100%);
+  }
+  body.light-image .acts {
+    background: rgba(7,7,10,0.72); padding: 0.6cqh 1cqw; border-radius: 999px; opacity: 1;
+  }
+  .slide-image[data-missing] { visibility: hidden; }
+
+  /* ---- HUD: slide counter, hints ---- */
+  .hud {
+    position: fixed;
+    bottom: 0.9rem;
+    right: 1.1rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    opacity: 0.55;
+    pointer-events: none;
+    text-align: right;
+    line-height: 1.4;
+    z-index: 10;
+  }
+  .hud .section-name {
+    color: var(--accent);
+    opacity: 0.85;
+  }
+  .help {
+    position: fixed;
+    bottom: 0.7rem;
+    left: 1rem;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    opacity: 0.35;
+    z-index: 10;
+  }
+  .help kbd {
+    font-family: var(--sans);
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1px 5px;
+    margin: 0 2px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+  }
+
+  /* ---- Speaker notes panel ---- */
+  .notes {
+    position: fixed;
+    right: 0; top: 0; bottom: 0;
+    width: min(520px, 40vw);
+    background: var(--notes-bg);
+    color: var(--ink);
+    border-left: 1px solid rgba(255,255,255,0.07);
+    padding: 1.4rem 1.6rem 1.6rem;
+    transform: translateX(100%);
+    transition: transform 200ms ease-out;
+    overflow-y: auto;
+    z-index: 20;
+    font-family: var(--sans);
+    font-size: 1.7rem;
+    line-height: 1.45;
+  }
+  .notes.open { transform: translateX(0); }
+  .notes h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0 0 0.2rem 0;
+    color: var(--ink);
+  }
+  .notes .notes-kicker {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+  .notes hr {
+    border: 0; border-top: 1px solid rgba(255,255,255,0.08);
+    margin: 1rem 0;
+  }
+  .notes .notes-body p, #con-notes-body p { margin: 0 0 0.9rem 0; white-space: pre-wrap; }
+  /* Paragraph-stepping in presenter view: show only the active paragraph. */
+  .notes-body p.note-hidden, #con-notes-body p.note-hidden { display: none; }
+  .notes-body p.note-active, #con-notes-body p.note-active {
+    border-left: 3px solid var(--accent);
+    padding-left: 0.7rem;
+    margin-left: -0.7rem;
+  }
+  .notes .notes-design {
+    margin-top: 1.2rem;
+    color: var(--ink-dim);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  /* ---- Notes editing ---- */
+  .notes-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.1rem;
+  }
+  .notes-toolbar button {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-dim);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 5px;
+    padding: 0.35rem 0.7rem;
+    cursor: pointer;
+    transition: background 120ms ease, color 120ms ease;
+  }
+  .notes-toolbar button:hover { background: rgba(255,255,255,0.1); color: var(--ink); }
+  .notes-toolbar button.primary {
+    color: #061014;
+    background: var(--accent);
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  .notes-toolbar button.primary:hover { filter: brightness(1.08); }
+  .notes-toolbar button[hidden] { display: none; }
+  .notes-toolbar button:disabled {
+    opacity: 0.35;
+    cursor: default;
+    background: rgba(255,255,255,0.05);
+    color: var(--ink-dim);
+  }
+  .notes-toolbar button.danger:hover {
+    background: rgba(255,107,107,0.16);
+    color: #ff9b9b;
+    border-color: rgba(255,107,107,0.4);
+  }
+  .notes-toolbar button.danger.armed {
+    background: #ff6b6b;
+    color: #1a0808;
+    border-color: #ff6b6b;
+    font-weight: 600;
+  }
+  .notes-status {
+    font-size: 0.72rem;
+    color: var(--ink-dim);
+    margin-left: auto;
+  }
+  .notes-status.ok { color: #6fd08c; }
+  .notes-status.err { color: #ff6b6b; }
+  .notes-editor {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 40vh;
+    resize: vertical;
+    background: rgba(0,0,0,0.35);
+    color: var(--ink);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 0.7rem 0.8rem;
+    font-family: var(--sans);
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .notes-editor:focus { outline: none; border-color: var(--accent); }
+
+  /* ---- Loading / error states ---- */
+  .splash {
+    position: fixed; inset: 0;
+    display: grid; place-items: center;
+    background: var(--bg);
+    color: var(--ink-dim);
+    font-family: var(--serif);
+    font-style: italic;
+    z-index: 100;
+  }
+  .splash.hidden { display: none; }
+  .splash .err {
+    color: #d77;
+    font-family: var(--sans);
+    font-style: normal;
+    max-width: 60ch;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #5a2a2a;
+    border-radius: 6px;
+    background: #2a1414;
+  }
+
+  /* Hide HUD/help in fullscreen unless mouse moves */
+  body.idle .hud, body.idle .help { opacity: 0; transition: opacity 600ms; }
+
+  /* ---- Rehearsal mode ---- */
+  .rehearse-badge {
+    position: fixed;
+    top: 0.9rem;
+    left: 1.1rem;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.7;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .rehearse-badge[hidden] { display: none; }
+  .rehearse-badge .dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    animation: rehearse-pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes rehearse-pulse {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.25; }
+  }
+  .rehearse-badge.paused .dot { animation: none; opacity: 0.4; }
+  .rehearse-badge.question {
+    color: #ff7a7a;
+  }
+  .rehearse-badge.question .dot {
+    background: #ff7a7a;
+    animation: rehearse-pulse 0.9s ease-in-out infinite;
+  }
+
+  /* Skeptic chip — shows the heckler's question during question playback */
+  .skeptic-chip {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top,
+      rgba(40, 8, 12, 0.94) 0%,
+      rgba(40, 8, 12, 0.82) 70%,
+      rgba(40, 8, 12, 0) 100%);
+    color: #ffd9d9;
+    padding: 2rem clamp(2rem, 5vw, 4rem) 2.4rem;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.9vw, 1.7rem);
+    line-height: 1.45;
+    z-index: 35;
+    transform: translateY(100%);
+    transition: transform 320ms cubic-bezier(.16,1,.3,1);
+  }
+  .skeptic-chip.open { transform: translateY(0); }
+  .skeptic-chip .label {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #ff7a7a;
+    margin-bottom: 0.6rem;
+    opacity: 0.9;
+  }
+  .skeptic-chip .q { max-width: 65ch; }
+
+  /* Hotkey confirmation toast (H/E/K) */
+  .rehearse-toast {
+    position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.96);
+    background: rgba(20, 25, 35, 0.92);
+    color: #e7ecf3; padding: 0.6rem 1.1rem;
+    border-radius: 8px; border: 1px solid #2c3344;
+    font: 500 0.95rem var(--sans); letter-spacing: 0.02em;
+    z-index: 70; pointer-events: none;
+    opacity: 0; transition: opacity 180ms, transform 220ms cubic-bezier(.16,1,.3,1);
+  }
+  .rehearse-toast.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+  /* End-of-session report overlay (hotkey W) */
+  .report-overlay[hidden] { display: none !important; }
+  .report-overlay {
+    position: fixed; inset: 0;
+    background: rgba(8, 10, 16, 0.92);
+    z-index: 60;
+    display: flex; align-items: center; justify-content: center;
+    padding: 3rem 2rem;
+  }
+  .report-card {
+    background: #0f131c; color: #e7ecf3;
+    width: min(900px, 100%); max-height: calc(100vh - 6rem);
+    border-radius: 10px; overflow: hidden;
+    display: flex; flex-direction: column;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    border: 1px solid #232a3a;
+  }
+  .report-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.4rem; border-bottom: 1px solid #1f2434;
+  }
+  .report-head h2 { margin: 0; font: 600 1.05rem/1.2 var(--sans); letter-spacing: 0.01em; }
+  .report-close {
+    background: transparent; color: #8a96a8; border: 0;
+    font-size: 1.6rem; line-height: 1; cursor: pointer; padding: 0 0.4rem;
+  }
+  .report-close:hover { color: #fff; }
+  .report-body {
+    padding: 1.2rem 1.6rem; overflow-y: auto;
+    font: 14.5px/1.55 var(--sans);
+    color: #c9d1dc;
+  }
+  .report-body h1 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+  .report-body h2 { font-size: 1.0rem; margin: 1.4rem 0 0.5rem; color: #e7ecf3; }
+  .report-body table { border-collapse: collapse; width: 100%; margin: 0.4rem 0; }
+  .report-body th, .report-body td { border-bottom: 1px solid #1f2434; padding: 0.4rem 0.6rem; text-align: left; }
+  .report-body th { color: #8a96a8; font-weight: 500; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; }
+  .report-body strong { color: #fff; }
+  .report-body code, .report-body kbd { background: #1a1f2c; padding: 1px 5px; border-radius: 3px; font-size: 0.85em; }
+  .report-body blockquote { border-left: 2px solid #2c3344; padding: 0.1rem 0.7rem; color: #aab4c4; margin: 0.4rem 0; }
+  .report-foot {
+    padding: 0.7rem 1.4rem; border-top: 1px solid #1f2434;
+    color: #8a96a8; font-size: 0.85rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .report-foot kbd { background: #1a1f2c; border: 1px solid #2c3344; padding: 1px 5px; border-radius: 3px; }
+
+  /* Answer-lock UI — shows after the question while we listen for the
+     speaker actually answering aloud. */
+  .answer-lock {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top,
+      rgba(8, 20, 14, 0.96) 0%,
+      rgba(8, 20, 14, 0.86) 70%,
+      rgba(8, 20, 14, 0) 100%);
+    color: #d9ffea;
+    padding: 1.8rem clamp(2rem, 5vw, 4rem) 2.2rem;
+    font-family: var(--sans);
+    z-index: 36;
+    transform: translateY(100%);
+    transition: transform 320ms cubic-bezier(.16,1,.3,1);
+  }
+  .answer-lock.open { transform: translateY(0); }
+  .answer-lock .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #8df0b3;
+    margin-bottom: 0.55rem;
+  }
+  .answer-lock .prompt {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.05rem, 1.6vw, 1.45rem);
+    line-height: 1.4;
+    margin-bottom: 0.9rem;
+    max-width: 60ch;
+  }
+  .answer-lock .bar {
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+    max-width: 360px;
+  }
+  .answer-lock .bar > div {
+    height: 100%;
+    background: #8df0b3;
+    width: 0%;
+    transition: width 120ms linear;
+    box-shadow: 0 0 12px rgba(141, 240, 179, 0.5);
+  }
+  .answer-lock .hint {
+    font-size: 0.72rem;
+    color: rgba(217, 255, 234, 0.55);
+    margin-top: 0.55rem;
+    letter-spacing: 0.04em;
+  }
+  .answer-lock .denied { color: #ffb6b6; font-size: 0.78rem; margin-top: 0.5rem; }
+
+  /* Thinking spinner — while the rebuttal pipeline runs server-side */
+  .answer-lock .thinking {
+    display: none;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: rgba(217, 255, 234, 0.75);
+    letter-spacing: 0.08em;
+  }
+  .answer-lock.thinking-on .thinking { display: flex; }
+  .answer-lock.thinking-on .bar { display: none; }
+  .answer-lock .thinking .dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #8df0b3;
+    animation: rehearse-pulse 1.2s ease-in-out infinite;
+  }
+  .rehearse-prompt {
+    position: fixed; inset: 0;
+    display: grid; place-items: center;
+    background: rgba(7, 7, 10, 0.85);
+    backdrop-filter: blur(8px);
+    color: var(--ink);
+    font-family: var(--serif);
+    z-index: 60;
+    cursor: pointer;
+  }
+  .rehearse-prompt[hidden] { display: none; }
+  .rehearse-prompt .inner {
+    text-align: center;
+    max-width: 480px;
+    padding: 2rem;
+  }
+  .rehearse-prompt h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    margin: 0 0 0.6rem 0;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+  .rehearse-prompt p {
+    font-family: var(--sans);
+    color: var(--ink-dim);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0.4rem 0;
+  }
+  .rehearse-prompt kbd {
+    font-family: var(--sans);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+
+  /* Deck picker (shown when no ?deck= in URL) */
+  .picker {
+    position: fixed; inset: 0;
+    display: grid; place-items: center;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    z-index: 80;
+    padding: 2rem;
+  }
+  .picker[hidden] { display: none; }
+  .picker .inner {
+    max-width: 720px;
+    width: 100%;
+    text-align: left;
+  }
+  .picker h1 {
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    margin: 0 0 0.4rem 0;
+    color: var(--ink);
+  }
+  .picker .lead {
+    font-family: var(--sans);
+    color: var(--ink-dim);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.6rem;
+  }
+  .picker ul { list-style: none; padding: 0; margin: 0; }
+  .picker li {
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .picker li:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .picker a {
+    display: block;
+    padding: 1.1rem 0.4rem;
+    color: var(--ink);
+    text-decoration: none;
+    transition: background 120ms;
+  }
+  .picker a:hover { background: rgba(255,255,255,0.04); }
+  .picker .deck-title {
+    font-family: var(--serif);
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 500;
+    margin: 0 0 0.25rem 0;
+  }
+  .picker .deck-slug {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.85;
+  }
+
+  /* "Go to slide" prompt */
+  .goto-prompt {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(20, 20, 26, 0.92);
+    border: 1px solid rgba(200, 169, 107, 0.35);
+    border-radius: 6px;
+    padding: 0.7rem 1.2rem;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    z-index: 50;
+    display: none;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+  }
+  .goto-prompt.open { display: block; }
+  .goto-prompt .label {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.7rem;
+    margin-right: 0.6rem;
+  }
+  .goto-prompt .value {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    min-width: 2ch;
+    display: inline-block;
+    text-align: left;
+  }
+  .goto-prompt .value:empty::after {
+    content: "_";
+    opacity: 0.4;
+  }
+  .goto-prompt .hint {
+    color: var(--ink-dim);
+    font-size: 0.7rem;
+    margin-left: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  /* ---- Presenter console (multi-monitor mode) ---- */
+  /* On the presenter (laptop) window, a bottom bar shows next slide + timer.
+     The full-screen slide stays above it. */
+  body.presenter .stage { bottom: 26vh; }
+  .console {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: 26vh;
+    display: none;
+    grid-template-columns: 260px 1fr auto;
+    gap: 1.2rem;
+    padding: 1rem 1.4rem;
+    background: var(--notes-bg);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: var(--ink);
+    font-family: var(--sans);
+    z-index: 30;
+    box-sizing: border-box;
+  }
+  body.presenter .console { display: grid; }
+  /* Video scrub bar across the top of the console, only on video slides. */
+  .console.has-video { padding-top: 3.4rem; }
+  .console .con-vbar {
+    position: absolute; left: 1.4rem; right: 1.4rem; top: 0.6rem; height: 2.2rem;
+    background: rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden;
+    cursor: pointer; touch-action: none; user-select: none;
+  }
+  .console .con-vbar[hidden] { display: none; }
+  .console .con-vbar .fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); opacity: 0.55; pointer-events: none; }
+  .console .con-vbar .time {
+    position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%);
+    font-size: 1rem; font-variant-numeric: tabular-nums; color: var(--ink); pointer-events: none; white-space: nowrap;
+  }
+  .console .next {
+    display: flex; flex-direction: column; gap: 0.4rem; min-width: 0;
+  }
+  .console .next .lbl {
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .console .next img {
+    width: 100%; height: 150px; object-fit: contain;
+    background: #000; border-radius: 4px;
+  }
+  .console .next .next-title {
+    font-size: 0.8rem; color: rgba(255,255,255,0.7);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .console .con-notes { overflow-y: auto; font-size: 2.1rem; line-height: 1.5; }
+  .console .con-notes p { margin: 0 0 0.7rem 0; }
+  .console .con-notes .con-notes-title {
+    font-family: var(--serif); font-weight: 600; font-size: 1.6rem;
+    margin: 0 0 0.5rem 0; color: var(--ink);
+  }
+  .console .meta {
+    text-align: right; display: flex; flex-direction: column;
+    justify-content: space-between; align-items: flex-end;
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .console .meta .timer { font-size: 2.2rem; font-weight: 300; }
+  .console .meta .count { font-size: 1rem; color: rgba(255,255,255,0.6); }
+  .console .meta .hint { font-size: 0.65rem; color: rgba(255,255,255,0.4); }
+
+  /* Audience window (?audience=1): chrome-free, slide only. */
+  body.audience .hud,
+  body.audience .help,
+  body.audience .notes,
+  body.audience .console,
+  body.audience .rehearse-badge { display: none !important; }
+  body.audience { cursor: none; }
+  /* Public build: slides only. */
+  body.public .notes,
+  body.public .console,
+  body.public .rehearse-badge { display: none !important; }
+</style>
+<meta name="description" content="An Architectural Approach to Regenerative Software · Chad Fowler · AI DevCon NYC">
+<meta property="og:title" content="An Architectural Approach to Regenerative Software">
+<meta property="og:description" content="An Architectural Approach to Regenerative Software · Chad Fowler · AI DevCon NYC">
+<meta property="og:url" content="https://chadfowler.com/aidevcon">
+</head>
+<body>
+  <div class="stage">
+    <div class="slide" id="slide">
+      <img class="slide-image" id="slide-image" alt="">
+      <video class="slide-image" id="slide-video" hidden playsinline muted preload="auto" controls controlslist="nofullscreen nodownload noremoteplayback"></video>
+      <div class="layer" id="layer" hidden></div>
+      <div class="acts" id="acts" hidden></div>
+      <div class="text-layer" id="text-layer">
+        <div class="kicker" id="kicker"></div>
+        <h1 class="title" id="title"></h1>
+        <p class="subtitle" id="subtitle"></p>
+        <ul class="on-slide-text" id="on-slide-text"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="hud">
+    <div><span id="counter">0 / 0</span></div>
+    <div class="section-name" id="section-name"></div>
+  </div>
+
+  <div class="console" id="console">
+    <div class="con-vbar" id="con-vbar" hidden><div class="fill" id="con-vfill"></div><span class="time" id="con-vtime"></span></div>
+    <div class="next">
+      <span class="lbl">Next →</span>
+      <img id="con-next-img" alt="">
+      <span class="next-title" id="con-next-title"></span>
+    </div>
+    <div class="con-notes">
+      <div class="con-notes-title" id="con-notes-title"></div>
+      <div id="con-notes-body"></div>
+    </div>
+    <div class="meta">
+      <div class="timer" id="con-timer">00:00</div>
+      <div class="count" id="con-count">0 / 0</div>
+      <div class="hint"><kbd>C</kbd> exit · <kbd>0</kbd> reset timer</div>
+    </div>
+  </div>
+
+  <div class="help">
+    <kbd>←</kbd> <kbd>→</kbd> / <kbd>Space</kbd> nav &nbsp; · &nbsp;
+    <kbd>C</kbd> present &nbsp; · &nbsp;
+    <kbd>G</kbd> go to &nbsp; · &nbsp;
+    <kbd>S</kbd> notes &nbsp; · &nbsp;
+    <kbd>T</kbd> text &nbsp; · &nbsp;
+    <kbd>F</kbd> fullscreen &nbsp; · &nbsp;
+    <kbd>Home</kbd>/<kbd>End</kbd>
+  </div>
+
+  <aside class="notes" id="notes" aria-hidden="true">
+    <div class="notes-kicker" id="notes-kicker"></div>
+    <h2 id="notes-title"></h2>
+    <hr>
+    <div class="notes-body" id="notes-body"></div>
+    <textarea class="notes-editor" id="notes-editor" hidden spellcheck="true"></textarea>
+    <div class="notes-design" id="notes-design"></div>
+    <div class="notes-toolbar">
+      <button id="notes-edit-btn" type="button">✎ Edit notes</button>
+      <button id="notes-left-btn" type="button" title="Move slide earlier">◀ Move</button>
+      <button id="notes-right-btn" type="button" title="Move slide later">Move ▶</button>
+      <button id="notes-delete-btn" class="danger" type="button">🗑 Delete slide</button>
+      <button id="notes-save-btn" class="primary" type="button" hidden>Save</button>
+      <button id="notes-cancel-btn" type="button" hidden>Cancel</button>
+      <span class="notes-status" id="notes-status"></span>
+    </div>
+  </aside>
+
+  <div class="goto-prompt" id="goto-prompt" role="dialog" aria-label="Go to slide">
+    <span class="label">Go to</span><span class="value" id="goto-value"></span><span class="hint">enter to jump · esc to cancel</span>
+  </div>
+
+  <div class="picker" id="picker" hidden>
+    <div class="inner">
+      <h1>Decks</h1>
+      <p class="lead">Choose a deck to load.</p>
+      <ul id="picker-list"></ul>
+    </div>
+  </div>
+
+  <div class="rehearse-badge" id="rehearse-badge" hidden>
+    <span class="dot"></span><span id="rehearse-state">rehearse</span>
+  </div>
+
+  <div class="rehearse-prompt" id="rehearse-prompt" hidden>
+    <div class="inner">
+      <h2>Rehearsal mode</h2>
+      <p>Press <kbd>Space</kbd> to begin. Each slide: the speaker line plays, then a skeptic asks the sharpest question, you answer aloud, and the skeptic argues back until you handle it.</p>
+      <p style="opacity:0.6; margin-top:1.2rem;">
+        <kbd>P</kbd> pause · <kbd>→</kbd>/<kbd>←</kbd> skip ·
+        <kbd>H</kbd>/<kbd>E</kbd> harder/easier persona ·
+        <kbd>K</kbd> skip debate · <kbd>W</kbd> session report ·
+        <kbd>R</kbd> exit rehearsal
+      </p>
+    </div>
+  </div>
+
+  <audio id="rehearse-audio" preload="auto"></audio>
+
+  <div class="skeptic-chip" id="skeptic-chip" hidden>
+    <span class="label">Skeptic →</span>
+    <span class="q" id="skeptic-text"></span>
+  </div>
+
+  <div class="answer-lock" id="answer-lock" hidden>
+    <div class="label" id="answer-label">Your turn</div>
+    <div class="prompt" id="answer-prompt-text">Take your time. The deck moves on when you stop talking. Press Enter when you're ready.</div>
+    <div class="bar"><div id="answer-bar"></div></div>
+    <div class="thinking" id="answer-thinking"><span class="dot"></span>Skeptic is thinking…</div>
+    <div class="hint"><kbd>Enter</kbd> done · <kbd>P</kbd> pause · <kbd>R</kbd> exit rehearsal</div>
+    <div class="denied" id="answer-denied" hidden>Not yet — keep going.</div>
+  </div>
+
+  <div class="rehearse-toast" id="rehearse-toast"></div>
+
+  <div class="report-overlay" id="report-overlay" hidden>
+    <div class="report-card">
+      <div class="report-head">
+        <h2>Session report</h2>
+        <button class="report-close" id="report-close" title="Close (Esc)">×</button>
+      </div>
+      <div class="report-body" id="report-body">Building report…</div>
+      <div class="report-foot">
+        <span class="report-meta" id="report-meta"></span>
+        <kbd>W</kbd> open this from any slide · <kbd>Esc</kbd> close
+      </div>
+    </div>
+  </div>
+
+  <div class="splash" id="splash">loading deck…</div>
+
+<script>
+(async () => {
+  const $ = (id) => document.getElementById(id);
+  const splash = $("splash");
+
+  // Parse ?deck=<slug> from URL
+  const params = new URLSearchParams(window.location.search);
+  // Public build (publish_web.py): <html data-deck="slug" data-public> needs no
+  // ?deck= and shows the slides only: no notes, console, editing or rehearsal.
+  const deckSlug = params.get("deck") || document.documentElement.dataset.deck || null;
+  const publicMode = "public" in document.documentElement.dataset;
+  if (publicMode) {
+    document.body.classList.add("public");
+    document.querySelector(".help").innerHTML =
+      "<kbd>←</kbd> <kbd>→</kbd> / <kbd>Space</kbd> nav &nbsp; · &nbsp; <kbd>F</kbd> fullscreen &nbsp; · &nbsp; <kbd>G</kbd> go to";
+  }
+  const rehearseMode = params.get("rehearse") === "1";
+
+  // If no deck specified, show the picker
+  if (!deckSlug) {
+    splash.classList.add("hidden");
+    try {
+      const r = await fetch("decks.json", { cache: "no-cache" });
+      if (!r.ok) throw new Error("decks.json not found");
+      const registry = await r.json();
+      const list = $("picker-list");
+      for (const entry of registry.decks) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = `?deck=${encodeURIComponent(entry.slug)}`;
+        a.innerHTML = `<p class="deck-title">${entry.title}</p>
+          <p class="deck-slug">${entry.slug}</p>`;
+        li.appendChild(a);
+        list.appendChild(li);
+      }
+      $("picker").hidden = false;
+    } catch (e) {
+      splash.classList.remove("hidden");
+      splash.innerHTML = `<div class="err">
+        Could not load decks.json.<br><br>
+        Run a local server: <code style="display:inline-block; margin-top:8px; background:#000; padding:6px 10px; border-radius:4px;">python3 -m http.server 8000</code><br>
+        then open <code>http://localhost:8000/deck.html</code>
+      </div>`;
+    }
+    return;
+  }
+
+  // Load the specified deck's presentation.json
+  let data;
+  try {
+    const r = await fetch(`decks/${deckSlug}/presentation.json`, { cache: "no-cache" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const text = await r.text();
+    data = JSON.parse(text);
+    // Cheap fingerprint of the loaded JSON; broadcast with every position so
+    // the notes view (notes.html) can tell when this window has newer content.
+    let h = 5381; for (let k = 0; k < text.length; k++) h = ((h * 33) ^ text.charCodeAt(k)) >>> 0;
+    data._stamp = h.toString(36) + ":" + text.length;
+  } catch (e) {
+    splash.innerHTML = `<div class="err">
+      Could not load deck '<code>${deckSlug}</code>'.<br><br>
+      Expected file: <code>decks/${deckSlug}/presentation.json</code><br><br>
+      <a href="?" style="color: var(--accent);">← Back to deck picker</a>
+    </div>`;
+    return;
+  }
+
+  // Slugify same way slides.py does.
+  const slugify = (text) =>
+    text.toLowerCase()
+        .replace(/['’]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+
+  let slides = data.slides.map((s) => ({
+    ...s,
+    slug: s.id || slugify(s.title),
+  }));
+
+  // Per-deck theme: fonts (Google Fonts) and colours, from metadata.theme.
+  // e.g. {"fonts": {"serif": "Instrument Serif", "sans": "Inter"},
+  //       "colors": {"ink": "#f4f2ec", "accent": "#c8a96b"}}
+  const theme = (data.metadata && data.metadata.theme) || null;
+  if (theme) {
+    const fam = theme.fonts || {};
+    const families = Object.values(fam).filter(Boolean)
+      .map((f) => `family=${encodeURIComponent(f).replace(/%20/g, "+")}:ital,wght@0,300;0,400;0,500;0,600;1,400`);
+    if (families.length) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = `https://fonts.googleapis.com/css2?${families.join("&")}&display=swap`;
+      document.head.appendChild(link);
+    }
+    const root = document.documentElement.style;
+    if (fam.serif) root.setProperty("--serif", `"${fam.serif}", Georgia, serif`);
+    if (fam.sans) root.setProperty("--sans", `"${fam.sans}", -apple-system, Helvetica, Arial, sans-serif`);
+    for (const [k, v] of Object.entries(theme.colors || {})) root.setProperty(`--${k}`, v);
+  }
+
+  // Image for a slide: an explicit `image` path (relative to the deck dir,
+  // e.g. "library/war-silo.png") wins over the generated out/<id>.png.
+  // `"no_image": true` renders a layout slide on the plain dark background.
+  const imgSrcFor = (s) =>
+    s.no_image ? "" :
+    s.image ? `decks/${deckSlug}/${s.image}?v=${Date.now()}` : `decks/${deckSlug}/out/${s.slug}.png?v=${Date.now()}`;
+
+  // Composed typographic layouts. Returns true if the layer took the slide.
+  const LAYOUTS = new Set(["title", "count", "quote", "versus", "lines"]);
+  const renderLayer = (s) => {
+    const layer = $("layer");
+    const slideEl = $("slide");
+    layer.innerHTML = "";
+    layer.className = "layer";
+    if (!LAYOUTS.has(s.layout)) {
+      layer.hidden = true;
+      slideEl.classList.remove("has-layer");
+      return false;
+    }
+    const el = (tag, cls, text) => {
+      const e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text != null) e.textContent = text;
+      return e;
+    };
+    const wc = (t) => (t || "").trim().split(/\s+/).length;
+    layer.classList.add(`l-${s.layout}`);
+    if (s.align === "center") layer.classList.add("centered");
+    if (s.kicker) layer.appendChild(el("div", "lk", s.kicker));
+    switch (s.layout) {
+      case "title": {
+        layer.appendChild(el("div", "lt", s.title || ""));
+        if (s.subtitle) layer.appendChild(el("div", "ls", s.subtitle));
+        break;
+      }
+      case "count": {
+        const num = el("div", "num");
+        const [a, b] = String(s.count || "").split("/").map((x) => x.trim());
+        num.appendChild(document.createTextNode(a || ""));
+        if (b) { num.appendChild(el("span", "of", "/")); num.appendChild(document.createTextNode(b)); }
+        layer.appendChild(num);
+        layer.appendChild(el("div", "lt", s.title || ""));
+        if (s.subtitle) layer.appendChild(el("div", "ls", s.subtitle));
+        break;
+      }
+      case "quote": {
+        const q = el("div", "q", s.quote || s.title || "");
+        if (wc(s.quote) > 26) q.classList.add("long");
+        layer.appendChild(q);
+        if (s.attribution) layer.appendChild(el("div", "attr", s.attribution));
+        break;
+      }
+      case "versus": {
+        if (s.title) layer.appendChild(el("div", "lt", s.title));
+        const cols = el("div", "cols");
+        for (const [side, key] of [["left", "left"], ["right", "right"]]) {
+          const d = s[key] || {};
+          const col = el("div", `col ${side}`);
+          if (d.label) col.appendChild(el("div", "attr", d.label));
+          const q = el("div", "q", d.quote || "");
+          if (wc(d.quote) > 34) q.classList.add("long");
+          col.appendChild(q);
+          if (side === "left") { cols.appendChild(col); cols.appendChild(el("div", "rule")); }
+          else cols.appendChild(col);
+        }
+        layer.appendChild(cols);
+        break;
+      }
+      case "lines": {
+        if (s.title) layer.appendChild(el("div", "lt", s.title));
+        const ul = el("ul");
+        const items = s.lines || [];
+        // Size the label column to the longest label (~1.15cqw per uppercase, letter-spaced char).
+        const maxLbl = Math.max(0, ...items.map((it) => (typeof it === "object" && it.label ? it.label.length : 0)));
+        ul.style.setProperty("--lbl-w", Math.max(11, maxLbl * 1.15 + 0.6) + "cqw");
+        const reveal = typeof s.reveal === "number" ? s.reveal : (s.build ? 1 : items.length);
+        const totalWords = items.reduce((n, it) => n + wc(typeof it === "object" ? it.text : it), 0);
+        items.forEach((it, idx) => {
+          const li = el("li");
+          const label = typeof it === "object" ? it.label : null;
+          const text = typeof it === "object" ? it.text : it;
+          if (items.length > 5 || totalWords > 45) li.classList.add("compact");
+          if (items.length <= 2) li.classList.add("big");
+          if (idx >= reveal) li.classList.add("pending");
+          if (label) li.appendChild(el("span", "lbl", label));
+          else { li.classList.add("bullet"); li.appendChild(el("span", "lbl dot", "•")); }
+          li.appendChild(el("span", "txt", text));
+          ul.appendChild(li);
+        });
+        layer.appendChild(ul);
+        if (s.subtitle) layer.appendChild(el("div", "ls", s.subtitle));
+        break;
+      }
+    }
+    layer.hidden = false;
+    slideEl.classList.add("has-layer");
+    return true;
+  };
+
+  // Drill mode: reorder + filter slides by weakness (server picks the order).
+  // ?drill=weak[&n=5]  — cycle only the N weakest slides this session.
+  const drillMode = params.get("drill");
+  const drillN = parseInt(params.get("n") || "5", 10);
+  if (rehearseMode && drillMode === "weak") {
+    try {
+      const r = await fetch(
+        `/drill-order?deck=${encodeURIComponent(deckSlug)}&n=${drillN}`,
+        { cache: "no-cache" });
+      if (r.ok) {
+        const { ids } = await r.json();
+        if (ids && ids.length) {
+          const byId = new Map(slides.map((s) => [s.id, s]));
+          const reordered = ids
+            .map((id) => byId.get(id))
+            .filter(Boolean);
+          if (reordered.length) {
+            slides = reordered;
+            console.info(`drill mode: cycling ${slides.length} weakest slide(s)`);
+          }
+        }
+      }
+    } catch (e) { console.warn("drill-order:", e); }
+  }
+
+  // Determine if on_slide_text should render as a quote vs. a list.
+  const looksLikeQuote = (arr) => {
+    if (!arr || arr.length === 0) return false;
+    if (arr.length > 2) return false;
+    return arr.some((s) => s.length > 28 || /[.?!]$/.test(s.trim()));
+  };
+
+  let i = 0;
+  let textVisible = true;
+
+  const renderSlide = () => {
+    const s = slides[i];
+
+    // Image — if missing, just hide it; the text overlay still shows the title.
+    const img = $("slide-image");
+    img.removeAttribute("data-missing");
+    img.onerror = () => img.setAttribute("data-missing", "1");
+    img.src = imgSrcFor(s);
+    if (s.no_image) img.setAttribute("data-missing", "1");
+    img.alt = s.title;
+    // Video: `"video": "diagrams/demo.mp4"` (relative to the deck dir) plays in place of the image.
+    // Poster: `"poster"` (relative to the deck dir) or the slide image. V plays/pauses; leaving the slide pauses.
+    {
+      const v = $("slide-video");
+      const slideEl = $("slide");
+      let hint = document.getElementById("video-hint");
+      if (!hint) { hint = document.createElement("div"); hint.id = "video-hint"; hint.className = "video-hint"; slideEl.appendChild(hint); }
+      if (s.video) {
+        const src = `decks/${deckSlug}/${s.video}`;
+        if (v.getAttribute("data-src") !== src) { v.setAttribute("data-src", src); v.src = src; v.load(); }
+        v.poster = s.poster ? `decks/${deckSlug}/${s.poster}` : imgSrcFor(s);
+        v.hidden = false; slideEl.classList.add("has-video");
+        hint.textContent = "V  PLAY   ·   J / L  ±5s   ·   , / .  ±1s"; hint.hidden = false;
+        // While the video is in progress the slide text steps aside; it returns when the video ends.
+        const active = () => slideEl.classList.toggle("video-active", !v.ended && (!v.paused || v.currentTime > 0));
+        v.onplay = () => { hint.textContent = "V  PAUSE"; active(); };
+        v.onpause = () => { hint.textContent = v.ended ? "V  REPLAY" : "V  PLAY"; active(); };
+        v.onended = () => { hint.textContent = "V  REPLAY"; active(); };
+        slideEl.classList.remove("video-active");
+      } else {
+        if (!v.paused) v.pause();
+        v.hidden = true; slideEl.classList.remove("has-video", "video-active"); hint.hidden = true;
+      }
+    }
+    renderLayer(s);
+
+    // Text overlay
+    $("kicker").textContent = s.kicker || "";
+    if (typeof s.title_html === "string" && s.title_html.length > 0) {
+      $("title").innerHTML = s.title_html;
+    } else {
+      $("title").textContent = s.title || "";
+    }
+    $("subtitle").textContent = s.subtitle || "";
+
+    const list = $("on-slide-text");
+    list.innerHTML = "";
+    list.className = "on-slide-text";
+    const ost = s.on_slide_text || [];
+
+    // Drop on_slide_text items already covered by title or subtitle so we
+    // don't render the same line twice on screen.
+    const norm = (str) => (str || "").trim().toLowerCase().replace(/\s+/g, " ");
+    const titleN = norm(s.title);
+    const subtitleN = norm(s.subtitle);
+
+    // If the title already contains every on_slide_text item (e.g. the title
+    // IS the full pull-quote and on_slide_text just splits it into lines),
+    // suppress the entire list — the title already shows it.
+    const ostN = ost.map(norm).filter(Boolean);
+    const titleCoversAll = ostN.length > 0 &&
+      ostN.every((ln) => titleN.includes(ln));
+
+    const filtered = titleCoversAll ? [] : ost.filter((line) => {
+      const ln = norm(line);
+      if (!ln) return false;
+      if (ln === titleN || titleN.includes(ln)) return false;
+      if (subtitleN && (subtitleN === ln || subtitleN.includes(ln))) return false;
+      return true;
+    });
+
+    if (looksLikeQuote(filtered)) list.classList.add("is-quote");
+    for (const line of filtered) {
+      const li = document.createElement("li");
+      li.textContent = line;
+      list.appendChild(li);
+    }
+
+    $("text-layer").hidden = !textVisible || s.hide_text_overlay === true;
+    document.body.classList.toggle("light-image", s.light_image === true);
+
+    // HUD
+    $("counter").textContent = `${i + 1} / ${slides.length}`;
+    $("section-name").textContent = s.section || "";
+
+    // Act marker: one dot per section, current act named.
+    {
+      const acts = [];
+      slides.forEach((x) => { if (x.section && !acts.includes(x.section)) acts.push(x.section); });
+      const box = $("acts");
+      box.innerHTML = "";
+      const cur = acts.indexOf(s.section);
+      if (s.divider || s.hide_acts || cur < 0 || acts.length < 2) { box.hidden = true; }
+      else {
+        acts.forEach((_, k) => {
+          const d = document.createElement("span");
+          d.className = "dot" + (k === cur ? " active" : k < cur ? " done" : "");
+          box.appendChild(d);
+        });
+        const nm = document.createElement("span");
+        nm.className = "name";
+        nm.textContent = (s.kicker && /^(act [ivx]+|coda)$/i.test(s.kicker) ? s.kicker + " · " : "") + s.section;
+        box.appendChild(nm);
+        box.hidden = false;
+      }
+    }
+
+    // Notes
+    $("notes-kicker").textContent = `${s.section || ""}${s.kicker ? " · " + s.kicker : ""}`;
+    $("notes-title").textContent = s.title || "";
+    const notesBody = $("notes-body");
+    notesBody.innerHTML = "";
+    noteParaEls = [];
+    (s.speaker_notes || "").split(/\n\n+/).filter(p => p.trim()).forEach(p => {
+      const para = document.createElement("p");
+      para.textContent = p;
+      notesBody.appendChild(para);
+      noteParaEls.push(para);
+    });
+    // Reset paragraph-stepping to the first paragraph on every slide change.
+    // (retreat across a slide boundary overrides this afterwards.)
+    // Highlight is applied at the end of renderSlide, once the presenter
+    // console paragraphs (conParaEls) have also been rebuilt.
+    notePara = 0;
+    const design = $("notes-design");
+    design.textContent = s.design_notes ? `Design: ${s.design_notes}` : "";
+
+    if (typeof resetNoteEditor === "function") resetNoteEditor();
+
+    location.hash = `#${i + 1}`;
+
+    // Rehearsal mode: load + play this slide's audio once user has gestured.
+    if (rehearseMode) {
+      loadAndPlayAudio(s);
+    }
+
+    syncPresenter();
+    highlightNotePara();  // after syncPresenter so conParaEls is current
+  };
+
+  const go = (n) => {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    renderSlide();
+  };
+
+  // ---- Paragraph-stepping through speaker notes (presenter view) ----
+  // When the notes panel is open, Next/Prev walk the speaker notes one
+  // paragraph at a time (image unchanged), then cross the slide boundary
+  // once the paragraphs are exhausted. When the panel is closed, nav is
+  // plain slide-to-slide. Never engaged in rehearse mode.
+  let notePara = 0;
+  let noteParaEls = [];   // side notes panel paragraphs
+  let conParaEls = [];    // presenter-console paragraphs (built in syncPresenter)
+
+  const notesOpen = () => $("notes").classList.contains("open");
+  // The paragraphs currently in front of the presenter: console when in
+  // presenter mode, otherwise the side panel (only if it's open).
+  const activeParaEls = () =>
+    presenterMode ? conParaEls : (notesOpen() ? noteParaEls : []);
+  // Paragraph stepping is opt-in (?step=1). By default every note beat is
+  // visible at once and the arrow keys only move builds and slides.
+  const noteStepping = params.get("step") === "1";
+  const stepMode = () =>
+    noteStepping && !rehearseMode && !noteEditing && activeParaEls().length > 1;
+
+  const highlightNotePara = () => {
+    const stepping = stepMode();
+    const els = activeParaEls();
+    if (notePara > els.length - 1) notePara = Math.max(0, els.length - 1);
+    // Clear both sets first so a stale state never lingers when the active
+    // view changes (e.g. toggling notes or presenter mode).
+    [...noteParaEls, ...conParaEls].forEach((el) => {
+      el.classList.remove("note-active", "note-hidden");
+    });
+    if (!stepping) return;
+    // Show only the active paragraph; hide the rest.
+    els.forEach((el, idx) => {
+      el.classList.toggle("note-active", idx === notePara);
+      el.classList.toggle("note-hidden", idx !== notePara);
+    });
+  };
+
+  // Central nav — routes keys/clicks so paragraph-stepping is respected.
+  // A paragraph step never crosses the slide boundary, so the slide image
+  // (and the synced audience window) stays put until the notes are exhausted.
+  // Builds: a lines slide with build:true reveals one line per advance.
+  const pendingLines = () => Array.from(document.querySelectorAll("#layer .l-lines li.pending, .layer.l-lines li.pending"));
+  const revealedLines = () => Array.from(document.querySelectorAll(".layer.l-lines li:not(.pending)"));
+  const advance = () => {
+    if (slides[i] && slides[i].build) {
+      const p = pendingLines();
+      if (p.length) { p[0].classList.remove("pending"); broadcastPos(); return; }
+    }
+    if (stepMode() && notePara < activeParaEls().length - 1) {
+      notePara++; highlightNotePara(); return;
+    }
+    if (i < slides.length - 1) go(i + 1);
+  };
+  const retreat = () => {
+    if (slides[i] && slides[i].build) {
+      const r = revealedLines();
+      if (r.length > 1) { r[r.length - 1].classList.add("pending"); broadcastPos(); return; }
+    }
+    if (stepMode() && notePara > 0) {
+      notePara--; highlightNotePara(); return;
+    }
+    if (i > 0) {
+      go(i - 1);
+      // Land on the last paragraph so backward stepping is symmetric.
+      notePara = Math.max(0, activeParaEls().length - 1);
+      highlightNotePara();
+    }
+  };
+
+  // ---- Editable speaker notes (persist to presentation.json) ----
+  let noteEditing = false;
+  let noteStatusTimer;
+
+  const setNoteStatus = (msg, kind = "") => {
+    const el = $("notes-status");
+    el.textContent = msg;
+    el.className = "notes-status" + (kind ? " " + kind : "");
+    clearTimeout(noteStatusTimer);
+    if (msg && kind === "ok") {
+      noteStatusTimer = setTimeout(() => {
+        el.textContent = ""; el.className = "notes-status";
+      }, 2500);
+    }
+  };
+
+  // Called on every renderSlide — snaps the notes UI back to read mode.
+  window.resetNoteEditor = () => {
+    noteEditing = false;
+    $("notes-editor").hidden = true;
+    $("notes-body").hidden = false;
+    $("notes-edit-btn").hidden = false;
+    $("notes-left-btn").hidden = false;
+    $("notes-right-btn").hidden = false;
+    $("notes-left-btn").disabled = i <= 0;
+    $("notes-right-btn").disabled = i >= slides.length - 1;
+    $("notes-delete-btn").hidden = false;
+    disarmDelete();
+    $("notes-save-btn").hidden = true;
+    $("notes-cancel-btn").hidden = true;
+    setNoteStatus("");
+  };
+
+  const enterNoteEdit = () => {
+    if (noteEditing) return;
+    noteEditing = true;
+    const ta = $("notes-editor");
+    ta.value = slides[i].speaker_notes || "";
+    $("notes-body").hidden = true;
+    ta.hidden = false;
+    $("notes-edit-btn").hidden = true;
+    $("notes-left-btn").hidden = true;
+    $("notes-right-btn").hidden = true;
+    $("notes-delete-btn").hidden = true;
+    $("notes-save-btn").hidden = false;
+    $("notes-cancel-btn").hidden = false;
+    $("notes").classList.add("open");
+    ta.focus();
+  };
+
+  const saveNoteEdit = async () => {
+    if (!noteEditing) return;
+    const ta = $("notes-editor");
+    const newNotes = ta.value;
+    const slide = slides[i];
+    if (newNotes === (slide.speaker_notes || "")) {
+      resetNoteEditor();
+      return;
+    }
+    setNoteStatus("Saving…");
+    try {
+      const r = await fetch("/save-notes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          deck: deckSlug,
+          id: slide.id,
+          speaker_notes: newNotes,
+        }),
+      });
+      if (!r.ok) {
+        const detail = await r.text();
+        throw new Error(`HTTP ${r.status}: ${detail.slice(0, 120)}`);
+      }
+      slide.speaker_notes = newNotes;   // keep in-memory copy in sync
+      renderSlide();                    // resets editor + re-renders paragraphs
+      setNoteStatus("Saved ✓", "ok");
+    } catch (e) {
+      // Static http.server has no /save-notes → guide the user.
+      const msg = /HTTP 404|Failed to fetch|NetworkError/.test(String(e))
+        ? "Can't save — run: python3 rehearsal_server.py"
+        : "Save failed: " + e.message;
+      setNoteStatus(msg, "err");
+    }
+  };
+
+  // ---- Delete slide (two-step confirm on the button itself) ----
+  let deleteArmTimer;
+  function disarmDelete() {
+    const btn = $("notes-delete-btn");
+    btn.classList.remove("armed");
+    btn.textContent = "🗑 Delete slide";
+    clearTimeout(deleteArmTimer);
+  }
+  const armDelete = () => {
+    const btn = $("notes-delete-btn");
+    btn.classList.add("armed");
+    btn.textContent = "Click again to delete";
+    clearTimeout(deleteArmTimer);
+    deleteArmTimer = setTimeout(disarmDelete, 4000);  // auto-disarm
+  };
+  const deleteSlide = async () => {
+    disarmDelete();
+    if (slides.length <= 1) { setNoteStatus("Can't delete the last slide", "err"); return; }
+    const slide = slides[i];
+    setNoteStatus("Deleting…");
+    try {
+      const r = await fetch("/delete-slide", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ deck: deckSlug, id: slide.id }),
+      });
+      if (!r.ok) {
+        const detail = await r.text();
+        throw new Error(`HTTP ${r.status}: ${detail.slice(0, 120)}`);
+      }
+      slides.splice(i, 1);            // drop from in-memory deck
+      if (i > slides.length - 1) i = slides.length - 1;
+      renderSlide();                 // shows the slide now at this position
+      setNoteStatus("Slide deleted ✓", "ok");
+    } catch (e) {
+      const msg = /HTTP 404|Failed to fetch|NetworkError/.test(String(e))
+        ? "Can't delete — run: python3 rehearsal_server.py"
+        : "Delete failed: " + e.message;
+      setNoteStatus(msg, "err");
+    }
+  };
+  $("notes-delete-btn").addEventListener("click", () => {
+    if ($("notes-delete-btn").classList.contains("armed")) deleteSlide();
+    else armDelete();
+  });
+
+  // ---- Move slide left/right in the sequence ----
+  const moveSlide = async (direction) => {
+    disarmDelete();
+    const slide = slides[i];
+    const neighbor = direction === "left" ? i - 1 : i + 1;
+    if (neighbor < 0 || neighbor > slides.length - 1) return;  // at an edge
+    setNoteStatus("Moving…");
+    try {
+      const r = await fetch("/move-slide", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ deck: deckSlug, id: slide.id, direction }),
+      });
+      if (!r.ok) {
+        const detail = await r.text();
+        throw new Error(`HTTP ${r.status}: ${detail.slice(0, 120)}`);
+      }
+      // Mirror the swap in-memory and follow the slide to its new position.
+      [slides[i], slides[neighbor]] = [slides[neighbor], slides[i]];
+      i = neighbor;
+      renderSlide();
+      setNoteStatus(`Moved ${direction} ✓`, "ok");
+    } catch (e) {
+      const msg = /HTTP 404|Failed to fetch|NetworkError/.test(String(e))
+        ? "Can't move — run: python3 rehearsal_server.py"
+        : "Move failed: " + e.message;
+      setNoteStatus(msg, "err");
+    }
+  };
+  $("notes-left-btn").addEventListener("click", () => moveSlide("left"));
+  $("notes-right-btn").addEventListener("click", () => moveSlide("right"));
+
+  $("notes-edit-btn").addEventListener("click", enterNoteEdit);
+  $("notes-cancel-btn").addEventListener("click", resetNoteEditor);
+  $("notes-save-btn").addEventListener("click", saveNoteEdit);
+  $("notes-body").addEventListener("dblclick", enterNoteEdit);
+  $("notes-editor").addEventListener("keydown", (e) => {
+    // Keep editing keystrokes out of the deck's global nav handler.
+    e.stopPropagation();
+    if ((e.metaKey || e.ctrlKey) && (e.key === "s" || e.key === "Enter")) {
+      e.preventDefault();
+      saveNoteEdit();
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      resetNoteEditor();
+    }
+  });
+
+  // ---- Presenter console / audience multi-monitor mode ----
+  // Two same-origin windows sync over a BroadcastChannel. The presenter
+  // (laptop) window shows a console bar; the audience (?audience=1) window
+  // shows only the slide and simply follows whatever the presenter sends.
+  const audienceMode = params.get("audience") === "1";
+  if (audienceMode) document.body.classList.add("audience");
+  // A follower can show a slide relative to the presenter's (offset=1 → next slide).
+  const followOffset = parseInt(params.get("offset") || "0", 10) || 0;
+  // fit=1: scale rem-based overlay text with the viewport so a small embedded
+  // preview (notes.html) looks like the full-size slide, just smaller.
+  if (params.get("fit") === "1") {
+    const fit = () => { document.documentElement.style.fontSize = Math.max(4, 16 * Math.min(window.innerWidth / 1440, window.innerHeight / 810)) + "px"; };
+    fit(); window.addEventListener("resize", fit);
+  }
+  const syncChannel = ("BroadcastChannel" in window)
+    ? new BroadcastChannel("slidez-" + deckSlug) : null;
+
+  let presenterMode = false;
+  let audienceWin = null;
+  let timerStart = 0;
+  let timerInterval = null;
+
+  const fmtTime = (ms) => {
+    const t = Math.max(0, Math.floor(ms / 1000));
+    return String(Math.floor(t / 60)).padStart(2, "0") + ":" +
+           String(t % 60).padStart(2, "0");
+  };
+  const tickTimer = () => {
+    if (presenterMode) $("con-timer").textContent = fmtTime(Date.now() - timerStart);
+  };
+  const resetTimer = () => { timerStart = Date.now(); tickTimer(); };
+
+  // Any non-follower window broadcasts its position (slide + revealed build
+  // lines) so audience windows and the notes view (notes.html) stay in sync.
+  const revealCount = () => document.querySelectorAll(".layer.l-lines li:not(.pending)").length;
+  const broadcastPos = () => {
+    if (!audienceMode && syncChannel) syncChannel.postMessage({ type: "goto", i, reveal: revealCount(), stamp: data._stamp });
+  };
+
+  // Called at the end of every renderSlide().
+  function syncPresenter() {
+    broadcastPos();
+    if (!presenterMode) return;
+
+    const next = slides[i + 1];
+    const nextImg = $("con-next-img");
+    if (next) {
+      nextImg.style.visibility = "visible";
+      nextImg.src = imgSrcFor(next);
+      $("con-next-title").textContent = next.title || next.quote || (next.count ? `${next.count} — ${next.title || ""}` : "") || "";
+    } else {
+      nextImg.style.visibility = "hidden";
+      $("con-next-title").textContent = "— end of deck —";
+    }
+    const s = slides[i];
+    $("con-notes-title").textContent = s.title || s.quote ||
+      (s.left && s.right ? `${s.left.label}: ${s.left.quote} ⟷ ${s.right.label}: ${s.right.quote}` : "") || "";
+    const body = $("con-notes-body");
+    body.innerHTML = "";
+    conParaEls = [];
+    (s.speaker_notes || "").split(/\n\n+/).forEach((p) => {
+      if (!p.trim()) return;
+      const para = document.createElement("p");
+      para.textContent = p;
+      body.appendChild(para);
+      conParaEls.push(para);
+    });
+    $("con-count").textContent = `${i + 1} / ${slides.length}`;
+    drawConsoleBar();
+  }
+
+  function enterPresenter() {
+    if (presenterMode) return;
+    presenterMode = true;
+    document.body.classList.add("presenter");
+    // Open (or focus) the audience window on the extended monitor.
+    const url = new URL(window.location.href);
+    url.searchParams.set("audience", "1");
+    audienceWin = window.open(url.toString(), "slidez-audience");
+    resetTimer();
+    timerInterval = setInterval(tickTimer, 1000);
+    renderSlide(); // pushes current position to the fresh audience window
+  }
+
+  function exitPresenter() {
+    if (!presenterMode) return;
+    presenterMode = false;
+    document.body.classList.remove("presenter");
+    clearInterval(timerInterval);
+    if (audienceWin && !audienceWin.closed) audienceWin.close();
+    audienceWin = null;
+    notePara = 0; highlightNotePara();  // clear console highlight, re-apply for panel
+  }
+
+  // ---- Slide video across windows ----
+  // The presenting window owns the playhead. It broadcasts "videostate" on every
+  // play/pause/seek (and ~5x/s while playing); audience windows, including the
+  // notes view's previews, follow it. The notes view and the console scrub bar
+  // send "videoctl" commands, which only the presenting window applies.
+  const slideVideo = $("slide-video");
+  const videoState = () => ({
+    type: "videostate", i, src: slideVideo.getAttribute("data-src"),
+    t: slideVideo.currentTime, dur: slideVideo.duration || 0, paused: slideVideo.paused, ended: slideVideo.ended,
+  });
+  // Returns true if the current slide has a video (so key handlers can claim the key).
+  function videoCtl(m) {
+    const v = slideVideo;
+    if (v.hidden) return false;
+    const to = (t) => { v.currentTime = Math.max(0, Math.min(v.duration || Infinity, t)); };
+    if (m.op === "toggle") { if (v.ended) { v.currentTime = 0; v.play(); } else if (v.paused) v.play(); else v.pause(); }
+    else if (m.op === "play") v.play();
+    else if (m.op === "pause") v.pause();
+    else if (m.op === "seekBy") to(v.currentTime + m.d);
+    else if (m.op === "seekTo") to(m.t);
+    return true;
+  }
+  function followVideo(m) {
+    const v = slideVideo;
+    if (v.hidden || m.src !== v.getAttribute("data-src")) return;
+    if (Math.abs(v.currentTime - m.t) > (m.paused ? 0.05 : 0.6)) v.currentTime = m.t;
+    if (m.paused && !v.paused) v.pause();
+    else if (!m.paused && v.paused) v.play().catch(() => {});
+  }
+  // Console scrub bar (presenter window): shows the playhead; click or drag to seek.
+  const fmtClock = (s) => { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+  function drawConsoleBar() {
+    const bar = $("con-vbar");
+    const on = !slideVideo.hidden;
+    bar.hidden = !on; $("console").classList.toggle("has-video", on);
+    if (!on) return;
+    const dur = slideVideo.duration || 0;
+    $("con-vfill").style.width = (dur ? 100 * slideVideo.currentTime / dur : 0) + "%";
+    $("con-vtime").textContent = `${slideVideo.paused ? "❚❚" : "▶"}  ${fmtClock(slideVideo.currentTime)} / ${fmtClock(dur)}   ·   V play · J/L ±5s · ,/. ±1s`;
+  }
+  if (!audienceMode) {
+    let lastSent = 0;
+    const sendVideo = (force) => {
+      drawConsoleBar();
+      const now = performance.now();
+      if (!syncChannel || slideVideo.hidden || (!force && now - lastSent < 200)) return;
+      lastSent = now;
+      syncChannel.postMessage(videoState());
+    };
+    ["play", "pause", "seeking", "seeked", "ended", "loadedmetadata"].forEach((ev) => slideVideo.addEventListener(ev, () => sendVideo(true)));
+    slideVideo.addEventListener("timeupdate", () => sendVideo(false));
+    const bar = $("con-vbar");
+    const seekAt = (e) => {
+      const r = bar.getBoundingClientRect();
+      videoCtl({ op: "seekTo", t: Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * (slideVideo.duration || 0) });
+    };
+    bar.addEventListener("pointerdown", (e) => { bar.setPointerCapture(e.pointerId); seekAt(e); });
+    bar.addEventListener("pointermove", (e) => { if (bar.hasPointerCapture(e.pointerId)) seekAt(e); });
+  }
+
+  // Audience window: follow the presenter, ignore its own navigation.
+  if (audienceMode && syncChannel) {
+    syncChannel.onmessage = (e) => {
+      const m = e.data;
+      if (m && m.type === "videostate") { followVideo(m); return; }
+      if (!m || m.type !== "goto" || typeof m.i !== "number") return;
+      const target = Math.max(0, Math.min(slides.length - 1, m.i + followOffset));
+      go(target);
+      const lis = Array.from(document.querySelectorAll(".layer.l-lines li"));
+      if (followOffset === 0 && typeof m.reveal === "number") {
+        lis.forEach((li, idx) => li.classList.toggle("pending", idx >= m.reveal));
+      } else {
+        lis.forEach((li) => li.classList.remove("pending"));
+      }
+    };
+    // Ask whoever is presenting where they are.
+    syncChannel.postMessage({ type: "ping" });
+  } else if (syncChannel) {
+    // Presenting window: the notes view can drive navigation and ask for position.
+    syncChannel.onmessage = (e) => {
+      const m = e.data;
+      if (!m) return;
+      if (m.type === "nav") { if (m.dir > 0) advance(); else retreat(); }
+      else if (m.type === "videoctl") videoCtl(m);
+      else if (m.type === "ping") { broadcastPos(); if (!slideVideo.hidden) syncChannel.postMessage(videoState()); }
+    };
+  }
+
+  // ---- Rehearsal mode state ----
+  const audioEl = $("rehearse-audio");
+  let rehearseStarted = false;
+  let rehearsePaused = false;
+  let advanceTimer = null;
+  // State machine: which track we're currently playing for this slide.
+  // "speaker" → main narration
+  // "question" → adversarial heckler is asking
+  // "answering" → mic is open, deck is locked until user speaks enough
+  // "idle"
+  let rehearseStage = "idle";
+
+  // Voice-activity detection (VAD) state for the "answering" lock.
+  let vadStream = null;       // MediaStream from getUserMedia
+  let vadCtx = null;          // AudioContext
+  let vadAnalyser = null;
+  let vadBuf = null;
+  let vadRaf = null;
+  let vadSpeechSeconds = 0;   // accumulated time the user has been talking
+  let vadSilenceSeconds = 0;  // silence since the last speech frame
+  let vadEverSpoke = false;   // have they cleared the MIN_SPEECH_SECONDS bar?
+  let vadLastTickMs = 0;
+  const VAD_RMS_THRESHOLD = 0.020;       // sound louder than this counts as speech
+  const MIN_SPEECH_SECONDS = 2.0;        // must speak at least this long to "start an answer"
+  const TRAILING_SILENCE_SECONDS = 4.0;  // and then be quiet this long to "finish"
+
+  // Live-debate state. The deck records the user's answer with
+  // MediaRecorder, POSTs to /rebut, plays the follow-up, and loops.
+  let mediaRecorder = null;
+  let recordedChunks = [];
+  let recorderMime = "audio/webm";
+  // Per-slide round state — reset on each slide.
+  let debateRound = 0;
+  let debateHistory = [];     // [{role:"skeptic"|"speaker", text:string}, ...]
+  let debateOriginalQ = "";
+  let debateRoundOnePersona = null;  // persona id of the canned R1 question
+  let currentRoundOne = null;  // {persona_id, question, audioSuffix} for this slide
+  const MAX_DEBATE_ROUNDS = 3;
+
+  // Persona registry (loaded once per session from /personas?deck=<slug>)
+  let personaSet = null;  // { byId, defaultRoundOne, roundEscalation, harder, easier }
+  // One-shot override of the next round-1 persona (set by H/E hotkeys).
+  let nextRoundOnePersonaOverride = null;
+  // One-shot "skip the question/debate for the next slide" flag (K hotkey).
+  let skipNextDebate = false;
+
+  // ---- Minimal markdown → HTML renderer (covers only the shapes the
+  // server emits in session reports: h1/h2, paragraphs, **bold**, _em_,
+  // `code`, blockquote >, hyphen lists, GFM-style pipe tables). ----
+  const mdEscape = (s) => s.replace(/[&<>"]/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;",
+  }[c]));
+  const mdInline = (s) => mdEscape(s)
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[\s_(])_([^_]+)_(?=[\s_).,!?]|$)/g, "$1<em>$2</em>");
+  const renderMarkdown = (md) => {
+    const lines = md.split(/\r?\n/);
+    const out = [];
+    let i = 0;
+    const isTableSep = (s) => /^\s*\|?\s*:?-+:?(\s*\|\s*:?-+:?)+\s*\|?\s*$/.test(s);
+    while (i < lines.length) {
+      const line = lines[i];
+      if (!line.trim()) { i++; continue; }
+      // Tables
+      if (line.includes("|") && i + 1 < lines.length && isTableSep(lines[i+1])) {
+        const cells = (s) => s.trim().replace(/^\||\|$/g, "").split("|").map(c => c.trim());
+        const head = cells(line);
+        i += 2;
+        const rows = [];
+        while (i < lines.length && lines[i].includes("|")) {
+          rows.push(cells(lines[i])); i++;
+        }
+        out.push("<table><thead><tr>" + head.map(c => `<th>${mdInline(c)}</th>`).join("") +
+                 "</tr></thead><tbody>" +
+                 rows.map(r => "<tr>" + r.map(c => `<td>${mdInline(c)}</td>`).join("") + "</tr>").join("") +
+                 "</tbody></table>");
+        continue;
+      }
+      // Headings
+      const h = line.match(/^(#{1,3})\s+(.*)$/);
+      if (h) {
+        const lvl = h[1].length;
+        out.push(`<h${lvl}>${mdInline(h[2])}</h${lvl}>`);
+        i++; continue;
+      }
+      // Blockquote
+      if (line.startsWith(">")) {
+        const buf = [];
+        while (i < lines.length && lines[i].startsWith(">")) {
+          buf.push(lines[i].replace(/^>\s?/, "")); i++;
+        }
+        out.push(`<blockquote>${mdInline(buf.join(" "))}</blockquote>`);
+        continue;
+      }
+      // List
+      if (/^\s*[-*]\s+/.test(line)) {
+        const buf = [];
+        while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) {
+          buf.push(lines[i].replace(/^\s*[-*]\s+/, "")); i++;
+        }
+        out.push("<ul>" + buf.map(b => `<li>${mdInline(b)}</li>`).join("") + "</ul>");
+        continue;
+      }
+      // Paragraph (collect until blank line)
+      const buf = [];
+      while (i < lines.length && lines[i].trim() && !/^#{1,3}\s/.test(lines[i])
+             && !lines[i].startsWith(">") && !/^\s*[-*]\s+/.test(lines[i])
+             && !(lines[i].includes("|") && i+1 < lines.length && isTableSep(lines[i+1]))) {
+        buf.push(lines[i]); i++;
+      }
+      out.push(`<p>${mdInline(buf.join(" "))}</p>`);
+    }
+    return out.join("\n");
+  };
+
+  // Session id — server uses this to carry slide-to-slide memory and to
+  // group the rehearsal log entries for the session report.
+  let sessionId = null;
+  const ensureSessionId = () => {
+    if (sessionId) return sessionId;
+    // Per-tab id so two rehearsal tabs don't share memory
+    const stored = sessionStorage.getItem("rehearseSessionId");
+    if (stored) { sessionId = stored; return sessionId; }
+    sessionId = (crypto.randomUUID && crypto.randomUUID())
+      || `s-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+    sessionStorage.setItem("rehearseSessionId", sessionId);
+    return sessionId;
+  };
+
+  const loadPersonas = async () => {
+    try {
+      const r = await fetch(`/personas?deck=${encodeURIComponent(deckSlug)}`,
+                            { cache: "no-cache" });
+      if (!r.ok) return;
+      const data = await r.json();
+      const byId = new Map();
+      for (const p of data.personas || []) byId.set(p.id, p);
+      personaSet = {
+        byId,
+        defaultRoundOne: data.default_round_one,
+        roundEscalation: data.round_escalation || [],
+        harder: data.harder || null,
+        easier: data.easier || null,
+      };
+    } catch (e) { console.warn("loadPersonas:", e); }
+  };
+
+  // Pick which persona's question to use for round 1 of THIS slide.
+  // Random rotation across rehearsals so we don't memorize one wording.
+  // Honors nextRoundOnePersonaOverride (H/E hotkeys) for a one-shot swap.
+  const pickRoundOneQuestion = (slide) => {
+    const arr = slide.adversarial_questions || [];
+    if (arr.length > 0) {
+      let pick = null;
+      if (nextRoundOnePersonaOverride) {
+        pick = arr.find(q => q.persona === nextRoundOnePersonaOverride) || null;
+        nextRoundOnePersonaOverride = null;  // one-shot
+      }
+      if (!pick) pick = arr[Math.floor(Math.random() * arr.length)];
+      return {
+        persona_id: pick.persona,
+        question: (pick.question || "").trim(),
+        audioSuffix: `.${pick.persona}.q`,
+      };
+    }
+    const q = (slide.adversarial_question || "").trim();
+    if (!q) return null;
+    return { persona_id: null, question: q, audioSuffix: ".q" };
+  };
+
+  const PAUSE_AFTER_SPEAKER_MS = 700;     // beat between speaker and question
+  const PAUSE_AFTER_QUESTION_MS = 1700;   // give the user time to think
+  const PAUSE_NO_QUESTION_MS = 1100;      // fallback if no question audio
+
+  const setRehearseBadgeText = (text) => {
+    const el = $("rehearse-state");
+    if (el) el.textContent = text;
+  };
+
+  const showSkeptic = (text) => {
+    $("skeptic-text").textContent = text;
+    const chip = $("skeptic-chip");
+    chip.hidden = false;
+    // Force reflow so the transform transition kicks in
+    void chip.offsetHeight;
+    chip.classList.add("open");
+    $("rehearse-badge").classList.add("question");
+    setRehearseBadgeText("skeptic");
+  };
+
+  const hideSkeptic = () => {
+    const chip = $("skeptic-chip");
+    chip.classList.remove("open");
+    setTimeout(() => { chip.hidden = true; }, 350);
+    $("rehearse-badge").classList.remove("question");
+    setRehearseBadgeText("rehearse");
+  };
+
+  // ---- VAD (voice activity detection) ----
+  const setupVAD = async () => {
+    if (vadStream) return true;
+    try {
+      vadStream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true,
+        },
+      });
+      vadCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const source = vadCtx.createMediaStreamSource(vadStream);
+      vadAnalyser = vadCtx.createAnalyser();
+      vadAnalyser.fftSize = 2048;
+      vadBuf = new Float32Array(vadAnalyser.fftSize);
+      source.connect(vadAnalyser);
+      return true;
+    } catch (e) {
+      console.warn("VAD setup failed:", e);
+      return false;
+    }
+  };
+
+  const showAnswerLock = (text) => {
+    $("skeptic-text").textContent = text;
+    $("skeptic-chip").hidden = false;
+    void $("skeptic-chip").offsetHeight;
+    $("skeptic-chip").classList.add("open");
+    $("answer-lock").hidden = false;
+    void $("answer-lock").offsetHeight;
+    $("answer-lock").classList.add("open");
+    $("answer-bar").style.width = "0%";
+    $("answer-denied").hidden = true;
+    $("rehearse-badge").classList.add("question");
+    setRehearseBadgeText("your turn");
+  };
+
+  const hideAnswerLock = () => {
+    $("answer-lock").classList.remove("open");
+    setTimeout(() => { $("answer-lock").hidden = true; }, 350);
+    hideSkeptic();
+  };
+
+  const flashAnswerDenied = () => {
+    const el = $("answer-denied");
+    el.hidden = false;
+    clearTimeout(el._t);
+    el._t = setTimeout(() => { el.hidden = true; }, 1400);
+  };
+
+  const setAnswerLockPrompt = (text) => {
+    const p = $("answer-lock").querySelector(".prompt");
+    if (p) p.textContent = text;
+  };
+
+  const startListening = () => {
+    if (!vadAnalyser) return false;
+    vadSpeechSeconds = 0;
+    vadSilenceSeconds = 0;
+    vadEverSpoke = false;
+    vadLastTickMs = performance.now();
+    rehearseStage = "answering";
+    setAnswerLockPrompt(
+      "Take your time. The deck moves on when you stop talking. " +
+      "Press Enter when you're ready."
+    );
+    $("answer-bar").style.width = "0%";
+
+    const tick = () => {
+      if (rehearseStage !== "answering") return;
+      if (rehearsePaused) {
+        vadLastTickMs = performance.now();
+        vadRaf = requestAnimationFrame(tick);
+        return;
+      }
+      vadAnalyser.getFloatTimeDomainData(vadBuf);
+      let sum = 0;
+      for (let n = 0; n < vadBuf.length; n++) sum += vadBuf[n] * vadBuf[n];
+      const rms = Math.sqrt(sum / vadBuf.length);
+      const now = performance.now();
+      const dt = (now - vadLastTickMs) / 1000;
+      vadLastTickMs = now;
+
+      if (rms > VAD_RMS_THRESHOLD) {
+        // Speech frame
+        vadSpeechSeconds += dt;
+        vadSilenceSeconds = 0;
+        if (vadSpeechSeconds >= MIN_SPEECH_SECONDS && !vadEverSpoke) {
+          vadEverSpoke = true;
+        }
+        $("answer-bar").style.width = "0%";
+      } else if (vadEverSpoke) {
+        // Silence after a real answer. Count down trailing silence.
+        vadSilenceSeconds += dt;
+        const pct = Math.min(100, (vadSilenceSeconds / TRAILING_SILENCE_SECONDS) * 100);
+        $("answer-bar").style.width = pct + "%";
+        if (vadSilenceSeconds >= TRAILING_SILENCE_SECONDS) {
+          runRebutRound();
+          return;
+        }
+      }
+      // (else: pre-speech silence — just wait, nothing to count)
+
+      vadRaf = requestAnimationFrame(tick);
+    };
+    vadRaf = requestAnimationFrame(tick);
+    return true;
+  };
+
+  const stopListening = () => {
+    if (vadRaf) { cancelAnimationFrame(vadRaf); vadRaf = null; }
+  };
+
+  // ---- Live debate: MediaRecorder + /rebut + follow-up playback ----
+  const pickRecorderMime = () => {
+    const candidates = [
+      "audio/webm;codecs=opus",
+      "audio/webm",
+      "audio/mp4",
+      "audio/ogg;codecs=opus",
+    ];
+    for (const m of candidates) {
+      if (window.MediaRecorder && MediaRecorder.isTypeSupported(m)) return m;
+    }
+    return "audio/webm";
+  };
+
+  const startRecording = () => {
+    if (!vadStream) return false;
+    recordedChunks = [];
+    try {
+      recorderMime = pickRecorderMime();
+      mediaRecorder = new MediaRecorder(vadStream, { mimeType: recorderMime });
+      mediaRecorder.ondataavailable = (e) => {
+        if (e.data && e.data.size > 0) recordedChunks.push(e.data);
+      };
+      // No timeslice — Chrome's WebM fragments from start(N) can come out
+      // with malformed headers on short or fast-restart recordings, which
+      // Whisper rejects as "seconds: 0". Single emit on stop() is reliable.
+      mediaRecorder.start();
+      return true;
+    } catch (e) {
+      console.warn("MediaRecorder failed:", e);
+      mediaRecorder = null;
+      return false;
+    }
+  };
+
+  const stopRecording = () => new Promise((resolve) => {
+    if (!mediaRecorder || mediaRecorder.state === "inactive") {
+      resolve(new Blob(recordedChunks, { type: recorderMime }));
+      return;
+    }
+    mediaRecorder.onstop = () => {
+      const blob = new Blob(recordedChunks, { type: recorderMime });
+      mediaRecorder = null;
+      resolve(blob);
+    };
+    mediaRecorder.stop();
+  });
+
+  const setThinking = (on) => {
+    const el = $("answer-lock");
+    el.classList.toggle("thinking-on", !!on);
+    if (on) setRehearseBadgeText("thinking…");
+  };
+
+  const playFollowUpAudio = (b64) => new Promise((resolve) => {
+    if (!b64) return resolve();
+    const src = `data:audio/mpeg;base64,${b64}`;
+    audioEl.src = src;
+    rehearseStage = "rebutting";
+    setRehearseBadgeText("skeptic");
+    audioEl.onended = () => { audioEl.onended = null; resolve(); };
+    audioEl.play().catch((e) => { console.warn(e); resolve(); });
+  });
+
+  // Brief on-screen confirmation when a hotkey fires.
+  let rehearseToastTimer = null;
+  const showRehearseToast = (text) => {
+    const el = $("rehearse-toast");
+    el.textContent = text;
+    el.classList.add("show");
+    if (rehearseToastTimer) clearTimeout(rehearseToastTimer);
+    rehearseToastTimer = setTimeout(() => el.classList.remove("show"), 1200);
+  };
+
+  // ---- Session report overlay ----
+  let reportShown = false;  // avoid auto-firing twice in the same session
+  let reportOpen = false;
+  const openSessionReport = async () => {
+    if (reportOpen) return;
+    reportOpen = true;
+    const body = $("report-body");
+    const meta = $("report-meta");
+    body.innerHTML = "<p><em>Building report — pulling logs, computing metrics, asking the coach for the takeaways. ~10s.</em></p>";
+    meta.textContent = "";
+    $("report-overlay").hidden = false;
+    try {
+      const r = await fetch("/session-report", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ deck: deckSlug, session_id: ensureSessionId() }),
+      });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const data = await r.json();
+      body.innerHTML = renderMarkdown(data.markdown || "");
+      if (data.path) meta.textContent = `Saved to ${data.path}`;
+      reportShown = true;
+    } catch (e) {
+      body.innerHTML = `<p>Report failed: ${e.message}</p>`;
+    }
+  };
+  const closeSessionReport = () => {
+    $("report-overlay").hidden = true;
+    reportOpen = false;
+  };
+  $("report-close").addEventListener("click", closeSessionReport);
+
+  // Wrapper for "end of deck reached" — set badge, idle the stage, fire report
+  // once (auto-trigger). Called from every deck-end transition.
+  const endOfDeck = () => {
+    setRehearseBadgeText("done");
+    rehearseStage = "idle";
+    if (!reportShown) {
+      // Small delay so the last audio gets a chance to finish playing
+      setTimeout(() => { openSessionReport(); }, 500);
+    }
+  };
+
+  // Updates the chip "label" to show which persona is speaking.
+  const setPersonaChip = (name, color) => {
+    const chip = $("skeptic-chip");
+    const label = chip.querySelector(".label");
+    if (name) label.textContent = `${name} →`;
+    if (color) label.style.color = color;
+  };
+
+  // Stream /rebut as NDJSON. Each line is one event object. Callbacks fire
+  // synchronously as events parse — keeps UI updates in lock-step with arrival.
+  const streamRebut = async (blob, onEvent) => {
+    const slide = slides[i];
+    const payload = {
+      deck: deckSlug,
+      id: slide.id,
+      round: debateRound,
+      question: debateOriginalQ,
+      persona: debateRoundOnePersona,
+      session_id: ensureSessionId(),
+      history: debateHistory,
+    };
+    const fd = new FormData();
+    fd.append("audio", blob, "answer." + recorderMime.split("/")[1].split(";")[0]);
+    fd.append("payload", JSON.stringify(payload));
+
+    const r = await fetch("/rebut", { method: "POST", body: fd });
+    if (!r.ok) throw new Error(`rebut: ${r.status} ${await r.text()}`);
+
+    const reader = r.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      let nl;
+      while ((nl = buffer.indexOf("\n")) >= 0) {
+        const line = buffer.slice(0, nl).trim();
+        buffer = buffer.slice(nl + 1);
+        if (!line) continue;
+        try {
+          const evt = JSON.parse(line);
+          onEvent(evt);
+        } catch (e) {
+          console.warn("bad NDJSON line:", line, e);
+        }
+      }
+    }
+  };
+
+  // Called when the user has finished speaking. Streams the rebut events,
+  // updates the UI live as text/audio arrive, then advances or loops.
+  const runRebutRound = async () => {
+    if (rehearseStage !== "answering") return;
+    rehearseStage = "thinking";
+    stopListening();
+    $("answer-bar").style.width = "0%";
+    setThinking(true);
+
+    let transcript = "";
+    let followUpText = "";
+    let audioB64 = null;
+    let advance = false;
+    let firstTextSeen = false;
+    let doneSeen = false;
+    let serverError = null;  // {stage, message}
+
+    // Clear chip so streamed text shows fresh
+    $("skeptic-text").textContent = "";
+    showSkeptic("");  // ensures the chip is visible
+
+    try {
+      const blob = await stopRecording();
+      // If the blob is too small to contain real speech, don't burn a round
+      // or a Whisper call on it — quietly re-open the answer-lock for retry.
+      // (Empirically: empty WebM ≈ 200-400 bytes header-only. Real 1s of
+      // 48 kHz Opus is several KB.)
+      if (!blob || blob.size < 2048) {
+        console.info(`rebut: blob too small (${blob ? blob.size : 0} bytes) — re-opening lock for retry`);
+        setThinking(false);
+        showRehearseToast("didn't catch your answer — try again");
+        // Don't increment debateRound. Just resume listening.
+        rehearseStage = "answering";
+        startRecording();
+        startListening();
+        return;
+      }
+      await streamRebut(blob, (evt) => {
+        switch (evt.event) {
+          case "transcript":
+            transcript = evt.text || "";
+            if (evt.persona_name) setPersonaChip(evt.persona_name, evt.persona_color);
+            break;
+          case "verdict":
+            // judge has decided; spinner can stop as text begins to flow
+            setThinking(false);
+            break;
+          case "text_chunk":
+            if (!firstTextSeen) {
+              firstTextSeen = true;
+              setThinking(false);
+            }
+            followUpText += evt.text || "";
+            $("skeptic-text").textContent = followUpText;
+            break;
+          case "audio":
+            audioB64 = evt.b64;
+            break;
+          case "done":
+            advance = !!evt.advance;
+            doneSeen = true;
+            break;
+          case "error":
+            console.warn("rebut stage error:", evt.stage, evt.message);
+            serverError = { stage: evt.stage, message: evt.message };
+            showRehearseToast(`skeptic glitched (${evt.stage}) — moving on`);
+            break;
+        }
+      });
+    } catch (e) {
+      console.warn("rebut stream failed:", e);
+      setThinking(false);
+      hideAnswerLock();
+      if (i < slides.length - 1) go(i + 1);
+      else { endOfDeck(); }
+      return;
+    }
+    setThinking(false);
+
+    debateHistory.push({ role: "speaker", text: transcript });
+    debateHistory.push({ role: "skeptic", text: followUpText });
+
+    // Defensive: if the stream ended without a "done" event (e.g. server
+    // exception killed the generator), don't trap the user in a dead loop.
+    // Force-advance after MAX rounds or on visible error.
+    if (!doneSeen || serverError) {
+      advance = advance || serverError || debateRound >= MAX_DEBATE_ROUNDS;
+    }
+
+    if (audioB64) await playFollowUpAudio(audioB64);
+
+    if (advance) {
+      hideAnswerLock();
+      if (i < slides.length - 1) go(i + 1);
+      else { endOfDeck(); }
+      return;
+    }
+
+    debateRound += 1;
+    startRecording();
+    startListening();
+  };
+
+  const playTrack = (slide, track) => {
+    rehearseStage = track;
+    let suffix = "";
+    if (track === "question") {
+      suffix = currentRoundOne ? currentRoundOne.audioSuffix : ".q";
+    }
+    audioEl.src = `decks/${deckSlug}/audio/${slide.slug}${suffix}.mp3?v=${Date.now()}`;
+    audioEl.load();
+    if (!rehearsePaused) {
+      audioEl.play().catch(() => { /* missing file or autoplay blocked */ });
+    }
+  };
+
+  const loadAndPlayAudio = (s) => {
+    if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
+    stopListening();
+    hideAnswerLock();
+    hideSkeptic();
+    if (!rehearseStarted) return;
+    playTrack(s, "speaker");
+  };
+
+  audioEl.addEventListener("ended", () => {
+    if (!rehearseMode || rehearsePaused) return;
+    const slide = slides[i];
+
+    if (rehearseStage === "speaker") {
+      // If user pressed K during the speaker line, skip the debate.
+      if (skipNextDebate) {
+        skipNextDebate = false;
+        currentRoundOne = null;
+        advanceTimer = setTimeout(() => {
+          if (i < slides.length - 1) go(i + 1);
+          else { endOfDeck(); }
+        }, PAUSE_NO_QUESTION_MS);
+        return;
+      }
+      // After speaker line: pick one persona's question and play it.
+      const r1 = pickRoundOneQuestion(slide);
+      if (r1) {
+        currentRoundOne = r1;
+        const persona = personaSet && r1.persona_id
+          ? personaSet.byId.get(r1.persona_id) : null;
+        if (persona) setPersonaChip(persona.name, persona.color);
+        else setPersonaChip("Skeptic", "#ff7a7a");
+        advanceTimer = setTimeout(() => {
+          showSkeptic(r1.question);
+          playTrack(slide, "question");
+        }, PAUSE_AFTER_SPEAKER_MS);
+      } else {
+        currentRoundOne = null;
+        advanceTimer = setTimeout(() => {
+          if (i < slides.length - 1) go(i + 1);
+          else { endOfDeck(); }
+        }, PAUSE_NO_QUESTION_MS);
+      }
+    } else if (rehearseStage === "question" || rehearseStage === "rebutting") {
+      // Either the original canned question OR a server-generated follow-up
+      // just finished playing. Open the answer-lock for the next round.
+      const q = (rehearseStage === "question" && currentRoundOne)
+        ? currentRoundOne.question
+        : ($("skeptic-text").textContent || "");
+
+      // Reset per-slide debate context when the original question ends
+      if (rehearseStage === "question") {
+        debateRound = 1;
+        debateRoundOnePersona = currentRoundOne ? currentRoundOne.persona_id : null;
+        debateOriginalQ = currentRoundOne ? currentRoundOne.question : "";
+        debateHistory = [{ role: "skeptic", text: debateOriginalQ }];
+      }
+
+      showAnswerLock(q);
+      startRecording();
+      const started = startListening();
+      if (!started) {
+        rehearseStage = "answering-manual";
+        $("answer-lock").querySelector(".prompt").textContent =
+          "Mic isn't available. Answer it aloud, then press Space to continue.";
+      }
+    }
+  });
+
+  audioEl.addEventListener("error", () => {
+    if (!rehearseMode || !rehearseStarted) return;
+    if (rehearseStage === "question") {
+      // No question audio for this slide — skip the heckler beat.
+      hideSkeptic();
+      if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
+      advanceTimer = setTimeout(() => {
+        if (i < slides.length - 1) go(i + 1);
+        else { endOfDeck(); }
+      }, 600);
+    } else {
+      setRehearseBadgeText("no audio");
+    }
+  });
+
+  const startRehearse = async () => {
+    rehearseStarted = true;
+    rehearsePaused = false;
+    $("rehearse-prompt").hidden = true;
+    $("rehearse-badge").hidden = false;
+    $("rehearse-badge").classList.remove("paused");
+    setRehearseBadgeText("setting up mic…");
+    // Request mic permission now so the answer-lock can use it later.
+    // The Space gesture that triggered startRehearse satisfies the
+    // browser's user-activation requirement for getUserMedia. Await so
+    // the question lock later actually has a working analyser.
+    const ok = await setupVAD();
+    if (!ok) {
+      setRehearseBadgeText("no mic — rehearsal disabled");
+      // Show a persistent message so the user knows what happened.
+      $("rehearse-prompt").innerHTML =
+        '<div class="inner">' +
+        '<h2>Mic unavailable</h2>' +
+        '<p>Rehearsal mode needs the microphone so it can hear you answer the skeptic. ' +
+        'Grant permission in the URL bar and reload, or remove <code>&amp;rehearse=1</code> for live mode.</p>' +
+        '</div>';
+      $("rehearse-prompt").hidden = false;
+      return;
+    }
+    setRehearseBadgeText("rehearse");
+    ensureSessionId();
+    // Load personas in parallel with audio so chip can be colored from R1.
+    loadPersonas();
+    loadAndPlayAudio(slides[i]);
+  };
+
+  const toggleRehearsePause = () => {
+    if (!rehearseMode || !rehearseStarted) return;
+    rehearsePaused = !rehearsePaused;
+    if (rehearsePaused) {
+      audioEl.pause();
+      if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
+      $("rehearse-badge").classList.add("paused");
+      setRehearseBadgeText("paused");
+    } else {
+      $("rehearse-badge").classList.remove("paused");
+      setRehearseBadgeText(rehearseStage === "question" ? "skeptic" : "rehearse");
+      audioEl.play().catch(() => {});
+    }
+  };
+
+  // Open at hash if present.
+  const initial = parseInt((location.hash || "#1").slice(1), 10);
+  if (Number.isFinite(initial) && initial >= 1 && initial <= slides.length) i = initial - 1;
+
+  document.title = data.metadata?.title || "Slide deck";
+
+  splash.classList.add("hidden");
+  renderSlide();
+
+  // Show the "press space to begin" prompt in rehearsal mode.
+  if (rehearseMode) {
+    $("rehearse-prompt").hidden = false;
+    $("rehearse-prompt").addEventListener("click", () => {
+      if (!rehearseStarted) startRehearse();
+    });
+  }
+
+  // "Go to slide" mini-prompt state
+  let gotoOpen = false;
+  let gotoBuffer = "";
+  const gotoEl = $("goto-prompt");
+  const gotoValue = $("goto-value");
+  const openGoto = () => {
+    gotoOpen = true;
+    gotoBuffer = "";
+    gotoValue.textContent = "";
+    gotoEl.classList.add("open");
+  };
+  const closeGoto = () => {
+    gotoOpen = false;
+    gotoBuffer = "";
+    gotoValue.textContent = "";
+    gotoEl.classList.remove("open");
+  };
+
+  // Keyboard
+  const PUBLIC_KEYS = new Set(["ArrowRight", "ArrowLeft", " ", "PageDown", "PageUp", "Home", "End",
+    "f", "F", "g", "G", "v", "V", "k", "K", "j", "J", "l", "L", ",", "."]);
+  window.addEventListener("keydown", (e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+    // Audience window follows the presenter over the channel; only allow
+    // fullscreen toggle locally so nav can't desync the two windows.
+    if (audienceMode) {
+      if (e.key === "f" || e.key === "F") {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else document.documentElement.requestFullscreen();
+        e.preventDefault();
+      }
+      return;
+    }
+
+    // Public build: navigation, go-to, fullscreen and video keys only.
+    if (publicMode && !gotoOpen && !PUBLIC_KEYS.has(e.key)) return;
+
+    // While the goto prompt is open, capture digits/enter/backspace/esc here.
+    if (gotoOpen) {
+      if (/^[0-9]$/.test(e.key)) {
+        if (gotoBuffer.length < 3) gotoBuffer += e.key;
+        gotoValue.textContent = gotoBuffer;
+        e.preventDefault();
+        return;
+      }
+      if (e.key === "Backspace") {
+        gotoBuffer = gotoBuffer.slice(0, -1);
+        gotoValue.textContent = gotoBuffer;
+        e.preventDefault();
+        return;
+      }
+      if (e.key === "Enter") {
+        const n = parseInt(gotoBuffer, 10);
+        closeGoto();
+        if (Number.isFinite(n) && n >= 1 && n <= slides.length) go(n - 1);
+        e.preventDefault();
+        return;
+      }
+      if (e.key === "Escape") {
+        closeGoto();
+        e.preventDefault();
+        return;
+      }
+      // Any other key cancels and falls through to normal handling.
+      closeGoto();
+    }
+
+    // Esc closes the session report overlay when open.
+    if (reportOpen && e.key === "Escape") {
+      closeSessionReport();
+      e.preventDefault();
+      return;
+    }
+
+    // In rehearsal mode, the first user gesture (Space) starts playback.
+    if (rehearseMode && !rehearseStarted && (e.key === " " || e.key === "Enter")) {
+      startRehearse();
+      e.preventDefault();
+      return;
+    }
+
+    // When the deck is in "answering" mode, Enter is the explicit
+    // "I'm done" override. Space and arrow keys flash a "not yet" hint —
+    // the speaker should let the silence advance them naturally, or
+    // press Enter when ready.
+    if (rehearseMode && rehearseStage === "answering") {
+      if (e.key === "Enter") {
+        runRebutRound();
+        e.preventDefault();
+        return;
+      }
+      if (e.key === " " || e.key === "ArrowRight" || e.key === "PageDown"
+          || e.key === "ArrowLeft" || e.key === "PageUp") {
+        flashAnswerDenied();
+        e.preventDefault();
+        return;
+      }
+    }
+    // In the manual-fallback variant (VAD unavailable), Space unlocks.
+    if (rehearseMode && rehearseStage === "answering-manual" && e.key === " ") {
+      hideAnswerLock();
+      if (i < slides.length - 1) go(i + 1);
+      else { endOfDeck(); }
+      e.preventDefault();
+      return;
+    }
+
+    switch (e.key) {
+      case "ArrowRight":
+      case " ":
+      case "PageDown":
+        advance(); e.preventDefault(); break;
+      case "ArrowLeft":
+      case "PageUp":
+        retreat(); e.preventDefault(); break;
+      case "Home":
+        go(0); e.preventDefault(); break;
+      case "End":
+        go(slides.length - 1); e.preventDefault(); break;
+      // Video: V/K play-pause, J/L ±5 s (Shift ±15 s), , and . ±1 s. Audience windows follow.
+      case "v":
+      case "V":
+      case "k":
+      case "K":
+        if (videoCtl({ op: "toggle" })) e.preventDefault();
+        break;
+      case "j":
+      case "J":
+        if (videoCtl({ op: "seekBy", d: e.shiftKey ? -15 : -5 })) e.preventDefault();
+        break;
+      case "l":
+      case "L":
+        if (videoCtl({ op: "seekBy", d: e.shiftKey ? 15 : 5 })) e.preventDefault();
+        break;
+      case ",":
+        if (videoCtl({ op: "seekBy", d: -1 })) e.preventDefault();
+        break;
+      case ".":
+        if (videoCtl({ op: "seekBy", d: 1 })) e.preventDefault();
+        break;
+      case "p":
+      case "P":
+        toggleRehearsePause(); e.preventDefault(); break;
+      case "r":
+      case "R":
+        // Toggle rehearsal mode by adjusting URL and reloading
+        if (rehearseMode) {
+          params.delete("rehearse");
+          window.location.search = params.toString();
+        } else {
+          params.set("rehearse", "1");
+          window.location.search = params.toString();
+        }
+        e.preventDefault(); break;
+      case "w":
+      case "W":
+        if (rehearseMode && rehearseStarted) {
+          openSessionReport();
+          e.preventDefault();
+        }
+        break;
+      case "h":
+      case "H":
+        if (rehearseMode && rehearseStarted && rehearseStage === "speaker"
+            && personaSet && personaSet.harder) {
+          nextRoundOnePersonaOverride = personaSet.harder;
+          const p = personaSet.byId.get(personaSet.harder);
+          showRehearseToast(`harder — ${p ? p.name : personaSet.harder} →`);
+          e.preventDefault();
+        }
+        break;
+      case "e":
+      case "E":
+        if (rehearseMode && rehearseStarted && rehearseStage === "speaker"
+            && personaSet && personaSet.easier) {
+          nextRoundOnePersonaOverride = personaSet.easier;
+          const p = personaSet.byId.get(personaSet.easier);
+          showRehearseToast(`easier — ${p ? p.name : personaSet.easier} →`);
+          e.preventDefault();
+        }
+        break;
+      case "k":
+      case "K":
+        if (rehearseMode && rehearseStarted
+            && (rehearseStage === "speaker" || rehearseStage === "question")) {
+          skipNextDebate = true;
+          showRehearseToast("skip debate →");
+          // If we're already in the "question" stage, end the question audio
+          // immediately so the speaker's branch runs the skip path next slide.
+          if (rehearseStage === "question") {
+            audioEl.pause(); audioEl.currentTime = 0;
+            hideSkeptic();
+            if (i < slides.length - 1) go(i + 1);
+            else endOfDeck();
+          }
+          e.preventDefault();
+        }
+        break;
+      case "g":
+      case "G":
+        openGoto(); e.preventDefault(); break;
+      case "s":
+      case "S":
+        $("notes").classList.toggle("open");
+        notePara = 0; highlightNotePara();  // reset stepping to first paragraph
+        e.preventDefault(); break;
+      case "t":
+      case "T":
+        textVisible = !textVisible;
+        $("text-layer").hidden = !textVisible || slides[i].hide_text_overlay === true;
+        e.preventDefault(); break;
+      case "f":
+      case "F":
+        if (document.fullscreenElement) document.exitFullscreen();
+        else document.documentElement.requestFullscreen();
+        e.preventDefault(); break;
+      case "c":
+      case "C":
+        if (presenterMode) exitPresenter(); else enterPresenter();
+        e.preventDefault(); break;
+      case "0":
+        if (presenterMode) { resetTimer(); e.preventDefault(); }
+        break;
+      case "Escape":
+        $("notes").classList.remove("open");
+        exitPresenter(); highlightNotePara(); break;
+    }
+  });
+
+  // Click to advance (right half) / go back (left half), unless click in notes
+  document.querySelector(".stage").addEventListener("click", (e) => {
+    if (e.target.closest("video")) return;  // the video's own controls
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    if (x > rect.width / 2) advance(); else retreat();
+  });
+
+  // Auto-hide HUD when idle
+  let idleTimer;
+  const resetIdle = () => {
+    document.body.classList.remove("idle");
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => document.body.classList.add("idle"), 2500);
+  };
+  document.addEventListener("mousemove", resetIdle);
+  document.addEventListener("keydown", resetIdle);
+  resetIdle();
+
+  // ---- Live reload from disk ----
+  // Every window (presenter, audience follower, notes previews) polls the
+  // deck file with a HEAD request. When it changes, the slides are swapped in
+  // place and the current slide is re-rendered, keeping position by slide id.
+  // The file on disk is the single source of truth, so windows never need a
+  // manual reload to agree with each other.
+  if (!publicMode) {
+    const deckUrl = `decks/${deckSlug}/presentation.json`;
+    const sig = (r) => `${r.headers.get("last-modified")}|${r.headers.get("content-length")}`;
+    let known = null;
+    let busy = false;
+    const check = async () => {
+      if (busy || drillMode) return;
+      busy = true;
+      try {
+        const h = await fetch(deckUrl, { method: "HEAD", cache: "no-store" });
+        if (!h.ok) return;
+        const s = sig(h);
+        if (known === null) { known = s; return; }
+        if (s === known) return;
+        known = s;
+        const r = await fetch(deckUrl, { cache: "no-store" });
+        if (!r.ok) return;
+        const text = await r.text();
+        const fresh = JSON.parse(text);
+        let hh = 5381; for (let k = 0; k < text.length; k++) hh = ((hh * 33) ^ text.charCodeAt(k)) >>> 0;
+        data._stamp = hh.toString(36) + ":" + text.length;
+        const curId = slides[i] && slides[i].id;
+        slides = fresh.slides.map((x) => ({ ...x, slug: x.id || slugify(x.title) }));
+        window.__deckStamp = data._stamp;
+        const at = curId ? slides.findIndex((x) => x.id === curId) : -1;
+        i = at >= 0 ? at : Math.min(i, slides.length - 1);
+        renderSlide();
+        console.info(`deck reloaded from disk (${slides.length} slides), now at ${i + 1}`);
+      } catch (e) { console.warn("deck watch:", e); }
+      finally { busy = false; }
+    };
+    window.__deckStamp = data._stamp;
+    check();
+    setInterval(check, 1500);
+  }
+
+  // React to hash changes (e.g. typing #14 in the URL).
+  window.addEventListener("hashchange", () => {
+    const n = parseInt((location.hash || "#1").slice(1), 10);
+    if (Number.isFinite(n)) go(n - 1);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+{
+ "metadata": {
+  "title": "An Architectural Approach to Regenerative Software",
+  "subtitle": "Keep the system. Delete the code.",
+  "speaker": "Chad Fowler",
+  "event": "AI DevCon NYC",
+  "event_date": "2026-11-02/04"
+ },
+ "slides": [
+  {
+   "id": "what-if-your-software-rebuilt-itself",
+   "title": "What If Your Software Rebuilt Itself?",
+   "section": "The Question",
+   "kicker": "AI DevCon NYC · Brooklyn, November 2026",
+   "subtitle": "If changing software is hard, do it all the time.",
+   "on_slide_text": [
+    "If I deleted your implementation tomorrow, what would have to survive for the system to remain itself?"
+   ],
+   "image": "diagrams/nyc-opening.jpg",
+   "hide_text_overlay": true,
+   "hide_acts": true
+  },
+  {
+   "id": "the-book",
+   "title": "The Long Version",
+   "section": "The Question",
+   "kicker": "O'Reilly · early release",
+   "subtitle": "Regenerative Software. Final in April 2027.",
+   "on_slide_text": [],
+   "image": "diagrams/oreilly-page.jpg",
+   "hide_text_overlay": false,
+   "hide_acts": true
+  },
+  {
+   "id": "ask-the-room",
+   "title": "Ask Anything.",
+   "section": "The Question",
+   "kicker": "Live · the whole talk",
+   "subtitle": "No Q&A slot. This board is where your questions go.",
+   "on_slide_text": [],
+   "image": "diagrams/ask-the-room.jpg",
+   "hide_text_overlay": true
+  },
+  {
+   "id": "the-plan",
+   "title": "The Plan.",
+   "section": "The Question",
+   "kicker": "All of this, around the clock, seriously",
+   "subtitle": "",
+   "layout": "lines",
+   "lines": [
+    {
+     "label": "",
+     "text": "No code review. Nobody reads the code."
+    },
+    {
+     "label": "",
+     "text": "Nobody writes a prompt. Production does."
+    },
+    {
+     "label": "",
+     "text": "It never stops. Day and night, whatever passes CI ships."
+    },
+    {
+     "label": "",
+     "text": "Humans don't pick the language or the stack anymore."
+    },
+    {
+     "label": "",
+     "text": "The spec comes later."
+    },
+    {
+     "label": "",
+     "text": "Delete the source to find out what you don't know."
+    },
+    {
+     "label": "",
+     "text": "Throw away the history. Keep the decisions."
+    }
+   ],
+   "on_slide_text": [],
+   "no_image": true,
+   "build": true
+  },
+  {
+   "id": "replaceability-was-already-the-superpower",
+   "title": "This Is What We'd Been Training For.",
+   "section": "What Survives",
+   "kicker": "Wunderlist, April 7, 2014",
+   "subtitle": "Heartbleed. Every service rebuilt in a day. Zero application code changed.",
+   "on_slide_text": [],
+   "light_image": true,
+   "image": "out/replaceability-was-already-the-superpower.jpg"
+  },
+  {
+   "id": "the-simplest-important-thing",
+   "title": "Small Is Not Replaceable.",
+   "section": "What Survives",
+   "kicker": "Wunderlist, a different weekend",
+   "subtitle": "What made it unreplaceable was not inside it.",
+   "layout": "title",
+   "on_slide_text": [],
+   "image": "out/the-simplest-important-thing.jpg"
+  },
+  {
+   "id": "relocating-rigor",
+   "title": "Relocating Rigor",
+   "section": "What Survives",
+   "kicker": "Every one of these looked reckless",
+   "subtitle": "When the economics change, the rigor moves. Look for where. If you can't find it, worry.",
+   "layout": "lines",
+   "lines": [
+    {
+     "label": "1999",
+     "text": "XP. Plans became working code, delivered frequently and consistently."
+    },
+    {
+     "label": "2005",
+     "text": "Ruby & Rails. Static type checks became tests and fast feedback."
+    },
+    {
+     "label": "2012",
+     "text": "Continuous deployment. Release windows became rollback and observability."
+    },
+    {
+     "label": "2026",
+     "text": "Regeneration. Hand-written code becomes what?"
+    }
+   ],
+   "on_slide_text": [],
+   "build": true,
+   "image": "out/relocating-rigor.jpg"
+  },
+  {
+   "id": "if-the-code-can-burn-what-cannot",
+   "title": "If the Code Can Burn, What Cannot?",
+   "section": "What Survives",
+   "kicker": "Seven primitives. Four survive the fire. Three govern the burning.",
+   "subtitle": "Same promises, kept. Same reasons, recorded.",
+   "layout": "lines",
+   "lines": [
+    {
+     "label": "Intent",
+     "text": "What must stay true. Not how the code works."
+    },
+    {
+     "label": "Architecture",
+     "text": "The target the code compiles into. What no implementation may do."
+    },
+    {
+     "label": "Evaluations",
+     "text": "How we know a replacement is right."
+    },
+    {
+     "label": "Provenance",
+     "text": "Why every decision was made, and what it ruled out."
+    }
+   ],
+   "on_slide_text": [],
+   "no_image": true,
+   "build": true,
+   "image": "out/four-durable-primitives.jpg"
+  },
+  {
+   "id": "implementation-units",
+   "title": "rm -rf src",
+   "section": "What Survives",
+   "kicker": "The deletion test",
+   "subtitle": "If your stomach drops, that's not recklessness. It's not knowing what would survive.",
+   "on_slide_text": [
+    "THE BOUNDARY IS THE ARCHITECTURE.",
+    "THE INTERIOR IS DISPOSABLE.",
+    "NODE TODAY. RUST TOMORROW. SAME CONTRACT."
+   ],
+   "title_html": "<code style=\"font-family:ui-monospace,Menlo,monospace;font-weight:600\">rm -rf src</code>",
+   "image": "out/implementation-units.jpg"
+  },
+  {
+   "id": "the-regeneration-test",
+   "title": "The Regeneration Test",
+   "section": "The Machinery",
+   "kicker": "A test for what counts as architecture",
+   "subtitle": null,
+   "layout": "quote",
+   "on_slide_text": [],
+   "quote": "If I regenerated the system tomorrow and this changed, would I care?",
+   "image": "out/the-regeneration-test.jpg"
+  },
+  {
+   "id": "code-is-a-compiled-artifact",
+   "title": "Code Is a Compiled Artifact.",
+   "section": "The Machinery",
+   "kicker": "The inversion",
+   "subtitle": "Intent → Architecture → Code",
+   "on_slide_text": [],
+   "image": "out/code-is-a-compiled-artifact.jpg"
+  },
+  {
+   "id": "the-loop",
+   "title": "The Loop",
+   "section": "The Machinery",
+   "kicker": "One unit, continuously",
+   "subtitle": "People approve intent and policy. The gate judges code. Risk decides who else signs.",
+   "on_slide_text": [],
+   "image": "diagrams/the-loop.jpg",
+   "hide_text_overlay": true
+  },
+  {
+   "id": "intent-is-the-source",
+   "title": "The Spec Is Not a Document.",
+   "section": "The Machinery",
+   "kicker": "Intent",
+   "subtitle": "A connected body of knowledge with consequences. You query it; you never read it top to bottom.",
+   "on_slide_text": [
+    "FLEXIBLE ABOUT IMPLEMENTATION.",
+    "STUBBORN ABOUT INTENT."
+   ],
+   "light_image": true,
+   "image": "out/intent-is-the-source.jpg"
+  },
+  {
+   "id": "from-conversation-to-code",
+   "title": "From Conversation to Code, and Back",
+   "section": "The Machinery",
+   "kicker": "Phoenix, the compiler prototype",
+   "subtitle": "Every artifact on this slide is real.",
+   "on_slide_text": [],
+   "image": "assets/phoenix-pipeline.jpg",
+   "hide_text_overlay": true
+  },
+  {
+   "id": "every-line-traces-back",
+   "title": "Every Line Traces Back to a Clause.",
+   "section": "The Machinery",
+   "kicker": "Phoenix inspector · the library example, live",
+   "subtitle": "Pick a constraint: the clause it came from, the unit that owns it, the file it compiled to. Pick a file: the same path, backwards.",
+   "on_slide_text": [],
+   "image": "assets/phoenix-provenance.jpg"
+  },
+  {
+   "id": "evaluations-survive-rewrites",
+   "title": "Evaluations Survive Rewrites.",
+   "section": "The Machinery",
+   "kicker": "Primitive 3",
+   "subtitle": "If a different language would invalidate it, it's at the wrong boundary.",
+   "on_slide_text": [
+    "SAME EVALUATIONS.",
+    "DIFFERENT LANGUAGE.",
+    "DIFFERENT RUNTIME.",
+    "SAME SYSTEM."
+   ],
+   "image": "out/evaluations-survive-rewrites.jpg"
+  },
+  {
+   "id": "live-isnt-this-just-code-generation",
+   "title": "Isn't This Just Code Generation?",
+   "section": "Live",
+   "kicker": "Live · the board you have been using",
+   "subtitle": "Your questions have to survive all three.",
+   "layout": "lines",
+   "lines": [
+    {
+     "label": "Intent",
+     "text": "One spec line changes. One unit of four regenerates. Your questions survive."
+    },
+    {
+     "label": "Evidence",
+     "text": "Why every line exists, and what the gate would refuse."
+    },
+    {
+     "label": "Runtime",
+     "text": "Same spec, same evaluations. The server becomes Python."
+    }
+   ],
+   "on_slide_text": [],
+   "no_image": true,
+   "build": true,
+   "video": "diagrams/demo-regeneration.mp4",
+   "poster": "diagrams/demo-regeneration-poster.jpg"
+  },
+  {
+   "id": "the-implementation-remembers",
+   "title": "The Implementation Remembers.",
+   "section": "The Lifecycle",
+   "kicker": "Regeneration is an epistemic test",
+   "subtitle": null,
+   "layout": "quote",
+   "on_slide_text": [],
+   "quote": "What does this implementation know that we have forgotten?",
+   "image": "out/the-implementation-remembers.jpg"
+  },
+  {
+   "id": "production-writes-the-prompt",
+   "title": "Production Writes the Prompt.",
+   "section": "The Lifecycle",
+   "kicker": "One lap, overnight · nothing changed but the world",
+   "subtitle": "The spec never changed. The world did. Nobody had to wake up.",
+   "layout": "lines",
+   "lines": [
+    {
+     "label": "Spec",
+     "text": "“Order history loads in under 200 ms.” Nobody touches it again."
+    },
+    {
+     "label": "Launch",
+     "text": "3,000 orders, sorted in memory. 40 ms. The gate passes."
+    },
+    {
+     "label": "Drift",
+     "text": "Eighteen months later: 4 million orders, 900 ms. No code changed. No spec changed."
+    },
+    {
+     "label": "Observe",
+     "text": "2 a.m.: the latency claim fails in production. The intent still holds, so no one is paged."
+    },
+    {
+     "label": "Regenerate",
+     "text": "Only the history unit, now told what production knows: an indexed, paged query."
+    },
+    {
+     "label": "Verify",
+     "text": "Same evaluation, at production size: 60 ms. Swapped in before anyone wakes."
+    }
+   ],
+   "on_slide_text": [],
+   "no_image": true,
+   "build": true
+  },
+  {
+   "id": "conservation-layers",
+   "title": "Not Everything Regenerates at the Same Speed.",
+   "section": "The Lifecycle",
+   "kicker": "Pace, and the state nobody wrote down",
+   "subtitle": "Fast layers churn on top of slow contracts. And the state is never where you think.",
+   "on_slide_text": [],
+   "light_image": true,
+   "image": "out/conservation-layers.jpg"
+  },
+  {
+   "id": "the-safe-removal-sequence",
+   "title": "Delete Safely. Then Compact.",
+   "section": "The Lifecycle",
+   "kicker": "Deletion and compaction",
+   "subtitle": "Every step is a question about state. Only one touches code. Regeneration without compaction is faster accumulation.",
+   "layout": "lines",
+   "lines": [
+    {
+     "label": "Compat",
+     "text": "The old path keeps emitting what it emitted, through the new code."
+    },
+    {
+     "label": "Migrate",
+     "text": "Move known consumers one at a time."
+    },
+    {
+     "label": "Isolate",
+     "text": "The old path complains loudly on every use. Hidden dependencies announce themselves."
+    },
+    {
+     "label": "Remove",
+     "text": "Only after nothing has tripped the alarm for long enough."
+    },
+    {
+     "label": "Observe",
+     "text": "Keep watching. Long enough is a judgment."
+    },
+    {
+     "label": "Compact",
+     "text": "Fold what you learned into the spec."
+    }
+   ],
+   "on_slide_text": [],
+   "build": true,
+   "image": "out/the-safe-removal-sequence.jpg"
+  },
+  {
+   "id": "the-spec-can-come-later",
+   "title": "The Spec Can Come Later.",
+   "section": "The Path",
+   "kicker": "The order flips",
+   "subtitle": "The first implementation is how you discover what you mean. For the first time, you can afford to throw it away.",
+   "layout": "title",
+   "on_slide_text": [],
+   "image": "out/the-spec-can-come-later.jpg"
+  },
+  {
+   "id": "the-ladder",
+   "title": "How a System Becomes Regenerative",
+   "section": "The Path",
+   "kicker": "One unit at a time, one rung at a time",
+   "subtitle": "Each rung pays for itself. None of them waits for a tool.",
+   "layout": "lines",
+   "lines": [
+    {
+     "label": "Replaceable",
+     "text": "A real boundary and evaluations. Delete the unit, get it back."
+    },
+    {
+     "label": "Remembered",
+     "text": "Decisions and rejections captured as you work, not reconstructed."
+    },
+    {
+     "label": "Gated",
+     "text": "Evaluations and constraints are the review. Where risk allows, you stop reading the diff."
+    },
+    {
+     "label": "Selective",
+     "text": "A spec change regenerates only what it touches. You stop editing code."
+    },
+    {
+     "label": "Closed",
+     "text": "Production evidence becomes failed claims. You stop writing prompts."
+    }
+   ],
+   "on_slide_text": [],
+   "no_image": true,
+   "build": true
+  },
+  {
+   "id": "start-with-the-boring-component",
+   "title": "Start With the Boring Component.",
+   "section": "The Path",
+   "kicker": "Rung one",
+   "subtitle": "Strongest evaluations. Smallest blast radius.",
+   "on_slide_text": [],
+   "light_image": true,
+   "image": "out/start-with-the-boring-component.jpg"
+  },
+  {
+   "id": "thank-you",
+   "title": "Keep the System. Delete the Code.",
+   "section": "The Path",
+   "kicker": null,
+   "subtitle": "An Architectural Approach to Regenerative Software · AI DevCon NYC",
+   "on_slide_text": [
+    "Slides: chadfowler.com/aidevcon",
+    "Regenerative Software (O'Reilly, early release)",
+    "aicoding.leaflet.pub",
+    "freeq.at"
+   ],
+   "image": "out/thank-you.jpg"
+  },
+  {
+   "id": "the-book-again",
+   "title": "The Long Version",
+   "section": "The Path",
+   "kicker": "O'Reilly · early release",
+   "subtitle": "Regenerative Software. Early release now. Final in April 2027.",
+   "on_slide_text": [
+    "Slides: chadfowler.com/aidevcon"
+   ],
+   "image": "diagrams/oreilly-page.jpg",
+   "hide_text_overlay": false,
+   "hide_acts": true
+  }
+ ]
+}
