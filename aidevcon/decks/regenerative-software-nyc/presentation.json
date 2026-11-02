@@ -434,6 +434,7 @@
    "subtitle": "An Architectural Approach to Regenerative Software · AI DevCon NYC",
    "on_slide_text": [
     "Slides: chadfowler.com/aidevcon",
+    "github.com/chad/phoenix",
     "Regenerative Software (O'Reilly, early release)",
     "aicoding.leaflet.pub",
     "freeq.at"
@@ -447,7 +448,8 @@
    "kicker": "O'Reilly · early release",
    "subtitle": "Regenerative Software. Early release now. Final in April 2027.",
    "on_slide_text": [
-    "Slides: chadfowler.com/aidevcon"
+    "Slides: chadfowler.com/aidevcon",
+    "Phoenix: github.com/chad/phoenix"
    ],
    "image": "diagrams/oreilly-page.jpg",
    "hide_text_overlay": false,
