@@ -341,7 +341,7 @@
    "title": "Delete Safely. Then Compact.",
    "section": "The Lifecycle",
    "kicker": "Deletion and compaction",
-   "subtitle": "Every step is a question about state. Only one touches code. Regeneration without compaction is faster accumulation.",
+   "subtitle": null,
    "layout": "lines",
    "lines": [
     {
