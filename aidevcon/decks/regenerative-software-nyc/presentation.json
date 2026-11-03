@@ -85,7 +85,7 @@
   {
    "id": "trash-your-servers",
    "title": "Trash Your Servers and Burn Your Code",
-   "section": "What Survives",
+   "section": "Origins",
    "kicker": "June 23, 2013",
    "subtitle": null,
    "on_slide_text": [],
@@ -95,7 +95,7 @@
   {
    "id": "replaceability-was-already-the-superpower",
    "title": "This Is What We'd Been Training For.",
-   "section": "What Survives",
+   "section": "Origins",
    "kicker": "Wunderlist, April 7, 2014",
    "subtitle": "Heartbleed. Every service rebuilt in a day. Zero application code changed.",
    "on_slide_text": [],
@@ -105,7 +105,7 @@
   {
    "id": "the-simplest-important-thing",
    "title": "Small Is Not Replaceable.",
-   "section": "What Survives",
+   "section": "Origins",
    "kicker": "Wunderlist, a different weekend",
    "subtitle": "What made it unreplaceable was not inside it.",
    "layout": "title",
