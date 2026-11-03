@@ -442,6 +442,17 @@
    "image": "out/thank-you.jpg"
   },
   {
+   "id": "codeplain-booth",
+   "title": "Visit the Codeplain Booth",
+   "section": "The Path",
+   "kicker": "Before you go",
+   "subtitle": null,
+   "image": "diagrams/codeplain-booth.jpg",
+   "on_slide_text": [],
+   "hide_text_overlay": true,
+   "hide_acts": true
+  },
+  {
    "id": "the-book-again",
    "title": "The Long Version",
    "section": "The Path",
