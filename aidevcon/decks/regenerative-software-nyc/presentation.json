@@ -83,6 +83,16 @@
    "build": true
   },
   {
+   "id": "trash-your-servers",
+   "title": "Trash Your Servers and Burn Your Code",
+   "section": "What Survives",
+   "kicker": "June 23, 2013",
+   "subtitle": null,
+   "on_slide_text": [],
+   "image": "assets/trash-your-servers.jpg",
+   "hide_text_overlay": true
+  },
+  {
    "id": "replaceability-was-already-the-superpower",
    "title": "This Is What We'd Been Training For.",
    "section": "What Survives",
@@ -447,8 +457,8 @@
    "section": "The Path",
    "kicker": "Before you go",
    "subtitle": null,
-   "image": "diagrams/codeplain-booth.jpg",
    "on_slide_text": [],
+   "image": "diagrams/codeplain-booth.jpg",
    "hide_text_overlay": true,
    "hide_acts": true
   },
